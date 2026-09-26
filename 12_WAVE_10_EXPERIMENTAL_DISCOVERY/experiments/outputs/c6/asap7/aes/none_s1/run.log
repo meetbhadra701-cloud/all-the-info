@@ -1,0 +1,13 @@
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/scripts/run_command.py --log /tmp/wh/logs/asap7/aes/base/c6.log --tee -- /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -exit -no_init -threads 8  -no_splash  /w/experiments/scripts/c6/c6_treat.tcl
+source /OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db /tmp/wh/results/asap7/aes/base/3_place.odb
+read_sdc /tmp/wh/results/asap7/aes/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/asap7/setRC.tcl
+C6_DONE mode=none seed=1
+Elapsed time: 0:06.56[h:]min:sec. CPU time: user 5.55 sys 0.59 (93%). Peak memory: 230888KB.
+make_exit=0

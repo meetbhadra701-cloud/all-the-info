@@ -1,0 +1,16 @@
+# Output of scripts/msb_mutants2.sh (verbatim). Reference = correct netlist of the SAME architecture. k=8 row is a script omission (mutant RTL not generated), not a tool result.
+arch,bit,expected,acec_verdict,acec_mode,acec_disproved_out,gcec_verdict,gcec_disproved_out
+tree,none,EQUIVALENT,PASS,adder_tree_matched,,-,-
+tree,16,NOT_EQUIVALENT,FAIL,adder_tree_matched,2,FAIL,16
+tree,15,NOT_EQUIVALENT,FAIL,adder_tree_matched,2,FAIL,15
+tree,14,NOT_EQUIVALENT,FAIL,adder_tree_matched,2,FAIL,14
+tree,13,NOT_EQUIVALENT,FAIL,adder_tree_matched,2,FAIL,13
+tree,8,SYNTH_ERROR
+tree,0,NOT_EQUIVALENT,FAIL,adder_tree_matched,,FAIL,0
+norm,none,EQUIVALENT,PASS,adder_tree_matched,,-,-
+norm,16,NOT_EQUIVALENT,FAIL,adder_tree_matched,6,FAIL,16
+norm,15,NOT_EQUIVALENT,FAIL,adder_tree_matched,6,FAIL,15
+norm,14,NOT_EQUIVALENT,FAIL,adder_tree_matched,6,FAIL,14
+norm,13,NOT_EQUIVALENT,FAIL,adder_tree_matched,6,FAIL,13
+norm,8,SYNTH_ERROR
+norm,0,NOT_EQUIVALENT,FAIL,adder_tree_matched,0,FAIL,0

@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/A_mul_u_w24__norm.aig
+### ARGS -mul -igs -p -c -no-steps
+### TIMEOUT 240
+### START 2026-09-24T12:47:11-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/A_mul_u_w24__norm.aig
+║           mode: mul
+║           sign: unsigned
+║           method: igs
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 732483584
+### DOCKER_EXIT 0
+### WALL_SECONDS 241.90
+### END 2026-09-24T12:51:13-07:00

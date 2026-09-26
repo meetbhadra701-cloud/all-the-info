@@ -1,0 +1,8 @@
+name,returncode,outcome,runtime_seconds,script,log
+add_chain_vs_balanced_w8,0,PASS,12.366265,work/formal_ys/add_chain_vs_balanced_w8.ys,logs/formal/add_chain_vs_balanced_w8.log
+trim_wide_vs_narrow_w8,0,PASS,0.325716,work/formal_ys/trim_wide_vs_narrow_w8.ys,logs/formal/trim_wide_vs_narrow_w8.log
+fir4_vs_grouped_w8,0,PASS,0.709934,work/formal_ys/fir4_vs_grouped_w8.ys,logs/formal/fir4_vs_grouped_w8.log
+add_chain_normal_mapped_vs_rtl_w4,0,PASS,1.083175,work/formal_ys/add_chain_normal_mapped_vs_rtl_w4.ys,logs/formal/add_chain_normal_mapped_vs_rtl_w4.log
+add_chain_arith_tree_mapped_vs_rtl_w4,0,PASS,44.159120,work/formal_ys/add_chain_arith_tree_mapped_vs_rtl_w4.ys,logs/formal/add_chain_arith_tree_mapped_vs_rtl_w4.log
+fir4_normal_mapped_vs_rtl_w4,0,PASS,2.378046,work/formal_ys/fir4_normal_mapped_vs_rtl_w4.ys,logs/formal/fir4_normal_mapped_vs_rtl_w4.log
+fir4_arith_tree_mapped_vs_rtl_w4,0,PASS,0.321099,work/formal_ys/fir4_arith_tree_mapped_vs_rtl_w4.ys,logs/formal/fir4_arith_tree_mapped_vs_rtl_w4.log

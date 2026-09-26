@@ -1,0 +1,30 @@
+$version Yosys $end
+$scope module tb $end
+$var wire 3 n3 w [2:0] $end
+$var wire 1 n2 pre_y $end
+$var wire 1 n1 post_y $end
+$scope module pre_instance $end
+$var wire 1 n6 y $end
+$var wire 3 n5 w [2:0] $end
+$var wire 3 n4 _0_ [2:0] $end
+$upscope $end
+$scope module post_instance $end
+$var wire 1 n8 y $end
+$var wire 3 n7 w [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+b0 n1
+b1 n2
+b100 n3
+b000 n4
+b100 n5
+b1 n6
+b100 n7
+b0 n8
+#5
+#10
+#15
+#20
+#22

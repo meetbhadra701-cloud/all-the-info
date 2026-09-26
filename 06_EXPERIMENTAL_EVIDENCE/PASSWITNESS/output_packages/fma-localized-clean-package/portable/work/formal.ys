@@ -1,0 +1,8 @@
+read_verilog -sv "source/source.v"
+read_verilog "./work/candidate.v"
+read_verilog "./work/miter.v"
+hierarchy -top passwitness_miter
+prep -top passwitness_miter
+flatten
+opt
+sat -prove mismatch 0 -verify -set-def-inputs -show-ports -dump_json "./witnesses/counterexample.json" -dump_vcd "./witnesses/counterexample.vcd"

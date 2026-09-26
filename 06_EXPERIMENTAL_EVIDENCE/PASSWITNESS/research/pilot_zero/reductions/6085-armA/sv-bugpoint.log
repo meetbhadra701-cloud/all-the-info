@@ -1,0 +1,33 @@
+-	dryRun	0	1	8086ms	0	-	source.v
+1	fileTruncator	0	0	935ms	1	-	source.v
+ModuleDeclarationSyntax
+-
+-    assign y = a >= -8;
+
+1	bodyRemover	0	0	1267ms	2	ModuleDeclarationSyntax	source.v
+ModuleDeclarationSyntax
+-module top(input signed [3:0] a, output y);
+-    assign y = a >= -8;
+-endmodule
+
+1	declRemover	0	0	938ms	3	ModuleDeclarationSyntax	source.v
+ContinuousAssignSyntax
+-
+-    assign y = a >= -8;
+
+1	contAssignRemover	0	0	425ms	4	ContinuousAssignSyntax	source.v
+ImplicitAnsiPortSyntax
+- output y
+
+1	portsRemover	0	0	998ms	5	ImplicitAnsiPortSyntax	source.v
+ImplicitAnsiPortSyntax
+-input signed [3:0] a
+
+1	portsRemover	0	0	950ms	6	ImplicitAnsiPortSyntax	source.v
+ModuleDeclarationSyntax
+-module top(input signed [3:0] a, output y);
+-    assign y = a >= -8;
+-endmodule
+
+1	moduleRemover	0	0	457ms	7	ModuleDeclarationSyntax	source.v
+elapsed_seconds=14.57

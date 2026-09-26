@@ -1,0 +1,33 @@
+.model mapped
+.inputs x0 x1 x2 x3 x4
+.outputs y0 y1
+.names c0_
+.names c1_
+1
+.names x2 n7
+0 1
+.names x1 x3 n10
+11 1
+.names x0 x1 n9
+00 1
+10 1
+01 1
+.names n7 n10 n9 y0
+000 1
+100 1
+010 1
+110 1
+001 1
+.names x4 n8
+0 1
+.names x1 x3 n8 n7 y1
+0000 1
+1000 1
+0100 1
+0010 1
+1010 1
+0110 1
+0001 1
+1001 1
+0101 1
+.end

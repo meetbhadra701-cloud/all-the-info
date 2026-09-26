@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_dot2_u_w16__tree_nofma.aig
+### ARGS -dot=2 -igsm -p -c -no-steps
+### TIMEOUT 120
+### START 2026-09-24T03:59:04-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_dot2_u_w16__tree_nofma.aig
+║           mode: dot=2
+║           sign: unsigned
+║           method: igsm
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 92102656
+### DOCKER_EXIT 0
+### WALL_SECONDS 26823.01
+### END 2026-09-24T11:26:07-07:00

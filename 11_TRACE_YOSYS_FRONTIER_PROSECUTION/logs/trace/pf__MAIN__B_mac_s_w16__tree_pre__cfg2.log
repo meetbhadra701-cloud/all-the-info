@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_mac_s_w16__tree_pre.aig
+### ARGS -mac -s -ipc -p -c -no-steps
+### TIMEOUT 120
+### START 2026-09-24T11:30:38-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_mac_s_w16__tree_pre.aig
+║           mode: mac
+║           sign: signed
+║           method: ipc
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 271163392
+### DOCKER_EXIT 0
+### WALL_SECONDS 122.13
+### END 2026-09-24T11:32:40-07:00

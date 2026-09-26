@@ -1,0 +1,2 @@
+======== ABC command line "&r mul_u_w8_tree.pre.aig; &cec -T 60 mul_u_w8_tree.post.aig"
+Networks are equivalent.  Time =     0.02 sec

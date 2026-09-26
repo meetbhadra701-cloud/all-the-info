@@ -1,0 +1,161 @@
+Resolving dependencies...
+Downloading  Glob-0.10.2
+Downloaded   Glob-0.10.2
+Downloading  Only-0.1
+Downloaded   Only-0.1
+Downloading  attoparsec-0.14.4
+Downloaded   attoparsec-0.14.4
+Downloading  base-compat-batteries-0.15.0
+Downloaded   base-compat-batteries-0.15.0
+Downloading  binary-orphans-1.0.6
+Downloaded   binary-orphans-1.0.6
+Downloading  cassava-0.5.4.1
+Downloaded   cassava-0.5.4.1
+Downloading  code-page-0.2.1
+Downloaded   code-page-0.2.1
+Downloading  criterion-1.6.5.0
+Downloaded   criterion-1.6.5.0
+Downloading  criterion-measurement-0.2.5.0
+Downloaded   criterion-measurement-0.2.5.0
+Downloading  js-chart-2.9.4.1
+Downloaded   js-chart-2.9.4.1
+Downloading  microstache-1.0.3.1
+Downloaded   microstache-1.0.3.1
+Downloading  tasty-1.5.4
+Downloaded   tasty-1.5.4
+Downloading  tasty-hedgehog-1.4.0.2
+Downloaded   tasty-hedgehog-1.4.0.2
+Downloading  tasty-hunit-0.10.2
+Downloaded   tasty-hunit-0.10.2
+Build profile: -w ghc-8.6.5 -O1
+In order, the following will be built (use -v for more details):
+ - verismith-0.6.0.2 (lib) (first run)
+ - verismith-0.6.0.2 (exe:verismith) (first run)
+Configuring library for verismith-0.6.0.2..
+Preprocessing library for verismith-0.6.0.2..
+Building library for verismith-0.6.0.2..
+[ 1 of 38] Compiling Paths_verismith  ( /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/autogen/Paths_verismith.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Paths_verismith.o )
+[ 2 of 38] Compiling Verismith.Circuit.Base ( src/Verismith/Circuit/Base.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Circuit/Base.o )
+[ 3 of 38] Compiling Verismith.Circuit.Internal ( src/Verismith/Circuit/Internal.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Circuit/Internal.o )
+[ 4 of 38] Compiling Verismith.Circuit.Random ( src/Verismith/Circuit/Random.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Circuit/Random.o )
+[ 5 of 38] Compiling Verismith.CounterEg ( src/Verismith/CounterEg.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/CounterEg.o )
+[ 6 of 38] Compiling Verismith.Internal ( src/Verismith/Internal.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Internal.o )
+[ 7 of 38] Compiling Verismith.Result ( src/Verismith/Result.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Result.o )
+[ 8 of 38] Compiling Verismith.Verilog.BitVec ( src/Verismith/Verilog/BitVec.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/BitVec.o )
+[ 9 of 38] Compiling Verismith.Verilog.AST ( src/Verismith/Verilog/AST.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/AST.o )
+[10 of 38] Compiling Verismith.Tool.Internal ( src/Verismith/Tool/Internal.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/Internal.o )
+[11 of 38] Compiling Verismith.Verilog.CodeGen ( src/Verismith/Verilog/CodeGen.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/CodeGen.o )
+
+src/Verismith/Verilog/CodeGen.hs:29:1: warning: [-Wdeprecations]
+    Module `Data.Text.Prettyprint.Doc' is deprecated:
+      Use "Prettyprinter" instead.
+   |
+29 | import           Data.Text.Prettyprint.Doc
+   | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+[12 of 38] Compiling Verismith.Tool.Template ( src/Verismith/Tool/Template.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/Template.o )
+[13 of 38] Compiling Verismith.Tool.XST ( src/Verismith/Tool/XST.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/XST.o )
+
+src/Verismith/Tool/XST.hs:32:12: warning:
+    * Ignoring unusable UNPACK pragma on the third argument of `XST'
+    * In the definition of data constructor `XST'
+      In the data type declaration for `XST'
+   |
+32 | data XST = XST { xstBin    :: !(Maybe FilePath)
+   |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[14 of 38] Compiling Verismith.Tool.Vivado ( src/Verismith/Tool/Vivado.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/Vivado.o )
+
+src/Verismith/Tool/Vivado.hs:29:15: warning:
+    * Ignoring unusable UNPACK pragma on the third argument of `Vivado'
+    * In the definition of data constructor `Vivado'
+      In the data type declaration for `Vivado'
+   |
+29 | data Vivado = Vivado { vivadoBin    :: !(Maybe FilePath)
+   |               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[15 of 38] Compiling Verismith.Tool.QuartusLight ( src/Verismith/Tool/QuartusLight.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/QuartusLight.o )
+
+src/Verismith/Tool/QuartusLight.hs:29:21: warning:
+    * Ignoring unusable UNPACK pragma
+        on the third argument of `QuartusLight'
+    * In the definition of data constructor `QuartusLight'
+      In the data type declaration for `QuartusLight'
+   |
+29 | data QuartusLight = QuartusLight { quartusLightBin    :: !(Maybe FilePath)
+   |                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[16 of 38] Compiling Verismith.Tool.Quartus ( src/Verismith/Tool/Quartus.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/Quartus.o )
+
+src/Verismith/Tool/Quartus.hs:29:16: warning:
+    * Ignoring unusable UNPACK pragma
+        on the third argument of `Quartus'
+    * In the definition of data constructor `Quartus'
+      In the data type declaration for `Quartus'
+   |
+29 | data Quartus = Quartus { quartusBin    :: !(Maybe FilePath)
+   |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[17 of 38] Compiling Verismith.Tool.Identity ( src/Verismith/Tool/Identity.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/Identity.o )
+
+src/Verismith/Tool/Identity.hs:28:17: warning:
+    * Ignoring unusable UNPACK pragma
+        on the second argument of `Identity'
+    * In the definition of data constructor `Identity'
+      In the data type declaration for `Identity'
+   |
+28 | data Identity = Identity { identityDesc   :: {-# UNPACK #-} !Text
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[18 of 38] Compiling Verismith.Verilog.Eval ( src/Verismith/Verilog/Eval.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Eval.o )
+[19 of 38] Compiling Verismith.Verilog.Internal ( src/Verismith/Verilog/Internal.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Internal.o )
+[20 of 38] Compiling Verismith.Verilog.Mutate ( src/Verismith/Verilog/Mutate.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Mutate.o )
+[21 of 38] Compiling Verismith.Tool.Yosys ( src/Verismith/Tool/Yosys.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/Yosys.o )
+
+src/Verismith/Tool/Yosys.hs:41:14: warning:
+    * Ignoring unusable UNPACK pragma on the third argument of `Yosys'
+    * In the definition of data constructor `Yosys'
+      In the data type declaration for `Yosys'
+   |
+41 | data Yosys = Yosys { yosysBin    :: !(Maybe FilePath)
+   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[22 of 38] Compiling Verismith.Config ( src/Verismith/Config.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Config.o )
+[23 of 38] Compiling Verismith.OptParser ( src/Verismith/OptParser.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/OptParser.o )
+
+src/Verismith/OptParser.hs:43:13: warning:
+    * Ignoring unusable UNPACK pragma on the first argument of `Parse'
+    * In the definition of data constructor `Parse'
+      In the data type declaration for `Opts'
+   |
+43 |           | Parse { parseFilename            :: {-# UNPACK #-} !FilePath
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+
+src/Verismith/OptParser.hs:48:13: warning:
+    * Ignoring unusable UNPACK pragma on the first argument of `Reduce'
+    * In the definition of data constructor `Reduce'
+      In the data type declaration for `Opts'
+   |
+48 |           | Reduce { reduceFilename        :: {-# UNPACK #-} !FilePath
+   |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[24 of 38] Compiling Verismith.Tool.Icarus ( src/Verismith/Tool/Icarus.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool/Icarus.o )
+[25 of 38] Compiling Verismith.Tool   ( src/Verismith/Tool.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Tool.o )
+[26 of 38] Compiling Verismith.Report ( src/Verismith/Report.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Report.o )
+[27 of 38] Compiling Verismith.Generate ( src/Verismith/Generate.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Generate.o )
+[28 of 38] Compiling Verismith.Circuit.Gen ( src/Verismith/Circuit/Gen.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Circuit/Gen.o )
+[29 of 38] Compiling Verismith.Circuit ( src/Verismith/Circuit.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Circuit.o )
+[30 of 38] Compiling Verismith.Verilog.Preprocess ( src/Verismith/Verilog/Preprocess.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Preprocess.o )
+[31 of 38] Compiling Verismith.Verilog.Token ( src/Verismith/Verilog/Token.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Token.o )
+[32 of 38] Compiling Verismith.Verilog.Lex ( /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Lex.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Lex.o )
+[33 of 38] Compiling Verismith.Verilog.Parser ( src/Verismith/Verilog/Parser.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Parser.o )
+[34 of 38] Compiling Verismith.Verilog.Quote ( src/Verismith/Verilog/Quote.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog/Quote.o )
+[35 of 38] Compiling Verismith.Verilog ( src/Verismith/Verilog.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Verilog.o )
+[36 of 38] Compiling Verismith.Reduce ( src/Verismith/Reduce.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Reduce.o )
+[37 of 38] Compiling Verismith.Fuzz   ( src/Verismith/Fuzz.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith/Fuzz.o )
+
+src/Verismith/Fuzz.hs:68:17: warning:
+    * Ignoring unusable UNPACK pragma on the 9th argument of `FuzzOpts'
+    * In the definition of data constructor `FuzzOpts'
+      In the data type declaration for `FuzzOpts'
+   |
+68 | data FuzzOpts = FuzzOpts { _fuzzOptsOutput      :: !(Maybe FilePath)
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^...
+[38 of 38] Compiling Verismith        ( src/Verismith.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/build/Verismith.o )
+Configuring executable 'verismith' for verismith-0.6.0.2..
+Preprocessing executable 'verismith' for verismith-0.6.0.2..
+Building executable 'verismith' for verismith-0.6.0.2..
+[1 of 1] Compiling Main             ( app/Main.hs, /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/x/verismith/build/verismith/verismith-tmp/Main.o )
+Linking /tmp/verismith/dist-newstyle/build/x86_64-linux/ghc-8.6.5/verismith-0.6.0.2/x/verismith/build/verismith/verismith ...

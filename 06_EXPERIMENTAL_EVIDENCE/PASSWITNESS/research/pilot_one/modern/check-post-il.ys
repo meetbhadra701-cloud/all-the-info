@@ -1,0 +1,10 @@
+read_verilog -sv "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue1047/source.v"
+rename -top golden
+read_rtlil "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/out/1047-historical/post-shiftmul.il"
+rename top candidate
+read_verilog "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/modern/1047-miter.v"
+hierarchy -top passwitness_miter
+prep -top passwitness_miter
+flatten
+opt
+sat -prove mismatch 0 -verify -set-def-inputs -show-ports -dump_json "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/out/1047-modern/post-il-counterexample.json" -dump_vcd "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/out/1047-modern/post-il-counterexample.vcd"

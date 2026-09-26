@@ -1,0 +1,65 @@
+### FILE netlists/BASELINE/MUTX_behavioral_MUL_32.aig
+### ARGS -mul -dyn -p -c -no-steps
+### TIMEOUT 900
+### START 2026-09-24T02:10:41-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/BASELINE/MUTX_behavioral_MUL_32.aig
+║           mode: mul
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╠═ Result: Buggy
+║   [34mSP: {73} -10240n4n6n8n10n12n72n74n76n78n80n82 + -4096n2n4n6n8n10n12n72n74n78n80n82 + -3072n4n6n8n10n74n76n80n82 + -3072n4n6n8n12n72n76n80n82 + -3072n4n6n10n12n72n74n80n82 + -3072n4n8n10n12n72n74n76n82 + -3072n4n8n10n12n72n74n78n82 + -3072n4n8n10n74n76n78n82 + -3072n4n8n12n72n76n78n82 + -3072n6n8n10n12n72n74n76n80 + -3072n6n8n10n12n72n74n78n80 + -3072n6n8n10n74n76n78n80 + -3072n6n8n12n72n76n78n80 + -3072n8n10n12n72n74n76n78 + -2048n2n4n6n8n10n12n72n74n76n78n82 + -2048n2n4n6n8n10n12n72n74n76n80n82 + -2048n2n4n6n8n10n74n76n78n80n82 + -2048n2n4n6n8n12n72n76n78n80n82 + -2048n2n4n8n10n12n72n74n76n78n80n82 + -2048n2n6n8n10n12n72n74n76n78n80n82 + -2048n4n6n8n78n80n82 + -1024n2n4n6n10n12n72n74n78n82 + -1024n2n4n8n10n74n76n80n82 + -1024n2n4n8n12n72n76n80n82 + -1024n2n4n10n12n72n74n80n82 + -1024n2n6n8n10n12n72n74n78n82 + -1024n2n6n8n10n74n76n78n82 + -1024n2n6n8n12n72n76n78n82 + -1024n2n6n10n12n72n74n78n80n82 + -1024n4n6n10n12n72n74n78n80 + -512n4n82 + -512n6n80 + -512n8n10n74n76 + -512n8n12n72n76 + -512n8n78 + -512n10n12n72n74 + 1024n2n4n6n8n10n74n76n78n82 + 1024n2n4n6n8n10n74n76n80n82 + 1024n2n4n6n8n12n72n76n78n82 + 1024n2n4n6n8n12n72n76n80n82 + 1024n2n4n6n10n12n72n74n80n82 + 1024n2n4n8n10n12n72n74n78n80n82 + 1024n2n4n8n10n74n76n78n80n82 + 1024n2n4n8n12n72n76n78n80n82 + 1024n2n6n8n10n74n76n78n80n82 + 1024n2n6n8n12n72n76n78n80n82 + 1024n4n6n8n10n12n72n74n78n80 + 1024n4n6n10n12n72n74n78n80n82 + 1024n4n6n80n82 + 1024n4n8n78n82 + 1024n6n8n78n80 + 1024n8n10n12n72n74n76 + 1536n4n8n10n74n76n82 + 1536n4n8n12n72n76n82 + 1536n4n10n12n72n74n82 + 1536n6n8n10n74n76n80 + 1536n6n8n12n72n76n80 + 1536n6n10n12n72n74n80 + 1536n8n10n12n72n74n78 + 1536n8n10n74n76n78 + 1536n8n12n72n76n78 + 2048n2n4n6n8n10n12n72n74n78n82 + 2048n2n4n6n10n12n72n74n78n80n82 + 2048n2n4n8n10n12n72n74n76n80n82 + 2048n2n6n8n10n12n72n74n76n78n82 + 2048n2n6n8n10n12n72n74n78n80n82 + 4096n2n4n6n8n10n12n72n74n76n78n80n82 + 4096n4n6n8n10n12n72n74n78n80n82 + 5120n4n6n8n10n74n76n78n80n82 + 5120n4n6n8n12n72n76n78n80n82 + 6144n4n6n8n10n12n72n74n76n80n82 + 6144n4n8n10n12n72n74n76n78n82 + 6144n6n8n10n12n72n74n76n78n80[39m
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mul
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/BASELINE/MUTX_behavioral_MUL_32.aig
+║ Maximum polynomial : 1295
+║ Number of iteration: 8446
+║ Elapsed time: 6.02906 (in seconds)
+║ Number and-gates : 8384
+║ Substitution steps : 8448
+║ Number of removed conflicts : 3174
+║ Total calculated conflicts : 80318
+║ Conflict calculation time: 0.154261 (in seconds)
+║ Number of negated nodes : 1587
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/BASELINE/MUTX_behavioral_MUL_32.aig -mul -dyn -p -c -no-steps"
+	User time (seconds): 5.27
+	System time (seconds): 0.47
+	Percent of CPU this job got: 90%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 6.32s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 112832
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 7301
+	Voluntary context switches: 16
+	Involuntary context switches: 1777
+	Swaps: 0
+	File system inputs: 46
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 28315648
+### DOCKER_EXIT 0
+### WALL_SECONDS 10.16
+### END 2026-09-24T02:10:51-07:00

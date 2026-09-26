@@ -1,0 +1,13 @@
+option,syntax,width,returncode,runtime_seconds,candidate,script,log
+default,default,4,0,0.571679,work/configuration_isolation/default_w4.v,work/configuration_isolation/default_w4.ys,logs/configuration_isolation/default_w4.log
+strategy_fa,-strategy fa,4,0,0.518965,work/configuration_isolation/strategy_fa_w4.v,work/configuration_isolation/strategy_fa_w4.ys,logs/configuration_isolation/strategy_fa_w4.log
+strategy_42,-strategy 42,4,0,0.521826,work/configuration_isolation/strategy_42_w4.v,work/configuration_isolation/strategy_42_w4.ys,logs/configuration_isolation/strategy_42_w4.log
+final_ripple,-final ripple,4,0,0.571132,work/configuration_isolation/final_ripple_w4.v,work/configuration_isolation/final_ripple_w4.ys,logs/configuration_isolation/final_ripple_w4.log
+final_prefix,-final prefix,4,0,0.569257,work/configuration_isolation/final_prefix_w4.v,work/configuration_isolation/final_prefix_w4.ys,logs/configuration_isolation/final_prefix_w4.log
+no_fma,-no-fma,4,0,0.519891,work/configuration_isolation/no_fma_w4.v,work/configuration_isolation/no_fma_w4.ys,logs/configuration_isolation/no_fma_w4.log
+fa_ripple,-strategy fa -final ripple,4,0,0.519908,work/configuration_isolation/fa_ripple_w4.v,work/configuration_isolation/fa_ripple_w4.ys,logs/configuration_isolation/fa_ripple_w4.log
+fa_prefix,-strategy fa -final prefix,4,0,0.520091,work/configuration_isolation/fa_prefix_w4.v,work/configuration_isolation/fa_prefix_w4.ys,logs/configuration_isolation/fa_prefix_w4.log
+42_ripple,-strategy 42 -final ripple,4,0,0.520993,work/configuration_isolation/42_ripple_w4.v,work/configuration_isolation/42_ripple_w4.ys,logs/configuration_isolation/42_ripple_w4.log
+42_prefix,-strategy 42 -final prefix,4,0,0.519064,work/configuration_isolation/42_prefix_w4.v,work/configuration_isolation/42_prefix_w4.ys,logs/configuration_isolation/42_prefix_w4.log
+no_fma_ripple,-no-fma -final ripple,4,0,0.520749,work/configuration_isolation/no_fma_ripple_w4.v,work/configuration_isolation/no_fma_ripple_w4.ys,logs/configuration_isolation/no_fma_ripple_w4.log
+no_fma_prefix,-no-fma -final prefix,4,0,0.570299,work/configuration_isolation/no_fma_prefix_w4.v,work/configuration_isolation/no_fma_prefix_w4.ys,logs/configuration_isolation/no_fma_prefix_w4.log

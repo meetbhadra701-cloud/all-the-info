@@ -1,0 +1,15 @@
+ecppack gowin_pack gowin_pll gowin_unpack icepack nextpnr-ecp5 nextpnr-generic nextpnr-himbaechel nextpnr-ice40 nextpnr-machxo2 nextpnr-nexus openFPGALoader prjoxide 
+applications cvc4 doc fonts glib-2.0 glycin-loaders gtkwave3 icebox icons info man manifest.json mcy metainfo mime nextpnr openFPGALoader openocd pkgconfig trellis verilator yosys 
+himbaechel
+214M	/mnt/c/Users/meetb/Documents/Codex/2026-09-20/muxwise-experiment-1-zero-commitment-eda/outputs/muxwise-experiment-02/work/oss-cad-suite/share/nextpnr/himbaechel
+/mnt/c/Users/meetb/Documents/Codex/2026-09-20/muxwise-experiment-1-zero-commitment-eda/outputs/muxwise-experiment-02/work/oss-cad-suite/libexec/nextpnr-ecp5: ELF 64-bit LSB pie executable, x86-64, version 1 (GNU/Linux), dynamically linked, interpreter /lib64/ld-linux-x86-64.so.2, BuildID[sha1]=e6a3c8d5ed872ce5be011458d421cf5b5f7032f7, for GNU/Linux 3.2.0, stripped
+20260921abstract
+autotune
+demos
+dft
+eqy
+fifo
+indinv
+mcy_demo
+multiclk
+puzzles

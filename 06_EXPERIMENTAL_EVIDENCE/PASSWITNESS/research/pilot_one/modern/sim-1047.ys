@@ -1,0 +1,7 @@
+read_verilog "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/out/1047-historical/pre-shiftmul.v"
+rename -top pre
+read_verilog "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/out/1047-historical/post-shiftmul.v"
+rename top post
+read_verilog "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/modern/1047-sim.v"
+prep -top tb
+sim -q -a -n 2 -vcd "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/out/1047-modern/simulation.vcd" -summary "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_one/out/1047-modern/simulation-summary.json"

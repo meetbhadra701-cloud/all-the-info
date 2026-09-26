@@ -1,0 +1,31 @@
+{
+ "job_id": "repro__mac_s_w3_zext_addend_mutant_INCORRECT___dyn_p_c",
+ "netlist": "evidence/trace_phaseopt_minimal_repro/mac_s_w3_zext_addend_mutant_INCORRECT.aig",
+ "trace_args": "-mac -s -dyn -p -c -no-steps",
+ "trace_result": "Correct",
+ "template_spec": "mac:sss:3,3,6:7",
+ "oracle": {
+  "status": "INCORRECT",
+  "exhaustive": true,
+  "vectors": 4096,
+  "mismatches": 2048
+ },
+ "replayed_mismatch": {
+  "input_vector_hex": "0x800",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x20"
+  ],
+  "got": "0x20",
+  "expected": "0x60",
+  "diff_bits": [
+   6
+  ]
+ },
+ "replay_check": {
+  "got": "0x20",
+  "expected": "0x60",
+  "mismatch": true
+ }
+}

@@ -1,0 +1,31 @@
+{
+ "job_id": "mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64___dyn_p",
+ "netlist": "netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64.aig",
+ "trace_args": "-mac -s -dyn -p -no-steps",
+ "trace_result": "Correct",
+ "template_spec": "mac:sss:8,8,16:17",
+ "oracle": {
+  "status": "INCORRECT",
+  "exhaustive": false,
+  "vectors": 18185,
+  "mismatches": 8996
+ },
+ "replayed_mismatch": {
+  "input_vector_hex": "0xffff0001",
+  "operands": [
+   "0x1",
+   "0x0",
+   "0xffff"
+  ],
+  "got": "0xffff",
+  "expected": "0x1ffff",
+  "diff_bits": [
+   16
+  ]
+ },
+ "replay_check": {
+  "got": "0xffff",
+  "expected": "0x1ffff",
+  "mismatch": true
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "counterexample": null,
+  "errors": [
+    "Yosys is unavailable or did not return a version string."
+  ],
+  "flow": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue1047/synthesis.ys",
+  "formal": {
+    "backend": "yosys-sat",
+    "counterexample_json": null,
+    "counterexample_vcd": null,
+    "log_path": null,
+    "model": {},
+    "reason": "Formal check was not executed because setup failed.",
+    "runtime_seconds": null,
+    "verdict": "NOT_EXECUTED"
+  },
+  "inferences": [],
+  "input_design": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue1047/source.v",
+  "localization": {
+    "reason": "Localization was not executed.",
+    "status": "NOT_EXECUTED"
+  },
+  "output_directory": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047-analysis",
+  "parameters": {},
+  "paths": {
+    "formal_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047-analysis/logs/formal.log",
+    "synthesis_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047-analysis/logs/synthesis.log",
+    "tool_version_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047-analysis/logs/tool-version.log"
+  },
+  "schema_version": 2,
+  "status": "SETUP_ERROR",
+  "synthesis": {},
+  "tool": {},
+  "top_module": "top",
+  "unexecuted_checks": [
+    "Formal equivalence."
+  ],
+  "verified_facts": []
+}

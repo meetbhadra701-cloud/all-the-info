@@ -1,0 +1,23 @@
+{
+ "job_id": "BL17_wrongmode_mac8_as_mul",
+ "results_csv": "trace_baseline_results.csv",
+ "netlist": "third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig",
+ "args": "-mul -dyn -p -c -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mul:uu:16,16:17",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 231,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -1835521,
+  "input_vector_hex": "0xffffffff",
+  "operands": [
+   "0xffff",
+   "0xffff"
+  ],
+  "netlist_output": "0x1fe00",
+  "reference": "0x1"
+ },
+ "overall": "WITNESS_CONFIRMED"
+}

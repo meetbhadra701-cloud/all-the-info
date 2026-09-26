@@ -1,0 +1,34 @@
+MUXWISE Experiment 01 environment inventory
+Date: 2026-09-20
+
+Host/kernel:
+Linux behappy 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+Python: 3.14.4
+Git: 2.53.0
+WSL: WSL2; default distribution Ubuntu-26.04; default version 2
+CPU: 8 logical CPUs
+Memory: 15 GiB total; 14 GiB available at inventory time; 4 GiB swap
+
+Docker:
+Windows-side docker.exe was available and the daemon was reachable.
+Docker client: 29.8.0, API 1.56, context desktop-linux
+Docker Desktop: 4.91.0 (239619)
+Docker Engine: 29.8.0
+The Linux-side `docker` command was not integrated into this WSL distro; all container runs used docker.exe.
+
+Host PATH availability:
+Yosys: unavailable
+ABC: unavailable
+OpenROAD: unavailable
+
+Experiment container:
+Base: debian:bookworm
+Image: muxwise-yosys:debian-bookworm
+Image digest: sha256:db444bce0eb8b6863f82a5c91e014e555c82d021882a102f05e62a916e87b18d
+Yosys: 0.23 (git sha1 7ce5011c24b)
+Berkeley ABC: 1.01 (compiled Feb 7 2023 01:39:45)
+Debian packages were installed only inside the dedicated Docker image.
+
+Git provenance:
+The experiment workspace is not a Git checkout; no repository commit hash was available.
+

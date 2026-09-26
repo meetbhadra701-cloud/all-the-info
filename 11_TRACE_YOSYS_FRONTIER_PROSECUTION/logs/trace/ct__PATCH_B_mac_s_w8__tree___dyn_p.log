@@ -1,0 +1,21 @@
+### FILE netlists/PATCH/B_mac_s_w8__tree.aig
+### ARGS -mac -s -dyn -p -no-steps
+### TIMEOUT 60
+### START 2026-09-24T03:36:35-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/PATCH/B_mac_s_w8__tree.aig
+║           mode: mac
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: disabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 42975232
+### DOCKER_EXIT 0
+### WALL_SECONDS 61.51
+### END 2026-09-24T03:37:36-07:00

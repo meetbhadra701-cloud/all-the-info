@@ -1,0 +1,5 @@
+read_verilog -sv "/mnt/c/Users/meetb/Downloads/passwitness/fixtures/signed_fma_bug/source.v"
+hierarchy -top fma_impl
+
+proc
+write_json "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-clean-package/work/golden.json"

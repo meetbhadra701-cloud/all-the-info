@@ -1,0 +1,11 @@
+======== ABC command line "&acec -T 300 /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/dot2_u_w24_norm.aig /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/dot2_u_w24_tree.aig"
+The adder tree has 2568 internal cut points. There is no internal fanouts.
+The adder tree has 2350 internal cut points. There is no internal fanouts.
+Finished computing equivalent nodes.  Time =     0.05 sec
+Moved 0 pairs of PPs to normalize the matrix.
+Moved 0 pairs of PPs to normalize the matrix.
+Box0: Matched 899 entries out of 1152.
+Box1: Matched 899 entries out of 1144.
+Matching of adder trees in LHS and RHS succeeded.  Time =     0.07 sec
+Networks are NOT EQUIVALENT. Output 45 trivially differs (different phase).  Time =     0.00 sec
+INPUT: a = 96'h000000000000000000000000.  OUTPUT: z = 49'h0000000000000 (miter), z = 49'h0200000000000 (miter).

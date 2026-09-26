@@ -1,0 +1,10 @@
+read_verilog -sv rtl/B_dot2_u_w16.v
+synth -top top -noabc
+abc -g gates
+opt -fast
+hierarchy -check
+stat
+check
+aigmap
+opt_clean
+write_aiger -symbols -map netlists/ABCMAP/B_dot2_u_w16__norm__g_gates.map netlists/ABCMAP/B_dot2_u_w16__norm__g_gates.aig

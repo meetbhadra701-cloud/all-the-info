@@ -1,0 +1,366 @@
+{
+  "counterexample": null,
+  "errors": [],
+  "flow": "/mnt/c/Users/meetb/Downloads/passwitness/fixtures/signed_fma_bug/synthesis.ys",
+  "formal": {
+    "counterexample_json": null,
+    "counterexample_vcd": null,
+    "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/logs/formal.log",
+    "model": {},
+    "reason": "The SAT solver established the equivalence property.",
+    "runtime_seconds": 0.6412174669967499,
+    "verdict": "PASS"
+  },
+  "inferences": [
+    "The tested combinational input space is equivalent under the supplied flow."
+  ],
+  "input_design": "/mnt/c/Users/meetb/Downloads/passwitness/fixtures/signed_fma_bug/source.v",
+  "localization": {
+    "checkpoints": [
+      {
+        "capture_commands": [
+          "hierarchy -check -top fma_impl",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/000_elaborated.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 0,
+        "model": {},
+        "name": "elaborated",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/000_elaborated.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/000_elaborated.log",
+        "proof_runtime_seconds": 0.5839914930111263,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/000_elaborated.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/000_elaborated.rtlil",
+        "transition": "elaboration",
+        "verdict": "PASS"
+      },
+      {
+        "capture_commands": [
+          "proc",
+          "check",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/001_proc.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 1,
+        "model": {},
+        "name": "proc",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/001_proc.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/001_proc.log",
+        "proof_runtime_seconds": 0.6451544940064196,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/001_proc.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/001_proc.rtlil",
+        "transition": "proc",
+        "verdict": "PASS"
+      },
+      {
+        "capture_commands": [
+          "flatten",
+          "opt_expr",
+          "check",
+          "opt_clean",
+          "opt -nodffe -nosdff",
+          "fsm",
+          "opt",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/002_opt.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 2,
+        "model": {},
+        "name": "opt",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/002_opt.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/002_opt.log",
+        "proof_runtime_seconds": 0.7766977860010229,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/002_opt.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/002_opt.rtlil",
+        "transition": "opt",
+        "verdict": "PASS"
+      },
+      {
+        "capture_commands": [
+          "wreduce",
+          "peepopt",
+          "opt_clean",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/003_wreduce.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 3,
+        "model": {},
+        "name": "wreduce",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/003_wreduce.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/003_wreduce.log",
+        "proof_runtime_seconds": 0.6205267019977327,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/003_wreduce.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/003_wreduce.rtlil",
+        "transition": "wreduce",
+        "verdict": "PASS"
+      },
+      {
+        "capture_commands": [
+          "alumacc",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/004_alumacc.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 4,
+        "model": {},
+        "name": "alumacc",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/004_alumacc.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/004_alumacc.log",
+        "proof_runtime_seconds": 0.6385515919828322,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/004_alumacc.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/004_alumacc.rtlil",
+        "transition": "alumacc",
+        "verdict": "PASS"
+      },
+      {
+        "capture_commands": [
+          "arith_tree",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/005_arith_tree.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 5,
+        "model": {},
+        "name": "arith_tree",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/005_arith_tree.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/005_arith_tree.log",
+        "proof_runtime_seconds": 0.661357521021273,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/005_arith_tree.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/005_arith_tree.rtlil",
+        "transition": "arith_tree",
+        "verdict": "PASS"
+      },
+      {
+        "capture_commands": [
+          "share",
+          "opt",
+          "memory -nomap",
+          "opt_clean",
+          "opt -fast -full",
+          "memory_map",
+          "opt -full",
+          "techmap",
+          "opt -fast",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/006_techmap.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 6,
+        "model": {},
+        "name": "techmap",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/006_techmap.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/006_techmap.log",
+        "proof_runtime_seconds": 0.6572571900032926,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/006_techmap.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/006_techmap.rtlil",
+        "transition": "techmap",
+        "verdict": "PASS"
+      },
+      {
+        "capture_commands": [
+          "abc",
+          "opt -fast",
+          "hierarchy -check",
+          "stat",
+          "check",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/007_abc.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 7,
+        "model": {},
+        "name": "abc",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/007_abc.rtlil",
+          "rename fma_impl passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/007_abc.log",
+        "proof_runtime_seconds": 0.6706389920145739,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/007_abc.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/007_abc.rtlil",
+        "transition": "abc",
+        "verdict": "PASS"
+      }
+    ],
+    "divergence_interval": null,
+    "errors": [],
+    "first_divergent_stage": null,
+    "flow_comparison": {
+      "counterexample_json": null,
+      "counterexample_vcd": null,
+      "log": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/final-flow-comparison.log",
+      "miter": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/final-flow-comparison-miter.v",
+      "model": {},
+      "reason": "The SAT solver established the equivalence property.",
+      "returncode": 0,
+      "runtime_seconds": 0.7504455239977688,
+      "script": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/proofs/final-flow-comparison.ys",
+      "status": "PASS"
+    },
+    "formal_check_count": 9,
+    "formal_runtime_seconds": 6.004621294036042,
+    "instrumented_script": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/instrumented-flow.ys",
+    "miter": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoint-miter.v",
+    "mode": "synth_arith_tree_expansion",
+    "portable_package": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/portable",
+    "previous_stage": null,
+    "reason": "",
+    "status": "NO_DIVERGENCE",
+    "synthesis": {
+      "commands": [
+        "read_verilog -sv \"/mnt/c/Users/meetb/Downloads/passwitness/fixtures/signed_fma_bug/source.v\"",
+        "hierarchy -check -top fma_impl",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/000_elaborated.rtlil\"",
+        "proc",
+        "check",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/001_proc.rtlil\"",
+        "flatten",
+        "opt_expr",
+        "check",
+        "opt_clean",
+        "opt -nodffe -nosdff",
+        "fsm",
+        "opt",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/002_opt.rtlil\"",
+        "wreduce",
+        "peepopt",
+        "opt_clean",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/003_wreduce.rtlil\"",
+        "alumacc",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/004_alumacc.rtlil\"",
+        "arith_tree",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/005_arith_tree.rtlil\"",
+        "share",
+        "opt",
+        "memory -nomap",
+        "opt_clean",
+        "opt -fast -full",
+        "memory_map",
+        "opt -full",
+        "techmap",
+        "opt -fast",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/006_techmap.rtlil\"",
+        "abc",
+        "opt -fast",
+        "hierarchy -check",
+        "stat",
+        "check",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/checkpoints/007_abc.rtlil\""
+      ],
+      "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/logs/instrumented-synthesis.log",
+      "returncode": 0,
+      "runtime_seconds": 0.7259686659963336,
+      "script": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/localization/instrumented-flow.ys"
+    },
+    "synthesis_runtime_seconds": 0.7259686659963336,
+    "time_to_first_divergence_seconds": null,
+    "total_runtime_seconds": 6.968772883003112,
+    "unexecuted_stages": []
+  },
+  "output_directory": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package",
+  "parameters": {},
+  "paths": {
+    "candidate_netlist": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/work/candidate.v",
+    "formal_log": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/logs/formal.log",
+    "formal_script": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/work/formal.ys",
+    "golden_metadata_log": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/logs/golden-metadata.log",
+    "miter": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/work/miter.v",
+    "portable_package": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/portable",
+    "synthesis_log": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/logs/synthesis.log",
+    "tool_version_log": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/logs/tool-version.log"
+  },
+  "schema_version": 2,
+  "status": "PASS",
+  "synthesis": {
+    "flow": "/mnt/c/Users/meetb/Downloads/passwitness/fixtures/signed_fma_bug/synthesis.ys",
+    "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/logs/synthesis.log",
+    "returncode": 0,
+    "runtime_seconds": 0.6764865339791868,
+    "script": "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-patched-package/work/candidate.ys"
+  },
+  "tool": {
+    "commit": "30b851e63ff071578cda4e1e49eccd367f7881d9",
+    "executable": "/mnt/c/Users/meetb/Downloads/passwitness/tools/yosys-patched",
+    "version": "Yosys 0.69+ (git sha1 e8db64c60, Release, Clang /usr/bin/clang++ 18.1.3)"
+  },
+  "top_module": "fma_impl",
+  "unexecuted_checks": [],
+  "verified_facts": [
+    "Yosys version recorded as Yosys 0.69+ (git sha1 e8db64c60, Release, Clang /usr/bin/clang++ 18.1.3).",
+    "The golden RTL and synthesized candidate were independently loaded into a generated output-comparison miter.",
+    "Formal classification is PASS based on an explicit SAT proof marker."
+  ]
+}

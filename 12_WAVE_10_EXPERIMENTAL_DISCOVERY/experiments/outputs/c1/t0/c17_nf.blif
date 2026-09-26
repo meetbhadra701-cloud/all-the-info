@@ -1,0 +1,33 @@
+.model mapped
+.inputs pi0 pi1 pi2 pi3 pi4
+.outputs po0 po1
+.names c0_
+.names c1_
+1
+.names pi2 new_n8
+0 1
+.names pi4 new_n9
+0 1
+.names pi0 pi1 new_n10
+00 1
+10 1
+01 1
+.names pi1 pi3 new_n11
+11 1
+.names new_n8 new_n11 new_n10 po0
+000 1
+100 1
+010 1
+110 1
+001 1
+.names pi1 pi3 new_n9 new_n8 po1
+0000 1
+1000 1
+0100 1
+0010 1
+1010 1
+0110 1
+0001 1
+1001 1
+0101 1
+.end

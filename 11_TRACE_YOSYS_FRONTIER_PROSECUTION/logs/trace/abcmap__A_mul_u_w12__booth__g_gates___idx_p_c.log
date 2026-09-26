@@ -1,0 +1,21 @@
+### FILE netlists/ABCMAP/A_mul_u_w12__booth__g_gates.aig
+### ARGS -mul -idx -p -c -no-steps
+### TIMEOUT 90
+### START 2026-09-24T17:14:58-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/ABCMAP/A_mul_u_w12__booth__g_gates.aig
+║           mode: mul
+║           sign: unsigned
+║           method: idx
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 238678016
+### DOCKER_EXIT 0
+### WALL_SECONDS 90.58
+### END 2026-09-24T17:16:29-07:00

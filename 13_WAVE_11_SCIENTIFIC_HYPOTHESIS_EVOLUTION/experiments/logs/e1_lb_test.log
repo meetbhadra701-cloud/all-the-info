@@ -1,0 +1,1 @@
+{"dump": "ctrl.dump.json", "D": 1000000000.0, "eps": -1.0, "enc": "pb", "arith": "default", "notiming": true, "n_cands_full": 7345, "n_cands_model": 7345, "solver_status": "sat", "solver_wall": 38.71, "fixed_area": 0.0, "objective_x100": 200.0, "verdict": "SOLVED", "n_cells": 50, "n_impl": 50}

@@ -1,0 +1,689 @@
+I ran this as a **frontier-mining / strongest-baseline attack**, not an invention pass. I found **18 source-anchored observations** that are at least worth recording. Five survive strongly enough for the final shortlist.
+
+The most important 2026 update is that several formerly attractive seams are now dead. In particular, **retiming + strong sequential resynthesis certification is no longer acceptable ore**: Seufert and Scholl's FMCAD 2026 *Certified Sequential Sweep Without Unrolling* explicitly verifies sequential equivalence under retiming followed by arbitrarily strong sequential resynthesis while still producing certificates. ([arxiv.org][1]) Likewise, generic phase-abstraction certification, temporal-decomposition certification, and generic bit-level liveness certification already have strong solutions. ([Springer Link][2])
+
+## 1. Direct invariant lifting across a **sequence of heterogeneous transformations**
+
+**METHOD:** Cabodi et al., *Manipulating Proof Certificate Invariants in the Presence of Model Transformations*, IEEE Access 2026.
+
+**WHY IT MATTERS:** Instead of merely validating a transformed model through a witness circuit, their method reconstructs an actual inductive invariant on the **original** model. That matters because the invariant can then be reused for other properties or synthesis, rather than serving only as a pass certificate.
+
+**CLAIMED CAPABILITY:** Full invariant lifting is demonstrated for temporal decomposition, phase abstraction, equivalence/constant propagation, using interpolation and SAT-based simplification.
+
+**ASSUMPTIONS:** The transformation belongs to one of the explicitly supported classes and an appropriate transformation log/correspondence is available.
+
+**STRONGEST BASELINE:** Cabodi 2026 plus Certifaiger-style witness circuits. Witness circuits already provide very general *certification* of transformed models, so simple “can we certify preprocessing?” is dead. ([Iris][3])
+
+**LIMITATION:** The paper explicitly places **sequences of transformations** in future work, along with signal correspondence and reparameterization. ([ResearchGate][4])
+
+**EVIDENCE:** This is not inferred from poor benchmark performance; it is named by the authors as an extension not yet covered.
+
+**KNOWN WORKAROUNDS:** Build a witness circuit for the complete transformed flow; certify transformations stepwise; or lift each transformation independently when possible.
+
+**WHY THOSE MAY BE INSUFFICIENT:** A valid witness proves the result, but does not necessarily return a reusable inductive invariant directly in the original model's state vocabulary—the explicit second objective of Cabodi et al. ([Iris][3])
+
+**POSSIBLE STRUCTURAL VARIABLE:** Whether invariant-lifting operators for transformations \(T_1,T_2,\ldots,T_n\) are closed under composition, especially when one transformation alters variables on which the next transformation's correspondence depends.
+
+**CHEAP REPRODUCTION:** Tiny AIGER circuits; apply two already-supported simplifications consecutively; obtain the final invariant and attempt direct versus sequential lifting.
+
+**STRONG-REPRESENTATION TEST:** Supply complete transformation logs and every correspondence required by each individual transformation. No missing metadata excuse is allowed.
+
+**COMPOSITION TEST:** Yes—the entire seam is the interaction of two individually supported transformations.
+
+**FALSIFICATION:** If applying the published lifting operations sequentially always yields a valid original-model invariant with comparable certificate size, the frontier collapses.
+
+**Status:** **Survives.**
+
+---
+
+## 2. Invariant lifting through **semantic signal correspondence**
+
+**METHOD:** Same Cabodi 2026 lifting framework.
+
+**WHY IT MATTERS:** Real synthesis and SEC flows can establish correspondences between internal quantities even when the optimized design no longer retains identical state signals.
+
+**CLAIMED CAPABILITY:** The current lifting framework handles several concrete preprocessing transformations and restores inductive invariants to the original system.
+
+**ASSUMPTIONS:** Current supported transformations provide enough structure for interpolation/projection.
+
+**STRONGEST BASELINE:** Cabodi 2026; generic witness simulation from Certifaiger; and 2026 Certified Sequential Sweep for retimed/resynthesized equivalence. ([Iris][3])
+
+**LIMITATION:** **Signal correspondence** is explicitly named as future work by Cabodi et al. ([ResearchGate][4])
+
+**EVIDENCE:** Direct author-stated boundary.
+
+**KNOWN WORKAROUNDS:** SEC correspondence, witness circuits, substitution where a simple functional mapping exists, or re-prove the invariant on the source model.
+
+**WHY THOSE MAY BE INSUFFICIENT:** The interesting case is not net renaming. It is where a correspondence is **relational or many-to-one**, so there is no syntactic substitution from transformed certificate predicates into original variables.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Functional vs relational state correspondence; specifically whether existential projection preserves inductiveness after transporting a relational invariant.
+
+**CHEAP REPRODUCTION:** Build equivalent small FSMs where one side stores a derived encoding rather than the source state; provide the exact relation manually.
+
+**STRONG-REPRESENTATION TEST:** Give the lifting procedure the exact semantic relation, not signal names.
+
+**COMPOSITION TEST:** Yes: equivalence/correspondence generation is valid; invariant certification is valid; their direct composition is the question.
+
+**FALSIFICATION:** If exact relational correspondence plus Cabodi's interpolation machinery trivially yields the lifted inductive invariant in all constructed cases, scrap it.
+
+**Status:** **Survives, but overlaps Frontier 1.**
+
+---
+
+## 3. Direct lifting across **reparameterization**
+
+**METHOD:** Cabodi 2026.
+
+**WHY IT MATTERS:** Reparameterization replaces one state/input basis with another while preserving represented behavior; it can destroy simple variable-level invariant correspondence without destroying semantics.
+
+**STRONGEST BASELINE:** Full invariant lifting plus generic witness circuits.
+
+**LIMITATION / EVIDENCE:** Reparameterization is explicitly listed among transformations still to be incorporated. ([ResearchGate][4])
+
+**ASSUMPTIONS:** Enough relation between parameterizations must be available to prove equivalence.
+
+**KNOWN WORKAROUNDS:** Translate parameters manually; use a witness circuit; re-run verification on the original representation.
+
+**WHY POSSIBLY INSUFFICIENT:** Witness certification again solves correctness, not necessarily recovery of an original-vocabulary invariant.
+
+**STRUCTURAL VARIABLE:** Information loss under the parameter map—bijective, surjective, relational, or only valid under reachable-state constraints.
+
+**CHEAP REPRODUCTION:** Arithmetic counter/FSM with alternate state coordinates; make the correspondence exact and machine-readable.
+
+**STRONG-REPRESENTATION TEST:** Supply the complete parameter relation.
+
+**COMPOSITION TEST:** Reparameterization + invariant proof.
+
+**FALSIFICATION:** If ordinary existential substitution/interpolation already transports every test invariant without auxiliary reasoning.
+
+**Status:** **Survives conditionally; likely a subfamily of #1 rather than a separate long-term frontier.**
+
+---
+
+## 4. Temporal deductive proof rules composed rather than applied in isolation
+
+**METHOD:** Sindoni et al., CADE 2025, theorem-prover-based certification using PVS rules for phase abstraction, temporal decomposition and equivalences.
+
+**WHY IT MATTERS:** Transformation correctness is proved once as temporal rules, allowing the model checker to emit relatively little extra certificate machinery.
+
+**CLAIMED CAPABILITY:** Phase abstraction and temporal decomposition are individually certified.
+
+**STRONGEST BASELINE:** The authors' PVS framework plus the stronger generic phase-abstraction witness framework of Froleyks et al. 2024. ([Springer Link][5])
+
+**LIMITATION:** Their implementation currently applies transformations **in isolation**; they explicitly identify combined simplifications such as phase abstraction + temporal decomposition as the next composition step. ([Springer Nature Link][6])
+
+**KNOWN WORKAROUNDS:** Compose the PVS lemmas manually; use a generic witness circuit.
+
+**WHY POSSIBLY INSUFFICIENT:** The authors themselves say their rules are readily composable, which weakens this as a structural research seam.
+
+**STRUCTURAL VARIABLE:** Whether proof obligations introduced by the first transformation remain expressible in the premises required by the second.
+
+**CHEAP REPRODUCTION:** Their PVS rules on a small two-phase circuit followed by temporal decomposition.
+
+**STRONG-REPRESENTATION TEST:** Provide both invariants, phase number, decomposition depth and original transition relation.
+
+**COMPOSITION TEST:** Directly yes.
+
+**FALSIFICATION:** If the existing PVS strategies compose with only mechanical scripting and no new proof principle.
+
+**Status:** **Conditional / probably implementation work, not top-five.**
+
+---
+
+## 5. Certification across **localization abstraction**
+
+**METHOD:** Froleyks, Yu, Biere & Heljanko, *Certifying Constraints in Hardware Model Checking*, FM 2026.
+
+**WHY IT MATTERS:** The 2026 certificate ecosystem now handles several classes of explicit and implicit constraints, complex resets via QBF, and uniqueness-constrained k-induction.
+
+**CLAIMED CAPABILITY:** Robust certificate generation with constraints and low overhead.
+
+**STRONGEST BASELINE:** Certifaiger's generic witness relation plus the new constraint-certification machinery. ([Springer Link][7])
+
+**LIMITATION:** The authors explicitly list **localization** among the remaining bit-level model-checking techniques to incorporate. Retiming appears in the same sentence, but retiming is now graveyarded by Certified Sequential Sweep; localization remains live. ([Springer Link][7])
+
+**KNOWN WORKAROUNDS:** Certify only the final reduced model; preserve an explicit abstraction relation; avoid localization; or concretize the model before certification.
+
+**WHY POSSIBLY INSUFFICIENT:** Localization changes which portions of state are abstracted and commonly changes them again during refinement. A single static witness relation is not obviously the same object as the iterative abstraction/refinement history.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Stability of certificate obligations under removing and later reinstating localized state.
+
+**CHEAP REPRODUCTION:** Implement tiny latch-localization CEGAR around AIGER + Certifaiger; deliberately require several localization refinements.
+
+**STRONG-REPRESENTATION TEST:** Supply the exact abstraction set, exact removed-latch semantics and full refinement history.
+
+**COMPOSITION TEST:** Localization abstraction + inductive witness certification.
+
+**FALSIFICATION:** If a normal witness circuit generated only from the final localized/concrete pair always certifies the complete procedure without new obligations.
+
+**Status:** **Survives strongly.**
+
+---
+
+## 6. Constraint-induced transition rewriting composed with later model transformation
+
+**METHOD:** FM 2026 constraint certification.
+
+**WHY IT MATTERS:** Some constraint classes do more than append an assumption; they affect the effective transition system being certified.
+
+**CLAIMED CAPABILITY:** Three constraint classes plus uniqueness constraints are certified. ([Springer Link][7])
+
+**STRONGEST BASELINE:** Generic witness circuits + constraint-aware certificates.
+
+**LIMITATION:** The paper does not establish direct reusable-invariant transport when these constrained models are then passed through a different transformation family.
+
+**EVIDENCE:** This is a **scope boundary inferred from the paper**, not an author-demonstrated failure. Therefore it is weaker than #5.
+
+**KNOWN WORKAROUNDS:** Treat the constrained/transformed result as one witness circuit.
+
+**WHY POSSIBLY INSUFFICIENT:** Only interesting if the target is an original-model invariant, not mere validity.
+
+**STRUCTURAL VARIABLE:** Whether constraint rewriting commutes with the transformation's invariant-lifting operator.
+
+**CHEAP REPRODUCTION:** Apply a documented constraint rewrite followed by phase abstraction and compare lifting orders.
+
+**STRONG-REPRESENTATION TEST:** Provide exact constraints plus full transformation map.
+
+**COMPOSITION TEST:** Yes.
+
+**FALSIFICATION:** Equality/equivalence of both lifting orders on all examples.
+
+**Status:** **Conditional; do not shortlist yet.**
+
+---
+
+## 7. Liveness-to-safety certificate extraction when the safety backend **changes the latch set**
+
+**METHOD:** Froleyks et al., *Liveness Proofs for Hardware Model Checking*, CAV 2026.
+
+**WHY IT MATTERS:** This is the new generic liveness-certificate baseline; it covers representative approaches including liveness-to-safety, k-liveness and rLive-style reasoning.
+
+**CLAIMED CAPABILITY:** Generic bit-level liveness witnesses whose validation reduces to fixed SAT obligations. ([ResearchGate][8])
+
+**ASSUMPTION:** In the L2S construction, the authors explicitly assume for presentation that the backend witness is generated by IC3 or similar techniques that **strengthen the invariant without changing the set of latches**. ([ResearchGate][8])
+
+**STRONGEST BASELINE:** CAV 2026 liveness certificates + Certifaiger transformation witnesses.
+
+**LIMITATION:** A legitimate backend safety preprocessing stage may itself perform abstraction/transformation and produce a witness over a different latch set.
+
+**KNOWN WORKAROUNDS:** Disable the backend transformation; use a mapping/witness for that backend transformation; or try to compose its witness with the L2S reconstruction.
+
+**WHY POSSIBLY INSUFFICIENT:** The published L2S extraction directly interprets parts of the safety invariant over the original and copied latch sets. Once that vocabulary changes, the stated construction no longer applies literally. ([ResearchGate][8])
+
+**POSSIBLE STRUCTURAL VARIABLE:** Whether the backend witness relation preserves enough of the ordered pair-of-states structure needed to reconstruct the ranked liveness relation.
+
+**CHEAP REPRODUCTION:** L2S a small liveness model, then run a safety preprocessing step that merges/eliminates state before IC3 certification.
+
+**STRONG-REPRESENTATION TEST:** Supply the exact backend witness relation. No missing latch mapping excuse.
+
+**COMPOSITION TEST:** Extremely clean: valid L2S transform + valid safety transformation.
+
+**FALSIFICATION:** If ordinary Certifaiger witness composition followed by the published L2S extraction validates unchanged for latch-changing backends.
+
+**Status:** **Survives strongly.**
+
+---
+
+## 8. Generic liveness certification at the **word level**
+
+**METHOD:** CAV 2026 liveness certificates + IJCAR 2026 Cerbtora.
+
+**WHY IT MATTERS:** Two strong branches now exist separately: a generic bit-level liveness proof format and a generic word-level witness checker.
+
+**CLAIMED CAPABILITY:** The liveness paper calls its approach the first generic method covering its wide range of liveness algorithms, but explicitly says extension to **word-level systems** remains future work. ([ResearchGate][8]) Cerbtora, meanwhile, brings the generic hardware-witness framework to Btor2/word-level safety. ([Springer Link][9])
+
+**STRONGEST BASELINE:** Both 2026 systems together.
+
+**LIMITATION:** The two capabilities do not yet compose into an end-to-end word-level generic liveness certificate framework; the Cerbtora paper separately says liveness support is ongoing work. ([DOI][10])
+
+**KNOWN WORKAROUND:** Bit-blast the design and use the mature bit-level certificate infrastructure.
+
+**WHY POSSIBLY INSUFFICIENT:** Cerbtora's motivation is precisely that word-level arithmetic/datapath structure matters for scalable verification; their experiments also find significantly smaller word-level witnesses than the bit-level counterparts. ([DOI][10])
+
+**POSSIBLE STRUCTURAL VARIABLE:** Which ranking/witness obligations remain expressible as quantifier-free bit-vector relations without converting the ranked witness into Boolean state machinery.
+
+**CHEAP REPRODUCTION:** Btor2 counters, arithmetic pipelines and small datapaths with eventuality properties.
+
+**STRONG-REPRESENTATION TEST:** Keep all arithmetic semantics directly in Btor2/SMT; no information is withheld.
+
+**COMPOSITION TEST:** Generic liveness witness + generic word-level witness checking.
+
+**FALSIFICATION:** If the CAV 2026 ranked-witness definitions translate literally to Cerbtora's existing five-check machinery with only datatype substitution and no new semantic obligation.
+
+**Status:** **Survives strongly.**
+
+---
+
+## 9. Public production of word-level certificates beyond prototype k-induction
+
+**METHOD:** Cerbtora, IJCAR 2026.
+
+**WHY IT MATTERS:** A checker is useful only when verification engines can actually emit compatible certificates.
+
+**CLAIMED CAPABILITY:** Cerbtora checks word-level witnesses in Btor2 with Bitwuzla.
+
+**LIMITATION:** As of the July 2026 publication, the authors state that **no publicly available implementation produces word-level certificates**; they exercise Cerbtora with a prototype certifying k-induction engine. ([Springer Link][9])
+
+**STRONGEST BASELINE:** Prototype k-induction + Cerbtora.
+
+**KNOWN WORKAROUND:** Bit-blast, or extend an existing engine privately.
+
+**WHY POSSIBLY INSUFFICIENT:** This is mainly an ecosystem/capability wall, not yet evidence of a missing research principle.
+
+**STRUCTURAL VARIABLE:** Ability to turn native word-level PDR/abstraction artifacts into the witness relation expected by Cerbtora.
+
+**CHEAP REPRODUCTION:** Try a current open BTOR2 model checker and check whether its successful result can be exported as a Cerbtora witness without re-verification.
+
+**STRONG-REPRESENTATION TEST:** Give the producer its native SMT invariant/proof information.
+
+**COMPOSITION TEST:** Native word-level solver + common certificate backend.
+
+**FALSIFICATION:** A current public tool already produces Cerbtora-compatible witnesses for non-k-induction algorithms.
+
+**Status:** **Real capability wall, but weaker as structural ore.**
+
+---
+
+## 10. Clause reuse under **non-monotone abstraction replacement**
+
+**METHOD:** IC3 with Syntax-Guided Abstraction.
+
+**WHY IT MATTERS:** This method obtains unusually strong incremental reuse: after refinement, previous IC3 frames and clauses remain valid.
+
+**CLAIMED CAPABILITY:** The paper explicitly attributes full clause reuse to refinement being **completely monotonic**: each iteration only makes the abstract domain finer, giving \(T_{\text{new}}\Rightarrow T\), so previous frames remain sound. ([ResearchGate][11])
+
+**ASSUMPTION:** Refinement adds precision; it does not replace the abstraction basis with a different incomparable abstraction.
+
+**STRONGEST BASELINE:** IC3+SA, lazy abstraction variants, and ordinary PDR restarts.
+
+**LIMITATION:** Its all-clause reuse proof does not cover changing from abstraction \(A\) to abstraction \(B\) where neither transition relation implies the other.
+
+**KNOWN WORKAROUND:** Take the union of abstraction terms so refinement remains monotone, or restart IC3 on the replacement abstraction.
+
+**WHY POSSIBLY INSUFFICIENT:** Unioning the domains can defeat the purpose of switching abstractions; restarting intentionally discards proof work.
+
+**POSSIBLE STRUCTURAL VARIABLE:** A semantic relation between the two quotient state spaces that identifies exactly which learned clauses remain inductive after an incomparable abstraction change.
+
+**CHEAP REPRODUCTION:** Tiny finite-state models with two predicate/term bases; run IC3 on A, replace A by B, test old frames.
+
+**STRONG-REPRESENTATION TEST:** Provide both abstraction/concretization functions exactly.
+
+**COMPOSITION TEST:** Two individually valid abstraction choices + one learned PDR proof.
+
+**FALSIFICATION:** If every useful replacement can be expressed as monotone refinement with negligible domain growth, or a simple clause validity test gives essentially perfect reuse.
+
+**Status:** **Survives strongly.**
+
+---
+
+## 11. IPDR reuse across a **state-basis change**, not merely constraining/relaxing one system family
+
+**METHOD:** Blankestijn & Laarman, *Incremental Property Directed Reachability*, 2023.
+
+**WHY IT MATTERS:** IPDR demonstrates substantial PDR-clause reuse as system instances change.
+
+**CLAIMED CAPABILITY:** It supports incremental **constraining and relaxing**, with clause reuse demonstrated on pebbling and increasing program interleavings. ([arXiv][12])
+
+**ASSUMPTION:** The incremental instances live in a compatible logical vocabulary in which existing PDR clauses can be checked/reused.
+
+**STRONGEST BASELINE:** IPDR + Cabodi 2026 invariant lifting.
+
+**LIMITATION:** Semantic state-variable replacement / relational state correspondence is outside the stated incremental moves. This is a scope-derived frontier, not a negative result.
+
+**KNOWN WORKAROUNDS:** Translate clauses manually, restart PDR, or first lift them using a transformation-specific mechanism.
+
+**WHY POSSIBLY INSUFFICIENT:** Constraining/relaxing modifies the transition relation while retaining clauses in a meaningful vocabulary. A new state basis attacks that assumption.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Relation between old and new state vocabularies under which relative inductiveness of a clause is preserved.
+
+**CHEAP REPRODUCTION:** Verify an FSM, re-encode its state through an exact nontrivial relation, feed old clauses to the second PDR run.
+
+**STRONG-REPRESENTATION TEST:** Supply the complete state relation.
+
+**COMPOSITION TEST:** IPDR clause reuse + semantic state transformation.
+
+**FALSIFICATION:** Cabodi-style lifting maps essentially every useful old PDR clause directly into the new run with no additional mechanism.
+
+**Status:** **Survives conditionally; heavily overlaps #1/#2.**
+
+---
+
+## 12. Maximum-subset invariant reuse when the modified model no longer shares the old proof vocabulary
+
+**METHOD:** Chockler et al., *Incremental Formal Verification of Hardware*, FMCAD 2011, used as an older foundational baseline.
+
+**WHY IT MATTERS:** Their invariant finder takes old IC3 clauses and efficiently extracts the maximal subset that remains inductive after a model/property change. ([ResearchGate][13])
+
+**CLAIMED CAPABILITY:** Strong regression verification when old clauses remain meaningful candidate formulas.
+
+**ASSUMPTION:** Candidates can still be interpreted directly in the new transition system.
+
+**STRONGEST BASELINE:** This maximal-subset filter + IPDR + 2026 invariant lifting.
+
+**LIMITATION:** It selects among old clauses; it does not semantically transform a clause into an invariant over an unrelated state representation.
+
+**KNOWN WORKAROUNDS:** Map variables, re-run IC3, or lift through an explicit transformation.
+
+**POSSIBLE STRUCTURAL VARIABLE:** How much useful inductive information survives after quotienting/projecting an old clause through a state relation.
+
+**CHEAP REPRODUCTION:** Exactly the same experiment as #11 using the published invariant-filter idea.
+
+**STRONG-REPRESENTATION TEST:** Full semantic relation supplied.
+
+**COMPOSITION TEST:** Regression proof reuse + structural state transformation.
+
+**FALSIFICATION:** Simple semantic substitution/projection plus the old maximal-subset filter closes the gap.
+
+**Status:** **Historically important, but #11 is the more current frontier.**
+
+---
+
+## 13. IC3 internal-signal invariants when a later transformation **eliminates the predicates carrying the proof**
+
+**METHOD:** Dureja et al., *IC3 with Internal Signals*, FMCAD 2021.
+
+**WHY IT MATTERS:** Standard IC3 may fail to find compact CNF invariants over state variables; IC3-INN explicitly allows combinational internal signals to appear in learned lemmas and can dramatically improve proof structure. ([ResearchGate][14])
+
+**CLAIMED CAPABILITY:** More expressive, compact IC3 lemmas while remaining SAT-based.
+
+**ASSUMPTION:** The internal combinational predicates used by those lemmas continue to have defined meanings in the model being verified.
+
+**STRONGEST BASELINE:** Modern rIC3-style IC3-INN, Cabodi invariant lifting and Certified Sequential Sweep.
+
+**LIMITATION:** A semantically preserving transformation may rewrite/eliminate the exact internal predicates that made the invariant concise.
+
+**KNOWN WORKAROUNDS:** Expand every internal signal into its Boolean definition; re-synthesize an equivalent predicate; use SEC rather than reuse the old proof.
+
+**WHY POSSIBLY INSUFFICIENT:** The interesting case survives only when the predicate's source-side meaning maps **relationally**, not through simple expansion followed by substitution. Otherwise this degenerates into canonicalization and must be buried.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Predicate definability across the transformation relation.
+
+**CHEAP REPRODUCTION:** Use the public IC3-INN benchmark style; obtain an innard-heavy proof, then transform the implementation while preserving complete semantic correspondence.
+
+**STRONG-REPRESENTATION TEST:** Provide exact Boolean definitions for every internal predicate and the complete state relation.
+
+**COMPOSITION TEST:** Expressive internal-signal proof + state-changing optimization.
+
+**FALSIFICATION:** Expanding innards and applying Cabodi/interpolation always gives a comparably compact valid invariant.
+
+**Status:** **Interesting, but only the relational/non-definability subcase survives your graveyard.**
+
+---
+
+## 14. RE3's explicit **progress assumption**
+
+**METHOD:** Li et al., *RE3: Finding Refinement Relations with Relational Mapping Abstraction*, DAC 2025.
+
+**WHY IT MATTERS:** RE3 automatically discovers human-readable refinement relations for non-cycle-accurate hardware after aggressive transformations, rather than demanding static latch mapping. 
+
+**CLAIMED CAPABILITY:** Observational equivalence modulo stuttering, using a synthesized scheduling function and glued inductive invariant.
+
+**ASSUMPTION:** The transition systems satisfy a progress property: output eventually changes unless a terminal state is reached. The proof that the refinement relation implies observational equivalence uses this assumption to rule out infinite stuttering. 
+
+**STRONGEST BASELINE:** RE3's relational mapping abstraction and self-alignment.
+
+**LIMITATION:** Equivalent reactive designs that legitimately remain quiescent indefinitely need not satisfy this exact progress assumption.
+
+**KNOWN WORKAROUNDS:** Add an explicit terminal notion, add a progress monitor, or change the equivalence specification.
+
+**WHY POSSIBLY INSUFFICIENT:** Adding an artificial heartbeat/terminal signal can change what is observable rather than merely strengthening the solver.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Whether stuttering equivalence needs an independent well-founded/progress relation rather than output change as the progress witness.
+
+**CHEAP REPRODUCTION:** Two equivalent idle-capable protocols with arbitrary legal quiescence.
+
+**STRONG-REPRESENTATION TEST:** Give exact transition systems and environment fairness; do not hide progress semantics.
+
+**COMPOSITION TEST:** Refinement relation + legitimate unbounded stuttering.
+
+**FALSIFICATION:** Existing RE3 formulation already handles such systems simply by choosing an appropriate terminal/progress predicate without modifying behavior.
+
+**Status:** **Conditional but conceptually clean.**
+
+---
+
+## 15. RE3's convenient **one-side-no-slower scheduling reduction**
+
+**METHOD:** RE3.
+
+**WHY IT MATTERS:** RE3 separates finding a scheduler from finding a relational invariant.
+
+**EVIDENCE:** The general scheduler may choose either design or both, but the paper notes that when the high-level specification is always no slower it reduces the scheduler to a Boolean decision: advance both or only the implementation. 
+
+**LIMITATION:** Designs whose relative lead alternates dynamically cannot use that restricted binary scheduler.
+
+**STRONGEST BASELINE:** Importantly, RE3's *formal definition* already permits the more general scheduler. Therefore this is not a theorem-level capability wall.
+
+**KNOWN WORKAROUND:** Use the full three-way scheduling definition.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Whether practical scheduler synthesis stays tractable once both sides may alternate as the lagging design.
+
+**CHEAP REPRODUCTION:** Two equivalent variable-latency pipelines where A leads on some inputs and B leads on others.
+
+**STRONG-REPRESENTATION TEST:** Full current states provided to the scheduler.
+
+**COMPOSITION TEST:** State-dependent dynamic latency + relational mapping abstraction.
+
+**FALSIFICATION:** General three-way scheduler already runs successfully with no material change.
+
+**Status:** **Weak; keep as an observation, do not shortlist.**
+
+---
+
+## 16. Stuttering refinement versus equivalences involving genuine **observable reordering**
+
+**METHOD:** SE3 2023 / RE3 2025.
+
+**WHY IT MATTERS:** These methods substantially expand SEC beyond static latch correspondence. RE3 defines functional equivalence through equality of observable sequences **modulo stuttering**. 
+
+**ASSUMPTION:** Timing changes can be represented by inserting/removing repeated observations; event order itself remains the same.
+
+**STRONGEST BASELINE:** Dynamic scheduling, relational mapping abstraction and non-cycle-accurate SEC.
+
+**LIMITATION:** Semantically acceptable transformations that reorder *independent* observable events are outside stuttering equivalence.
+
+**KNOWN WORKAROUNDS:** Hide intermediate states with \(\tau\), redefine observation boundaries, or use a stronger trace/refinement semantics.
+
+**WHY POSSIBLY INSUFFICIENT:** Hiding an observation is not legitimate if each event remains architecturally visible but commuting.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Independence/commutativity relation among visible events.
+
+**CHEAP REPRODUCTION:** Two queues/channels where independent completions can legally swap order.
+
+**STRONG-REPRESENTATION TEST:** Supply the independence relation explicitly.
+
+**COMPOSITION TEST:** Individually valid scheduling transformations on independent operations.
+
+**FALSIFICATION:** Existing relational mapping + \(\tau\) encoding represents all realistic instances without weakening externally observable behavior.
+
+**Status:** **Potentially real, but farther from proof reuse and closer to equivalence-semantics research.**
+
+---
+
+## 17. Sequential modular hardware proofs when one rule performs **multiple updates to the same submodule**
+
+**METHOD:** Bourgeat et al., *Making Concurrent Hardware Verification Sequential*, PLDI 2025, Fjfj.
+
+**WHY IT MATTERS:** Fjfj removes the exponential proof explosion caused by considering arbitrary subsets of concurrent method calls, enabling software-like one-rule/one-method reasoning for concurrent hardware. ([PLDI 2025][15])
+
+**ASSUMPTION / LIMITATION:** The framework obtains this simplification through language restrictions; subsequent literature describes Fjfj's restriction as allowing at most **one update method of each submodule per rule**. ([ResearchGate][16])
+
+**STRONGEST BASELINE ATTACK:** August 2026's NoC-Out extends Kôika with concurrent efficient hardware plus a modular automated program logic, specifically to verify efficient parameterized NoCs. That substantially weakens any claim that “concurrent modular hardware proofs are missing.” ([arXiv][17])
+
+**KNOWN WORKAROUNDS:** Aggregate updates into one method; split state into separate submodules; use richer Kôika/NoC-Out reasoning.
+
+**WHY POSSIBLY INSUFFICIENT:** Aggregation changes API granularity, while splitting may destroy the intended abstraction boundary.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Serializability/commutativity of two updates to one private state object.
+
+**CHEAP REPRODUCTION:** FIFO with simultaneous enqueue/dequeue, or two disjoint-field updates to one module.
+
+**STRONG-REPRESENTATION TEST:** Supply exact atomic semantics and a proof that the two operations commute when their guards hold.
+
+**COMPOSITION TEST:** Two independently legal update methods applied concurrently.
+
+**FALSIFICATION:** NoC-Out/Kôika's 2026 logic already handles the same-receiver case modularly with proof effort independent of the number of simultaneous method subsets.
+
+**Status:** **Interesting but must survive a direct NoC-Out implementation test before promotion.**
+
+---
+
+## 18. Generic liveness certificates for **infinite-state hardware models**
+
+**METHOD:** CAV 2026 generic liveness certification.
+
+**WHY IT MATTERS:** Current hardware designs at RTL are finite after fixing bit widths, but higher-level hardware models, parameterized systems and word-level verification may deliberately use unbounded domains.
+
+**STRONGEST BASELINE:** The 2026 liveness format covers a broad range of finite bit-level algorithms.
+
+**LIMITATION:** The authors explicitly list extension to **infinite-state systems** alongside word-level support as future work. ([ResearchGate][8])
+
+**KNOWN WORKAROUNDS:** Bound the state space; instantiate widths; use theorem-prover/SMT-based termination or ranking certificates from software verification.
+
+**WHY POSSIBLY INSUFFICIENT:** Finite-state witness arguments exploit finite-state recurrence/lasso reasoning; infinite-state progress can require well-founded ranking structure not reducible to the same finite circuit witness.
+
+**POSSIBLE STRUCTURAL VARIABLE:** Whether the ranked witness relation itself has a finite symbolic representation over an infinite domain.
+
+**CHEAP REPRODUCTION:** Small integer counter/protocol in SMT with eventual stabilization.
+
+**STRONG-REPRESENTATION TEST:** Give the exact arithmetic transition relation to the checker.
+
+**COMPOSITION TEST:** Generic hardware liveness certificate + SMT/infinite-state semantics.
+
+**FALSIFICATION:** The existing ranked witness conditions generalize verbatim to QF-LIA/QF-BV-style infinite transition systems with an off-the-shelf SMT checker and no additional well-foundedness machinery.
+
+**Status:** **Real explicit frontier, but less tightly centered on ordinary finite RTL than the shortlist.**
+
+---
+
+# Strongest-known-method graveyard results
+
+Several tempting “frontiers” did **not** survive:
+
+* **Retiming/resynthesis proof transport:** scrap as a standalone seed. FMCAD 2026 Certified Sequential Sweep covers retiming followed by arbitrarily strong sequential resynthesis and generates certificates. ([arXiv][1])
+* **Phase abstraction certification:** solved much more strongly than a simple two-phase story; IJCAR 2024 supports extended phase abstraction, periodic-signal extraction, unfolding, rewriting, COI reduction and stepwise witness construction. ([Springer Link][2])
+* **Temporal-decomposition certification:** already generates a single original-level invariant compositionally. ([IEEE Xplore][18])
+* **“Liveness certification doesn't exist”:** obsolete after CAV 2026. ([ResearchGate][8])
+* **“Constraints make certificates impossible”:** obsolete after FM 2026's explicit/implicit constraint treatment and uniqueness-constrained k-induction. ([Springer Link][7])
+* **Static one-to-one latch correspondence as an SEC requirement:** obsolete as a general claim; RE3 explicitly targets dynamic/non-cycle-accurate relations without static node mapping. 
+
+# FRONTIERS WORTH EXPERIMENTING
+
+### A. Heterogeneous transformation-sequence → original-model invariant lifting
+
+**Source anchor:** Cabodi et al., IEEE Access 2026; “sequences of transformations” is explicit future work. ([ResearchGate][4])
+
+**Strongest known method:** Cabodi interpolation-based full invariant lifting + generic Certifaiger witness certification + Certified Sequential Sweep.
+
+**Exact unresolved limitation:** Direct recovery of a reusable original-model inductive invariant after a **sequence** of state-changing transformations, even though every constituent transformation is individually understood.
+
+**Strongest workaround:** Certify each transformation/witness step or compose generic witness circuits.
+
+**Why it does not obviously close the seam:** Those methods establish correctness; they do not automatically deliver the single original-vocabulary inductive invariant that Cabodi explicitly wants for reuse.
+
+**Cheap reproduction:** 10–100-latch AIGs; chain two supported transforms such as temporal decomposition → equivalence reduction or phase abstraction → constant/equivalence propagation.
+
+**Strongest-representation test:** Complete transform logs and exact correspondences for every stage.
+
+**Exact kill condition:** Sequential application of the existing lifting operators always reconstructs an inductive original-model invariant with no qualitatively new obligation and manageable blow-up.
+
+---
+
+### B. Localization abstraction → certifiable reusable proof
+
+**Source anchor:** FM 2026 explicitly identifies localization as a remaining bit-level certification technique. ([Springer Link][7])
+
+**Strongest known method:** Generic witness circuits + constraint certification + existing abstraction/refinement algorithms.
+
+**Exact unresolved limitation:** Iterative localization removes state, proves on an abstraction, and may restore selected state during refinement; current 2026 certification work does not yet certify that mechanism.
+
+**Strongest workaround:** Construct a witness only for the final model or concretize everything before certification.
+
+**Why it does not obviously close the seam:** Localization's abstraction relation evolves during the run, while ordinary witness checking assumes a finished certificate relation.
+
+**Cheap reproduction:** A tiny AIGER localization-CEGAR loop around Certifaiger, with deliberately spurious abstract counterexamples requiring several latch restorations.
+
+**Strongest-representation test:** Record every abstracted latch and every refinement step; no information is hidden.
+
+**Exact kill condition:** The final generic witness alone certifies the entire procedure and every localization/refinement history becomes irrelevant to correctness or proof reuse.
+
+---
+
+### C. L2S liveness proof extraction × latch-changing safety preprocessing
+
+**Source anchor:** CAV 2026 explicitly assumes its L2S backend strengthens the invariant **without changing the latch set**. ([ResearchGate][8])
+
+**Strongest known method:** CAV 2026 ranked liveness witnesses + Certifaiger transformation witnesses.
+
+**Exact unresolved limitation:** The L2S safety proof is valid, and the backend preprocessing is valid, but the published conversion of that proof into a liveness witness depends on the L2S latch vocabulary that preprocessing may have changed.
+
+**Strongest workaround:** Disable preprocessing or separately certify/map it.
+
+**Why it does not obviously close the seam:** The ranked relation extracted by the paper interprets specific pairs of original/copied L2S latch states; a generic safety witness relation need not preserve that structure syntactically.
+
+**Cheap reproduction:** A few-latch eventuality example → L2S → equivalence/state-elimination preprocessing → IC3.
+
+**Strongest-representation test:** Provide the backend's entire witness relation and transformation correspondence.
+
+**Exact kill condition:** Standard witness composition followed mechanically by the paper's existing L2S reconstruction always produces a valid ranked witness without any new rule.
+
+---
+
+### D. PDR proof reuse across **non-monotone abstraction replacement**
+
+**Source anchor:** IC3+SA explicitly states that all learned clauses remain reusable because refinement is monotonic and \(T_{\text{new}}\Rightarrow T\). ([ResearchGate][11])
+
+**Strongest known method:** IC3+SA monotone refinement, lazy abstraction, IPDR clause reuse.
+
+**Exact unresolved limitation:** Replace abstraction A with semantically different abstraction B where neither abstract transition relation refines the other; the mathematical reason enabling wholesale clause reuse disappears.
+
+**Strongest workaround:** Union A and B or restart PDR.
+
+**Why it does not obviously close the seam:** Union can accumulate unwanted abstraction dimensions; restart throws away potentially valuable proof information.
+
+**Cheap reproduction:** Small transition systems with two alternative predicate/term bases and an IC3 implementation.
+
+**Strongest-representation test:** Exact abstraction and concretization functions for A and B supplied.
+
+**Exact kill condition:** Either monotone union has essentially no cost on the adversarial family, or a trivial existing clause-validity filter retains all useful proof information.
+
+---
+
+### E. Generic **word-level liveness certification**
+
+**Source anchor:** CAV 2026 explicitly leaves word-level liveness as future work; IJCAR 2026 supplies Cerbtora for word-level witness validation and independently says liveness support is still being extended. ([ResearchGate][8])
+
+**Strongest known method:** Generic bit-level ranked liveness witnesses + generic Btor2 word-level witness checker.
+
+**Exact unresolved limitation:** No demonstrated generic end-to-end certificate construction combines the two.
+
+**Strongest workaround:** Bit-blast and use the bit-level liveness pipeline.
+
+**Why it does not obviously close the seam:** The entire Cerbtora effort exists because preserving word-level arithmetic structure matters; as of July 2026 there was not even a public general word-level certificate producer, with experiments relying on prototype k-induction. ([Springer Link][9])
+
+**Cheap reproduction:** Btor2 arithmetic counters, queues and small datapaths with eventual-stabilization properties.
+
+**Strongest-representation test:** Preserve all bit-vector/arithmetic semantics and allow Bitwuzla full access to them.
+
+**Exact kill condition:** Replacing Boolean expressions with Btor2 expressions in the existing CAV 2026 ranked-witness conditions is sufficient verbatim—same construction, same proof obligations, no extra ranking or simulation principle.
+
+These five are the ones I would hand to the next stage. **A, B, C, and D are especially aligned with your Wave-6 doctrine because each has a strong existing method, an identifiable assumption/boundary, a cheap hostile reproduction, and an experiment that can kill it quickly.** E is extremely clean prior-art-wise, but its first experiment should determine whether the missing “mechanism” is genuinely structural or simply engineering the already-generic certificate definitions into Btor2.
+
+[1]: https://arxiv.org/abs/2607.27498?utm_source=chatgpt.com "Certified Sequential Sweep Without Unrolling"
+[2]: https://link.springer.com/chapter/10.1007/978-3-031-63498-7_17?utm_source=chatgpt.com "Certifying Phase Abstraction | Springer Nature Link"
+[3]: https://iris.polito.it/handle/11583/3010750?utm_source=chatgpt.com "Manipulating Proof Certificate Invariants in the Presence of Model Transformations"
+[4]: https://www.researchgate.net/publication/404251030_Manipulating_Proof_Certificate_Invariants_in_the_Presence_of_Model_Transformations?utm_source=chatgpt.com "(PDF) Manipulating Proof Certificate Invariants in the Presence of Model Transformations"
+[5]: https://link.springer.com/chapter/10.1007/978-3-031-99984-0_24?utm_source=chatgpt.com "A Theorem Prover Based Approach for SAT-Based Model Checking Certification | Springer Nature Link"
+[6]: https://springerlink.fh-diploma.de/chapter/10.1007/978-3-031-99984-0_24?utm_source=chatgpt.com "A Theorem Prover Based Approach for SAT-Based Model Checking Certification | Springer Nature Link"
+[7]: https://link.springer.com/chapter/10.1007/978-3-032-26204-2_9?utm_source=chatgpt.com "Certifying Constraints in Hardware Model Checking | Springer Nature Link"
+[8]: https://www.researchgate.net/publication/410760217_Liveness_Proofs_for_Hardware_Model_Checking "(PDF) Liveness Proofs for Hardware Model Checking"
+[9]: https://link.springer.com/chapter/10.1007/978-3-032-32589-1_17?utm_source=chatgpt.com "Hardware Model Checking Certification with Certifaiger and Cerbtora | Springer Nature Link"
+[10]: https://doi.org/10.1007/978-3-032-32589-1_17?utm_source=chatgpt.com "Hardware Model Checking Certification with Certifaiger and Cerbtora | Springer Nature Link"
+[11]: https://www.researchgate.net/publication/333411123_Model_Checking_of_Verilog_RTL_Using_IC3_with_Syntax-Guided_Abstraction?utm_source=chatgpt.com "(PDF) Model Checking of Verilog RTL Using IC3 with Syntax-Guided Abstraction"
+[12]: https://arxiv.org/abs/2308.12162?utm_source=chatgpt.com "Incremental Property Directed Reachability"
+[13]: https://www.researchgate.net/publication/229034323_Incremental_formal_verification_of_hardware?utm_source=chatgpt.com "(PDF) Incremental formal verification of hardware"
+[14]: https://www.researchgate.net/publication/358536340_IC3_with_Internal_Signals?utm_source=chatgpt.com "(PDF) IC3 with Internal Signals"
+[15]: https://pldi25.sigplan.org/details/pldi-2025-papers/82/Making-Concurrent-Hardware-Verification-Sequential?utm_source=chatgpt.com "Making Concurrent Hardware Verification Sequential (PLDI 2025 - PLDI Research Papers) - PLDI 2025"
+[16]: https://www.researchgate.net/publication/394906324_Making_Concurrent_Hardware_Verification_Sequential?utm_source=chatgpt.com "Making Concurrent Hardware Verification Sequential | Request PDF"
+[17]: https://arxiv.org/abs/2608.24478?utm_source=chatgpt.com "NoC-Out: A Formally-verified Network-on-Chip Library for Rule-based Hardware Designs"
+[18]: https://ieeexplore.ieee.org/document/10329378/?utm_source=chatgpt.com "Towards Compositional Hardware Model Checking Certification | IEEE Conference Publication | IEEE Xplore"

@@ -1,0 +1,12 @@
+lane start 23:10:54 phase=A benches=ctrl int2float c432 dec c1355 i2c T_FULL=600 T_EPS=300 T_LB=300 WORKERS=4 SET=
+23:10:54 ctrl map:D0 done
+23:10:54 ctrl map:D1 done
+23:10:55 ctrl heur:D0 done
+23:10:55 ctrl heur:D1 done
+23:10:55 ctrl emap:D0 done
+23:10:56 ctrl emap:D1 done
+23:10:56 ctrl nfp done
+23:10:56 ctrl nfp:D0 done
+23:10:57 ctrl nfpa:D0 done
+23:10:58 ctrl nfp:D1 done
+23:10:58 ctrl nfpa:D1 done

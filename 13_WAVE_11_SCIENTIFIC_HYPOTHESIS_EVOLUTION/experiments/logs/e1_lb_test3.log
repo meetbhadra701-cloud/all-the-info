@@ -1,0 +1,7 @@
+# preserved copy of session task output bsp4yhym7 (z3 no-timing lower bound on ctrl after the inverter-cycle fix, run by e1_lb_test3.sh); copied 2026-09-25T23:43:25Z
+start 22:45:13
+{"dump": "ctrl.dump.json", "D": 1000000000.0, "eps": -1.0, "enc": "pb", "arith": "default", "notiming": true, "n_cands_full": 7345, "n_cands_model": 7345, "solver_status": "unknown", "solver_wall": 600.35, "fixed_area": 0.0, "objective_x100": null, "verdict": "NO_SOLUTION_OR_TIMEOUT"}
+exact rc=0 22:55:13
+no netlist
+
+[exited with code 0]

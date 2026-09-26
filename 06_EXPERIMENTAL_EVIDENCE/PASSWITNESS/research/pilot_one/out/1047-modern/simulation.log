@@ -1,0 +1,283 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+ (git sha1 e8db64c60, Release, Clang /usr/bin/clang++ 18.1.3)
+
+-- Executing script file `/tmp/passwitness-script.ys' --
+
+1. Executing Verilog-2005 frontend: /workspace/research/pilot_one/out/1047-historical/pre-shiftmul.v
+Parsing Verilog input from `/workspace/research/pilot_one/out/1047-historical/pre-shiftmul.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+Renaming module top to pre.
+
+2. Executing Verilog-2005 frontend: /workspace/research/pilot_one/out/1047-historical/post-shiftmul.v
+Parsing Verilog input from `/workspace/research/pilot_one/out/1047-historical/post-shiftmul.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Successfully finished Verilog frontend.
+Renaming module \top to \post.
+
+3. Executing Verilog-2005 frontend: /workspace/research/pilot_one/modern/1047-sim.v
+Parsing Verilog input from `/workspace/research/pilot_one/modern/1047-sim.v' to AST representation.
+Generating RTLIL representation for module `\tb'.
+Successfully finished Verilog frontend.
+
+4. Executing PREP pass.
+
+4.1. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1.1. Analyzing design hierarchy..
+Top module:  \tb
+Used module:     \post
+Used module:     \pre
+
+4.1.2. Analyzing design hierarchy..
+Top module:  \tb
+Used module:     \post
+Used module:     \pre
+Removed 0 unused modules.
+
+4.2. Executing PROC pass (convert processes to netlists).
+
+4.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 1 assignment to connection.
+
+4.2.4. Executing PROC_INIT pass (extract init attributes).
+
+4.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+4.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\tb.$proc$/workspace/research/pilot_one/modern/1047-sim.v:5$5'.
+
+4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\tb.\w' from process `\tb.$proc$/workspace/research/pilot_one/modern/1047-sim.v:5$5'.
+
+4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+4.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `tb.$proc$/workspace/research/pilot_one/modern/1047-sim.v:5$5'.
+Cleaned up 0 empty switches.
+
+4.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tb.
+Optimizing module post.
+Optimizing module pre.
+
+4.3. Executing FUTURE pass.
+
+4.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tb.
+Optimizing module post.
+Optimizing module pre.
+
+4.5. Executing CHECK pass (checking for obvious problems).
+Checking module tb...
+Checking module post...
+Checking module pre...
+Found and reported 0 problems.
+
+4.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tb..
+Finding unused cells or wires in module \post..
+Finding unused cells or wires in module \pre..
+Removed 1 unused cells and 5 unused wires.
+<suppressed ~4 debug messages>
+
+4.7. Executing OPT pass (performing simple optimizations).
+
+4.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tb.
+Optimizing module post.
+Optimizing module pre.
+
+4.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tb'.
+Computing hashes of 2 cells of `\tb'.
+Finding duplicate cells in `\tb'.
+Finding identical cells in module `\post'.
+Computing hashes of 1 cells of `\post'.
+Finding duplicate cells in `\post'.
+Finding identical cells in module `\pre'.
+Computing hashes of 2 cells of `\pre'.
+Finding duplicate cells in `\pre'.
+Removed a total of 0 cells.
+
+4.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \tb..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \post..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Running muxtree optimizer on module \pre..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+4.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \tb.
+  Optimizing cells in module \post.
+  Optimizing cells in module \pre.
+Performed a total of 0 changes.
+
+4.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tb'.
+Computing hashes of 2 cells of `\tb'.
+Finding duplicate cells in `\tb'.
+Finding identical cells in module `\post'.
+Computing hashes of 1 cells of `\post'.
+Finding duplicate cells in `\post'.
+Finding identical cells in module `\pre'.
+Computing hashes of 2 cells of `\pre'.
+Finding duplicate cells in `\pre'.
+Removed a total of 0 cells.
+
+4.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tb..
+Finding unused cells or wires in module \post..
+Finding unused cells or wires in module \pre..
+
+4.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tb.
+Optimizing module post.
+Optimizing module pre.
+
+4.7.8. Finished fast OPT passes. (There is nothing left to do.)
+
+4.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 3) from port Y of cell post.$shr$/workspace/research/pilot_one/out/1047-historical/post-shiftmul.v:8$4 ($shr).
+Converting cell pre.$mul$/workspace/research/pilot_one/out/1047-historical/pre-shiftmul.v:7$1 ($mul) from unsigned to signed.
+Removed top 1 bits (of 3) from port B of cell pre.$mul$/workspace/research/pilot_one/out/1047-historical/pre-shiftmul.v:7$1 ($mul).
+
+4.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tb..
+Finding unused cells or wires in module \post..
+Finding unused cells or wires in module \pre..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+4.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+4.11. Executing OPT pass (performing simple optimizations).
+
+4.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module tb.
+Optimizing module post.
+Optimizing module pre.
+
+4.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\tb'.
+Computing hashes of 2 cells of `\tb'.
+Finding duplicate cells in `\tb'.
+Finding identical cells in module `\post'.
+Computing hashes of 1 cells of `\post'.
+Finding duplicate cells in `\post'.
+Finding identical cells in module `\pre'.
+Computing hashes of 2 cells of `\pre'.
+Finding duplicate cells in `\pre'.
+Removed a total of 0 cells.
+
+4.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \tb..
+Finding unused cells or wires in module \post..
+Finding unused cells or wires in module \pre..
+
+4.11.4. Finished fast OPT passes.
+
+4.12. Executing SORT pass.
+
+4.13. Printing statistics.
+
+=== post ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        2 wires
+        4 wire bits
+        2 public wires
+        4 public wire bits
+        2 ports
+        4 port bits
+        1 cells
+        1   $shr
+
+=== pre ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        3 wires
+        7 wire bits
+        3 public wires
+        7 public wire bits
+        2 ports
+        4 port bits
+        2 cells
+        1   $mul
+        1   $shr
+
+=== tb ===
+
+        +----------Local Count, excluding submodules.
+        | 
+        3 wires
+        5 wire bits
+        3 public wires
+        5 public wire bits
+        2 ports
+        2 port bits
+        2 submodules
+        1   post
+        1   pre
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+        3 tb
+        1 post
+        2 pre
+
+        +----------Count including submodules.
+        | 
+        8 wires
+       16 wire bits
+        8 public wires
+       16 public wire bits
+        6 ports
+       10 port bits
+        - memories
+        - memory bits
+        - processes
+        3 cells
+        1   $mul
+        2   $shr
+        2 submodules
+        1   post
+        1   pre
+
+4.14. Executing CHECK pass (checking for obvious problems).
+Checking module post...
+Checking module pre...
+Checking module tb...
+Found and reported 0 problems.
+
+5. Executing SIM pass (simulate the circuit).
+
+End of script. Logfile hash: 85a95d99de, time: 0.04s, user: 0.03s, system: 0.00s, MEM: 15.07 MB peak
+Yosys 0.69+ (git sha1 e8db64c60, Release, Clang /usr/bin/clang++ 18.1.3)
+Time spent: 53% 6x read_verilog (0 sec), 8% 1x sim (0 sec), ...

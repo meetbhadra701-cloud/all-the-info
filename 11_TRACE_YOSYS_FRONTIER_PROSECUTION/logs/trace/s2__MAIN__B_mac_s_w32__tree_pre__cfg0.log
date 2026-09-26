@@ -1,0 +1,65 @@
+### FILE netlists/MAIN/B_mac_s_w32__tree_pre.aig
+### ARGS -mac -s -dyn -p -c -no-steps
+### TIMEOUT 300
+### START 2026-09-24T03:47:08-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_mac_s_w32__tree_pre.aig
+║           mode: mac
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╠═ Result: Buggy
+║   [34mSP: {1} -18446744073709551616[39m
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mac
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/MAIN/B_mac_s_w32__tree_pre.aig
+║ Maximum polynomial : 1404
+║ Number of iteration: 11235
+║ Elapsed time: 8.69386 (in seconds)
+║ Number and-gates : 11172
+║ Substitution steps : 11237
+║ Number of removed conflicts : 3401
+║ Total calculated conflicts : 161438
+║ Conflict calculation time: 0.165534 (in seconds)
+║ Number of negated nodes : 1140
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/MAIN/B_mac_s_w32__tree_pre.aig -mac -s -dyn -p -c -no-steps"
+	User time (seconds): 7.52
+	System time (seconds): 0.47
+	Percent of CPU this job got: 89%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 8.92s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 168704
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 10952
+	Voluntary context switches: 18
+	Involuntary context switches: 2729
+	Swaps: 0
+	File system inputs: 55
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 42528768
+### DOCKER_EXIT 0
+### WALL_SECONDS 10.29
+### END 2026-09-24T03:47:18-07:00

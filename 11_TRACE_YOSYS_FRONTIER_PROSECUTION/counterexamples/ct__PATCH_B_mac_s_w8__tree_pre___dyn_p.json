@@ -1,0 +1,39 @@
+{
+ "job_id": "ct__PATCH_B_mac_s_w8__tree_pre___dyn_p",
+ "results_csv": "trace_contra_results.csv",
+ "netlist": "netlists/PATCH/B_mac_s_w8__tree_pre.aig",
+ "args": "-mac -s -dyn -p -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "mac:sss:8,8,16:17",
+ "witness_complement": {
+  "verdict": "WITNESS_SPURIOUS",
+  "i_means": "complement",
+  "remainder_terms": 2,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -65536,
+  "input_vector_hex": "0xffffffff",
+  "operands": [
+   "0xff",
+   "0xff",
+   "0xffff"
+  ],
+  "netlist_output": "0x0",
+  "reference": "0x0"
+ },
+ "witness_identity": {
+  "verdict": "WITNESS_SPURIOUS",
+  "i_means": "identity",
+  "remainder_terms": 2,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -65536,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x0",
+  "reference": "0x0"
+ },
+ "overall": "REMAINDER_INVALID"
+}

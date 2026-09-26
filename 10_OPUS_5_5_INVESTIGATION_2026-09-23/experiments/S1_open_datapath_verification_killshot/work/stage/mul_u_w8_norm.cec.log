@@ -1,0 +1,2 @@
+======== ABC command line "&r mul_u_w8_norm.pre.aig; &cec -T 60 mul_u_w8_norm.post.aig"
+Networks are equivalent.  Time =     0.04 sec

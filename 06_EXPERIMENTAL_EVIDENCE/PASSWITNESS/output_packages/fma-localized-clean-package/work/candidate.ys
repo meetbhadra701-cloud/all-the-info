@@ -1,0 +1,7 @@
+read_verilog -sv "/mnt/c/Users/meetb/Downloads/passwitness/fixtures/signed_fma_bug/source.v"
+
+# This is the affected Yosys arithmetic-tree flow.
+synth -top fma_impl -arith_tree
+
+rename -top passwitness_candidate
+write_verilog -noattr "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-clean-package/work/candidate.v"

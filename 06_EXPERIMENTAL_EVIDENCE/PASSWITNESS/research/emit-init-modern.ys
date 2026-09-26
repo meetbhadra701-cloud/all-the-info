@@ -1,0 +1,4 @@
+read_verilog -sv /workspace/research/pilot_two/issue-997-modern.v
+hierarchy -top top
+proc
+write_rtlil /workspace/research/pilot_two/issue-997-modern.il

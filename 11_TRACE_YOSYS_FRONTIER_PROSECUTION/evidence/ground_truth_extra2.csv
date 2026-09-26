@@ -1,0 +1,16 @@
+build,design,arch,spec,ands,port_order_ok,oracle,exhaustive,vectors,mismatches,complementary_ands,constfanin_ands
+MAIN,A_mul_s_w16,booth_lp_pre,"mul:ss:16,16:32",2045,True,CORRECT,False,17668,0,0,1
+MAIN,A_mul_s_w32,booth_lp_pre,"mul:ss:32,32:64",7957,True,CORRECT,False,17668,0,0,1
+MAIN,A_mul_s_w8,booth_lp_pre,"mul:ss:8,8:16",529,True,CORRECT,True,65536,0,0,1
+CONTROL,A_mul_s_w16,booth_lp_pre_folded,"mul:ss:16,16:32",2044,inherited,CORRECT,False,17668,0,0,0
+CONTROL,A_mul_s_w32,booth_lp_pre_folded,"mul:ss:32,32:64",7956,inherited,CORRECT,False,17668,0,0,0
+CONTROL,A_mul_s_w8,booth_lp_pre_folded,"mul:ss:8,8:16",528,inherited,CORRECT,True,65536,0,0,0
+ONSET_MAIN,B_dot2_u_w40,tree_pre,"dot2:uuuu:40,40,40,40:81",33236,True,CORRECT,False,19126,0,0,0
+ONSET_MAIN,B_dot2_u_w48,tree_pre,"dot2:uuuu:48,48,48,48:97",47421,True,CORRECT,False,19126,0,0,0
+ONSET_MAIN,B_dot2_u_w56,tree_pre,"dot2:uuuu:56,56,56,56:113",64665,True,CORRECT,False,19126,0,0,0
+ONSET_MAIN,B_mac_u_w40,norm_pre,"mac:uuu:40,40,80:81",17178,True,CORRECT,False,18239,0,0,0
+ONSET_MAIN,B_mac_u_w40,tree_pre,"mac:uuu:40,40,80:81",16955,True,CORRECT,False,18239,0,0,0
+ONSET_MAIN,B_mac_u_w48,norm_pre,"mac:uuu:48,48,96:97",24564,True,CORRECT,False,18239,0,0,0
+ONSET_MAIN,B_mac_u_w48,tree_pre,"mac:uuu:48,48,96:97",24196,True,CORRECT,False,18239,0,0,0
+ONSET_MAIN,B_mac_u_w56,norm_pre,"mac:uuu:56,56,112:113",33179,True,CORRECT,False,18204,0,0,0
+ONSET_MAIN,B_mac_u_w56,tree_pre,"mac:uuu:56,56,112:113",32762,True,CORRECT,False,18204,0,0,0

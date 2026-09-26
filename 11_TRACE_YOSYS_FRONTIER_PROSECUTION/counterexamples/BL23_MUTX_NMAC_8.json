@@ -1,0 +1,24 @@
+{
+ "job_id": "BL23_MUTX_NMAC_8",
+ "results_csv": "trace_baseline_results.csv",
+ "netlist": "netlists/BASELINE/MUTX_NMAC_8_8_U_SP_AR_RC.aig",
+ "args": "-mac -dyn -p -c -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mac:uuu:8,8,16:17",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 275,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": 2048,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x800",
+  "reference": "0x0"
+ },
+ "overall": "WITNESS_CONFIRMED"
+}

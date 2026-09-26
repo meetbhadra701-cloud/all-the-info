@@ -1,0 +1,12 @@
+# Wave 10 / C1: DeepSeek-column provenance scan. Builds the unmodified main.cpp for each distinct DeepSeek operator state.
+cmake_minimum_required(VERSION 3.16)
+project(C1_DSSCAN)
+add_definitions(-fPIC)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -DNDEBUG")
+add_subdirectory(third-party)
+foreach(v ds_it05 ds_it12 ds_it15)
+  add_executable(orig_${v} variants/${v}/main.cpp)
+  target_link_libraries(orig_${v} PUBLIC mockturtle experiments fmt)
+endforeach()

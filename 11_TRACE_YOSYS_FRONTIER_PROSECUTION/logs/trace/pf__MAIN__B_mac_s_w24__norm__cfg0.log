@@ -1,0 +1,64 @@
+### FILE netlists/MAIN/B_mac_s_w24__norm.aig
+### ARGS -mac -s -dyn -p -c -no-steps
+### TIMEOUT 240
+### START 2026-09-24T12:40:21-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_mac_s_w24__norm.aig
+║           mode: mac
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╚═ Result: Correct
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mac
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/MAIN/B_mac_s_w24__norm.aig
+║ Maximum polynomial : 6338
+║ Number of iteration: 7393
+║ Elapsed time: 14.6107 (in seconds)
+║ Number and-gates : 7346
+║ Substitution steps : 7395
+║ Number of removed conflicts : 20144
+║ Total calculated conflicts : 111460
+║ Conflict calculation time: 0.34855 (in seconds)
+║ Number of negated nodes : 869
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/MAIN/B_mac_s_w24__norm.aig -mac -s -dyn -p -c -no-steps"
+	User time (seconds): 10.24
+	System time (seconds): 0.22
+	Percent of CPU this job got: 69%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 15.08s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 139520
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 9876
+	Voluntary context switches: 17
+	Involuntary context switches: 2649
+	Swaps: 0
+	File system inputs: 38
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 35147776
+### DOCKER_EXIT 0
+### WALL_SECONDS 16.46
+### END 2026-09-24T12:40:37-07:00

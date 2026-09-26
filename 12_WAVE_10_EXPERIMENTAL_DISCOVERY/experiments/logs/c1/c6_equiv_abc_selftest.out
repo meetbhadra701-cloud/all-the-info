@@ -1,0 +1,5 @@
+self:     EQUIV_ABC_PASS | Networks are equivalent after structural hashing.  Time =     0.01 sec  :: 13s
+mutated:  EQUIV_ABC_UNDECIDED | Verification failed for at least 1 outputs:  n3407_1 Output n3407_1: Value in Network1 = 0. Value in Network2 = 1. Input pattern:  ld=1 u9891.IQN=0  :: 13s
+repair_timing_s1: EQUIV_ABC_PASS | Networks are equivalent.  Time =     0.14 sec  :: 12s
+/w/experiments/outputs/c6/equiv_v3_selftest/self/gold.blif:530
+/w/experiments/outputs/c6/equiv_v3_selftest/repair/gate.blif:530

@@ -1,0 +1,31 @@
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/scripts/run_command.py --log /tmp/wh/logs/asap7/aes/base/c6.log --tee -- /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -exit -no_init -threads 8  -no_splash  /w/experiments/scripts/c6/c6_treat.tcl
+source /OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7_tech_1x_201209.lef, created 30 layers, 9 vias
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/asap7/lef/asap7sc7p5t_28_R_1x_220121a.lef, created 212 library cells
+link_design aes_cipher_top
+read_sdc /tmp/wh/results/asap7/aes/base/1_synth.sdc
+source /OpenROAD-flow-scripts/flow/platforms/asap7/setRC.tcl
+[INFO RMP-0059] Resynthesis: starting tuning algorithm, Worst slack is -5.93148e-11
+Derived GENLIB library "asap7sc7p5t_AO_RVT_FF_nldm_211120" with 169 gates.
+[INFO RMP-0052] Resynthesis: starting simulated annealing
+[INFO RMP-0053] Initial temperature: 4.4481158e-10, worst slack: -1.454426e-10
+[INFO RMP-0054] Iteration: 10, temperature: 4.0477854e-10, best worst slack: -1.292963e-10
+[INFO RMP-0054] Iteration: 20, temperature: 3.6029738e-10, best worst slack: -1.1937473e-10
+[INFO RMP-0054] Iteration: 30, temperature: 3.158162e-10, best worst slack: -1.1008325e-10
+[INFO RMP-0054] Iteration: 40, temperature: 2.7133507e-10, best worst slack: -7.318293e-11
+[INFO RMP-0054] Iteration: 50, temperature: 2.268539e-10, best worst slack: -7.1686185e-11
+[INFO RMP-0054] Iteration: 60, temperature: 1.8237274e-10, best worst slack: -7.106124e-11
+[INFO RMP-0054] Iteration: 70, temperature: 1.3789159e-10, best worst slack: -6.3580086e-11
+[INFO RMP-0054] Iteration: 80, temperature: 9.3410425e-11, best worst slack: -6.093953e-11
+[INFO RMP-0054] Iteration: 90, temperature: 4.8929274e-11, best worst slack: -6.093953e-11
+[INFO RMP-0054] Iteration: 100, temperature: 4.4481155e-12, best worst slack: -6.093953e-11
+[INFO RMP-0067] Resynthesis: End of slack tuning, applying ABC operations
+[INFO RMP-0068] Resynthesis: Worst slack is -6.2944955e-11
+C6_DONE mode=annealing seed=1
+Elapsed time: 27:50.41[h:]min:sec. CPU time: user 1478.32 sys 20.84 (89%). Peak memory: 389588KB.
+make_exit=0

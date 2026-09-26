@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_dot2_s_w8__norm.aig
+### ARGS -dot=2 -s -ips -p -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T03:19:41-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_dot2_s_w8__norm.aig
+║           mode: dot=2
+║           sign: signed
+║           method: ips
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 152072192
+### DOCKER_EXIT 0
+### WALL_SECONDS 61.03
+### END 2026-09-24T03:20:42-07:00

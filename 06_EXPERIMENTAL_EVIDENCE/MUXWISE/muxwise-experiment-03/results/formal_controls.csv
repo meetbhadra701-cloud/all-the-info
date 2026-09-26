@@ -1,0 +1,3 @@
+check,result,runtime_seconds,script,log
+fir4_w4,PASS,2.510735,work/formal_ys/fir4_w4_default_arith_tree.ys,/mnt/c/Users/meetb/Documents/Codex/2026-09-20/muxwise-experiment-1-zero-commitment-eda/outputs/muxwise-experiment-03/logs/formal/fir4_w4_default_arith_tree.log
+add_chain_w4,INCONCLUSIVE_TIMEOUT,60.073018,work/formal_ys/add_chain_w4_default_arith_tree.ys,/mnt/c/Users/meetb/Documents/Codex/2026-09-20/muxwise-experiment-1-zero-commitment-eda/outputs/muxwise-experiment-03/logs/formal/add_chain_w4_default_arith_tree.log

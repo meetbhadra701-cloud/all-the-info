@@ -1,0 +1,17 @@
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/scripts/run_command.py --log /tmp/wh/logs/asap7/aes/base/c6.log --tee -- /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -exit -no_init -threads 8  -no_splash  /w/experiments/scripts/c6/c6_treat.tcl
+source /OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db /tmp/wh/results/asap7/aes/base/3_place.odb
+read_sdc /tmp/wh/results/asap7/aes/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/asap7/setRC.tcl
+Derived GENLIB library "asap7sc7p5t_AO_RVT_FF_nldm_211120" with 169 gates.
+The number of nodes on the critical paths =    136  ( 1.06 %)
+The cell delays are multiplied by the factor: <num_fanins> ^ (2.50).
+Cannot meet the target required times (1.00). Continue anyway.
+C6_DONE mode=resynth seed=1
+Elapsed time: 0:06.21[h:]min:sec. CPU time: user 4.61 sys 0.51 (82%). Peak memory: 274968KB.
+make_exit=0

@@ -1,0 +1,3 @@
+job_id,rel_path,args,timeout_s,expected,tool_status,trace_result,max_polynomial,trace_elapsed_s,wall_s,cgroup_peak_mib,max_rss_kb,and_gates,subst_steps,trace_exit,diag,note
+long64__MAIN__B_mac_u_w64__norm_pre___dyn_p_c,netlists/MAIN/B_mac_u_w64__norm_pre.aig,-mac -dyn -p -c -no-steps,3600,CORRECT,RESULT,Correct,15776,348.342,349.95,176.5,727584,43302,43431,0,,W=64;1-hour budget after 900 s TIMEOUT x6;mem=10g
+long64__MAIN__B_dot2_u_w64__tree_pre___dyn_p_c,netlists/MAIN/B_dot2_u_w64__tree_pre.aig,-dot=2 -dyn -p -c -no-steps,3600,CORRECT,RESULT,Correct,11497,308.453,311.08,288.2,1182496,83833,83962,0,,W=64;1-hour budget after 900 s TIMEOUT x6;mem=10g

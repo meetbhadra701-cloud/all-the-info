@@ -1,0 +1,57 @@
+== git
+0cab8747f5ed27c4559b5ddaca4ceb06af725a81 Sun Mar 3 22:00:27 2024 +0100 [dynamatic] Change Dynamatic's version in header
+== gurobi
+GUROBI_HOME=
+GUROBI_CXX_LIBRARY:FILEPATH=GUROBI_CXX_LIBRARY-NOTFOUND
+GUROBI_INCLUDE_DIRS:PATH=GUROBI_INCLUDE_DIRS-NOTFOUND
+GUROBI_LIBRARY:FILEPATH=GUROBI_LIBRARY-NOTFOUND
+== buffer algorithms in source
+      4 "fpga20"
+      1 "fpl22"
+      2 "on-merges"
+== bin
+/home/meetb/wave7d1/dynamatic-src/bin: cgeist clang++ dynamatic dynamatic-opt exp-frequency-profiler export-dot export-vhdl handshake-simulator hls-verifier polygeist-opt  /home/meetb/wave7d1/dynamatic-src/build/bin: dynamatic dynamatic-opt exp-buffer exp-cmpf exp-cmpi exp-constant exp-export-vhdl exp-frequency-profiler export-dot export-vhdl handshake-simulator hls-verifier 
+== integration tests
+bicg binary_search fir gaussian gcd gemver if_loop_1 if_loop_2 if_loop_3 iir image_resize insertion_sort kernel_2mm kernel_3mm loop_array matrix matrix_power matvec memory mul_example pivot polyn_mult simple_example sobel stencil_2d sumi3_mem threshold triangular vector_rescale video_filter 
+== docs
+DynamaticHLSFlow.md Figures GettingStarted.md Testing.md Tutorials 
+# WAVE 7 D1 — native issue-commit adjudication
+
+## Classification
+
+`ISSUE_COMMIT_NATIVE_FLOW_ENFORCES_OBLIGATION`
+
+## Scope and versions
+
+The preserved pinned checkout remains `/home/meetb/wave7d1/dynamatic-src` at
+`0cab8747f5ed27c4559b5ddaca4ceb06af725a81`.
+
+The separate issue checkout is
+`/home/meetb/wave7d1/dynamatic-src-issue-471` at
+`1875891e577c655f374a814b7a42dd96cd59c8da`.
+
+The issue checkout was tested through its native path:
+
+```text
+C source
+  -> compile.sh: affine -> SCF -> CF -> Handshake -> LSQ analysis/materialization
+  -> handshake_export.mlir / hw.mlir
+  -> write-hdl.sh --hdl verilog
+  -> native Chisel lsq-generator.jar
+  -> CIRCT firtool 1.62.0
+  -> hls-verifier / Questa Altera Starter FPGA Edition 2025.2
+```
+
+No Dynamatic functional source was modified. The native generator was built
+from the issue checkout's `tools/backend/lsq-generator-chisel` source. Its
+SHA256 is:
+
+```text
+d8481638cf649a90a8da625be9d5bcde40aabd5038fe3981236d1d3ff964b41f
+```
+
+Generated RTL hashes for the native one-LSQ witness are:
+
+```text
+handshake_lsq_lsq1.v  eb7cc2a05e288594debc2b4e3ab855dc5211234fc9153300274bfa7a11ae6112
+loop_array.v         a01df3d9ce24d93151a9760d90580f8eb0400973991737766e4a8d46c319582c

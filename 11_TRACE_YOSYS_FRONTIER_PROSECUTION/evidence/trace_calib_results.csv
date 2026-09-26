@@ -1,0 +1,3 @@
+job_id,rel_path,args,timeout_s,expected,tool_status,trace_result,max_polynomial,trace_elapsed_s,wall_s,cgroup_peak_mib,max_rss_kb,and_gates,subst_steps,trace_exit,diag,note
+calib__MAIN__A_mul_u_w32__norm___idx_p_c,netlists/MAIN/A_mul_u_w32__norm.aig,-mul -idx -p -c -no-steps,1800,CORRECT,TIMEOUT,,,,13668.41,6282.2,,,,137,,W=32;uncontended calibration of a TIMEOUTx6 (300 s) post-ABC result;mem=10g
+calib__MAIN__B_dot2_u_w16__norm___dyn_p_c,netlists/MAIN/B_dot2_u_w16__norm.aig,-dot=2 -dyn -p -c -no-steps,1800,CORRECT,TIMEOUT,,,,13668.27,1966.6,,,,137,,W=16;uncontended calibration of a TIMEOUTx6 (120 s) post-ABC result;mem=10g

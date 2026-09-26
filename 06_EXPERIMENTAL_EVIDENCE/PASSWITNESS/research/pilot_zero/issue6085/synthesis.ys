@@ -1,0 +1,4 @@
+# passwitness-stage: prep
+prep -top top
+# passwitness-stage: cmp2lut
+techmap -D LUT_WIDTH=4 -map +/cmp2lut.v

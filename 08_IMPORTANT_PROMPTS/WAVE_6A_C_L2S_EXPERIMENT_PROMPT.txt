@@ -1,0 +1,279 @@
+# WAVE 6A-C — FRONTIER REPRODUCTION / KILL EXPERIMENT
+## L2S Liveness Witness Extraction × Latch-Changing Safety Preprocessing
+
+You are the MICRO-EXPERIMENT SCIENTIST.
+
+You are NOT the Mechanism Inventor.
+
+Do NOT propose a new algorithm.
+Do NOT novelty-search.
+Do NOT repair the published method.
+Do NOT run an Assassin.
+
+We are testing whether a specific prior-art frontier is real.
+
+==================================================
+0. KNOWN PRIOR-ART FRONTIER
+==================================================
+
+Start from the strongest published methods.
+
+METHOD A:
+CAV 2026 generic hardware liveness certificates / L2S witness extraction.
+
+Relevant stated assumption:
+
+The safety backend used after the liveness-to-safety construction
+strengthens the invariant without changing the relevant latch set.
+
+METHOD B:
+Generic hardware model-transformation certification / Certifaiger-style
+witness relations capable of certifying state-changing transformations.
+
+Do NOT weaken either baseline.
+
+==================================================
+1. SOLE RESEARCH QUESTION
+==================================================
+
+Suppose:
+
+1. L2S constructs the ordinary safety problem;
+2. a semantics-preserving safety preprocessing transformation then
+   changes/eliminates/re-encodes safety latches;
+3. the complete exact transformation witness relation is supplied;
+4. the transformed safety problem is proved safe.
+
+Question:
+
+> Can the EXISTING generic transformation-witness machinery followed
+> mechanically by the EXISTING published L2S witness extraction recover
+> a valid liveness witness?
+
+We are NOT asking whether some new method could do it.
+
+==================================================
+2. REPRODUCE THE PUBLISHED BASELINE FIRST
+==================================================
+
+Construct the smallest nontrivial finite-state liveness example for which:
+
+- the property is genuinely liveness/eventuality;
+- L2S introduces the expected copied/state bookkeeping;
+- the safety backend produces a valid invariant;
+- the published unchanged-latch-set L2S extraction produces a valid
+  liveness/ranked witness.
+
+Verify this independently.
+
+If baseline reproduction fails:
+
+STOP — BASELINE NOT REPRODUCED.
+
+==================================================
+3. LATCH-CHANGING TRANSFORMATION T1
+==================================================
+
+After L2S but before the safety proof, apply a simple semantics-preserving
+state transformation that changes the latch set.
+
+Prefer the cheapest real transformation such as:
+
+- equivalent-latch elimination;
+- constant-state elimination;
+- exact state-variable substitution;
+
+provided it genuinely changes the backend state vocabulary.
+
+Requirements:
+
+- prove the transformed safety system correct/equivalent under the
+  intended transformation semantics;
+- construct the COMPLETE witness/correspondence relation;
+- retain all information the generic transformation certificate is
+  legitimately allowed to contain.
+
+No missing-metadata excuse is permitted.
+
+==================================================
+4. APPLY ONLY EXISTING MACHINERY
+==================================================
+
+Obtain/provide a valid safety invariant on the transformed model.
+
+Then attempt, without inventing a new rule:
+
+A. existing transformation-witness composition/lifting;
+
+followed by
+
+B. the published L2S liveness-witness extraction.
+
+Record exactly where each object lives:
+
+- original liveness state;
+- L2S state;
+- transformed safety state;
+- transformed invariant;
+- transformation relation;
+- reconstructed safety invariant if obtained;
+- final liveness/ranking relation.
+
+==================================================
+5. VALIDATE THE RESULT
+==================================================
+
+If a final liveness witness is produced, independently validate all its
+published proof obligations.
+
+Do not declare success merely because the safety property is true.
+
+The output must be the SAME KIND of reusable/checkable liveness witness
+required by the published L2S method.
+
+==================================================
+6. SECOND TRANSFORMATION T2 — ONLY IF T1 IS TOO EASY
+==================================================
+
+If T1 composes mechanically, use ONE stronger latch-changing transformation:
+
+- many-to-one state encoding;
+- reparameterized equivalent state basis;
+- or another small exact relation not reducible to renaming.
+
+Again supply the FULL exact correspondence.
+
+Do not escalate further.
+
+==================================================
+7. STRONGEST-REPRESENTATION ATTACK
+==================================================
+
+Before calling anything a frontier, verify:
+
+- no latch relation is missing;
+- no reset relation is missing;
+- no initial-state relation is missing;
+- no copied-L2S state relation is intentionally withheld;
+- no proof object is unavailable merely because of a file-format issue.
+
+The frontier must survive despite complete legitimate semantic information.
+
+==================================================
+8. CRITICAL DISTINCTION
+==================================================
+
+These outcomes are different:
+
+A. The transformed safety proof is valid.
+
+B. The transformation is certifiable.
+
+C. The original liveness property is true.
+
+D. The existing published composition actually reconstructs the required
+   ranked liveness witness.
+
+Only D answers the research question.
+
+Do not substitute A/B/C for D.
+
+==================================================
+9. KILL CONDITIONS
+==================================================
+
+Classify:
+
+EXISTING COMPOSITION SUFFICES
+
+if generic witness composition + published L2S extraction mechanically
+works for every tested latch-changing transformation without any new
+proof principle.
+
+This KILLS the frontier.
+
+--------------------------------------------------
+
+LATCH-VOCABULARY FRONTIER SURVIVES
+
+only if:
+
+- the safety transformation is valid;
+- its complete exact relation is supplied;
+- the transformed invariant is valid;
+- the liveness property remains true;
+- but the existing published machinery cannot mechanically reconstruct
+  the required ranked liveness witness because the transformation
+  destroyed/changed structural information specifically required by the
+  L2S extraction.
+
+--------------------------------------------------
+
+MISSING-INFORMATION ARTIFACT
+
+if failure disappears once ordinary legitimate correspondence information
+is supplied.
+
+Kill the frontier.
+
+--------------------------------------------------
+
+INCONCLUSIVE
+
+if the published baseline or certificate semantics cannot be reproduced
+faithfully enough.
+
+==================================================
+10. NO MECHANISM INVENTION
+==================================================
+
+If LATCH-VOCABULARY FRONTIER SURVIVES:
+
+STOP.
+
+Do not propose the missing abstraction.
+Do not derive a repair.
+Do not invent a project.
+
+We first need to know that the frontier exists.
+
+==================================================
+11. PROVENANCE
+==================================================
+
+Tag every important result:
+
+MEASURED
+MEASURED-FROM-PUBLISHED-DEFINITION
+THEORETICAL-DERIVED
+EXPECTED
+ABORTED-UNKNOWN
+
+==================================================
+12. REQUIRED OUTPUT
+==================================================
+
+Return:
+
+# WAVE 6A-C — FRONTIER REPRODUCTION DOSSIER
+
+Include:
+
+1. exact paper/method definitions used;
+2. tool/code versions;
+3. tiny liveness model;
+4. L2S construction;
+5. unchanged-latch baseline;
+6. baseline witness validation;
+7. T1 definition;
+8. exact T1 correspondence;
+9. transformed safety invariant;
+10. existing-composition attempt;
+11. final liveness-witness validation result;
+12. T2 only if necessary;
+13. strongest-representation audit;
+14. counterexamples;
+15. exact reproduction commands;
+16. exactly one terminal classification.
+
+Then STOP.

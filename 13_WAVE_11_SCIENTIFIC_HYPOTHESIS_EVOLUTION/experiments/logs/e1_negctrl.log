@@ -1,0 +1,19 @@
+19c19
+<   AND2x2_ASAP7_75t_R g15 ( .A (xn0), .B (x3), .Y (n18_0) );
+---
+>   OR2x2_ASAP7_75t_R g15 ( .A (xn0), .B (x3), .Y (n18_0) );
+20c20
+<   AO21x1_ASAP7_75t_R g16 ( .A1 (n18_0), .A2 (x4), .B (x1), .Y (n20_1) );
+---
+>   AO21x1_ASAP7_75t_R g16 ( .A1 (x1), .A2 (x4), .B (n18_0), .Y (n20_1) );
+{"bench": "ctrl", "netlist": "orig.v", "area": 6.8, "delay": 103.17, "instances": 73, "sim": "SIM_AGREE", "cex": null, "cec": "PASS"}
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/usr/lib/python3.10/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.10/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.10/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+{"bench": "ctrl", "netlist": "m2_ao21_pinswap.v", "area": 6.8, "delay": 103.17, "instances": 73, "sim": "SIM_MISMATCH", "cex": {"po_index": 1, "po_name": "y1", "pattern_bit": 24, "pi_values": "0001011", "ref": 0, "mapped": 1}, "cec": "NEQ"}

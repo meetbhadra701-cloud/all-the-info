@@ -1,0 +1,7 @@
+19c19
+<   AND2x2_ASAP7_75t_R g15 ( .A (xn0), .B (x3), .Y (n18_0) );
+---
+>   OR2x4_ASAP7_75t_R g15 ( .A (xn0), .B (x3), .Y (n18_0) );
+{"bench": "ctrl", "netlist": "m1b_and2_to_or2x4.v", "area": 6.83, "delay": 103.31, "instances": 73, "sim": "SIM_MISMATCH", "cex": {"po_index": 1, "po_name": "y1", "pattern_bit": 23, "pi_values": "0000110", "ref": 0, "mapped": 1}, "cec": "NEQ"}
+    g = genlib[cell]
+KeyError: 'OR2x2_ASAP7_75t_R'

@@ -1,0 +1,4 @@
+======== ABC command line "&r /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/mac_u_w8_tree.aig; &cec -T 240 /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/msb/m_tree_k16.aig"
+Disproved at least one output of the miter (zero-based number 16).
+Networks are NOT EQUIVALENT.  Time =     0.00 sec
+INPUT: a = 8'hD3, b = 8'hF2, c = 16'hBFD0.  OUTPUT: z = 17'h18746 (mac_u_w8_tree), z = 17'h08746 (m_tree_k16).

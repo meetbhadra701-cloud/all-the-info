@@ -1,0 +1,25 @@
+{
+ "job_id": "S07_dot2_s_w8_tree_unsignedflag",
+ "results_csv": "trace_dotspec_results.csv",
+ "netlist": "netlists/MAIN/B_dot2_s_w8__tree.aig",
+ "args": "-dot=2 -idx -p -c -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "dot2:uuuu:8,8,8,8:17",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 28,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -130048,
+  "input_vector_hex": "0xffffffff",
+  "operands": [
+   "0xff",
+   "0xff",
+   "0xff",
+   "0xff"
+  ],
+  "netlist_output": "0x2",
+  "reference": "0x1fc02"
+ },
+ "overall": "WITNESS_CONFIRMED"
+}

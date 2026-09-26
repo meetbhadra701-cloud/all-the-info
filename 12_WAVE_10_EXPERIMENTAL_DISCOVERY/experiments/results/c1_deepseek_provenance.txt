@@ -1,0 +1,7 @@
+Paper DeepSeek column (transcribed) vs every distinct operator state of the released DeepSeek proactive run (R2 pipeline, unmodified main.cpp):
+initial: 3/20 matches; adder 92.42/2574.36; nec 0
+ds_it05: 2/20 matches; adder 92.39/2574.36; nec 0
+ds_it12: 0/20 matches; adder 71.71/2837.91; nec 0
+ds_it15: 0/20 matches; adder 59.96/3417.85; nec 0
+deepseek_it24: 0/20 matches; adder 59.96/3417.85; nec 0
+Paper adder: 76.94/2583.24. Direct-OpenEvolve DeepSeek runs (output/openevolve_*4): best programs score ~0 on ISCAS (drop_phase 0.0174, failed_rate 0.0909), so they cannot produce the column.

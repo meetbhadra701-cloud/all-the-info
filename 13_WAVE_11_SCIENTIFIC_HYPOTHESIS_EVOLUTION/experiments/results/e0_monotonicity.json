@@ -1,0 +1,92 @@
+{
+ "map": {
+  "pairs": 2385,
+  "inversions_gt1pct": 48,
+  "inversions_gt5pct": 13,
+  "share_gt1pct": 0.0201,
+  "circuits_with_any_inversion": 13,
+  "circuits": 53,
+  "worst5": [
+   [
+    13.98,
+    "adder"
+   ],
+   [
+    11.35,
+    "vga_lcd"
+   ],
+   [
+    8.19,
+    "c499"
+   ],
+   [
+    7.85,
+    "des_area"
+   ],
+   [
+    5.34,
+    "c1908"
+   ]
+  ]
+ },
+ "emap": {
+  "pairs": 318,
+  "inversions_gt1pct": 4,
+  "inversions_gt5pct": 0,
+  "share_gt1pct": 0.0126,
+  "circuits_with_any_inversion": 3,
+  "circuits": 53,
+  "worst5": [
+   [
+    2.66,
+    "ss_pcm"
+   ],
+   [
+    1.86,
+    "simple_spi"
+   ],
+   [
+    1.66,
+    "ctrl"
+   ],
+   [
+    0.94,
+    "c880"
+   ],
+   [
+    0.93,
+    "pci_bridge32"
+   ]
+  ]
+ },
+ "abc_nf": {
+  "pairs": 795,
+  "inversions_gt1pct": 15,
+  "inversions_gt5pct": 3,
+  "share_gt1pct": 0.0189,
+  "circuits_with_any_inversion": 9,
+  "circuits": 53,
+  "worst5": [
+   [
+    38.06,
+    "priority"
+   ],
+   [
+    5.38,
+    "voter"
+   ],
+   [
+    2.77,
+    "ss_pcm"
+   ],
+   [
+    2.53,
+    "bar"
+   ],
+   [
+    2.04,
+    "c3540"
+   ]
+  ]
+ }
+}

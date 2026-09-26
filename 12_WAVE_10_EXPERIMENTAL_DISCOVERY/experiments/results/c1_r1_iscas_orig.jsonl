@@ -1,0 +1,8 @@
+{"variant": "initial", "rep": 1, "result": {"area": -0.000000, "gates": 0.000000, "delay": 0.000000, "depth": 0.000000, "runtime": 4.750154, "nec": 0.000000}}
+{"variant": "initial", "rep": 2, "result": {"area": -0.000000, "gates": 0.000000, "delay": 0.000000, "depth": 0.000000, "runtime": 6.020195, "nec": 0.000000}}
+{"variant": "gpt5_it29", "rep": 1, "result": {"area": 1.097560, "gates": 0.785180, "delay": -0.500723, "depth": 0.250111, "runtime": 5.950672, "nec": 0.000000}}
+{"variant": "gpt5_it29", "rep": 2, "result": {"area": 1.097560, "gates": 0.785180, "delay": -0.500723, "depth": 0.250111, "runtime": 5.935047, "nec": 0.000000}}
+{"variant": "deepseek_it24", "rep": 1, "result": {"area": 1.916248, "gates": 1.860030, "delay": -1.466161, "depth": -0.479153, "runtime": 0.776583, "nec": 0.000000}}
+{"variant": "deepseek_it24", "rep": 2, "result": {"area": 1.916248, "gates": 1.860030, "delay": -1.466161, "depth": -0.479153, "runtime": 4.571112, "nec": 0.000000}}
+{"variant": "qwen_it20", "rep": 1, "result": {"area": 1.187989, "gates": 0.821320, "delay": -0.818704, "depth": -0.524025, "runtime": 5.816728, "nec": 0.000000}}
+{"variant": "qwen_it20", "rep": 2, "result": {"area": 1.187989, "gates": 0.821320, "delay": -0.818704, "depth": -0.524025, "runtime": 5.107978, "nec": 0.000000}}

@@ -1,0 +1,21 @@
+### FILE netlists/MINI_MAIN/B_mac_s_w5__tree.aig
+### ARGS -mac -s -dyn -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T03:44:47-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MINI_MAIN/B_mac_s_w5__tree.aig
+║           mode: mac
+║           sign: signed
+║           method: dyn
+║           phase optimization: disabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 154107904
+### DOCKER_EXIT 0
+### WALL_SECONDS 61.45
+### END 2026-09-24T03:45:49-07:00

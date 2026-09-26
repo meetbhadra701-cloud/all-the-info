@@ -1,0 +1,7 @@
+read_verilog -sv "source/source.v"
+
+# This is the affected Yosys arithmetic-tree flow.
+synth -top fma_impl -arith_tree
+
+rename -top passwitness_candidate
+write_verilog -noattr "./work/candidate.v"

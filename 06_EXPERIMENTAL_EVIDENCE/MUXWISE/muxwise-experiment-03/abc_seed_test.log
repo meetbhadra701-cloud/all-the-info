@@ -1,0 +1,4 @@
+** cmd error: unknown command 'print'
+(this is likely caused by using an alias defined in "abc.rc"
+without having this file in the current or parent directory)
+======== ABC command line "set random_seed 1; print"

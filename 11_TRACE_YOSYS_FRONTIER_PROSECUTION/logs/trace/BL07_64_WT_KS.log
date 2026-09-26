@@ -1,0 +1,64 @@
+### FILE third_party/trace_d57aa9a7/example_circuits/multipliers/64_64_U_SP_WT_KS.aig
+### ARGS -mul -dyn -p -c -no-steps
+### TIMEOUT 900
+### START 2026-09-24T02:01:21-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/third_party/trace_d57aa9a7/example_circuits/multipliers/64_64_U_SP_WT_KS.aig
+║           mode: mul
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╚═ Result: Correct
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mul
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/third_party/trace_d57aa9a7/example_circuits/multipliers/64_64_U_SP_WT_KS.aig
+║ Maximum polynomial : 27310
+║ Number of iteration: 51462
+║ Elapsed time: 288.091 (in seconds)
+║ Number and-gates : 51336
+║ Substitution steps : 51464
+║ Number of removed conflicts : 172678
+║ Total calculated conflicts : 1556852
+║ Conflict calculation time: 2.96611 (in seconds)
+║ Number of negated nodes : 14781
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/third_party/trace_d57aa9a7/example_circuits/multipliers/64_64_U_SP_WT_KS.aig -mul -dyn -p -c -no-steps"
+	User time (seconds): 266.64
+	System time (seconds): 9.93
+	Percent of CPU this job got: 94%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4m 51.73s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1298704
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 83918
+	Voluntary context switches: 37
+	Involuntary context switches: 52623
+	Swaps: 0
+	File system inputs: 259
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 332849152
+### DOCKER_EXIT 0
+### WALL_SECONDS 293.09
+### END 2026-09-24T02:06:14-07:00

@@ -1,0 +1,17 @@
+width,config,stage,result,returncode,runtime_seconds,script,log,candidate
+4,normal,pre_arith_tree,PASS,0,0.675948,work/stage_miter/normal_w4_pre_arith_tree.ys,logs/stage_miter/normal_w4_pre_arith_tree.log,intermediate/normal_w4/pre_arith_tree.v
+4,normal,post_arith_tree,PASS,0,0.723986,work/stage_miter/normal_w4_post_arith_tree.ys,logs/stage_miter/normal_w4_post_arith_tree.log,intermediate/normal_w4/post_arith_tree.v
+4,normal,post_techmap,PASS,0,0.874317,work/stage_miter/normal_w4_post_techmap.ys,logs/stage_miter/normal_w4_post_techmap.log,intermediate/normal_w4/post_techmap.v
+4,normal,post_abc,PASS,0,0.828361,work/stage_miter/normal_w4_post_abc.ys,logs/stage_miter/normal_w4_post_abc.log,intermediate/normal_w4/post_abc.v
+4,arith_tree,pre_arith_tree,PASS,0,0.726782,work/stage_miter/arith_tree_w4_pre_arith_tree.ys,logs/stage_miter/arith_tree_w4_pre_arith_tree.log,intermediate/arith_tree_w4/pre_arith_tree.v
+4,arith_tree,post_arith_tree,FAIL,1,0.375684,work/stage_miter/arith_tree_w4_post_arith_tree.ys,logs/stage_miter/arith_tree_w4_post_arith_tree.log,intermediate/arith_tree_w4/post_arith_tree.v
+4,arith_tree,post_techmap,FAIL,1,0.374222,work/stage_miter/arith_tree_w4_post_techmap.ys,logs/stage_miter/arith_tree_w4_post_techmap.log,intermediate/arith_tree_w4/post_techmap.v
+4,arith_tree,post_abc,FAIL,1,0.373068,work/stage_miter/arith_tree_w4_post_abc.ys,logs/stage_miter/arith_tree_w4_post_abc.log,intermediate/arith_tree_w4/post_abc.v
+8,normal,pre_arith_tree,PASS,0,1.629135,work/stage_miter/normal_w8_pre_arith_tree.ys,logs/stage_miter/normal_w8_pre_arith_tree.log,intermediate/normal_w8/pre_arith_tree.v
+8,normal,post_arith_tree,PASS,0,1.577015,work/stage_miter/normal_w8_post_arith_tree.ys,logs/stage_miter/normal_w8_post_arith_tree.log,intermediate/normal_w8/post_arith_tree.v
+8,normal,post_techmap,PASS,0,15.898366,work/stage_miter/normal_w8_post_techmap.ys,logs/stage_miter/normal_w8_post_techmap.log,intermediate/normal_w8/post_techmap.v
+8,normal,post_abc,PASS,0,80.172276,work/stage_miter/normal_w8_post_abc.ys,logs/stage_miter/normal_w8_post_abc.log,intermediate/normal_w8/post_abc.v
+8,arith_tree,pre_arith_tree,PASS,0,1.627419,work/stage_miter/arith_tree_w8_pre_arith_tree.ys,logs/stage_miter/arith_tree_w8_pre_arith_tree.log,intermediate/arith_tree_w8/pre_arith_tree.v
+8,arith_tree,post_arith_tree,FAIL,1,0.374224,work/stage_miter/arith_tree_w8_post_arith_tree.ys,logs/stage_miter/arith_tree_w8_post_arith_tree.log,intermediate/arith_tree_w8/post_arith_tree.v
+8,arith_tree,post_techmap,FAIL,1,0.424184,work/stage_miter/arith_tree_w8_post_techmap.ys,logs/stage_miter/arith_tree_w8_post_techmap.log,intermediate/arith_tree_w8/post_techmap.v
+8,arith_tree,post_abc,FAIL,1,0.373421,work/stage_miter/arith_tree_w8_post_abc.ys,logs/stage_miter/arith_tree_w8_post_abc.log,intermediate/arith_tree_w8/post_abc.v

@@ -1,0 +1,8 @@
+read_verilog -formal /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/synth.v
+prep -top top
+cd top
+connect -set wire0 0
+connect -set wire1 0
+connect -set wire2 0
+connect -set wire3 0
+sim -clock clk -n 1 -vcd /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/historical.vcd -a

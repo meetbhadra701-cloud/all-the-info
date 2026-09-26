@@ -1,0 +1,41 @@
+job_id,rel_path,args,timeout_s,expected,note
+abcmap__A_mul_s_w8__booth_lp__default___dyn_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__default.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=default
+abcmap__A_mul_s_w8__booth_lp__default___idx_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__default.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=default
+abcmap__A_mul_s_w8__booth_lp__g_aig___dyn_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_aig.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_s_w8__booth_lp__g_aig___idx_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_aig.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_s_w8__booth_lp__g_gates___dyn_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_gates.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_s_w8__booth_lp__g_gates___idx_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_gates.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_s_w8__booth_lp__g_simple___dyn_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_simple.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_simple
+abcmap__A_mul_s_w8__booth_lp__g_simple___idx_p_c,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_simple.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_simple
+abcmap__A_mul_u_w12__booth__default___dyn_p_c,netlists/ABCMAP/A_mul_u_w12__booth__default.aig,-mul -dyn -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=default
+abcmap__A_mul_u_w12__booth__default___idx_p_c,netlists/ABCMAP/A_mul_u_w12__booth__default.aig,-mul -idx -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=default
+abcmap__A_mul_u_w12__booth__g_aig___dyn_p_c,netlists/ABCMAP/A_mul_u_w12__booth__g_aig.aig,-mul -dyn -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_u_w12__booth__g_aig___idx_p_c,netlists/ABCMAP/A_mul_u_w12__booth__g_aig.aig,-mul -idx -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_u_w12__booth__g_gates___dyn_p_c,netlists/ABCMAP/A_mul_u_w12__booth__g_gates.aig,-mul -dyn -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_u_w12__booth__g_gates___idx_p_c,netlists/ABCMAP/A_mul_u_w12__booth__g_gates.aig,-mul -idx -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_u_w12__booth__g_simple___dyn_p_c,netlists/ABCMAP/A_mul_u_w12__booth__g_simple.aig,-mul -dyn -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=g_simple
+abcmap__A_mul_u_w12__booth__g_simple___idx_p_c,netlists/ABCMAP/A_mul_u_w12__booth__g_simple.aig,-mul -idx -p -c -no-steps,90,CORRECT,W=12;ABC gate-library isolation;gates=g_simple
+abcmap__A_mul_u_w20__norm__default___dyn_p_c,netlists/ABCMAP/A_mul_u_w20__norm__default.aig,-mul -dyn -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=default
+abcmap__A_mul_u_w20__norm__default___idx_p_c,netlists/ABCMAP/A_mul_u_w20__norm__default.aig,-mul -idx -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=default
+abcmap__A_mul_u_w20__norm__g_aig___dyn_p_c,netlists/ABCMAP/A_mul_u_w20__norm__g_aig.aig,-mul -dyn -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_u_w20__norm__g_aig___idx_p_c,netlists/ABCMAP/A_mul_u_w20__norm__g_aig.aig,-mul -idx -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_u_w20__norm__g_gates___dyn_p_c,netlists/ABCMAP/A_mul_u_w20__norm__g_gates.aig,-mul -dyn -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_u_w20__norm__g_gates___idx_p_c,netlists/ABCMAP/A_mul_u_w20__norm__g_gates.aig,-mul -idx -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_u_w20__norm__g_simple___dyn_p_c,netlists/ABCMAP/A_mul_u_w20__norm__g_simple.aig,-mul -dyn -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=g_simple
+abcmap__A_mul_u_w20__norm__g_simple___idx_p_c,netlists/ABCMAP/A_mul_u_w20__norm__g_simple.aig,-mul -idx -p -c -no-steps,180,CORRECT,W=20;ABC gate-library isolation;gates=g_simple
+abcmap__A_mul_u_w8__booth__default___dyn_p_c,netlists/ABCMAP/A_mul_u_w8__booth__default.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=default
+abcmap__A_mul_u_w8__booth__default___idx_p_c,netlists/ABCMAP/A_mul_u_w8__booth__default.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=default
+abcmap__A_mul_u_w8__booth__g_aig___dyn_p_c,netlists/ABCMAP/A_mul_u_w8__booth__g_aig.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_u_w8__booth__g_aig___idx_p_c,netlists/ABCMAP/A_mul_u_w8__booth__g_aig.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_aig
+abcmap__A_mul_u_w8__booth__g_gates___dyn_p_c,netlists/ABCMAP/A_mul_u_w8__booth__g_gates.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_u_w8__booth__g_gates___idx_p_c,netlists/ABCMAP/A_mul_u_w8__booth__g_gates.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_gates
+abcmap__A_mul_u_w8__booth__g_simple___dyn_p_c,netlists/ABCMAP/A_mul_u_w8__booth__g_simple.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_simple
+abcmap__A_mul_u_w8__booth__g_simple___idx_p_c,netlists/ABCMAP/A_mul_u_w8__booth__g_simple.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC gate-library isolation;gates=g_simple
+abcmap__B_dot2_u_w16__norm__default___dyn_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__default.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=default
+abcmap__B_dot2_u_w16__norm__default___idx_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__default.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=default
+abcmap__B_dot2_u_w16__norm__g_aig___dyn_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__g_aig.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=g_aig
+abcmap__B_dot2_u_w16__norm__g_aig___idx_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__g_aig.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=g_aig
+abcmap__B_dot2_u_w16__norm__g_gates___dyn_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__g_gates.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=g_gates
+abcmap__B_dot2_u_w16__norm__g_gates___idx_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__g_gates.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=g_gates
+abcmap__B_dot2_u_w16__norm__g_simple___dyn_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__g_simple.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=g_simple
+abcmap__B_dot2_u_w16__norm__g_simple___idx_p_c,netlists/ABCMAP/B_dot2_u_w16__norm__g_simple.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC gate-library isolation;gates=g_simple

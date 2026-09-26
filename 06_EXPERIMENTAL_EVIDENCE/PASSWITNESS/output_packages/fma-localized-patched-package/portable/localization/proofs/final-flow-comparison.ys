@@ -1,0 +1,10 @@
+read_verilog "./work/candidate.v"
+rename passwitness_candidate passwitness_reference
+read_rtlil "./localization/checkpoints/007_abc.rtlil"
+rename fma_impl passwitness_candidate
+read_verilog "./localization/final-flow-comparison-miter.v"
+hierarchy -top passwitness_miter
+prep -top passwitness_miter
+flatten
+opt
+sat -prove mismatch 0 -verify -set-def-inputs -show-ports -dump_json "./localization/witnesses/final-flow-comparison.json" -dump_vcd "./localization/witnesses/final-flow-comparison.vcd"

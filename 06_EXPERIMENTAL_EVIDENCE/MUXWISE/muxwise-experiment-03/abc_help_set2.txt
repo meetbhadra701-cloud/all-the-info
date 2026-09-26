@@ -1,0 +1,4 @@
+usage: set [-h] <name> <value>
+	        sets the value of parameter <name>
+	-h    : print the command usage
+======== ABC command line "set -h"

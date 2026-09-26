@@ -1,0 +1,31 @@
+read_verilog -sv rtl/B_mac_s_w32.v
+hierarchy -check -top top
+proc
+opt_expr
+check
+opt_clean
+opt -nodffe -nosdff
+fsm
+opt
+wreduce
+peepopt
+opt_clean
+alumacc
+arith_tree -strategy fa
+share
+opt
+memory -nomap
+opt_clean
+opt -fast -full
+memory_map
+opt -full
+techmap
+opt -fast
+abc
+opt -fast
+hierarchy -check
+stat
+check
+aigmap
+opt_clean
+write_aiger -symbols -map netlists/PATCH/B_mac_s_w32__tree_fa.map netlists/PATCH/B_mac_s_w32__tree_fa.aig

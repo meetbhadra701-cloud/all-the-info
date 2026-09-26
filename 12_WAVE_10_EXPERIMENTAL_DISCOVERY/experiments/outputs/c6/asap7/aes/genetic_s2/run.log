@@ -1,0 +1,28 @@
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/scripts/run_command.py --log /tmp/wh/logs/asap7/aes/base/c6.log --tee -- /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -exit -no_init -threads 8  -no_splash  /w/experiments/scripts/c6/c6_treat.tcl
+source /OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db /tmp/wh/results/asap7/aes/base/3_place.odb
+read_sdc /tmp/wh/results/asap7/aes/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/asap7/setRC.tcl
+[INFO RMP-0059] Resynthesis: starting tuning algorithm, Worst slack is -2.9377722e-11
+Derived GENLIB library "asap7sc7p5t_AO_RVT_FF_nldm_211120" with 169 gates.
+[INFO RMP-0065] Resynthesis: Iteration 0 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 1 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 2 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 3 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 4 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 5 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 6 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 7 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 8 of genetic algorithm
+[INFO RMP-0065] Resynthesis: Iteration 9 of genetic algorithm
+[INFO RMP-0066] Resynthesis: Best result is of individual 0
+[INFO RMP-0067] Resynthesis: End of slack tuning, applying ABC operations
+[INFO RMP-0068] Resynthesis: Worst slack is -1.2351892e-10
+C6_DONE mode=genetic seed=2
+Elapsed time: 6:14.15[h:]min:sec. CPU time: user 319.49 sys 5.80 (86%). Peak memory: 364204KB.
+make_exit=0

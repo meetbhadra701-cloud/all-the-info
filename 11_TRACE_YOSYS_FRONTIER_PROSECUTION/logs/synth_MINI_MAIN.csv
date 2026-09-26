@@ -1,0 +1,11 @@
+base,rc,aig_written,seconds
+netlists/MINI_MAIN/B_mac_s_w3__tree_pre,0,1,0.48
+netlists/MINI_MAIN/B_mac_s_w2__tree_pre,0,1,0.53
+netlists/MINI_MAIN/B_mac_s_w2__tree,0,1,0.62
+netlists/MINI_MAIN/B_mac_s_w3__tree,0,1,0.72
+netlists/MINI_MAIN/B_mac_s_w4__tree_pre,0,1,0.91
+netlists/MINI_MAIN/B_mac_s_w4__tree,0,1,1.06
+netlists/MINI_MAIN/B_mac_s_w5__tree_pre,0,1,0.96
+netlists/MINI_MAIN/B_mac_s_w5__tree,0,1,1.04
+netlists/MINI_MAIN/B_mac_s_w6__tree_pre,0,1,0.57
+netlists/MINI_MAIN/B_mac_s_w6__tree,0,1,0.55

@@ -1,0 +1,452 @@
+stage,netlist,mode,build,design,arch,W,oracle_truth,portfolio_class,configs_run,per_config,first_solving_config,solve_wall_s,any_false_pass,any_false_fail
+abcmap,netlists/ABCMAP/A_mul_s_w8__booth_lp__default.aig,-mul -s,ABCMAP,A_mul_s_w8,booth_lp__default,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_aig.aig,-mul -s,ABCMAP,A_mul_s_w8,booth_lp__g_aig,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_gates.aig,-mul -s,ABCMAP,A_mul_s_w8,booth_lp__g_gates,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_s_w8__booth_lp__g_simple.aig,-mul -s,ABCMAP,A_mul_s_w8,booth_lp__g_simple,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w12__booth__default.aig,-mul,ABCMAP,A_mul_u_w12,booth__default,12,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w12__booth__g_aig.aig,-mul,ABCMAP,A_mul_u_w12,booth__g_aig,12,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w12__booth__g_gates.aig,-mul,ABCMAP,A_mul_u_w12,booth__g_gates,12,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w12__booth__g_simple.aig,-mul,ABCMAP,A_mul_u_w12,booth__g_simple,12,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w20__norm__default.aig,-mul,ABCMAP,A_mul_u_w20,norm__default,20,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w20__norm__g_aig.aig,-mul,ABCMAP,A_mul_u_w20,norm__g_aig,20,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w20__norm__g_gates.aig,-mul,ABCMAP,A_mul_u_w20,norm__g_gates,20,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w20__norm__g_simple.aig,-mul,ABCMAP,A_mul_u_w20,norm__g_simple,20,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w8__booth__default.aig,-mul,ABCMAP,A_mul_u_w8,booth__default,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w8__booth__g_aig.aig,-mul,ABCMAP,A_mul_u_w8,booth__g_aig,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w8__booth__g_gates.aig,-mul,ABCMAP,A_mul_u_w8,booth__g_gates,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/A_mul_u_w8__booth__g_simple.aig,-mul,ABCMAP,A_mul_u_w8,booth__g_simple,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/B_dot2_u_w16__norm__default.aig,-dot=2,ABCMAP,B_dot2_u_w16,norm__default,16,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/B_dot2_u_w16__norm__g_aig.aig,-dot=2,ABCMAP,B_dot2_u_w16,norm__g_aig,16,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/B_dot2_u_w16__norm__g_gates.aig,-dot=2,ABCMAP,B_dot2_u_w16,norm__g_gates,16,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+abcmap,netlists/ABCMAP/B_dot2_u_w16__norm__g_simple.aig,-dot=2,ABCMAP,B_dot2_u_w16,norm__g_simple,16,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+baseline,netlists/BASELINE/IDENT_16_16_U_SP_WT_KS.aig,-mul,,IDENT_16_16_U_SP_WT_KS.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.02,False,False
+baseline,netlists/BASELINE/IDENT_behavioral_MUL_8.aig,-mul,,IDENT_behavioral_MUL_8.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.03,False,False
+baseline,netlists/BASELINE/IDENT_behavioral_mac_8.aig,-mac,,IDENT_behavioral_mac_8.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,0.98,False,False
+baseline,netlists/BASELINE/MUTX_16_16_U_SP_WT_KS.aig,-mul,,MUTX_16_16_U_SP_WT_KS.aig,,,INCORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+baseline,netlists/BASELINE/MUTX_NMAC_8_8_U_SP_AR_RC.aig,-mac,,MUTX_NMAC_8_8_U_SP_AR_RC.aig,,,INCORRECT,FAIL,1,-dyn -p -c=FAIL,-dyn -p -c,2.58,False,False
+baseline,netlists/BASELINE/MUTX_behavioral_MUL_32.aig,-mul,,MUTX_behavioral_MUL_32.aig,,,INCORRECT,FAIL,1,-dyn -p -c=FAIL,-dyn -p -c,10.16,False,False
+baseline,netlists/BASELINE/MUTX_behavioral_MUL_8.aig,-mul,,MUTX_behavioral_MUL_8.aig,,,INCORRECT,FAIL,1,-dyn -p -c=FAIL,-dyn -p -c,2.20,False,False
+baseline,netlists/BASELINE/MUTX_behavioral_mac_32.aig,-mac,,MUTX_behavioral_mac_32.aig,,,INCORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+baseline,netlists/BASELINE/MUTX_behavioral_mac_8.aig,-mac,,MUTX_behavioral_mac_8.aig,,,INCORRECT,FAIL,1,-dyn -p -c=FAIL,-dyn -p -c,1.52,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/adders/ADD_128_128_CL.aig,-add,,ADD_128_128_CL.aig,,,CORRECT,TIMEOUT,1,=TIMEOUT,,,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/adders/ADD_8_8_RC.aig,-add,,ADD_8_8_RC.aig,,,CORRECT,PASS,1,=PASS,,1.02,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/macs/NMAC_32_32_U_SP_WT_KS.aig,-mac,,NMAC_32_32_U_SP_WT_KS.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,13.87,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/macs/NMAC_8_8_U_SP_AR_RC.aig,-mac,,NMAC_8_8_U_SP_AR_RC.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.74,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_16.aig,-mac,,behavioral_mac_16.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.92,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_32.aig,-mac,,behavioral_mac_32.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,8.03,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_64.aig,-mac,,behavioral_mac_64.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,275.03,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig,-mac,,behavioral_mac_8.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.72,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig,-mul,,behavioral_mac_8.aig,,,INCORRECT,FAIL,1,-dyn -p -c=FAIL,-dyn -p -c,1.26,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/16_16_U_SP_AR_RC.aig,-mul,,16_16_U_SP_AR_RC.aig,,,CORRECT,PASS,1,-p -c=PASS,-p -c,2.02,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/64_64_U_SP_WT_KS.aig,-mul,,64_64_U_SP_WT_KS.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,293.09,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/8_8_U_SP_AR_RC.aig,-mul,,8_8_U_SP_AR_RC.aig,,,CORRECT,PASS,1,-p -c=PASS,-p -c,1.55,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_16.aig,-mul,,behavioral_MUL_16.aig,,,CORRECT,PASS,2,-dyn -p -c=PASS; =TIMEOUT,-dyn -p -c,1.90,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_32.aig,-mul,,behavioral_MUL_32.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,6.12,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_64.aig,-mul,,behavioral_MUL_64.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,69.38,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,,,behavioral_MUL_8.aig,,,UNKNOWN,UNSUPPORTED,1,=UNSUPPORTED,,,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mac,,behavioral_MUL_8.aig,,,INCORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mul,,behavioral_MUL_8.aig,,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.44,False,False
+baseline,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mul -s,,behavioral_MUL_8.aig,,,INCORRECT,FAIL,1,-dyn -p -c=FAIL,-dyn -p -c,1.67,False,False
+calib,netlists/MAIN/A_mul_u_w32__norm.aig,-mul,MAIN,A_mul_u_w32,norm,32,CORRECT,TIMEOUT,1,-idx -p -c=TIMEOUT,,,False,False
+calib,netlists/MAIN/B_dot2_u_w16__norm.aig,-dot=2,MAIN,B_dot2_u_w16,norm,16,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+contra,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_a0_y0.aig,-mul,CONTROL,A_mul_u_w8,norm_pre_contra_a0_y0,8,CORRECT,PASS,4,-dyn -p -c=PASS; -dyn=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.90,False,False
+contra,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_b7_y15.aig,-mul,CONTROL,A_mul_u_w8,norm_pre_contra_b7_y15,8,CORRECT,PASS,4,-dyn -p -c=PASS; -dyn=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.34,False,False
+contra,netlists/CONTROL/B_mac_u_w8__tree_pre_contra_c15_y16.aig,-mac,CONTROL,B_mac_u_w8,tree_pre_contra_c15_y16,8,CORRECT,PASS,4,-dyn -p -c=PASS; -dyn=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.63,False,False
+contra,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_a0_y3.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8,tree_contra_a0_y3,8,CORRECT,PASS,4,-dyn -p -c=PASS; -dyn=TIMEOUT; -dyn -p=TIMEOUT; -dyn -c=TIMEOUT,-dyn -p -c,1.68,False,False
+contra,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_c15_y16.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8,tree_contra_c15_y16,8,CORRECT,PASS,4,-dyn -p -c=PASS; -dyn=TIMEOUT; -dyn -p=TIMEOUT; -dyn -c=TIMEOUT,-dyn -p -c,1.67,False,False
+contra,netlists/CONTROL/PATCH_B_mac_s_w8__tree_pre_folded.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8,tree_pre_folded,8,CORRECT,PASS,2,-dyn -p -c=PASS; -igs -p -c=PASS,-dyn -p -c,1.46,False,False
+contra,netlists/MAIN/A_mul_u_w8__norm_pre.aig,-mul,MAIN,A_mul_u_w8,norm_pre,8,CORRECT,PASS,3,-dyn=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.41,False,False
+contra,netlists/MAIN/B_mac_u_w8__tree_pre.aig,-mac,MAIN,B_mac_u_w8,tree_pre,8,CORRECT,PASS,3,-dyn=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.44,False,False
+contra,netlists/PATCH/B_mac_s_w16__tree_pre.aig,-mac -s,PATCH,B_mac_s_w16,tree_pre,16,CORRECT,PASS,2,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL,-dyn -p -c,2.65,False,True
+contra,netlists/PATCH/B_mac_s_w8__tree.aig,-mac -s,PATCH,B_mac_s_w8,tree,8,CORRECT,TIMEOUT,3,-dyn=TIMEOUT; -dyn -p=TIMEOUT; -dyn -c=TIMEOUT,,,False,False
+contra,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s,PATCH,B_mac_s_w8,tree_pre,8,CORRECT,PASS,9,-dyn=PASS; -dyn -p=FALSE_FAIL; -dyn -c=PASS; -idx=TIMEOUT; -idx -p=TIMEOUT; -idx -c=TIMEOUT; -igs=PASS; -igs -p=FALSE_FAIL; -igs -c=PASS,-igs -c,1.65,False,True
+ctrlcrash,netlists/CONTROL/A_mul_u_w8__booth_pre_folded.aig,-mul,CONTROL,A_mul_u_w8,booth_pre_folded,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.11,False,False
+ctrlcrash,netlists/CONTROL/A_mul_u_w8__norm_pre_buffered.aig,-mul,CONTROL,A_mul_u_w8,norm_pre_buffered,,CORRECT,ERROR,1,-dyn -p -c=ERROR,,,False,False
+ctrlcrash,netlists/MAIN/A_mul_u_w8__booth_pre.aig,-mul,MAIN,A_mul_u_w8,booth_pre,,CORRECT,ERROR,2,-dyn -p -c=ERROR; =ERROR,,,False,False
+ctrlcrash,netlists/MAIN/A_mul_u_w8__norm_pre.aig,-mul,MAIN,A_mul_u_w8,norm_pre,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.01,False,False
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx1012.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx1012,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.09,False,True
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx1146.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx1146,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.46,False,True
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx1278.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx1278,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.29,False,True
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx1378.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx1378,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.89,False,False
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx424.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx424,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.37,False,True
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx500.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx500,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.97,False,False
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx572.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx572,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.90,False,True
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx730.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx730,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.70,False,True
+ctx,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx870.aig,-mul -s,CONTROL,A_mul_s_w8__norm_pre__ctx870,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.73,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1118.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx1118,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.85,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1222.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx1222,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.45,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx126.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx126,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.40,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1312.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx1312,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.60,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1380.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx1380,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.64,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1444.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx1444,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.76,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1476.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx1476,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.19,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx194.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx194,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.80,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx286.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx286,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.53,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx398.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx398,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.85,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx532.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx532,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.46,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx684.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx684,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.87,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx70.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx70,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.67,False,False
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx842.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx842,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.69,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx86.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx86,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.55,False,True
+ctx,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx982.aig,-mac,CONTROL,B_mac_u_w8__tree_pre__ctx982,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.81,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx102.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx102,,5,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.50,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx170.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx170,,5,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,3.31,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx262.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx262,,5,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,8.97,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx358.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx358,,5,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,4.94,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx454.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx454,,5,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,3.03,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx46.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx46,,5,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.64,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx530.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx530,,5,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.29,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx588.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx588,,5,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.23,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx62.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx62,,5,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,2.90,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx620.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx620,,5,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=FALSE_FAIL; -dyn -c=PASS,-dyn -p -c,2.34,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx664.aig,-mac -s,CONTROL,PATCH_B_mac_s_w5__tree_pre__ctx664,,5,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.62,False,False
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1026.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1026,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -p -c,1.56,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1032.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1032,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.71,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1038.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1038,,8,CORRECT,PASS,4,-dyn -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -dyn -p=TIMEOUT; -dyn -c=PASS,-dyn -c,1.88,False,False
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1176.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1176,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.07,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx126.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx126,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.58,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1292.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1292,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.03,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1390.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1390,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.05,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1466.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1466,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.44,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1538.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1538,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,2.40,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1576.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1576,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=PASS; -dyn -p=FALSE_FAIL; -dyn -c=PASS,-dyn -c,2.73,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1620.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx1620,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=FALSE_FAIL; -dyn -c=PASS,-dyn -c,2.74,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx194.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx194,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.51,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx290.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx290,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.93,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx410.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx410,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.63,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx552.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx552,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.74,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx70.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx70,,8,CORRECT,PASS,4,-dyn -p -c=FALSE_FAIL; -igs -p -c=PASS; -dyn -p=PASS; -dyn -c=PASS,-igs -p -c,1.59,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx712.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx712,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.70,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx86.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx86,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=FALSE_FAIL; -dyn -p=PASS; -dyn -c=PASS,-dyn -c,1.58,False,True
+ctx,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx876.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8__tree_pre_folded__ctx876,,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -p=TIMEOUT; -dyn -c=PASS,-dyn -p -c,1.76,False,False
+diag1,netlists/MAIN/A_mul_s_w8__booth_lp.aig,-mul -s,MAIN,A_mul_s_w8,booth_lp,,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+diag1,netlists/MAIN/A_mul_s_w8__booth_pre.aig,-mul -s,MAIN,A_mul_s_w8,booth_pre,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.97,False,False
+diag1,netlists/MAIN/A_mul_s_w8__norm.aig,-mul,MAIN,A_mul_s_w8,norm,,INCORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+diag1,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s,MAIN,A_mul_s_w8,norm,,CORRECT,PASS,4,-idx -p -c=PASS; -ipc -p -c=PASS; -igsm -p -c=FALSE_FAIL; -dyn=TIMEOUT,-idx -p -c,2.35,False,True
+diag1,netlists/MAIN/A_mul_s_w8__norm_pre.aig,-mul -s,MAIN,A_mul_s_w8,norm_pre,,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.26,False,False
+diag1,netlists/MAIN/A_mul_u_w8__booth.aig,-mul,MAIN,A_mul_u_w8,booth,,CORRECT,TIMEOUT,1,-ipc -p -c=TIMEOUT,,,False,False
+diag1,netlists/MAIN/A_mul_u_w8__booth_pre.aig,-mul,MAIN,A_mul_u_w8,booth_pre,,CORRECT,ERROR,1,-dyn -p -c=ERROR,,,False,False
+dotspec,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s,MAIN,A_mul_s_w8,norm,,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.74,False,False
+dotspec,netlists/MAIN/B_dot2_s_w8__norm.aig,-dot=2 -s,MAIN,B_dot2_s_w8,norm,,CORRECT,TIMEOUT,1,-idx -p -c=TIMEOUT,,,False,False
+dotspec,netlists/MAIN/B_dot2_s_w8__tree.aig,-dot=2,MAIN,B_dot2_s_w8,tree,,CORRECT,FAIL,1,-idx -p -c=FAIL,-idx -p -c,2.86,False,False
+dotspec,netlists/MAIN/B_dot2_u_w8__norm.aig,-dot=2,MAIN,B_dot2_u_w8,norm,,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,15.48,False,False
+dotspec,netlists/MAIN/B_dot2_u_w8__tree.aig,-dot=2,MAIN,B_dot2_u_w8,tree,,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.04,False,False
+dotspec,netlists/MAIN/B_mac_s_w8__norm.aig,-mac -s,MAIN,B_mac_s_w8,norm,,CORRECT,TIMEOUT,1,-idx -p -c=TIMEOUT,,,False,False
+dotspec,netlists/PATCH/B_dot2_s_w8__tree.aig,-dot=2 -s,PATCH,B_dot2_s_w8,tree,,CORRECT,FALSE_FAIL,1,-idx -p -c=FALSE_FAIL,,,False,True
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__balance.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__balance,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,1.06,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__dc2.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__dc2,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,0.96,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__dch.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__dch,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__fraig.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__fraig,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__refactor.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__refactor,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.13,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__resyn2.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__resyn2,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.22,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__rewrite.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__rewrite,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,0.80,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__strash.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__strash,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,0.86,False,False
+isolation,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__yosysnomap.aig,-mul -s,ABCSTEP,A_mul_s_w8,booth_lp_pre__yosysnomap,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__balance.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__balance,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.05,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dc2.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__dc2,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.04,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dch.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__dch,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__fraig.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__fraig,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,1.22,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__refactor.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__refactor,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,1.00,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__resyn2.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__resyn2,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,0.89,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__rewrite.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__rewrite,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.16,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__strash.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__strash,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,0.99,False,False
+isolation,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__yosysnomap.aig,-mul,ABCSTEP,A_mul_u_w8,booth_pre_folded__yosysnomap,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__balance.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__balance,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,2.32,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dc2.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__dc2,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,2.03,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dch.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__dch,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,2.78,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__fraig.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__fraig,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,3.38,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__refactor.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__refactor,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,2.47,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__resyn2.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__resyn2,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,4.21,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__rewrite.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__rewrite,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,2.32,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__strash.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__strash,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=TIMEOUT,-dyn -p -c,2.42,False,False
+isolation,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__yosysnomap.aig,-dot=2,ABCSTEP,B_dot2_u_w16,norm_pre__yosysnomap,16,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+isolation,netlists/CONTROL/A_mul_s_w16__booth_lp_pre_folded.aig,-mul -s,CONTROL,A_mul_s_w16,booth_lp_pre_folded,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,1.61,False,False
+isolation,netlists/CONTROL/A_mul_s_w32__booth_lp_pre_folded.aig,-mul -s,CONTROL,A_mul_s_w32,booth_lp_pre_folded,32,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,11.55,False,False
+isolation,netlists/CONTROL/A_mul_s_w8__booth_lp_pre_folded.aig,-mul -s,CONTROL,A_mul_s_w8,booth_lp_pre_folded,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.08,False,False
+isolation,netlists/MAIN/A_mul_s_w16__booth_lp_pre.aig,-mul -s,MAIN,A_mul_s_w16,booth_lp_pre,16,CORRECT,ERROR,2,-dyn -p -c=ERROR; -idx -p -c=ERROR,,,False,False
+isolation,netlists/MAIN/A_mul_s_w32__booth_lp_pre.aig,-mul -s,MAIN,A_mul_s_w32,booth_lp_pre,32,CORRECT,ERROR,2,-dyn -p -c=ERROR; -idx -p -c=ERROR,,,False,False
+isolation,netlists/MAIN/A_mul_s_w8__booth_lp_pre.aig,-mul -s,MAIN,A_mul_s_w8,booth_lp_pre,8,CORRECT,ERROR,2,-dyn -p -c=ERROR; -idx -p -c=ERROR,,,False,False
+isolation,netlists/ONSET_MAIN/B_dot2_u_w40__tree_pre.aig,-dot=2,ONSET_MAIN,B_dot2_u_w40,tree_pre,40,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,48.84,False,False
+isolation,netlists/ONSET_MAIN/B_dot2_u_w48__tree_pre.aig,-dot=2,ONSET_MAIN,B_dot2_u_w48,tree_pre,48,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,121.19,False,False
+isolation,netlists/ONSET_MAIN/B_dot2_u_w56__tree_pre.aig,-dot=2,ONSET_MAIN,B_dot2_u_w56,tree_pre,56,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,254.21,False,False
+isolation,netlists/ONSET_MAIN/B_mac_u_w40__norm_pre.aig,-mac,ONSET_MAIN,B_mac_u_w40,norm_pre,40,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,32.60,False,False
+isolation,netlists/ONSET_MAIN/B_mac_u_w40__tree_pre.aig,-mac,ONSET_MAIN,B_mac_u_w40,tree_pre,40,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,13.21,False,False
+isolation,netlists/ONSET_MAIN/B_mac_u_w48__norm_pre.aig,-mac,ONSET_MAIN,B_mac_u_w48,norm_pre,48,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+isolation,netlists/ONSET_MAIN/B_mac_u_w48__tree_pre.aig,-mac,ONSET_MAIN,B_mac_u_w48,tree_pre,48,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,38.63,False,False
+isolation,netlists/ONSET_MAIN/B_mac_u_w56__norm_pre.aig,-mac,ONSET_MAIN,B_mac_u_w56,norm_pre,56,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,347.95,False,False
+isolation,netlists/ONSET_MAIN/B_mac_u_w56__tree_pre.aig,-mac,ONSET_MAIN,B_mac_u_w56,tree_pre,56,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,62.11,False,False
+long,netlists/MAIN/A_mul_s_w8__booth_lp.aig,-mul -s,MAIN,A_mul_s_w8,booth_lp,8,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+long,netlists/MAIN/A_mul_u_w8__booth.aig,-mul,MAIN,A_mul_u_w8,booth,8,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+long,netlists/MAIN/B_mac_s_w8__norm.aig,-mac -s,MAIN,B_mac_s_w8,norm,8,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1093.99,False,False
+long,netlists/MAIN/MUT_accum_mac_u_w8__tree.aig,-mac,MAIN,MUT_accum_mac_u_w8,tree,8,INCORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+long,netlists/MAIN/MUT_signext_mac_s_w8__norm.aig,-mac -s,MAIN,MUT_signext_mac_s_w8,norm,8,INCORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+long,netlists/MAIN/MUT_trunc_mul_u_w8__norm.aig,-mul,MAIN,MUT_trunc_mul_u_w8,norm,8,INCORRECT,TIMEOUT,1,-idx -p -c=TIMEOUT,,,False,False
+long64,netlists/MAIN/B_dot2_u_w64__tree_pre.aig,-dot=2,MAIN,B_dot2_u_w64,tree_pre,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,311.08,False,False
+long64,netlists/MAIN/B_mac_u_w64__norm_pre.aig,-mac,MAIN,B_mac_u_w64,norm_pre,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,349.95,False,False
+mini,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w3,tree_pre__y6xor24,3,INCORRECT,FALSE_PASS,8,-dyn -p -c=FALSE_PASS; -dyn -p=FALSE_PASS; -igs -p -c=FALSE_PASS; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-igs -c,1.22,True,False
+mini,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w3,tree_pre__y6xor25,3,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-igs -c,1.42,False,False
+mini,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w4,tree_pre__y8xor32,4,INCORRECT,FALSE_PASS,8,-dyn -p -c=FAIL; -dyn -p=FALSE_PASS; -igs -p -c=FALSE_PASS; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-igs -c,1.32,True,False
+mini,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w4,tree_pre__y8xor33,4,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-dyn -c,1.26,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w2__tree.aig,-mac -s,MINI_MAIN,B_mac_s_w2,tree,2,INCORRECT,FAIL,2,-dyn -p -c=FAIL; -dyn -c=FAIL,-dyn -p -c,1.53,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s,MINI_MAIN,B_mac_s_w2,tree_pre,2,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-igs -c,1.47,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w3__tree.aig,-mac -s,MINI_MAIN,B_mac_s_w3,tree,3,INCORRECT,FAIL,2,-dyn -p -c=FAIL; -dyn -c=FAIL,-dyn -p -c,1.31,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s,MINI_MAIN,B_mac_s_w3,tree_pre,3,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-igs -c,1.47,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w4__tree.aig,-mac -s,MINI_MAIN,B_mac_s_w4,tree,4,INCORRECT,FAIL,2,-dyn -p -c=FAIL; -dyn -c=FAIL,-dyn -p -c,1.25,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s,MINI_MAIN,B_mac_s_w4,tree_pre,4,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-igs -c,1.41,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w5__tree.aig,-mac -s,MINI_MAIN,B_mac_s_w5,tree,5,INCORRECT,FAIL,2,-dyn -p -c=FAIL; -dyn -c=TIMEOUT,-dyn -p -c,1.78,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s,MINI_MAIN,B_mac_s_w5,tree_pre,5,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-idx -c,1.50,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w6__tree.aig,-mac -s,MINI_MAIN,B_mac_s_w6,tree,6,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -dyn -c=TIMEOUT,,,False,False
+mini,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s,MINI_MAIN,B_mac_s_w6,tree_pre,6,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -idx -p -c=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -idx -c=FAIL,-igs -c,1.71,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w2__tree.aig,-mac -s,MINI_PATCH,B_mac_s_w2,tree,2,CORRECT,PASS,2,-dyn -p -c=PASS; -dyn -c=PASS,-dyn -p -c,1.58,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w2__tree_pre.aig,-mac -s,MINI_PATCH,B_mac_s_w2,tree_pre,2,CORRECT,PASS,8,-dyn -p -c=PASS; -dyn -p=PASS; -igs -p -c=PASS; -idx -p -c=PASS; -dyn -c=PASS; -dyn=PASS; -igs -c=PASS; -idx -c=PASS,-igs -c,1.62,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w3__tree.aig,-mac -s,MINI_PATCH,B_mac_s_w3,tree,3,CORRECT,PASS,2,-dyn -p -c=PASS; -dyn -c=PASS,-dyn -p -c,1.33,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w3__tree_pre.aig,-mac -s,MINI_PATCH,B_mac_s_w3,tree_pre,3,CORRECT,PASS,8,-dyn -p -c=FALSE_FAIL; -dyn -p=PASS; -igs -p -c=FALSE_FAIL; -idx -p -c=PASS; -dyn -c=PASS; -dyn=PASS; -igs -c=PASS; -idx -c=PASS,-igs -c,1.75,False,True
+mini,netlists/MINI_PATCH/B_mac_s_w4__tree.aig,-mac -s,MINI_PATCH,B_mac_s_w4,tree,4,CORRECT,PASS,2,-dyn -p -c=PASS; -dyn -c=PASS,-dyn -p -c,1.60,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w4__tree_pre.aig,-mac -s,MINI_PATCH,B_mac_s_w4,tree_pre,4,CORRECT,PASS,8,-dyn -p -c=PASS; -dyn -p=FALSE_FAIL; -igs -p -c=FALSE_FAIL; -idx -p -c=PASS; -dyn -c=PASS; -dyn=PASS; -igs -c=PASS; -idx -c=PASS,-idx -c,1.23,False,True
+mini,netlists/MINI_PATCH/B_mac_s_w5__tree.aig,-mac -s,MINI_PATCH,B_mac_s_w5,tree,5,CORRECT,PASS,2,-dyn -p -c=PASS; -dyn -c=TIMEOUT,-dyn -p -c,1.59,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w5__tree_pre.aig,-mac -s,MINI_PATCH,B_mac_s_w5,tree_pre,5,CORRECT,PASS,8,-dyn -p -c=PASS; -dyn -p=PASS; -igs -p -c=PASS; -idx -p -c=PASS; -dyn -c=PASS; -dyn=PASS; -igs -c=PASS; -idx -c=PASS,-igs -c,1.62,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w6__tree.aig,-mac -s,MINI_PATCH,B_mac_s_w6,tree,6,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -dyn -c=TIMEOUT,,,False,False
+mini,netlists/MINI_PATCH/B_mac_s_w6__tree_pre.aig,-mac -s,MINI_PATCH,B_mac_s_w6,tree_pre,6,CORRECT,PASS,8,-dyn -p -c=PASS; -dyn -p=PASS; -igs -p -c=PASS; -idx -p -c=PASS; -dyn -c=PASS; -dyn=PASS; -igs -c=PASS; -idx -c=PASS,-igs -c,1.28,False,False
+phaseopt_probe,netlists/CONTROL/A_mul_s_w8__norm_pre_xorself_b7_y15.aig,-mul -s,CONTROL,A_mul_s_w8,norm_pre_xorself_b7_y15,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -c=PASS; -igs -c=PASS,-igs -c,2.09,False,False
+phaseopt_probe,netlists/CONTROL/A_mul_u_w8__norm_pre_xorself_a0_y0.aig,-mul,CONTROL,A_mul_u_w8,norm_pre_xorself_a0_y0,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -c=PASS; -igs -c=PASS,-igs -c,1.30,False,False
+phaseopt_probe,netlists/CONTROL/A_mul_u_w8__norm_pre_xorself_b7_y15.aig,-mul,CONTROL,A_mul_u_w8,norm_pre_xorself_b7_y15,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -c=PASS; -igs -c=PASS,-igs -c,2.17,False,False
+phaseopt_probe,netlists/CONTROL/B_mac_u_w8__tree_pre_xorself_c15_y16.aig,-mac,CONTROL,B_mac_u_w8,tree_pre_xorself_c15_y16,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -c=PASS; -igs -c=PASS,-igs -c,2.18,False,False
+phaseopt_probe,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w8,tree_pre__y16xor1,8,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -igs -p=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -igs=FAIL,-igs -c,1.78,False,False
+phaseopt_probe,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w8,tree_pre__y16xor64,8,INCORRECT,FALSE_PASS,8,-dyn -p -c=FALSE_PASS; -dyn -p=FALSE_PASS; -igs -p -c=FALSE_PASS; -igs -p=FALSE_PASS; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -igs=FAIL,-igs -c,1.89,True,False
+phaseopt_probe,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w8,tree_pre__y16xor65,8,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -igs -p=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -igs=FAIL,-igs -c,1.69,False,False
+phaseopt_probe,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w8,tree_pre_folded__y16xor1,8,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -igs -p=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -igs=FAIL,-igs -c,1.47,False,False
+phaseopt_probe,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w8,tree_pre_folded__y16xor64,8,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -igs -p=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -igs=FAIL,-igs -c,1.65,False,False
+phaseopt_probe,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s,CONTROL,MUTX_PATCH_B_mac_s_w8,tree_pre_folded__y16xor65,8,INCORRECT,FAIL,8,-dyn -p -c=FAIL; -dyn -p=FAIL; -igs -p -c=FAIL; -igs -p=FAIL; -dyn -c=FAIL; -dyn=FAIL; -igs -c=FAIL; -igs=FAIL,-igs -c,1.25,False,False
+phaseopt_probe,netlists/CONTROL/PATCH_B_mac_s_w8__tree_xorself_a0_y3.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8,tree_xorself_a0_y3,8,CORRECT,PASS,4,-dyn -p -c=PASS; -igs -p -c=PASS; -dyn -c=TIMEOUT; -igs -c=TIMEOUT,-dyn -p -c,1.64,False,False
+phaseopt_probe,netlists/CONTROL/PATCH_B_mac_s_w8__tree_xorself_c15_y16.aig,-mac -s,CONTROL,PATCH_B_mac_s_w8,tree_xorself_c15_y16,8,CORRECT,PASS,4,-dyn -p -c=TIMEOUT; -igs -p -c=PASS; -dyn -c=TIMEOUT; -igs -c=TIMEOUT,-igs -p -c,5.58,False,False
+portfolio_w32,netlists/CONTROL/A_mul_u_w16__booth_pre_folded.aig,-mul,CONTROL,A_mul_u_w16,booth_pre_folded,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.39,False,False
+portfolio_w32,netlists/CONTROL/A_mul_u_w32__booth_pre_folded.aig,-mul,CONTROL,A_mul_u_w32,booth_pre_folded,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,26.72,False,False
+portfolio_w32,netlists/CONTROL/A_mul_u_w8__booth_pre_folded.aig,-mul,CONTROL,A_mul_u_w8,booth_pre_folded,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,0.94,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w12__booth.aig,-mul -s,MAIN,A_mul_s_w12,booth,12,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.20,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w12__norm.aig,-mul -s,MAIN,A_mul_s_w12,norm,12,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.08,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w16__booth.aig,-mul -s,MAIN,A_mul_s_w16,booth,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.48,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w16__booth_lp.aig,-mul -s,MAIN,A_mul_s_w16,booth_lp,16,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w16__booth_pre.aig,-mul -s,MAIN,A_mul_s_w16,booth_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.57,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w16__norm.aig,-mul -s,MAIN,A_mul_s_w16,norm,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.51,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w16__norm_pre.aig,-mul -s,MAIN,A_mul_s_w16,norm_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.34,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w20__booth.aig,-mul -s,MAIN,A_mul_s_w20,booth,20,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,4.51,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w20__norm.aig,-mul -s,MAIN,A_mul_s_w20,norm,20,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,3.36,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w24__booth.aig,-mul -s,MAIN,A_mul_s_w24,booth,24,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,6.68,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w24__norm.aig,-mul -s,MAIN,A_mul_s_w24,norm,24,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,17.31,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w32__booth.aig,-mul -s,MAIN,A_mul_s_w32,booth,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,27.49,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w32__booth_lp.aig,-mul -s,MAIN,A_mul_s_w32,booth_lp,32,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -ipc -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w32__booth_pre.aig,-mul -s,MAIN,A_mul_s_w32,booth_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,26.33,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w32__norm.aig,-mul -s,MAIN,A_mul_s_w32,norm,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,18.00,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w32__norm_pre.aig,-mul -s,MAIN,A_mul_s_w32,norm_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,18.02,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w8__booth.aig,-mul -s,MAIN,A_mul_s_w8,booth,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,0.99,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w8__booth_lp.aig,-mul -s,MAIN,A_mul_s_w8,booth_lp,8,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w8__booth_pre.aig,-mul -s,MAIN,A_mul_s_w8,booth_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.02,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s,MAIN,A_mul_s_w8,norm,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,2.02,False,False
+portfolio_w32,netlists/MAIN/A_mul_s_w8__norm_pre.aig,-mul -s,MAIN,A_mul_s_w8,norm_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.06,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w12__booth.aig,-mul,MAIN,A_mul_u_w12,booth,12,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w12__norm.aig,-mul,MAIN,A_mul_u_w12,norm,12,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,2.45,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w16__booth.aig,-mul,MAIN,A_mul_u_w16,booth,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.79,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w16__norm.aig,-mul,MAIN,A_mul_u_w16,norm,16,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,23.82,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w16__norm_pre.aig,-mul,MAIN,A_mul_u_w16,norm_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.52,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w20__booth.aig,-mul,MAIN,A_mul_u_w20,booth,20,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,4.79,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w20__norm.aig,-mul,MAIN,A_mul_u_w20,norm,20,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w24__booth.aig,-mul,MAIN,A_mul_u_w24,booth,24,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,8.33,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w24__norm.aig,-mul,MAIN,A_mul_u_w24,norm,24,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w32__booth.aig,-mul,MAIN,A_mul_u_w32,booth,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,24.26,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w32__norm.aig,-mul,MAIN,A_mul_u_w32,norm,32,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w32__norm_pre.aig,-mul,MAIN,A_mul_u_w32,norm_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,13.43,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w8__booth.aig,-mul,MAIN,A_mul_u_w8,booth,8,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w8__norm.aig,-mul,MAIN,A_mul_u_w8,norm,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.22,False,False
+portfolio_w32,netlists/MAIN/A_mul_u_w8__norm_pre.aig,-mul,MAIN,A_mul_u_w8,norm_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,0.86,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w12__norm.aig,-dot=2,MAIN,B_dot2_u_w12,norm,12,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w12__tree.aig,-dot=2,MAIN,B_dot2_u_w12,tree,12,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,33.76,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w16__norm.aig,-dot=2,MAIN,B_dot2_u_w16,norm,16,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w16__tree.aig,-dot=2,MAIN,B_dot2_u_w16,tree,16,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w16__tree_fa.aig,-dot=2,MAIN,B_dot2_u_w16,tree_fa,16,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w16__tree_nofma.aig,-dot=2,MAIN,B_dot2_u_w16,tree_nofma,16,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w16__tree_pre.aig,-dot=2,MAIN,B_dot2_u_w16,tree_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,3.98,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w16__tree_ripple.aig,-dot=2,MAIN,B_dot2_u_w16,tree_ripple,16,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w24__norm.aig,-dot=2,MAIN,B_dot2_u_w24,norm,24,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w24__tree.aig,-dot=2,MAIN,B_dot2_u_w24,tree,24,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w32__norm.aig,-dot=2,MAIN,B_dot2_u_w32,norm,32,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -ipc -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w32__tree.aig,-dot=2,MAIN,B_dot2_u_w32,tree,32,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -ipc -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w8__norm.aig,-dot=2,MAIN,B_dot2_u_w8,norm,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,10.35,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w8__tree.aig,-dot=2,MAIN,B_dot2_u_w8,tree,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.20,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w8__tree_fa.aig,-dot=2,MAIN,B_dot2_u_w8,tree_fa,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,2.41,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w8__tree_nofma.aig,-dot=2,MAIN,B_dot2_u_w8,tree_nofma,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,13.65,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w8__tree_pre.aig,-dot=2,MAIN,B_dot2_u_w8,tree_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.00,False,False
+portfolio_w32,netlists/MAIN/B_dot2_u_w8__tree_ripple.aig,-dot=2,MAIN,B_dot2_u_w8,tree_ripple,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.15,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w12__norm.aig,-mac -s,MAIN,B_mac_s_w12,norm,12,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.21,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w12__tree.aig,-mac -s,MAIN,B_mac_s_w12,tree,12,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=TIMEOUT; -ipc -p -c=FAIL; -igs -p -c=FAIL; -ips -p -c=FAIL; -igsm -p -c=FAIL,-igsm -p -c,1.11,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w16__norm.aig,-mac -s,MAIN,B_mac_s_w16,norm,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,4.61,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w16__tree.aig,-mac -s,MAIN,B_mac_s_w16,tree,16,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=FAIL; -ipc -p -c=FAIL; -igs -p -c=FAIL; -ips -p -c=FAIL; -igsm -p -c=FAIL,-ipc -p -c,2.18,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w16__tree_fa.aig,-mac -s,MAIN,B_mac_s_w16,tree_fa,16,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=FAIL; -ipc -p -c=TIMEOUT; -igs -p -c=FAIL; -ips -p -c=FAIL; -igsm -p -c=FAIL,-idx -p -c,1.90,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w16__tree_nofma.aig,-mac -s,MAIN,B_mac_s_w16,tree_nofma,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,5.10,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w16__tree_pre.aig,-mac -s,MAIN,B_mac_s_w16,tree_pre,16,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=FAIL; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,-dyn -p -c,2.39,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s,MAIN,B_mac_s_w16,tree_ripple,16,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=FAIL; -ipc -p -c=FAIL; -igs -p -c=FAIL; -ips -p -c=FAIL; -igsm -p -c=FAIL,-igsm -p -c,2.34,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w24__norm.aig,-mac -s,MAIN,B_mac_s_w24,norm,24,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,16.46,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w24__tree.aig,-mac -s,MAIN,B_mac_s_w24,tree,24,INCORRECT,FAIL,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=FAIL; -igs -p -c=FAIL; -ips -p -c=TIMEOUT; -igsm -p -c=FAIL,-igsm -p -c,3.43,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w32__norm.aig,-mac -s,MAIN,B_mac_s_w32,norm,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,23.66,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w32__tree.aig,-mac -s,MAIN,B_mac_s_w32,tree,32,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=FAIL; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,-idx -p -c,11.59,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w8__norm.aig,-mac -s,MAIN,B_mac_s_w8,norm,8,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w8__tree.aig,-mac -s,MAIN,B_mac_s_w8,tree,8,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=FAIL; -ipc -p -c=FAIL; -igs -p -c=FAIL; -ips -p -c=FAIL; -igsm -p -c=FAIL,-igsm -p -c,1.26,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w8__tree_fa.aig,-mac -s,MAIN,B_mac_s_w8,tree_fa,8,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=FAIL; -ipc -p -c=FAIL; -igs -p -c=TIMEOUT; -ips -p -c=FAIL; -igsm -p -c=FAIL,-idx -p -c,1.09,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w8__tree_nofma.aig,-mac -s,MAIN,B_mac_s_w8,tree_nofma,8,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w8__tree_pre.aig,-mac -s,MAIN,B_mac_s_w8,tree_pre,8,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=FAIL; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,-igs -p -c,1.27,False,False
+portfolio_w32,netlists/MAIN/B_mac_s_w8__tree_ripple.aig,-mac -s,MAIN,B_mac_s_w8,tree_ripple,8,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=FAIL; -ipc -p -c=FAIL; -igs -p -c=FAIL; -ips -p -c=FAIL; -igsm -p -c=FAIL,-igsm -p -c,1.19,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w12__norm.aig,-mac,MAIN,B_mac_u_w12,norm,12,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,2.30,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w12__tree.aig,-mac,MAIN,B_mac_u_w12,tree,12,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,1.50,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w16__norm.aig,-mac,MAIN,B_mac_u_w16,norm,16,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,18.04,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w16__tree.aig,-mac,MAIN,B_mac_u_w16,tree,16,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,26717.06,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w16__tree_fa.aig,-mac,MAIN,B_mac_u_w16,tree_fa,16,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,7.69,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w16__tree_nofma.aig,-mac,MAIN,B_mac_u_w16,tree_nofma,16,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,18.69,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w16__tree_pre.aig,-mac,MAIN,B_mac_u_w16,tree_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,8.91,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w16__tree_ripple.aig,-mac,MAIN,B_mac_u_w16,tree_ripple,16,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,9.07,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w24__norm.aig,-mac,MAIN,B_mac_u_w24,norm,24,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w24__tree.aig,-mac,MAIN,B_mac_u_w24,tree,24,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,17.44,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w32__norm.aig,-mac,MAIN,B_mac_u_w32,norm,32,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w32__tree.aig,-mac,MAIN,B_mac_u_w32,tree,32,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,270.72,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w8__norm.aig,-mac,MAIN,B_mac_u_w8,norm,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.16,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w8__tree.aig,-mac,MAIN,B_mac_u_w8,tree,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.03,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w8__tree_fa.aig,-mac,MAIN,B_mac_u_w8,tree_fa,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.16,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w8__tree_nofma.aig,-mac,MAIN,B_mac_u_w8,tree_nofma,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,0.98,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w8__tree_pre.aig,-mac,MAIN,B_mac_u_w8,tree_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.20,False,False
+portfolio_w32,netlists/MAIN/B_mac_u_w8__tree_ripple.aig,-mac,MAIN,B_mac_u_w8,tree_ripple,8,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.21,False,False
+portfolio_w32,netlists/MAIN/MUT_accum_mac_u_w16__norm.aig,-mac,MAIN,MUT_accum_mac_u_w16,norm,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_accum_mac_u_w16__tree.aig,-mac,MAIN,MUT_accum_mac_u_w16,tree,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_accum_mac_u_w32__norm.aig,-mac,MAIN,MUT_accum_mac_u_w32,norm,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_accum_mac_u_w32__tree.aig,-mac,MAIN,MUT_accum_mac_u_w32,tree,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_accum_mac_u_w8__norm.aig,-mac,MAIN,MUT_accum_mac_u_w8,norm,8,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_accum_mac_u_w8__tree.aig,-mac,MAIN,MUT_accum_mac_u_w8,tree,8,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_plus1_dot2_u_w16__norm.aig,-dot=2,MAIN,MUT_plus1_dot2_u_w16,norm,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_plus1_dot2_u_w16__tree.aig,-dot=2,MAIN,MUT_plus1_dot2_u_w16,tree,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_plus1_dot2_u_w32__norm.aig,-dot=2,MAIN,MUT_plus1_dot2_u_w32,norm,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_plus1_dot2_u_w32__tree.aig,-dot=2,MAIN,MUT_plus1_dot2_u_w32,tree,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_plus1_dot2_u_w8__norm.aig,-dot=2,MAIN,MUT_plus1_dot2_u_w8,norm,8,INCORRECT,FAIL,6,-dyn -p -c=TIMEOUT; -idx -p -c=FAIL; -ipc -p -c=FAIL; -igs -p -c=TIMEOUT; -ips -p -c=FAIL; -igsm -p -c=FAIL,-ipc -p -c,8.15,False,False
+portfolio_w32,netlists/MAIN/MUT_plus1_dot2_u_w8__tree.aig,-dot=2,MAIN,MUT_plus1_dot2_u_w8,tree,8,INCORRECT,FAIL,6,-dyn -p -c=TIMEOUT; -idx -p -c=FAIL; -ipc -p -c=FAIL; -igs -p -c=TIMEOUT; -ips -p -c=FAIL; -igsm -p -c=FAIL,-igsm -p -c,1.88,False,False
+portfolio_w32,netlists/MAIN/MUT_signext_mac_s_w16__norm.aig,-mac -s,MAIN,MUT_signext_mac_s_w16,norm,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_signext_mac_s_w16__tree.aig,-mac -s,MAIN,MUT_signext_mac_s_w16,tree,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_signext_mac_s_w32__norm.aig,-mac -s,MAIN,MUT_signext_mac_s_w32,norm,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_signext_mac_s_w32__tree.aig,-mac -s,MAIN,MUT_signext_mac_s_w32,tree,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_signext_mac_s_w8__norm.aig,-mac -s,MAIN,MUT_signext_mac_s_w8,norm,8,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_signext_mac_s_w8__tree.aig,-mac -s,MAIN,MUT_signext_mac_s_w8,tree,8,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_trunc_mul_u_w16__booth.aig,-mul,MAIN,MUT_trunc_mul_u_w16,booth,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_trunc_mul_u_w16__norm.aig,-mul,MAIN,MUT_trunc_mul_u_w16,norm,16,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_trunc_mul_u_w32__booth.aig,-mul,MAIN,MUT_trunc_mul_u_w32,booth,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_trunc_mul_u_w32__norm.aig,-mul,MAIN,MUT_trunc_mul_u_w32,norm,32,INCORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_trunc_mul_u_w8__booth.aig,-mul,MAIN,MUT_trunc_mul_u_w8,booth,8,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/MAIN/MUT_trunc_mul_u_w8__norm.aig,-mul,MAIN,MUT_trunc_mul_u_w8,norm,8,INCORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w12__tree.aig,-mac -s,PATCH,B_mac_s_w12,tree,12,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,1.80,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w16__tree.aig,-mac -s,PATCH,B_mac_s_w16,tree,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,3.85,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w16__tree_fa.aig,-mac -s,PATCH,B_mac_s_w16,tree_fa,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,6.78,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w16__tree_pre.aig,-mac -s,PATCH,B_mac_s_w16,tree_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.72,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w16__tree_ripple.aig,-mac -s,PATCH,B_mac_s_w16,tree_ripple,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.72,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w24__tree.aig,-mac -s,PATCH,B_mac_s_w24,tree,24,CORRECT,PASS,3,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=PASS,-ipc -p -c,4.20,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w32__tree.aig,-mac -s,PATCH,B_mac_s_w32,tree,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,65.31,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w8__tree.aig,-mac -s,PATCH,B_mac_s_w8,tree,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.17,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w8__tree_fa.aig,-mac -s,PATCH,B_mac_s_w8,tree_fa,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,22.19,False,False
+portfolio_w32,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s,PATCH,B_mac_s_w8,tree_pre,8,CORRECT,FALSE_FAIL,6,-dyn -p -c=FALSE_FAIL; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=FALSE_FAIL; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,True
+portfolio_w32,netlists/PATCH/B_mac_s_w8__tree_ripple.aig,-mac -s,PATCH,B_mac_s_w8,tree_ripple,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,1.15,False,False
+repro,evidence/trace_phaseopt_minimal_repro/mac_s_w3_patched_noabc_CORRECT.aig,-mac -s,,mac_s_w3_patched_noabc_CORRECT.aig,,3,CORRECT,PASS,2,-dyn -p -c=FALSE_FAIL; -dyn -c=PASS,-dyn -c,2.02,False,True
+repro,evidence/trace_phaseopt_minimal_repro/mac_s_w3_zext_addend_mutant_INCORRECT.aig,-mac -s,,mac_s_w3_zext_addend_mutant_INCORRECT.aig,,3,INCORRECT,FALSE_PASS,2,-dyn -p -c=FALSE_PASS; -dyn -c=FAIL,-dyn -c,1.55,True,False
+stage1,netlists/MAIN/A_mul_s_w8__booth.aig,-mul -s,MAIN,A_mul_s_w8,booth,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,0.70,False,False
+stage1,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s,MAIN,A_mul_s_w8,norm,8,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+stage1,netlists/MAIN/A_mul_u_w8__booth.aig,-mul,MAIN,A_mul_u_w8,booth,8,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+stage2_pre,netlists/CONTROL/A_mul_u_w64__booth_pre_folded.aig,-mul,CONTROL,A_mul_u_w64,booth_pre_folded,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,298.41,False,False
+stage2_pre,netlists/MAIN/A_mul_s_w64__booth_pre.aig,-mul -s,MAIN,A_mul_s_w64,booth_pre,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,472.70,False,False
+stage2_pre,netlists/MAIN/A_mul_s_w64__norm_pre.aig,-mul -s,MAIN,A_mul_s_w64,norm_pre,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,155.36,False,False
+stage2_pre,netlists/MAIN/A_mul_u_w64__norm_pre.aig,-mul,MAIN,A_mul_u_w64,norm_pre,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,268.67,False,False
+stage2_pre,netlists/MAIN/B_dot2_u_w16__norm_pre.aig,-dot=2,MAIN,B_dot2_u_w16,norm_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,3.55,False,False
+stage2_pre,netlists/MAIN/B_dot2_u_w32__norm_pre.aig,-dot=2,MAIN,B_dot2_u_w32,norm_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,33.75,False,False
+stage2_pre,netlists/MAIN/B_dot2_u_w32__tree_pre.aig,-dot=2,MAIN,B_dot2_u_w32,tree_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,30.50,False,False
+stage2_pre,netlists/MAIN/B_dot2_u_w64__tree_pre.aig,-dot=2,MAIN,B_dot2_u_w64,tree_pre,64,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+stage2_pre,netlists/MAIN/B_dot2_u_w8__norm_pre.aig,-dot=2,MAIN,B_dot2_u_w8,norm_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,3.59,False,False
+stage2_pre,netlists/MAIN/B_mac_s_w16__norm_pre.aig,-mac -s,MAIN,B_mac_s_w16,norm_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.42,False,False
+stage2_pre,netlists/MAIN/B_mac_s_w32__norm_pre.aig,-mac -s,MAIN,B_mac_s_w32,norm_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,14.56,False,False
+stage2_pre,netlists/MAIN/B_mac_s_w32__tree_pre.aig,-mac -s,MAIN,B_mac_s_w32,tree_pre,32,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=FAIL; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,-dyn -p -c,10.29,False,False
+stage2_pre,netlists/MAIN/B_mac_s_w64__tree_pre.aig,-mac -s,MAIN,B_mac_s_w64,tree_pre,64,INCORRECT,FAIL,6,-dyn -p -c=FAIL; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,-dyn -p -c,212.37,False,False
+stage2_pre,netlists/MAIN/B_mac_s_w8__norm_pre.aig,-mac -s,MAIN,B_mac_s_w8,norm_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,3.55,False,False
+stage2_pre,netlists/MAIN/B_mac_u_w16__norm_pre.aig,-mac,MAIN,B_mac_u_w16,norm_pre,16,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,2.18,False,False
+stage2_pre,netlists/MAIN/B_mac_u_w32__norm_pre.aig,-mac,MAIN,B_mac_u_w32,norm_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,10.44,False,False
+stage2_pre,netlists/MAIN/B_mac_u_w32__tree_pre.aig,-mac,MAIN,B_mac_u_w32,tree_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,10.25,False,False
+stage2_pre,netlists/MAIN/B_mac_u_w64__norm_pre.aig,-mac,MAIN,B_mac_u_w64,norm_pre,64,CORRECT,TIMEOUT,6,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT; -ipc -p -c=TIMEOUT; -igs -p -c=TIMEOUT; -ips -p -c=TIMEOUT; -igsm -p -c=TIMEOUT,,,False,False
+stage2_pre,netlists/MAIN/B_mac_u_w64__tree_pre.aig,-mac,MAIN,B_mac_u_w64,tree_pre,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,193.38,False,False
+stage2_pre,netlists/MAIN/B_mac_u_w8__norm_pre.aig,-mac,MAIN,B_mac_u_w8,norm_pre,8,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,3.61,False,False
+stage2_pre,netlists/PATCH/B_mac_s_w32__tree_pre.aig,-mac -s,PATCH,B_mac_s_w32,tree_pre,32,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,10.32,False,False
+stage2_pre,netlists/PATCH/B_mac_s_w64__tree_pre.aig,-mac -s,PATCH,B_mac_s_w64,tree_pre,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,221.35,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w10__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w10,booth,10,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,1.81,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w10__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w10,booth_lp,10,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w10__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w10,norm,10,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.61,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w11__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w11,booth,11,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,2.06,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w11__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w11,booth_lp,11,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w11__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w11,norm,11,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.88,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w12,booth,12,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,2.16,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w12__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w12,booth_lp,12,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w12__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w12,norm,12,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.92,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w13__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w13,booth,13,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,2.59,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w13__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w13,booth_lp,13,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w13__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w13,norm,13,CORRECT,TIMEOUT,1,-idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w14__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w14,booth,14,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,2.61,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w14__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w14,booth_lp,14,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w14__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w14,norm,14,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.31,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w15__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w15,booth,15,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,2.47,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w15__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w15,booth_lp,15,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w15__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w15,norm,15,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.08,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w16__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w16,booth,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,2.34,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w16__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w16,booth_lp,16,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w16__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w16,norm,16,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.24,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w4__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w4,booth,4,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.25,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w4__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w4,booth_lp,4,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,1.46,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w4__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w4,norm,4,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.19,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w5__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w5,booth,5,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,1.69,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w5__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w5,booth_lp,5,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,2.85,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w5__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w5,norm,5,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.74,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w6__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w6,booth,6,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.23,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w6__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w6,booth_lp,6,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,12.40,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w6__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w6,norm,6,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.53,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w7__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w7,booth,7,CORRECT,PASS,2,-dyn -p -c=TIMEOUT; -idx -p -c=PASS,-idx -p -c,1.58,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w7__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w7,booth_lp,7,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w7__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w7,norm,7,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,23.77,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w8__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w8,booth,8,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.68,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w8__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w8,booth_lp,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w8__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w8,norm,8,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.55,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w9__booth.aig,-mul -s,SWEEP_MAIN,A_mul_s_w9,booth,9,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,1.84,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w9__booth_lp.aig,-mul -s,SWEEP_MAIN,A_mul_s_w9,booth_lp,9,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_s_w9__norm.aig,-mul -s,SWEEP_MAIN,A_mul_s_w9,norm,9,CORRECT,TIMEOUT,1,-idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w10__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w10,booth,10,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w10__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w10,norm,10,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.99,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w11__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w11,booth,11,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,1.52,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w11__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w11,norm,11,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.07,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w12__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w12,booth,12,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w12__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w12,norm,12,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,2.00,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w13__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w13,booth,13,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,2.28,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w13__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w13,norm,13,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,5.84,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w14__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w14,booth,14,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,3.21,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w14__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w14,norm,14,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,7.69,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w15__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w15,booth,15,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,2.72,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w15__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w15,norm,15,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,6.49,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w16__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w16,booth,16,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,3.05,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w16__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w16,norm,16,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,20.78,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w4__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w4,booth,4,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.55,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w4__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w4,norm,4,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.37,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w5__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w5,booth,5,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-idx -p -c,2.27,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w5__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w5,norm,5,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.55,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w6__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w6,booth,6,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,24.48,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w6__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w6,norm,6,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.51,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w7__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w7,booth,7,CORRECT,PASS,2,-dyn -p -c=PASS; -idx -p -c=PASS,-dyn -p -c,1.75,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w7__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w7,norm,7,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.31,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w8__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w8,booth,8,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w8__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w8,norm,8,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.25,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w9__booth.aig,-mul,SWEEP_MAIN,A_mul_u_w9,booth,9,CORRECT,TIMEOUT,2,-dyn -p -c=TIMEOUT; -idx -p -c=TIMEOUT,,,False,False
+sweep,netlists/SWEEP_MAIN/A_mul_u_w9__norm.aig,-mul,SWEEP_MAIN,A_mul_u_w9,norm,9,CORRECT,PASS,1,-idx -p -c=PASS,-idx -p -c,1.48,False,False
+unsupported_probe,netlists/MAIN/B_dot2c_u_w8__norm.aig,-dot=2,MAIN,B_dot2c_u_w8,norm,8,CORRECT,UNSUPPORTED,1,-dyn -p -c=UNSUPPORTED,,,False,False
+unsupported_probe,netlists/MAIN/C_macw_u_w4_y16__norm.aig,-mac,MAIN,C_macw_u_w4_y16,norm,4,CORRECT,UNSUPPORTED,1,-dyn -p -c=UNSUPPORTED,,,False,False
+unsupported_probe,netlists/MAIN/C_msub_u_w4__norm.aig,-mac,MAIN,C_msub_u_w4,norm,4,CORRECT,UNSUPPORTED,1,-dyn -p -c=UNSUPPORTED,,,False,False
+unsupported_probe,netlists/MAIN/C_msubw_u_w4_y16__norm.aig,-mac,MAIN,C_msubw_u_w4_y16,norm,4,CORRECT,UNSUPPORTED,1,-dyn -p -c=UNSUPPORTED,,,False,False
+unsupported_probe,netlists/PATCH/C_macw_s_w4_y16__tree.aig,-mac -s,PATCH,C_macw_s_w4_y16,tree,4,CORRECT,UNSUPPORTED,1,-dyn -p -c=UNSUPPORTED,,,False,False
+w64post,netlists/MAIN/A_mul_s_w64__booth.aig,-mul -s,MAIN,A_mul_s_w64,booth,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,274.04,False,False
+w64post,netlists/MAIN/A_mul_s_w64__norm.aig,-mul -s,MAIN,A_mul_s_w64,norm,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,165.59,False,False
+w64post,netlists/MAIN/A_mul_u_w64__booth.aig,-mul,MAIN,A_mul_u_w64,booth,64,CORRECT,PASS,1,-dyn -p -c=PASS,-dyn -p -c,264.53,False,False
+w64post,netlists/MAIN/B_mac_s_w64__tree.aig,-mac -s,MAIN,B_mac_s_w64,tree,64,INCORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+w64post,netlists/MAIN/B_mac_u_w64__tree.aig,-mac,MAIN,B_mac_u_w64,tree,64,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False
+w64post,netlists/PATCH/B_mac_s_w64__tree.aig,-mac -s,PATCH,B_mac_s_w64,tree,64,CORRECT,TIMEOUT,1,-dyn -p -c=TIMEOUT,,,False,False

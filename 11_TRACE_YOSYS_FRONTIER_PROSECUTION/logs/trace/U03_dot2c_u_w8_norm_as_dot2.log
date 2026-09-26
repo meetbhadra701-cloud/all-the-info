@@ -1,0 +1,65 @@
+### FILE netlists/MAIN/B_dot2c_u_w8__norm.aig
+### ARGS -dot=2 -dyn -p -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T03:16:31-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_dot2c_u_w8__norm.aig
+║           mode: dot=2
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╠═ Result: Buggy
+║   [34mSP: {370} -131072n14n48 + -131072n16n46 + -131072n18n44 + -131072n20n42 + -131072n22n40 + -131072n24n38 + -131072n62n96 + -131072n64n94 + -131072n66n92 + -131072n68n90 + -131072n70n88 + -131072n72n86 + -65536n12n48 + -65536n14n46 + -65536n16n44 + -65536n18n42 + -65536n20n40 + -65536n22n38 + -65536n24n36 + -65536n60n96 + -65536n62n94 + -65536n64n92 + -65536n66n90 + -65536n68n88 + -65536n70n86 + -65536n72n84 + -32768n10n48 + -32768n12n46 + -32768n14n44 + -32768n16n42 + -32768n18n40 + -32768n20n38 + -32768n22n36 + -32768n24n34 + -32768n58n96 + -32768n60n94 + -32768n62n92 + -32768n64n90 + -32768n66n88 + -32768n68n86 + -32768n70n84 + -32768n72n82 + -16384n8n48 + -16384n10n46 + -16384n12n44 + -16384n14n42 + -16384n16n40 + -16384n18n38 + -16384n20n36 + -16384n22n34 + -16384n24n32 + -16384n56n96 + -16384n58n94 + -16384n60n92 + -16384n62n90 + -16384n64n88 + -16384n66n86 + -16384n68n84 + -16384n70n82 + -16384n72n80 + -8192n6n48 + -8192n8n46 + -8192n10n44 + -8192n12n42 + -8192n14n40 + -8192n16n38 + -8192n18n36 + -8192n20n34 + -8192n22n32 + -8192n24n30 + -8192n54n96 + -8192n56n94 + -8192n58n92 + -8192n60n90 + -8192n62n88 + -8192n64n86 + -8192n66n84 + -8192n68n82 + -8192n70n80 + -8192n72n78 + -4096n4n48 + -4096n6n46 + -4096n8n44 + -4096n10n42 + -4096n12n40 + -4096n14n38 + -4096n16n36 + -4096n18n34 + -4096n20n32 + -4096n22n30 + -4096n24n28 + -4096n52n96 + -4096n54n94 + -4096n56n92 + -4096n58n90 + -4096n60n88 + -4096n62n86 + -4096n64n84 + -4096n66n82 + -4096n68n80 + -4096n70n78 + -4096n72n76 + -2048n2n48 + -2048n4n46 + -2048n6n44 + -2048n8n42 + -2048n10n40 + -2048n12n38 + -2048n14n36 + -2048n16n34 + -2048n18n32 + -2048n20n30 + -2048n22n28 + -2048n24n26 + -2048n50n96 + -2048n52n94 + -2048n54n92 + -2048n56n90 + -2048n58n88 + -2048n60n86 + -2048n62n84 + -2048n64n82 + -2048n66n80 + -2048n68n78 + -2048n70n76 + -2048n72n74 + -1024n2n46 + -1024n4n44 + -1024n6n42 + -1024n8n40 + -1024n10n38 + -1024n12n36 + -1024n14n34 + -1024n18n30 + -1024n20n28 + -1024n22n26 + -1024n50n94 + -1024n52n92 + -1024n54n90 + -1024n56n88 + -1024n58n86 + -1024n60n84 + -1024n62n82 + -1024n64n80 + -1024n66n78 + -1024n68n76 + -1024n70n74 + -512n2n44 + -512n4n42 + -512n6n40 + -512n8n38 + -512n10n36 + -512n12n34 + -512n18n28 + -512n20n26 + -512n50n92 + -512n52n90 + -512n54n88 + -512n56n86 + -512n58n84 + -512n60n82 + -512n62n80 + -512n64n78 + -512n66n76 + -512n68n74 + -256n2n42 + -256n4n40 + -256n6n38 + -256n8n36 + -256n10n34 + -256n18n26 + -256n50n90 + -256n52n88 + -256n54n86 + -256n56n84 + -256n58n82 + -256n60n80 + -256n62n78 + -256n64n76 + -256n66n74 + -128n2n40 + -128n4n38 + -128n6n36 + -128n8n34 + -128n50n88 + -128n52n86 + -128n54n84 + -128n56n82 + -128n58n80 + -128n60n78 + -128n62n76 + -128n64n74 + -64n2n38 + -64n4n36 + -64n6n34 + -64n50n86 + -64n52n84 + -64n54n82 + -64n56n80 + -64n58n78 + -64n60n76 + -64n62n74 + -32n2n36 + -32n4n34 + -32n50n84 + -32n52n82 + -32n54n80 + -32n56n78 + -32n58n76 + -32n60n74 + -16n2n34 + -16n50n82 + -16n52n80 + -16n54n78 + -16n56n76 + -16n58n74 + -8n50n80 + -8n52n78 + -8n54n76 + -8n56n74 + -4n50n78 + -4n52n76 + -4n54n74 + -2n50n76 + -2n52n74 + -1n50n74 + 1n2n18 + 1n34n50 + 1n66 + 2n2n20 + 2n4n18 + 2n34n52 + 2n36n50 + 2n68 + 4n2n22 + 4n4n20 + 4n6n18 + 4n34n54 + 4n36n52 + 4n38n50 + 4n70 + 8n2n24 + 8n4n22 + 8n6n20 + 8n8n18 + 8n34n56 + 8n36n54 + 8n38n52 + 8n40n50 + 8n72 + 15n2n26 + 16n4n24 + 16n6n22 + 16n8n20 + 16n10n18 + 16n34n58 + 16n36n56 + 16n38n54 + 16n40n52 + 16n42n50 + 16n74 + 30n2n28 + 30n4n26 + 32n6n24 + 32n8n22 + 32n10n20 + 32n12n18 + 32n34n60 + 32n36n58 + 32n38n56 + 32n40n54 + 32n42n52 + 32n44n50 + 32n76 + 60n2n30 + 60n4n28 + 60n6n26 + 64n8n24 + 64n10n22 + 64n12n20 + 64n14n18 + 64n34n62 + 64n36n60 + 64n38n58 + 64n40n56 + 64n42n54 + 64n44n52 + 64n46n50 + 64n78 + 120n2n32 + 120n4n30 + 120n6n28 + 120n8n26 + 128n10n24 + 128n12n22 + 128n14n20 + 128n16n18 + 128n34n64 + 128n36n62 + 128n38n60 + 128n40n58 + 128n42n56 + 128n44n54 + 128n46n52 + 128n48n50 + 128n80 + 240n4n32 + 240n6n30 + 240n8n28 + 240n10n26 + 256n12n24 + 256n14n22 + 256n16n20 + 256n36n64 + 256n38n62 + 256n40n60 + 256n42n58 + 256n44n56 + 256n46n54 + 256n48n52 + 256n82 + 480n6n32 + 480n8n30 + 480n10n28 + 480n12n26 + 512n14n24 + 512n16n22 + 512n38n64 + 512n40n62 + 512n42n60 + 512n44n58 + 512n46n56 + 512n48n54 + 512n84 + 960n8n32 + 960n10n30 + 960n12n28 + 960n14n26 + 1024n16n24 + 1024n40n64 + 1024n42n62 + 1024n44n60 + 1024n46n58 + 1024n48n56 + 1024n86 + 1920n10n32 + 1920n12n30 + 1920n14n28 + 1920n16n26 + 2048n42n64 + 2048n44n62 + 2048n46n60 + 2048n48n58 + 2048n88 + 3840n12n32 + 3840n14n30 + 3840n16n28 + 4096n44n64 + 4096n46n62 + 4096n48n60 + 4096n90 + 7680n14n32 + 7680n16n30 + 8192n46n64 + 8192n48n62 + 8192n92 + 15360n16n32 + 16384n48n64 + 16384n94 + 32768n96[39m
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: dot
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/MAIN/B_dot2c_u_w8__norm.aig
+║ Maximum polynomial : 402
+║ Number of iteration: 1481
+║ Elapsed time: 0.334856 (in seconds)
+║ Number and-gates : 1465
+║ Substitution steps : 1483
+║ Number of removed conflicts : 427
+║ Total calculated conflicts : 20714
+║ Conflict calculation time: 0.0195679 (in seconds)
+║ Number of negated nodes : 173
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/MAIN/B_dot2c_u_w8__norm.aig -dot=2 -dyn -p -c -no-steps"
+	User time (seconds): 0.33
+	System time (seconds): 0.02
+	Percent of CPU this job got: 92%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 0.38s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 31168
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 1463
+	Voluntary context switches: 14
+	Involuntary context switches: 43
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 7122944
+### DOCKER_EXIT 0
+### WALL_SECONDS 1.35
+### END 2026-09-24T03:16:33-07:00

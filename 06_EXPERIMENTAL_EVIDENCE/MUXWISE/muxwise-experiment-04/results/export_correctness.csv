@@ -1,0 +1,5 @@
+case,width,observed,returncode,runtime_seconds,script,log,candidate
+normal_w4,4,PASS,0,0.826222,work/export_miter/normal_w4.ys,logs/export_miter/normal_w4.log,intermediate/normal_w4/post_abc.v
+arith_tree_w4,4,FAIL,1,0.323294,work/export_miter/arith_tree_w4.ys,logs/export_miter/arith_tree_w4.log,intermediate/arith_tree_w4/post_abc.v
+normal_w8,8,PASS,0,79.449631,work/export_miter/normal_w8.ys,logs/export_miter/normal_w8.log,intermediate/normal_w8/post_abc.v
+arith_tree_w8,8,FAIL,1,0.432311,work/export_miter/arith_tree_w8.ys,logs/export_miter/arith_tree_w8.log,intermediate/arith_tree_w8/post_abc.v

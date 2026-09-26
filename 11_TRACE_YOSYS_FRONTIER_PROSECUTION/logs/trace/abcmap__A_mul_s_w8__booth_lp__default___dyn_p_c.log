@@ -1,0 +1,21 @@
+### FILE netlists/ABCMAP/A_mul_s_w8__booth_lp__default.aig
+### ARGS -mul -s -dyn -p -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T17:07:50-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/ABCMAP/A_mul_s_w8__booth_lp__default.aig
+║           mode: mul
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 126320640
+### DOCKER_EXIT 0
+### WALL_SECONDS 60.96
+### END 2026-09-24T17:08:51-07:00

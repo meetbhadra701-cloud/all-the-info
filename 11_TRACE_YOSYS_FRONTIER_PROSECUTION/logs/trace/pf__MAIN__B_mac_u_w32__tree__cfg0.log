@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_mac_u_w32__tree.aig
+### ARGS -mac -dyn -p -c -no-steps
+### TIMEOUT 300
+### START 2026-09-24T11:45:09-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_mac_u_w32__tree.aig
+║           mode: mac
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 231473152
+### DOCKER_EXIT 0
+### WALL_SECONDS 1272.13
+### END 2026-09-24T12:06:22-07:00

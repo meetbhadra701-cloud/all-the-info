@@ -1,0 +1,17 @@
+W,arch,status,seconds,HashM,Total,Left,expected_left
+6,norm,OK,0.2,4054,9270,36,36
+6,booth,TIMEOUT,120.4,-,-,-,36
+8,norm,OK,0.3,196319,438532,64,64
+8,booth,TIMEOUT,120.5,-,-,-,64
+10,norm,OK,6.8,2988914,6510675,100,100
+10,booth,TIMEOUT,120.6,-,-,-,100
+12,norm,OK,67.0,24947086,58505092,144,144
+12,booth,TIMEOUT,121.2,-,-,-,144
+16,norm,TIMEOUT,121.0,-,-,-,256
+16,booth,TIMEOUT,120.6,-,-,-,256
+24,norm,TIMEOUT,121.0,-,-,-,576
+24,booth,TIMEOUT,121.0,-,-,-,576
+32,norm,TIMEOUT,120.8,-,-,-,1024
+32,booth,TIMEOUT,120.9,-,-,-,1024
+
+[exited with code 0]

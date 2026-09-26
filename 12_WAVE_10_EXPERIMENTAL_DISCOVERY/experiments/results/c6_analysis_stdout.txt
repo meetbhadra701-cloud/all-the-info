@@ -1,0 +1,47 @@
+treatment                    stage         WNS0      WNS1     dWNS        TNS1    area     sec equiv
+annealing_repair_s1          placed      -29.38    -23.54     5.84       -77.5  1.0427  1459.3 PASS
+annealing_repair_s2          placed      -29.38    -15.64    13.73      -107.7  0.9077   710.9 PASS
+annealing_repair_s3          placed      -29.38    -15.85    13.53       -99.5  0.9292  1123.0 PASS
+annealing_s1                 placed      -29.38   -116.07   -86.69    -14022.7  1.0295  1862.5 PASS
+annealing_s2                 placed      -29.38    -88.79   -59.41     -9245.3  0.8968   913.5 PASS
+annealing_s3                 placed      -29.38    -96.59   -67.21    -10751.9  0.9190  1093.4 PASS
+annealing_s4                 placed      -29.38   -113.73   -84.36    -10842.2  1.0812  1348.2 PASS
+annealing_s5                 placed      -29.38   -141.15  -111.77    -13460.9  0.9750  1531.4 PASS
+genetic_s1                   placed      -29.38   -117.12   -87.74    -13454.7  0.9881   360.2 PASS
+genetic_s2                   placed      -29.38   -123.52   -94.14    -11631.1  0.8941   366.8 PASS
+genetic_s3                   placed      -29.38   -123.54   -94.16    -11091.8  1.0915   311.8 PASS
+none_s1                      placed      -29.38    -29.38     0.00      -568.9     n/a     0.0 PASS
+repair_timing_s1             placed      -29.38     -5.53    23.85       -21.9  1.0025     4.7 PASS
+resynth_s1                   placed      -29.38   -193.49  -164.11    -24291.4  0.9343     0.9 PASS
+unplaced_annealing_s1        unplaced    -59.31    -62.95    -3.63     -6472.9  0.9039  1665.8 PASS
+unplaced_annealing_s2        unplaced    -59.31    -79.30   -19.98     -5641.7  1.0203  1148.9 PASS
+unplaced_annealing_s3        unplaced    -59.31    -80.45   -21.13     -6846.7  1.0418  1483.9 PASS
+unplaced_none_s1             unplaced    -59.31    -59.31     0.00     -3397.0  1.0000     0.0 PASS
+unplaced_repair_timing_s1    unplaced    -59.31    -43.30    16.02     -1356.9  1.0242    29.0 PASS
+{
+ "n_annealing": 5,
+ "n_annealing_repair": 3,
+ "median_annealing_wns": -113.7343,
+ "repair_timing_wns": -5.5253,
+ "annealing_minus_repair": -108.209,
+ "annealing_d_wns_signs": [
+  -1
+ ],
+ "max_area_ratio_annealing": 1.0811863273142701,
+ "F1_not_better_than_repair_by_5ps": true,
+ "F2_sign_change": false,
+ "F3_area_cost": false,
+ "F4_equivalence_failure_or_unproven": false,
+ "equiv_unchecked": [],
+ "additive_gain_vs_repair": -10.3274,
+ "G": false,
+ "verdict": "KILL",
+ "unplaced_annealing_d_wns": [
+  -3.63,
+  -19.98,
+  -21.13
+ ],
+ "unplaced_repair_d_wns": [
+  16.02
+ ]
+}

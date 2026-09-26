@@ -1,0 +1,64 @@
+### FILE netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig
+### ARGS -mul -s -idx -p -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T13:00:37-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig
+║           mode: mul
+║           sign: signed
+║           method: idx
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╚═ Result: Correct
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mul
+║ Traversal method: idx
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig
+║ Maximum polynomial : 169
+║ Number of iteration: 22
+║ Elapsed time: 0.508387 (in seconds)
+║ Number and-gates : 1194
+║ Substitution steps : 24
+║ Number of removed conflicts : 695
+║ Total calculated conflicts : 18934
+║ Conflict calculation time: 0.101703 (in seconds)
+║ Number of negated nodes : 202
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig -mul -s -idx -p -c -no-steps"
+	User time (seconds): 0.23
+	System time (seconds): 0.00
+	Percent of CPU this job got: 36%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 0.66s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 24000
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 940
+	Voluntary context switches: 15
+	Involuntary context switches: 73
+	Swaps: 0
+	File system inputs: 6
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 4886528
+### DOCKER_EXIT 0
+### WALL_SECONDS 2.16
+### END 2026-09-24T13:00:39-07:00

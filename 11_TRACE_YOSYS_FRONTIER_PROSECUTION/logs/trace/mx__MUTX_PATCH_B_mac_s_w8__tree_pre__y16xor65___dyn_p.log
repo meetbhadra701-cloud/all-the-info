@@ -1,0 +1,62 @@
+### FILE netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig
+### ARGS -mac -s -dyn -p -no-steps
+### TIMEOUT 60
+### START 2026-09-24T03:40:04-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig
+║           mode: mac
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: disabled
+║           progress steps: disabled
+║
+╠═ Result: Buggy
+║   [34mSP: {1} 65536[39m
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mac
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig
+║ Maximum polynomial : 340
+║ Number of iteration: 812
+║ Elapsed time: 0.512578 (in seconds)
+║ Number and-gates : 797
+║ Substitution steps : 814
+║ Number of negated nodes : 531
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig -mac -s -dyn -p -no-steps"
+	User time (seconds): 0.27
+	System time (seconds): 0.04
+	Percent of CPU this job got: 58%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 0.52s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 17856
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 518
+	Voluntary context switches: 16
+	Involuntary context switches: 800
+	Swaps: 0
+	File system inputs: 3
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 5402624
+### DOCKER_EXIT 0
+### WALL_SECONDS 1.95
+### END 2026-09-24T03:40:06-07:00

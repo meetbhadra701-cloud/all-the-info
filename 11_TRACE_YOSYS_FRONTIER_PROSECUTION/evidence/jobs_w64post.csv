@@ -1,0 +1,7 @@
+job_id,rel_path,args,timeout_s,expected,note
+w64__MAIN__A_mul_s_w64__norm___dyn_p_c,netlists/MAIN/A_mul_s_w64__norm.aig,-mul -s -dyn -p -c -no-steps,900,CORRECT,"W=64;post-ABC direct, paper best configuration only (see EXPERIMENTAL_MATRIX trim 5)"
+w64__MAIN__A_mul_s_w64__booth___dyn_p_c,netlists/MAIN/A_mul_s_w64__booth.aig,-mul -s -dyn -p -c -no-steps,900,CORRECT,"W=64;post-ABC direct, paper best configuration only (see EXPERIMENTAL_MATRIX trim 5)"
+w64__MAIN__A_mul_u_w64__booth___dyn_p_c,netlists/MAIN/A_mul_u_w64__booth.aig,-mul -dyn -p -c -no-steps,900,CORRECT,"W=64;post-ABC direct, paper best configuration only (see EXPERIMENTAL_MATRIX trim 5)"
+w64__PATCH__B_mac_s_w64__tree___dyn_p_c,netlists/PATCH/B_mac_s_w64__tree.aig,-mac -s -dyn -p -c -no-steps,900,CORRECT,"W=64;post-ABC direct, paper best configuration only (see EXPERIMENTAL_MATRIX trim 5)"
+w64__MAIN__B_mac_u_w64__tree___dyn_p_c,netlists/MAIN/B_mac_u_w64__tree.aig,-mac -dyn -p -c -no-steps,900,CORRECT,"W=64;post-ABC direct, paper best configuration only (see EXPERIMENTAL_MATRIX trim 5)"
+w64__MAIN__B_mac_s_w64__tree___dyn_p_c,netlists/MAIN/B_mac_s_w64__tree.aig,-mac -s -dyn -p -c -no-steps,900,INCORRECT,"W=64;post-ABC direct, paper best configuration only (see EXPERIMENTAL_MATRIX trim 5)"

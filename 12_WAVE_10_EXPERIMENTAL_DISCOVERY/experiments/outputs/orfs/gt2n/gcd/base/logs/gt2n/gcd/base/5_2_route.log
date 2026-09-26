@@ -1,0 +1,1658 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 8 thread(s).
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_hvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_hvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_ulvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_ulvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_elvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w31_elvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_lvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_lvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_hvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_hvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_svt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_svt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_ulvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_ulvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_liberty /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_elvt_tt_0p7v25c.lib
+[WARNING STA-1171] /OpenROAD-flow-scripts/flow/platforms/gt2n/lib/gt2_6t_w13_elvt_tt_0p7v25c.lib line 58, default_fanout_load is 0.0.
+read_db /w/experiments/outputs/orfs/gt2n/gcd/base/results/gt2n/gcd/base/5_1_grt.odb
+read_sdc /w/experiments/outputs/orfs/gt2n/gcd/base/results/gt2n/gcd/base/5_1_grt.sdc
+source /OpenROAD-flow-scripts/flow/platforms/gt2n/setRC.tcl
+detailed_route -output_drc /w/experiments/outputs/orfs/gt2n/gcd/base/reports/gt2n/gcd/base/5_route_drc.rpt -output_maze /w/experiments/outputs/orfs/gt2n/gcd/base/results/gt2n/gcd/base/maze.log -droute_end_iter 64 -verbose 1 -drc_report_iter_step 5
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V1
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V5
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V5
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V6
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V6
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V7
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V7
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V8
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer V8
+[WARNING DRT-0124] Via BV4 with unused layer BV4_0 will be ignored.
+[WARNING DRT-0124] Via BRDL with unused layer BV4_0 will be ignored.
+[WARNING DRT-0124] Via BM4 with unused layer BV4_0 will be ignored.
+[WARNING DRT-0124] Via BV3 with unused layer BV3_0 will be ignored.
+[WARNING DRT-0124] Via BM4 with unused layer BV3_0 will be ignored.
+[WARNING DRT-0124] Via BM3 with unused layer BV3_0 will be ignored.
+[WARNING DRT-0124] Via BV2 with unused layer BV2_0 will be ignored.
+[WARNING DRT-0124] Via BM3 with unused layer BV2_0 will be ignored.
+[WARNING DRT-0124] Via BM2 with unused layer BV2_0 will be ignored.
+[WARNING DRT-0124] Via BV1 with unused layer BV1_0 will be ignored.
+[WARNING DRT-0124] Via BM2 with unused layer BV1_0 will be ignored.
+[WARNING DRT-0124] Via BM1 with unused layer BV1_0 will be ignored.
+[WARNING DRT-0124] Via BV0 with unused layer BV0_0 will be ignored.
+[WARNING DRT-0124] Via BM1 with unused layer BV0_0 will be ignored.
+[WARNING DRT-0124] Via BPR with unused layer BV0_0 will be ignored.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_svt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_svt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_ulvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_ulvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_elvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w31_elvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa33_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai211_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai21_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai22_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai31_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai32_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oai33_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x2_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x3_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or2_x4_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_or3_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapfspdn_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tapbspdn_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tiehigh_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_tielow_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xnor2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w13_lvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_xor2_x1_w13_lvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x2_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x3_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and2_x4_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_and3_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao211_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao21_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao22_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao31_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao32_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_ao33_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi211_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi21_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi22_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi31_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi32_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_aoi33_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x10_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x12_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x2_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x3_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x4_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x6_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_buf_x8_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_decapcc_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x2_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_dffasync_x4_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_filler_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x10_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x12_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x2_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x3_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x4_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x6_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_inv_x8_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_mux2_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x2_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x3_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand2_x4_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nand3_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x2_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x3_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor2_x4_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_nor3_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa211_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa21_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa22_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa31_x1_w13_hvt/vss.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w13_hvt/vdd.
+[WARNING DRT-0122] Layer BPR is skipped for gt2_6t_oa32_x1_w13_hvt/vss.
+[WARNING DRT-0122] message limit (1000) reached. This message will no longer print.
+
+Units:                2000
+Number of layers:     31
+Number of macros:     720
+Number of vias:       14
+Number of viarulegen: 14
+
+[INFO DRT-0150] Reading design.
+
+Design:                   gcd
+Die area:                 ( 0 0 ) ( 17763 17763 )
+Number of track patterns: 30
+Number of DEF vias:       0
+Number of components:     713
+Number of terminals:      56
+Number of snets:          2
+Number of nets:           554
+
+[INFO DRT-0167] List of default vias:
+  Layer V2
+    default via: V2_0
+  Layer V3
+    default via: V3_0
+  Layer V4
+    default via: V4_0
+  Layer V5
+    default via: V5_0
+  Layer V6
+    default via: V6_0
+  Layer V7
+    default via: V7_0
+  Layer V8
+    default via: V8_0
+  Layer V9
+    default via: V9_0
+  Layer V10
+    default via: V10_0
+  Layer V11
+    default via: V11_0
+  Layer V12
+    default via: V12_0
+  Layer V13
+    default via: V13_0
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 213.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete SDCON.
+[INFO DRT-0024]   Complete VSD.
+[INFO DRT-0024]   Complete M0.
+[INFO DRT-0024]   Complete V0.
+[INFO DRT-0024]   Complete M1.
+[INFO DRT-0024]   Complete V1.
+[INFO DRT-0024]   Complete M2.
+[INFO DRT-0024]   Complete V2.
+[INFO DRT-0024]   Complete M3.
+[INFO DRT-0024]   Complete V3.
+[INFO DRT-0024]   Complete M4.
+[INFO DRT-0024]   Complete V4.
+[INFO DRT-0024]   Complete M5.
+[INFO DRT-0024]   Complete V5.
+[INFO DRT-0024]   Complete M6.
+[INFO DRT-0024]   Complete V6.
+[INFO DRT-0024]   Complete M7.
+[INFO DRT-0024]   Complete V7.
+[INFO DRT-0024]   Complete M8.
+[INFO DRT-0024]   Complete V8.
+[INFO DRT-0024]   Complete M9.
+[INFO DRT-0024]   Complete V9.
+[INFO DRT-0024]   Complete M10.
+[INFO DRT-0024]   Complete V10.
+[INFO DRT-0024]   Complete M11.
+[INFO DRT-0024]   Complete V11.
+[INFO DRT-0024]   Complete M12.
+[INFO DRT-0024]   Complete V12.
+[INFO DRT-0024]   Complete M13.
+[INFO DRT-0024]   Complete V13.
+[INFO DRT-0024]   Complete RDL.
+[INFO DRT-0033] SDCON shape region query size = 0.
+[INFO DRT-0033] VSD shape region query size = 0.
+[INFO DRT-0033] M0 shape region query size = 3871.
+[INFO DRT-0033] V0 shape region query size = 0.
+[INFO DRT-0033] M1 shape region query size = 2519.
+[INFO DRT-0033] V1 shape region query size = 0.
+[INFO DRT-0033] M2 shape region query size = 32.
+[INFO DRT-0033] V2 shape region query size = 0.
+[INFO DRT-0033] M3 shape region query size = 22.
+[INFO DRT-0033] V3 shape region query size = 0.
+[INFO DRT-0033] M4 shape region query size = 0.
+[INFO DRT-0033] V4 shape region query size = 0.
+[INFO DRT-0033] M5 shape region query size = 0.
+[INFO DRT-0033] V5 shape region query size = 0.
+[INFO DRT-0033] M6 shape region query size = 0.
+[INFO DRT-0033] V6 shape region query size = 0.
+[INFO DRT-0033] M7 shape region query size = 0.
+[INFO DRT-0033] V7 shape region query size = 0.
+[INFO DRT-0033] M8 shape region query size = 0.
+[INFO DRT-0033] V8 shape region query size = 0.
+[INFO DRT-0033] M9 shape region query size = 0.
+[INFO DRT-0033] V9 shape region query size = 0.
+[INFO DRT-0033] M10 shape region query size = 0.
+[INFO DRT-0033] V10 shape region query size = 0.
+[INFO DRT-0033] M11 shape region query size = 0.
+[INFO DRT-0033] V11 shape region query size = 0.
+[INFO DRT-0033] M12 shape region query size = 0.
+[INFO DRT-0033] V12 shape region query size = 0.
+[INFO DRT-0033] M13 shape region query size = 0.
+[INFO DRT-0033] V13 shape region query size = 0.
+[INFO DRT-0033] RDL shape region query size = 0.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0076]   Complete 1000 pins.
+[INFO DRT-0078]   Complete 1169 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0079]   Complete 200 unique inst patterns.
+[INFO DRT-0081]   Complete 213 unique inst patterns.
+[INFO DRT-0084]   Complete 368 groups.
+#scanned instances     = 713
+#unique  instances     = 213
+#stdCellGenAp          = 6408
+#stdCellValidPlanarAp  = 2948
+#stdCellValidViaAp     = 3706
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 1621
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:00:12, elapsed time = 00:00:06, memory = 277.50 (MB), peak = 276.78 (MB)
+
+[INFO DRT-0157] Number of guides:     3382
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 21 STEP 840 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 21 STEP 840 ;
+[INFO DRT-0028]   Complete SDCON.
+[INFO DRT-0028]   Complete VSD.
+[INFO DRT-0028]   Complete M0.
+[INFO DRT-0028]   Complete V0.
+[INFO DRT-0028]   Complete M1.
+[INFO DRT-0028]   Complete V1.
+[INFO DRT-0028]   Complete M2.
+[INFO DRT-0028]   Complete V2.
+[INFO DRT-0028]   Complete M3.
+[INFO DRT-0028]   Complete V3.
+[INFO DRT-0028]   Complete M4.
+[INFO DRT-0028]   Complete V4.
+[INFO DRT-0028]   Complete M5.
+[INFO DRT-0028]   Complete V5.
+[INFO DRT-0028]   Complete M6.
+[INFO DRT-0028]   Complete V6.
+[INFO DRT-0028]   Complete M7.
+[INFO DRT-0028]   Complete V7.
+[INFO DRT-0028]   Complete M8.
+[INFO DRT-0028]   Complete V8.
+[INFO DRT-0028]   Complete M9.
+[INFO DRT-0028]   Complete V9.
+[INFO DRT-0028]   Complete M10.
+[INFO DRT-0028]   Complete V10.
+[INFO DRT-0028]   Complete M11.
+[INFO DRT-0028]   Complete V11.
+[INFO DRT-0028]   Complete M12.
+[INFO DRT-0028]   Complete V12.
+[INFO DRT-0028]   Complete M13.
+[INFO DRT-0028]   Complete V13.
+[INFO DRT-0028]   Complete RDL.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete SDCON (guide).
+[INFO DRT-0035]   Complete VSD (guide).
+[INFO DRT-0035]   Complete M0 (guide).
+[INFO DRT-0035]   Complete V0 (guide).
+[INFO DRT-0035]   Complete M1 (guide).
+[INFO DRT-0035]   Complete V1 (guide).
+[INFO DRT-0035]   Complete M2 (guide).
+[INFO DRT-0035]   Complete V2 (guide).
+[INFO DRT-0035]   Complete M3 (guide).
+[INFO DRT-0035]   Complete V3 (guide).
+[INFO DRT-0035]   Complete M4 (guide).
+[INFO DRT-0035]   Complete V4 (guide).
+[INFO DRT-0035]   Complete M5 (guide).
+[INFO DRT-0035]   Complete V5 (guide).
+[INFO DRT-0035]   Complete M6 (guide).
+[INFO DRT-0035]   Complete V6 (guide).
+[INFO DRT-0035]   Complete M7 (guide).
+[INFO DRT-0035]   Complete V7 (guide).
+[INFO DRT-0035]   Complete M8 (guide).
+[INFO DRT-0035]   Complete V8 (guide).
+[INFO DRT-0035]   Complete M9 (guide).
+[INFO DRT-0035]   Complete V9 (guide).
+[INFO DRT-0035]   Complete M10 (guide).
+[INFO DRT-0035]   Complete V10 (guide).
+[INFO DRT-0035]   Complete M11 (guide).
+[INFO DRT-0035]   Complete V11 (guide).
+[INFO DRT-0035]   Complete M12 (guide).
+[INFO DRT-0035]   Complete V12 (guide).
+[INFO DRT-0035]   Complete M13 (guide).
+[INFO DRT-0035]   Complete V13 (guide).
+[INFO DRT-0035]   Complete RDL (guide).
+[INFO DRT-0036] SDCON guide region query size = 0.
+[INFO DRT-0036] VSD guide region query size = 0.
+[INFO DRT-0036] M0 guide region query size = 0.
+[INFO DRT-0036] V0 guide region query size = 0.
+[INFO DRT-0036] M1 guide region query size = 1266.
+[INFO DRT-0036] V1 guide region query size = 0.
+[INFO DRT-0036] M2 guide region query size = 960.
+[INFO DRT-0036] V2 guide region query size = 0.
+[INFO DRT-0036] M3 guide region query size = 427.
+[INFO DRT-0036] V3 guide region query size = 0.
+[INFO DRT-0036] M4 guide region query size = 11.
+[INFO DRT-0036] V4 guide region query size = 0.
+[INFO DRT-0036] M5 guide region query size = 3.
+[INFO DRT-0036] V5 guide region query size = 0.
+[INFO DRT-0036] M6 guide region query size = 0.
+[INFO DRT-0036] V6 guide region query size = 0.
+[INFO DRT-0036] M7 guide region query size = 0.
+[INFO DRT-0036] V7 guide region query size = 0.
+[INFO DRT-0036] M8 guide region query size = 0.
+[INFO DRT-0036] V8 guide region query size = 0.
+[INFO DRT-0036] M9 guide region query size = 0.
+[INFO DRT-0036] V9 guide region query size = 0.
+[INFO DRT-0036] M10 guide region query size = 0.
+[INFO DRT-0036] V10 guide region query size = 0.
+[INFO DRT-0036] M11 guide region query size = 0.
+[INFO DRT-0036] V11 guide region query size = 0.
+[INFO DRT-0036] M12 guide region query size = 0.
+[INFO DRT-0036] V12 guide region query size = 0.
+[INFO DRT-0036] M13 guide region query size = 0.
+[INFO DRT-0036] V13 guide region query size = 0.
+[INFO DRT-0036] RDL guide region query size = 0.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 278.98 (MB), peak = 278.28 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 1696 vertical wires in 1 frboxes and 971 horizontal wires in 1 frboxes.
+[INFO DRT-0186] Done with 306 vertical wires in 1 frboxes and 331 horizontal wires in 1 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 282.53 (MB), peak = 281.96 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 282.60 (MB), peak = 281.96 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:00, memory = 511.60 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:00:00, memory = 462.68 (MB).
+    Completing 30% with 0 violations.
+    elapsed time = 00:00:00, memory = 412.82 (MB).
+    Completing 40% with 0 violations.
+    elapsed time = 00:00:00, memory = 364.86 (MB).
+    Completing 50% with 29 violations.
+    elapsed time = 00:00:01, memory = 513.93 (MB).
+    Completing 60% with 29 violations.
+    elapsed time = 00:00:01, memory = 511.94 (MB).
+    Completing 70% with 49 violations.
+    elapsed time = 00:00:02, memory = 604.17 (MB).
+    Completing 80% with 49 violations.
+    elapsed time = 00:00:02, memory = 521.63 (MB).
+    Completing 100% with 101 violations.
+    elapsed time = 00:00:03, memory = 519.47 (MB).
+[INFO DRT-0199]   Number of violations = 179.
+Viol/Layer          M1     M2     M3     M4
+Corner Spacing       0     70      0      0
+Metal Spacing        0      8      0      0
+Recheck              1     50     26      1
+Short                0      5      0      0
+eolKeepOut           0     18      0      0
+[INFO DRT-0267] cpu time = 00:00:05, elapsed time = 00:00:03, memory = 529.73 (MB), peak = 1040.18 (MB)
+Total wire length = 711 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 0 um.
+Total wire length on LAYER M2 = 379 um.
+Total wire length on LAYER M3 = 320 um.
+Total wire length on LAYER M4 = 8 um.
+Total wire length on LAYER M5 = 2 um.
+Total wire length on LAYER M6 = 0 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 3429.
+Up-via summary (total 3429):
+
+--------------
+ SDCON       0
+    M0       0
+    M1    1657
+    M2    1748
+    M3      20
+    M4       4
+    M5       0
+    M6       0
+    M7       0
+    M8       0
+    M9       0
+   M10       0
+   M11       0
+   M12       0
+   M13       0
+--------------
+      3429
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 179 violations.
+    elapsed time = 00:00:01, memory = 612.11 (MB).
+    Completing 20% with 179 violations.
+    elapsed time = 00:00:01, memory = 612.57 (MB).
+    Completing 30% with 161 violations.
+    elapsed time = 00:00:01, memory = 704.59 (MB).
+    Completing 40% with 161 violations.
+    elapsed time = 00:00:02, memory = 704.64 (MB).
+    Completing 50% with 161 violations.
+    elapsed time = 00:00:02, memory = 666.65 (MB).
+    Completing 60% with 118 violations.
+    elapsed time = 00:00:03, memory = 729.29 (MB).
+    Completing 70% with 118 violations.
+    elapsed time = 00:00:04, memory = 663.29 (MB).
+    Completing 80% with 61 violations.
+    elapsed time = 00:00:04, memory = 659.40 (MB).
+    Completing 90% with 61 violations.
+    elapsed time = 00:00:04, memory = 659.40 (MB).
+    Completing 100% with 18 violations.
+    elapsed time = 00:00:06, memory = 660.60 (MB).
+[INFO DRT-0199]   Number of violations = 18.
+Viol/Layer          M2
+Corner Spacing      14
+Metal Spacing        2
+eolKeepOut           2
+[INFO DRT-0267] cpu time = 00:00:09, elapsed time = 00:00:06, memory = 663.99 (MB), peak = 1060.25 (MB)
+Total wire length = 702 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 0 um.
+Total wire length on LAYER M2 = 376 um.
+Total wire length on LAYER M3 = 315 um.
+Total wire length on LAYER M4 = 7 um.
+Total wire length on LAYER M5 = 2 um.
+Total wire length on LAYER M6 = 0 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 3259.
+Up-via summary (total 3259):
+
+--------------
+ SDCON       0
+    M0       0
+    M1    1653
+    M2    1586
+    M3      16
+    M4       4
+    M5       0
+    M6       0
+    M7       0
+    M8       0
+    M9       0
+   M10       0
+   M11       0
+   M12       0
+   M13       0
+--------------
+      3259
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 18 violations.
+    elapsed time = 00:00:00, memory = 663.99 (MB).
+    Completing 20% with 18 violations.
+    elapsed time = 00:00:01, memory = 663.99 (MB).
+    Completing 30% with 12 violations.
+    elapsed time = 00:00:01, memory = 663.99 (MB).
+    Completing 40% with 12 violations.
+    elapsed time = 00:00:01, memory = 664.00 (MB).
+    Completing 50% with 12 violations.
+    elapsed time = 00:00:02, memory = 664.00 (MB).
+    Completing 60% with 12 violations.
+    elapsed time = 00:00:02, memory = 664.00 (MB).
+    Completing 70% with 12 violations.
+    elapsed time = 00:00:03, memory = 664.00 (MB).
+    Completing 80% with 8 violations.
+    elapsed time = 00:00:03, memory = 664.00 (MB).
+    Completing 90% with 8 violations.
+    elapsed time = 00:00:03, memory = 664.01 (MB).
+    Completing 100% with 5 violations.
+    elapsed time = 00:00:04, memory = 622.01 (MB).
+[INFO DRT-0199]   Number of violations = 5.
+Viol/Layer          M2
+Corner Spacing       5
+[INFO DRT-0267] cpu time = 00:00:06, elapsed time = 00:00:04, memory = 627.44 (MB), peak = 1061.79 (MB)
+Total wire length = 700 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 0 um.
+Total wire length on LAYER M2 = 377 um.
+Total wire length on LAYER M3 = 313 um.
+Total wire length on LAYER M4 = 7 um.
+Total wire length on LAYER M5 = 2 um.
+Total wire length on LAYER M6 = 0 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 3227.
+Up-via summary (total 3227):
+
+--------------
+ SDCON       0
+    M0       0
+    M1    1652
+    M2    1557
+    M3      14
+    M4       4
+    M5       0
+    M6       0
+    M7       0
+    M8       0
+    M9       0
+   M10       0
+   M11       0
+   M12       0
+   M13       0
+--------------
+      3227
+
+
+[INFO DRT-0195] Start 3rd guides tiles iteration.
+    Completing 10% with 5 violations.
+    elapsed time = 00:00:00, memory = 627.44 (MB).
+    Completing 20% with 4 violations.
+    elapsed time = 00:00:00, memory = 623.44 (MB).
+    Completing 40% with 4 violations.
+    elapsed time = 00:00:00, memory = 623.44 (MB).
+    Completing 50% with 1 violations.
+    elapsed time = 00:00:00, memory = 623.44 (MB).
+    Completing 70% with 1 violations.
+    elapsed time = 00:00:01, memory = 623.44 (MB).
+    Completing 80% with 1 violations.
+    elapsed time = 00:00:01, memory = 623.44 (MB).
+    Completing 100% with 1 violations.
+    elapsed time = 00:00:01, memory = 623.44 (MB).
+[INFO DRT-0199]   Number of violations = 1.
+Viol/Layer          M2
+Corner Spacing       1
+[INFO DRT-0267] cpu time = 00:00:01, elapsed time = 00:00:01, memory = 849.23 (MB), peak = 1061.79 (MB)
+Total wire length = 701 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 0 um.
+Total wire length on LAYER M2 = 377 um.
+Total wire length on LAYER M3 = 314 um.
+Total wire length on LAYER M4 = 7 um.
+Total wire length on LAYER M5 = 2 um.
+Total wire length on LAYER M6 = 0 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 3232.
+Up-via summary (total 3232):
+
+--------------
+ SDCON       0
+    M0       0
+    M1    1651
+    M2    1559
+    M3      18
+    M4       4
+    M5       0
+    M6       0
+    M7       0
+    M8       0
+    M9       0
+   M10       0
+   M11       0
+   M12       0
+   M13       0
+--------------
+      3232
+
+
+[INFO DRT-0195] Start 4th guides tiles iteration.
+    Completing 50% with 1 violations.
+    elapsed time = 00:00:00, memory = 849.24 (MB).
+    Completing 100% with 0 violations.
+    elapsed time = 00:00:00, memory = 849.24 (MB).
+[INFO DRT-0199]   Number of violations = 0.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 1061.29 (MB), peak = 1061.79 (MB)
+Total wire length = 701 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 0 um.
+Total wire length on LAYER M2 = 376 um.
+Total wire length on LAYER M3 = 314 um.
+Total wire length on LAYER M4 = 7 um.
+Total wire length on LAYER M5 = 2 um.
+Total wire length on LAYER M6 = 0 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 3230.
+Up-via summary (total 3230):
+
+--------------
+ SDCON       0
+    M0       0
+    M1    1651
+    M2    1557
+    M3      18
+    M4       4
+    M5       0
+    M6       0
+    M7       0
+    M8       0
+    M9       0
+   M10       0
+   M11       0
+   M12       0
+   M13       0
+--------------
+      3230
+
+
+[INFO DRT-0198] Complete detail routing.
+Total wire length = 701 um.
+Total wire length on LAYER M0 = 0 um.
+Total wire length on LAYER M1 = 0 um.
+Total wire length on LAYER M2 = 376 um.
+Total wire length on LAYER M3 = 314 um.
+Total wire length on LAYER M4 = 7 um.
+Total wire length on LAYER M5 = 2 um.
+Total wire length on LAYER M6 = 0 um.
+Total wire length on LAYER M7 = 0 um.
+Total wire length on LAYER M8 = 0 um.
+Total wire length on LAYER M9 = 0 um.
+Total wire length on LAYER M10 = 0 um.
+Total wire length on LAYER M11 = 0 um.
+Total wire length on LAYER M12 = 0 um.
+Total wire length on LAYER M13 = 0 um.
+Total wire length on LAYER RDL = 0 um.
+Total number of vias = 3230.
+Up-via summary (total 3230):
+
+--------------
+ SDCON       0
+    M0       0
+    M1    1651
+    M2    1557
+    M3      18
+    M4       4
+    M5       0
+    M6       0
+    M7       0
+    M8       0
+    M9       0
+   M10       0
+   M11       0
+   M12       0
+   M13       0
+--------------
+      3230
+
+
+[INFO DRT-0267] cpu time = 00:00:24, elapsed time = 00:00:17, memory = 1061.41 (MB), peak = 1061.79 (MB)
+
+[INFO DRT-0180] Post processing.
+[INFO DRT-0501] Runtime: 24.35s
+Took 25 seconds: detailed_route -output_drc /w/experiments/outputs/orfs/gt2n/gcd/base/reports/gt2n/gcd/base/5_route_drc.rpt -output_maze /w/experiments/outputs/orfs/gt2n/gcd/base/results/gt2n/gcd/base/maze.log -droute_end_iter 64 -verbose 1 -drc_report_iter_step 5
+[WARNING GRT-0246] No diode with LEF class CORE ANTENNACELL found.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Design area 19 um^2 31% utilization.
+write_db /w/experiments/outputs/orfs/gt2n/gcd/base/results/gt2n/gcd/base/5_2_route.odb
+Elapsed time: 0:25.23[h:]min:sec. CPU time: user 35.73 sys 2.68 (152%). Peak memory: 1092012KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+5_2_route                 .odb           25           1066 2535dca466a1a660e9a5

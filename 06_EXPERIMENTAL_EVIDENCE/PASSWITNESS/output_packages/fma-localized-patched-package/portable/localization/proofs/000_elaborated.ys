@@ -1,0 +1,10 @@
+read_rtlil "./localization/checkpoints/000_elaborated.rtlil"
+rename fma_impl passwitness_candidate
+hierarchy -top passwitness_candidate
+read_verilog -sv "source/source.v"
+read_verilog "./localization/checkpoint-miter.v"
+hierarchy -top passwitness_miter
+prep -top passwitness_miter
+flatten
+opt
+sat -prove mismatch 0 -verify -set-def-inputs -show-ports -dump_json "./localization/witnesses/000_elaborated.json" -dump_vcd "./localization/witnesses/000_elaborated.vcd"

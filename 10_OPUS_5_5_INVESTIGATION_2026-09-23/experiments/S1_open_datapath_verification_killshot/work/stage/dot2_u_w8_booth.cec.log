@@ -1,0 +1,2 @@
+======== ABC command line "&r dot2_u_w8_booth.pre.aig; &cec -T 60 dot2_u_w8_booth.post.aig"
+Networks are equivalent.  Time =     0.05 sec

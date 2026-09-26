@@ -1,0 +1,64 @@
+### FILE netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__resyn2.aig
+### ARGS -mul -s -idx -p -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T17:07:40-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__resyn2.aig
+║           mode: mul
+║           sign: signed
+║           method: idx
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╚═ Result: Correct
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mul
+║ Traversal method: idx
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__resyn2.aig
+║ Maximum polynomial : 81
+║ Number of iteration: 14
+║ Elapsed time: 0.055316 (in seconds)
+║ Number and-gates : 446
+║ Substitution steps : 16
+║ Number of removed conflicts : 304
+║ Total calculated conflicts : 5772
+║ Conflict calculation time: 0.00337341 (in seconds)
+║ Number of negated nodes : 131
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__resyn2.aig -mul -s -idx -p -c -no-steps"
+	User time (seconds): 0.03
+	System time (seconds): 0.01
+	Percent of CPU this job got: 56%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 0.09s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 15296
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 358
+	Voluntary context switches: 15
+	Involuntary context switches: 24
+	Swaps: 0
+	File system inputs: 3
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 4874240
+### DOCKER_EXIT 0
+### WALL_SECONDS 1.13
+### END 2026-09-24T17:07:41-07:00

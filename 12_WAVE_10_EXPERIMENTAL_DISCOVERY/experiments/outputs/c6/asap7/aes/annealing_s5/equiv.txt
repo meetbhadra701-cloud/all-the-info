@@ -1,0 +1,1 @@
+annealing_s5 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     2.61 sec  :: 10s

@@ -1,0 +1,24 @@
+{
+ "job_id": "mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___dyn_p_c",
+ "results_csv": "trace_phaseopt_probe_results.csv",
+ "netlist": "netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig",
+ "args": "-mac -s -dyn -p -c -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mac:sss:8,8,16:17",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 1,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": 65536,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x10000",
+  "reference": "0x0"
+ },
+ "overall": "WITNESS_CONFIRMED"
+}

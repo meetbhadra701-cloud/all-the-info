@@ -1,0 +1,247 @@
+======== ABC command line "&acec -b -T 300 /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/mul_s_w24_norm.aig /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/mul_s_w24_booth.aig"
+Xor node 3638 belongs to Tree 47 and Tree 46.
+Xor node 5420 belongs to Tree 47 and Tree 46.
+Xor node 5323 belongs to Tree 46 and Tree 45.
+Xor node 5246 belongs to Tree 46 and Tree 45.
+Xor node 5161 belongs to Tree 46 and Tree 45.
+Xor node 4504 belongs to Tree 47 and Tree 45.
+Xor node 4383 belongs to Tree 47 and Tree 45.
+Xor node 3638 belongs to Tree 47 and Tree 45.
+Xor node 5246 belongs to Tree 46 and Tree 44.
+Xor node 5161 belongs to Tree 46 and Tree 44.
+Xor node 5250 belongs to Tree 45 and Tree 44.
+Xor node 4786 belongs to Tree 46 and Tree 44.
+Xor node 4683 belongs to Tree 46 and Tree 44.
+Xor node 4504 belongs to Tree 47 and Tree 44.
+Xor node 4383 belongs to Tree 47 and Tree 44.
+Xor node 3638 belongs to Tree 47 and Tree 44.
+Xor node 5161 belongs to Tree 46 and Tree 43.
+Xor node 4962 belongs to Tree 46 and Tree 43.
+Xor node 4868 belongs to Tree 46 and Tree 43.
+Xor node 4786 belongs to Tree 46 and Tree 43.
+Xor node 4683 belongs to Tree 46 and Tree 43.
+Xor node 4504 belongs to Tree 47 and Tree 43.
+Xor node 4383 belongs to Tree 47 and Tree 43.
+Xor node 3638 belongs to Tree 47 and Tree 43.
+Xor node 4971 belongs to Tree 46 and Tree 42.
+Xor node 4962 belongs to Tree 46 and Tree 42.
+Xor node 4868 belongs to Tree 46 and Tree 42.
+Xor node 4786 belongs to Tree 46 and Tree 42.
+Xor node 4683 belongs to Tree 46 and Tree 42.
+Xor node 4504 belongs to Tree 47 and Tree 42.
+Xor node 4383 belongs to Tree 47 and Tree 42.
+Xor node 3638 belongs to Tree 47 and Tree 42.
+Xor node 4971 belongs to Tree 46 and Tree 41.
+Xor node 4962 belongs to Tree 46 and Tree 41.
+Xor node 4868 belongs to Tree 46 and Tree 41.
+Xor node 4786 belongs to Tree 46 and Tree 41.
+Xor node 4683 belongs to Tree 46 and Tree 41.
+Xor node 4504 belongs to Tree 47 and Tree 41.
+Xor node 4383 belongs to Tree 47 and Tree 41.
+Xor node 3638 belongs to Tree 47 and Tree 41.
+Xor node 4868 belongs to Tree 46 and Tree 40.
+Xor node 4786 belongs to Tree 46 and Tree 40.
+Xor node 4683 belongs to Tree 46 and Tree 40.
+Xor node 4504 belongs to Tree 47 and Tree 40.
+Xor node 4383 belongs to Tree 47 and Tree 40.
+Xor node 3638 belongs to Tree 47 and Tree 40.
+Xor node 3638 belongs to Tree 47 and Tree 39.
+Xor node 4504 belongs to Tree 47 and Tree 39.
+Xor node 4383 belongs to Tree 47 and Tree 39.
+Xor node 4786 belongs to Tree 46 and Tree 39.
+Xor node 4683 belongs to Tree 46 and Tree 39.
+Xor node 4655 belongs to Tree 46 and Tree 39.
+Xor node 3638 belongs to Tree 47 and Tree 38.
+Xor node 4504 belongs to Tree 47 and Tree 38.
+Xor node 4383 belongs to Tree 47 and Tree 38.
+Xor node 4683 belongs to Tree 46 and Tree 38.
+Xor node 4655 belongs to Tree 46 and Tree 38.
+Xor node 4126 belongs to Tree 46 and Tree 37.
+Xor node 4504 belongs to Tree 47 and Tree 37.
+Xor node 4383 belongs to Tree 47 and Tree 37.
+Xor node 3638 belongs to Tree 47 and Tree 37.
+Xor node 4126 belongs to Tree 46 and Tree 36.
+Xor node 4267 belongs to Tree 46 and Tree 36.
+Xor node 4383 belongs to Tree 47 and Tree 36.
+Xor node 3638 belongs to Tree 47 and Tree 36.
+Xor node 4126 belongs to Tree 46 and Tree 35.
+Xor node 4267 belongs to Tree 46 and Tree 35.
+Xor node 3315 belongs to Tree 47 and Tree 35.
+Xor node 3638 belongs to Tree 47 and Tree 35.
+Xor node 4126 belongs to Tree 46 and Tree 33.
+Xor node 3315 belongs to Tree 47 and Tree 33.
+Xor node 3803 belongs to Tree 34 and Tree 33.
+Xor node 3657 belongs to Tree 34 and Tree 33.
+Xor node 3638 belongs to Tree 47 and Tree 33.
+Xor node 3826 belongs to Tree 46 and Tree 32.
+Xor node 3315 belongs to Tree 47 and Tree 32.
+Xor node 3803 belongs to Tree 34 and Tree 32.
+Xor node 3657 belongs to Tree 34 and Tree 32.
+Xor node 3638 belongs to Tree 47 and Tree 32.
+Xor node 3826 belongs to Tree 46 and Tree 31.
+Xor node 3315 belongs to Tree 47 and Tree 31.
+Xor node 3803 belongs to Tree 34 and Tree 31.
+Xor node 3657 belongs to Tree 34 and Tree 31.
+Xor node 3638 belongs to Tree 47 and Tree 31.
+Xor node 3315 belongs to Tree 47 and Tree 30.
+Xor node 3657 belongs to Tree 34 and Tree 30.
+Xor node 3638 belongs to Tree 47 and Tree 30.
+Xor node 3315 belongs to Tree 47 and Tree 29.
+Xor node 3321 belongs to Tree 34 and Tree 29.
+Xor node 3315 belongs to Tree 47 and Tree 28.
+Xor node 3321 belongs to Tree 34 and Tree 28.
+Xor node 2758 belongs to Tree 29 and Tree 28.
+Xor node 2609 belongs to Tree 47 and Tree 27.
+Xor node 2758 belongs to Tree 29 and Tree 27.
+Xor node 2758 belongs to Tree 29 and Tree 26.
+Xor node 2609 belongs to Tree 47 and Tree 26.
+Xor node 2609 belongs to Tree 47 and Tree 25.
+Xor node 2794 belongs to Tree 26 and Tree 25.
+Xor node 2758 belongs to Tree 29 and Tree 25.
+Xor node 2609 belongs to Tree 47 and Tree 24.
+Xor node 2239 belongs to Tree 47 and Tree 23.
+Xor node 2239 belongs to Tree 47 and Tree 22.
+Xor node 3638 belongs to Tree 45 and Tree 44.
+Xor node 5420 belongs to Tree 45 and Tree 44.
+Xor node 5323 belongs to Tree 44 and Tree 43.
+Xor node 5246 belongs to Tree 44 and Tree 43.
+Xor node 5161 belongs to Tree 44 and Tree 43.
+Xor node 4504 belongs to Tree 45 and Tree 43.
+Xor node 4383 belongs to Tree 45 and Tree 43.
+Xor node 3638 belongs to Tree 45 and Tree 43.
+Xor node 5246 belongs to Tree 44 and Tree 42.
+Xor node 5161 belongs to Tree 44 and Tree 42.
+Xor node 5250 belongs to Tree 43 and Tree 42.
+Xor node 4786 belongs to Tree 44 and Tree 42.
+Xor node 4683 belongs to Tree 44 and Tree 42.
+Xor node 4504 belongs to Tree 45 and Tree 42.
+Xor node 4383 belongs to Tree 45 and Tree 42.
+Xor node 3638 belongs to Tree 45 and Tree 42.
+Xor node 5161 belongs to Tree 44 and Tree 41.
+Xor node 4962 belongs to Tree 44 and Tree 41.
+Xor node 4868 belongs to Tree 44 and Tree 41.
+Xor node 4786 belongs to Tree 44 and Tree 41.
+Xor node 4683 belongs to Tree 44 and Tree 41.
+Xor node 4504 belongs to Tree 45 and Tree 41.
+Xor node 4383 belongs to Tree 45 and Tree 41.
+Xor node 3638 belongs to Tree 45 and Tree 41.
+Xor node 4971 belongs to Tree 44 and Tree 40.
+Xor node 4962 belongs to Tree 44 and Tree 40.
+Xor node 4868 belongs to Tree 44 and Tree 40.
+Xor node 4786 belongs to Tree 44 and Tree 40.
+Xor node 4683 belongs to Tree 44 and Tree 40.
+Xor node 4504 belongs to Tree 45 and Tree 40.
+Xor node 4383 belongs to Tree 45 and Tree 40.
+Xor node 3638 belongs to Tree 45 and Tree 40.
+Xor node 4971 belongs to Tree 44 and Tree 39.
+Xor node 4962 belongs to Tree 44 and Tree 39.
+Xor node 4868 belongs to Tree 44 and Tree 39.
+Xor node 4786 belongs to Tree 44 and Tree 39.
+Xor node 4683 belongs to Tree 44 and Tree 39.
+Xor node 4504 belongs to Tree 45 and Tree 39.
+Xor node 4383 belongs to Tree 45 and Tree 39.
+Xor node 3638 belongs to Tree 45 and Tree 39.
+Xor node 4868 belongs to Tree 44 and Tree 38.
+Xor node 4786 belongs to Tree 44 and Tree 38.
+Xor node 4683 belongs to Tree 44 and Tree 38.
+Xor node 4504 belongs to Tree 45 and Tree 38.
+Xor node 4383 belongs to Tree 45 and Tree 38.
+Xor node 3638 belongs to Tree 45 and Tree 38.
+Xor node 3638 belongs to Tree 45 and Tree 37.
+Xor node 4504 belongs to Tree 45 and Tree 37.
+Xor node 4383 belongs to Tree 45 and Tree 37.
+Xor node 4786 belongs to Tree 44 and Tree 37.
+Xor node 4683 belongs to Tree 44 and Tree 37.
+Xor node 4655 belongs to Tree 44 and Tree 37.
+Xor node 3638 belongs to Tree 45 and Tree 36.
+Xor node 4504 belongs to Tree 45 and Tree 36.
+Xor node 4383 belongs to Tree 45 and Tree 36.
+Xor node 4683 belongs to Tree 44 and Tree 36.
+Xor node 4655 belongs to Tree 44 and Tree 36.
+Xor node 4126 belongs to Tree 44 and Tree 35.
+Xor node 4504 belongs to Tree 45 and Tree 35.
+Xor node 4383 belongs to Tree 45 and Tree 35.
+Xor node 3638 belongs to Tree 45 and Tree 35.
+Xor node 4126 belongs to Tree 44 and Tree 34.
+Xor node 4267 belongs to Tree 44 and Tree 34.
+Xor node 4383 belongs to Tree 45 and Tree 34.
+Xor node 3638 belongs to Tree 45 and Tree 34.
+Xor node 4126 belongs to Tree 44 and Tree 33.
+Xor node 4267 belongs to Tree 44 and Tree 33.
+Xor node 3315 belongs to Tree 45 and Tree 33.
+Xor node 3638 belongs to Tree 45 and Tree 33.
+Xor node 4126 belongs to Tree 44 and Tree 32.
+Xor node 3315 belongs to Tree 45 and Tree 32.
+Xor node 3638 belongs to Tree 45 and Tree 32.
+Xor node 3826 belongs to Tree 44 and Tree 31.
+Xor node 3315 belongs to Tree 45 and Tree 31.
+Xor node 3803 belongs to Tree 32 and Tree 31.
+Xor node 3657 belongs to Tree 32 and Tree 31.
+Xor node 3638 belongs to Tree 45 and Tree 31.
+Xor node 3826 belongs to Tree 44 and Tree 30.
+Xor node 3315 belongs to Tree 45 and Tree 30.
+Xor node 3803 belongs to Tree 32 and Tree 30.
+Xor node 3657 belongs to Tree 32 and Tree 30.
+Xor node 3638 belongs to Tree 45 and Tree 30.
+Xor node 3315 belongs to Tree 45 and Tree 29.
+Xor node 3657 belongs to Tree 32 and Tree 29.
+Xor node 3638 belongs to Tree 45 and Tree 29.
+Xor node 3315 belongs to Tree 45 and Tree 28.
+Xor node 3321 belongs to Tree 32 and Tree 28.
+Xor node 3315 belongs to Tree 45 and Tree 27.
+Xor node 3321 belongs to Tree 32 and Tree 27.
+Xor node 2758 belongs to Tree 28 and Tree 27.
+Xor node 2609 belongs to Tree 45 and Tree 26.
+Xor node 2758 belongs to Tree 28 and Tree 26.
+Xor node 2758 belongs to Tree 28 and Tree 25.
+Xor node 2609 belongs to Tree 45 and Tree 25.
+Xor node 2609 belongs to Tree 45 and Tree 24.
+Xor node 2794 belongs to Tree 25 and Tree 24.
+Xor node 2758 belongs to Tree 28 and Tree 24.
+Xor node 2609 belongs to Tree 45 and Tree 23.
+Xor node 2239 belongs to Tree 45 and Tree 22.
+Xor node 2239 belongs to Tree 45 and Tree 21.
+The adder tree has 1374 internal cut points. These 1 points have more than one fanout:
+Node 5246(lev 9) has fanout 2.
+Xor node 4008 belongs to Tree 65 and Tree 64.
+Xor node 3979 belongs to Tree 64 and Tree 63.
+Xor node 3610 belongs to Tree 58 and Tree 57.
+Xor node 3431 belongs to Tree 56 and Tree 55.
+Xor node 3230 belongs to Tree 54 and Tree 53.
+Xor node 2971 belongs to Tree 52 and Tree 51.
+Xor node 2849 belongs to Tree 51 and Tree 50.
+Xor node 2510 belongs to Tree 48 and Tree 47.
+Xor node 2203 belongs to Tree 48 and Tree 46.
+Xor node 2203 belongs to Tree 48 and Tree 45.
+Xor node 4008 belongs to Tree 41 and Tree 40.
+Xor node 3979 belongs to Tree 40 and Tree 39.
+Xor node 3610 belongs to Tree 35 and Tree 34.
+Xor node 3431 belongs to Tree 33 and Tree 32.
+Xor node 3230 belongs to Tree 31 and Tree 30.
+Xor node 2971 belongs to Tree 29 and Tree 28.
+Xor node 2849 belongs to Tree 28 and Tree 27.
+Xor node 2510 belongs to Tree 25 and Tree 24.
+Xor node 2203 belongs to Tree 25 and Tree 23.
+Xor node 2203 belongs to Tree 25 and Tree 22.
+The adder tree has 676 internal cut points. These 4 points have more than one fanout:
+Node 2849(lev 11) has fanout 2.
+Node 2971(lev 11) has fanout 2.
+Node 3610(lev 13) has fanout 2.
+Node 3979(lev 17) has fanout 2.
+Phase of input 1=2849 is mismatched in box 257=(2887,2948).
+Phase of input 1=2971 is mismatched in box 267=(3009,3101).
+Phase of input 0=3426 is mismatched in box 307=(3434,3433).
+Phase of input 1=3434 is mismatched in box 312=(3475,3491).
+Phase of input 1=3610 is mismatched in box 328=(3651,3667).
+Phase of input 2=3979 is mismatched in box 363=(3985,3995).
+Phase of input 1=4096 is mismatched in box 375=(4099,4097).
+Phase of input 1=4121 is mismatched in box 379=(4124,4122).
+Finished computing equivalent nodes.  Time =     0.07 sec
+Shifted one level down.
+Moved 0 pairs of PPs to normalize the matrix.
+Moved 0 pairs of PPs to normalize the matrix.
+Box0: Matched 1 entries out of 666.
+Box1: Matched 1 entries out of 333.
+Matching of adder trees in LHS and RHS succeeded.  Time =     0.08 sec
+Networks are NOT EQUIVALENT. Output 29 trivially differs (different phase).  Time =     0.00 sec
+INPUT: a = 48'h000000000000.  OUTPUT: z = 48'h000000000000 (miter), z = 48'h0EEFA0000000 (miter).

@@ -1,0 +1,12 @@
+# Wave 10 / C1 / D2: builds the ablation drivers. Flags are the same as the main C1 build.
+cmake_minimum_required(VERSION 3.16)
+project(C1_ABLATION)
+add_definitions(-fPIC)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -DNDEBUG")
+add_subdirectory(third-party)
+foreach(v ab1 ab2)
+  add_executable(drv_${v} variants/${v}/c1_driver.cpp)
+  target_link_libraries(drv_${v} PUBLIC mockturtle experiments fmt)
+endforeach()

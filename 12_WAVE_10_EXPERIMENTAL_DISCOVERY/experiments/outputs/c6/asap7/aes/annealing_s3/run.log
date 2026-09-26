@@ -1,0 +1,31 @@
+/usr/bin/python3 /OpenROAD-flow-scripts/flow/scripts/run_command.py --log /tmp/wh/logs/asap7/aes/base/c6.log --tee -- /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -exit -no_init -threads 8  -no_splash  /w/experiments/scripts/c6/c6_treat.tcl
+source /OpenROAD-flow-scripts/flow/platforms/asap7/liberty_suppressions.tcl
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_AO_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_INVBUF_RVT_FF_nldm_220122.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_OA_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SIMPLE_RVT_FF_nldm_211120.lib.gz
+read_liberty /OpenROAD-flow-scripts/flow/platforms/asap7/lib/NLDM/asap7sc7p5t_SEQ_RVT_FF_nldm_220123.lib
+read_db /tmp/wh/results/asap7/aes/base/3_place.odb
+read_sdc /tmp/wh/results/asap7/aes/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/asap7/setRC.tcl
+[INFO RMP-0059] Resynthesis: starting tuning algorithm, Worst slack is -2.9377722e-11
+Derived GENLIB library "asap7sc7p5t_AO_RVT_FF_nldm_211120" with 169 gates.
+[INFO RMP-0052] Resynthesis: starting simulated annealing
+[INFO RMP-0053] Initial temperature: 4.4272624e-10, worst slack: -1.931903e-10
+[INFO RMP-0054] Iteration: 10, temperature: 4.028809e-10, best worst slack: -1.791006e-10
+[INFO RMP-0054] Iteration: 20, temperature: 3.5860825e-10, best worst slack: -9.7599595e-11
+[INFO RMP-0054] Iteration: 30, temperature: 3.143356e-10, best worst slack: -9.7599595e-11
+[INFO RMP-0054] Iteration: 40, temperature: 2.7006303e-10, best worst slack: -9.7599595e-11
+[INFO RMP-0054] Iteration: 50, temperature: 2.2579039e-10, best worst slack: -9.6588654e-11
+[INFO RMP-0054] Iteration: 60, temperature: 1.8151776e-10, best worst slack: -9.6588654e-11
+[INFO RMP-0054] Iteration: 70, temperature: 1.3724513e-10, best worst slack: -9.6588654e-11
+[INFO RMP-0054] Iteration: 80, temperature: 9.297251e-11, best worst slack: -9.6588654e-11
+[INFO RMP-0054] Iteration: 90, temperature: 4.8699888e-11, best worst slack: -9.6588654e-11
+[INFO RMP-0054] Iteration: 100, temperature: 4.4272624e-12, best worst slack: -9.6588654e-11
+[INFO RMP-0067] Resynthesis: End of slack tuning, applying ABC operations
+[INFO RMP-0068] Resynthesis: Worst slack is -9.6588654e-11
+C6_DONE mode=annealing seed=3
+Error: c6_treat.tcl, 41 invalid command name "1790336632858)"
+Elapsed time: 18:19.68[h:]min:sec. CPU time: user 1069.49 sys 15.65 (98%). Peak memory: 384616KB.
+make: *** [Makefile:918: run] Error 1
+make_exit=2

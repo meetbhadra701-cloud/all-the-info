@@ -1,0 +1,24 @@
+{
+ "job_id": "BL20_MUTX_beh_mac_8",
+ "results_csv": "trace_baseline_results.csv",
+ "netlist": "netlists/BASELINE/MUTX_behavioral_mac_8.aig",
+ "args": "-mac -dyn -p -c -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mac:uuu:8,8,16:17",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 5,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": 64,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x40",
+  "reference": "0x0"
+ },
+ "overall": "WITNESS_CONFIRMED"
+}

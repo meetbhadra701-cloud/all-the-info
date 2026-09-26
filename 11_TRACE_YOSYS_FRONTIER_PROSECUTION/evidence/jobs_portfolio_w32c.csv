@@ -1,0 +1,52 @@
+job_id,rel_path,args,expected,note,configs
+pf__MAIN__A_mul_s_w32__booth,netlists/MAIN/A_mul_s_w32__booth.aig,-mul -s,CORRECT,W=32;family=A;build=MAIN;arch=booth,
+pf__MAIN__A_mul_s_w32__booth_lp,netlists/MAIN/A_mul_s_w32__booth_lp.aig,-mul -s,CORRECT,W=32;family=A;build=MAIN;arch=booth_lp;trim=all six configs timed out at W16,-dyn -p -c;-ipc -p -c
+pf__MAIN__A_mul_s_w32__booth_pre,netlists/MAIN/A_mul_s_w32__booth_pre.aig,-mul -s,CORRECT,W=32;family=A;build=MAIN;arch=booth_pre,
+pf__MAIN__A_mul_s_w32__norm,netlists/MAIN/A_mul_s_w32__norm.aig,-mul -s,CORRECT,W=32;family=A;build=MAIN;arch=norm,
+pf__MAIN__A_mul_s_w32__norm_pre,netlists/MAIN/A_mul_s_w32__norm_pre.aig,-mul -s,CORRECT,W=32;family=A;build=MAIN;arch=norm_pre,
+pf__MAIN__A_mul_u_w32__booth,netlists/MAIN/A_mul_u_w32__booth.aig,-mul,CORRECT,W=32;family=A;build=MAIN;arch=booth,
+pf__MAIN__A_mul_u_w32__booth_pre_folded,netlists/CONTROL/A_mul_u_w32__booth_pre_folded.aig,-mul,CORRECT,W=32;family=A;build=MAIN;arch=booth_pre_folded;derived=constant-folded copy of MAIN booth_pre,
+pf__MAIN__A_mul_u_w32__norm,netlists/MAIN/A_mul_u_w32__norm.aig,-mul,CORRECT,W=32;family=A;build=MAIN;arch=norm,
+pf__MAIN__A_mul_u_w32__norm_pre,netlists/MAIN/A_mul_u_w32__norm_pre.aig,-mul,CORRECT,W=32;family=A;build=MAIN;arch=norm_pre,
+pf__MAIN__B_dot2_u_w32__norm,netlists/MAIN/B_dot2_u_w32__norm.aig,-dot=2,CORRECT,W=32;family=B;build=MAIN;arch=norm;trim=all six configs timed out at W16,-dyn -p -c;-ipc -p -c
+pf__MAIN__B_dot2_u_w32__tree,netlists/MAIN/B_dot2_u_w32__tree.aig,-dot=2,CORRECT,W=32;family=B;build=MAIN;arch=tree;trim=all six configs timed out at W16,-dyn -p -c;-ipc -p -c
+pf__MAIN__B_mac_s_w32__norm,netlists/MAIN/B_mac_s_w32__norm.aig,-mac -s,CORRECT,W=32;family=B;build=MAIN;arch=norm,
+pf__MAIN__B_mac_u_w32__norm,netlists/MAIN/B_mac_u_w32__norm.aig,-mac,CORRECT,W=32;family=B;build=MAIN;arch=norm,
+pf__MAIN__B_mac_u_w32__tree,netlists/MAIN/B_mac_u_w32__tree.aig,-mac,CORRECT,W=32;family=B;build=MAIN;arch=tree,
+pf__PATCH__B_mac_s_w32__tree,netlists/PATCH/B_mac_s_w32__tree.aig,-mac -s,CORRECT,W=32;family=B;build=PATCH;arch=tree,
+pf__MAIN__B_mac_s_w32__tree,netlists/MAIN/B_mac_s_w32__tree.aig,-mac -s,INCORRECT,W=32;family=B;build=MAIN;arch=tree,
+pf__MAIN__B_dot2_u_w16__tree_ripple,netlists/MAIN/B_dot2_u_w16__tree_ripple.aig,-dot=2,CORRECT,W=16;family=B;build=MAIN;arch=tree_ripple,
+pf__MAIN__B_mac_s_w16__tree_fa,netlists/MAIN/B_mac_s_w16__tree_fa.aig,-mac -s,INCORRECT,W=16;family=B;build=MAIN;arch=tree_fa,
+pf__MAIN__B_mac_s_w16__tree_pre,netlists/MAIN/B_mac_s_w16__tree_pre.aig,-mac -s,INCORRECT,W=16;family=B;build=MAIN;arch=tree_pre,
+pf__MAIN__B_mac_s_w16__tree_ripple,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s,INCORRECT,W=16;family=B;build=MAIN;arch=tree_ripple,
+pf__MAIN__MUT_accum_mac_u_w16__norm,netlists/MAIN/MUT_accum_mac_u_w16__norm.aig,-mac,INCORRECT,W=16;family=MUT;build=MAIN;arch=norm,
+pf__MAIN__MUT_accum_mac_u_w16__tree,netlists/MAIN/MUT_accum_mac_u_w16__tree.aig,-mac,INCORRECT,W=16;family=MUT;build=MAIN;arch=tree,
+pf__MAIN__MUT_plus1_dot2_u_w16__norm,netlists/MAIN/MUT_plus1_dot2_u_w16__norm.aig,-dot=2,INCORRECT,W=16;family=MUT;build=MAIN;arch=norm,
+pf__MAIN__MUT_plus1_dot2_u_w16__tree,netlists/MAIN/MUT_plus1_dot2_u_w16__tree.aig,-dot=2,INCORRECT,W=16;family=MUT;build=MAIN;arch=tree,
+pf__MAIN__MUT_signext_mac_s_w16__norm,netlists/MAIN/MUT_signext_mac_s_w16__norm.aig,-mac -s,INCORRECT,W=16;family=MUT;build=MAIN;arch=norm,
+pf__MAIN__MUT_signext_mac_s_w16__tree,netlists/MAIN/MUT_signext_mac_s_w16__tree.aig,-mac -s,INCORRECT,W=16;family=MUT;build=MAIN;arch=tree,
+pf__MAIN__MUT_trunc_mul_u_w16__booth,netlists/MAIN/MUT_trunc_mul_u_w16__booth.aig,-mul,INCORRECT,W=16;family=MUT;build=MAIN;arch=booth,
+pf__MAIN__MUT_trunc_mul_u_w16__norm,netlists/MAIN/MUT_trunc_mul_u_w16__norm.aig,-mul,INCORRECT,W=16;family=MUT;build=MAIN;arch=norm,
+pf__MAIN__A_mul_s_w24__booth,netlists/MAIN/A_mul_s_w24__booth.aig,-mul -s,CORRECT,W=24;family=A;build=MAIN;arch=booth,
+pf__MAIN__A_mul_s_w24__norm,netlists/MAIN/A_mul_s_w24__norm.aig,-mul -s,CORRECT,W=24;family=A;build=MAIN;arch=norm,
+pf__MAIN__A_mul_u_w24__booth,netlists/MAIN/A_mul_u_w24__booth.aig,-mul,CORRECT,W=24;family=A;build=MAIN;arch=booth,
+pf__MAIN__A_mul_u_w24__norm,netlists/MAIN/A_mul_u_w24__norm.aig,-mul,CORRECT,W=24;family=A;build=MAIN;arch=norm,
+pf__MAIN__B_dot2_u_w24__norm,netlists/MAIN/B_dot2_u_w24__norm.aig,-dot=2,CORRECT,W=24;family=B;build=MAIN;arch=norm,
+pf__MAIN__B_dot2_u_w24__tree,netlists/MAIN/B_dot2_u_w24__tree.aig,-dot=2,CORRECT,W=24;family=B;build=MAIN;arch=tree,
+pf__MAIN__B_mac_s_w24__norm,netlists/MAIN/B_mac_s_w24__norm.aig,-mac -s,CORRECT,W=24;family=B;build=MAIN;arch=norm,
+pf__MAIN__B_mac_u_w24__norm,netlists/MAIN/B_mac_u_w24__norm.aig,-mac,CORRECT,W=24;family=B;build=MAIN;arch=norm,
+pf__MAIN__B_mac_u_w24__tree,netlists/MAIN/B_mac_u_w24__tree.aig,-mac,CORRECT,W=24;family=B;build=MAIN;arch=tree,
+pf__PATCH__B_mac_s_w24__tree,netlists/PATCH/B_mac_s_w24__tree.aig,-mac -s,CORRECT,W=24;family=B;build=PATCH;arch=tree,
+pf__MAIN__B_mac_s_w24__tree,netlists/MAIN/B_mac_s_w24__tree.aig,-mac -s,INCORRECT,W=24;family=B;build=MAIN;arch=tree,
+pf__MAIN__A_mul_s_w20__booth,netlists/MAIN/A_mul_s_w20__booth.aig,-mul -s,CORRECT,W=20;family=A;build=MAIN;arch=booth,
+pf__MAIN__A_mul_s_w20__norm,netlists/MAIN/A_mul_s_w20__norm.aig,-mul -s,CORRECT,W=20;family=A;build=MAIN;arch=norm,
+pf__MAIN__A_mul_u_w20__booth,netlists/MAIN/A_mul_u_w20__booth.aig,-mul,CORRECT,W=20;family=A;build=MAIN;arch=booth,
+pf__MAIN__A_mul_u_w20__norm,netlists/MAIN/A_mul_u_w20__norm.aig,-mul,CORRECT,W=20;family=A;build=MAIN;arch=norm,
+pf__MAIN__MUT_accum_mac_u_w32__norm,netlists/MAIN/MUT_accum_mac_u_w32__norm.aig,-mac,INCORRECT,"W=32;family=MUT;build=MAIN;arch=norm;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c
+pf__MAIN__MUT_accum_mac_u_w32__tree,netlists/MAIN/MUT_accum_mac_u_w32__tree.aig,-mac,INCORRECT,"W=32;family=MUT;build=MAIN;arch=tree;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c
+pf__MAIN__MUT_plus1_dot2_u_w32__norm,netlists/MAIN/MUT_plus1_dot2_u_w32__norm.aig,-dot=2,INCORRECT,"W=32;family=MUT;build=MAIN;arch=norm;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c
+pf__MAIN__MUT_plus1_dot2_u_w32__tree,netlists/MAIN/MUT_plus1_dot2_u_w32__tree.aig,-dot=2,INCORRECT,"W=32;family=MUT;build=MAIN;arch=tree;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c
+pf__MAIN__MUT_signext_mac_s_w32__norm,netlists/MAIN/MUT_signext_mac_s_w32__norm.aig,-mac -s,INCORRECT,"W=32;family=MUT;build=MAIN;arch=norm;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c
+pf__MAIN__MUT_signext_mac_s_w32__tree,netlists/MAIN/MUT_signext_mac_s_w32__tree.aig,-mac -s,INCORRECT,"W=32;family=MUT;build=MAIN;arch=tree;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c
+pf__MAIN__MUT_trunc_mul_u_w32__booth,netlists/MAIN/MUT_trunc_mul_u_w32__booth.aig,-mul,INCORRECT,"W=32;family=MUT;build=MAIN;arch=booth;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c
+pf__MAIN__MUT_trunc_mul_u_w32__norm,netlists/MAIN/MUT_trunc_mul_u_w32__norm.aig,-mul,INCORRECT,"W=32;family=MUT;build=MAIN;arch=norm;trim=mutant refutation, two configs",-dyn -p -c;-idx -p -c

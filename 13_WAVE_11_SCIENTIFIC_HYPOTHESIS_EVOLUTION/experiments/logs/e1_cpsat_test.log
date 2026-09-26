@@ -1,0 +1,30 @@
+D0=103.171001984 start 23:04:21
+{"dump": "ctrl.dump.json", "D": 103.171001984, "D_int": 10317, "eps": -1.0, "notiming": false, "n_cands_full": 7345, "n_cands_model": 7345, "timeout": 120, "workers": 6, "fixed_area": 0, "heur_error": "best match of (13,1) not among the candidates", "n_vars": 8000, "n_cons": 36056, "solver_wall": 120.86, "status": "FEASIBLE", "objective": 6.8, "bound": 6.57, "n_cells": 73, "sol_area_model": 6.8, "sol_delay_model": 103.17, "verdict": "SOLVED_FEASIBLE"}
+solve done 23:06:22
+{"bench": "ctrl", "netlist": "ctrl_D0_full.v", "area": 6.8, "delay": 103.17, "instances": 73, "sim": "SIM_AGREE", "cex": null, "cec": "PASS"}
+{"bench": "ctrl", "netlist": "ctrl_map.v", "area": 6.92, "delay": 103.17, "instances": 76, "sim": "SIM_AGREE", "cex": null, "cec": "PASS"}
+#Bound  45.41s best:702   next:[619,701]  bool_core (num_cores=76 [size:60 mw:3 amo:4 lit:57 d:7] a=3912 d=10 fixed=245/9947 clauses=12'840)
+#Bound  45.50s best:702   next:[622,701]  bool_core (num_cores=77 [size:164 mw:3 amo:15 lit:156 d:9] a=3845 d=10 fixed=245/9995 clauses=12'966)
+#60     45.53s best:701   next:[622,700]  graph_cst_lns (d=5.62e-01 s=289 t=0.10 p=0.53 stall=9 h=base)
+#Bound  45.53s best:701   next:[625,700]  bool_core (num_cores=78 [size:257 mw:3 amo:4 lit:254 d:5] a=3652 d=10 fixed=245/10052 clauses=13'182)
+#Bound  45.62s best:701   next:[628,700]  bool_core (num_cores=79 [size:425 mw:3 amo:27 lit:416 d:11] a=3393 d=11 fixed=245/10122 clauses=13'312)
+#Bound  45.72s best:701   next:[631,700]  bool_core (num_cores=79 [cover] a=3393 d=11 fixed=245/10316 clauses=13'812)
+#Bound  45.93s best:701   next:[634,700]  bool_core (num_cores=79 [cover] a=3393 d=11 fixed=246/10461 clauses=14'697)
+#Bound  46.62s best:701   next:[637,700]  bool_core (num_cores=80 [size:840 mw:3 amo:58 lit:832 d:12] a=3045 d=12 fixed=247/10698 clauses=16'343)
+#61     46.84s best:693   next:[637,692]  rins_pump_lns (d=2.86e-01 s=301 t=0.10 p=0.47 stall=3 h=base)
+#Bound  47.52s best:693   next:[640,692]  bool_core (num_cores=81 [size:816 mw:3 amo:65 lit:805 d:13] a=2619 d=13 fixed=247/11001 clauses=13'716)
+#Bound  54.13s best:693   next:[643,692]  bool_core (num_cores=82 [size:403 mw:3 amo:46 lit:392 d:14] a=2465 d=14 fixed=247/11309 clauses=14'604)
+#Bound  55.51s best:693   next:[646,692]  bool_core (num_cores=83 [size:449 mw:3 amo:55 lit:441 d:15] a=2389 d=15 fixed=247/11642 clauses=17'103)
+#Bound  58.91s best:693   next:[649,692]  bool_core (num_cores=84 [size:281 mw:3 amo:49 lit:273 d:16] a=2311 d=16 fixed=247/11970 clauses=22'491)
+#Bound  67.51s best:693   next:[652,692]  bool_core (num_cores=85 [size:200 mw:3 amo:35 lit:193 d:17] a=2277 d=17 fixed=247/12272 clauses=27'562)
+#62     71.84s best:687   next:[652,686]  graph_dec_lns (d=4.09e-01 s=455 t=0.10 p=0.50 stall=11 h=stalling)
+#63     72.41s best:685   next:[652,684]  rnd_cst_lns (d=4.64e-01 s=458 t=0.10 p=0.50 stall=15 h=base)
+#64     83.80s best:683   next:[652,682]  ls_restart_compound(batch:1 lin{mvs:0 evals:5'502} gen{mvs:360 evals:0} comp{mvs:32 btracks:164} #w_updates:4 #perturb:0)
+#Bound  84.73s best:683   next:[655,682]  bool_core (num_cores=86 [size:161 mw:3 amo:24 lit:156 d:18] a=2233 d=18 fixed=247/12546 clauses=31'600)
+#65     87.13s best:682   next:[655,681]  graph_var_lns (d=2.55e-01 s=536 t=0.10 p=0.46 stall=21 h=base)
+#66    104.52s best:680   next:[655,679]  core
+#Bound 117.53s best:680   next:[657,679]  bool_core (num_cores=87 [size:791 mw:2 amo:95 lit:776 d:19] a=1625 d=19 fixed=247/12981 clauses=33'027)
+CpSolverResponse summary:
+status: FEASIBLE
+objective: 680
+best_bound: 657

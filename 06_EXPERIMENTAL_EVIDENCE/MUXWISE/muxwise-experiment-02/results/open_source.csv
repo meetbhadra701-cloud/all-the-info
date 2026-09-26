@@ -1,0 +1,3 @@
+design,source,license,yosys,abc,flow,cells,structural_signature,result
+picorv32,https://github.com/YosysHQ/picorv32/blob/main/picorv32.v,ISC,0.69+77,1.01,synth_normal,9171,049656a122db8a8f6f79771e42acdb91924818ea048ef2b7729122b8d54a4199,PASS
+picorv32,https://github.com/YosysHQ/picorv32/blob/main/picorv32.v,ISC,0.69+77,1.01,synth_arith_tree,9171,049656a122db8a8f6f79771e42acdb91924818ea048ef2b7729122b8d54a4199,PASS

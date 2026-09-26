@@ -1,0 +1,3 @@
+read_verilog research/pilot_zero/issue6085/source.v
+prep -top top
+equiv_opt -assert techmap -D LUT_WIDTH=4 -map +/cmp2lut.v

@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Draft citation metadata for PassWitness v0.1.0. Individual authorship, contact, and DOI metadata require maintainer approval before this file is moved to the repository root."
+title: "PassWitness"
+type: software
+version: "0.1.0"
+date-released: "2026-09-22"
+commit: "a1bf9ae4df5d718b310d126527e1b82104ada781"
+abstract: >-
+  Formal-guided synthesis fault localization and test-case reduction for
+  small combinational Verilog designs.
+authors:
+  - name: "PassWitness contributors"
+repository-code: "https://github.com/meetbhadra701-cloud/passwitness"
+url: "https://github.com/meetbhadra701-cloud/passwitness/releases/tag/v0.1.0"
+license: MIT
+keywords:
+  - hardware synthesis
+  - formal verification
+  - equivalence checking
+  - compiler testing
+  - Verilog
+  - RTL reduction

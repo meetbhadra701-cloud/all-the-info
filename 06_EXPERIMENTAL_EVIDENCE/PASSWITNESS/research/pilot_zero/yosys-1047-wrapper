@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+set -u
+repo_root="$(cd "$(dirname "$0")/../.." && pwd)"
+repo_windows="$(wslpath -w "$repo_root" 2>/dev/null || printf '%s' "$repo_root")"
+yosys_root="/mnt/c/Users/meetb/Downloads/pw-yosys-1047"
+yosys_windows="$(wslpath -w "$yosys_root" 2>/dev/null || printf '%s' "$yosys_root")"
+docker_bin="${PASSWITNESS_DOCKER:-/mnt/c/Program Files/Docker/Docker/resources/bin/docker.exe}"
+mapped=()
+for arg in "$@"; do
+    case "$arg" in
+        "$repo_root"/*) mapped+=("/workspace/${arg#"$repo_root"/}") ;;
+        *) mapped+=("$arg") ;;
+    esac
+done
+exec "$docker_bin" run --rm \
+    -v "$repo_windows:/workspace" \
+    -v "$repo_windows:$repo_root" \
+    -v "$yosys_windows:/yosys1047" \
+    -w /workspace \
+    muxwise-yosys-current:exp6 \
+    /bin/bash -c '
+        args=("$@")
+        for ((i=0; i<${#args[@]}; i++)); do
+            if [[ "${args[$i]}" == "-s" && $((i + 1)) -lt ${#args[@]} ]]; then
+                script="${args[$((i + 1))]}"
+                adapted="$(mktemp /tmp/passwitness-1047-XXXXXX.ys)"
+                # Yosys 0.8 accepts unquoted paths but treats quoted absolute
+                # paths in generated scripts as part of the filename.
+                sed -E "s#\"(/[^\"]+)\"#\\1#g" "$script" > "$adapted"
+                args[$((i + 1))]="$adapted"
+            fi
+        done
+        exec /yosys1047/yosys "${args[@]}"
+    ' passwitness "${mapped[@]}"

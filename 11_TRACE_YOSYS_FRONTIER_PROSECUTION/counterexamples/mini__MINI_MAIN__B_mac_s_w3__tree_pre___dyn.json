@@ -1,0 +1,24 @@
+{
+ "job_id": "mini__MINI_MAIN__B_mac_s_w3__tree_pre___dyn",
+ "results_csv": "trace_mini_results.csv",
+ "netlist": "netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig",
+ "args": "-mac -s -dyn -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mac:sss:3,3,6:7",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 1,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": 64,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x40",
+  "reference": "0x0"
+ },
+ "overall": "WITNESS_CONFIRMED"
+}

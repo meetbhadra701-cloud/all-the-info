@@ -1,0 +1,4 @@
+======== ABC command line "&r /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/dot2_u_w16_norm.aig; &cec -T 300 /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/dot2bug_u_w16_tree.aig"
+Disproved at least one output of the miter (zero-based number 3).
+Networks are NOT EQUIVALENT.  Time =     0.00 sec
+INPUT: a0 = 16'h6DFF, b0 = 16'h166B, a1 = 16'hB66C, b1 = 16'h9980.  OUTPUT: z = 33'h07703A595 (dot2_u_w16_norm), z = 33'h07703A59D (dot2bug_u_w16_tree).

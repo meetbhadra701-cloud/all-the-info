@@ -1,0 +1,21 @@
+### FILE netlists/CONTROL/PATCH_B_mac_s_w8__tree_xorself_a0_y3.aig
+### ARGS -mac -s -igs -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T03:39:04-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/CONTROL/PATCH_B_mac_s_w8__tree_xorself_a0_y3.aig
+║           mode: mac
+║           sign: signed
+║           method: igs
+║           phase optimization: disabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 367505408
+### DOCKER_EXIT 0
+### WALL_SECONDS 61.68
+### END 2026-09-24T03:40:06-07:00

@@ -1,0 +1,7 @@
+job_id,rel_path,args,timeout_s,expected,note,mem
+long__MAIN__A_mul_u_w8__booth___dyn_p_c,netlists/MAIN/A_mul_u_w8__booth.aig,-mul -dyn -p -c -no-steps,1800,CORRECT,W=8;post-ABC unsigned Booth; long rerun of all-config 60 s TIMEOUT;mem=5g,5g
+long__MAIN__A_mul_s_w8__booth_lp___dyn_p_c,netlists/MAIN/A_mul_s_w8__booth_lp.aig,-mul -s -dyn -p -c -no-steps,1800,CORRECT,W=8;post-ABC signed low-power Booth; long rerun;mem=5g,5g
+long__MAIN__B_mac_s_w8__norm___idx_p_c,netlists/MAIN/B_mac_s_w8__norm.aig,-mac -s -idx -p -c -no-steps,1800,CORRECT,W=8;post-ABC signed conventional MAC; long rerun;mem=5g,5g
+long__MAIN__MUT_accum_mac_u_w8__tree___dyn_p_c,netlists/MAIN/MUT_accum_mac_u_w8__tree.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,W=8;mutant refutation; long rerun;mem=5g,5g
+long__MAIN__MUT_signext_mac_s_w8__norm___dyn_p_c,netlists/MAIN/MUT_signext_mac_s_w8__norm.aig,-mac -s -dyn -p -c -no-steps,900,INCORRECT,W=8;mutant refutation; long rerun;mem=5g,5g
+long__MAIN__MUT_trunc_mul_u_w8__norm___idx_p_c,netlists/MAIN/MUT_trunc_mul_u_w8__norm.aig,-mul -idx -p -c -no-steps,900,INCORRECT,W=8;mutant refutation; long rerun;mem=5g,5g

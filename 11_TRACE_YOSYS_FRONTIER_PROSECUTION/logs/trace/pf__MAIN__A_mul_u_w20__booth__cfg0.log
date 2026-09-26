@@ -1,0 +1,64 @@
+### FILE netlists/MAIN/A_mul_u_w20__booth.aig
+### ARGS -mul -dyn -p -c -no-steps
+### TIMEOUT 180
+### START 2026-09-24T12:59:32-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/A_mul_u_w20__booth.aig
+║           mode: mul
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╚═ Result: Correct
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mul
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/MAIN/A_mul_u_w20__booth.aig
+║ Maximum polynomial : 1223
+║ Number of iteration: 3481
+║ Elapsed time: 3.09734 (in seconds)
+║ Number and-gates : 3443
+║ Substitution steps : 3483
+║ Number of removed conflicts : 2087
+║ Total calculated conflicts : 66838
+║ Conflict calculation time: 0.135316 (in seconds)
+║ Number of negated nodes : 480
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/MAIN/A_mul_u_w20__booth.aig -mul -dyn -p -c -no-steps"
+	User time (seconds): 1.85
+	System time (seconds): 0.18
+	Percent of CPU this job got: 62%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 3.27s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 66640
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 3793
+	Voluntary context switches: 15
+	Involuntary context switches: 1691
+	Swaps: 0
+	File system inputs: 18
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 16400384
+### DOCKER_EXIT 0
+### WALL_SECONDS 4.79
+### END 2026-09-24T12:59:37-07:00

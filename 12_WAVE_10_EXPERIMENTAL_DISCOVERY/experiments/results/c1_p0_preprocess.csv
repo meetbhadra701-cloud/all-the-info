@@ -1,0 +1,59 @@
+bench,orig_md5,c2_md5,orig_stats,c2_stats
+adder,2288b48c36697af8d0834150d16cb91c,58d92d14a599eb6d5d7ca23f791953b4,i/o = 256/ 129 lat = 0 and = 1020 lev =255,i/o = 256/ 129 lat = 0 and = 1019 lev =255
+bar,7fbb054ee792e3b8c572a2ec2244bb39,97ef4999f5bb3a17e7a3d5ce1757a82d,i/o = 135/ 128 lat = 0 and = 3336 lev = 12,i/o = 135/ 128 lat = 0 and = 3141 lev = 12
+div,316fe723a2b72891efeed14d4de693f2,eceed37b25d9901964d55693558ca7f4,i/o = 128/ 128 lat = 0 and = 57247 lev =4372,i/o = 128/ 128 lat = 0 and = 40633 lev =4394
+hyp,157c19607d6809a0676e226ed439c151,c8f594a3d5243be3eba3e0c73434f3ec,i/o = 256/ 128 lat = 0 and = 214335 lev =24801,i/o = 256/ 128 lat = 0 and = 211329 lev =24893
+log2,f80c79221cfdfac1eb39a57534e7f181,6feec36cf0c802db33fb27dbb7daadb6,i/o = 32/ 32 lat = 0 and = 32060 lev =444,i/o = 32/ 32 lat = 0 and = 29371 lev =387
+max,8a449db4ec6c219fb21adaef9e74b27d,dd2bc7f047f2b8819d4039191be9e4a8,i/o = 512/ 130 lat = 0 and = 2865 lev =287,i/o = 512/ 130 lat = 0 and = 2832 lev =206
+multiplier,bf033d0aee63599bff8699e74ca06666,2551860a87bcb012cd26e6d9e0e657b8,i/o = 128/ 128 lat = 0 and = 27062 lev =274,i/o = 128/ 128 lat = 0 and = 24556 lev =262
+sin,a5273565da58ece44f203ae6cc38c3c5,c3d538b5ffd7a304cb95b7103626770f,i/o = 24/ 25 lat = 0 and = 5416 lev =225,i/o = 24/ 25 lat = 0 and = 5041 lev =179
+sqrt,c3dbf17f1fa0e139d7fee722b7f5671a,bec44a52ecd1ddb28a875968794ca08f,i/o = 128/ 64 lat = 0 and = 24618 lev =5058,i/o = 128/ 64 lat = 0 and = 18368 lev =6048
+square,36757b0bc5273202d7d8e8eac532adbf,5466fd163b10c613800fc4db5404d6ca,i/o = 64/ 128 lat = 0 and = 18484 lev =250,i/o = 64/ 128 lat = 0 and = 16623 lev =248
+arbiter,44d2006f0a142547b6e7a32a9ef598cb,aa5e1588dedbc3eb9f6fde3c38ea7fb3,i/o = 256/ 129 lat = 0 and = 11839 lev = 87,i/o = 256/ 129 lat = 0 and = 11839 lev = 87
+cavlc,19359ed98875f3399051c78169ad17b6,de85f7ab4563295b97ec80fcbdec26f3,i/o = 10/ 11 lat = 0 and = 693 lev = 16,i/o = 10/ 11 lat = 0 and = 662 lev = 16
+ctrl,412d78b3dc421590c55606fad10d81bc,2c6fc8fef3e7e86f4482d58e116a38ff,i/o = 7/ 26 lat = 0 and = 174 lev = 10,i/o = 7/ 26 lat = 0 and = 108 lev = 8
+dec,d2ee938b27ac77ecacaaa75e63a20ada,4b4132887c03b38044660f4b1c3c5ef5,i/o = 8/ 256 lat = 0 and = 304 lev = 3,i/o = 8/ 256 lat = 0 and = 304 lev = 3
+i2c,d7703eb65c49837a0d97e226665e5be8,7803ed967104c09ecb81555b3eae6bb0,i/o = 147/ 142 lat = 0 and = 1342 lev = 20,i/o = 147/ 142 lat = 0 and = 1161 lev = 15
+int2float,970331965829298f570827571c1d18ac,9143021072ae9caa7cba56e6d073471d,i/o = 11/ 7 lat = 0 and = 260 lev = 16,i/o = 11/ 7 lat = 0 and = 214 lev = 15
+mem_ctrl,e74cf1c1e26ee25ddcd522427ae66be3,280be2dcb8ed74bfe8b65450a18003df,i/o = 1204/ 1231 lat = 0 and = 46836 lev =114,i/o = 1204/ 1231 lat = 0 and = 45547 lev =106
+priority,5ba9e2540785c16638cf2b3f9390a4d1,a2d2d79abebd292dc9b8f221c62d8162,i/o = 128/ 8 lat = 0 and = 978 lev =250,i/o = 128/ 8 lat = 0 and = 683 lev =214
+router,da3a2d8bdd708b74681ed50a23d439fa,d91c1c9841671664338b9b0ae3e14fec,i/o = 60/ 30 lat = 0 and = 257 lev = 54,i/o = 60/ 30 lat = 0 and = 182 lev = 18
+voter,edb0ceacd796852fb4e4e131acf5bfc3,f1711ff264fe7684bd8236ee30ea34a9,i/o = 1001/ 1 lat = 0 and = 13758 lev = 70,i/o = 1001/ 1 lat = 0 and = 9654 lev = 59
+c17,190db209358dc712a63106b16bb8f6b0,61ddaa143360b81317e03826f3c1196e,i/o = 5/ 2 lat = 0 and = 6 lev = 3,i/o = 5/ 2 lat = 0 and = 6 lev = 3
+c432,e00f9f4e76e3feb16a703ff214b91eaf,0d3fa7045d4b11d72f146cdf0d2d8806,i/o = 36/ 7 lat = 0 and = 208 lev = 26,i/o = 36/ 7 lat = 0 and = 127 lev = 26
+c499,202e4d1cbd5f41d027bd5124f7e2c72e,1e7b1dc38cf3cd413f930fc5c58c816c,i/o = 41/ 32 lat = 0 and = 398 lev = 19,i/o = 41/ 32 lat = 0 and = 392 lev = 19
+c880,708f2c98ae3368181d15079d844db724,90161d41db0ff58901358ae543d9680c,i/o = 60/ 26 lat = 0 and = 325 lev = 25,i/o = 60/ 26 lat = 0 and = 305 lev = 27
+c1355,b27f3ab1383f0eb48b94bde8617825c8,f04a4a41eef9b0cea2e3767d481907a8,i/o = 41/ 32 lat = 0 and = 502 lev = 25,i/o = 41/ 32 lat = 0 and = 392 lev = 19
+c1908,ee76f19accddc32cc7f05d9f1804c4ac,3ded118adbfcc978b7bb0d35d951ff34,i/o = 33/ 25 lat = 0 and = 341 lev = 27,i/o = 33/ 25 lat = 0 and = 304 lev = 25
+c2670,eba2bb5cc19bcf25b94f3b68844af99a,7554e808edaef191db31ae69e4aef840,i/o = 157/ 64 lat = 0 and = 716 lev = 20,i/o = 157/ 64 lat = 0 and = 533 lev = 22
+c3540,672cda38057a1ac8c97f2f37839e811d,1ded1c289224f1996f3c2198bb86ef2b,i/o = 50/ 22 lat = 0 and = 1024 lev = 41,i/o = 50/ 22 lat = 0 and = 872 lev = 37
+c5315,9ed0799d0ea5a84bddfd92e1a7cb45de,dca519173db3b841d4e330342fbc189d,i/o = 178/ 123 lat = 0 and = 1776 lev = 37,i/o = 178/ 123 lat = 0 and = 1243 lev = 30
+c6288,4743efefaf1d6ef312b43aac12f2bddd,d05bc1614b13b6badf9c0aefa0af93ed,i/o = 32/ 32 lat = 0 and = 2337 lev =120,i/o = 32/ 32 lat = 0 and = 1870 lev = 89
+c7552,f8e78636a6112ec88d26b44ecdfec9f7,f918d720a44fbf39016e57adfa99e438,i/o = 207/ 108 lat = 0 and = 1469 lev = 26,i/o = 207/ 108 lat = 0 and = 1379 lev = 53
+ac97_ctrl,7add36a75a7167ae108591a858f72c50,652097c5d7489697e5803bfca7df9a1b,i/o = 4482/ 2251 lat = 0 and = 14268 lev = 12,i/o = 4482/ 2251 lat = 0 and = 10239 lev = 9
+aes_core,cf8574f7b16fe80f3f89c058ffe46910,d9c9f451b09aa109cfa3d2e4d884340a,i/o = 1319/ 668 lat = 0 and = 21522 lev = 26,i/o = 1319/ 668 lat = 0 and = 20203 lev = 23
+des_area,33a1a5de706c82050ff1c40761d0a32f,d7ee120518833fcb9e001a97c1024c6e,i/o = 496/ 72 lat = 0 and = 4857 lev = 33,i/o = 496/ 72 lat = 0 and = 4402 lev = 27
+des_perf,49c520bf9a43173d8f6caf9a23bc5421,6c55d7b256f97b01d0e81881a2162d9a,i/o =17850/ 9038 lat = 0 and = 82650 lev = 20,i/o =17850/ 9038 lat = 0 and = 74400 lev = 17
+DMA,3e48516becfea743adb8024a5a796dee,5afecebd1bf27a87c13709f871953785,i/o = 5070/ 2559 lat = 0 and = 24393 lev = 27,i/o = 5070/ 2559 lat = 0 and = 22206 lev = 27
+DSP,38358f45b71bf845dabec15470099934,0314f79ae9a5aabced316099f34fea0f,i/o = 7835/ 3954 lat = 0 and = 45420 lev = 63,i/o = 7835/ 3954 lat = 0 and = 39050 lev = 88
+ethernet,fec14d6fd41cb240160746fce5b41090,f10c05fb3f99b6c865dcce37c1a08d42,i/o =21216/10698 lat = 0 and = 86726 lev = 32,i/o =21216/10698 lat = 0 and = 56101 lev = 32
+iwls05_i2c,7436593559070327d61655849a187fc3,172dceeb89066d7caa1324f064aca800,i/o = 275/ 144 lat = 0 and = 1166 lev = 14,i/o = 275/ 144 lat = 0 and = 907 lev = 19
+leon2,24d8802bbcc554006a79dfd8ff189f98,bc4fe998f5323fd28d22965f894f98b1,i/o =298888/291880 lat = 0 and = 789647 lev = 58,i/o =298888/291880 lat = 0 and = 775938 lev = 66
+leon3_opt,8febb4ee1ef4bbd516e89c9b29f673ed,e558c1a2baa2f7a5e48f4d5c983cd26f,i/o =370159/252691 lat = 0 and = 974977 lev = 54,i/o =370159/252691 lat = 0 and = 957108 lev = 62
+leon3,48555841a2a36ad4799f83f8c1b81d28,e5f1d998ca5d3fc5f21d965fbd882bf1,i/o =370159/252691 lat = 0 and =1088122 lev = 59,i/o =370159/252691 lat = 0 and = 989960 lev = 60
+leon3mp,c231a36e9c8ce403b8892940993277be,91c3fc5a6e3bdbcf4042a9ef74078e9c,i/o =217858/142925 lat = 0 and = 652353 lev = 55,i/o =217858/142925 lat = 0 and = 582706 lev = 56
+iwls05_mem_ctrl,c5afcf76da20cb180933a630792de62c,131f8482dafc187e295d217f2a8a01e4,i/o = 2281/ 1226 lat = 0 and = 15337 lev = 36,i/o = 2281/ 1226 lat = 0 and = 8475 lev = 41
+netcard,d309812c637bb352ddcba6d3cdaebc02,5f2389bdb8710fbb7e6bc0b851633fb8,i/o =195730/97805 lat = 0 and = 803848 lev = 40,i/o =195730/97805 lat = 0 and = 516822 lev = 35
+pci_bridge32,6d268fd97345932eefd332922f5024f4,d9b40a7b27a178b883930575feb9f7c5,i/o = 6880/ 3533 lat = 0 and = 22806 lev = 30,i/o = 6880/ 3533 lat = 0 and = 16332 lev = 29
+RISC,653da986c266653cde188bf97483926e,1a1adbcf65ab27a17d224186a0487f46,i/o =15678/ 8111 lat = 0 and = 75613 lev = 40,i/o =15678/ 8111 lat = 0 and = 61953 lev = 67
+sasc,b62a8b2b4ce85d61ff71d940456b4fb8,88090ac64fa78c45d83e05631cfdd4fa,i/o = 250/ 132 lat = 0 and = 773 lev = 9,i/o = 250/ 132 lat = 0 and = 547 lev = 9
+simple_spi,0dbe101a2dafa603c95cbf96da65a9bc,c5d558b2e9558b251155d4d9a14c6510,i/o = 280/ 147 lat = 0 and = 1053 lev = 12,i/o = 280/ 147 lat = 0 and = 739 lev = 19
+spi,63fd2d619a85b74052701dfc1d584175,cf8201633133b5f7fbce377d937651b3,i/o = 505/ 277 lat = 0 and = 3808 lev = 32,i/o = 505/ 277 lat = 0 and = 3186 lev = 31
+ss_pcm,98415e158dfd20bd4400f19b34ef1451,344b9865c6aefe8ae49236fc1b5eac58,i/o = 193/ 98 lat = 0 and = 405 lev = 7,i/o = 193/ 98 lat = 0 and = 394 lev = 7
+systemcaes,514e5478c41176dee6687219e4b756ba,71f0815da794aff77298dbec3391588f,i/o = 1600/ 819 lat = 0 and = 12384 lev = 46,i/o = 1600/ 819 lat = 0 and = 9888 lev = 38
+systemcdes,be99ac496690130d03fc1cbda8a85c19,14c79705a6c1bd41706624444ba7a351,i/o = 512/ 258 lat = 0 and = 2999 lev = 27,i/o = 512/ 258 lat = 0 and = 2369 lev = 24
+tv80,6c7d419d6dbee3dc7b8fa62299e46a99,16c536ab398eb78b448ed94fe27493f7,i/o = 732/ 404 lat = 0 and = 9647 lev = 52,i/o = 732/ 404 lat = 0 and = 7151 lev = 47
+usb_funct,7325d777307e0adedb477f7cc4dcdb9c,e0d127a78b1540624453f9ef6222dd8f,i/o = 3620/ 1858 lat = 0 and = 15894 lev = 27,i/o = 3620/ 1858 lat = 0 and = 13220 lev = 31
+usb_phy,c5e0c04b5543ea9d818b686b9a233187,13266380065ebe19b8e68e33c5a67023,i/o = 211/ 111 lat = 0 and = 460 lev = 10,i/o = 211/ 111 lat = 0 and = 360 lev = 9
+vga_lcd,b04e94aea17851beb9b6ad94b75262d6,2f7c2cce7ac8ca71b293905fe0731a11,i/o =34247/21412 lat = 0 and = 126708 lev = 24,i/o =34247/21412 lat = 0 and = 88772 lev = 24
+wb_conmax,88a39bfb02cb90dcf25c8169f1a96339,0ec338a52c0c59a954638dafa39a97f3,i/o = 2670/ 2189 lat = 0 and = 47853 lev = 27,i/o = 2670/ 2189 lat = 0 and = 41013 lev = 18

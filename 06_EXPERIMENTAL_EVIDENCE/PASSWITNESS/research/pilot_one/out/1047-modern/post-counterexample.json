@@ -1,0 +1,10 @@
+{ "signal": [
+    { "name": "w", "wave": "=4", "data": ["100", ""] },
+    { "name": "reference_y", "wave": "14" },
+    { "name": "mismatch", "wave": "14" },
+    { "name": "candidate_y", "wave": "04" }
+  ],
+  "config": {
+    "hscale": 0.75
+  }
+}

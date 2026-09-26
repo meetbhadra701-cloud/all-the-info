@@ -1,0 +1,2 @@
+======== ABC command line "&r m6_norm.aig; &polyn -S (0*o0+1*o1+2*o2+3*o3+4*o4+5*o5+6*o6+7*o7+8*o8+9*o9+10*o10+11*o11)"
+HashC = 95. HashM = 4054.  Total = 9270. Left = 36.  Used = 36.  Time =     0.00 sec

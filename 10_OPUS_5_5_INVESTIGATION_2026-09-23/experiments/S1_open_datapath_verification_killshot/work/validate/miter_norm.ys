@@ -1,0 +1,7 @@
+read_verilog /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/rtl/mac_u_w8.v
+rename top gold
+read_verilog /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/validate/mac_u_w8_norm_gate.v
+proc; opt_clean
+miter -equiv -flatten -make_outputs -ignore_gold_x gold gatenorm miter
+hierarchy -top miter
+sat -verify -prove trigger 0 -set-def-inputs -show-inputs -show-outputs miter

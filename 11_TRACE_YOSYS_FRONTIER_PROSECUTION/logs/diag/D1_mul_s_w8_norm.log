@@ -1,0 +1,39 @@
+### FILE netlists/MAIN/A_mul_s_w8__norm.aig
+### ARGS -mul -s -dyn -p -c
+### TIMEOUT 120
+### START 2026-09-24T03:00:37-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/A_mul_s_w8__norm.aig
+║           mode: mul
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: enabled
+║
+██░░ traverse_reverse_topological using dyn
+║ [iter. step/nr. gates] #SP, #Cache
+║ [1/711] 80, 0 
+║ [2/711] 81, 0 
+║ [3/711] 81, 0 
+║ [4/711] 81, 0 
+║ [5/711] 81, 0 
+║ [6/711] 81, 0 
+║ [7/711] 81, 0 
+║ [8/711] 81, 0 
+║ [9/711] 81, 0 
+║ [10/711] 81, 0 
+║ [11/711] 81, 0 
+║ [12/711] 81, 0 
+║ [13/711] 81, 0 
+║ [14/711] 81, 0 
+║ [15/711] 81, 0 
+║ [16/711] 81, 0 
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 180862976
+### DOCKER_EXIT 0
+### WALL_SECONDS 120.88
+### END 2026-09-24T03:02:38-07:00

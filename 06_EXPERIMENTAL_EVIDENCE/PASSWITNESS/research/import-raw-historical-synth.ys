@@ -1,0 +1,3 @@
+read_rtlil /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/raw-historical-synth.il
+hierarchy -top top
+write_rtlil /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/modern-import-raw-historical-synth.il

@@ -1,0 +1,22 @@
+lane start 23:08:53 phase=A benches=ctrl T_FULL=20 T_EPS=10 T_LB=15 WORKERS=4 SET=smoke_run
+23:08:53 ctrl map:D0 done
+23:08:54 ctrl map:D1 done
+23:08:54 ctrl heur:D0 done
+23:08:54 ctrl heur:D1 done
+23:08:55 ctrl emap:D0 done
+23:08:55 ctrl emap:D1 done
+23:08:55 ctrl nfp done
+23:08:55 ctrl nfp:D0 done
+23:08:56 ctrl nfpa:D0 done
+23:08:56 ctrl nfp:D1 done
+23:08:56 ctrl nfpa:D1 done
+23:09:17 ctrl full:D0 done
+23:09:38 ctrl full:D1 done
+23:09:53 ctrl lb:D0 done
+done ctrl A
+lane end 23:09:53
+lane start 23:09:53 phase=B benches=ctrl T_FULL=20 T_EPS=10 T_LB=15 WORKERS=4 SET=smoke_run
+23:09:56 ctrl eps0.05:D0 done
+23:09:58 ctrl eps0.05:D1 done
+done ctrl B
+lane end 23:09:58

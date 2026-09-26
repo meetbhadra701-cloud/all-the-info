@@ -1,0 +1,1 @@
+genetic_s1 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     3.27 sec  :: 15s

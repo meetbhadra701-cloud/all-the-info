@@ -1,0 +1,29 @@
+[INFO] synth__canonical_netlist__hash pass test: N/A == N/A
+[INFO] synth__netlist__hash pass test: N/A == N/A
+[INFO] synth__design__instance__area__stdcell pass test: 1399.29 <= 1610
+[INFO] constraints__clocks__count pass test: 2 == 2
+[INFO] placeopt__design__instance__area pass test: 1392.7 <= 1597
+[INFO] placeopt__design__instance__count__stdcell pass test: 12485 <= 14321
+[INFO] detailedplace__design__violations pass test: 0 == 0
+[INFO] cts__design__instance__count__setup_buffer pass test: 59 <= 1245
+[INFO] cts__design__instance__count__hold_buffer pass test: 0 <= 1245
+[INFO] cts__timing__setup__ws pass test: -3.91326 >= -20.8
+[INFO] cts__timing__setup__tns pass test: -17.6365 >= -79.3
+[INFO] cts__timing__hold__ws pass test: 35.8359 >= -19
+[INFO] cts__timing__hold__tns pass test: 0 >= -76
+[INFO] globalroute__antenna_diodes_count pass test: 0 <= 100
+[INFO] globalroute__timing__setup__ws pass test: -10.5474 >= -27.8
+[INFO] globalroute__timing__setup__tns pass test: -258.533 >= -467
+[INFO] globalroute__timing__hold__ws pass test: 37.4642 >= -19
+[INFO] globalroute__timing__hold__tns pass test: 0 >= -76
+[INFO] detailedroute__route__wirelength pass test: 49876 <= 57175
+[INFO] detailedroute__route__drc_errors pass test: 0 <= 0
+[INFO] detailedroute__antenna__violating__nets pass test: 0 <= 0
+[INFO] detailedroute__antenna_diodes_count pass test: 0 <= 100
+[INFO] finish__timing__setup__ws pass test: -10.7962 >= -24.2
+[INFO] finish__timing__setup__tns pass test: -90.3713 >= -191
+[INFO] finish__timing__hold__ws pass test: 35.9489 >= -19
+[INFO] finish__timing__hold__tns pass test: 0 >= -76
+[INFO] finish__design__instance__area pass test: 1452.2 <= 1663
+Metadata check warnings: 0
+All metadata rules passed (27 rules)

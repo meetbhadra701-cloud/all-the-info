@@ -1,0 +1,64 @@
+### FILE netlists/MAIN/B_dot2_u_w32__tree_pre.aig
+### ARGS -dot=2 -dyn -p -c -no-steps
+### TIMEOUT 300
+### START 2026-09-24T03:46:34-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_dot2_u_w32__tree_pre.aig
+║           mode: dot=2
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╚═ Result: Correct
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: dot
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/MAIN/B_dot2_u_w32__tree_pre.aig
+║ Maximum polynomial : 2419
+║ Number of iteration: 21162
+║ Elapsed time: 28.8325 (in seconds)
+║ Number and-gates : 21099
+║ Substitution steps : 21164
+║ Number of removed conflicts : 6552
+║ Total calculated conflicts : 290506
+║ Conflict calculation time: 0.454298 (in seconds)
+║ Number of negated nodes : 2152
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/MAIN/B_dot2_u_w32__tree_pre.aig -dot=2 -dyn -p -c -no-steps"
+	User time (seconds): 24.95
+	System time (seconds): 0.93
+	Percent of CPU this job got: 87%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 29.47s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 303088
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 20314
+	Voluntary context switches: 15
+	Involuntary context switches: 6153
+	Swaps: 0
+	File system inputs: 102
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 76394496
+### DOCKER_EXIT 0
+### WALL_SECONDS 30.50
+### END 2026-09-24T03:47:04-07:00

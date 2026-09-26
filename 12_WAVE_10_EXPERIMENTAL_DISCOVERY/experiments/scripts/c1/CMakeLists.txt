@@ -1,0 +1,17 @@
+# Wave 10 / C1 build: one project, one executable per operator variant.
+# The flags mirror MappingEvolve's top-level CMakeLists (Release, -Wall -O3 -DNDEBUG, C++17).
+cmake_minimum_required(VERSION 3.16)
+project(C1_MAPPINGEVOLVE_REPRO)
+add_definitions(-fPIC)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -DNDEBUG")
+add_subdirectory(third-party)
+foreach(v initial gpt5_it29 deepseek_it24 qwen_it20)
+  add_executable(orig_${v} variants/${v}/main.cpp)
+  target_link_libraries(orig_${v} PUBLIC mockturtle experiments fmt)
+  add_executable(drv_${v} variants/${v}/c1_driver.cpp)
+  target_link_libraries(drv_${v} PUBLIC mockturtle experiments fmt)
+endforeach()
+add_executable(drv_emap c1_emap.cpp)
+target_link_libraries(drv_emap PUBLIC mockturtle experiments fmt)

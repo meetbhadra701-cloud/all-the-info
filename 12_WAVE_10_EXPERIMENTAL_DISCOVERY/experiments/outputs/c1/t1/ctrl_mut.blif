@@ -1,0 +1,205 @@
+.model mapped
+.inputs x0 x1 x2 x3 x4 x5 x6
+.outputs y0 y1 y2 y3 y4 y5 y6 y7 y8 y9 y10 y11 y12 y13 y14 y15 y16 y17 y18 y19 y20 y21 y22 y23 y24 y25
+.names c0_
+.names c1_
+1
+.names  y23
+1
+.names x3 x4 n20
+00 1
+.names x3 x4 n16
+11 1
+.names n20 x1 n16 n22
+--1 1
+11- 1
+.names x0 x1 n18
+00 1
+.names n18 n19
+0 1
+.names n22 x2 n19 n16 y0
+--11 1
+11-- 1
+.names x2 n11
+0 1
+.names x3 n12
+0 1
+.names x4 n13
+0 1
+.names n12 n13 x0 n27
+--1 1
+-1- 1
+1-- 1
+.names x1 n10
+0 1
+.names x4 n12 n24
+00 1
+.names n24 x1 n26
+11 1
+.names n27 n10 n26 n29
+--1 1
+11- 1
+.names n20 x1 n11 n30
+--1 1
+11- 1
+.names n30 n31
+0 1
+.names n11 n29 n31 y1
+-00 1
+0-0 1
+.names n24 n25
+0 1
+.names x0 n9
+0 1
+.names n25 n9 n10 n33
+--1 1
+11- 1
+.names n13 x3 n34
+11 1
+.names n10 n27 n28
+-0 1
+0- 1
+.names n33 n34 n28 n11 y2
+-111 1
+1-11 1
+.names n16 n17
+0 1
+.names n20 n21
+0 1
+.names n10 n11 n12 n36
+--1 1
+11- 1
+.names n9 n17 n21 n36 y3
+-111 1
+1-11 1
+.names n9 x3 x4 x5 n41
+1111 1
+.names x6 n15
+0 1
+.names x5 n14
+0 1
+.names x4 n14 n39
+-0 1
+0- 1
+.names n13 x6 x3 n38
+-11 1
+1-1 1
+.names n15 n39 n38 x0 n40
+-111 1
+1-11 1
+.names n41 n40 x1 n42
+--0 1
+00- 1
+.names n24 n9 x2 n44
+-11 1
+1-1 1
+.names n11 n42 n44 y4
+-00 1
+0-0 1
+.names n12 x4 n11 n43
+--1 1
+11- 1
+.names n38 x2 n43 x1 y5
+-111 1
+1-11 1
+.names x0 x1 n47
+11 1
+.names n17 n47 x2 n48
+--1 1
+-1- 1
+1-- 1
+.names n11 n16 n48 n21 y6
+-111 1
+1-11 1
+.names n20 x1 x0 n16 n50
+--11 1
+11-- 1
+.names n9 n10 n11 x3 x4 n51
+11111 1
+.names n50 x2 n51 y7
+--1 1
+11- 1
+.names n20 n11 n16 n53
+--1 1
+-1- 1
+1-- 1
+.names n33 x2 n53 x1 y8
+-111 1
+1-11 1
+.names n16 x2 x1 n55
+--1 1
+-1- 1
+1-- 1
+.names n33 x2 n30 n55 y9
+-111 1
+1-11 1
+.names x1 n9 n58
+-0 1
+0- 1
+.names n25 n58 x2 n59
+--1 1
+11- 1
+.names n13 x1 x3 n57
+-11 1
+1-1 1
+.names n59 n57 n43 y10
+-11 1
+1-1 1
+.names n20 n11 n10 n9 y11
+1111 1
+.names n12 x1 x4 n64
+--1 1
+11- 1
+.names n9 n10 n13 n62
+--1 1
+11- 1
+.names n12 n62 x2 n63
+-00 1
+0-0 1
+.names n64 x2 n63 y12
+--1 1
+11- 1
+.names n20 x2 x0 y13
+111 1
+.names n20 n9 x2 y14
+111 1
+.names n10 n13 x3 n69
+111 1
+.names n69 n9 x2 y15
+111 1
+.names n69 x2 x0 y16
+111 1
+.names n34 n47 x2 y17
+111 1
+.names n9 n13 x3 x2 x1 y18
+11111 1
+.names n12 n13 x2 y19
+111 1
+.names n39 n47 x3 n75
+111 1
+.names n69 x0 x2 n76
+--1 1
+11- 1
+.names n47 n17 x2 n74
+--0 1
+00- 1
+.names n75 n76 n74 y20
+-11 1
+1-1 1
+.names n15 x4 x3 x1 x5 n78
+11111 1
+.names n78 n69 n11 x0 y21
+-111 1
+1-11 1
+.names n15 n39 n38 n47 n80
+-111 1
+1-11 1
+.names n80 x2 n74 y22
+-11 1
+1-1 1
+.names n18 n47 n25 n11 y24
+-111 1
+1-11 1
+.names n10 n11 n12 x4 x0 y25
+11111 1
+.end

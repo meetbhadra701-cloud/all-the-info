@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_dot2_u_w64__tree_pre.aig
+### ARGS -dot=2 -ipc -p -c -no-steps
+### TIMEOUT 900
+### START 2026-09-24T12:06:25-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_dot2_u_w64__tree_pre.aig
+║           mode: dot=2
+║           sign: unsigned
+║           method: ipc
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 2578989056
+### DOCKER_EXIT 0
+### WALL_SECONDS 903.62
+### END 2026-09-24T12:21:29-07:00

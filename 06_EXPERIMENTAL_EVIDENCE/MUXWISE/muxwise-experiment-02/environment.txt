@@ -1,0 +1,27 @@
+MUXWISE Experiment 02 environment and tool provenance
+Date: 2026-09-20
+
+Host: WSL2 on Windows 11; Linux 6.18.33.2-microsoft-standard-WSL2 x86_64
+Python: 3.14.4
+Git: 2.53.0
+CPU/memory: 8 logical CPUs; 15 GiB RAM; 4 GiB swap
+
+Experiment 1 reused container:
+Image: muxwise-yosys:debian-bookworm
+Image digest: sha256:db444bce0eb8b6863f82a5c91e014e555c82d021882a102f05e62a916e87b18d
+Yosys: 0.23 (git sha1 7ce5011c24b)
+Berkeley ABC: 1.01 (compiled Feb 7 2023 01:39:45)
+
+Primary current toolchain:
+Official YosysHQ OSS CAD Suite release asset:
+https://github.com/YosysHQ/oss-cad-suite-build/releases/tag/2026-09-21
+Asset: oss-cad-suite-linux-x64-20260921.tgz
+Asset SHA-256: fc11a9c05c1de96b2821a5468ed02ba35253b278a78106cbe68167a5c419970c
+Yosys: 0.69+77 (git sha1 9ff27d29c-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+ABC: 1.01 (compiled Sep 21 2026 05:23:42)
+
+The current bundle was downloaded and extracted only under this experiment's work/ directory. It was not installed system-wide. No accessible Liberty standard-cell library or OpenROAD installation was found, so no physical-design PPA was measured.
+
+Version note:
+Experiment 2 primary results use current OSS CAD Suite Yosys 0.69+77. Experiment 1's Yosys 0.23 was retained only for reuse/context. Current Yosys no longer supports the 0.23 `abc -fast` option and no longer advertises `share -force`; those commands were not used in final Experiment 2 comparisons.
+

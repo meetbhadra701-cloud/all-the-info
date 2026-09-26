@@ -1,0 +1,11 @@
+done vga_lcd
+done RISC
+done DSP
+done wb_conmax
+done aes_core
+done ac97_ctrl
+done des_area
+done DMA
+done iwls05_i2c
+done iwls05_mem_ctrl
+done pci_bridge32

@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_mac_u_w32__norm.aig
+### ARGS -mac -igs -p -c -no-steps
+### TIMEOUT 300
+### START 2026-09-24T12:07:33-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_mac_u_w32__norm.aig
+║           mode: mac
+║           sign: unsigned
+║           method: igs
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 525168640
+### DOCKER_EXIT 0
+### WALL_SECONDS 302.27
+### END 2026-09-24T12:12:35-07:00

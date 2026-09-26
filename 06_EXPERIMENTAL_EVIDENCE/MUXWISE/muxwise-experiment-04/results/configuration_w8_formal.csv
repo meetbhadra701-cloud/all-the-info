@@ -1,0 +1,3 @@
+option,width,result,returncode,runtime_seconds,script,log
+default,8,FAIL,1,0.424078,work/configuration_w8/default_w8_formal.ys,logs/configuration_w8/default_w8_formal.log
+no_fma,8,PASS,0,106.021472,work/configuration_w8/no_fma_w8_formal.ys,logs/configuration_w8/no_fma_w8_formal.log

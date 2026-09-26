@@ -1,0 +1,23 @@
+{
+ "job_id": "ctx__A_mul_s_w8__norm_pre__ctx870___igs_p_c",
+ "results_csv": "trace_ctx_results.csv",
+ "netlist": "netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx870.aig",
+ "args": "-mul -s -igs -p -c -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "mul:ss:8,8:16",
+ "witness_complement": {
+  "verdict": "WITNESS_SPURIOUS",
+  "i_means": "complement",
+  "remainder_terms": 1,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": 1024,
+  "input_vector_hex": "0x8",
+  "operands": [
+   "0x8",
+   "0x0"
+  ],
+  "netlist_output": "0x0",
+  "reference": "0x0"
+ },
+ "overall": "REMAINDER_INVALID"
+}

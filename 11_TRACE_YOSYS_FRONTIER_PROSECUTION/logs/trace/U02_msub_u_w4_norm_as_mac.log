@@ -1,0 +1,65 @@
+### FILE netlists/MAIN/C_msub_u_w4__norm.aig
+### ARGS -mac -dyn -p -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T03:16:30-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/C_msub_u_w4__norm.aig
+║           mode: mac
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╠═ Result: Buggy
+║   [34mSP: {16} -128n8n16 + -64n6n16 + -64n8n14 + -32n4n16 + -32n6n14 + -32n8n12 + -16n2n16 + -16n4n14 + -16n6n12 + -16n8n10 + -8n2n14 + -8n4n12 + -8n6n10 + -4n2n12 + -4n4n10 + -2n2n10[39m
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mac
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/netlists/MAIN/C_msub_u_w4__norm.aig
+║ Maximum polynomial : 48
+║ Number of iteration: 195
+║ Elapsed time: 0.00317094 (in seconds)
+║ Number and-gates : 188
+║ Substitution steps : 197
+║ Number of removed conflicts : 53
+║ Total calculated conflicts : 2234
+║ Conflict calculation time: 0.00132393 (in seconds)
+║ Number of negated nodes : 39
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/netlists/MAIN/C_msub_u_w4__norm.aig -mac -dyn -p -c -no-steps"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 45%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 0.02s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13248
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 236
+	Voluntary context switches: 13
+	Involuntary context switches: 11
+	Swaps: 0
+	File system inputs: 1
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 4853760
+### DOCKER_EXIT 0
+### WALL_SECONDS 0.95
+### END 2026-09-24T03:16:31-07:00

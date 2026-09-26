@@ -1,0 +1,150 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+77 (git sha1 9ff27d29c-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+
+-- Running command `help synth; help arith_tree' --
+
+    synth [options]
+
+This command runs the default synthesis script. This command does not operate
+on partly selected designs.
+
+    -top <module>
+        use the specified module as top module (default='top')
+
+    -auto-top
+        automatically determine the top of the design hierarchy
+
+    -flatten
+        flatten the design before synthesis. this will pass '-auto-top' to
+        'hierarchy' if no top module is specified.
+
+    -hieropt
+        enable hierarchical optimization. this option is useful when `-flatten'
+        is not used, or when selected modules are marked with 'keep_hierarchy'
+.        to prevent their dissolution.
+
+    -encfile <file>
+        passed to 'fsm_recode' via 'fsm'
+
+    -lut <k>
+        perform synthesis for a k-LUT architecture.
+
+    -nofsm
+        do not run FSM optimization
+
+    -noabc
+        do not run abc (as if yosys was compiled without ABC support)
+
+    -booth
+        run the booth pass to map $mul to Booth encoded multipliers
+
+    -arith_tree
+        run the arith_tree pass to convert $add/$sub chains and $macc cells to
+        carry-save adder trees.
+
+    -noalumacc
+        do not run 'alumacc' pass. i.e. keep arithmetic operators in
+        their direct form ($add, $sub, etc.).
+
+    -nordff
+        passed to 'memory'. prohibits merging of FFs into memory read ports
+
+    -latches <auto|warn|error>
+        controls how the inference of a latch is reported.
+
+    -noshare
+        do not run SAT-based resource sharing
+
+    -run <from_label>[:<to_label>]
+        only run the commands between the labels (see below). an empty
+        from label is synonymous to 'begin', and empty to label is
+        synonymous to the end of the command list.
+
+    -no-rw-check
+        marks all recognized read ports as "return don't-care value on
+        read/write collision" (same result as setting the no_rw_check
+        attribute on all memories).
+
+    -extra-map filename
+        source extra rules from the given file to complement the default
+        mapping library in the `techmap` step. this option can be
+        repeated.
+
+    -relativeshare
+        use paths relative to share directory for source locations
+        where possible (experimental).
+
+The following commands are executed by this synthesis command:
+
+    begin:
+        hierarchy -check [-top <top> | -auto-top]
+
+    coarse:
+        proc
+        check
+        flatten      (if -flatten)
+        opt_expr
+        check
+        opt_clean
+        opt -nodffe -nosdff
+        fsm          (unless -nofsm)
+        opt [-hier]
+        wreduce
+        peepopt
+        opt_clean
+        techmap -map +/cmp2lut.v -map +/cmp2lcu.v     (if -lut)
+        booth        (if -booth)
+        alumacc      (unless -noalumacc)
+        arith_tree     (if -arith_tree)
+        share        (unless -noshare)
+        opt [-hier]
+        memory -nomap
+        opt_clean
+
+    fine:
+        opt -fast -full [-hier]
+        memory_map
+        opt -full
+        techmap                      (unless -extra-map)
+        techmap -map +/techmap.v -map <inject>      (if -extra-map)
+        techmap -map +/gate2lut.v    (if -noabc and -lut)
+        clean; opt_lut               (if -noabc and -lut)
+        opt -fast [-hier]
+        abc           (unless -noabc, unless -lut)
+        abc -lut k    (unless -noabc, if -lut)
+        opt -fast           (unless -noabc)
+
+    check:
+        hierarchy -check
+        stat
+        check
+
+
+    arith_tree [options] [selection]
+
+This pass replaces chains of $add/$sub cells, $alu cells (with constant
+BI/CI), and $macc/$macc_v2 cells with carry-save adder trees 
+using $fa cells and a single final adder.
+
+    -strategy <fa|42>
+        Compressor strategy. 'fa' uses only 3:2 full-adder groupings
+        '42' (the default) prefers 4:2 compressor groupings, with
+        fallback to 3:2 compressors for residuals
+
+    -final <auto|ripple|prefix>
+        Selects the architecture used for the final two-vector add.
+
+    -no-fma
+        Disable fused multiply-add expansion in $macc cells
+
+The default behaviour delivers 4:2 compression, FMA fusion, and a
+final standard adder
+
+End of script. Logfile hash: 42ca2dbd09, time: 0.02s, user: 0.01s, system: 0.01s, MEM: 10.34 MB peak
+Yosys 0.69+77 (git sha1 9ff27d29c-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 99% 2x help (0 sec), 0% 0x id_gc (0 sec)

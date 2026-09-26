@@ -1,0 +1,65 @@
+### FILE third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig
+### ARGS -mul -dyn -p -c -no-steps
+### TIMEOUT 900
+### START 2026-09-24T02:06:14-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig
+║           mode: mul
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╠═ Result: Buggy
+║   [34mSP: {231} -65536n4n64 + -65536n6n62 + -65536n8n60 + -65536n10n58 + -65536n12n56 + -65536n14n54 + -65536n16n52 + -65536n18n50 + -65536n20n48 + -65536n22n46 + -65536n24n44 + -65536n26n42 + -65536n28n40 + -65536n30n38 + -65536n32n36 + -32768n2n64 + -32768n4n62 + -32768n6n60 + -32768n8n58 + -32768n10n56 + -32768n12n54 + -32768n14n52 + -32768n16n50 + -32768n18n48 + -32768n20n46 + -32768n22n44 + -32768n24n42 + -32768n26n40 + -32768n28n38 + -32768n30n36 + -32768n32n34 + -16384n2n62 + -16384n4n60 + -16384n6n58 + -16384n8n56 + -16384n10n54 + -16384n12n52 + -16384n14n50 + -16384n16n48 + -16384n18n46 + -16384n20n44 + -16384n22n42 + -16384n24n40 + -16384n26n38 + -16384n28n36 + -16384n30n34 + -8192n2n60 + -8192n4n58 + -8192n6n56 + -8192n8n54 + -8192n10n52 + -8192n12n50 + -8192n14n48 + -8192n16n46 + -8192n18n44 + -8192n20n42 + -8192n22n40 + -8192n24n38 + -8192n26n36 + -8192n28n34 + -4096n2n58 + -4096n4n56 + -4096n6n54 + -4096n8n52 + -4096n10n50 + -4096n12n48 + -4096n14n46 + -4096n16n44 + -4096n18n42 + -4096n20n40 + -4096n22n38 + -4096n24n36 + -4096n26n34 + -2048n2n56 + -2048n4n54 + -2048n6n52 + -2048n8n50 + -2048n10n48 + -2048n12n46 + -2048n14n44 + -2048n16n42 + -2048n18n40 + -2048n20n38 + -2048n22n36 + -2048n24n34 + -1024n2n54 + -1024n4n52 + -1024n6n50 + -1024n8n48 + -1024n10n46 + -1024n12n44 + -1024n14n42 + -1024n16n40 + -1024n18n38 + -1024n20n36 + -1024n22n34 + -512n2n52 + -512n4n50 + -512n6n48 + -512n8n46 + -512n10n44 + -512n12n42 + -512n14n40 + -512n16n38 + -512n18n36 + -512n20n34 + -256n2n50 + -256n4n48 + -256n6n46 + -256n8n44 + -256n10n42 + -256n12n40 + -256n14n38 + -256n16n36 + -256n18n34 + -128n2n48 + -128n4n46 + -128n6n44 + -128n8n42 + -128n10n40 + -128n12n38 + -128n14n36 + -128n16n34 + -64n2n46 + -64n4n44 + -64n6n42 + -64n8n40 + -64n10n38 + -64n12n36 + -64n14n34 + -32n2n44 + -32n4n42 + -32n6n40 + -32n8n38 + -32n10n36 + -32n12n34 + -16n2n42 + -16n4n40 + -16n6n38 + -16n8n36 + -16n10n34 + -8n2n40 + -8n4n38 + -8n6n36 + -8n8n34 + -4n2n38 + -4n4n36 + -4n6n34 + -2n2n36 + -2n4n34 + -1n2n34 + 1n2n18 + 1n34 + 2n2n20 + 2n4n18 + 2n36 + 4n2n22 + 4n4n20 + 4n6n18 + 4n38 + 8n2n24 + 8n4n22 + 8n6n20 + 8n8n18 + 8n40 + 16n2n26 + 16n4n24 + 16n6n22 + 16n8n20 + 16n10n18 + 16n42 + 32n2n28 + 32n4n26 + 32n6n24 + 32n8n22 + 32n10n20 + 32n12n18 + 32n44 + 64n2n30 + 64n4n28 + 64n6n26 + 64n8n24 + 64n10n22 + 64n12n20 + 64n14n18 + 64n46 + 128n2n32 + 128n4n30 + 128n6n28 + 128n8n26 + 128n10n24 + 128n12n22 + 128n14n20 + 128n16n18 + 128n48 + 256n4n32 + 256n6n30 + 256n8n28 + 256n10n26 + 256n12n24 + 256n14n22 + 256n16n20 + 256n50 + 512n6n32 + 512n8n30 + 512n10n28 + 512n12n26 + 512n14n24 + 512n16n22 + 512n52 + 1024n8n32 + 1024n10n30 + 1024n12n28 + 1024n14n26 + 1024n16n24 + 1024n54 + 2048n10n32 + 2048n12n30 + 2048n14n28 + 2048n16n26 + 2048n56 + 4096n12n32 + 4096n14n30 + 4096n16n28 + 4096n58 + 8192n14n32 + 8192n16n30 + 8192n60 + 16384n16n32 + 16384n62 + 32768n64[39m
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mul
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig
+║ Maximum polynomial : 288
+║ Number of iteration: 611
+║ Elapsed time: 0.106098 (in seconds)
+║ Number and-gates : 596
+║ Substitution steps : 613
+║ Number of removed conflicts : 218
+║ Total calculated conflicts : 5954
+║ Conflict calculation time: 0.0100752 (in seconds)
+║ Number of negated nodes : 113
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig -mul -dyn -p -c -no-steps"
+	User time (seconds): 0.06
+	System time (seconds): 0.02
+	Percent of CPU this job got: 67%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 0.13s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 18880
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 565
+	Voluntary context switches: 21
+	Involuntary context switches: 416
+	Swaps: 0
+	File system inputs: 3
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 4612096
+### DOCKER_EXIT 0
+### WALL_SECONDS 1.26
+### END 2026-09-24T02:06:15-07:00

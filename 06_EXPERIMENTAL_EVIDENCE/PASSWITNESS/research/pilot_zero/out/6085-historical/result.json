@@ -1,0 +1,60 @@
+{
+  "counterexample": null,
+  "errors": [
+    "Synthesis failed or did not produce a candidate netlist."
+  ],
+  "flow": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue6085/synthesis.ys",
+  "formal": {
+    "backend": "yosys-sat",
+    "counterexample_json": null,
+    "counterexample_vcd": null,
+    "log_path": null,
+    "model": {},
+    "reason": "Formal check was not executed because setup failed.",
+    "runtime_seconds": null,
+    "verdict": "NOT_EXECUTED"
+  },
+  "inferences": [],
+  "input_design": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue6085/source.v",
+  "localization": {
+    "reason": "Localization was not executed.",
+    "status": "NOT_EXECUTED"
+  },
+  "output_directory": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical",
+  "parameters": {},
+  "paths": {
+    "candidate_metadata": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/work/candidate.json",
+    "candidate_netlist": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/work/candidate.v",
+    "formal_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/logs/formal.log",
+    "golden_metadata_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/logs/golden-metadata.log",
+    "synthesis_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/logs/synthesis.log",
+    "tool_version_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/logs/tool-version.log"
+  },
+  "schema_version": 2,
+  "status": "SETUP_ERROR",
+  "synthesis": {
+    "flow": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue6085/synthesis.ys",
+    "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/logs/synthesis.log",
+    "returncode": 1,
+    "runtime_seconds": 0.08111743300105445,
+    "script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-historical/work/candidate.ys"
+  },
+  "tool": {
+    "commit": null,
+    "executable": "/mnt/c/Users/meetb/Downloads/pw-yosys-6085/pw-build/yosys",
+    "executable_sha256": "1a39da5e6e475cadb2ca66e20ac16687ec78ef222ef1f55c631feb05e5d1b9b7",
+    "patch_sha256": null,
+    "source_revision_claim": null,
+    "source_revision_verified": false,
+    "source_tree_dirty": null,
+    "verification_method": "Yosys -V output and SHA-256 of the executable path; source checkout was not supplied",
+    "version": "Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/bin/c++ 13.3.0)",
+    "yosys_reported_commit": null,
+    "yosys_reported_version": "Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/bin/c++ 13.3.0)"
+  },
+  "top_module": "top",
+  "unexecuted_checks": [
+    "Formal equivalence."
+  ],
+  "verified_facts": []
+}

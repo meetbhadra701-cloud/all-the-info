@@ -1,0 +1,25 @@
+{
+ "job_id": "repro__mac_s_w3_zext_addend_mutant_INCORRECT___dyn_c",
+ "results_csv": "trace_repro_results.csv",
+ "netlist": "evidence/trace_phaseopt_minimal_repro/mac_s_w3_zext_addend_mutant_INCORRECT.aig",
+ "args": "-mac -s -dyn -c -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mac:sss:3,3,6:7",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 1,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -64,
+  "input_vector_hex": "0x800",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x20"
+  ],
+  "netlist_output": "0x20",
+  "reference": "0x60"
+ },
+ "overall": "WITNESS_CONFIRMED",
+ "i_vars": false
+}

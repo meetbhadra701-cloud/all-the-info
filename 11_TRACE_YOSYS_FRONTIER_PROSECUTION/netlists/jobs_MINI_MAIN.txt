@@ -1,0 +1,10 @@
+netlists/MINI_MAIN/B_mac_s_w2__tree_pre
+netlists/MINI_MAIN/B_mac_s_w2__tree
+netlists/MINI_MAIN/B_mac_s_w3__tree_pre
+netlists/MINI_MAIN/B_mac_s_w3__tree
+netlists/MINI_MAIN/B_mac_s_w4__tree_pre
+netlists/MINI_MAIN/B_mac_s_w4__tree
+netlists/MINI_MAIN/B_mac_s_w5__tree_pre
+netlists/MINI_MAIN/B_mac_s_w5__tree
+netlists/MINI_MAIN/B_mac_s_w6__tree_pre
+netlists/MINI_MAIN/B_mac_s_w6__tree

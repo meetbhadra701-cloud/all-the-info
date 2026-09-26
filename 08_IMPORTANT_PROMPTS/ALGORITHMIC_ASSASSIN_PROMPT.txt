@@ -1,0 +1,343 @@
+You are the independent ALGORITHMIC / MATHEMATICAL / COMPLEXITY / FEASIBILITY ASSASSIN for a proposed research mechanism.
+
+Do NOT implement it.
+Do NOT create a repository.
+Do NOT modify files.
+Do NOT build a prototype.
+Do NOT use subagents.
+Do NOT publicly disclose anything.
+
+Your job is to determine whether the proposed mechanism is mathematically coherent, computationally meaningful, nontrivial, falsifiable, and implementable.
+
+A KILL verdict is a successful outcome.
+
+CURRENT DATE: September 2026.
+
+CANDIDATE
+
+ChemSyndrome — Contextual Reaction-Space Syndrome Calculus.
+
+MOTIVATING PROBLEM
+
+Modern retrosynthesis systems search over one-step reaction suggestions.
+
+Recent evidence suggests that for template-based systems, the primary limitation may increasingly be reaction-space coverage rather than tree-search sophistication: if the needed transformation is never generated, more search cannot recover it.
+
+A recent system called SynthEx goes beyond fixed reaction libraries by having a language model generate atom-level graph edits.
+
+ChemSyndrome asks whether, before generating arbitrary new chemistry, we can mathematically identify WHAT TRANSFORMATION CAPABILITY IS ABSENT from the current reaction vocabulary.
+
+PROPOSED CORE
+
+Let molecules be labeled graphs.
+
+Let reactions be atom-aware, context-sensitive graph transformations.
+
+Construct a hierarchy Phi_k(G) that represents structural information around atoms/bonds up to context level k.
+
+For reaction r define contextual structural change:
+
+Delta_k(r) = Phi_k(products) - Phi_k(reactants)
+
+where this subtraction is merely an initial formulation; you must replace it if a better algebraic representation is required.
+
+Given:
+
+* target T;
+* allowed starting-material universe S;
+* current reaction operator vocabulary R;
+
+we seek an abstract representation of all transformations composable from R.
+
+An initial linearized formulation would have:
+
+A_k x = b_k
+
+where columns of A_k encode available reaction transformations and b_k is a target/start-material structural boundary.
+
+Construct a check operator:
+
+H_k A_k = 0
+
+and compute:
+
+sigma_k = H_k b_k.
+
+sigma_k is the Reaction-Space Syndrome.
+
+A nonzero syndrome is intended to provide a SOUND obstruction showing that no sequence of currently available reaction operators can satisfy the target boundary under the abstraction.
+
+Then decode a minimal new contextual transformation delta* that removes the obstruction:
+
+delta* = argmin_delta C(delta)
+subject to H_k(b_k - delta) = 0
+
+or an appropriately corrected formulation.
+
+The intended delta* is not necessarily an existing named reaction.
+
+It is a structural specification of the missing reaction capability.
+
+Example conceptual output:
+
+“The existing operator vocabulary lacks any composable transformation capable of producing this ring-forming C–C edit under this radius-2 local context while satisfying atom-lineage constraints.”
+
+The system would use a hierarchy:
+
+sigma_0, sigma_1, sigma_2, ...
+
+Increasing levels add molecular context.
+
+The lowest context level revealing a useful obstruction is tentatively called Minimal Obstruction Radius.
+
+YOUR ROLE
+
+Assume the novelty reviewer is handled independently by another model.
+
+Concentrate on whether this can actually work.
+
+FORMALIZE IT FROM SCRATCH.
+
+Do not accept the equations above merely because they are written mathematically.
+
+Ask whether they make sense.
+
+Your required tasks:
+
+1. FORMAL SEMANTICS
+
+Define a minimal precise model of:
+
+* molecule;
+* atom identity;
+* molecular graph;
+* starting-material multiset;
+* target;
+* reaction operator;
+* reaction instantiation;
+* context;
+* graph rewrite;
+* reaction route;
+* route composition;
+* reachability.
+
+State all simplifying assumptions.
+
+2. DETERMINE THE RIGHT ALGEBRA
+
+Test whether ordinary vector addition can represent route composition.
+
+If not, investigate:
+
+* integer lattices;
+* semimodules;
+* tensors;
+* hypergraphs;
+* category/rule algebra;
+* Petri nets;
+* graph-rewrite monoids/categories;
+* constraint systems;
+* other appropriate structures.
+
+Do not preserve the “syndrome” framing if the math does not support it.
+
+3. SOUNDNESS QUESTION
+
+Find conditions under which:
+
+sigma != 0
+
+really implies:
+
+NO route exists using reaction vocabulary R and starting-material universe S.
+
+Explicitly distinguish:
+
+* necessary conditions;
+* sufficient conditions;
+* exact conditions;
+* relaxations.
+
+Attempt to construct counterexamples.
+
+4. USEFULNESS QUESTION
+
+A trivially sound invariant may be useless.
+
+Determine whether the strongest cheaply computable syndrome is likely to carry more information than:
+
+* elemental balance;
+* bond counts;
+* graph edit distance;
+* stoichiometric invariants;
+* ordinary Petri-net invariants;
+* planning landmarks.
+
+Construct small examples where these baselines fail but the proposed contextual syndrome could succeed.
+
+If you cannot construct such examples, that is evidence toward KILL.
+
+5. CONTEXT HIERARCHY
+
+Determine whether a hierarchy Phi_0, Phi_1, ... can be designed so that:
+
+* low levels are cheap;
+* higher levels become more discriminative;
+* soundness is preserved;
+* computation does not simply converge to explicit route enumeration.
+
+Investigate rooted-subgraph counts, Weisfeiler-Lehman-like neighborhoods, atom-lineage representations, graph constraints and other plausible formulations.
+
+6. COMPLEXITY
+
+Characterize the likely complexity of:
+
+* checking the syndrome;
+* constructing H_k or its analogue;
+* stock selection;
+* contextual reaction applicability;
+* decoding delta*;
+* increasing k;
+* proving soundness.
+
+Identify NP-hardness, PSPACE-hardness, undecidability or exponential blowups inherited from planning/graph rewriting where relevant.
+
+7. MISSING-TRANSFORMATION DECODING
+
+Formalize delta*.
+
+What exactly is it?
+
+A graph-edit pattern?
+A rewrite rule?
+A family of rewrite rules?
+A context-constrained operator?
+A minimal relaxation of the planning domain?
+
+Determine whether finding the minimum delta* is well-posed.
+
+Check degeneracy: perhaps thousands of unrelated transformations cancel the same syndrome.
+
+If so, determine whether the syndrome contains enough information to localize missing chemistry.
+
+8. HIDDEN-ANSWER LEAKAGE
+
+Attack whether choosing atom mappings, stocks, motifs, Phi_k, or reaction contexts gives the method the ground-truth route implicitly.
+
+The method must not receive the reaction it is supposed to discover.
+
+9. CHEMICAL REALISM
+
+Analyze:
+
+* reagents;
+* catalysts;
+* protecting groups;
+* leaving groups;
+* atoms introduced or removed;
+* salts;
+* unmapped species;
+* stereochemistry;
+* ring rearrangements;
+* cascade transformations;
+* atom mapping ambiguity.
+
+Determine which can be ignored in the FIRST theoretical test and which break the mechanism fundamentally.
+
+10. CHEAP KILLER EXPERIMENT
+
+Design a 1–7 day mechanism-only experiment.
+
+No product.
+No UI.
+No platform.
+
+Suggested starting idea, which you should criticize or replace:
+
+Take known routes.
+Construct a reaction vocabulary containing all required reactions.
+Verify zero obstruction.
+
+Then deliberately remove one transformation class or graph-edit family.
+
+Without giving the algorithm the hidden route, ask whether:
+(a) an obstruction appears;
+(b) the decoded delta* identifies the missing transformation;
+(c) it outperforms generic invariants/landmarks/simple target-stock graph differences.
+
+Specify:
+
+* exact datasets;
+* sample size;
+* baselines;
+* metrics;
+* success threshold;
+* kill threshold;
+* permitted information;
+* forbidden leakage;
+* runtime limits.
+
+11. STRONGEST BASELINES
+
+Identify the exact algorithms we would need to beat.
+
+Include at minimum:
+
+* Petri-net/state-equation invariants;
+* Farkas/separator approaches where appropriate;
+* generic planning landmarks;
+* simple graph-edit difference;
+* direct reaction search;
+* any graph-rewrite invariant method you find.
+
+12. AGENT EXECUTABILITY
+
+Estimate what percentage can realistically be completed by one researcher using Codex/Claude and open-source infrastructure.
+
+Identify what requires an expert chemist or unavailable resource.
+
+13. THEOREM GATE
+
+State the smallest theorem or formal proposition that would justify continuing.
+
+Example shape:
+
+“For reaction systems satisfying assumptions A–D, contextual syndrome construction X is sound, strictly more discriminative than baseline invariant family Y on class C, and computable without explicit route enumeration.”
+
+Do not use this exact theorem unless justified.
+
+14. COUNTEREXAMPLE GATE
+
+Try hard to produce a toy counterexample destroying the entire concept.
+
+A counterexample is valuable.
+
+15. VERDICT
+
+Return:
+
+A. Clean formal problem statement.
+B. Best mathematical formulation.
+C. Whether “syndrome” is mathematically legitimate or misleading.
+D. Required soundness theorem.
+E. Complexity analysis.
+F. At least three adversarial toy examples.
+G. Strongest baselines.
+H. Cheapest killer experiment.
+I. Explicit numerical kill criteria.
+J. Estimated agent executability.
+K. Confidence technical mechanism is coherent, 0–100%.
+L. Confidence mechanism can be nontrivially better than generic invariants, 0–100%.
+M. Final verdict: exactly one of PASS / REDEFINE / KILL.
+
+Do not be supportive.
+
+Do not attempt to rescue it because it sounds creative.
+
+If the mechanism collapses to elementary linear algebra or established planning invariants, KILL.
+
+If there is one narrower mathematically meaningful primitive, return REDEFINE and specify it exactly.
+
+If the mechanism survives, PASS it only to the next theoretical gate—not implementation.
+
+STOP after the review.

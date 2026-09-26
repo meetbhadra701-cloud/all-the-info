@@ -1,0 +1,65 @@
+### FILE evidence/trace_phaseopt_minimal_repro/mac_s_w3_patched_noabc_CORRECT.aig
+### ARGS -mac -s -dyn -p -c -no-steps
+### TIMEOUT 60
+### START 2026-09-24T11:28:30-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/evidence/trace_phaseopt_minimal_repro/mac_s_w3_patched_noabc_CORRECT.aig
+║           mode: mac
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+╠═ Result: Buggy
+║   [34mSP: {2} -64 + 64i24[39m
+╔═ Final Report
+║ Trace compiled on: Apr 13 2026 at 16:17:30 (release build)
+║ 
+╠═ Program modes
+║ Circuit mode: mac
+║ Traversal method: dyn
+║ Debug mode: Y
+║ 
+╠═ General Information
+║ Circuit path: /data/evidence/trace_phaseopt_minimal_repro/mac_s_w3_patched_noabc_CORRECT.aig
+║ Maximum polynomial : 38
+║ Number of iteration: 149
+║ Elapsed time: 0.0476819 (in seconds)
+║ Number and-gates : 144
+║ Substitution steps : 151
+║ Number of removed conflicts : 40
+║ Total calculated conflicts : 3120
+║ Conflict calculation time: 0.00322721 (in seconds)
+║ Number of negated nodes : 18
+╚═ Process complete
+	Command being timed: "/opt/trace/trace /data/evidence/trace_phaseopt_minimal_repro/mac_s_w3_patched_noabc_CORRECT.aig -mac -s -dyn -p -c -no-steps"
+	User time (seconds): 0.00
+	System time (seconds): 0.00
+	Percent of CPU this job got: 11%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0m 0.08s
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 13248
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 233
+	Voluntary context switches: 15
+	Involuntary context switches: 17
+	Swaps: 0
+	File system inputs: 1
+	File system outputs: 0
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
+### TRACE_EXIT 0
+### CGROUP_MEMORY_PEAK_BYTES 5394432
+### DOCKER_EXIT 0
+### WALL_SECONDS 1.35
+### END 2026-09-24T11:28:32-07:00

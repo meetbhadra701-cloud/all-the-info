@@ -1,0 +1,30 @@
+job_id,rel_path,args,timeout_s,expected,note
+BL01_readme_16_AR_RC,third_party/trace_d57aa9a7/example_circuits/multipliers/16_16_U_SP_AR_RC.aig,-mul -p -c -no-steps,900,CORRECT,README documented example
+BL02_8_AR_RC,third_party/trace_d57aa9a7/example_circuits/multipliers/8_8_U_SP_AR_RC.aig,-mul -p -c -no-steps,900,CORRECT,GenMul example
+BL03_beh_MUL_8,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mul -dyn -p -c -no-steps,900,CORRECT,paper best config DYN+P+C
+BL04_beh_MUL_16,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_16.aig,-mul -dyn -p -c -no-steps,900,CORRECT,
+BL05_beh_MUL_32,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_32.aig,-mul -dyn -p -c -no-steps,900,CORRECT,
+BL06_beh_MUL_64,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_64.aig,-mul -dyn -p -c -no-steps,900,CORRECT,
+BL07_64_WT_KS,third_party/trace_d57aa9a7/example_circuits/multipliers/64_64_U_SP_WT_KS.aig,-mul -dyn -p -c -no-steps,900,CORRECT,paper reports 98.84 s
+BL08_beh_mac_8,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig,-mac -dyn -p -c -no-steps,900,CORRECT,
+BL09_beh_mac_16,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_16.aig,-mac -dyn -p -c -no-steps,900,CORRECT,
+BL10_beh_mac_32,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_32.aig,-mac -dyn -p -c -no-steps,900,CORRECT,paper reports 2.86 s
+BL11_beh_mac_64,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_64.aig,-mac -dyn -p -c -no-steps,900,CORRECT,paper reports 86.06 s
+BL12_NMAC_8_AR_RC,third_party/trace_d57aa9a7/example_circuits/macs/NMAC_8_8_U_SP_AR_RC.aig,-mac -dyn -p -c -no-steps,900,CORRECT,cin input is dangling
+BL13_NMAC_32_WT_KS,third_party/trace_d57aa9a7/example_circuits/macs/NMAC_32_32_U_SP_WT_KS.aig,-mac -dyn -p -c -no-steps,900,CORRECT,
+BL14_ADD_8_RC,third_party/trace_d57aa9a7/example_circuits/adders/ADD_8_8_RC.aig,-add -no-steps,900,CORRECT,
+BL15_ADD_128_CL,third_party/trace_d57aa9a7/example_circuits/adders/ADD_128_128_CL.aig,-add -no-steps,900,CORRECT,
+BL16_wrongmode_MUL8_as_mac,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,control: circuit is a*b not MAC
+BL17_wrongmode_mac8_as_mul,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,control: circuit is MAC not a*b
+BL18_wrongsign_MUL8_signed,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mul -s -dyn -p -c -no-steps,900,INCORRECT,control: unsigned circuit checked as signed
+BL19_MUTX_beh_MUL_8,netlists/BASELINE/MUTX_behavioral_MUL_8.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,gate-level mutant (oracle-proven exhaustive)
+BL20_MUTX_beh_mac_8,netlists/BASELINE/MUTX_behavioral_mac_8.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,gate-level mutant
+BL21_MUTX_16_WT_KS,netlists/BASELINE/MUTX_16_16_U_SP_WT_KS.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,gate-level mutant
+BL22_MUTX_beh_MUL_32,netlists/BASELINE/MUTX_behavioral_MUL_32.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,gate-level mutant
+BL23_MUTX_NMAC_8,netlists/BASELINE/MUTX_NMAC_8_8_U_SP_AR_RC.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,gate-level mutant
+BL24_MUTX_beh_mac_32,netlists/BASELINE/MUTX_behavioral_mac_32.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,gate-level mutant
+BL25_IDENT_beh_MUL_8,netlists/BASELINE/IDENT_behavioral_MUL_8.aig,-mul -dyn -p -c -no-steps,900,CORRECT,symbol-stripped identical copy
+BL26_IDENT_beh_mac_8,netlists/BASELINE/IDENT_behavioral_mac_8.aig,-mac -dyn -p -c -no-steps,900,CORRECT,symbol-stripped identical copy
+BL27_IDENT_16_WT_KS,netlists/BASELINE/IDENT_16_16_U_SP_WT_KS.aig,-mul -dyn -p -c -no-steps,900,CORRECT,symbol-stripped identical copy
+BL28_gen_beh_MUL_8,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-gen -no-steps,900,UNKNOWN,inspect -gen output
+BL29_idx_beh_MUL_16,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_16.aig,-mul -no-steps,900,CORRECT,default idx without P/C

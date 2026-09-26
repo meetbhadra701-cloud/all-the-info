@@ -1,0 +1,6 @@
+done DMA
+done iwls05_i2c
+done iwls05_mem_ctrl
+done pci_bridge32
+done sasc
+done simple_spi

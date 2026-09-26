@@ -1,0 +1,4 @@
+======== ABC command line "read_aiger /mnt/c/Users/meetb/Desktop/CLAUDE_OPUS_5_5_RESEARCH_CONTEXT/11_TRACE_YOSYS_FRONTIER_PROSECUTION/netlists/CONTROL/A_mul_u_w8__booth_pre_folded.aig; strash; &get -n; &fraig -x; &put; scorr; dc2; dretime; strash; &get -n; &dch -f; &put; strash; write_aiger -s /mnt/c/Users/meetb/Desktop/CLAUDE_OPUS_5_5_RESEARCH_CONTEXT/11_TRACE_YOSYS_FRONTIER_PROSECUTION/netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__yosysnomap.aig"
+Warning: The network is combinational (run "fraig" or "fraig_sweep").
+Warning: Transforming AIG with 38 choice nodes.
+Warning: The choice nodes in the original AIG are removed by strashing.

@@ -1,0 +1,2 @@
+======== ABC command line "version"
+UC Berkeley, ABC 1.01 (compiled Sep 21 2026 05:23:42)

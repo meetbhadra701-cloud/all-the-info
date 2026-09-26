@@ -1,0 +1,199 @@
+
+==========================================================================
+floorplan final report_tns
+--------------------------------------------------------------------------
+tns max 0.00
+
+==========================================================================
+floorplan final report_wns
+--------------------------------------------------------------------------
+wns max 0.00
+
+==========================================================================
+floorplan final report_worst_slack
+--------------------------------------------------------------------------
+worst slack max 245.37
+
+==========================================================================
+floorplan final report_clock_min_period
+--------------------------------------------------------------------------
+core_clock period_min = 254.63 fmax = 3927.32
+
+==========================================================================
+floorplan final report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: dpath.a_reg.out[3]$_DFFE_PP_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: dpath.b_reg.out[3]$_DFFE_PP_
+          (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ dpath.a_reg.out[3]$_DFFE_PP_/CLK (gt2_6t_dffasync_x1_w13_elvt)
+     4    0.00   11.66   26.69   26.69 ^ dpath.a_reg.out[3]$_DFFE_PP_/Q (gt2_6t_dffasync_x1_w13_elvt)
+                                         dpath.a_lt_b$in0[3] (net)
+                 11.66    0.00   26.69 ^ _567_/A1 (gt2_6t_aoi211_x1_w31_elvt)
+     1    0.00    2.24    8.35   35.04 v _567_/Y (gt2_6t_aoi211_x1_w31_elvt)
+                                         _222_ (net)
+                  2.24    0.00   35.04 v _568_/B (gt2_6t_aoi21_x1_w31_elvt)
+     1    0.00    1.79    3.94   38.98 ^ _568_/Y (gt2_6t_aoi21_x1_w31_elvt)
+                                         _014_ (net)
+                  1.79    0.00   38.98 ^ dpath.b_reg.out[3]$_DFFE_PP_/D (gt2_6t_dffasync_x1_w13_elvt)
+                                 38.98   data arrival time
+
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.00    0.00   clock reconvergence pessimism
+                                  0.00 ^ dpath.b_reg.out[3]$_DFFE_PP_/CLK (gt2_6t_dffasync_x1_w13_elvt)
+                          5.04    5.04   library hold time
+                                  5.04   data required time
+-----------------------------------------------------------------------------
+                                  5.04   data required time
+                                -38.98   data arrival time
+-----------------------------------------------------------------------------
+                                 33.94   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: dpath.b_reg.out[5]$_DFFE_PP_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: resp_msg[12] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ dpath.b_reg.out[5]$_DFFE_PP_/CLK (gt2_6t_dffasync_x1_w13_elvt)
+     8    0.00   30.82   51.29   51.29 v dpath.b_reg.out[5]$_DFFE_PP_/Q (gt2_6t_dffasync_x1_w13_elvt)
+                                         dpath.a_lt_b$in1[5] (net)
+                 30.82    0.00   51.29 v _408_/A (gt2_6t_inv_x1_w31_elvt)
+     3    0.00    8.14   11.72   63.01 ^ _408_/Y (gt2_6t_inv_x1_w31_elvt)
+                                         _084_ (net)
+                  8.14    0.00   63.01 ^ _410_/A2 (gt2_6t_aoi22_x1_w31_elvt)
+     1    0.00    5.93    7.01   70.02 v _410_/Y (gt2_6t_aoi22_x1_w31_elvt)
+                                         _086_ (net)
+                  5.93    0.00   70.02 v _411_/B2 (gt2_6t_oai22_x1_w13_hvt)
+     1    0.00    8.80   16.89   86.91 ^ _411_/Y (gt2_6t_oai22_x1_w13_hvt)
+                                         _087_ (net)
+                  8.80    0.00   86.91 ^ _412_/B (gt2_6t_nand2_x1_w31_lvt)
+     1    0.00    3.67    7.25   94.16 v _412_/Y (gt2_6t_nand2_x1_w31_lvt)
+                                         _088_ (net)
+                  3.67    0.00   94.16 v _413_/B (gt2_6t_oa21_x1_w31_elvt)
+     9    0.00    9.04   14.21  108.37 v _413_/Y (gt2_6t_oa21_x1_w31_elvt)
+                                         _089_ (net)
+                  9.04    0.00  108.37 v _452_/A2 (gt2_6t_oai21_x1_w31_elvt)
+     8    0.00   11.39   15.71  124.08 ^ _452_/Y (gt2_6t_oai21_x1_w31_elvt)
+                                         _125_ (net)
+                 11.39    0.00  124.08 ^ _476_/A2 (gt2_6t_oai21_x1_w13_lvt)
+     1    0.00    7.33   12.96  137.04 v _476_/Y (gt2_6t_oai21_x1_w13_lvt)
+                                         _149_ (net)
+                  7.33    0.00  137.04 v _477_/B (gt2_6t_nand3_x1_w31_elvt)
+     1    0.00    3.42    5.99  143.03 ^ _477_/Y (gt2_6t_nand3_x1_w31_elvt)
+                                         _150_ (net)
+                  3.42    0.00  143.03 ^ _478_/B (gt2_6t_oai21_x1_w31_elvt)
+     2    0.00    6.44    7.77  150.80 v _478_/Y (gt2_6t_oai21_x1_w31_elvt)
+                                         _151_ (net)
+                  6.44    0.00  150.80 v _479_/B (gt2_6t_nand2_x1_w31_elvt)
+     1    0.00    1.95    3.83  154.63 ^ _479_/Y (gt2_6t_nand2_x1_w31_elvt)
+                                         resp_msg[12] (net)
+                  1.95    0.00  154.63 ^ resp_msg[12] (out)
+                                154.63   data arrival time
+
+                  0.00  500.00  500.00   clock core_clock (rise edge)
+                          0.00  500.00   clock network delay (ideal)
+                          0.00  500.00   clock reconvergence pessimism
+                       -100.00  400.00   output external delay
+                                400.00   data required time
+-----------------------------------------------------------------------------
+                                400.00   data required time
+                               -154.63   data arrival time
+-----------------------------------------------------------------------------
+                                245.37   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: dpath.b_reg.out[5]$_DFFE_PP_
+            (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: resp_msg[12] (output port clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ dpath.b_reg.out[5]$_DFFE_PP_/CLK (gt2_6t_dffasync_x1_w13_elvt)
+     8    0.00   30.82   51.29   51.29 v dpath.b_reg.out[5]$_DFFE_PP_/Q (gt2_6t_dffasync_x1_w13_elvt)
+                                         dpath.a_lt_b$in1[5] (net)
+                 30.82    0.00   51.29 v _408_/A (gt2_6t_inv_x1_w31_elvt)
+     3    0.00    8.14   11.72   63.01 ^ _408_/Y (gt2_6t_inv_x1_w31_elvt)
+                                         _084_ (net)
+                  8.14    0.00   63.01 ^ _410_/A2 (gt2_6t_aoi22_x1_w31_elvt)
+     1    0.00    5.93    7.01   70.02 v _410_/Y (gt2_6t_aoi22_x1_w31_elvt)
+                                         _086_ (net)
+                  5.93    0.00   70.02 v _411_/B2 (gt2_6t_oai22_x1_w13_hvt)
+     1    0.00    8.80   16.89   86.91 ^ _411_/Y (gt2_6t_oai22_x1_w13_hvt)
+                                         _087_ (net)
+                  8.80    0.00   86.91 ^ _412_/B (gt2_6t_nand2_x1_w31_lvt)
+     1    0.00    3.67    7.25   94.16 v _412_/Y (gt2_6t_nand2_x1_w31_lvt)
+                                         _088_ (net)
+                  3.67    0.00   94.16 v _413_/B (gt2_6t_oa21_x1_w31_elvt)
+     9    0.00    9.04   14.21  108.37 v _413_/Y (gt2_6t_oa21_x1_w31_elvt)
+                                         _089_ (net)
+                  9.04    0.00  108.37 v _452_/A2 (gt2_6t_oai21_x1_w31_elvt)
+     8    0.00   11.39   15.71  124.08 ^ _452_/Y (gt2_6t_oai21_x1_w31_elvt)
+                                         _125_ (net)
+                 11.39    0.00  124.08 ^ _476_/A2 (gt2_6t_oai21_x1_w13_lvt)
+     1    0.00    7.33   12.96  137.04 v _476_/Y (gt2_6t_oai21_x1_w13_lvt)
+                                         _149_ (net)
+                  7.33    0.00  137.04 v _477_/B (gt2_6t_nand3_x1_w31_elvt)
+     1    0.00    3.42    5.99  143.03 ^ _477_/Y (gt2_6t_nand3_x1_w31_elvt)
+                                         _150_ (net)
+                  3.42    0.00  143.03 ^ _478_/B (gt2_6t_oai21_x1_w31_elvt)
+     2    0.00    6.44    7.77  150.80 v _478_/Y (gt2_6t_oai21_x1_w31_elvt)
+                                         _151_ (net)
+                  6.44    0.00  150.80 v _479_/B (gt2_6t_nand2_x1_w31_elvt)
+     1    0.00    1.95    3.83  154.63 ^ _479_/Y (gt2_6t_nand2_x1_w31_elvt)
+                                         resp_msg[12] (net)
+                  1.95    0.00  154.63 ^ resp_msg[12] (out)
+                                154.63   data arrival time
+
+                  0.00  500.00  500.00   clock core_clock (rise edge)
+                          0.00  500.00   clock network delay (ideal)
+                          0.00  500.00   clock reconvergence pessimism
+                       -100.00  400.00   output external delay
+                                400.00   data required time
+-----------------------------------------------------------------------------
+                                400.00   data required time
+                               -154.63   data arrival time
+-----------------------------------------------------------------------------
+                                245.37   slack (MET)
+
+
+
+==========================================================================
+floorplan final report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             4.44e-05   9.21e-06   1.57e-06   5.52e-05  37.2%
+Combinational          3.61e-05   4.70e-05   1.02e-05   9.33e-05  62.8%
+Clock                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  8.06e-05   5.62e-05   1.17e-05   1.48e-04 100.0%
+                          54.3%      37.8%       7.9%

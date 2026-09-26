@@ -1,0 +1,5 @@
+read_verilog -sv rtl/A_mul_u_w8.v
+synth -top top -booth
+aigmap
+opt_clean
+write_aiger -symbols -map netlists/MAIN/A_mul_u_w8__booth.map netlists/MAIN/A_mul_u_w8__booth.aig

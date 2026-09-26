@@ -1,0 +1,33 @@
+build,design,arch,family,spec,rtl_expectation,ands,port_order_ok,oracle,exhaustive,vectors,mismatches,first_mismatch,oracle_seconds,derived_from
+MAIN,A_mul_s_w64,booth_pre,A,"mul:ss:64,64:128",CORRECT,33045,True,CORRECT,False,17685,0,,1.5,
+MAIN,A_mul_s_w64,norm_pre,A,"mul:ss:64,64:128",CORRECT,46160,True,CORRECT,False,17685,0,,1.56,
+MAIN,A_mul_u_w64,booth_pre,A,"mul:uu:64,64:128",CORRECT,33636,True,CORRECT,False,17685,0,,1.53,
+MAIN,A_mul_u_w64,norm_pre,A,"mul:uu:64,64:128",CORRECT,42221,True,CORRECT,False,17685,0,,1.56,
+MAIN,B_dot2_u_w64,tree_pre,B,"dot2:uuuu:64,64,64,64:129",CORRECT,83833,True,CORRECT,False,19126,0,,2.58,
+MAIN,B_mac_s_w64,tree_pre,B,"mac:sss:64,64,128:129",CORRECT,43176,True,INCORRECT,False,18204,18204,"{""input_vector_hex"": ""0x0"", ""operands"": [""0x0"", ""0x0"", ""0x0""], ""got"": ""0x100000000000000000000000000000000"", ""expected"": ""0x0"", ""diff_bits"": [128]}",2.19,
+MAIN,B_mac_u_w64,norm_pre,B,"mac:uuu:64,64,128:129",CORRECT,43302,True,CORRECT,False,18204,0,,2.24,
+MAIN,B_mac_u_w64,tree_pre,B,"mac:uuu:64,64,128:129",CORRECT,42663,True,CORRECT,False,18204,0,,2.23,
+PATCH,B_mac_s_w64,tree_pre,B,"mac:sss:64,64,128:129",CORRECT,43176,True,CORRECT,False,18204,0,,2.22,
+CONTROL,A_mul_s_w8,A_mul_s_w8__norm_pre_xorself_b7_y15,A,"mul:ss:8,8:16",CORRECT,766,inherited,CORRECT,True,65536,0,,0.62,netlists/MAIN/A_mul_s_w8__norm_pre.aig
+CONTROL,A_mul_u_w16,A_mul_u_w16__booth_pre_folded,A,"mul:uu:16,16:32",CORRECT,2410,inherited,CORRECT,False,17668,0,,0.32,netlists/MAIN/A_mul_u_w16__booth_pre.aig
+CONTROL,A_mul_u_w32,A_mul_u_w32__booth_pre_folded,A,"mul:uu:32,32:64",CORRECT,8832,inherited,CORRECT,False,17668,0,,0.67,netlists/MAIN/A_mul_u_w32__booth_pre.aig
+CONTROL,A_mul_u_w64,A_mul_u_w64__booth_pre_folded,A,"mul:uu:64,64:128",CORRECT,33509,inherited,CORRECT,False,17685,0,,1.47,netlists/MAIN/A_mul_u_w64__booth_pre.aig
+CONTROL,A_mul_u_w8,A_mul_u_w8__booth_pre_folded,A,"mul:uu:8,8:16",CORRECT,664,inherited,CORRECT,True,65536,0,,0.6,netlists/MAIN/A_mul_u_w8__booth_pre.aig
+CONTROL,A_mul_u_w8,A_mul_u_w8__norm_pre_buffered,A,"mul:uu:8,8:16",CORRECT,608,inherited,CORRECT,True,65536,0,,0.59,netlists/MAIN/A_mul_u_w8__norm_pre.aig
+CONTROL,A_mul_u_w8,A_mul_u_w8__norm_pre_contra_a0_y0,A,"mul:uu:8,8:16",CORRECT,609,inherited,CORRECT,True,65536,0,,0.59,netlists/MAIN/A_mul_u_w8__norm_pre.aig
+CONTROL,A_mul_u_w8,A_mul_u_w8__norm_pre_contra_b7_y15,A,"mul:uu:8,8:16",CORRECT,609,inherited,CORRECT,True,65536,0,,0.6,netlists/MAIN/A_mul_u_w8__norm_pre.aig
+CONTROL,A_mul_u_w8,A_mul_u_w8__norm_pre_xorself_a0_y0,A,"mul:uu:8,8:16",CORRECT,613,inherited,CORRECT,True,65536,0,,0.58,netlists/MAIN/A_mul_u_w8__norm_pre.aig
+CONTROL,A_mul_u_w8,A_mul_u_w8__norm_pre_xorself_b7_y15,A,"mul:uu:8,8:16",CORRECT,613,inherited,CORRECT,True,65536,0,,0.6,netlists/MAIN/A_mul_u_w8__norm_pre.aig
+CONTROL,B_mac_u_w8,B_mac_u_w8__tree_pre_contra_c15_y16,B,"mac:uuu:8,8,16:17",CORRECT,731,inherited,CORRECT,False,18185,0,,0.25,netlists/MAIN/B_mac_u_w8__tree_pre.aig
+CONTROL,B_mac_u_w8,B_mac_u_w8__tree_pre_xorself_c15_y16,B,"mac:uuu:8,8,16:17",CORRECT,735,inherited,CORRECT,False,18185,0,,0.25,netlists/MAIN/B_mac_u_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1,B,"mac:sss:8,8,16:17",CORRECT,794,inherited,INCORRECT,False,18185,18185,"{""input_vector_hex"": ""0x0"", ""operands"": [""0x0"", ""0x0"", ""0x0""], ""got"": ""0x10000"", ""expected"": ""0x0"", ""diff_bits"": [16]}",0.26,netlists/PATCH/B_mac_s_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64,B,"mac:sss:8,8,16:17",CORRECT,797,inherited,INCORRECT,False,18185,8996,"{""input_vector_hex"": ""0xffff0001"", ""operands"": [""0x1"", ""0x0"", ""0xffff""], ""got"": ""0xffff"", ""expected"": ""0x1ffff"", ""diff_bits"": [16]}",0.27,netlists/PATCH/B_mac_s_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65,B,"mac:sss:8,8,16:17",CORRECT,797,inherited,INCORRECT,False,18185,9189,"{""input_vector_hex"": ""0x0"", ""operands"": [""0x0"", ""0x0"", ""0x0""], ""got"": ""0x10000"", ""expected"": ""0x0"", ""diff_bits"": [16]}",0.27,netlists/PATCH/B_mac_s_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1,B,"mac:sss:8,8,16:17",CORRECT,788,inherited,INCORRECT,False,18185,18185,"{""input_vector_hex"": ""0x0"", ""operands"": [""0x0"", ""0x0"", ""0x0""], ""got"": ""0x10000"", ""expected"": ""0x0"", ""diff_bits"": [16]}",0.26,netlists/PATCH/B_mac_s_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64,B,"mac:sss:8,8,16:17",CORRECT,791,inherited,INCORRECT,False,18185,8996,"{""input_vector_hex"": ""0xffff0001"", ""operands"": [""0x1"", ""0x0"", ""0xffff""], ""got"": ""0xffff"", ""expected"": ""0x1ffff"", ""diff_bits"": [16]}",0.25,netlists/PATCH/B_mac_s_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65,B,"mac:sss:8,8,16:17",CORRECT,791,inherited,INCORRECT,False,18185,9189,"{""input_vector_hex"": ""0x0"", ""operands"": [""0x0"", ""0x0"", ""0x0""], ""got"": ""0x10000"", ""expected"": ""0x0"", ""diff_bits"": [16]}",0.26,netlists/PATCH/B_mac_s_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,PATCH_B_mac_s_w8__tree_contra_a0_y3,B,"mac:sss:8,8,16:17",CORRECT,760,inherited,CORRECT,False,18185,0,,0.27,netlists/PATCH/B_mac_s_w8__tree.aig
+CONTROL,B_mac_s_w8,PATCH_B_mac_s_w8__tree_contra_c15_y16,B,"mac:sss:8,8,16:17",CORRECT,760,inherited,CORRECT,False,18185,0,,0.26,netlists/PATCH/B_mac_s_w8__tree.aig
+CONTROL,B_mac_s_w8,PATCH_B_mac_s_w8__tree_pre_folded,B,"mac:sss:8,8,16:17",CORRECT,788,inherited,CORRECT,False,18185,0,,0.28,netlists/PATCH/B_mac_s_w8__tree_pre.aig
+CONTROL,B_mac_s_w8,PATCH_B_mac_s_w8__tree_xorself_a0_y3,B,"mac:sss:8,8,16:17",CORRECT,764,inherited,CORRECT,False,18185,0,,0.26,netlists/PATCH/B_mac_s_w8__tree.aig
+CONTROL,B_mac_s_w8,PATCH_B_mac_s_w8__tree_xorself_c15_y16,B,"mac:sss:8,8,16:17",CORRECT,764,inherited,CORRECT,False,18185,0,,0.27,netlists/PATCH/B_mac_s_w8__tree.aig

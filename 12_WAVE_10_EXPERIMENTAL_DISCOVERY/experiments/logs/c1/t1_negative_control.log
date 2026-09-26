@@ -1,0 +1,16 @@
+17c17
+<   NAND2x1_ASAP7_75t_R  g12( .A (x4), .B (n12), .Y (n24) );
+---
+>   NOR2x1_ASAP7_75t_R  g12( .A (x4), .B (n12), .Y (n24) );
+ctrl good 6.92 103.17 SIM_AGREE None
+Networks are equivalent.  Time =     0.01 sec
+ctrl mut 6.92 103.17 SIM_MISMATCH {'po_index': 1, 'po_name': 'y1', 'pattern_bit': 16, 'pi_values': '0100010', 'ref': 0, 'mapped': 1}
+Networks are NOT EQUIVALENT. Output 10 trivially differs (different phase).  Time =     0.00 sec
+80c80
+<   NAND2x1_ASAP7_75t_R  g075( .A (n272), .B (n293), .Y (y16) );
+---
+>   NOR2x1_ASAP7_75t_R  g075( .A (n272), .B (n293), .Y (y16) );
+i2c good 70.23 164.1 SIM_AGREE None
+Networks are equivalent.  Time =     0.04 sec
+i2c mut 70.23 164.1 SIM_MISMATCH {'po_index': 16, 'po_name': 'y16', 'pattern_bit': 4, 'pi_values': '010011010001011000100101011000000011011010010101011110011110100101001110110010100000110001111100001101101001001100000000100110001010110110011110110', 'ref': 1, 'mapped': 0}
+Networks are NOT EQUIVALENT.  Time =     0.00 sec

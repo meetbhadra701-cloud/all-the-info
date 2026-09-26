@@ -1,0 +1,23 @@
+job_id,rel_path,args,expected,note
+s2__MAIN__B_dot2_u_w8__norm_pre,netlists/MAIN/B_dot2_u_w8__norm_pre.aig,-dot=2,CORRECT,W=8;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_mac_s_w8__norm_pre,netlists/MAIN/B_mac_s_w8__norm_pre.aig,-mac -s,CORRECT,W=8;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_mac_u_w8__norm_pre,netlists/MAIN/B_mac_u_w8__norm_pre.aig,-mac,CORRECT,W=8;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_dot2_u_w16__norm_pre,netlists/MAIN/B_dot2_u_w16__norm_pre.aig,-dot=2,CORRECT,W=16;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_mac_s_w16__norm_pre,netlists/MAIN/B_mac_s_w16__norm_pre.aig,-mac -s,CORRECT,W=16;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_mac_u_w16__norm_pre,netlists/MAIN/B_mac_u_w16__norm_pre.aig,-mac,CORRECT,W=16;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_dot2_u_w32__norm_pre,netlists/MAIN/B_dot2_u_w32__norm_pre.aig,-dot=2,CORRECT,W=32;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_dot2_u_w32__tree_pre,netlists/MAIN/B_dot2_u_w32__tree_pre.aig,-dot=2,CORRECT,W=32;family=B;build=MAIN;arch=tree_pre;stage2
+s2__MAIN__B_mac_s_w32__norm_pre,netlists/MAIN/B_mac_s_w32__norm_pre.aig,-mac -s,CORRECT,W=32;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_mac_u_w32__norm_pre,netlists/MAIN/B_mac_u_w32__norm_pre.aig,-mac,CORRECT,W=32;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_mac_u_w32__tree_pre,netlists/MAIN/B_mac_u_w32__tree_pre.aig,-mac,CORRECT,W=32;family=B;build=MAIN;arch=tree_pre;stage2
+s2__PATCH__B_mac_s_w32__tree_pre,netlists/PATCH/B_mac_s_w32__tree_pre.aig,-mac -s,CORRECT,W=32;family=B;build=PATCH;arch=tree_pre;stage2
+s2__MAIN__B_mac_s_w32__tree_pre,netlists/MAIN/B_mac_s_w32__tree_pre.aig,-mac -s,INCORRECT,W=32;family=B;build=MAIN;arch=tree_pre;stage2
+s2__MAIN__A_mul_s_w64__booth_pre,netlists/MAIN/A_mul_s_w64__booth_pre.aig,-mul -s,CORRECT,W=64;family=A;build=MAIN;arch=booth_pre;stage2
+s2__MAIN__A_mul_s_w64__norm_pre,netlists/MAIN/A_mul_s_w64__norm_pre.aig,-mul -s,CORRECT,W=64;family=A;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__A_mul_u_w64__booth_pre_folded,netlists/CONTROL/A_mul_u_w64__booth_pre_folded.aig,-mul,CORRECT,W=64;family=A;build=MAIN;arch=booth_pre_folded;stage2;derived=constant-folded copy of MAIN booth_pre
+s2__MAIN__A_mul_u_w64__norm_pre,netlists/MAIN/A_mul_u_w64__norm_pre.aig,-mul,CORRECT,W=64;family=A;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_dot2_u_w64__tree_pre,netlists/MAIN/B_dot2_u_w64__tree_pre.aig,-dot=2,CORRECT,W=64;family=B;build=MAIN;arch=tree_pre;stage2
+s2__MAIN__B_mac_u_w64__norm_pre,netlists/MAIN/B_mac_u_w64__norm_pre.aig,-mac,CORRECT,W=64;family=B;build=MAIN;arch=norm_pre;stage2
+s2__MAIN__B_mac_u_w64__tree_pre,netlists/MAIN/B_mac_u_w64__tree_pre.aig,-mac,CORRECT,W=64;family=B;build=MAIN;arch=tree_pre;stage2
+s2__PATCH__B_mac_s_w64__tree_pre,netlists/PATCH/B_mac_s_w64__tree_pre.aig,-mac -s,CORRECT,W=64;family=B;build=PATCH;arch=tree_pre;stage2
+s2__MAIN__B_mac_s_w64__tree_pre,netlists/MAIN/B_mac_s_w64__tree_pre.aig,-mac -s,INCORRECT,W=64;family=B;build=MAIN;arch=tree_pre;stage2

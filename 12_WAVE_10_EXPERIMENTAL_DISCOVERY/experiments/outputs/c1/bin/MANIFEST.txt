@@ -1,0 +1,35 @@
+initial 7f9a331f32dc7cffd89a469315ac8dd5  mapping.hpp
+initial 3e1c4d5634355fa8a9adec04f6a1785c  main.cpp
+initial 6c80292a0d54199090cac087342d662f  match_phase.cpp
+initial 5498b0aca3539fbe95967568c571d8ee  match_phase_exact.cpp
+initial ba2c9c23c3b86864d77bd4cba4f710b2  match_drop_phase.cpp
+initial a5437f1fc9f8279c58cb5210fe7f258e  c1_driver.cpp
+gpt5_it29 7f9a331f32dc7cffd89a469315ac8dd5  mapping.hpp
+gpt5_it29 3e1c4d5634355fa8a9adec04f6a1785c  main.cpp
+gpt5_it29 644283cda94b4f23a8e2d040ec69b96b  match_phase.cpp
+gpt5_it29 f2e63947834ee3f2cbcd05299eb9bb66  match_phase_exact.cpp
+gpt5_it29 efd2e1198e878f52e4ee300b09949f41  match_drop_phase.cpp
+gpt5_it29 a5437f1fc9f8279c58cb5210fe7f258e  c1_driver.cpp
+deepseek_it24 7f9a331f32dc7cffd89a469315ac8dd5  mapping.hpp
+deepseek_it24 3e1c4d5634355fa8a9adec04f6a1785c  main.cpp
+deepseek_it24 53e7a9063cb3b79cb173e11682171d55  match_phase.cpp
+deepseek_it24 5498b0aca3539fbe95967568c571d8ee  match_phase_exact.cpp
+deepseek_it24 ba2c9c23c3b86864d77bd4cba4f710b2  match_drop_phase.cpp
+deepseek_it24 a5437f1fc9f8279c58cb5210fe7f258e  c1_driver.cpp
+qwen_it20 7f9a331f32dc7cffd89a469315ac8dd5  mapping.hpp
+qwen_it20 3e1c4d5634355fa8a9adec04f6a1785c  main.cpp
+qwen_it20 4316e7976df3bda29a4b128c15844f30  match_phase.cpp
+qwen_it20 e0966f227a389b240d6d83c65329bcb0  match_phase_exact.cpp
+qwen_it20 ba2c9c23c3b86864d77bd4cba4f710b2  match_drop_phase.cpp
+qwen_it20 a5437f1fc9f8279c58cb5210fe7f258e  c1_driver.cpp
+ee72f3048765ad9d3b45d020fcb69504  orig_initial
+c40538cf31013b6a813cf9e118e61f9c  orig_gpt5_it29
+348b4df00b6a731fc8d563d31b67a58a  orig_deepseek_it24
+98b306d8e048999df074b44dcce26a57  orig_qwen_it20
+36c73e836455139aa64ac492b7036dfe  drv_initial
+69bb21cb876331bb532f7d120893dcd4  drv_gpt5_it29
+a678da44d6b347721333ad2e0f2d8d0c  drv_deepseek_it24
+7c31cd11b1cfae3d56a13abace643c47  drv_qwen_it20
+dc5b9f67e96834a944c3fa5f63ab1ff0  drv_emap
+gcc=g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+cmake=cmake version 3.31.9

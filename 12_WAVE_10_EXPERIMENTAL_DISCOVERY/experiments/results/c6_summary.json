@@ -1,0 +1,27 @@
+{
+ "n_annealing": 5,
+ "n_annealing_repair": 3,
+ "median_annealing_wns": -113.7343,
+ "repair_timing_wns": -5.5253,
+ "annealing_minus_repair": -108.209,
+ "annealing_d_wns_signs": [
+  -1
+ ],
+ "max_area_ratio_annealing": 1.0811863273142701,
+ "F1_not_better_than_repair_by_5ps": true,
+ "F2_sign_change": false,
+ "F3_area_cost": false,
+ "F4_equivalence_failure_or_unproven": false,
+ "equiv_unchecked": [],
+ "additive_gain_vs_repair": -10.3274,
+ "G": false,
+ "verdict": "KILL",
+ "unplaced_annealing_d_wns": [
+  -3.63,
+  -19.98,
+  -21.13
+ ],
+ "unplaced_repair_d_wns": [
+  16.02
+ ]
+}

@@ -1,0 +1,43 @@
+job_id,rel_path,args,timeout_s,expected,note
+ct__PATCH_B_mac_s_w8__tree_pre___dyn,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -dyn -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___dyn_p,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -dyn -p -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___dyn_c,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -dyn -c -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___idx,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -idx -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___idx_p,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -idx -p -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___idx_c,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -idx -c -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___igs,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -igs -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___igs_p,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -igs -p -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w8__tree_pre___igs_c,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -igs -c -no-steps,60,CORRECT,W=8;complementary_ANDs=2;ablation
+ct__PATCH_B_mac_s_w16__tree_pre__dynpc,netlists/PATCH/B_mac_s_w16__tree_pre.aig,-mac -s -dyn -p -c -no-steps,120,CORRECT,W=16;complementary_ANDs=2
+ct__PATCH_B_mac_s_w16__tree_pre__igspc,netlists/PATCH/B_mac_s_w16__tree_pre.aig,-mac -s -igs -p -c -no-steps,120,CORRECT,W=16;complementary_ANDs=2
+ct__PATCH_B_mac_s_w8__tree_pre_folded__dynpc,netlists/CONTROL/PATCH_B_mac_s_w8__tree_pre_folded.aig,-mac -s -dyn -p -c -no-steps,60,CORRECT,W=8;folded (complementary ANDs removed)
+ct__PATCH_B_mac_s_w8__tree_pre_folded__igspc,netlists/CONTROL/PATCH_B_mac_s_w8__tree_pre_folded.aig,-mac -s -igs -p -c -no-steps,60,CORRECT,W=8;folded (complementary ANDs removed)
+ct__PATCH_B_mac_s_w8__tree_contra_c15_y16___dyn_p_c,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_c15_y16.aig,-mac -s -dyn -p -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree_contra_c15_y16___dyn,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_c15_y16.aig,-mac -s -dyn -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree_contra_c15_y16___dyn_p,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_c15_y16.aig,-mac -s -dyn -p -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree_contra_c15_y16___dyn_c,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_c15_y16.aig,-mac -s -dyn -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree_contra_a0_y3___dyn_p_c,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_a0_y3.aig,-mac -s -dyn -p -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree_contra_a0_y3___dyn,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_a0_y3.aig,-mac -s -dyn -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree_contra_a0_y3___dyn_p,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_a0_y3.aig,-mac -s -dyn -p -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree_contra_a0_y3___dyn_c,netlists/CONTROL/PATCH_B_mac_s_w8__tree_contra_a0_y3.aig,-mac -s -dyn -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_a0_y0___dyn_p_c,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_a0_y0.aig,-mul -dyn -p -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_a0_y0___dyn,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_a0_y0.aig,-mul -dyn -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_a0_y0___dyn_p,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_a0_y0.aig,-mul -dyn -p -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_a0_y0___dyn_c,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_a0_y0.aig,-mul -dyn -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_b7_y15___dyn_p_c,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_b7_y15.aig,-mul -dyn -p -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_b7_y15___dyn,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_b7_y15.aig,-mul -dyn -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_b7_y15___dyn_p,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_b7_y15.aig,-mul -dyn -p -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__A_mul_u_w8__norm_pre_contra_b7_y15___dyn_c,netlists/CONTROL/A_mul_u_w8__norm_pre_contra_b7_y15.aig,-mul -dyn -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__B_mac_u_w8__tree_pre_contra_c15_y16___dyn_p_c,netlists/CONTROL/B_mac_u_w8__tree_pre_contra_c15_y16.aig,-mac -dyn -p -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__B_mac_u_w8__tree_pre_contra_c15_y16___dyn,netlists/CONTROL/B_mac_u_w8__tree_pre_contra_c15_y16.aig,-mac -dyn -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__B_mac_u_w8__tree_pre_contra_c15_y16___dyn_p,netlists/CONTROL/B_mac_u_w8__tree_pre_contra_c15_y16.aig,-mac -dyn -p -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__B_mac_u_w8__tree_pre_contra_c15_y16___dyn_c,netlists/CONTROL/B_mac_u_w8__tree_pre_contra_c15_y16.aig,-mac -dyn -c -no-steps,60,CORRECT,"W=8;one inserted AND(x,NOT x)"
+ct__PATCH_B_mac_s_w8__tree___dyn,netlists/PATCH/B_mac_s_w8__tree.aig,-mac -s -dyn -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__PATCH_B_mac_s_w8__tree___dyn_p,netlists/PATCH/B_mac_s_w8__tree.aig,-mac -s -dyn -p -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__PATCH_B_mac_s_w8__tree___dyn_c,netlists/PATCH/B_mac_s_w8__tree.aig,-mac -s -dyn -c -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__A_mul_u_w8__norm_pre___dyn,netlists/MAIN/A_mul_u_w8__norm_pre.aig,-mul -dyn -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__A_mul_u_w8__norm_pre___dyn_p,netlists/MAIN/A_mul_u_w8__norm_pre.aig,-mul -dyn -p -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__A_mul_u_w8__norm_pre___dyn_c,netlists/MAIN/A_mul_u_w8__norm_pre.aig,-mul -dyn -c -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__B_mac_u_w8__tree_pre___dyn,netlists/MAIN/B_mac_u_w8__tree_pre.aig,-mac -dyn -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__B_mac_u_w8__tree_pre___dyn_p,netlists/MAIN/B_mac_u_w8__tree_pre.aig,-mac -dyn -p -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)
+ct__B_mac_u_w8__tree_pre___dyn_c,netlists/MAIN/B_mac_u_w8__tree_pre.aig,-mac -dyn -c -no-steps,60,CORRECT,W=8;unmodified original (ablation baseline)

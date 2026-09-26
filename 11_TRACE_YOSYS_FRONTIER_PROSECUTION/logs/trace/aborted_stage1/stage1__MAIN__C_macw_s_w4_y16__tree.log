@@ -1,0 +1,15 @@
+### FILE netlists/MAIN/C_macw_s_w4_y16__tree.aig
+### ARGS -mac -s -dyn -p -c -no-steps
+### TIMEOUT 300
+### START 2026-09-24T02:57:08-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/C_macw_s_w4_y16__tree.aig
+║           mode: mac
+║           sign: signed
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║

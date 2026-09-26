@@ -1,0 +1,1295 @@
+# MASTER PROMPT: Design a High-Impact Technical Project That Can Compound Into an EB-1A Portfolio
+
+## ROLE
+
+Act as a combination of:
+
+- Principal semiconductor / EDA engineer
+- Hardware-software co-design researcher
+- Research scientist
+- Open-source project strategist
+- Patent ideation and prior-art analyst
+- Academic publication strategist
+- Technical product architect
+- EB-1A evidence strategist familiar with current USCIS extraordinary-ability standards
+
+Your job is **NOT** to manufacture immigration evidence or design superficial accomplishments just to satisfy EB-1A criteria.
+
+Your job is to identify a **genuinely useful, technically difficult, novel, feasible body of work** that I can actually build and that, if successful and independently recognized, could naturally produce strong evidence relevant to an eventual EB-1A petition.
+
+The philosophy is:
+
+> Do technically important work first.
+> Design the work so its importance can be independently measured and demonstrated later.
+
+---
+
+# MY TARGET FIELD
+
+Keep my field coherent and narrow enough that the accomplishments reinforce one another.
+
+Primary areas:
+
+- Semiconductor / chip design
+- ASIC / SoC design
+- EDA / CAD methodology
+- RTL design and optimization
+- Verification
+- Formal verification
+- Hardware security
+- FPGA
+- AI-assisted EDA
+- Physical design
+- Synthesis
+- PPA optimization
+- Chiplets
+- 2.5D / 3D integration
+- Memory systems
+- Computer architecture
+- Hardware accelerators
+- Hardware-software co-design
+- Compiler-hardware co-optimization
+- Design automation
+- Open-source silicon infrastructure
+
+You may combine adjacent fields when there is a strong technical reason, but do not create a scattered portfolio.
+
+I want my eventual professional narrative to make sense in one sentence.
+
+Example:
+
+> "[Candidate] develops intelligent design-automation methodologies for improving the efficiency, correctness, and performance of advanced computing hardware."
+
+That is much better than having unrelated projects in cybersecurity, ML, robotics, databases, and semiconductor engineering.
+
+---
+
+# PRIMARY OBJECTIVE
+
+Find a technical idea that can become a **CENTERPIECE CONTRIBUTION** rather than just another resume project.
+
+Ideally, one underlying invention/research direction should be capable of producing several legitimate outputs over time, such as:
+
+### Core technical work
+
+- working software/tool
+- working RTL/hardware prototype
+- FPGA prototype
+- simulator
+- compiler pass
+- EDA algorithm
+- verification methodology
+- benchmark suite
+- dataset
+- architecture
+- design methodology
+
+### Possible intellectual-property output
+
+- patent application
+- invention disclosure
+- defensible technical novelty
+
+### Possible research output
+
+- conference paper
+- journal paper
+- workshop paper
+- technical report
+- benchmark paper
+- reproducibility study
+
+### Possible public-impact output
+
+- open-source repository
+- external contributors
+- outside users
+- integrations
+- forks
+- citations
+- GitHub stars
+- package downloads
+- company/research-lab adoption
+- third-party benchmarks
+
+### Possible professional-recognition output
+
+- conference talk
+- invited talk
+- podcast/interview
+- industry presentation
+- workshop
+- technical article
+- media coverage
+- independent technical writeups
+
+### Possible judging/service opportunities created by expertise
+
+- peer reviewing
+- conference reviewing
+- hackathon judging
+- technical committee work
+- benchmark committee participation
+- standards participation
+
+These outputs must arise **naturally from legitimate technical achievement**.
+
+Do not propose artificial evidence-generation schemes.
+
+---
+
+# EB-1A STRATEGIC PRINCIPLE
+
+Use current USCIS EB-1A guidance as a strategic lens, not as a checklist to game.
+
+A strong portfolio should ideally make several of these arguments easier later:
+
+1. Original contributions of major significance
+2. Leading or critical role for distinguished organizations
+3. Judging the work of others
+4. Authorship of scholarly articles
+5. Published material about the candidate/work
+6. Awards/prizes
+7. Selective memberships where relevant
+8. High remuneration where relevant
+9. Other genuinely applicable criteria
+
+But remember:
+
+**Meeting three criteria is not the real end goal.**
+
+The eventual record should also support the final-merits argument that the candidate has sustained recognition and belongs among the small percentage at the top of the field.
+
+Therefore prioritize:
+
+- external adoption
+- independent validation
+- measurable impact
+- third-party recognition
+- citations
+- technical significance
+- repeat usage
+- field influence
+
+over merely producing more artifacts.
+
+---
+
+# MOST IMPORTANT LESSON FROM APPROVED EB-1A PETITIONS
+
+Do not optimize for:
+
+- number of petition pages
+- number of GitHub repositories
+- number of patents
+- number of papers
+- number of certificates
+- number of recommendation letters
+- number of claimed criteria
+
+Instead optimize for:
+
+> **Quality of contribution × objective impact × independent validation × relevance to the defined field**
+
+For every proposed accomplishment, ask:
+
+### CLAIM
+
+What exactly did I create?
+
+### NOVELTY
+
+What is technically new about it?
+
+### PROBLEM
+
+What difficult problem does it solve?
+
+### PROOF
+
+What objective artifact proves the contribution exists?
+
+### ADOPTION
+
+Who besides me would actually use it?
+
+### IMPACT
+
+What measurable improvement does it produce?
+
+### INDEPENDENT VALIDATION
+
+How could people with no obligation to support me verify its significance?
+
+### COMPARISON
+
+Why is the result meaningfully better/different than existing approaches?
+
+### FIELD SIGNIFICANCE
+
+Why should semiconductor/EDA experts care?
+
+If those questions cannot eventually be answered, the project is probably weak for this purpose.
+
+---
+
+# ABSOLUTE REQUIREMENT: THE IDEA MUST ACTUALLY BE BUILDABLE
+
+Do NOT give me science-fiction ideas.
+
+Assume initially that the project will be executed by:
+
+- one motivated engineer/researcher, or
+- a very small team
+
+using reasonably accessible resources such as:
+
+- Python
+- C/C++
+- Rust
+- Verilog/SystemVerilog
+- Chisel
+- LLVM/MLIR
+- Yosys
+- Verilator
+- OpenROAD
+- OpenLane
+- SkyWater/Open PDKs
+- RISC-V
+- SymbiYosys
+- ABC
+- CIRCT
+- Icarus Verilog
+- cocotb
+- FPGA development boards
+- cloud compute
+- publicly available datasets
+- open-source EDA infrastructure
+
+The prototype should preferably not require:
+
+- owning a semiconductor fab
+- $500,000 commercial EDA licenses
+- proprietary tapeout data
+- confidential employer IP
+- access to unreleased silicon
+- a research lab with 20 PhDs
+- millions of dollars in compute
+
+If commercial tools would ultimately strengthen validation, the project should still have an open-source implementation path first.
+
+---
+
+# RESEARCH BEFORE IDEATION
+
+If you have internet/web access, **DO NOT generate ideas immediately.**
+
+First research the current state of the field.
+
+Investigate developments from roughly the past 2–4 years in:
+
+- DAC
+- ICCAD
+- DATE
+- ASP-DAC
+- ISCA
+- MICRO
+- HPCA
+- ASPLOS
+- FPGA
+- Hot Chips
+- IEEE journals
+- ACM publications
+- arXiv
+- major semiconductor companies
+- EDA vendors
+- RISC-V ecosystem
+- open-source EDA projects
+
+Look for:
+
+1. Fast-growing technical problems
+2. Problems industry repeatedly complains about
+3. Important limitations in current tools
+4. Research with obvious gaps
+5. Techniques that exist academically but lack usable tooling
+6. EDA workflows that remain manual
+7. Verification bottlenecks
+8. PPA optimization bottlenecks
+9. AI/LLM limitations in chip design
+10. Hardware-software co-design gaps
+11. Chiplet/interconnect challenges
+12. Power/thermal/reliability problems
+13. Verification/security problems
+14. Reproducibility problems
+15. Benchmarking gaps
+
+For patent-oriented concepts, search existing patents and obvious prior art.
+
+For research-oriented concepts, search recent papers.
+
+For open-source concepts, search GitHub and existing EDA tools.
+
+Do not call an idea novel merely because it sounds novel.
+
+Explicitly distinguish:
+
+- likely genuinely novel
+- novel combination
+- incremental improvement
+- already well explored
+- uncertain until deeper prior-art search
+
+Cite sources when browsing is available.
+
+If you do NOT have browsing capability, explicitly say:
+
+> "Novelty and prior art remain unverified."
+
+---
+
+# FIRST: IDENTIFY HIGH-VALUE PROBLEM SPACES
+
+Before giving specific inventions, identify approximately **8–12 problem spaces**.
+
+For each problem space provide:
+
+- problem
+- why it matters now
+- who experiences the pain
+- current approaches
+- current shortcomings
+- opportunity for meaningful contribution
+- feasibility for a solo/small-team builder
+- potential for measurable results
+
+Then rank them.
+
+---
+
+# THEN GENERATE 10 SERIOUS CENTERPIECE IDEAS
+
+Generate **10 ideas**.
+
+Do not generate filler.
+
+Every idea must be substantial enough that you could imagine a serious engineer spending 6–18 months developing it.
+
+Each idea must have a memorable technical name.
+
+For every idea provide:
+
+## 1. One-sentence concept
+
+Explain it simply.
+
+## 2. Technical problem
+
+What exact engineering/research problem is being solved?
+
+## 3. Existing approaches
+
+How is this currently done?
+
+## 4. Gap
+
+What is inadequate about existing approaches?
+
+## 5. Proposed innovation
+
+Precisely describe what is new.
+
+Avoid vague phrases like:
+
+- "use AI"
+- "use machine learning"
+- "optimize automatically"
+- "create a platform"
+
+Explain the actual mechanism.
+
+## 6. Architecture
+
+Describe the main components and data flow.
+
+For example:
+
+Input RTL
+→ static analysis
+→ graph representation
+→ candidate transformation engine
+→ formal equivalence check
+→ synthesis/PPA evaluation
+→ ranked recommendation
+
+Make the architecture concrete.
+
+## 7. Why technically difficult
+
+Explain what makes this more than a class project.
+
+## 8. MVP
+
+What is the smallest credible implementation?
+
+## 9. Full research version
+
+What would the serious version look like?
+
+## 10. Evaluation
+
+Specify exact benchmarks and metrics.
+
+Examples:
+
+- area
+- power
+- timing
+- synthesis runtime
+- verification runtime
+- coverage
+- bug detection rate
+- false positive rate
+- proof convergence
+- memory
+- throughput
+- latency
+- energy
+- accuracy
+- scalability
+
+## 11. Baselines
+
+What existing systems should it be compared against?
+
+## 12. Datasets / benchmarks
+
+Name realistic open benchmarks where possible.
+
+## 13. Patent potential
+
+Rate:
+
+- Low
+- Medium
+- High
+- Very High
+
+Explain exactly which technical mechanism might potentially be patentable.
+
+Do NOT say something is patentable with certainty.
+
+Identify obvious prior-art risk.
+
+## 14. Research paper potential
+
+Rate:
+
+- Low
+- Medium
+- High
+- Very High
+
+Suggest realistic publication venues.
+
+## 15. Open-source potential
+
+Rate likelihood of outside adoption.
+
+Explain who would use it.
+
+## 16. Adoption pathway
+
+How could the project reach:
+
+- university researchers
+- chip designers
+- verification engineers
+- FPGA developers
+- EDA researchers
+- semiconductor companies
+
+## 17. Independent-validation pathway
+
+How could outside experts verify its usefulness?
+
+## 18. EB-1A relevance
+
+Do not merely list criteria.
+
+Explain how successful execution might naturally support evidence such as:
+
+- original contribution
+- authorship
+- judging opportunities
+- critical role
+- recognition
+- independent commentary
+
+## 19. Failure modes
+
+Why might the project fail technically or strategically?
+
+## 20. Estimated workload
+
+Give realistic:
+
+- 30-day workload
+- 90-day workload
+- 6-month workload
+- 12-month workload
+
+---
+
+# SCORE ALL 10 IDEAS
+
+Score every idea from **0–10** on:
+
+| DimensionWeight                  |     |
+| -------------------------------- | --- |
+| Real-world importance            | 15% |
+| Technical depth                  | 10% |
+| Genuine novelty potential        | 15% |
+| Solo/small-team feasibility      | 10% |
+| Patent potential                 | 10% |
+| Publication potential            | 10% |
+| Open-source adoption potential   | 10% |
+| Measurable impact                | 10% |
+| Independent validation potential | 5%  |
+| Long-term field relevance        | 5%  |
+
+Calculate a weighted score /100.
+
+Then create a ranking table.
+
+---
+
+# APPLY AN "IMMIGRATION THEATER" PENALTY
+
+Deduct points for ideas whose value depends mainly on:
+
+- creating superficial publications
+- getting meaningless media
+- manufacturing citations
+- vanity metrics
+- filing weak patents
+- producing lots of low-impact artifacts
+- immigration-focused activities experts would otherwise not care about
+
+Call this:
+
+**Immigration Theater Risk: 0–10**
+
+0 = genuine technical work anyone would be proud to do regardless of immigration.
+
+10 = primarily useful because it creates paperwork.
+
+Prefer ideas near **0–2**.
+
+---
+
+# APPLY A "COMPOUNDING" SCORE
+
+Score each idea 0–10 for how effectively ONE underlying technical contribution could legitimately create multiple outputs.
+
+For example:
+
+Core invention
+→ open-source implementation
+→ benchmarking study
+→ paper
+→ patent
+→ conference talk
+→ external adoption
+→ citations
+→ invited reviewing because of resulting expertise
+
+This is very valuable.
+
+Call this:
+
+**Portfolio Compounding Score**
+
+---
+
+# APPLY AN "INDEPENDENT EVIDENCE" SCORE
+
+This is extremely important.
+
+Score each idea 0–10 based on the ability to create evidence that does NOT depend solely on what I or my employer say.
+
+Strong examples:
+
+- external GitHub adoption
+- citations
+- independent benchmarks
+- downstream implementations
+- third-party integrations
+- university usage
+- independent papers referencing it
+- external patents citing it
+- conference selection
+- outside testimonials based on actual usage
+
+Weak evidence:
+
+> "My manager says this was excellent."
+
+Strong evidence:
+
+> "Three unrelated research groups adopted the methodology and independently reported improved results."
+
+Call this:
+
+**Independent Evidence Score**
+
+---
+
+# APPLY A "MAJOR SIGNIFICANCE" TEST
+
+For every idea ask:
+
+If this succeeds technically, what would have to happen before I could credibly argue that it mattered beyond being merely original?
+
+Define concrete thresholds.
+
+For example:
+
+WEAK:
+
+- repository exists
+- patent filed
+- paper uploaded
+
+BETTER:
+
+- external users
+- reproducible benchmark improvement
+- citations
+- external contributors
+
+STRONG:
+
+- independent teams adopt the tool
+- published comparisons confirm results
+- research builds upon it
+- incorporated into another system
+- meaningful industry use
+
+EXCEPTIONAL:
+
+- becomes a commonly used methodology/tool
+- materially affects commercial or open-source design workflows
+- substantial independent recognition
+- clearly influences subsequent work
+
+---
+
+# THEN PICK THE SINGLE BEST IDEA
+
+Do NOT tell me "it depends."
+
+Make a decision.
+
+Select:
+
+# THE #1 RECOMMENDED CENTERPIECE PROJECT
+
+Explain why it beats the other nine.
+
+Your explanation must address:
+
+- technical importance
+- defensible novelty
+- actual feasibility
+- publication potential
+- patent potential
+- open-source usefulness
+- external adoption
+- ability to produce quantitative results
+- independent evidence
+- portfolio compounding
+- long-term career value
+- EB-1A usefulness
+
+---
+
+# THEN TRY TO BEAT YOUR OWN WINNER
+
+After choosing the winner:
+
+Take the best components of ideas #2–#5.
+
+Ask:
+
+> "Can any of these be intelligently combined with the winner to produce a technically stronger invention?"
+
+Only combine them if the combination is coherent.
+
+Do NOT create a bloated Frankenstein project merely to include more features.
+
+If the original winner remains better, say so.
+
+If a hybrid becomes better, make the hybrid the final recommendation.
+
+---
+
+# DEEP-DIVE THE FINAL IDEA
+
+For the final idea provide an extremely concrete technical specification.
+
+## A. Name
+
+Memorable technical project name.
+
+## B. Technical thesis
+
+One paragraph.
+
+## C. Research hypothesis
+
+State something falsifiable.
+
+Example:
+
+> "Constraint-guided RTL transformations verified by sequential equivalence can reduce area and power while preserving correctness more reliably than unconstrained LLM-generated RTL optimization."
+
+## D. Specific innovation
+
+List the mechanisms that are truly new.
+
+## E. Block diagram
+
+Use text/ASCII.
+
+## F. Modules
+
+Describe each software/hardware component.
+
+## G. Inputs
+
+What data/designs enter the system?
+
+## H. Outputs
+
+What does the system produce?
+
+## I. Algorithms
+
+Explain important algorithms.
+
+## J. Technology stack
+
+Name specific tools/languages/frameworks.
+
+## K. Benchmark suite
+
+Name exact candidate benchmarks.
+
+## L. Experiments
+
+Design experiments that could survive serious peer review.
+
+## M. Baselines
+
+Identify fair comparisons.
+
+## N. Success metrics
+
+Specify target numbers where reasonable.
+
+Do not invent extraordinary targets.
+
+Use conservative, strong, and exceptional levels.
+
+---
+
+# PATENT DEVELOPMENT PATH
+
+For the same centerpiece idea, identify possible patentable cores.
+
+For each candidate invention provide:
+
+- invention title
+- technical problem
+- claimed mechanism
+- hardware/software interactions
+- novelty hypothesis
+- expected prior art
+- likely strongest distinguishing feature
+- what prototype evidence would support it
+- what diagrams should eventually exist
+
+Do NOT write legal patent claims unless specifically asked later.
+
+Do NOT guarantee patentability.
+
+Tell me what would need a professional prior-art search.
+
+---
+
+# PAPER DEVELOPMENT PATH
+
+Show how the work could produce a serious paper.
+
+Provide:
+
+### Candidate title
+
+### Abstract thesis
+
+### Research question
+
+### Novel contribution
+
+### Experiments
+
+### Baselines
+
+### Expected tables/figures
+
+### Ablation studies
+
+### Threats to validity
+
+### Possible publication venues
+
+Categorize venues:
+
+- stretch
+- strong realistic target
+- safer target
+
+Do not recommend predatory journals.
+
+Prefer recognized IEEE/ACM/EDA/architecture venues.
+
+---
+
+# OPEN-SOURCE DEVELOPMENT PATH
+
+Design the repository so engineers would actually want it.
+
+Include:
+
+- repository structure
+- CLI/API
+- installation
+- reproducibility
+- examples
+- benchmarks
+- CI
+- documentation
+- test strategy
+- contribution guide
+- roadmap
+- demo
+- GitHub Actions
+- Docker/container environment if appropriate
+
+Answer:
+
+> "Why would someone star this repository even if they had no idea who I was?"
+
+If the answer is weak, redesign the project.
+
+---
+
+# EXTERNAL ADOPTION PLAN
+
+Provide a legitimate distribution strategy.
+
+Identify communities such as:
+
+- RISC-V
+- OpenROAD
+- OpenLane
+- Yosys
+- Verilator
+- LLVM
+- CIRCT
+- SymbiYosys
+- Chips Alliance
+- FOSSi Foundation
+- IEEE
+- ACM
+- DAC
+- ICCAD
+- DATE
+- FPGA communities
+- university research groups
+
+For each relevant community explain:
+
+- why they would care
+- what I could contribute
+- what kind of feedback I should seek
+
+No spam.
+
+No artificial GitHub-star campaigns.
+
+No paid fake engagement.
+
+---
+
+# INDEPENDENT RECOGNITION PLAN
+
+Show legitimate ways that strong work could eventually generate:
+
+- citations
+- independent users
+- third-party references
+- conference presentations
+- invited talks
+- collaborations
+- reviewing invitations
+- industry recognition
+- media/technical coverage
+
+Again, recognition must follow technical substance.
+
+---
+
+# CRITICAL-ROLE STRATEGY
+
+Explain how expertise from this work could eventually translate into a genuine critical role.
+
+For example:
+
+- technical ownership
+- methodology ownership
+- architecture responsibility
+- signoff responsibility
+- integration into a major project
+- leading adoption
+- enabling tapeout
+- enabling an important open-source project
+
+Do not assume a job title alone proves criticality.
+
+Specify what objective evidence would matter.
+
+---
+
+# EVIDENCE LEDGER
+
+Create an evidence-tracking framework I can maintain from day one.
+
+For every meaningful event I should record:
+
+- date
+- contribution
+- artifact
+- measurable outcome
+- external user
+- independent source
+- adoption
+- citation/reference
+- talk
+- publication
+- review activity
+- award
+- press
+- repository metric
+- benchmark result
+- testimonial
+- supporting URL/document
+
+The purpose is documentation—not manufacturing evidence.
+
+---
+
+# GIVE ME STOP RULES
+
+One major goal is preventing overwork.
+
+For each portfolio area tell me:
+
+### NOT ENOUGH
+
+### DEVELOPING
+
+### STRONG
+
+### VERY STRONG
+
+Use realistic qualitative or quantitative markers where possible.
+
+Apply this to:
+
+- technical contribution
+- patents
+- publications
+- citations
+- judging/reviews
+- GitHub/open-source usage
+- external adoption
+- critical role
+- awards
+- media
+- recommendation-letter readiness
+
+Do NOT invent universal USCIS thresholds.
+
+Clearly state:
+
+> "USCIS does not impose a fixed numerical requirement here."
+
+But provide practical evidence-strength ranges based on the field where possible.
+
+---
+
+# KILL CRITERIA
+
+Tell me when I should abandon the project.
+
+Examples:
+
+- prior art destroys novelty
+- benchmark improvement is negligible
+- impossible to validate independently
+- no meaningful user exists
+- requires unavailable proprietary data
+- implementation cost becomes unreasonable
+- contribution is merely incremental
+- another tool already solves the problem substantially better
+
+I would rather kill a bad idea in month 1 than spend 18 months trying to make it look important.
+
+---
+
+# 12-MONTH EXECUTION ROADMAP
+
+Create a detailed schedule.
+
+## Month 1
+
+Prior art + literature + architecture + feasibility.
+
+## Month 2
+
+Prototype.
+
+Continue through Month 12.
+
+The roadmap should coordinate:
+
+- engineering
+- experiments
+- documentation
+- open source
+- patent timing
+- research paper timing
+- external testing
+- conference submissions
+- outreach
+- adoption
+- independent validation
+
+Do not schedule patent publication or public disclosure carelessly.
+
+Explicitly flag situations where public release before patent filing could create IP problems and recommend discussing timing with qualified patent counsel.
+
+---
+
+# FIRST 30 DAYS
+
+Then make the first month extremely detailed.
+
+Provide:
+
+### Week 1
+
+Exact tasks.
+
+### Week 2
+
+Exact tasks.
+
+### Week 3
+
+Exact tasks.
+
+### Week 4
+
+Exact tasks.
+
+Include:
+
+- repositories to study
+- papers to read
+- tools to install
+- prototype components
+- experiments
+- deliverables
+
+At the end of 30 days I should know whether this idea deserves another 11 months.
+
+---
+
+# MINIMUM VIABLE PUBLICATION
+
+Define the smallest version that would still constitute interesting research.
+
+---
+
+# MINIMUM VIABLE PATENT
+
+Define the smallest technical mechanism potentially worth performing a serious prior-art/patentability review on.
+
+---
+
+# MINIMUM VIABLE OPEN-SOURCE RELEASE
+
+Define what version would actually be useful enough for strangers to test.
+
+---
+
+# "WHAT WOULD CONVINCE A SKEPTIC?" TEST
+
+Imagine three skeptical reviewers:
+
+### Reviewer #1: USCIS officer
+
+They ask:
+
+> "How do I know this contribution was actually significant?"
+
+### Reviewer #2: DAC/ICCAD reviewer
+
+They ask:
+
+> "Where is the technical novelty and experimental proof?"
+
+### Reviewer #3: senior semiconductor engineer
+
+They ask:
+
+> "Why would I use this instead of what already exists?"
+
+Answer all three.
+
+If the answers are weak, improve the project.
+
+---
+
+# RED-TEAM THE IDEA
+
+Now try to destroy your recommended idea.
+
+Give the strongest arguments that:
+
+- it isn't novel
+- nobody will use it
+- the patent would be weak
+- the paper would be rejected
+- implementation would be infeasible
+- benchmark results may not matter
+- its EB-1A value is overstated
+
+Then respond to each criticism.
+
+If the idea does not survive red-teaming, replace it.
+
+---
+
+# FINAL OUTPUT
+
+Finish with this exact structure:
+
+## 1. Best opportunity in the field
+
+## 2. Ranked top 10 ideas
+
+## 3. Why #1 wins
+
+## 4. Final centerpiece project
+
+## 5. Technical architecture
+
+## 6. Novelty/prior-art assessment
+
+## 7. Patent pathway
+
+## 8. Research-paper pathway
+
+## 9. Open-source pathway
+
+## 10. External-adoption pathway
+
+## 11. Independent-evidence pathway
+
+## 12. EB-1A portfolio compounding map
+
+Show visually:
+
+Core Contribution
+↓
+Patent
+↓
+Paper
+↓
+Open Source
+↓
+External Adoption
+↓
+Independent References
+↓
+Recognition / Reviewing / Critical Role
+
+Where appropriate, show that these happen in parallel rather than pretending causation is guaranteed.
+
+## 13. 12-month roadmap
+
+## 14. First 30 days
+
+## 15. Stop / continue decision thresholds
+
+## 16. Biggest risks
+
+## 17. What NOT to waste time doing
+
+## 18. Final verdict
+
+Give the idea a final score /100.
+
+Then state:
+
+> **BUILD**
+>
+> **BUILD WITH MODIFICATIONS**
+>
+> or
+>
+> **DO NOT BUILD**
+
+and explain why.
+
+---
+
+# QUALITY BAR
+
+I do NOT want:
+
+> "Create an AI-powered chip optimization platform."
+
+I want something closer to:
+
+> "Build a constraint-guided RTL transformation engine that identifies structurally redundant arithmetic/data-path logic, proposes synthesis-aware transformations, formally proves sequential equivalence, evaluates PPA using Yosys/OpenROAD, and learns which transformation classes generalize across benchmark families."
+
+The idea needs enough specificity that I could begin implementation after reading your response.
+
+---
+
+# FINAL PRINCIPLE
+
+Optimize for this:
+
+> **One legitimately important contribution that generates many forms of independent evidence.**
+
+Not:
+
+> **Many shallow accomplishments created for immigration purposes.**
+
+The strongest outcome would be a project that I would still be excited to build even if EB-1A did not exist.

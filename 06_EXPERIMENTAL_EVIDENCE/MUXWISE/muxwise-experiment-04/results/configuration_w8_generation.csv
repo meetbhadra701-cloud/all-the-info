@@ -1,0 +1,3 @@
+option,width,synth_result,synth_returncode,synth_seconds,candidate,script,log
+default,8,PASS,0,0.622772,work/configuration_w8/default_w8.v,work/configuration_w8/default_w8.ys,logs/configuration_w8/default_w8.log
+no_fma,8,PASS,0,0.520666,work/configuration_w8/no_fma_w8.v,work/configuration_w8/no_fma_w8.ys,logs/configuration_w8/no_fma_w8.log

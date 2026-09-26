@@ -1,0 +1,310 @@
+[
+  {
+    "width": "8",
+    "flow": "coarse_share",
+    "same_structure": false,
+    "unshared_cell_types": "$alu:2;$mux:1",
+    "shared_cell_types": "$alu:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "early",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "explicit_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "explicit_share_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "explicit_share_force",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "explicit_share_force_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "mapped_manual",
+    "same_structure": false,
+    "unshared_cell_types": "$_ANDNOT_:26;$_MUX_:8;$_NAND_:14;$_NOR_:6;$_ORNOT_:4;$_XNOR_:10;$_XOR_:20",
+    "shared_cell_types": "$_ANDNOT_:13;$_MUX_:8;$_NAND_:7;$_NOR_:3;$_ORNOT_:2;$_XNOR_:5;$_XOR_:10"
+  },
+  {
+    "width": "8",
+    "flow": "opt_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$mux:2",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "opt_share_then_opt",
+    "same_structure": true,
+    "unshared_cell_types": "$add:1;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "8",
+    "flow": "synth_normal",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:10;$_AND_:1;$_MUX_:8;$_NAND_:6;$_NOR_:5;$_OR_:3;$_XNOR_:8;$_XOR_:7",
+    "shared_cell_types": "$_ANDNOT_:10;$_AND_:1;$_MUX_:8;$_NAND_:6;$_NOR_:5;$_OR_:3;$_XNOR_:8;$_XOR_:7"
+  },
+  {
+    "width": "8",
+    "flow": "synth_noshare",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:10;$_AND_:1;$_MUX_:8;$_NAND_:6;$_NOR_:5;$_OR_:3;$_XNOR_:8;$_XOR_:7",
+    "shared_cell_types": "$_ANDNOT_:10;$_AND_:1;$_MUX_:8;$_NAND_:6;$_NOR_:5;$_OR_:3;$_XNOR_:8;$_XOR_:7"
+  },
+  {
+    "width": "16",
+    "flow": "coarse_share",
+    "same_structure": false,
+    "unshared_cell_types": "$alu:2;$mux:1",
+    "shared_cell_types": "$alu:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "early",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "explicit_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "explicit_share_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "explicit_share_force",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "explicit_share_force_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "mapped_manual",
+    "same_structure": false,
+    "unshared_cell_types": "$_ANDNOT_:68;$_MUX_:16;$_NAND_:30;$_NOR_:24;$_ORNOT_:10;$_OR_:2;$_XNOR_:22;$_XOR_:40",
+    "shared_cell_types": "$_ANDNOT_:34;$_MUX_:16;$_NAND_:15;$_NOR_:12;$_ORNOT_:5;$_OR_:1;$_XNOR_:11;$_XOR_:20"
+  },
+  {
+    "width": "16",
+    "flow": "opt_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$mux:2",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "opt_share_then_opt",
+    "same_structure": true,
+    "unshared_cell_types": "$add:1;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "16",
+    "flow": "synth_normal",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:27;$_AND_:1;$_MUX_:16;$_NAND_:10;$_NOR_:11;$_NOT_:4;$_ORNOT_:2;$_OR_:16;$_XNOR_:14;$_XOR_:17",
+    "shared_cell_types": "$_ANDNOT_:27;$_AND_:1;$_MUX_:16;$_NAND_:10;$_NOR_:11;$_NOT_:4;$_ORNOT_:2;$_OR_:16;$_XNOR_:14;$_XOR_:17"
+  },
+  {
+    "width": "16",
+    "flow": "synth_noshare",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:27;$_AND_:1;$_MUX_:16;$_NAND_:10;$_NOR_:11;$_NOT_:4;$_ORNOT_:2;$_OR_:16;$_XNOR_:14;$_XOR_:17",
+    "shared_cell_types": "$_ANDNOT_:27;$_AND_:1;$_MUX_:16;$_NAND_:10;$_NOR_:11;$_NOT_:4;$_ORNOT_:2;$_OR_:16;$_XNOR_:14;$_XOR_:17"
+  },
+  {
+    "width": "32",
+    "flow": "coarse_share",
+    "same_structure": false,
+    "unshared_cell_types": "$alu:2;$mux:1",
+    "shared_cell_types": "$alu:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "early",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "explicit_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "explicit_share_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "explicit_share_force",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "explicit_share_force_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "mapped_manual",
+    "same_structure": false,
+    "unshared_cell_types": "$_ANDNOT_:162;$_AND_:8;$_MUX_:32;$_NAND_:62;$_NOR_:56;$_ORNOT_:24;$_OR_:2;$_XNOR_:44;$_XOR_:82",
+    "shared_cell_types": "$_ANDNOT_:81;$_AND_:4;$_MUX_:32;$_NAND_:31;$_NOR_:28;$_ORNOT_:12;$_OR_:1;$_XNOR_:22;$_XOR_:41"
+  },
+  {
+    "width": "32",
+    "flow": "opt_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$mux:2",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "opt_share_then_opt",
+    "same_structure": true,
+    "unshared_cell_types": "$add:1;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "32",
+    "flow": "synth_normal",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:57;$_AND_:3;$_MUX_:32;$_NAND_:18;$_NOR_:28;$_NOT_:10;$_ORNOT_:8;$_OR_:43;$_XNOR_:24;$_XOR_:39",
+    "shared_cell_types": "$_ANDNOT_:57;$_AND_:3;$_MUX_:32;$_NAND_:18;$_NOR_:28;$_NOT_:10;$_ORNOT_:8;$_OR_:43;$_XNOR_:24;$_XOR_:39"
+  },
+  {
+    "width": "32",
+    "flow": "synth_noshare",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:57;$_AND_:3;$_MUX_:32;$_NAND_:18;$_NOR_:28;$_NOT_:10;$_ORNOT_:8;$_OR_:43;$_XNOR_:24;$_XOR_:39",
+    "shared_cell_types": "$_ANDNOT_:57;$_AND_:3;$_MUX_:32;$_NAND_:18;$_NOR_:28;$_NOT_:10;$_ORNOT_:8;$_OR_:43;$_XNOR_:24;$_XOR_:39"
+  },
+  {
+    "width": "64",
+    "flow": "coarse_share",
+    "same_structure": false,
+    "unshared_cell_types": "$alu:2;$mux:1",
+    "shared_cell_types": "$alu:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "early",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "explicit_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:2;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "explicit_share_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "explicit_share_force",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "explicit_share_force_aggressive",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$eq:1;$mux:3",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "mapped_manual",
+    "same_structure": false,
+    "unshared_cell_types": "$_ANDNOT_:350;$_AND_:22;$_MUX_:64;$_NAND_:126;$_NOR_:136;$_ORNOT_:44;$_OR_:8;$_XNOR_:96;$_XOR_:158",
+    "shared_cell_types": "$_ANDNOT_:175;$_AND_:11;$_MUX_:64;$_NAND_:63;$_NOR_:68;$_ORNOT_:22;$_OR_:4;$_XNOR_:48;$_XOR_:79"
+  },
+  {
+    "width": "64",
+    "flow": "opt_share",
+    "same_structure": false,
+    "unshared_cell_types": "$add:1;$mux:2",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "opt_share_then_opt",
+    "same_structure": true,
+    "unshared_cell_types": "$add:1;$mux:1",
+    "shared_cell_types": "$add:1;$mux:1"
+  },
+  {
+    "width": "64",
+    "flow": "synth_normal",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:122;$_AND_:4;$_MUX_:64;$_NAND_:34;$_NOR_:67;$_NOT_:25;$_ORNOT_:13;$_OR_:103;$_XNOR_:44;$_XOR_:83",
+    "shared_cell_types": "$_ANDNOT_:122;$_AND_:4;$_MUX_:64;$_NAND_:34;$_NOR_:67;$_NOT_:25;$_ORNOT_:13;$_OR_:103;$_XNOR_:44;$_XOR_:83"
+  },
+  {
+    "width": "64",
+    "flow": "synth_noshare",
+    "same_structure": true,
+    "unshared_cell_types": "$_ANDNOT_:122;$_AND_:4;$_MUX_:64;$_NAND_:34;$_NOR_:67;$_NOT_:25;$_ORNOT_:13;$_OR_:103;$_XNOR_:44;$_XOR_:83",
+    "shared_cell_types": "$_ANDNOT_:122;$_AND_:4;$_MUX_:64;$_NAND_:34;$_NOR_:67;$_NOT_:25;$_ORNOT_:13;$_OR_:103;$_XNOR_:44;$_XOR_:83"
+  }
+]

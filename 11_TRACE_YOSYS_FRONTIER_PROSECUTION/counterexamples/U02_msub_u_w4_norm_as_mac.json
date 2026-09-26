@@ -1,0 +1,25 @@
+{
+ "job_id": "U02_msub_u_w4_norm_as_mac",
+ "results_csv": "trace_unsupported_probe_results.csv",
+ "netlist": "netlists/MAIN/C_msub_u_w4__norm.aig",
+ "args": "-mac -dyn -p -c -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "mac:uuu:4,4,8:9",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 16,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -2,
+  "input_vector_hex": "0x11",
+  "operands": [
+   "0x1",
+   "0x1",
+   "0x0"
+  ],
+  "netlist_output": "0x1ff",
+  "reference": "0x1"
+ },
+ "overall": "WITNESS_CONFIRMED",
+ "i_vars": false
+}

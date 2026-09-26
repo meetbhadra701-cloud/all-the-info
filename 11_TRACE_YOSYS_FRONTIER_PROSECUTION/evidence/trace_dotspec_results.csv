@@ -1,0 +1,8 @@
+job_id,rel_path,args,timeout_s,expected,tool_status,trace_result,max_polynomial,trace_elapsed_s,wall_s,cgroup_peak_mib,max_rss_kb,and_gates,subst_steps,trace_exit,diag,note
+S01_dot2_s_w8_norm_idx,netlists/MAIN/B_dot2_s_w8__norm.aig,-dot=2 -s -idx -p -c -no-steps,120,CORRECT,TIMEOUT,,,,121.40,236.5,,,,137,,signed dot spec on conventional correct netlist
+S02_dot2_s_w8_patchtree_idx,netlists/PATCH/B_dot2_s_w8__tree.aig,-dot=2 -s -idx -p -c -no-steps,120,CORRECT,RESULT,Buggy,145,0.605211,2.10,7.3,35264,1385,17,0,,signed dot spec on patched tree
+S03_dot2_u_w8_norm_idx,netlists/MAIN/B_dot2_u_w8__norm.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,RESULT,Correct,146,14.0477,15.48,16.0,70304,1305,17,0,,unsigned dot spec on unsigned conventional
+S04_dot2_u_w8_tree_idx,netlists/MAIN/B_dot2_u_w8__tree.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,RESULT,Correct,146,0.352702,2.04,5.6,24512,1243,17,0,,unsigned dot spec on unsigned tree
+S05_mac_s_w8_norm_idx,netlists/MAIN/B_mac_s_w8__norm.aig,-mac -s -idx -p -c -no-steps,120,CORRECT,TIMEOUT,,,,121.40,123.9,,,,137,,signed MAC spec on conventional correct netlist
+S06_mul_s_w8_norm_idx_ref,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -idx -p -c -no-steps,120,CORRECT,RESULT,Correct,81,1.21984,2.74,6.3,28096,695,16,0,,signed MUL spec reference (known Correct)
+S07_dot2_s_w8_tree_unsignedflag,netlists/MAIN/B_dot2_s_w8__tree.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,RESULT,Buggy,145,1.3836,2.86,7.9,35440,1385,17,0,,signed circuit with unsigned dot spec (compare remainder)

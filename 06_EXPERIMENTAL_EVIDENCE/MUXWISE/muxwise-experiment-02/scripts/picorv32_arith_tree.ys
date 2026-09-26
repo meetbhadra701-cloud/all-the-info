@@ -1,0 +1,7 @@
+read_verilog -formal -sv reproducers/external/picorv32.v
+synth -top picorv32 -arith_tree
+write_json work/picorv32_arith_tree.json
+write_rtlil work/picorv32_arith_tree.rtlil
+write_verilog -noattr work/picorv32_arith_tree.v
+stat
+

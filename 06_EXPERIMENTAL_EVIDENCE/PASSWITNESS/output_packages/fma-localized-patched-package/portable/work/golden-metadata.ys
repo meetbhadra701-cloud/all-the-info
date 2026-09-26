@@ -1,0 +1,5 @@
+read_verilog -sv "source/source.v"
+hierarchy -top fma_impl
+
+proc
+write_json "./work/golden.json"

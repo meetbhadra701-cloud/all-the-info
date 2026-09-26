@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/A_mul_u_w32__norm.aig
+### ARGS -mul -igsm -p -c -no-steps
+### TIMEOUT 300
+### START 2026-09-24T12:16:55-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/A_mul_u_w32__norm.aig
+║           mode: mul
+║           sign: unsigned
+║           method: igsm
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 657965056
+### DOCKER_EXIT 0
+### WALL_SECONDS 302.39
+### END 2026-09-24T12:21:57-07:00

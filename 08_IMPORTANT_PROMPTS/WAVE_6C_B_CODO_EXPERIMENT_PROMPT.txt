@@ -1,0 +1,469 @@
+# WAVE 6C-B — CODO FRONTIER REPRODUCTION / FEASIBILITY TEST
+## Two Legal Parallelism Decisions → Intermediate FIFO Contract Conflict
+
+You are the MICRO-EXPERIMENT SCIENTIST.
+
+Do NOT invent a mechanism.
+Do NOT propose a new compiler pass.
+Do NOT novelty-search.
+Do NOT run an Assassin.
+Do NOT rescue the seed if the conflict is intrinsically unsatisfiable.
+
+We are testing whether a specific published CODO frontier is:
+
+A. a genuine incompleteness in the strongest existing repair mechanism,
+
+or
+
+B. merely an inherently unsatisfiable pair of FIFO contracts.
+
+==================================================
+0. PRIOR-ART FRONTIER
+==================================================
+
+METHOD:
+
+CODO — automated comprehensive dataflow optimization, ISCA 2026.
+
+Use the strongest published/current CODO pipeline, including:
+
+- its parallelism propagation;
+- coarse/fine dataflow-violation detection;
+- FIFO legality repair;
+- and re-running its correctness/repair machinery after transformation.
+
+Do NOT test a weakened reconstruction if the public artifact can execute
+the relevant flow.
+
+PUBLISHED FRONTIER:
+
+The paper describes an A -> B -> C -> D situation where parallelization
+choices at B and D impose conflicting requirements on intermediate C.
+
+CODO reports an "unresolvable violation" and changes C-D communication
+from FIFO to ping-pong buffering.
+
+The question is NOT whether this happens.
+
+First reproduce it.
+
+The actual research question is:
+
+> With B and D decisions frozen, does ANY legal FIFO-preserving
+> transformation of C exist that satisfies both induced contracts?
+
+==================================================
+1. CRITICAL DISTINCTION
+==================================================
+
+There are two fundamentally different possibilities.
+
+CASE 1 — INTRINSIC CONTRACT UNSAT
+
+The B-induced FIFO requirements and D-induced FIFO requirements on C
+have no joint satisfying implementation under the same legal
+transformation/communication semantics.
+
+Then CODO is correct to abandon FIFO.
+
+This is NOT a missing compiler mechanism.
+
+Do not rescue it.
+
+--------------------------------------------------
+
+CASE 2 — REPAIR INCOMPLETENESS
+
+A legal C transformation / access organization / partitioning /
+schedule exists that:
+
+- preserves B's frozen decision;
+- preserves D's frozen decision;
+- preserves FIFO communication;
+- satisfies CODO's own correctness criteria;
+
+but CODO's strongest repair pipeline fails to discover it and falls
+back to ping-pong.
+
+Only this outcome establishes the Wave-6 frontier.
+
+==================================================
+2. PHASE A — REPRODUCE THE PUBLISHED CASE
+==================================================
+
+Locate the exact A-B-C-D example or closest executable artifact case
+from the CODO paper/repository.
+
+Record:
+
+- exact CODO version/commit;
+- benchmark/kernel;
+- initial MLIR;
+- parallelism decisions at B and D;
+- induced transformation at C;
+- exact violation CODO reports;
+- every correction/repair pass CODO applies;
+- final FIFO -> ping-pong fallback.
+
+Do not continue until the published behavior is reproduced faithfully.
+
+If it cannot be reproduced:
+
+BASELINE NOT REPRODUCED
+and STOP.
+
+==================================================
+3. PHASE B — EXTRACT CODO'S ACTUAL FIFO LEGALITY CONTRACT
+==================================================
+
+From the paper/code, write down the exact conditions CODO uses for
+FIFO correctness.
+
+Do not replace CODO's definitions with an intuitive approximation.
+
+Identify all relevant objects, for example only where actually defined:
+
+- producer access order;
+- consumer access order;
+- tiling;
+- unrolling;
+- partitioning;
+- iteration correspondence;
+- FIFO ordering;
+- token multiplicity;
+- coarse/fine violation predicates.
+
+Construct an INDEPENDENT checker for the minimized case.
+
+The checker must answer:
+
+    LEGAL_FIFO(configuration)
+
+using CODO's published semantics.
+
+Cross-check it on:
+
+- known legal pre-transformation case;
+- B-only propagated case;
+- D-only propagated case;
+- published B+D failing case.
+
+==================================================
+4. PHASE C — INDIVIDUAL SATISFIABILITY CONTROL
+==================================================
+
+This is mandatory.
+
+Freeze B's published decision but remove D's conflicting decision.
+
+Ask whether there exists a legal transformation of C retaining FIFO.
+
+Expected:
+
+    SAT.
+
+Then freeze D's decision but remove B's conflicting decision.
+
+Expected:
+
+    SAT.
+
+Record concrete witnesses for both.
+
+If either side is individually impossible:
+
+this is not the Wave-6 composition pattern.
+
+Classify accordingly and stop.
+
+==================================================
+5. PHASE D — STRONGEST CODO REPAIR
+==================================================
+
+Freeze BOTH B and D decisions.
+
+Provide CODO every legitimate representation it normally has:
+
+- complete MLIR loop/access structure;
+- partition information;
+- tiling/unrolling information;
+- dependence/dataflow information;
+- all ordinary metadata used by its correctness passes.
+
+Run:
+
+parallelism propagation
+-> coarse/fine correctness detection
+-> all published repairs
+-> re-run correctness
+-> fixed point / normal termination.
+
+Confirm whether CODO still changes C-D away from FIFO.
+
+This establishes the existing-method result.
+
+==================================================
+6. PHASE E — COMPLETE SMALL-SCOPE FEASIBILITY ORACLE
+==================================================
+
+Now answer the important question independently.
+
+For the minimized B-C-D conflict, enumerate or SAT/SMT/ILP-search the
+complete SMALL legal choice space for C.
+
+Do NOT invent a new optimization algorithm.
+
+This is only an existence oracle.
+
+Allow every C-side choice already legitimate under the representation
+and transformation universe being tested.
+
+Examples, only if part of the real CODO semantics:
+
+- legal loop permutation;
+- tiling choice;
+- unroll factor;
+- array partition;
+- access ordering;
+- legal mapping of produced/consumed token groups.
+
+Freeze:
+
+- B's chosen strategy;
+- D's chosen strategy;
+- FIFO as the communication class;
+- external program semantics.
+
+Question:
+
+    EXISTS C_configuration :
+        Contract_B(C)
+        AND Contract_D(C)
+        AND FIFO_legal(C)
+        AND semantics_preserved(C)
+
+Return:
+
+SAT
+or
+UNSAT.
+
+If SAT:
+emit the complete witness.
+
+If UNSAT:
+emit a minimal or near-minimal unsatisfied contract explanation if
+cheaply available.
+
+==================================================
+7. DO NOT CONFUSE SEARCH-SPACE LIMITATION WITH A NEW MECHANISM
+==================================================
+
+If the SAT witness requires a transformation that CODO simply never
+claims to support, classify carefully.
+
+A Wave-6 frontier requires that the witness is inside a legitimate
+extension of the representation/problem CODO is already solving,
+rather than:
+
+"another compiler could completely restructure the algorithm."
+
+Record exactly which C-side operation makes the witness legal.
+
+==================================================
+8. STRONGEST-REPRESENTATION AUDIT
+==================================================
+
+Before declaring REPAIR INCOMPLETENESS verify that failure is NOT due to:
+
+- missing affine access information;
+- missing partition information;
+- lost dependence metadata;
+- unknown loop bounds;
+- syntax;
+- unsupported parser form;
+- an obsolete CODO commit;
+- failure to rerun its repair passes;
+- a known command-line option;
+- a trivial buffer-depth issue rather than FIFO ordering.
+
+If adding ordinary legitimate information repairs the case:
+
+MISSING-INFORMATION ARTIFACT.
+
+Kill it.
+
+==================================================
+9. MINIMIZATION
+==================================================
+
+Reduce the reproduced case while preserving:
+
+B alone = SAT
+D alone = SAT
+B + D under CODO = FIFO failure/fallback.
+
+Try to obtain the smallest useful structure:
+
+A -> B -> C -> D
+
+or smaller if A is unnecessary.
+
+Minimize:
+
+- loops;
+- arrays;
+- access functions;
+- tile/unroll factors;
+- dimensions.
+
+Do NOT alter the essential conflict.
+
+==================================================
+10. FAMILY TEST — ONLY IF A SAT WITNESS EXISTS
+==================================================
+
+If Phase E returns SAT while CODO falls back:
+
+generate 3-5 nearby variants by changing only one controlled structural
+quantity at a time.
+
+Possible quantities only if relevant:
+
+- parallelism factor;
+- partition factor;
+- tile size;
+- producer/consumer access stride/order.
+
+For each classify:
+
+CODO_FIFO
+CODO_FALLBACK
+ORACLE_SAT
+ORACLE_UNSAT
+
+We need to know whether this is a family or one weird specimen.
+
+Do not search broadly.
+
+==================================================
+11. REQUIRED COUNTERFACTUALS
+==================================================
+
+Your final explanation must account for all four cells:
+
+B only:
+    legal FIFO?
+
+D only:
+    legal FIFO?
+
+B + D under CODO:
+    legal FIFO or fallback?
+
+B + D under complete feasibility oracle:
+    SAT or UNSAT?
+
+Without all four, classification is premature.
+
+==================================================
+12. TERMINAL CLASSIFICATIONS
+==================================================
+
+Return exactly ONE.
+
+EXISTING CODO REPAIR SUFFICES
+
+CODO retains both decisions and FIFO after its strongest documented
+repair.
+
+Frontier killed.
+
+--------------------------------------------------
+
+INTRINSIC FIFO-CONTRACT UNSAT
+
+B alone and D alone are each legal, but their frozen induced contracts
+have no jointly satisfying FIFO-preserving C configuration in the
+complete small-scope oracle.
+
+This is a real composition wall but NOT evidence of missing repair
+machinery.
+
+Do not invent a mechanism.
+
+--------------------------------------------------
+
+CODO REPAIR-INCOMPLETENESS FRONTIER SURVIVES
+
+Requirements:
+
+1. B-only SAT.
+2. D-only SAT.
+3. strongest CODO flow falls back / cannot retain FIFO.
+4. complete independent oracle finds a legal FIFO-preserving witness
+   retaining both frozen decisions.
+5. witness lies within a legitimate problem/representation scope rather
+   than requiring wholesale algorithm replacement.
+6. semantics independently validate.
+
+Only this classification can advance toward Wave-6 mechanism invention.
+
+--------------------------------------------------
+
+MISSING-INFORMATION ARTIFACT
+
+Failure disappears when ordinary legitimate semantic information is
+supplied.
+
+Kill.
+
+--------------------------------------------------
+
+INCONCLUSIVE
+
+Baseline or legality semantics could not be reproduced faithfully.
+
+==================================================
+13. PROVENANCE
+==================================================
+
+Tag claims:
+
+MEASURED
+MEASURED-FROM-PUBLISHED-DEFINITION
+THEORETICAL-DERIVED
+EXPECTED
+ABORTED-UNKNOWN
+
+==================================================
+14. REQUIRED DOSSIER
+==================================================
+
+Return:
+
+# WAVE 6C-B — CODO FRONTIER REPRODUCTION DOSSIER
+
+1. exact CODO paper/artifact/version;
+2. exact published frontier;
+3. baseline reproduction;
+4. CODO FIFO legality definition;
+5. independent legality oracle;
+6. B-only witness;
+7. D-only witness;
+8. B+D strongest-CODO result;
+9. B+D complete-oracle result;
+10. SAT witness or UNSAT explanation;
+11. strongest-representation audit;
+12. minimized reproducer;
+13. family sweep if triggered;
+14. counterexamples;
+15. exact commands/files;
+16. exactly one terminal classification.
+
+Then STOP.
+
+No Prompt 3.
+No mechanism invention.
+No novelty claim.
+No Assassin.

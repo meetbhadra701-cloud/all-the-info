@@ -1,0 +1,1 @@
+======== ABC command line "read_aiger /mnt/c/Users/meetb/Desktop/CLAUDE_OPUS_5_5_RESEARCH_CONTEXT/11_TRACE_YOSYS_FRONTIER_PROSECUTION/netlists/MAIN/B_dot2_u_w16__norm_pre.aig; strash; balance; write_aiger -s /mnt/c/Users/meetb/Desktop/CLAUDE_OPUS_5_5_RESEARCH_CONTEXT/11_TRACE_YOSYS_FRONTIER_PROSECUTION/netlists/ABCSTEP/B_dot2_u_w16__norm_pre__balance.aig"

@@ -1,0 +1,13 @@
+control mutated: EQUIV_ABC_NEQ | Verification failed for at least 1 outputs:  n3407_1 Output n3407_1: Value in Network1 = 0. Value in Net
+annealing_s1 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     3.13 sec  :: 15s
+annealing_s2 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     0.99 sec  :: 11s
+annealing_s3 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     1.03 sec  :: 11s
+annealing_s4 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     3.86 sec  :: 16s
+genetic_s1 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     3.27 sec  :: 15s
+genetic_s2 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     1.07 sec  :: 12s
+none_s1 :: EQUIV_ABC_PASS | Networks are equivalent after structural hashing.  Time =     0.01 sec  :: 10s
+repair_timing_s1 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     0.12 sec  :: 11s
+resynth_s1 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     1.18 sec  :: 14s
+unplaced_annealing_s1 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     1.36 sec  :: 14s
+unplaced_none_s1 :: EQUIV_ABC_PASS | Networks are equivalent after structural hashing.  Time =     0.01 sec  :: 9s
+unplaced_repair_timing_s1 :: EQUIV_ABC_PASS | Networks are equivalent.  Time =     0.21 sec  :: 11s

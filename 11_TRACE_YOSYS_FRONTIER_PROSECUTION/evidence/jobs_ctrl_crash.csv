@@ -1,0 +1,6 @@
+job_id,rel_path,args,timeout_s,expected,note
+C01_mul_u_w8_normpre_original,netlists/MAIN/A_mul_u_w8__norm_pre.aig,-mul -dyn -p -c -no-steps,120,CORRECT,crash control: original (no constant-fanin AND)
+C02_mul_u_w8_normpre_buffered,netlists/CONTROL/A_mul_u_w8__norm_pre_buffered.aig,-mul -dyn -p -c -no-steps,120,CORRECT,crash control: same + one AND(x TRUE) buffer
+C03_mul_u_w8_boothpre_folded,netlists/CONTROL/A_mul_u_w8__booth_pre_folded.aig,-mul -dyn -p -c -no-steps,120,CORRECT,crash control: crashing netlist with constant folded
+C04_mul_u_w8_boothpre_rerun,netlists/MAIN/A_mul_u_w8__booth_pre.aig,-mul -dyn -p -c -no-steps,120,CORRECT,crash reproducibility rerun
+C05_mul_u_w8_boothpre_idx,netlists/MAIN/A_mul_u_w8__booth_pre.aig,-mul -no-steps,120,CORRECT,crash with default method (no p/c)

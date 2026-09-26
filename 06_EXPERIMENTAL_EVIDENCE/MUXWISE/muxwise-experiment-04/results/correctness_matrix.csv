@@ -1,0 +1,3 @@
+case,width,mode,expected,observed,returncode,runtime_seconds,script,log,signals_from_log
+rtl_self,8,self,PASS_EXPECTED,PASS,0,0.323046,work/clean_miter/rtl_self.ys,logs/clean_miter/rtl_self.log,{}
+wrong_rtl,8,wrong,FAIL_EXPECTED,FAIL,1,0.373335,work/clean_miter/wrong_rtl.ys,logs/clean_miter/wrong_rtl.log,"{'gate_y': '111111111111110100111101', 'gold_y': '111111111111111110111101', 'mismatch': '1', 'x0': '10100000', 'x1': '01001111', 'x2': '01000000', 'x3': '00111011'}"

@@ -1,0 +1,24 @@
+{
+ "job_id": "mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___dyn_p",
+ "results_csv": "trace_mini_results.csv",
+ "netlist": "netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig",
+ "args": "-mac -s -dyn -p -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mac:sss:3,3,6:7",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 2,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": 64,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x40",
+  "reference": "0x0"
+ },
+ "overall": "WITNESS_CONFIRMED"
+}

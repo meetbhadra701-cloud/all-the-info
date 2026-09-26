@@ -1,0 +1,6 @@
+fetched_utc=2026-09-25T08:41:59Z
+MappingEvolve 308f5cc41c1d7243c39fd2ddd02253c1343eb889
+mockturtle 420f0271ab9f63a1644bf465ab47c970c173bd7b
+benchmarks 82d8cc6910419298e713a46644ed59fd3df53038
+435M	MappingEvolve
+191M	benchmarks

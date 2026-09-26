@@ -1,0 +1,21 @@
+### FILE netlists/ABCMAP/B_dot2_u_w16__norm__g_gates.aig
+### ARGS -dot=2 -idx -p -c -no-steps
+### TIMEOUT 120
+### START 2026-09-24T17:38:07-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/ABCMAP/B_dot2_u_w16__norm__g_gates.aig
+║           mode: dot=2
+║           sign: unsigned
+║           method: idx
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 716554240
+### DOCKER_EXIT 0
+### WALL_SECONDS 120.61
+### END 2026-09-24T17:40:07-07:00

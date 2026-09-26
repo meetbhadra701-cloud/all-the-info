@@ -1,0 +1,4 @@
+base,rc,aig_written,seconds
+netlists/MAIN/A_mul_s_w8__booth_lp_pre,0,1,0.21
+netlists/MAIN/A_mul_s_w16__booth_lp_pre,0,1,0.35
+netlists/MAIN/A_mul_s_w32__booth_lp_pre,0,1,0.63

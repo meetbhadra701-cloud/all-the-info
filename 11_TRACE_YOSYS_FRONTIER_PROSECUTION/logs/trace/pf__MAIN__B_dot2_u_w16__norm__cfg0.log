@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_dot2_u_w16__norm.aig
+### ARGS -dot=2 -dyn -p -c -no-steps
+### TIMEOUT 120
+### START 2026-09-24T03:46:16-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_dot2_u_w16__norm.aig
+║           mode: dot=2
+║           sign: unsigned
+║           method: dyn
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 89939968
+### DOCKER_EXIT 0
+### WALL_SECONDS 121.37
+### END 2026-09-24T03:48:17-07:00

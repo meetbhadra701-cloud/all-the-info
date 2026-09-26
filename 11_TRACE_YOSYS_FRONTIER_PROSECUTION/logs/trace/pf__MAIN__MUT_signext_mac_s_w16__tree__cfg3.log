@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/MUT_signext_mac_s_w16__tree.aig
+### ARGS -mac -s -igs -p -c -no-steps
+### TIMEOUT 120
+### START 2026-09-24T12:29:34-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/MUT_signext_mac_s_w16__tree.aig
+║           mode: mac
+║           sign: signed
+║           method: igs
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 271044608
+### DOCKER_EXIT 0
+### WALL_SECONDS 121.80
+### END 2026-09-24T12:31:36-07:00

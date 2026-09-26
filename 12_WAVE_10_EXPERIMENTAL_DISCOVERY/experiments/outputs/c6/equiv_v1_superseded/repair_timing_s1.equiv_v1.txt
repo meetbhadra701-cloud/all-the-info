@@ -1,0 +1,1 @@
+repair_timing_s1 :: EQUIV_NOT_PROVEN (yosys_rc=1) |   Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$55514: \u3946.B_gold \u3946.B_gate   Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$53910: \u4193.A2_gold \u4193.A2_gate   Unproven $equiv $auto$equiv_make.cc:295:find_same_wires$40106: \u7005.A_gold \u7005.A_gate  :: 820s

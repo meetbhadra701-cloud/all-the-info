@@ -1,0 +1,105 @@
+job_id,rel_path,args,timeout_s,expected,tool_status,trace_result,max_polynomial,trace_elapsed_s,wall_s,cgroup_peak_mib,max_rss_kb,and_gates,subst_steps,trace_exit,diag,note
+sw__A_mul_s_w4__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,56,0.00834966,1.25,5.2,12736,109,117,0,,W=4;onset sweep;arch=booth
+sw__A_mul_s_w4__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,25,0.0211009,1.16,4.6,12224,109,8,0,,W=4;onset sweep;arch=booth
+sw__A_mul_s_w4__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,175,0.182412,1.51,5.1,12736,117,125,0,,W=4;onset sweep;arch=booth_lp
+sw__A_mul_s_w4__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,25,0.0973857,1.46,5.1,12736,117,8,0,,W=4;onset sweep;arch=booth_lp
+sw__A_mul_s_w4__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,25,0.0768557,1.19,4.9,13248,146,8,0,,W=4;onset sweep;arch=norm
+sw__A_mul_u_w4__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w4__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,41,0.0125503,1.55,4.7,13248,161,169,0,,W=4;onset sweep;arch=booth
+sw__A_mul_u_w4__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w4__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,25,0.0126256,1.27,5.1,12736,161,8,0,,W=4;onset sweep;arch=booth
+sw__A_mul_u_w4__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w4__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,25,0.00709984,1.37,4.6,11712,108,8,0,,W=4;onset sweep;arch=norm
+sw__A_mul_s_w5__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,282,0.196586,1.53,4.9,14784,215,225,0,,W=5;onset sweep;arch=booth
+sw__A_mul_s_w5__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,36,0.075451,1.69,5.2,13248,215,10,0,,W=5;onset sweep;arch=booth
+sw__A_mul_s_w5__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,21444,15.8292,17.19,21.9,94496,198,208,0,,W=5;onset sweep;arch=booth_lp
+sw__A_mul_s_w5__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,36,1.60998,2.85,4.9,22976,198,10,0,,W=5;onset sweep;arch=booth_lp
+sw__A_mul_s_w5__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,36,0.443785,1.74,4.9,15296,254,10,0,,W=5;onset sweep;arch=norm
+sw__A_mul_u_w5__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w5__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,1363,1.86959,3.39,5.2,21840,239,249,0,,W=5;onset sweep;arch=booth
+sw__A_mul_u_w5__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w5__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,36,0.842098,2.27,5.1,18880,239,10,0,,W=5;onset sweep;arch=booth
+sw__A_mul_u_w5__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w5__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,36,0.0273435,1.55,5.4,12736,197,10,0,,W=5;onset sweep;arch=norm
+sw__A_mul_s_w6__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,87,0.0238156,1.23,4.9,14784,293,305,0,,W=6;onset sweep;arch=booth
+sw__A_mul_s_w6__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,49,0.0261457,1.55,4.6,13760,293,12,0,,W=6;onset sweep;arch=booth
+sw__A_mul_s_w6__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.47,150.1,,,,137,,W=6;onset sweep;arch=booth_lp
+sw__A_mul_s_w6__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,49,11.0031,12.40,14.1,61504,276,12,0,,W=6;onset sweep;arch=booth_lp
+sw__A_mul_s_w6__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,49,0.353225,1.53,4.7,16832,378,12,0,,W=6;onset sweep;arch=norm
+sw__A_mul_u_w6__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w6__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,16450,23.2396,24.48,30.6,129840,362,374,0,,W=6;onset sweep;arch=booth
+sw__A_mul_u_w6__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w6__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,49,31.0955,32.31,34.8,146624,362,12,0,,W=6;onset sweep;arch=booth
+sw__A_mul_u_w6__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w6__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,49,0.0574013,1.51,5.4,13760,292,12,0,,W=6;onset sweep;arch=norm
+sw__A_mul_s_w7__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,62.16,29.1,,,,137,,W=7;onset sweep;arch=booth
+sw__A_mul_s_w7__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,64,0.0960457,1.58,5.0,16320,449,14,0,,W=7;onset sweep;arch=booth
+sw__A_mul_s_w7__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.84,107.8,,,,137,,W=7;onset sweep;arch=booth_lp
+sw__A_mul_s_w7__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,62.10,73.4,,,,137,,W=7;onset sweep;arch=booth_lp
+sw__A_mul_s_w7__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,64,22.0953,23.77,23.1,96304,561,14,0,,W=7;onset sweep;arch=norm
+sw__A_mul_u_w7__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w7__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,122,0.10274,1.75,5.1,17344,443,457,0,,W=7;onset sweep;arch=booth
+sw__A_mul_u_w7__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w7__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,64,0.177708,1.80,4.9,15296,443,14,0,,W=7;onset sweep;arch=booth
+sw__A_mul_u_w7__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w7__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,64,0.0339857,1.31,4.6,15296,428,14,0,,W=7;onset sweep;arch=norm
+sw__A_mul_s_w8__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,186,0.116966,1.68,5.1,18368,530,546,0,,W=8;onset sweep;arch=booth
+sw__A_mul_s_w8__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,81,0.138224,1.74,4.9,16832,530,16,0,,W=8;onset sweep;arch=booth
+sw__A_mul_s_w8__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.33,62.1,,,,137,,W=8;onset sweep;arch=booth_lp
+sw__A_mul_s_w8__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.16,76.8,,,,137,,W=8;onset sweep;arch=booth_lp
+sw__A_mul_s_w8__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,81,1.21912,2.55,6.1,28608,695,16,0,,W=8;onset sweep;arch=norm
+sw__A_mul_u_w8__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w8__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.83,48.5,,,,137,,W=8;onset sweep;arch=booth
+sw__A_mul_u_w8__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w8__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.42,97.5,,,,137,,W=8;onset sweep;arch=booth
+sw__A_mul_u_w8__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w8__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,81,0.0519258,1.25,5.1,16832,570,16,0,,W=8;onset sweep;arch=norm
+sw__A_mul_s_w9__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,187,0.250211,1.74,5.2,20928,711,729,0,,W=9;onset sweep;arch=booth
+sw__A_mul_s_w9__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,100,0.180606,1.84,5.4,18368,711,18,0,,W=9;onset sweep;arch=booth
+sw__A_mul_s_w9__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.48,62.0,,,,137,,W=9;onset sweep;arch=booth_lp
+sw__A_mul_s_w9__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.33,74.2,,,,137,,W=9;onset sweep;arch=booth_lp
+sw__A_mul_s_w9__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.48,102.5,,,,137,,W=9;onset sweep;arch=norm
+sw__A_mul_u_w9__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w9__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.23,25.3,,,,137,,W=9;onset sweep;arch=booth
+sw__A_mul_u_w9__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w9__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.15,97.1,,,,137,,W=9;onset sweep;arch=booth
+sw__A_mul_u_w9__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w9__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,100,0.172771,1.48,4.9,18368,716,18,0,,W=9;onset sweep;arch=norm
+sw__A_mul_s_w10__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,262,0.265878,1.79,5.4,22976,812,832,0,,W=10;onset sweep;arch=booth
+sw__A_mul_s_w10__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,121,0.252399,1.81,4.7,19392,812,20,0,,W=10;onset sweep;arch=booth
+sw__A_mul_s_w10__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.57,64.1,,,,137,,W=10;onset sweep;arch=booth_lp
+sw__A_mul_s_w10__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.27,84.2,,,,137,,W=10;onset sweep;arch=booth_lp
+sw__A_mul_s_w10__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,121,0.295516,1.61,5.1,24000,1195,20,0,,W=10;onset sweep;arch=norm
+sw__A_mul_u_w10__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w10__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.58,26.1,,,,137,,W=10;onset sweep;arch=booth
+sw__A_mul_u_w10__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w10__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.08,78.2,,,,137,,W=10;onset sweep;arch=booth
+sw__A_mul_u_w10__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w10__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,121,0.368169,1.99,5.4,21440,930,20,0,,W=10;onset sweep;arch=norm
+sw__A_mul_s_w11__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,4509,3.01097,4.57,11.9,50832,1088,1110,0,,W=11;onset sweep;arch=booth
+sw__A_mul_s_w11__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,144,0.586892,2.06,5.6,25024,1088,22,0,,W=11;onset sweep;arch=booth
+sw__A_mul_s_w11__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.40,54.7,,,,137,,W=11;onset sweep;arch=booth_lp
+sw__A_mul_s_w11__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.52,75.1,,,,137,,W=11;onset sweep;arch=booth_lp
+sw__A_mul_s_w11__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,144,0.287692,1.88,5.4,26560,1398,22,0,,W=11;onset sweep;arch=norm
+sw__A_mul_u_w11__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w11__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,324,0.360753,1.92,5.7,27584,1073,1095,0,,W=11;onset sweep;arch=booth
+sw__A_mul_u_w11__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w11__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,144,0.228608,1.52,5.1,24000,1073,22,0,,W=11;onset sweep;arch=booth
+sw__A_mul_u_w11__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w11__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,144,0.357471,2.07,5.4,23488,1147,22,0,,W=11;onset sweep;arch=norm
+sw__A_mul_s_w12__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,386,0.512166,2.23,6.1,28608,1194,1218,0,,W=12;onset sweep;arch=booth
+sw__A_mul_s_w12__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,169,0.508387,2.16,4.7,24000,1194,24,0,,W=12;onset sweep;arch=booth
+sw__A_mul_s_w12__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.35,58.7,,,,137,,W=12;onset sweep;arch=booth_lp
+sw__A_mul_s_w12__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.72,119.3,,,,137,,W=12;onset sweep;arch=booth_lp
+sw__A_mul_s_w12__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,169,0.37993,1.92,6.4,29104,1670,24,0,,W=12;onset sweep;arch=norm
+sw__A_mul_u_w12__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w12__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.75,45.7,,,,137,,W=12;onset sweep;arch=booth
+sw__A_mul_u_w12__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w12__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.72,145.1,,,,137,,W=12;onset sweep;arch=booth
+sw__A_mul_u_w12__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w12__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,169,0.438295,2.00,5.3,25024,1351,24,0,,W=12;onset sweep;arch=norm
+sw__A_mul_s_w13__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.60,17.9,,,,137,,W=13;onset sweep;arch=booth
+sw__A_mul_s_w13__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,196,1.18373,2.59,8.8,38336,1489,26,0,,W=13;onset sweep;arch=booth
+sw__A_mul_s_w13__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.47,37.6,,,,137,,W=13;onset sweep;arch=booth_lp
+sw__A_mul_s_w13__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.52,111.8,,,,137,,W=13;onset sweep;arch=booth_lp
+sw__A_mul_s_w13__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.70,96.6,,,,137,,W=13;onset sweep;arch=norm
+sw__A_mul_u_w13__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w13__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,470,0.747895,2.38,7.8,33728,1478,1504,0,,W=13;onset sweep;arch=booth
+sw__A_mul_u_w13__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w13__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,196,0.521461,2.28,6.3,27584,1478,26,0,,W=13;onset sweep;arch=booth
+sw__A_mul_u_w13__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w13__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,196,4.01039,5.84,9.8,43504,1603,26,0,,W=13;onset sweep;arch=norm
+sw__A_mul_s_w14__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,534,0.753695,2.00,7.8,35264,1603,1631,0,,W=14;onset sweep;arch=booth
+sw__A_mul_s_w14__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,225,0.731141,2.61,6.2,28608,1603,28,0,,W=14;onset sweep;arch=booth
+sw__A_mul_s_w14__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.69,48.9,,,,137,,W=14;onset sweep;arch=booth_lp
+sw__A_mul_s_w14__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.62,76.0,,,,137,,W=14;onset sweep;arch=booth_lp
+sw__A_mul_s_w14__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,225,0.570771,2.31,8.5,36240,2325,28,0,,W=14;onset sweep;arch=norm
+sw__A_mul_u_w14__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w14__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,614,1.20423,2.78,8.4,37824,1732,1760,0,,W=14;onset sweep;arch=booth
+sw__A_mul_u_w14__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w14__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,225,1.13585,3.21,7.2,33728,1732,28,0,,W=14;onset sweep;arch=booth
+sw__A_mul_u_w14__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w14__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,225,6.25287,7.69,12.1,54688,1914,28,0,,W=14;onset sweep;arch=norm
+sw__A_mul_s_w15__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,603,0.9221,2.47,8.7,40272,1956,1986,0,,W=15;onset sweep;arch=booth
+sw__A_mul_s_w15__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,256,1.14811,2.87,7.7,34240,1956,30,0,,W=15;onset sweep;arch=booth
+sw__A_mul_s_w15__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.52,99.1,,,,137,,W=15;onset sweep;arch=booth_lp
+sw__A_mul_s_w15__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.58,235.9,,,,137,,W=15;onset sweep;arch=booth_lp
+sw__A_mul_s_w15__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,256,0.378544,2.08,8.8,39856,2674,30,0,,W=15;onset sweep;arch=norm
+sw__A_mul_u_w15__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w15__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,645,0.920019,2.72,10.1,44304,2038,2068,0,,W=15;onset sweep;arch=booth
+sw__A_mul_u_w15__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w15__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,256,1.10688,2.53,7.9,36672,2038,30,0,,W=15;onset sweep;arch=booth
+sw__A_mul_u_w15__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w15__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,256,4.8378,6.49,9.9,46256,2198,30,0,,W=15;onset sweep;arch=norm
+sw__A_mul_s_w16__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,698,0.78637,2.34,9.7,42464,2087,2119,0,,W=16;onset sweep;arch=booth
+sw__A_mul_s_w16__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,289,1.17753,2.92,7.8,35264,2087,32,0,,W=16;onset sweep;arch=booth
+sw__A_mul_s_w16__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.56,87.1,,,,137,,W=16;onset sweep;arch=booth_lp
+sw__A_mul_s_w16__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,TIMEOUT,,,,61.84,81.1,,,,137,,W=16;onset sweep;arch=booth_lp
+sw__A_mul_s_w16__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,289,0.603542,2.24,10.0,43024,3025,32,0,,W=16;onset sweep;arch=norm
+sw__A_mul_u_w16__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w16__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,RESULT,Correct,815,1.34676,3.12,10.7,46944,2289,2321,0,,W=16;onset sweep;arch=booth
+sw__A_mul_u_w16__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w16__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,289,1.27396,3.05,8.9,40096,2289,32,0,,W=16;onset sweep;arch=booth
+sw__A_mul_u_w16__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w16__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,RESULT,Correct,289,19.4596,20.78,28.4,119376,2528,32,0,,W=16;onset sweep;arch=norm

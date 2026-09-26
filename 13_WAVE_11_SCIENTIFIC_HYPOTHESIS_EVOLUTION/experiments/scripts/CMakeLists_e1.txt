@@ -1,0 +1,10 @@
+# Wave 11 / E1: dump driver build. Flags are identical to Wave 10's C1 build.
+cmake_minimum_required(VERSION 3.16)
+project(W11_E1)
+add_definitions(-fPIC)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -O3 -DNDEBUG")
+add_subdirectory(third-party)
+add_executable(drv_dump variants/dump/c1_driver.cpp)
+target_link_libraries(drv_dump PUBLIC mockturtle experiments fmt)

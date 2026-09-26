@@ -1,0 +1,18 @@
+{
+ "job_id": "D05_mul_s_w8_norm_igsm",
+ "results_csv": "trace_diag1_results.csv",
+ "netlist": "netlists/MAIN/A_mul_s_w8__norm.aig",
+ "args": "-mul -s -igsm -p -c -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "mul:ss:8,8:16",
+ "witness_complement": {
+  "verdict": "NO_NONZERO_POINT_FOUND",
+  "remainder_terms": 2,
+  "candidates_tried": 65536,
+  "exhaustive": true,
+  "internal_node_vars_in_remainder": [
+   34
+  ]
+ },
+ "overall": "REMAINDER_INVALID"
+}

@@ -1,0 +1,8 @@
+# Output of scripts/msb_mutants.sh (verbatim). Reference = CORRECT normal-synthesis netlist mac_u_w8_norm.aig; mutant = -arith_tree synthesis of y=(a*b+c) with bit k flipped when a[0]&b[7].
+bit,expected,acec_verdict,acec_mode,gcec_verdict
+16,NOT_EQUIVALENT,FAIL,adder_tree_matched,FAIL
+15,NOT_EQUIVALENT,FAIL,adder_tree_matched,FAIL
+14,NOT_EQUIVALENT,FAIL,adder_tree_matched,FAIL
+13,NOT_EQUIVALENT,FAIL,adder_tree_matched,FAIL
+0,NOT_EQUIVALENT,FAIL,adder_tree_matched,FAIL
+# disproved miter output (acec | gcec): k16: 6|16  k15: 2|15  k14: 6|14  k13: 6|13  k0: -|0

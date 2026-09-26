@@ -1,0 +1,13 @@
+read_verilog -sv rtl/unshared.v
+prep -top unshared
+design -stash gold
+read_verilog -sv rtl/incorrect.v
+prep -top incorrect
+design -stash gate
+design -copy-from gold -as gold unshared
+design -copy-from gate -as gate incorrect
+equiv_make gold gate equiv
+prep -top equiv
+equiv_simple
+equiv_status -assert
+

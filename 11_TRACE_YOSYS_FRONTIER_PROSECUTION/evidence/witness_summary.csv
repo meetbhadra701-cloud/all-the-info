@@ -1,0 +1,267 @@
+job_id,netlist,args,oracle,template_spec,i_vars,overall,input_vector_hex,netlist_output,template_reference
+BL17_wrongmode_mac8_as_mul,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig,-mul -dyn -p -c -no-steps,INCORRECT,"mul:uu:16,16:17",,WITNESS_CONFIRMED,0xffffffff,0x1fe00,0x1
+BL18_wrongsign_MUL8_signed,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mul -s -dyn -p -c -no-steps,INCORRECT,"mul:ss:8,8:16",,WITNESS_CONFIRMED,0x180,0x80,0xff80
+BL19_MUTX_beh_MUL_8,netlists/BASELINE/MUTX_behavioral_MUL_8.aig,-mul -dyn -p -c -no-steps,INCORRECT,"mul:uu:8,8:16",,WITNESS_CONFIRMED,0x1830,0x280,0x480
+BL20_MUTX_beh_mac_8,netlists/BASELINE/MUTX_behavioral_mac_8.aig,-mac -dyn -p -c -no-steps,INCORRECT,"mac:uuu:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x40,0x0
+BL22_MUTX_beh_MUL_32,netlists/BASELINE/MUTX_behavioral_MUL_32.aig,-mul -dyn -p -c -no-steps,INCORRECT,"mul:uu:32,32:64",,WITNESS_CONFIRMED,0xffffffffffffffff,0xfffffffdfffffe01,0xfffffffe00000001
+BL23_MUTX_NMAC_8,netlists/BASELINE/MUTX_NMAC_8_8_U_SP_AR_RC.aig,-mac -dyn -p -c -no-steps,INCORRECT,"mac:uuu:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x800,0x0
+ct__PATCH_B_mac_s_w8__tree_pre___dyn_p,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -dyn -p -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ct__PATCH_B_mac_s_w8__tree_pre___igs_p,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -igs -p -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ct__PATCH_B_mac_s_w16__tree_pre__igspc,netlists/PATCH/B_mac_s_w16__tree_pre.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:16,16,32:33",,REMAINDER_INVALID,0xffffffffffffffff,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx424___dyn_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx424.aig,-mul -s -dyn -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x1,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx424___igs_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx424.aig,-mul -s -igs -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x1,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx572___igs_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx572.aig,-mul -s -igs -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x2,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx730___igs_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx730.aig,-mul -s -igs -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x4,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx870___igs_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx870.aig,-mul -s -igs -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x8,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx1012___igs_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx1012.aig,-mul -s -igs -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x10,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx1146___igs_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx1146.aig,-mul -s -igs -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x20,0x0,0x0
+ctx__A_mul_s_w8__norm_pre__ctx1278___igs_p_c,netlists/CONTROL/ctx/A_mul_s_w8__norm_pre__ctx1278.aig,-mul -s -igs -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,0x40,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx70___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx70.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx86___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx86.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx126___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx126.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx194___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx194.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx194___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx194.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx290___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx290.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx410___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx410.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx552___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx552.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx712___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx712.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1026___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1026.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1032___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1032.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1176___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1176.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1176___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1176.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1292___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1292.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1390___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1390.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1466___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1466.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1466___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1466.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1538___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1538.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1538___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1538.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1576___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1576.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1576___dyn_p,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1576.aig,-mac -s -dyn -p -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0x80008080,0x1c000,0x1c000
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1620___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1620.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1620___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1620.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w8__tree_pre_folded__ctx1620___dyn_p,netlists/CONTROL/ctx/PATCH_B_mac_s_w8__tree_pre_folded__ctx1620.aig,-mac -s -dyn -p -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx46___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx46.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x400,0x1,0x1
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx62___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx62.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x800,0x2,0x2
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx102___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx102.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x1000,0x4,0x4
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx170___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx170.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x2000,0x8,0x8
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx170___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx170.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x2000,0x8,0x8
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx262___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx262.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x4000,0x10,0x10
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx262___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx262.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x4000,0x10,0x10
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx358___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx358.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x8000,0x20,0x20
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx454___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx454.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x10000,0x40,0x40
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx530___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx530.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x20000,0x80,0x80
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx588___dyn_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx588.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x40000,0x100,0x100
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx588___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx588.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x40000,0x100,0x100
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx620___igs_p_c,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx620.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x80210,0x700,0x700
+ctx__PATCH_B_mac_s_w5__tree_pre__ctx620___dyn_p,netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx620.aig,-mac -s -dyn -p -no-steps,CORRECT,"mac:sss:5,5,10:11",,REMAINDER_INVALID,0x80210,0x700,0x700
+ctx__B_mac_u_w8__tree_pre__ctx86___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx86.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx126___dyn_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx126.aig,-mac -dyn -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx126___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx126.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx194___dyn_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx194.aig,-mac -dyn -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx194___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx194.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx286___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx286.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx398___dyn_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx398.aig,-mac -dyn -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx398___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx398.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx532___dyn_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx532.aig,-mac -dyn -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx532___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx532.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx684___dyn_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx684.aig,-mac -dyn -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx684___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx684.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx842___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx842.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx982___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx982.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx1118___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1118.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx1222___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1222.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx1312___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1312.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx1380___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1380.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx1444___dyn_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1444.aig,-mac -dyn -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx1444___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1444.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+ctx__B_mac_u_w8__tree_pre__ctx1476___igs_p_c,netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1476.aig,-mac -igs -p -c -no-steps,CORRECT,"mac:uuu:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x1fe00,0x1fe00
+D05_mul_s_w8_norm_igsm,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -igsm -p -c -no-steps,CORRECT,"mul:ss:8,8:16",,REMAINDER_INVALID,,,
+S02_dot2_s_w8_patchtree_idx,netlists/PATCH/B_dot2_s_w8__tree.aig,-dot=2 -s -idx -p -c -no-steps,CORRECT,"dot2:ssss:8,8,8,8:17",,REMAINDER_INVALID,0xffffffff,0x2,0x2
+S07_dot2_s_w8_tree_unsignedflag,netlists/MAIN/B_dot2_s_w8__tree.aig,-dot=2 -idx -p -c -no-steps,CORRECT,"dot2:uuuu:8,8,8,8:17",,WITNESS_CONFIRMED,0xffffffff,0x2,0x1fc02
+mini__MINI_PATCH__B_mac_s_w3__tree_pre___dyn_p_c,netlists/MINI_PATCH/B_mac_s_w3__tree_pre.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:3,3,6:7",,REMAINDER_INVALID,0x800,0x60,0x60
+mini__MINI_PATCH__B_mac_s_w3__tree_pre___igs_p_c,netlists/MINI_PATCH/B_mac_s_w3__tree_pre.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:3,3,6:7",,REMAINDER_INVALID,0x800,0x60,0x60
+mini__MINI_PATCH__B_mac_s_w4__tree_pre___dyn_p,netlists/MINI_PATCH/B_mac_s_w4__tree_pre.aig,-mac -s -dyn -p -no-steps,CORRECT,"mac:sss:4,4,8:9",,REMAINDER_INVALID,0x8000,0x180,0x180
+mini__MINI_PATCH__B_mac_s_w4__tree_pre___igs_p_c,netlists/MINI_PATCH/B_mac_s_w4__tree_pre.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:4,4,8:9",,REMAINDER_INVALID,0x8000,0x180,0x180
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___dyn_p,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___igs_p_c,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___idx_p_c,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___dyn_c,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___dyn,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___igs_c,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree_pre___idx_c,netlists/MINI_MAIN/B_mac_s_w2__tree_pre.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w2__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w2__tree___dyn_c,netlists/MINI_MAIN/B_mac_s_w2__tree.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:2,2,4:5",,WITNESS_CONFIRMED,0x0,0x10,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___dyn_p,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___igs_p_c,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___idx_p_c,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___dyn_c,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___dyn,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___igs_c,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree_pre___idx_c,netlists/MINI_MAIN/B_mac_s_w3__tree_pre.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w3__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w3__tree___dyn_c,netlists/MINI_MAIN/B_mac_s_w3__tree.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___dyn_p,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___igs_p_c,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___idx_p_c,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___dyn_c,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___dyn,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___igs_c,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree_pre___idx_c,netlists/MINI_MAIN/B_mac_s_w4__tree_pre.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w4__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w4__tree___dyn_c,netlists/MINI_MAIN/B_mac_s_w4__tree.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___dyn_p,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___igs_p_c,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___idx_p_c,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___dyn_c,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___dyn,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___igs_c,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree_pre___idx_c,netlists/MINI_MAIN/B_mac_s_w5__tree_pre.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w5__tree___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w5__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:5,5,10:11",,WITNESS_CONFIRMED,0x0,0x400,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___dyn_p_c,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___dyn_p,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___igs_p_c,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___idx_p_c,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___dyn_c,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___dyn,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___igs_c,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MINI_MAIN__B_mac_s_w6__tree_pre___idx_c,netlists/MINI_MAIN/B_mac_s_w6__tree_pre.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:6,6,12:13",,WITNESS_CONFIRMED,0x0,0x1000,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24___idx_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",True,WITNESS_CONFIRMED,0x800,0x20,0x60
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x800,0x20,0x60
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x800,0x20,0x60
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x800,0x20,0x60
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24___idx_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor24.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x800,0x20,0x60
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___dyn_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___igs_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___idx_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25___idx_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w3__tree_pre__y6xor25.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",,WITNESS_CONFIRMED,0x0,0x40,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x8000,0x80,0x180
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32___idx_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",True,WITNESS_CONFIRMED,0x8000,0x80,0x180
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x8000,0x80,0x180
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x8000,0x80,0x180
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x8000,0x80,0x180
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32___idx_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor32.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x8000,0x80,0x180
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___dyn_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___igs_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___idx_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mini__MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33___idx_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w4__tree_pre__y8xor33.aig,-mac -s -idx -c -no-steps,INCORRECT,"mac:sss:4,4,8:9",,WITNESS_CONFIRMED,0x0,0x100,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64___igs,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor64.aig,-mac -s -igs -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___dyn_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___igs_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___igs_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -igs -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65___igs,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor65.aig,-mac -s -igs -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___dyn_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___igs_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___igs_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -igs -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1___igs,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre__y16xor1.aig,-mac -s -igs -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",True,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___dyn_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",True,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___igs_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",True,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___igs_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -igs -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",True,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64___igs,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor64.aig,-mac -s -igs -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0xffffffff,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___dyn_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___igs_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",True,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___igs_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -igs -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",True,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65___igs,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor65.aig,-mac -s -igs -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___dyn_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___dyn_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -dyn -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___igs_p_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___igs_p,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -igs -p -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___dyn_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___dyn,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -dyn -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___igs_c,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -igs -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+mx__MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1___igs,netlists/CONTROL/MUTX_PATCH_B_mac_s_w8__tree_pre_folded__y16xor1.aig,-mac -s -igs -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__PATCH__B_mac_s_w8__tree_pre__cfg0,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+pf__MAIN__B_mac_s_w8__tree__cfg0,netlists/MAIN/B_mac_s_w8__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree__cfg1,netlists/MAIN/B_mac_s_w8__tree.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree__cfg2,netlists/MAIN/B_mac_s_w8__tree.aig,-mac -s -ipc -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree__cfg3,netlists/MAIN/B_mac_s_w8__tree.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree__cfg4,netlists/MAIN/B_mac_s_w8__tree.aig,-mac -s -ips -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree__cfg5,netlists/MAIN/B_mac_s_w8__tree.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_fa__cfg0,netlists/MAIN/B_mac_s_w8__tree_fa.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_fa__cfg1,netlists/MAIN/B_mac_s_w8__tree_fa.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_fa__cfg2,netlists/MAIN/B_mac_s_w8__tree_fa.aig,-mac -s -ipc -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_pre__cfg0,netlists/MAIN/B_mac_s_w8__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_fa__cfg4,netlists/MAIN/B_mac_s_w8__tree_fa.aig,-mac -s -ips -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_fa__cfg5,netlists/MAIN/B_mac_s_w8__tree_fa.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_ripple__cfg0,netlists/MAIN/B_mac_s_w8__tree_ripple.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_ripple__cfg1,netlists/MAIN/B_mac_s_w8__tree_ripple.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_ripple__cfg2,netlists/MAIN/B_mac_s_w8__tree_ripple.aig,-mac -s -ipc -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_ripple__cfg3,netlists/MAIN/B_mac_s_w8__tree_ripple.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_ripple__cfg4,netlists/MAIN/B_mac_s_w8__tree_ripple.aig,-mac -s -ips -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__B_mac_s_w8__tree_ripple__cfg5,netlists/MAIN/B_mac_s_w8__tree_ripple.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__PATCH__B_mac_s_w8__tree_pre__cfg3,netlists/PATCH/B_mac_s_w8__tree_pre.aig,-mac -s -igs -p -c -no-steps,CORRECT,"mac:sss:8,8,16:17",,REMAINDER_INVALID,0xffffffff,0x0,0x0
+pf__MAIN__B_mac_s_w8__tree_pre__cfg3,netlists/MAIN/B_mac_s_w8__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:8,8,16:17",,WITNESS_CONFIRMED,0x0,0x10000,0x0
+pf__MAIN__MUT_plus1_dot2_u_w8__norm__cfg1,netlists/MAIN/MUT_plus1_dot2_u_w8__norm.aig,-dot=2 -idx -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,WITNESS_CONFIRMED,0x0,0x1,0x0
+pf__MAIN__MUT_plus1_dot2_u_w8__norm__cfg2,netlists/MAIN/MUT_plus1_dot2_u_w8__norm.aig,-dot=2 -ipc -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,WITNESS_CONFIRMED,0x0,0x1,0x0
+pf__MAIN__MUT_plus1_dot2_u_w8__tree__cfg1,netlists/MAIN/MUT_plus1_dot2_u_w8__tree.aig,-dot=2 -idx -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,WITNESS_CONFIRMED,0x0,0x1,0x0
+pf__MAIN__MUT_plus1_dot2_u_w8__tree__cfg2,netlists/MAIN/MUT_plus1_dot2_u_w8__tree.aig,-dot=2 -ipc -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,WITNESS_CONFIRMED,0x0,0x1,0x0
+pf__MAIN__MUT_plus1_dot2_u_w8__tree__cfg4,netlists/MAIN/MUT_plus1_dot2_u_w8__tree.aig,-dot=2 -ips -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,WITNESS_CONFIRMED,0x0,0x1,0x0
+pf__MAIN__MUT_plus1_dot2_u_w8__tree__cfg5,netlists/MAIN/MUT_plus1_dot2_u_w8__tree.aig,-dot=2 -igsm -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,NO_WITNESS_FOUND,,,
+pf__MAIN__MUT_plus1_dot2_u_w8__norm__cfg4,netlists/MAIN/MUT_plus1_dot2_u_w8__norm.aig,-dot=2 -ips -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,WITNESS_CONFIRMED,0x0,0x1,0x0
+pf__MAIN__MUT_plus1_dot2_u_w8__norm__cfg5,netlists/MAIN/MUT_plus1_dot2_u_w8__norm.aig,-dot=2 -igsm -p -c -no-steps,INCORRECT,"dot2:uuuu:8,8,8,8:17",False,WITNESS_CONFIRMED,0x0,0x1,0x0
+pf__MAIN__B_mac_s_w12__tree__cfg0,netlists/MAIN/B_mac_s_w12__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:12,12,24:25",False,WITNESS_CONFIRMED,0x0,0x1000000,0x0
+pf__MAIN__B_mac_s_w12__tree__cfg2,netlists/MAIN/B_mac_s_w12__tree.aig,-mac -s -ipc -p -c -no-steps,INCORRECT,"mac:sss:12,12,24:25",False,WITNESS_CONFIRMED,0x0,0x1000000,0x0
+pf__MAIN__B_mac_s_w12__tree__cfg3,netlists/MAIN/B_mac_s_w12__tree.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:12,12,24:25",False,WITNESS_CONFIRMED,0x0,0x1000000,0x0
+pf__MAIN__B_mac_s_w12__tree__cfg4,netlists/MAIN/B_mac_s_w12__tree.aig,-mac -s -ips -p -c -no-steps,INCORRECT,"mac:sss:12,12,24:25",False,WITNESS_CONFIRMED,0x0,0x1000000,0x0
+pf__MAIN__B_mac_s_w12__tree__cfg5,netlists/MAIN/B_mac_s_w12__tree.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:12,12,24:25",False,WITNESS_CONFIRMED,0x0,0x1000000,0x0
+pf__MAIN__B_mac_s_w16__tree__cfg0,netlists/MAIN/B_mac_s_w16__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree__cfg1,netlists/MAIN/B_mac_s_w16__tree.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree__cfg2,netlists/MAIN/B_mac_s_w16__tree.aig,-mac -s -ipc -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_fa__cfg0,netlists/MAIN/B_mac_s_w16__tree_fa.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_fa__cfg1,netlists/MAIN/B_mac_s_w16__tree_fa.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_pre__cfg0,netlists/MAIN/B_mac_s_w16__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree__cfg3,netlists/MAIN/B_mac_s_w16__tree.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_ripple__cfg0,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree__cfg4,netlists/MAIN/B_mac_s_w16__tree.aig,-mac -s -ips -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_ripple__cfg1,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree__cfg5,netlists/MAIN/B_mac_s_w16__tree.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_ripple__cfg2,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s -ipc -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_fa__cfg3,netlists/MAIN/B_mac_s_w16__tree_fa.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_ripple__cfg3,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_pre__cfg3,netlists/MAIN/B_mac_s_w16__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w32__tree__cfg0,netlists/MAIN/B_mac_s_w32__tree.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:32,32,64:65",False,WITNESS_CONFIRMED,0x0,0x10000000000000000,0x0
+pf__MAIN__B_mac_s_w32__tree__cfg1,netlists/MAIN/B_mac_s_w32__tree.aig,-mac -s -idx -p -c -no-steps,INCORRECT,"mac:sss:32,32,64:65",False,WITNESS_CONFIRMED,0x0,0x10000000000000000,0x0
+pf__MAIN__B_mac_s_w16__tree_fa__cfg4,netlists/MAIN/B_mac_s_w16__tree_fa.aig,-mac -s -ips -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_fa__cfg5,netlists/MAIN/B_mac_s_w16__tree_fa.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_ripple__cfg4,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s -ips -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w16__tree_ripple__cfg5,netlists/MAIN/B_mac_s_w16__tree_ripple.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:16,16,32:33",False,WITNESS_CONFIRMED,0x0,0x100000000,0x0
+pf__MAIN__B_mac_s_w24__tree__cfg2,netlists/MAIN/B_mac_s_w24__tree.aig,-mac -s -ipc -p -c -no-steps,INCORRECT,"mac:sss:24,24,48:49",False,WITNESS_CONFIRMED,0x0,0x1000000000000,0x0
+pf__MAIN__B_mac_s_w24__tree__cfg3,netlists/MAIN/B_mac_s_w24__tree.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:24,24,48:49",False,WITNESS_CONFIRMED,0x0,0x1000000000000,0x0
+pf__MAIN__B_mac_s_w24__tree__cfg5,netlists/MAIN/B_mac_s_w24__tree.aig,-mac -s -igsm -p -c -no-steps,INCORRECT,"mac:sss:24,24,48:49",False,WITNESS_CONFIRMED,0x0,0x1000000000000,0x0
+repro__mac_s_w3_patched_noabc_CORRECT___dyn_p_c,evidence/trace_phaseopt_minimal_repro/mac_s_w3_patched_noabc_CORRECT.aig,-mac -s -dyn -p -c -no-steps,CORRECT,"mac:sss:3,3,6:7",True,REMAINDER_INVALID,0x800,0x60,0x60
+repro__mac_s_w3_zext_addend_mutant_INCORRECT___dyn_c,evidence/trace_phaseopt_minimal_repro/mac_s_w3_zext_addend_mutant_INCORRECT.aig,-mac -s -dyn -c -no-steps,INCORRECT,"mac:sss:3,3,6:7",False,WITNESS_CONFIRMED,0x800,0x20,0x60
+s2__MAIN__B_mac_s_w32__tree_pre__cfg0,netlists/MAIN/B_mac_s_w32__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:32,32,64:65",False,WITNESS_CONFIRMED,0x0,0x10000000000000000,0x0
+s2__MAIN__B_mac_s_w32__tree_pre__cfg3,netlists/MAIN/B_mac_s_w32__tree_pre.aig,-mac -s -igs -p -c -no-steps,INCORRECT,"mac:sss:32,32,64:65",False,WITNESS_CONFIRMED,0x0,0x10000000000000000,0x0
+s2__MAIN__B_mac_s_w64__tree_pre__cfg0,netlists/MAIN/B_mac_s_w64__tree_pre.aig,-mac -s -dyn -p -c -no-steps,INCORRECT,"mac:sss:64,64,128:129",False,WITNESS_CONFIRMED,0x0,0x100000000000000000000000000000000,0x0
+U02_msub_u_w4_norm_as_mac,netlists/MAIN/C_msub_u_w4__norm.aig,-mac -dyn -p -c -no-steps,CORRECT,"mac:uuu:4,4,8:9",False,WITNESS_CONFIRMED,0x11,0x1ff,0x1
+U03_dot2c_u_w8_norm_as_dot2,netlists/MAIN/B_dot2c_u_w8__norm.aig,-dot=2 -dyn -p -c -no-steps,CORRECT,"dot2:uuuu:12,12,12,12:18",False,WITNESS_CONFIRMED,0xffffffffffff,0x2fc01,0x3c002

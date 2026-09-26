@@ -1,0 +1,8 @@
+netlists/MAIN/A_mul_u_w64__norm_pre
+netlists/MAIN/A_mul_u_w64__booth_pre
+netlists/MAIN/A_mul_s_w64__norm_pre
+netlists/MAIN/A_mul_s_w64__booth_pre
+netlists/MAIN/B_mac_u_w64__tree_pre
+netlists/MAIN/B_mac_u_w64__norm_pre
+netlists/MAIN/B_dot2_u_w64__tree_pre
+netlists/MAIN/B_mac_s_w64__tree_pre

@@ -1,0 +1,537 @@
+{
+  "counterexample": {
+    "candidate_outputs": {
+      "y": {
+        "binary": "0",
+        "decimal": 0,
+        "hex": "0"
+      }
+    },
+    "inputs": {
+      "a": {
+        "binary": "0000",
+        "decimal": 0,
+        "hex": "0"
+      }
+    },
+    "raw_model": {
+      "a": {
+        "binary": "0000",
+        "decimal": 0,
+        "hex": "0"
+      },
+      "candidate_y": {
+        "binary": "0",
+        "decimal": 0,
+        "hex": "0"
+      },
+      "mismatch": {
+        "binary": "1",
+        "decimal": 1,
+        "hex": "1"
+      },
+      "reference_y": {
+        "binary": "1",
+        "decimal": 1,
+        "hex": "1"
+      }
+    },
+    "reference_outputs": {
+      "y": {
+        "binary": "1",
+        "decimal": 1,
+        "hex": "1"
+      }
+    }
+  },
+  "errors": [],
+  "flow": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue6085/synthesis.ys",
+  "formal": {
+    "backend": "yosys-sat",
+    "counterexample_json": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/witnesses/counterexample.json",
+    "counterexample_vcd": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/witnesses/counterexample.vcd",
+    "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/logs/formal.log",
+    "model": {
+      "a": {
+        "binary": "0000",
+        "decimal": 0,
+        "hex": "0"
+      },
+      "candidate_y": {
+        "binary": "0",
+        "decimal": 0,
+        "hex": "0"
+      },
+      "mismatch": {
+        "binary": "1",
+        "decimal": 1,
+        "hex": "1"
+      },
+      "reference_y": {
+        "binary": "1",
+        "decimal": 1,
+        "hex": "1"
+      }
+    },
+    "reason": "The SAT solver found a model that violates output equivalence.",
+    "runtime_seconds": 0.11265361797995865,
+    "verdict": "FAIL"
+  },
+  "inferences": [
+    "The candidate differs from the golden RTL for at least one input assignment."
+  ],
+  "input_design": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/reductions/6085-armA/minimized/source.v",
+  "localization": {
+    "backend": "yosys-sat",
+    "backend_capabilities": {
+      "design_class": "small combinational bit-vector circuits",
+      "proof_property": "explicit output mismatch == 0",
+      "witness": "Yosys SAT model plus JSON/VCD dumps"
+    },
+    "checkpoints": [
+      {
+        "capture_commands": [
+          "prep -top top",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\""
+        ],
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "index": 0,
+        "model": {},
+        "name": "prep",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil",
+          "rename top passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/logs/000_prep.log",
+        "proof_runtime_seconds": 0.14433254700270481,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/proofs/000_prep.ys",
+        "reason": "The SAT solver established the equivalence property.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil",
+        "transition": "elaboration",
+        "verdict": "PASS",
+        "witness_replay": {
+          "backend": "yosys-sat",
+          "candidate_outputs": {
+            "y": {
+              "binary": "1",
+              "decimal": 1,
+              "hex": "1"
+            }
+          },
+          "input_values": {
+            "a": "4'b0000"
+          },
+          "is_formal_proof": false,
+          "kind": "fixed_witness_replay",
+          "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/replay/previous_checkpoint.log",
+          "mismatch": {
+            "binary": "0",
+            "decimal": 0,
+            "hex": "0"
+          },
+          "reason": "Replay target previous_checkpoint produced mismatch=0; expected 0.",
+          "reference_outputs": {
+            "y": {
+              "binary": "1",
+              "decimal": 1,
+              "hex": "1"
+            }
+          },
+          "runtime_seconds": 0.10561591701116413,
+          "status": "CONFIRMED"
+        }
+      },
+      {
+        "capture_commands": [
+          "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v",
+          "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+        ],
+        "counterexample_json": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/witnesses/001_cmp2lut.json",
+        "counterexample_vcd": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/witnesses/001_cmp2lut.vcd",
+        "index": 1,
+        "model": {
+          "a": {
+            "binary": "0000",
+            "decimal": 0,
+            "hex": "0"
+          },
+          "candidate_y": {
+            "binary": "0",
+            "decimal": 0,
+            "hex": "0"
+          },
+          "mismatch": {
+            "binary": "1",
+            "decimal": 1,
+            "hex": "1"
+          },
+          "reference_y": {
+            "binary": "1",
+            "decimal": 1,
+            "hex": "1"
+          }
+        },
+        "name": "cmp2lut",
+        "preparation_commands": [
+          "read_rtlil /mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil",
+          "rename top passwitness_candidate",
+          "read_verilog -sv <golden RTL>",
+          "prep -top passwitness_miter",
+          "flatten",
+          "opt"
+        ],
+        "produced": true,
+        "proof_log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/logs/001_cmp2lut.log",
+        "proof_runtime_seconds": 0.11463718698360026,
+        "proof_script_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/proofs/001_cmp2lut.ys",
+        "reason": "The SAT solver found a model that violates output equivalence.",
+        "snapshot_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil",
+        "transition": "cmp2lut",
+        "verdict": "FAIL",
+        "witness_replay": {
+          "backend": "yosys-sat",
+          "candidate_outputs": {
+            "y": {
+              "binary": "0",
+              "decimal": 0,
+              "hex": "0"
+            }
+          },
+          "input_values": {
+            "a": "4'b0000"
+          },
+          "is_formal_proof": false,
+          "kind": "fixed_witness_replay",
+          "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/replay/failing_checkpoint.log",
+          "mismatch": {
+            "binary": "1",
+            "decimal": 1,
+            "hex": "1"
+          },
+          "reason": "Replay target failing_checkpoint produced mismatch=1; expected 1.",
+          "reference_outputs": {
+            "y": {
+              "binary": "1",
+              "decimal": 1,
+              "hex": "1"
+            }
+          },
+          "runtime_seconds": 0.12713031098246574,
+          "status": "CONFIRMED"
+        }
+      }
+    ],
+    "divergence_interval": null,
+    "errors": [],
+    "first_divergent_stage": "cmp2lut",
+    "flow_comparison": {
+      "backend": "yosys-sat",
+      "counterexample_json": null,
+      "counterexample_vcd": null,
+      "log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/logs/final-flow-comparison.log",
+      "miter": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/final-flow-comparison-miter.v",
+      "model": {},
+      "reason": "The SAT solver established the equivalence property.",
+      "returncode": 0,
+      "runtime_seconds": 0.102242472989019,
+      "script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/proofs/final-flow-comparison.ys",
+      "status": "PASS"
+    },
+    "flow_fidelity": {
+      "added_commands": [
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\"",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+      ],
+      "catalog_id": "explicit-marked-flow",
+      "comparison": {
+        "backend": "yosys-sat",
+        "counterexample_json": null,
+        "counterexample_vcd": null,
+        "log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/logs/final-flow-comparison.log",
+        "miter": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/final-flow-comparison-miter.v",
+        "model": {},
+        "reason": "The SAT solver established the equivalence property.",
+        "returncode": 0,
+        "runtime_seconds": 0.102242472989019,
+        "script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/proofs/final-flow-comparison.ys",
+        "status": "PASS"
+      },
+      "execution_order": [
+        {
+          "commands": [
+            "read_verilog -sv \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/reductions/6085-armA/minimized/source.v\""
+          ],
+          "index": -1,
+          "name": "load",
+          "snapshot": null,
+          "transition": "elaboration"
+        },
+        {
+          "commands": [
+            "prep -top top",
+            "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\""
+          ],
+          "index": 0,
+          "name": "prep",
+          "snapshot": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil",
+          "transition": "elaboration"
+        },
+        {
+          "commands": [
+            "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v",
+            "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+          ],
+          "index": 1,
+          "name": "cmp2lut",
+          "snapshot": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil",
+          "transition": "cmp2lut"
+        }
+      ],
+      "expanded_commands": [],
+      "instrumented_commands": [
+        "read_verilog -sv \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/reductions/6085-armA/minimized/source.v\"",
+        "prep -top top",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\"",
+        "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+      ],
+      "instrumented_final_representation": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil",
+      "original_commands": [
+        "prep -top top",
+        "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v"
+      ],
+      "original_final_representation": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/work/candidate.v",
+      "reason": "",
+      "selected_options": {
+        "marked_boundaries": [
+          "prep",
+          "cmp2lut"
+        ],
+        "top": "top"
+      },
+      "status": "PASS",
+      "tool_version": "Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/bin/c++ 13.3.0)"
+    },
+    "formal_check_count": 3,
+    "formal_runtime_seconds": 0.3612122069753241,
+    "instrumented_script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/instrumented-flow.ys",
+    "miter": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoint-miter.v",
+    "mode": "marked_explicit_flow",
+    "portable_package": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/portable",
+    "previous_stage": "prep",
+    "reason": "",
+    "status": "LOCALIZED",
+    "synthesis": {
+      "added_commands": [
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\"",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+      ],
+      "commands": [
+        "read_verilog -sv \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/reductions/6085-armA/minimized/source.v\"",
+        "prep -top top",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\"",
+        "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+      ],
+      "execution_order": [
+        {
+          "commands": [
+            "read_verilog -sv \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/reductions/6085-armA/minimized/source.v\""
+          ],
+          "index": -1,
+          "name": "load",
+          "snapshot": null,
+          "transition": "elaboration"
+        },
+        {
+          "commands": [
+            "prep -top top",
+            "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\""
+          ],
+          "index": 0,
+          "name": "prep",
+          "snapshot": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil",
+          "transition": "elaboration"
+        },
+        {
+          "commands": [
+            "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v",
+            "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+          ],
+          "index": 1,
+          "name": "cmp2lut",
+          "snapshot": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil",
+          "transition": "cmp2lut"
+        }
+      ],
+      "expanded_commands": [],
+      "instrumented_commands": [
+        "read_verilog -sv \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/reductions/6085-armA/minimized/source.v\"",
+        "prep -top top",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/000_prep.rtlil\"",
+        "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v",
+        "write_rtlil \"/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/checkpoints/001_cmp2lut.rtlil\""
+      ],
+      "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/logs/instrumented-synthesis.log",
+      "original_commands": [
+        "prep -top top",
+        "techmap -D LUT_WIDTH=4 -map +/cmp2lut.v"
+      ],
+      "returncode": 0,
+      "runtime_seconds": 0.1395996670180466,
+      "script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/instrumented-flow.ys"
+    },
+    "synthesis_runtime_seconds": 0.1395996670180466,
+    "time_to_first_divergence_seconds": 0.4821858679933939,
+    "total_runtime_seconds": 1.055754953995347,
+    "unexecuted_stages": [],
+    "witness_replay": {
+      "status": "CONFIRMED",
+      "targets": {
+        "failing_checkpoint": {
+          "backend": "yosys-sat",
+          "candidate_outputs": {
+            "y": {
+              "binary": "0",
+              "decimal": 0,
+              "hex": "0"
+            }
+          },
+          "input_values": {
+            "a": "4'b0000"
+          },
+          "is_formal_proof": false,
+          "kind": "fixed_witness_replay",
+          "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/replay/failing_checkpoint.log",
+          "mismatch": {
+            "binary": "1",
+            "decimal": 1,
+            "hex": "1"
+          },
+          "reason": "Replay target failing_checkpoint produced mismatch=1; expected 1.",
+          "reference_outputs": {
+            "y": {
+              "binary": "1",
+              "decimal": 1,
+              "hex": "1"
+            }
+          },
+          "runtime_seconds": 0.12713031098246574,
+          "status": "CONFIRMED"
+        },
+        "original_final": {
+          "backend": "yosys-sat",
+          "candidate_outputs": {
+            "y": {
+              "binary": "0",
+              "decimal": 0,
+              "hex": "0"
+            }
+          },
+          "input_values": {
+            "a": "4'b0000"
+          },
+          "is_formal_proof": false,
+          "kind": "fixed_witness_replay",
+          "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/replay/original_final.log",
+          "mismatch": {
+            "binary": "1",
+            "decimal": 1,
+            "hex": "1"
+          },
+          "reason": "Replay target original_final produced mismatch=1; expected 1.",
+          "reference_outputs": {
+            "y": {
+              "binary": "1",
+              "decimal": 1,
+              "hex": "1"
+            }
+          },
+          "runtime_seconds": 0.15218147900304757,
+          "status": "CONFIRMED"
+        },
+        "previous_checkpoint": {
+          "backend": "yosys-sat",
+          "candidate_outputs": {
+            "y": {
+              "binary": "1",
+              "decimal": 1,
+              "hex": "1"
+            }
+          },
+          "input_values": {
+            "a": "4'b0000"
+          },
+          "is_formal_proof": false,
+          "kind": "fixed_witness_replay",
+          "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/localization/replay/previous_checkpoint.log",
+          "mismatch": {
+            "binary": "0",
+            "decimal": 0,
+            "hex": "0"
+          },
+          "reason": "Replay target previous_checkpoint produced mismatch=0; expected 0.",
+          "reference_outputs": {
+            "y": {
+              "binary": "1",
+              "decimal": 1,
+              "hex": "1"
+            }
+          },
+          "runtime_seconds": 0.10561591701116413,
+          "status": "CONFIRMED"
+        }
+      },
+      "witness_source": "cmp2lut"
+    }
+  },
+  "output_directory": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA",
+  "parameters": {},
+  "paths": {
+    "candidate_metadata": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/work/candidate.json",
+    "candidate_netlist": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/work/candidate.v",
+    "formal_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/logs/formal.log",
+    "formal_script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/work/formal.ys",
+    "golden_metadata_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/logs/golden-metadata.log",
+    "miter": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/work/miter.v",
+    "portable_package": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/portable",
+    "synthesis_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/logs/synthesis.log",
+    "tool_version_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/logs/tool-version.log"
+  },
+  "schema_version": 3,
+  "status": "FAIL",
+  "synthesis": {
+    "flow": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue6085/synthesis.ys",
+    "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/logs/synthesis.log",
+    "returncode": 0,
+    "runtime_seconds": 0.15481809299672022,
+    "script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/6085-final-reverify-armA/work/candidate.ys"
+  },
+  "tool": {
+    "commit": null,
+    "executable": "/mnt/c/Users/meetb/Downloads/pw-yosys-6085/pw-build/yosys",
+    "executable_sha256": "1a39da5e6e475cadb2ca66e20ac16687ec78ef222ef1f55c631feb05e5d1b9b7",
+    "patch_sha256": null,
+    "source_revision_claim": null,
+    "source_revision_verified": false,
+    "source_tree_dirty": null,
+    "verification_method": "Yosys -V output and SHA-256 of the executable path; source checkout was not supplied",
+    "version": "Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/bin/c++ 13.3.0)",
+    "yosys_reported_commit": null,
+    "yosys_reported_version": "Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/bin/c++ 13.3.0)"
+  },
+  "top_module": "top",
+  "unexecuted_checks": [],
+  "verified_facts": [
+    "Yosys version recorded as Yosys 0.68+post (git sha1 UNKNOWN, Release, GNU /usr/bin/c++ 13.3.0).",
+    "Formal backend: yosys-sat.",
+    "The golden RTL and synthesized candidate were independently loaded into a generated output-comparison miter.",
+    "Formal classification is FAIL based on an explicit SAT proof marker."
+  ]
+}

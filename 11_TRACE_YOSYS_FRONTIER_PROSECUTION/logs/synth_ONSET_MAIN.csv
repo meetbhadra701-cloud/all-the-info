@@ -1,0 +1,10 @@
+base,rc,aig_written,seconds
+netlists/ONSET_MAIN/B_mac_u_w40__norm_pre,0,1,1.06
+netlists/ONSET_MAIN/B_mac_u_w40__tree_pre,0,1,1.12
+netlists/ONSET_MAIN/B_mac_u_w48__norm_pre,0,1,1.40
+netlists/ONSET_MAIN/B_dot2_u_w40__tree_pre,0,1,1.73
+netlists/ONSET_MAIN/B_mac_u_w48__tree_pre,0,1,1.47
+netlists/ONSET_MAIN/B_mac_u_w56__norm_pre,0,1,1.69
+netlists/ONSET_MAIN/B_dot2_u_w48__tree_pre,0,1,2.24
+netlists/ONSET_MAIN/B_mac_u_w56__tree_pre,0,1,1.63
+netlists/ONSET_MAIN/B_dot2_u_w56__tree_pre,0,1,2.70

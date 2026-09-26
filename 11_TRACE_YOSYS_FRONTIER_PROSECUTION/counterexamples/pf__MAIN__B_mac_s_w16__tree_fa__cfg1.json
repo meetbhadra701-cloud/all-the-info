@@ -1,0 +1,25 @@
+{
+ "job_id": "pf__MAIN__B_mac_s_w16__tree_fa__cfg1",
+ "results_csv": "trace_portfolio_w32_results.csv",
+ "netlist": "netlists/MAIN/B_mac_s_w16__tree_fa.aig",
+ "args": "-mac -s -idx -p -c -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "mac:sss:16,16,32:33",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 1,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": 4294967296,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x100000000",
+  "reference": "0x0"
+ },
+ "overall": "WITNESS_CONFIRMED",
+ "i_vars": false
+}

@@ -1,0 +1,6 @@
+read_verilog -formal /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/yosys08-synth.v
+hierarchy -top top
+proc
+memory
+flatten top
+sat -seq 1 -set-init-undef -prove modinst271.reg93[8] 0 -verify -show-inputs -show-outputs top

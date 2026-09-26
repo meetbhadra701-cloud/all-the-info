@@ -1,0 +1,1 @@
+read_verilog -formal /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/modern-synth.v

@@ -1,0 +1,3 @@
+job_id,rel_path,args,timeout_s,expected,note,mem
+calib__MAIN__A_mul_u_w32__norm___idx_p_c,netlists/MAIN/A_mul_u_w32__norm.aig,-mul -idx -p -c -no-steps,1800,CORRECT,W=32;uncontended calibration of a TIMEOUTx6 (300 s) post-ABC result;mem=10g,10g
+calib__MAIN__B_dot2_u_w16__norm___dyn_p_c,netlists/MAIN/B_dot2_u_w16__norm.aig,-dot=2 -dyn -p -c -no-steps,1800,CORRECT,W=16;uncontended calibration of a TIMEOUTx6 (120 s) post-ABC result;mem=10g,10g

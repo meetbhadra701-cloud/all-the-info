@@ -1,0 +1,369 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69+77 (git sha1 9ff27d29c-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+
+-- Executing script file `/tmp/muxwise_exp2_help.ys' --
+
+    opt_share [selection]
+
+This pass identifies mutually exclusive cells of the same type that:
+    (a) share an input signal,
+    (b) drive the same $mux, $_MUX_, or $pmux multiplexing cell,
+
+allowing the cell to be merged and the multiplexer to be moved from
+multiplexing its output to multiplexing the non-shared input signals.
+
+
+    share [options] [selection]
+
+This pass merges shareable resources into a single resource. A SAT solver
+is used to determine if two resources are share-able.
+
+  -aggressive
+    Per default some heuristics are used to reduce the number of cells
+    considered for resource sharing to only large resources. This options
+    turns this heuristics off, resulting in much more cells being considered
+    for resource sharing.
+
+  -fast
+    Only consider the simple part of the control logic in SAT solving, resulting
+    in much easier SAT problems at the cost of maybe missing some opportunities
+    for resource sharing.
+
+  -limit N
+    Only perform the first N merges, then stop. This is useful for debugging.
+
+  -pattern-limit N
+    Only analyze up to N activation patterns per cell, otherwise assume active.
+    N is 1000 by default. Higher values may merge more resources at the cost of
+    more runtime and memory consumption.
+
+
+    arith_tree [options] [selection]
+
+This pass replaces chains of $add/$sub cells, $alu cells (with constant
+BI/CI), and $macc/$macc_v2 cells with carry-save adder trees 
+using $fa cells and a single final adder.
+
+    -strategy <fa|42>
+        Compressor strategy. 'fa' uses only 3:2 full-adder groupings
+        '42' (the default) prefers 4:2 compressor groupings, with
+        fallback to 3:2 compressors for residuals
+
+    -final <auto|ripple|prefix>
+        Selects the architecture used for the final two-vector add.
+
+    -no-fma
+        Disable fused multiply-add expansion in $macc cells
+
+The default behaviour delivers 4:2 compression, FMA fusion, and a
+final standard adder
+
+
+    alumacc [selection]
+
+This pass translates arithmetic operations like $add, $mul, $lt, etc. to $alu
+and $macc cells.
+
+
+    wreduce [options] [selection]
+
+This command reduces the word size of operations. For example it will replace
+the 32 bit adders in the following code with adders of more appropriate widths:
+
+    module test(input [3:0] a, b, c, output [7:0] y);
+        assign y = a + b + c + 1;
+    endmodule
+
+Options:
+
+    -memx
+        Do not change the width of memory address ports. Use this options in
+        flows that use the 'memory_memx' pass.
+
+    -mux_undef
+        remove 'undef' inputs from $mux, $pmux and $_MUX_ cells
+
+    -keepdc
+        Do not optimize explicit don't-care values.
+
+
+    abc [options] [selection]
+
+This pass uses the ABC tool [1] for technology mapping of yosys's internal gate
+library to a target architecture.
+
+    -exe <command>
+        use the specified command instead of "<yosys-bindir>/yosys-abc" to execute ABC.
+        This can e.g. be used to call a specific version of ABC or a wrapper.
+
+    -script <file>
+        use the specified ABC script file instead of the default script.
+
+        if <file> starts with a plus sign (+), then the rest of the filename
+        string is interpreted as the command string to be passed to ABC. The
+        leading plus sign is removed and all commas (,) in the string are
+        replaced with blanks before the string is passed to ABC.
+
+        if no -script parameter is given, the following scripts are used:
+
+        for -liberty/-genlib without -constr:
+          strash; &get -n; &fraig -x; &put; scorr; dc2; dretime; strash;
+               &get -n; &dch -f; &nf {D}; &put
+
+        for -liberty/-genlib with -constr:
+          strash; &get -n; &fraig -x; &put; scorr; dc2; dretime; strash;
+               &get -n; &dch -f; &nf {D}; &put; buffer; upsize {D};
+               dnsize {D}; stime -p
+
+        for -lut/-luts (only one LUT size):
+          strash; &get -n; &fraig -x; &put; scorr; dc2; dretime; strash;
+               dch -f; if; mfs2; lutpack -S 1
+
+        for -lut/-luts (different LUT sizes):
+          strash; &get -n; &fraig -x; &put; scorr; dc2; dretime; strash;
+               dch -f; if; mfs2
+
+        otherwise:
+          strash; &get -n; &fraig -x; &put; scorr; dc2; dretime; strash;
+               &get -n; &dch -f; &nf {D}; &put
+
+    -liberty <file>
+        generate netlists for the specified cell library (using the liberty
+        file format).
+
+    -dont_use <cell_name>
+        avoid usage of the technology cell <cell_name> when mapping the design.
+        this option can be used multiple times with different cell names and
+        supports simple glob patterns in the cell name.
+        only supported with Liberty cell libraries.
+
+    -genlib <file>
+        generate netlists for the specified cell library (using the SIS Genlib
+        file format).
+
+    -constr <file>
+        pass this file with timing constraints to ABC.
+        use with -liberty/-genlib.
+
+        a constr file contains two lines:
+            set_driving_cell <cell_name>
+            set_load <floating_point_number>
+
+        the set_driving_cell statement defines which cell type is assumed to
+        drive the primary inputs and the set_load statement sets the load in
+        femtofarads for each primary output.
+
+    -D <picoseconds>
+        set delay target. the string {D} in the default scripts above is
+        replaced by this option when used, and an empty string otherwise.
+        this also replaces 'dretime' with 'dretime; retime -o {D}' in the
+        default scripts above.
+
+    -lut <width>
+        generate netlist using luts of (max) the specified width.
+
+    -lut <w1>:<w2>
+        generate netlist using luts of (max) the specified width <w2>. All
+        luts with width <= <w1> have constant cost. for luts larger than <w1>
+        the area cost doubles with each additional input bit. the delay cost
+        is still constant for all lut widths.
+
+    -luts <cost1>,<cost2>,<cost3>,<sizeN>:<cost4-N>,..
+        generate netlist using luts. Use the specified costs for luts with 1,
+        2, 3, .. inputs.
+
+    -g type1,type2,...
+        Map to the specified list of gate types. Supported gates types are:
+           AND, NAND, OR, NOR, XOR, XNOR, ANDNOT, ORNOT, MUX,
+           NMUX, AOI3, OAI3, AOI4, OAI4.
+        (The NOT gate is always added to this list automatically.)
+
+        The following aliases can be used to reference common sets of gate
+        types:
+          simple: AND OR XOR MUX
+          cmos2:  NAND NOR
+          cmos3:  NAND NOR AOI3 OAI3
+          cmos4:  NAND NOR AOI3 OAI3 AOI4 OAI4
+          cmos:   NAND NOR AOI3 OAI3 AOI4 OAI4 NMUX MUX XOR XNOR
+          gates:  AND NAND OR NOR XOR XNOR ANDNOT ORNOT
+          aig:    AND NAND OR NOR ANDNOT ORNOT
+
+        The alias 'all' represent the full set of all gate types.
+
+        Prefix a gate type with a '-' to remove it from the list. For example
+        the arguments 'AND,OR,XOR' and 'simple,-MUX' are equivalent.
+
+        The default is 'all,-NMUX,-AOI3,-OAI3,-AOI4,-OAI4'.
+
+    -dff
+        also pass $_DFF_?_ and $_DFFE_??_ cells through ABC. modules with many
+        clock domains are automatically partitioned in clock domains and each
+        domain is passed through ABC independently.
+
+    -clk [!]<clock-signal-name>[,[!]<enable-signal-name>]
+        use only the specified clock domain. this is like -dff, but only FF
+        cells that belong to the specified clock domain are used.
+
+    -keepff
+        set the "keep" attribute on flip-flop output wires. (and thus preserve
+        them, for example for equivalence checking.)
+
+    -nocleanup
+        when this option is used, the temporary files created by this pass
+        are not removed. this is useful for debugging.
+
+    -showtmp
+        print the temp dir name in log. usually this is suppressed so that the
+        command output is identical across runs.
+
+    -markgroups
+        set a 'abcgroup' attribute on all objects created by ABC. The value of
+        this attribute is a unique integer for each ABC process started. This
+        is useful for debugging the partitioning of clock domains.
+
+    -dress
+        run the 'dress' command after all other ABC commands. This aims to
+        preserve naming by an equivalence check between the original and
+        post-ABC netlists (experimental).
+
+    -liberty_args <string>
+        when -liberty is used, also pass the specified arguments to ABC
+        command "read_lib". Example: -liberty_args "-G 250"
+
+When no target cell library is specified the Yosys standard cell library is
+loaded into ABC before the ABC script is executed.
+
+Note that this is a logic optimization pass within Yosys that is calling ABC
+internally. This is not going to "run ABC on your design". It will instead run
+ABC on logic snippets extracted from your design. You will not get any useful
+output when passing an ABC script that writes a file. Instead write your full
+design as BLIF file with write_blif and then load that into ABC externally if
+you want to use ABC to convert your design into another format.
+
+[1] http://www.eecs.berkeley.edu/~alanmi/abc/
+
+
+    synth [options]
+
+This command runs the default synthesis script. This command does not operate
+on partly selected designs.
+
+    -top <module>
+        use the specified module as top module (default='top')
+
+    -auto-top
+        automatically determine the top of the design hierarchy
+
+    -flatten
+        flatten the design before synthesis. this will pass '-auto-top' to
+        'hierarchy' if no top module is specified.
+
+    -hieropt
+        enable hierarchical optimization. this option is useful when `-flatten'
+        is not used, or when selected modules are marked with 'keep_hierarchy'
+.        to prevent their dissolution.
+
+    -encfile <file>
+        passed to 'fsm_recode' via 'fsm'
+
+    -lut <k>
+        perform synthesis for a k-LUT architecture.
+
+    -nofsm
+        do not run FSM optimization
+
+    -noabc
+        do not run abc (as if yosys was compiled without ABC support)
+
+    -booth
+        run the booth pass to map $mul to Booth encoded multipliers
+
+    -arith_tree
+        run the arith_tree pass to convert $add/$sub chains and $macc cells to
+        carry-save adder trees.
+
+    -noalumacc
+        do not run 'alumacc' pass. i.e. keep arithmetic operators in
+        their direct form ($add, $sub, etc.).
+
+    -nordff
+        passed to 'memory'. prohibits merging of FFs into memory read ports
+
+    -latches <auto|warn|error>
+        controls how the inference of a latch is reported.
+
+    -noshare
+        do not run SAT-based resource sharing
+
+    -run <from_label>[:<to_label>]
+        only run the commands between the labels (see below). an empty
+        from label is synonymous to 'begin', and empty to label is
+        synonymous to the end of the command list.
+
+    -no-rw-check
+        marks all recognized read ports as "return don't-care value on
+        read/write collision" (same result as setting the no_rw_check
+        attribute on all memories).
+
+    -extra-map filename
+        source extra rules from the given file to complement the default
+        mapping library in the `techmap` step. this option can be
+        repeated.
+
+    -relativeshare
+        use paths relative to share directory for source locations
+        where possible (experimental).
+
+The following commands are executed by this synthesis command:
+
+    begin:
+        hierarchy -check [-top <top> | -auto-top]
+
+    coarse:
+        proc
+        check
+        flatten      (if -flatten)
+        opt_expr
+        check
+        opt_clean
+        opt -nodffe -nosdff
+        fsm          (unless -nofsm)
+        opt [-hier]
+        wreduce
+        peepopt
+        opt_clean
+        techmap -map +/cmp2lut.v -map +/cmp2lcu.v     (if -lut)
+        booth        (if -booth)
+        alumacc      (unless -noalumacc)
+        arith_tree     (if -arith_tree)
+        share        (unless -noshare)
+        opt [-hier]
+        memory -nomap
+        opt_clean
+
+    fine:
+        opt -fast -full [-hier]
+        memory_map
+        opt -full
+        techmap                      (unless -extra-map)
+        techmap -map +/techmap.v -map <inject>      (if -extra-map)
+        techmap -map +/gate2lut.v    (if -noabc and -lut)
+        clean; opt_lut               (if -noabc and -lut)
+        opt -fast [-hier]
+        abc           (unless -noabc, unless -lut)
+        abc -lut k    (unless -noabc, if -lut)
+        opt -fast           (unless -noabc)
+
+    check:
+        hierarchy -check
+        stat
+        check
+
+End of script. Logfile hash: e716ae71d6, time: 0.08s, user: 0.01s, system: 0.03s, MEM: 10.33 MB peak
+Yosys 0.69+77 (git sha1 9ff27d29c-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+Time spent: 99% 7x help (0 sec), 0% 0x id_gc (0 sec)

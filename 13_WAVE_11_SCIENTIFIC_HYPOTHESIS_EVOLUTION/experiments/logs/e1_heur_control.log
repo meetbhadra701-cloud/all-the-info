@@ -1,0 +1,4 @@
+{"dump": "c17.dump.json", "mapper_area": 0.530000008643, "mapper_delay": 42.6599998474, "model_area": 0.53, "model_delay": 42.66, "instances": 6, "verdict": "OK"}
+{"bench": "c17", "netlist": "c17_heurcover.v", "area": 0.53, "delay": 42.66, "instances": 6, "sim": "SIM_AGREE", "cex": null, "cec": "PASS"}
+{"dump": "ctrl.dump.json", "mapper_area": 6.92000005394, "mapper_delay": 103.170001984, "model_area": 6.92, "model_delay": 103.17, "instances": 75, "verdict": "OK"}
+{"bench": "ctrl", "netlist": "ctrl_heurcover.v", "area": 6.92, "delay": 103.17, "instances": 75, "sim": "SIM_AGREE", "cex": null, "cec": "PASS"}

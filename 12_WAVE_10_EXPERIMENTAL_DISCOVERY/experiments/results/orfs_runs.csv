@@ -1,0 +1,4 @@
+platform,design,variant,target,extra,seconds,exit
+gt2n,gcd,base,finish,"",25,make_exit=2
+gt2n,gcd,base,finish,"LEC_CHECK=0",65,make_exit=0
+asap7,aes,base,place,"LEC_CHECK=0",991,make_exit=0

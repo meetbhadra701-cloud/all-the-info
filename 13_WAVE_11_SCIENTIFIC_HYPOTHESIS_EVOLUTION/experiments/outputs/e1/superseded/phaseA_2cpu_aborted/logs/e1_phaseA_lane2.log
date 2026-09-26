@@ -1,0 +1,12 @@
+lane start 23:10:57 phase=A benches=router c880 c1908 c499 cavlc priority T_FULL=600 T_EPS=300 T_LB=300 WORKERS=4 SET=
+23:10:58 router map:D0 done
+23:10:58 router map:D1 done
+23:10:59 router heur:D0 done
+23:11:00 router heur:D1 done
+23:11:00 router emap:D0 done
+23:11:00 router emap:D1 done
+23:11:01 router nfp done
+23:11:01 router nfp:D0 done
+23:11:02 router nfpa:D0 done
+23:11:02 router nfp:D1 done
+23:11:03 router nfpa:D1 done

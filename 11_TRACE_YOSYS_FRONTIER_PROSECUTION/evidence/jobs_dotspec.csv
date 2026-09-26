@@ -1,0 +1,8 @@
+job_id,rel_path,args,timeout_s,expected,note
+S01_dot2_s_w8_norm_idx,netlists/MAIN/B_dot2_s_w8__norm.aig,-dot=2 -s -idx -p -c -no-steps,120,CORRECT,signed dot spec on conventional correct netlist
+S02_dot2_s_w8_patchtree_idx,netlists/PATCH/B_dot2_s_w8__tree.aig,-dot=2 -s -idx -p -c -no-steps,120,CORRECT,signed dot spec on patched tree
+S03_dot2_u_w8_norm_idx,netlists/MAIN/B_dot2_u_w8__norm.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,unsigned dot spec on unsigned conventional
+S04_dot2_u_w8_tree_idx,netlists/MAIN/B_dot2_u_w8__tree.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,unsigned dot spec on unsigned tree
+S05_mac_s_w8_norm_idx,netlists/MAIN/B_mac_s_w8__norm.aig,-mac -s -idx -p -c -no-steps,120,CORRECT,signed MAC spec on conventional correct netlist
+S06_mul_s_w8_norm_idx_ref,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -idx -p -c -no-steps,120,CORRECT,signed MUL spec reference (known Correct)
+S07_dot2_s_w8_tree_unsignedflag,netlists/MAIN/B_dot2_s_w8__tree.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,signed circuit with unsigned dot spec (compare remainder)

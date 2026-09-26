@@ -1,0 +1,21 @@
+### FILE netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dch.aig
+### ARGS -dot=2 -idx -p -c -no-steps
+### TIMEOUT 120
+### START 2026-09-24T17:10:37-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dch.aig
+║           mode: dot=2
+║           sign: unsigned
+║           method: idx
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 401379328
+### DOCKER_EXIT 0
+### WALL_SECONDS 121.02
+### END 2026-09-24T17:12:38-07:00

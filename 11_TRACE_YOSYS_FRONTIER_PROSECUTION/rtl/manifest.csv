@@ -1,0 +1,103 @@
+design,family,kind,signs,widths,yw,spec,rtl_expectation,note
+A_mul_u_w8,A,mul,uu,"8,8",16,"mul:uu:8,8:16",CORRECT,
+A_mul_s_w8,A,mul,ss,"8,8",16,"mul:ss:8,8:16",CORRECT,
+A_mul_u_w12,A,mul,uu,"12,12",24,"mul:uu:12,12:24",CORRECT,
+A_mul_s_w12,A,mul,ss,"12,12",24,"mul:ss:12,12:24",CORRECT,
+A_mul_u_w16,A,mul,uu,"16,16",32,"mul:uu:16,16:32",CORRECT,
+A_mul_s_w16,A,mul,ss,"16,16",32,"mul:ss:16,16:32",CORRECT,
+A_mul_u_w20,A,mul,uu,"20,20",40,"mul:uu:20,20:40",CORRECT,
+A_mul_s_w20,A,mul,ss,"20,20",40,"mul:ss:20,20:40",CORRECT,
+A_mul_u_w24,A,mul,uu,"24,24",48,"mul:uu:24,24:48",CORRECT,
+A_mul_s_w24,A,mul,ss,"24,24",48,"mul:ss:24,24:48",CORRECT,
+A_mul_u_w32,A,mul,uu,"32,32",64,"mul:uu:32,32:64",CORRECT,
+A_mul_s_w32,A,mul,ss,"32,32",64,"mul:ss:32,32:64",CORRECT,
+A_mul_u_w64,A,mul,uu,"64,64",128,"mul:uu:64,64:128",CORRECT,
+A_mul_s_w64,A,mul,ss,"64,64",128,"mul:ss:64,64:128",CORRECT,
+B_mac_u_w8,B,mac,uuu,"8,8,16",17,"mac:uuu:8,8,16:17",CORRECT,
+B_dot2_u_w8,B,dot2,uuuu,"8,8,8,8",17,"dot2:uuuu:8,8,8,8:17",CORRECT,
+B_dot2c_u_w8,B,dot2c,uuuuu,"8,8,8,8,16",18,"dot2c:uuuuu:8,8,8,8,16:18",CORRECT,
+B_mac_s_w8,B,mac,sss,"8,8,16",17,"mac:sss:8,8,16:17",CORRECT,
+B_dot2_s_w8,B,dot2,ssss,"8,8,8,8",17,"dot2:ssss:8,8,8,8:17",CORRECT,
+B_dot2c_s_w8,B,dot2c,sssss,"8,8,8,8,16",18,"dot2c:sssss:8,8,8,8,16:18",CORRECT,
+B_mac_u_w12,B,mac,uuu,"12,12,24",25,"mac:uuu:12,12,24:25",CORRECT,
+B_dot2_u_w12,B,dot2,uuuu,"12,12,12,12",25,"dot2:uuuu:12,12,12,12:25",CORRECT,
+B_dot2c_u_w12,B,dot2c,uuuuu,"12,12,12,12,24",26,"dot2c:uuuuu:12,12,12,12,24:26",CORRECT,
+B_mac_s_w12,B,mac,sss,"12,12,24",25,"mac:sss:12,12,24:25",CORRECT,
+B_dot2_s_w12,B,dot2,ssss,"12,12,12,12",25,"dot2:ssss:12,12,12,12:25",CORRECT,
+B_dot2c_s_w12,B,dot2c,sssss,"12,12,12,12,24",26,"dot2c:sssss:12,12,12,12,24:26",CORRECT,
+B_mac_u_w16,B,mac,uuu,"16,16,32",33,"mac:uuu:16,16,32:33",CORRECT,
+B_dot2_u_w16,B,dot2,uuuu,"16,16,16,16",33,"dot2:uuuu:16,16,16,16:33",CORRECT,
+B_dot2c_u_w16,B,dot2c,uuuuu,"16,16,16,16,32",34,"dot2c:uuuuu:16,16,16,16,32:34",CORRECT,
+B_mac_s_w16,B,mac,sss,"16,16,32",33,"mac:sss:16,16,32:33",CORRECT,
+B_dot2_s_w16,B,dot2,ssss,"16,16,16,16",33,"dot2:ssss:16,16,16,16:33",CORRECT,
+B_dot2c_s_w16,B,dot2c,sssss,"16,16,16,16,32",34,"dot2c:sssss:16,16,16,16,32:34",CORRECT,
+B_mac_u_w24,B,mac,uuu,"24,24,48",49,"mac:uuu:24,24,48:49",CORRECT,
+B_dot2_u_w24,B,dot2,uuuu,"24,24,24,24",49,"dot2:uuuu:24,24,24,24:49",CORRECT,
+B_dot2c_u_w24,B,dot2c,uuuuu,"24,24,24,24,48",50,"dot2c:uuuuu:24,24,24,24,48:50",CORRECT,
+B_mac_s_w24,B,mac,sss,"24,24,48",49,"mac:sss:24,24,48:49",CORRECT,
+B_dot2_s_w24,B,dot2,ssss,"24,24,24,24",49,"dot2:ssss:24,24,24,24:49",CORRECT,
+B_dot2c_s_w24,B,dot2c,sssss,"24,24,24,24,48",50,"dot2c:sssss:24,24,24,24,48:50",CORRECT,
+B_mac_u_w32,B,mac,uuu,"32,32,64",65,"mac:uuu:32,32,64:65",CORRECT,
+B_dot2_u_w32,B,dot2,uuuu,"32,32,32,32",65,"dot2:uuuu:32,32,32,32:65",CORRECT,
+B_dot2c_u_w32,B,dot2c,uuuuu,"32,32,32,32,64",66,"dot2c:uuuuu:32,32,32,32,64:66",CORRECT,
+B_mac_s_w32,B,mac,sss,"32,32,64",65,"mac:sss:32,32,64:65",CORRECT,
+B_dot2_s_w32,B,dot2,ssss,"32,32,32,32",65,"dot2:ssss:32,32,32,32:65",CORRECT,
+B_dot2c_s_w32,B,dot2c,sssss,"32,32,32,32,64",66,"dot2c:sssss:32,32,32,32,64:66",CORRECT,
+B_mac_u_w64,B,mac,uuu,"64,64,128",129,"mac:uuu:64,64,128:129",CORRECT,
+B_dot2_u_w64,B,dot2,uuuu,"64,64,64,64",129,"dot2:uuuu:64,64,64,64:129",CORRECT,
+B_dot2c_u_w64,B,dot2c,uuuuu,"64,64,64,64,128",130,"dot2c:uuuuu:64,64,64,64,128:130",CORRECT,
+B_mac_s_w64,B,mac,sss,"64,64,128",129,"mac:sss:64,64,128:129",CORRECT,
+B_dot2_s_w64,B,dot2,ssss,"64,64,64,64",129,"dot2:ssss:64,64,64,64:129",CORRECT,
+B_dot2c_s_w64,B,dot2c,sssss,"64,64,64,64,128",130,"dot2c:sssss:64,64,64,64,128:130",CORRECT,
+C_macw_u_w4_y16,C,mac,uuu,"4,4,16",16,"mac:uuu:4,4,16:16",CORRECT,Y_WIDTH=16 > A+B=8
+C_msubw_u_w4_y16,C,msub,uuu,"4,4,16",16,"msub:uuu:4,4,16:16",CORRECT,Y_WIDTH=16 > A+B=8; negated product
+C_macw_s_w4_y16,C,mac,sss,"4,4,16",16,"mac:sss:4,4,16:16",CORRECT,Y_WIDTH=16 > A+B=8
+C_msubw_s_w4_y16,C,msub,sss,"4,4,16",16,"msub:sss:4,4,16:16",CORRECT,Y_WIDTH=16 > A+B=8; negated product
+C_macw_u_w4_y24,C,mac,uuu,"4,4,24",24,"mac:uuu:4,4,24:24",CORRECT,Y_WIDTH=24 > A+B=8
+C_msubw_u_w4_y24,C,msub,uuu,"4,4,24",24,"msub:uuu:4,4,24:24",CORRECT,Y_WIDTH=24 > A+B=8; negated product
+C_macw_s_w4_y24,C,mac,sss,"4,4,24",24,"mac:sss:4,4,24:24",CORRECT,Y_WIDTH=24 > A+B=8
+C_msubw_s_w4_y24,C,msub,sss,"4,4,24",24,"msub:sss:4,4,24:24",CORRECT,Y_WIDTH=24 > A+B=8; negated product
+C_msub_u_w4,C,msub,uuu,"4,4,8",9,"msub:uuu:4,4,8:9",CORRECT,natural-width negated product
+C_msub_s_w4,C,msub,sss,"4,4,8",9,"msub:sss:4,4,8:9",CORRECT,natural-width negated product
+C_macw_u_w8_y24,C,mac,uuu,"8,8,24",24,"mac:uuu:8,8,24:24",CORRECT,Y_WIDTH=24 > A+B=16
+C_msubw_u_w8_y24,C,msub,uuu,"8,8,24",24,"msub:uuu:8,8,24:24",CORRECT,Y_WIDTH=24 > A+B=16; negated product
+C_macw_s_w8_y24,C,mac,sss,"8,8,24",24,"mac:sss:8,8,24:24",CORRECT,Y_WIDTH=24 > A+B=16
+C_msubw_s_w8_y24,C,msub,sss,"8,8,24",24,"msub:sss:8,8,24:24",CORRECT,Y_WIDTH=24 > A+B=16; negated product
+C_macw_u_w8_y32,C,mac,uuu,"8,8,32",32,"mac:uuu:8,8,32:32",CORRECT,Y_WIDTH=32 > A+B=16
+C_msubw_u_w8_y32,C,msub,uuu,"8,8,32",32,"msub:uuu:8,8,32:32",CORRECT,Y_WIDTH=32 > A+B=16; negated product
+C_macw_s_w8_y32,C,mac,sss,"8,8,32",32,"mac:sss:8,8,32:32",CORRECT,Y_WIDTH=32 > A+B=16
+C_msubw_s_w8_y32,C,msub,sss,"8,8,32",32,"msub:sss:8,8,32:32",CORRECT,Y_WIDTH=32 > A+B=16; negated product
+C_msub_u_w8,C,msub,uuu,"8,8,16",17,"msub:uuu:8,8,16:17",CORRECT,natural-width negated product
+C_msub_s_w8,C,msub,sss,"8,8,16",17,"msub:sss:8,8,16:17",CORRECT,natural-width negated product
+C_macw_u_w16_y40,C,mac,uuu,"16,16,40",40,"mac:uuu:16,16,40:40",CORRECT,Y_WIDTH=40 > A+B=32
+C_msubw_u_w16_y40,C,msub,uuu,"16,16,40",40,"msub:uuu:16,16,40:40",CORRECT,Y_WIDTH=40 > A+B=32; negated product
+C_macw_s_w16_y40,C,mac,sss,"16,16,40",40,"mac:sss:16,16,40:40",CORRECT,Y_WIDTH=40 > A+B=32
+C_msubw_s_w16_y40,C,msub,sss,"16,16,40",40,"msub:sss:16,16,40:40",CORRECT,Y_WIDTH=40 > A+B=32; negated product
+C_macw_u_w16_y48,C,mac,uuu,"16,16,48",48,"mac:uuu:16,16,48:48",CORRECT,Y_WIDTH=48 > A+B=32
+C_msubw_u_w16_y48,C,msub,uuu,"16,16,48",48,"msub:uuu:16,16,48:48",CORRECT,Y_WIDTH=48 > A+B=32; negated product
+C_macw_s_w16_y48,C,mac,sss,"16,16,48",48,"mac:sss:16,16,48:48",CORRECT,Y_WIDTH=48 > A+B=32
+C_msubw_s_w16_y48,C,msub,sss,"16,16,48",48,"msub:sss:16,16,48:48",CORRECT,Y_WIDTH=48 > A+B=32; negated product
+C_msub_u_w16,C,msub,uuu,"16,16,32",33,"msub:uuu:16,16,32:33",CORRECT,natural-width negated product
+C_msub_s_w16,C,msub,sss,"16,16,32",33,"msub:sss:16,16,32:33",CORRECT,natural-width negated product
+C_macw_u_w32_y72,C,mac,uuu,"32,32,72",72,"mac:uuu:32,32,72:72",CORRECT,Y_WIDTH=72 > A+B=64
+C_msubw_u_w32_y72,C,msub,uuu,"32,32,72",72,"msub:uuu:32,32,72:72",CORRECT,Y_WIDTH=72 > A+B=64; negated product
+C_macw_s_w32_y72,C,mac,sss,"32,32,72",72,"mac:sss:32,32,72:72",CORRECT,Y_WIDTH=72 > A+B=64
+C_msubw_s_w32_y72,C,msub,sss,"32,32,72",72,"msub:sss:32,32,72:72",CORRECT,Y_WIDTH=72 > A+B=64; negated product
+C_macw_u_w32_y80,C,mac,uuu,"32,32,80",80,"mac:uuu:32,32,80:80",CORRECT,Y_WIDTH=80 > A+B=64
+C_msubw_u_w32_y80,C,msub,uuu,"32,32,80",80,"msub:uuu:32,32,80:80",CORRECT,Y_WIDTH=80 > A+B=64; negated product
+C_macw_s_w32_y80,C,mac,sss,"32,32,80",80,"mac:sss:32,32,80:80",CORRECT,Y_WIDTH=80 > A+B=64
+C_msubw_s_w32_y80,C,msub,sss,"32,32,80",80,"msub:sss:32,32,80:80",CORRECT,Y_WIDTH=80 > A+B=64; negated product
+C_msub_u_w32,C,msub,uuu,"32,32,64",65,"msub:uuu:32,32,64:65",CORRECT,natural-width negated product
+C_msub_s_w32,C,msub,sss,"32,32,64",65,"msub:sss:32,32,64:65",CORRECT,natural-width negated product
+MUT_signext_mac_s_w8,MUT,mac,sss,"8,8,16",17,"mac:sss:8,8,16:17",INCORRECT,product zero-extended instead of sign-extended
+MUT_trunc_mul_u_w8,MUT,mul,uu,"8,8",16,"mul:uu:8,8:16",INCORRECT,product truncated to 2W-1 bits
+MUT_accum_mac_u_w8,MUT,mac,uuu,"8,8,16",17,"mac:uuu:8,8,16:17",INCORRECT,accumulator carry-out dropped
+MUT_plus1_dot2_u_w8,MUT,dot2,uuuu,"8,8,8,8",17,"dot2:uuuu:8,8,8,8:17",INCORRECT,accumulator off by one
+MUT_signext_mac_s_w16,MUT,mac,sss,"16,16,32",33,"mac:sss:16,16,32:33",INCORRECT,product zero-extended instead of sign-extended
+MUT_trunc_mul_u_w16,MUT,mul,uu,"16,16",32,"mul:uu:16,16:32",INCORRECT,product truncated to 2W-1 bits
+MUT_accum_mac_u_w16,MUT,mac,uuu,"16,16,32",33,"mac:uuu:16,16,32:33",INCORRECT,accumulator carry-out dropped
+MUT_plus1_dot2_u_w16,MUT,dot2,uuuu,"16,16,16,16",33,"dot2:uuuu:16,16,16,16:33",INCORRECT,accumulator off by one
+MUT_signext_mac_s_w32,MUT,mac,sss,"32,32,64",65,"mac:sss:32,32,64:65",INCORRECT,product zero-extended instead of sign-extended
+MUT_trunc_mul_u_w32,MUT,mul,uu,"32,32",64,"mul:uu:32,32:64",INCORRECT,product truncated to 2W-1 bits
+MUT_accum_mac_u_w32,MUT,mac,uuu,"32,32,64",65,"mac:uuu:32,32,64:65",INCORRECT,accumulator carry-out dropped
+MUT_plus1_dot2_u_w32,MUT,dot2,uuuu,"32,32,32,32",65,"dot2:uuuu:32,32,32,32:65",INCORRECT,accumulator off by one

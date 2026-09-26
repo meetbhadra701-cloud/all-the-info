@@ -1,0 +1,66 @@
+if { $::env(DETAILED_METRICS) } {
+  report_metrics 4 "cts pre-repair-timing"
+}
+utl::pop_metrics_stage
+
+set_placement_padding -global \
+  -left $::env(CELL_PAD_IN_SITES_DETAIL_PLACEMENT) \
+  -right $::env(CELL_PAD_IN_SITES_DETAIL_PLACEMENT)
+
+set result [catch { log_cmd detailed_placement } msg]
+if { $result != 0 } {
+  save_progress 4_1_error
+  error "Detailed placement failed in CTS: $msg"
+}
+
+log_cmd estimate_parasitics -placement
+
+if { $::env(CTS_SNAPSHOTS) } {
+  save_progress 4_1_pre_repair_setup_hold
+}
+
+if { !$::env(SKIP_CTS_REPAIR_TIMING) } {
+  set lec_enabled [lec_check_enabled]
+  if { $lec_enabled } {
+    write_lec_verilog 4_before_rsz_lec.v
+  }
+
+  repair_timing_helper
+
+  if { $lec_enabled } {
+    write_lec_verilog 4_after_rsz_lec.v
+    run_lec_test 4_rsz 4_before_rsz_lec.v 4_after_rsz_lec.v
+  }
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl:93:proc run_lec_test { step file1 file2 } {
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-94-  check_kepler_formal
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-95-  write_lec_script $step $file1 $file2
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-96-  # tclint-disable-next-line command-args
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-97-  eval exec $::env(KEPLER_FORMAL_EXE) --config $::env(OBJECTS_DIR)/${step}_lec_test.yml
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-98-  try {
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-99-    set count [exec grep -c "Found difference" $::env(LOG_DIR)/${step}_lec_check.log]
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-100-  } trap CHILDSTATUS {results options} {
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-101-    # This block executes if grep returns a non-zero exit code
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-102-    set count 0
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-103-  }
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-104-  set label [formal_check_label $step]
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-105-  if { $count > 0 } {
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-106-    error "$label failed lec test"
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-107-  } else {
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-108-    puts "$label passed lec test"
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-109-  }
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-110-}
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-111-
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-112-proc run_sec_test { step file1 file2 } {
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-113-  check_kepler_formal
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-114-  write_sec_script $step $file1 $file2
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-115-  # tclint-disable-next-line command-args
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-116-  eval exec $::env(KEPLER_FORMAL_EXE) --config $::env(OBJECTS_DIR)/${step}_sec_test.yml
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-117-  try {
+/OpenROAD-flow-scripts/flow/scripts/formal_check.tcl-118-    set count [exec grep -c "SEC found a counterexample" $::env(LOG_DIR)/${step}_sec_check.log]
+131:    PVT corner library selection. Only available for ASAP7 and GF180 PDKs.
+157:    Selects between NLDM and CCS timing models for the ASAP7 platform.
+272:    Select an alternative language frontend to ingest the design. Available option
+387:    definitions to determine clock gating cell. The selection can be overridden
+1185:    Name of the Liberty library to use in selecting the clock buffers.
+1630:LEC_CHECK:
+1660:    lec checks.

@@ -1,0 +1,3 @@
+======== ABC command line "read_aiger /mnt/c/Users/meetb/Desktop/CLAUDE_OPUS_5_5_RESEARCH_CONTEXT/11_TRACE_YOSYS_FRONTIER_PROSECUTION/netlists/CONTROL/A_mul_u_w8__booth_pre_folded.aig; strash; &get -n; &dch -f; &put; strash; write_aiger -s /mnt/c/Users/meetb/Desktop/CLAUDE_OPUS_5_5_RESEARCH_CONTEXT/11_TRACE_YOSYS_FRONTIER_PROSECUTION/netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dch.aig"
+Warning: Transforming AIG with 69 choice nodes.
+Warning: The choice nodes in the original AIG are removed by strashing.

@@ -1,0 +1,11 @@
+job_id,rel_path,args,timeout_s,expected,tool_status,trace_result,max_polynomial,trace_elapsed_s,wall_s,cgroup_peak_mib,max_rss_kb,and_gates,subst_steps,trace_exit,diag,note
+D03_mul_s_w8_norm_idx,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -idx -p -c -no-steps,120,CORRECT,RESULT,Correct,81,0.974342,2.35,5.9,28608,695,16,0,,config sweep
+D04_mul_s_w8_norm_ipc,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -ipc -p -c -no-steps,120,CORRECT,RESULT,Correct,81,6.09791,7.46,16.3,72304,695,16,0,,config sweep
+D05_mul_s_w8_norm_igsm,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -igsm -p -c -no-steps,120,CORRECT,RESULT,Buggy,81,4.90683,5.79,16.6,71616,695,16,0,,config sweep
+D06_mul_s_w8_norm_dyn_nopc,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -dyn -no-steps,120,CORRECT,TIMEOUT,,,,121.48,278.6,,,,137,,config sweep
+D07_mul_s_w8_norm_unsignedspec,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -dyn -p -c -no-steps,120,INCORRECT,TIMEOUT,,,,121.69,124.8,,,,137,,control: signed circuit vs unsigned spec
+D08_mul_s_w8_normpre,netlists/MAIN/A_mul_s_w8__norm_pre.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,RESULT,Correct,135,0.0580919,1.26,4.9,22976,760,776,0,,pre-ABC structure
+D09_mul_u_w8_booth_ipc,netlists/MAIN/A_mul_u_w8__booth.aig,-mul -ipc -p -c -no-steps,120,CORRECT,TIMEOUT,,,,121.48,243.5,,,,137,,config sweep
+D10_mul_u_w8_boothpre,netlists/MAIN/A_mul_u_w8__booth_pre.aig,-mul -dyn -p -c -no-steps,120,CORRECT,NO_RESULT,,,,1.15,5.4,9664,,,11,Command terminated by signal 11,pre-ABC structure
+D11_mul_s_w8_boothlp,netlists/MAIN/A_mul_s_w8__booth_lp.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,TIMEOUT,,,,121.43,344.1,,,,137,,signed low-power booth
+D12_mul_s_w8_boothpre,netlists/MAIN/A_mul_s_w8__booth_pre.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,RESULT,Correct,171,0.113758,1.97,4.9,20416,612,628,0,,signed booth pre-ABC

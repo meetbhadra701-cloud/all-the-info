@@ -1,0 +1,2 @@
+======== ABC command line "&r mac_u_w8_norm.pre.aig; &cec -T 60 mac_u_w8_norm.post.aig"
+Networks are equivalent.  Time =     0.03 sec

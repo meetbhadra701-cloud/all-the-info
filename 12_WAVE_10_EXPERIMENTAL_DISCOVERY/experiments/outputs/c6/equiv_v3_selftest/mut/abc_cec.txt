@@ -1,0 +1,1 @@
+Verification failed for at least 1 outputs:  n3407_1 Output n3407_1: Value in Network1 = 0. Value in Network2 = 1. Input pattern:  ld=1 u9891.IQN=0 

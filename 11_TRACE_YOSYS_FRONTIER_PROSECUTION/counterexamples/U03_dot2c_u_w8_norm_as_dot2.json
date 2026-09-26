@@ -1,0 +1,26 @@
+{
+ "job_id": "U03_dot2c_u_w8_norm_as_dot2",
+ "results_csv": "trace_unsupported_probe_results.csv",
+ "netlist": "netlists/MAIN/B_dot2c_u_w8__norm.aig",
+ "args": "-dot=2 -dyn -p -c -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "dot2:uuuu:12,12,12,12:18",
+ "witness_complement": {
+  "verdict": "WITNESS_CONFIRMED",
+  "i_means": "complement",
+  "remainder_terms": 370,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -3458049,
+  "input_vector_hex": "0xffffffffffff",
+  "operands": [
+   "0xfff",
+   "0xfff",
+   "0xfff",
+   "0xfff"
+  ],
+  "netlist_output": "0x2fc01",
+  "reference": "0x3c002"
+ },
+ "overall": "WITNESS_CONFIRMED",
+ "i_vars": false
+}

@@ -1,0 +1,7 @@
+# preserved copy of session task output buylj5avy (z3 encoding tests on ctrl, run by e1_enc_test.sh); copied 2026-09-25T23:43:25Z
+patched
+{"dump": "ctrl.dump.json", "D": 103.171001984, "eps": -1.0, "enc": "pb", "arith": "default", "n_cands_full": 7345, "n_cands_model": 7345, "solver_status": "unknown", "solver_wall": 300.34, "fixed_area": 0.0, "objective_x100": null, "verdict": "NO_SOLUTION_OR_TIMEOUT"}
+{"dump": "ctrl.dump.json", "D": 103.171001984, "eps": -1.0, "enc": "pb", "arith": "1", "notiming": false, "n_cands_full": 7345, "n_cands_model": 7345, "solver_status": "unknown", "solver_wall": 105.6, "fixed_area": 0.0, "objective_x100": null, "verdict": "NO_SOLUTION_OR_TIMEOUT"}
+{"dump": "ctrl.dump.json", "D": 103.171001984, "eps": 0.05, "enc": "pb", "arith": "1", "notiming": false, "n_cands_full": 7345, "n_cands_model": 2386, "solver_status": "unknown", "solver_wall": 1.42, "fixed_area": 0.0, "objective_x100": null, "verdict": "NO_SOLUTION_OR_TIMEOUT"}
+
+[exited with code 0]

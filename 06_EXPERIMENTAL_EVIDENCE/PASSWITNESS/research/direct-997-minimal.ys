@@ -1,0 +1,21 @@
+read_verilog -sv /workspace/research/pilot_two/issue-997-minimal.v
+hierarchy -top top
+proc
+memory
+flatten top
+rename top gold_top
+design -stash gold
+design -reset
+read_verilog -sv /workspace/research/pilot_two/issue-997-modern.v
+hierarchy -top top
+proc
+memory
+flatten top
+rename top gate_top
+design -stash gate
+design -reset
+design -copy-from gold gold_top
+design -copy-from gate gate_top
+miter -equiv -make_outputs -make_outcmp -flatten gold_top gate_top miter2
+opt
+sat -seq 1 -set in_clk 0 -set-init-undef -prove trigger 0 -verify -show-inputs -show-outputs miter2

@@ -1,0 +1,11 @@
+job_id,rel_path,args,timeout_s,expected,note
+D03_mul_s_w8_norm_idx,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -idx -p -c -no-steps,120,CORRECT,config sweep
+D04_mul_s_w8_norm_ipc,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -ipc -p -c -no-steps,120,CORRECT,config sweep
+D05_mul_s_w8_norm_igsm,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -igsm -p -c -no-steps,120,CORRECT,config sweep
+D06_mul_s_w8_norm_dyn_nopc,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -s -dyn -no-steps,120,CORRECT,config sweep
+D07_mul_s_w8_norm_unsignedspec,netlists/MAIN/A_mul_s_w8__norm.aig,-mul -dyn -p -c -no-steps,120,INCORRECT,control: signed circuit vs unsigned spec
+D08_mul_s_w8_normpre,netlists/MAIN/A_mul_s_w8__norm_pre.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,pre-ABC structure
+D09_mul_u_w8_booth_ipc,netlists/MAIN/A_mul_u_w8__booth.aig,-mul -ipc -p -c -no-steps,120,CORRECT,config sweep
+D10_mul_u_w8_boothpre,netlists/MAIN/A_mul_u_w8__booth_pre.aig,-mul -dyn -p -c -no-steps,120,CORRECT,pre-ABC structure
+D11_mul_s_w8_boothlp,netlists/MAIN/A_mul_s_w8__booth_lp.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,signed low-power booth
+D12_mul_s_w8_boothpre,netlists/MAIN/A_mul_s_w8__booth_pre.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,signed booth pre-ABC

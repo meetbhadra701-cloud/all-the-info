@@ -1,0 +1,139 @@
+
+15. Printing statistics.
+
+=== gcd ===
+
+        +----------------------------Count including submodules.
+        |        +-------------------Area including submodules.
+        |        |        +----------Local count, excluding submodules.
+        |        |        |        +-Local area, excluding submodules.
+        |        |        |        | 
+      395        -      395        - wires
+      441        -      441        - wire bits
+       42        -       42        - public wires
+       88        -       88        - public wire bits
+        8        -        8        - ports
+       54        -       54        - port bits
+        -        -        -        - memories
+        -        -        -        - memory bits
+        -        -        -        - processes
+      405   15.531      405   15.531 cells
+       12     0.29       12     0.29   gt2_6t_and2_x1_w13_elvt
+        9    0.218        9    0.218   gt2_6t_and2_x1_w13_hvt
+        9    0.218        9    0.218   gt2_6t_and2_x1_w13_lvt
+        6    0.145        6    0.145   gt2_6t_and2_x1_w13_svt
+        7    0.169        7    0.169   gt2_6t_and2_x1_w31_elvt
+        1     0.03        1     0.03   gt2_6t_and2_x2_w31_elvt
+        1     0.03        1     0.03   gt2_6t_and3_x1_w13_elvt
+        2     0.06        2     0.06   gt2_6t_and3_x1_w13_hvt
+        1     0.03        1     0.03   gt2_6t_and3_x1_w13_lvt
+        1     0.03        1     0.03   gt2_6t_and3_x1_w13_svt
+        1     0.03        1     0.03   gt2_6t_and3_x1_w13_ulvt
+        1     0.03        1     0.03   gt2_6t_and3_x1_w31_elvt
+        1    0.042        1    0.042   gt2_6t_ao211_x1_w13_svt
+        2    0.085        2    0.085   gt2_6t_ao211_x1_w31_elvt
+        1     0.03        1     0.03   gt2_6t_ao21_x1_w13_elvt
+        1     0.03        1     0.03   gt2_6t_ao21_x1_w13_hvt
+        1     0.03        1     0.03   gt2_6t_ao21_x1_w13_lvt
+        1     0.03        1     0.03   gt2_6t_ao21_x1_w31_ulvt
+        2    0.085        2    0.085   gt2_6t_ao22_x1_w31_elvt
+        2     0.06        2     0.06   gt2_6t_aoi211_x1_w13_elvt
+        1     0.03        1     0.03   gt2_6t_aoi211_x1_w13_svt
+        2     0.06        2     0.06   gt2_6t_aoi211_x1_w13_ulvt
+       23    0.696       23    0.696   gt2_6t_aoi211_x1_w31_elvt
+        2     0.06        2     0.06   gt2_6t_aoi211_x1_w31_lvt
+        3    0.073        3    0.073   gt2_6t_aoi21_x1_w13_elvt
+        7    0.169        7    0.169   gt2_6t_aoi21_x1_w13_hvt
+        4    0.097        4    0.097   gt2_6t_aoi21_x1_w13_lvt
+        3    0.073        3    0.073   gt2_6t_aoi21_x1_w13_ulvt
+       23    0.556       23    0.556   gt2_6t_aoi21_x1_w31_elvt
+        1    0.024        1    0.024   gt2_6t_aoi21_x1_w31_hvt
+        1     0.03        1     0.03   gt2_6t_aoi22_x1_w13_hvt
+        1     0.03        1     0.03   gt2_6t_aoi22_x1_w13_lvt
+        2     0.06        2     0.06   gt2_6t_aoi22_x1_w31_elvt
+        2     0.06        2     0.06   gt2_6t_aoi31_x1_w13_elvt
+        1     0.03        1     0.03   gt2_6t_aoi31_x1_w13_lvt
+        4    0.121        4    0.121   gt2_6t_aoi31_x1_w31_elvt
+        1    0.042        1    0.042   gt2_6t_aoi33_x1_w13_lvt
+        1    0.018        1    0.018   gt2_6t_buf_x1_w13_hvt
+        1    0.018        1    0.018   gt2_6t_buf_x1_w13_svt
+        5    0.091        5    0.091   gt2_6t_buf_x1_w31_elvt
+        5    0.091        5    0.091   gt2_6t_buf_x1_w31_lvt
+        1    0.018        1    0.018   gt2_6t_buf_x1_w31_ulvt
+        2    0.048        2    0.048   gt2_6t_buf_x2_w31_elvt
+        1    0.024        1    0.024   gt2_6t_buf_x2_w31_lvt
+        1    0.054        1    0.054   gt2_6t_buf_x6_w31_elvt
+       35     6.35       35     6.35   gt2_6t_dffasync_x1_w13_elvt
+        2    0.024        2    0.024   gt2_6t_inv_x1_w13_elvt
+       31    0.375       31    0.375   gt2_6t_inv_x1_w13_hvt
+        1    0.012        1    0.012   gt2_6t_inv_x1_w13_lvt
+        1    0.012        1    0.012   gt2_6t_inv_x1_w13_svt
+        1    0.012        1    0.012   gt2_6t_inv_x1_w13_ulvt
+       11    0.133       11    0.133   gt2_6t_inv_x1_w31_elvt
+        2    0.024        2    0.024   gt2_6t_inv_x1_w31_lvt
+        1    0.012        1    0.012   gt2_6t_inv_x1_w31_svt
+        3    0.054        3    0.054   gt2_6t_nand2_x1_w13_elvt
+       15    0.272       15    0.272   gt2_6t_nand2_x1_w13_hvt
+        2    0.036        2    0.036   gt2_6t_nand2_x1_w13_lvt
+        4    0.073        4    0.073   gt2_6t_nand2_x1_w13_svt
+        3    0.054        3    0.054   gt2_6t_nand2_x1_w31_elvt
+        2    0.036        2    0.036   gt2_6t_nand2_x1_w31_lvt
+        2    0.036        2    0.036   gt2_6t_nand2_x1_w31_svt
+        4    0.097        4    0.097   gt2_6t_nand3_x1_w13_hvt
+        1    0.024        1    0.024   gt2_6t_nand3_x1_w13_svt
+        6    0.145        6    0.145   gt2_6t_nand3_x1_w31_elvt
+        1    0.018        1    0.018   gt2_6t_nor2_x1_w13_elvt
+        5    0.091        5    0.091   gt2_6t_nor2_x1_w13_hvt
+        1    0.018        1    0.018   gt2_6t_nor2_x1_w13_lvt
+        1    0.018        1    0.018   gt2_6t_nor2_x1_w13_svt
+        1    0.018        1    0.018   gt2_6t_nor2_x1_w31_elvt
+        2    0.048        2    0.048   gt2_6t_nor3_x1_w13_elvt
+        6    0.145        6    0.145   gt2_6t_nor3_x1_w13_hvt
+        2    0.048        2    0.048   gt2_6t_nor3_x1_w13_svt
+        1    0.024        1    0.024   gt2_6t_nor3_x1_w31_elvt
+        1    0.024        1    0.024   gt2_6t_nor3_x1_w31_ulvt
+        1    0.036        1    0.036   gt2_6t_oa211_x1_w31_lvt
+        1     0.03        1     0.03   gt2_6t_oa21_x1_w13_elvt
+        1     0.03        1     0.03   gt2_6t_oa21_x1_w13_hvt
+        1     0.03        1     0.03   gt2_6t_oa21_x1_w13_lvt
+        1     0.03        1     0.03   gt2_6t_oa21_x1_w31_elvt
+        1    0.042        1    0.042   gt2_6t_oa22_x1_w31_elvt
+        2     0.06        2     0.06   gt2_6t_oai211_x1_w13_elvt
+        4    0.121        4    0.121   gt2_6t_oai211_x1_w31_elvt
+        1     0.03        1     0.03   gt2_6t_oai211_x1_w31_lvt
+        3    0.073        3    0.073   gt2_6t_oai21_x1_w13_elvt
+        7    0.169        7    0.169   gt2_6t_oai21_x1_w13_hvt
+        3    0.073        3    0.073   gt2_6t_oai21_x1_w13_lvt
+        1    0.024        1    0.024   gt2_6t_oai21_x1_w13_svt
+        1    0.024        1    0.024   gt2_6t_oai21_x1_w13_ulvt
+        8    0.194        8    0.194   gt2_6t_oai21_x1_w31_elvt
+        1    0.024        1    0.024   gt2_6t_oai21_x1_w31_lvt
+        1     0.03        1     0.03   gt2_6t_oai22_x1_w13_hvt
+        1     0.03        1     0.03   gt2_6t_oai22_x1_w13_lvt
+        4    0.121        4    0.121   gt2_6t_oai22_x1_w31_elvt
+        1     0.03        1     0.03   gt2_6t_oai31_x1_w13_hvt
+        5    0.151        5    0.151   gt2_6t_oai31_x1_w31_elvt
+        1    0.024        1    0.024   gt2_6t_or2_x1_w13_elvt
+        7    0.169        7    0.169   gt2_6t_or2_x1_w13_hvt
+        3    0.073        3    0.073   gt2_6t_or2_x1_w13_svt
+        1    0.024        1    0.024   gt2_6t_or2_x1_w13_ulvt
+        1    0.024        1    0.024   gt2_6t_or2_x1_w31_elvt
+        1    0.024        1    0.024   gt2_6t_or2_x1_w31_ulvt
+        1     0.03        1     0.03   gt2_6t_or2_x2_w31_elvt
+        2     0.06        2     0.06   gt2_6t_or3_x1_w13_elvt
+        1     0.03        1     0.03   gt2_6t_or3_x1_w13_lvt
+        1     0.03        1     0.03   gt2_6t_or3_x1_w13_svt
+        1    0.012        1    0.012   gt2_6t_tiehigh_w31_lvt
+        2    0.085        2    0.085   gt2_6t_xnor2_x1_w13_elvt
+        8    0.339        8    0.339   gt2_6t_xnor2_x1_w13_hvt
+        2    0.085        2    0.085   gt2_6t_xnor2_x1_w13_lvt
+        2    0.085        2    0.085   gt2_6t_xnor2_x1_w13_svt
+        2    0.085        2    0.085   gt2_6t_xnor2_x1_w13_ulvt
+        6    0.254        6    0.254   gt2_6t_xnor2_x1_w31_elvt
+        1    0.042        1    0.042   gt2_6t_xor2_x1_w13_elvt
+        1    0.042        1    0.042   gt2_6t_xor2_x1_w13_hvt
+        4    0.169        4    0.169   gt2_6t_xor2_x1_w31_elvt
+
+   Chip area for module '\gcd': 15.531288
+     of which used for sequential elements: 6.350400 (40.89%)
+

@@ -1,0 +1,13 @@
+======== ABC command line "&acec -T 240 /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/aig/mac_u_w8_tree.aig /mnt/c/Users/meetb/AppData/Local/Temp/claude/C--Users-meetb-Desktop-CLAUDE-OPUS-5-5-RESEARCH-CONTEXT/03476a4d-4e8a-44cd-9bcd-493130f6d087/scratchpad/s1/work/msb/m_tree_k16.aig"
+The adder tree has 136 internal cut points. There is no internal fanouts.
+Xor node 260 belongs to Tree 16 and Tree 7.
+The adder tree has 138 internal cut points. There is no internal fanouts.
+Finished computing equivalent nodes.  Time =     0.01 sec
+Moved 0 pairs of PPs to normalize the matrix.
+Moved 0 pairs of PPs to normalize the matrix.
+Box0: Matched 72 entries out of 76.
+Box1: Matched 72 entries out of 77.
+Matching of adder trees in LHS and RHS succeeded.  Time =     0.01 sec
+Disproved at least one output of the miter (zero-based number 2).
+Networks are NOT EQUIVALENT.  Time =     0.00 sec
+INPUT: a = 32'h5CDE617B.  OUTPUT: z = 17'h00B7D (miter), z = 17'h00B79 (miter).

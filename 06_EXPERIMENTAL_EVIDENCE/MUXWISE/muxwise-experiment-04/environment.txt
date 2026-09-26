@@ -1,0 +1,23 @@
+Linux behappy 6.18.33.2-microsoft-standard-WSL2 #1 SMP PREEMPT_DYNAMIC Thu Jun 18 21:54:43 UTC 2026 x86_64 GNU/Linux
+Python 3.14.4
+git version 2.53.0
+/mnt/c/Program Files/Docker/Docker/resources/bin/docker
+
+The command 'docker' could not be found in this WSL 2 distro.
+We recommend to activate the WSL integration in Docker Desktop settings.
+
+For details about using Docker Desktop with WSL 2, visit:
+
+https://docs.docker.com/go/wsl2/
+
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+8
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       886Mi        14Gi        46Mi       575Mi        14Gi
+Swap:          4.0Gi        96Mi       3.9Gi
+Yosys 0.69+77 (git sha1 9ff27d29c-dirty, Release, Clang /usr/bin/clang++ 21.1.8)
+ABC executable: ../muxwise-experiment-02/work/oss-cad-suite/bin/yosys-abc
+UC Berkeley, ABC 1.01 (compiled Sep 21 2026 05:23:42)
+Windows Docker Desktop docker.exe: 29.8.0 linux/amd64 (daemon reachable)
+Icarus Verilog: 14.0 (devel) (s20260301-476-g1a23d1ffd-dirty)
+Verilator: 5.053 devel rev v5.052-159-g46774fded

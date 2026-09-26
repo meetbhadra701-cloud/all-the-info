@@ -1,0 +1,14 @@
+# The Yosys abc default Liberty script, with an explicit ABC random seed.
+set random_seed 1
+strash
+&get -n
+&fraig -x
+&put
+scorr
+dc2
+dretime
+strash
+&get -n
+&dch -f
+&nf
+&put

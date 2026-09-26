@@ -1,0 +1,105 @@
+job_id,rel_path,args,timeout_s,expected,note
+sw__A_mul_s_w4__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=booth
+sw__A_mul_s_w4__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=booth
+sw__A_mul_s_w4__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=booth_lp
+sw__A_mul_s_w4__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=booth_lp
+sw__A_mul_s_w4__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w4__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=norm
+sw__A_mul_u_w4__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w4__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=booth
+sw__A_mul_u_w4__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w4__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=booth
+sw__A_mul_u_w4__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w4__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=4;onset sweep;arch=norm
+sw__A_mul_s_w5__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=booth
+sw__A_mul_s_w5__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=booth
+sw__A_mul_s_w5__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=booth_lp
+sw__A_mul_s_w5__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=booth_lp
+sw__A_mul_s_w5__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w5__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=norm
+sw__A_mul_u_w5__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w5__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=booth
+sw__A_mul_u_w5__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w5__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=booth
+sw__A_mul_u_w5__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w5__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=5;onset sweep;arch=norm
+sw__A_mul_s_w6__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=booth
+sw__A_mul_s_w6__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=booth
+sw__A_mul_s_w6__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=booth_lp
+sw__A_mul_s_w6__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=booth_lp
+sw__A_mul_s_w6__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w6__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=norm
+sw__A_mul_u_w6__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w6__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=booth
+sw__A_mul_u_w6__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w6__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=booth
+sw__A_mul_u_w6__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w6__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=6;onset sweep;arch=norm
+sw__A_mul_s_w7__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=booth
+sw__A_mul_s_w7__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=booth
+sw__A_mul_s_w7__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=booth_lp
+sw__A_mul_s_w7__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=booth_lp
+sw__A_mul_s_w7__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w7__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=norm
+sw__A_mul_u_w7__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w7__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=booth
+sw__A_mul_u_w7__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w7__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=booth
+sw__A_mul_u_w7__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w7__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=7;onset sweep;arch=norm
+sw__A_mul_s_w8__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=booth
+sw__A_mul_s_w8__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=booth
+sw__A_mul_s_w8__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=booth_lp
+sw__A_mul_s_w8__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=booth_lp
+sw__A_mul_s_w8__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w8__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=norm
+sw__A_mul_u_w8__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w8__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=booth
+sw__A_mul_u_w8__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w8__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=booth
+sw__A_mul_u_w8__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w8__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;onset sweep;arch=norm
+sw__A_mul_s_w9__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=booth
+sw__A_mul_s_w9__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=booth
+sw__A_mul_s_w9__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=booth_lp
+sw__A_mul_s_w9__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=booth_lp
+sw__A_mul_s_w9__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w9__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=norm
+sw__A_mul_u_w9__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w9__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=booth
+sw__A_mul_u_w9__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w9__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=booth
+sw__A_mul_u_w9__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w9__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=9;onset sweep;arch=norm
+sw__A_mul_s_w10__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=booth
+sw__A_mul_s_w10__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=booth
+sw__A_mul_s_w10__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=booth_lp
+sw__A_mul_s_w10__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=booth_lp
+sw__A_mul_s_w10__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w10__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=norm
+sw__A_mul_u_w10__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w10__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=booth
+sw__A_mul_u_w10__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w10__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=booth
+sw__A_mul_u_w10__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w10__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=10;onset sweep;arch=norm
+sw__A_mul_s_w11__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=booth
+sw__A_mul_s_w11__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=booth
+sw__A_mul_s_w11__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=booth_lp
+sw__A_mul_s_w11__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=booth_lp
+sw__A_mul_s_w11__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w11__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=norm
+sw__A_mul_u_w11__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w11__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=booth
+sw__A_mul_u_w11__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w11__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=booth
+sw__A_mul_u_w11__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w11__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=11;onset sweep;arch=norm
+sw__A_mul_s_w12__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=booth
+sw__A_mul_s_w12__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=booth
+sw__A_mul_s_w12__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=booth_lp
+sw__A_mul_s_w12__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=booth_lp
+sw__A_mul_s_w12__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w12__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=norm
+sw__A_mul_u_w12__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w12__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=booth
+sw__A_mul_u_w12__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w12__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=booth
+sw__A_mul_u_w12__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w12__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=12;onset sweep;arch=norm
+sw__A_mul_s_w13__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=booth
+sw__A_mul_s_w13__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=booth
+sw__A_mul_s_w13__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=booth_lp
+sw__A_mul_s_w13__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=booth_lp
+sw__A_mul_s_w13__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w13__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=norm
+sw__A_mul_u_w13__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w13__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=booth
+sw__A_mul_u_w13__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w13__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=booth
+sw__A_mul_u_w13__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w13__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=13;onset sweep;arch=norm
+sw__A_mul_s_w14__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=booth
+sw__A_mul_s_w14__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=booth
+sw__A_mul_s_w14__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=booth_lp
+sw__A_mul_s_w14__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=booth_lp
+sw__A_mul_s_w14__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w14__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=norm
+sw__A_mul_u_w14__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w14__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=booth
+sw__A_mul_u_w14__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w14__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=booth
+sw__A_mul_u_w14__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w14__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=14;onset sweep;arch=norm
+sw__A_mul_s_w15__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=booth
+sw__A_mul_s_w15__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=booth
+sw__A_mul_s_w15__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=booth_lp
+sw__A_mul_s_w15__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=booth_lp
+sw__A_mul_s_w15__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w15__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=norm
+sw__A_mul_u_w15__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w15__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=booth
+sw__A_mul_u_w15__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w15__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=booth
+sw__A_mul_u_w15__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w15__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=15;onset sweep;arch=norm
+sw__A_mul_s_w16__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=booth
+sw__A_mul_s_w16__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=booth
+sw__A_mul_s_w16__booth_lp___dyn_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth_lp.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=booth_lp
+sw__A_mul_s_w16__booth_lp___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__booth_lp.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=booth_lp
+sw__A_mul_s_w16__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_s_w16__norm.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=norm
+sw__A_mul_u_w16__booth___dyn_p_c,netlists/SWEEP_MAIN/A_mul_u_w16__booth.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=booth
+sw__A_mul_u_w16__booth___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w16__booth.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=booth
+sw__A_mul_u_w16__norm___idx_p_c,netlists/SWEEP_MAIN/A_mul_u_w16__norm.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=16;onset sweep;arch=norm

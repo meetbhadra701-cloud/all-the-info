@@ -1,0 +1,5 @@
+read_verilog -sv rtl/C_msubw_u_w32_y80.v
+synth -top top -arith_tree
+aigmap
+opt_clean
+write_aiger -symbols -map netlists/MAIN/C_msubw_u_w32_y80__tree.map netlists/MAIN/C_msubw_u_w32_y80__tree.aig

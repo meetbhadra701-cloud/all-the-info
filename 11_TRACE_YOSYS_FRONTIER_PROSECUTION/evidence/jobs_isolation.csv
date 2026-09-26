@@ -1,0 +1,76 @@
+job_id,rel_path,args,timeout_s,expected,note
+onset__B_dot2_u_w40__tree_pre___dyn_p_c,netlists/ONSET_MAIN/B_dot2_u_w40__tree_pre.aig,-dot=2 -dyn -p -c -no-steps,900,CORRECT,W=40;onset of 64-bit pre-ABC difficulty
+onset__B_dot2_u_w48__tree_pre___dyn_p_c,netlists/ONSET_MAIN/B_dot2_u_w48__tree_pre.aig,-dot=2 -dyn -p -c -no-steps,900,CORRECT,W=48;onset of 64-bit pre-ABC difficulty
+onset__B_dot2_u_w56__tree_pre___dyn_p_c,netlists/ONSET_MAIN/B_dot2_u_w56__tree_pre.aig,-dot=2 -dyn -p -c -no-steps,900,CORRECT,W=56;onset of 64-bit pre-ABC difficulty
+onset__B_mac_u_w40__norm_pre___dyn_p_c,netlists/ONSET_MAIN/B_mac_u_w40__norm_pre.aig,-mac -dyn -p -c -no-steps,900,CORRECT,W=40;onset of 64-bit pre-ABC difficulty
+onset__B_mac_u_w40__tree_pre___dyn_p_c,netlists/ONSET_MAIN/B_mac_u_w40__tree_pre.aig,-mac -dyn -p -c -no-steps,900,CORRECT,W=40;onset of 64-bit pre-ABC difficulty
+onset__B_mac_u_w48__norm_pre___dyn_p_c,netlists/ONSET_MAIN/B_mac_u_w48__norm_pre.aig,-mac -dyn -p -c -no-steps,900,CORRECT,W=48;onset of 64-bit pre-ABC difficulty
+onset__B_mac_u_w48__tree_pre___dyn_p_c,netlists/ONSET_MAIN/B_mac_u_w48__tree_pre.aig,-mac -dyn -p -c -no-steps,900,CORRECT,W=48;onset of 64-bit pre-ABC difficulty
+onset__B_mac_u_w56__norm_pre___dyn_p_c,netlists/ONSET_MAIN/B_mac_u_w56__norm_pre.aig,-mac -dyn -p -c -no-steps,900,CORRECT,W=56;onset of 64-bit pre-ABC difficulty
+onset__B_mac_u_w56__tree_pre___dyn_p_c,netlists/ONSET_MAIN/B_mac_u_w56__tree_pre.aig,-mac -dyn -p -c -no-steps,900,CORRECT,W=56;onset of 64-bit pre-ABC difficulty
+abcstep__A_mul_s_w8__booth_lp_pre__balance___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__balance.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__balance___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__balance.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__dc2___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__dc2.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__dc2___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__dc2.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__dch___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__dch.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__dch___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__dch.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__fraig___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__fraig.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__fraig___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__fraig.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__refactor___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__refactor.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__refactor___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__refactor.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__resyn2___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__resyn2.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__resyn2___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__resyn2.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__rewrite___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__rewrite.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__rewrite___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__rewrite.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__strash___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__strash.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__strash___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__strash.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__yosysnomap___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__yosysnomap.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap;source=booth_lp_pre
+abcstep__A_mul_s_w8__booth_lp_pre__yosysnomap___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp_pre__yosysnomap.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap;source=booth_lp_pre
+abcstep__A_mul_u_w8__booth_pre_folded__balance___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__balance.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__balance___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__balance.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__dc2___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dc2.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__dc2___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dc2.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__dch___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dch.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__dch___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dch.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__fraig___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__fraig.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__fraig___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__fraig.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__refactor___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__refactor.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__refactor___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__refactor.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__resyn2___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__resyn2.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__resyn2___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__resyn2.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__rewrite___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__rewrite.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__rewrite___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__rewrite.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__strash___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__strash.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__strash___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__strash.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__yosysnomap___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__yosysnomap.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap;source=booth_pre_folded
+abcstep__A_mul_u_w8__booth_pre_folded__yosysnomap___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__yosysnomap.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap;source=booth_pre_folded
+abcstep__B_dot2_u_w16__norm_pre__balance___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__balance.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=balance;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__balance___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__balance.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=balance;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__dc2___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dc2.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dc2;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__dc2___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dc2.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dc2;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__dch___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dch.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dch;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__dch___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dch.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dch;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__fraig___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__fraig.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=fraig;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__fraig___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__fraig.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=fraig;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__refactor___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__refactor.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=refactor;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__refactor___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__refactor.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=refactor;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__resyn2___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__resyn2.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=resyn2;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__resyn2___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__resyn2.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=resyn2;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__rewrite___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__rewrite.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=rewrite;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__rewrite___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__rewrite.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=rewrite;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__strash___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__strash.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=strash;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__strash___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__strash.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=strash;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__yosysnomap___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__yosysnomap.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=yosysnomap;source=norm_pre
+abcstep__B_dot2_u_w16__norm_pre__yosysnomap___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__yosysnomap.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=yosysnomap;source=norm_pre
+lppre__A_mul_s_w16__booth_lp_pre___dyn_p_c,netlists/MAIN/A_mul_s_w16__booth_lp_pre.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,W=16;pre-ABC signed low-power Booth (booth_lp_pre)
+lppre__A_mul_s_w16__booth_lp_pre___idx_p_c,netlists/MAIN/A_mul_s_w16__booth_lp_pre.aig,-mul -s -idx -p -c -no-steps,120,CORRECT,W=16;pre-ABC signed low-power Booth (booth_lp_pre)
+lppre__A_mul_s_w16__booth_lp_pre_folded___dyn_p_c,netlists/CONTROL/A_mul_s_w16__booth_lp_pre_folded.aig,-mul -s -dyn -p -c -no-steps,120,CORRECT,W=16;pre-ABC signed low-power Booth (booth_lp_pre_folded)
+lppre__A_mul_s_w16__booth_lp_pre_folded___idx_p_c,netlists/CONTROL/A_mul_s_w16__booth_lp_pre_folded.aig,-mul -s -idx -p -c -no-steps,120,CORRECT,W=16;pre-ABC signed low-power Booth (booth_lp_pre_folded)
+lppre__A_mul_s_w32__booth_lp_pre___dyn_p_c,netlists/MAIN/A_mul_s_w32__booth_lp_pre.aig,-mul -s -dyn -p -c -no-steps,300,CORRECT,W=32;pre-ABC signed low-power Booth (booth_lp_pre)
+lppre__A_mul_s_w32__booth_lp_pre___idx_p_c,netlists/MAIN/A_mul_s_w32__booth_lp_pre.aig,-mul -s -idx -p -c -no-steps,300,CORRECT,W=32;pre-ABC signed low-power Booth (booth_lp_pre)
+lppre__A_mul_s_w32__booth_lp_pre_folded___dyn_p_c,netlists/CONTROL/A_mul_s_w32__booth_lp_pre_folded.aig,-mul -s -dyn -p -c -no-steps,300,CORRECT,W=32;pre-ABC signed low-power Booth (booth_lp_pre_folded)
+lppre__A_mul_s_w32__booth_lp_pre_folded___idx_p_c,netlists/CONTROL/A_mul_s_w32__booth_lp_pre_folded.aig,-mul -s -idx -p -c -no-steps,300,CORRECT,W=32;pre-ABC signed low-power Booth (booth_lp_pre_folded)
+lppre__A_mul_s_w8__booth_lp_pre___dyn_p_c,netlists/MAIN/A_mul_s_w8__booth_lp_pre.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;pre-ABC signed low-power Booth (booth_lp_pre)
+lppre__A_mul_s_w8__booth_lp_pre___idx_p_c,netlists/MAIN/A_mul_s_w8__booth_lp_pre.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;pre-ABC signed low-power Booth (booth_lp_pre)
+lppre__A_mul_s_w8__booth_lp_pre_folded___dyn_p_c,netlists/CONTROL/A_mul_s_w8__booth_lp_pre_folded.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;pre-ABC signed low-power Booth (booth_lp_pre_folded)
+lppre__A_mul_s_w8__booth_lp_pre_folded___idx_p_c,netlists/CONTROL/A_mul_s_w8__booth_lp_pre_folded.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;pre-ABC signed low-power Booth (booth_lp_pre_folded)

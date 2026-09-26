@@ -1,0 +1,38 @@
+read_verilog -sv "source/source.v"
+hierarchy -check -top fma_impl
+write_rtlil "./localization/checkpoints/000_elaborated.rtlil"
+proc
+check
+write_rtlil "./localization/checkpoints/001_proc.rtlil"
+flatten
+opt_expr
+check
+opt_clean
+opt -nodffe -nosdff
+fsm
+opt
+write_rtlil "./localization/checkpoints/002_opt.rtlil"
+wreduce
+peepopt
+opt_clean
+write_rtlil "./localization/checkpoints/003_wreduce.rtlil"
+alumacc
+write_rtlil "./localization/checkpoints/004_alumacc.rtlil"
+arith_tree
+write_rtlil "./localization/checkpoints/005_arith_tree.rtlil"
+share
+opt
+memory -nomap
+opt_clean
+opt -fast -full
+memory_map
+opt -full
+techmap
+opt -fast
+write_rtlil "./localization/checkpoints/006_techmap.rtlil"
+abc
+opt -fast
+hierarchy -check
+stat
+check
+write_rtlil "./localization/checkpoints/007_abc.rtlil"

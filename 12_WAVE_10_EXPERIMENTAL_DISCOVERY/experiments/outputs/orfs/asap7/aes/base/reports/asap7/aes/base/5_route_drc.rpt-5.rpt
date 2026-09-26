@@ -1,0 +1,15 @@
+violation type: Lef58EolKeepOut
+	srcs: net:n5960 net:n6149
+	bbox = (40.0320, 14.1710) - (40.0320, 14.1790) on Layer M3
+violation type: Lef58EolKeepOut
+	srcs: net:n5960 net:n6149
+	bbox = (40.0320, 14.1710) - (40.0500, 14.1790) on Layer M3
+violation type: Lef58EolKeepOut
+	srcs: net:n5960 net:n6149
+	bbox = (40.0500, 14.1710) - (40.0500, 14.1790) on Layer M3
+violation type: Lef58SpacingEndOfLine
+	srcs: net:n5960 net:n6149
+	bbox = (40.0320, 14.1710) - (40.0500, 14.1790) on Layer M3
+violation type: Metal Spacing
+	srcs: net:n5960 net:n6149
+	bbox = (40.0320, 14.1710) - (40.0500, 14.1790) on Layer M3

@@ -1,0 +1,181 @@
+source $::env(SCRIPTS_DIR)/util.tcl
+
+source $::env(SCRIPTS_DIR)/report_metrics.tcl
+
+proc load_design { design_file sdc_file } {
+  # Do not reload if design is already loaded
+  set db [ord::get_db]
+  if { [$db getChip] != "NULL" && [[$db getChip] getBlock] != "NULL" } {
+    return
+  }
+
+  source_env_var_if_exists PLATFORM_TCL
+
+  source $::env(SCRIPTS_DIR)/read_liberty.tcl
+
+  # Read design files
+  set ext [file extension $design_file]
+  if { $ext == ".v" } {
+    read_lef $::env(TECH_LEF)
+    read_lef $::env(SC_LEF)
+    if { [env_var_exists_and_non_empty ADDITIONAL_LEFS] } {
+      foreach lef $::env(ADDITIONAL_LEFS) {
+        read_lef $lef
+      }
+    }
+    # AUTO_MEMORIES: abstract LEFs generated pre-synthesis; globbed
+    # because the file names are only known at run time.
+    if { [env_var_equals AUTO_MEMORIES 1] } {
+      foreach lef [glob -nocomplain $::env(RESULTS_DIR)/memories/*.lef] {
+        read_lef $lef
+      }
+    }
+    read_verilog $::env(RESULTS_DIR)/$design_file
+    log_cmd link_design {*}[hier_options] $::env(DESIGN_NAME)
+  } elseif { $ext == ".odb" } {
+    log_cmd read_db {*}[hier_options] $::env(RESULTS_DIR)/$design_file
+  } else {
+    error "Unrecognized input file $design_file"
+  }
+
+  # Read SDC file
+  log_cmd read_sdc $::env(RESULTS_DIR)/$sdc_file
+
+  if { [file exists $::env(PLATFORM_DIR)/derate.tcl] } {
+    log_cmd source $::env(PLATFORM_DIR)/derate.tcl
+  }
+
+  if { [env_var_exists_and_non_empty LAYER_PARASITICS_FILE] } {
+    log_cmd source $::env(LAYER_PARASITICS_FILE)
+  } else {
+    log_cmd source $::env(PLATFORM_DIR)/setRC.tcl
+  }
+
+  if { [env_var_equals LIB_MODEL CCS] } {
+    puts "Using CCS delay calculation"
+    log_cmd set_delay_calculator prima
+  }
+}
+===== aes config
+export PLATFORM               = asap7
+
+export DESIGN_NAME            = aes_cipher_top
+export DESIGN_NICKNAME        = aes
+
+export VERILOG_FILES = $(sort $(wildcard $(DESIGN_HOME)/src/$(DESIGN_NICKNAME)/*.v))
+export SDC_FILE      = $(DESIGN_HOME)/$(PLATFORM)/$(DESIGN_NICKNAME)/constraint.sdc
+
+export CORE_UTILIZATION         = 70
+export CORE_ASPECT_RATIO        = 1
+export CORE_MARGIN              = 2
+export PLACE_DENSITY            = 0.65
+export TNS_END_PERCENT          = 100
+
+ifeq ($(FLOW_VARIANT),top)
+	export DESIGN_NAME = aes_cipher_top
+	export SYNTH_BLACKBOXES = aes_key_expand_128
+else ifeq ($(FLOW_VARIANT),blackbox)
+	export DESIGN_NAME = aes_key_expand_128
+else ifeq ($(FLOW_VARIANT),combine)
+# List blackbox twice to demonstrates that duplicate modules are ignored.
+	export SYNTH_NETLIST_FILES = \
+	 $(WORK_HOME)/results/$(PLATFORM)/$(DESIGN_NICKNAME)/top/1_synth.v \
+	 $(WORK_HOME)/results/$(PLATFORM)/$(DESIGN_NICKNAME)/blackbox/1_synth.v \
+	 $(WORK_HOME)/results/$(PLATFORM)/$(DESIGN_NICKNAME)/blackbox/1_synth.v
+endif
+
+export SYNTH_USE_SYN = 1
+set clk_name clk
+set clk_port_name clk
+set clk_period 380
+set clk_io_pct 0.2
+
+set clk_port [get_ports $clk_port_name]
+
+create_clock -name $clk_name -period $clk_period $clk_port
+set clk_io_name vclk_$clk_name
+create_clock -name $clk_io_name -period $clk_period
+set_clock_latency 77.930 [get_clocks $clk_name]
+set_clock_latency 77.930 [get_clocks $clk_io_name]
+
+set non_clock_inputs [all_inputs -no_clocks]
+
+set_input_delay [expr $clk_period * $clk_io_pct] -clock $clk_io_name $non_clock_inputs
+set_output_delay [expr $clk_period * $clk_io_pct] -clock $clk_io_name [all_outputs]
+===== targets
+Makefile:916:run:
+scripts/variables.mk:230:print-%:
+.PHONY: all_defs
+all_defs : $(foreach file,$(RESULTS_ODB),$(file).def)
+.PHONY: all_verilog
+all_verilog : $(foreach file,$(RESULTS_ODB),$(file).v)
+
+.PHONY: handoff
+handoff : all_defs all_verilog
+
+.PHONY: test-unset-and-make-%
+test-unset-and-make-%: ; $(UNSET_AND_MAKE) $*
+
+.phony: klayout
+klayout:
+	$(SCRIPTS_DIR)/klayout.sh
+
+.phony: run
+run:
+	@mkdir -p $(RESULTS_DIR) $(LOG_DIR) $(REPORTS_DIR) $(OBJECTS_DIR)
+	$(RUN_CMD) --log $(abspath $(LOG_DIR)/$(RUN_LOG_NAME_STEM).log) --tee -- $(OPENROAD_CMD) -no_splash $(if $(filter %.py,$(RUN_SCRIPT)),-python) $(RUN_SCRIPT)
+
+export RUN_YOSYS_ARGS ?= -c $(SCRIPTS_DIR)/yosys_keep.tcl
+.phony: run-yosys
+run-yosys:
+	$(YOSYS_EXE) $(RUN_YOSYS_ARGS)
+
+# Utilities
+#-------------------------------------------------------------------------------
+include $(UTILS_DIR)/utils.mk
+export PRIVATE_DIR ?= ../../private_tool_scripts
+-include $(PRIVATE_DIR)/private.mk
+Makefile:918:	$(RUN_CMD) --log $(abspath $(LOG_DIR)/$(RUN_LOG_NAME_STEM).log) --tee -- $(OPENROAD_CMD) -no_splash $(if $(filter %.py,$(RUN_SCRIPT)),-python) $(RUN_SCRIPT)
+scripts/variables.yaml:1518:RUN_SCRIPT:
+scripts/variables.yaml:1522:RUN_LOG_NAME_STEM:
+scripts/variables.yaml:1525:    `$(LOG_DIR)/$(RUN_LOG_NAME_STEM).log`.
+utl::set_metrics_stage "globalplace__{}"
+source $::env(SCRIPTS_DIR)/load.tcl
+erase_non_stage_variables place
+load_design 3_2_place_iop.odb 2_floorplan.sdc
+source_step_tcl PRE GLOBAL_PLACE
+
+set_dont_use $::env(DONT_USE_CELLS)
+
+if { $::env(GPL_TIMING_DRIVEN) } {
+  remove_buffers
+}
+
+# Do not buffer chip-level designs
+# by default, IO ports will be buffered
+# to not buffer IO ports, set environment variable
+# DONT_BUFFER_PORT = 1
+if { ![env_var_exists_and_non_empty FOOTPRINT] } {
+  if { !$::env(DONT_BUFFER_PORTS) } {
+    puts "Perform port buffering..."
+    buffer_ports {*}[env_var_or_empty BUFFER_PORTS_ARGS]
+  }
+}
+
+set global_placement_args {}
+
+# Parameters for routability mode in global placement
+append_env_var global_placement_args GPL_ROUTABILITY_DRIVEN -routability_driven 0
+
+append_env_var global_placement_args GPL_RANDOM_SEED -random_seed 1
+
+# Parameters for timing driven mode in global placement
+if { $::env(GPL_TIMING_DRIVEN) } {
+  lappend global_placement_args {-timing_driven}
+  if { [info exists ::env(GPL_KEEP_OVERFLOW)] } {
+    lappend global_placement_args -keep_resize_below_overflow $::env(GPL_KEEP_OVERFLOW)
+  }
+}
+
+# Parameters for phi coefficients in global placement
+set min_phi $::env(MIN_PLACE_STEP_COEF)

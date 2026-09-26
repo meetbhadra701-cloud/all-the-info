@@ -1,0 +1,24 @@
+{
+ "job_id": "ctx__PATCH_B_mac_s_w5__tree_pre__ctx454___igs_p_c",
+ "results_csv": "trace_ctx_results.csv",
+ "netlist": "netlists/CONTROL/ctx/PATCH_B_mac_s_w5__tree_pre__ctx454.aig",
+ "args": "-mac -s -igs -p -c -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "mac:sss:5,5,10:11",
+ "witness_complement": {
+  "verdict": "WITNESS_SPURIOUS",
+  "i_means": "complement",
+  "remainder_terms": 1,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -64,
+  "input_vector_hex": "0x10000",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x40"
+  ],
+  "netlist_output": "0x40",
+  "reference": "0x40"
+ },
+ "overall": "REMAINDER_INVALID"
+}

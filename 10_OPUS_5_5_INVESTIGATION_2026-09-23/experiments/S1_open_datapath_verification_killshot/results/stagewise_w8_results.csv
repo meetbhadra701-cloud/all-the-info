@@ -1,0 +1,30 @@
+design,W,arch,step,status,seconds,detail
+mul_u,8,norm,cec_pre_vs_post,PASS,0.3,
+mul_u,8,norm,polyn_pre,OK,24.9,left=64 expected=64 total=29175676
+mul_u,8,norm,polyn_post,OK,0.3,left=64 expected=64 total=438532
+mul_u,8,booth,cec_pre_vs_post,PASS,0.2,
+mul_u,8,booth,polyn_pre,TIMEOUT,60.3,left=- expected=64 total=-
+mul_u,8,booth,polyn_post,TIMEOUT,60.4,left=- expected=64 total=-
+mul_u,8,tree,cec_pre_vs_post,PASS,0.2,
+mul_u,8,tree,polyn_pre,OK,22.7,left=64 expected=64 total=29175676
+mul_u,8,tree,polyn_post,OK,0.3,left=64 expected=64 total=438532
+mac_u,8,norm,cec_pre_vs_post,PASS,0.2,
+mac_u,8,norm,polyn_pre,TIMEOUT,60.4,left=- expected=80 total=-
+mac_u,8,norm,polyn_post,OK,0.9,left=80 expected=80 total=1856005
+mac_u,8,booth,cec_pre_vs_post,PASS,0.2,
+mac_u,8,booth,polyn_pre,TIMEOUT,60.4,left=- expected=80 total=-
+mac_u,8,booth,polyn_post,TIMEOUT,60.4,left=- expected=80 total=-
+mac_u,8,tree,cec_pre_vs_post,PASS,0.2,
+mac_u,8,tree,polyn_pre,TIMEOUT,60.4,left=- expected=80 total=-
+mac_u,8,tree,polyn_post,OK,0.2,left=80 expected=80 total=46553
+dot2_u,8,norm,cec_pre_vs_post,PASS,0.2,
+dot2_u,8,norm,polyn_pre,TIMEOUT,60.4,left=- expected=128 total=-
+dot2_u,8,norm,polyn_post,TIMEOUT,60.6,left=- expected=128 total=-
+dot2_u,8,booth,cec_pre_vs_post,PASS,0.2,
+dot2_u,8,booth,polyn_pre,TIMEOUT,60.5,left=- expected=128 total=-
+dot2_u,8,booth,polyn_post,TIMEOUT,60.4,left=- expected=128 total=-
+dot2_u,8,tree,cec_pre_vs_post,PASS,0.2,
+dot2_u,8,tree,polyn_pre,TIMEOUT,60.5,left=- expected=128 total=-
+dot2_u,8,tree,polyn_post,TIMEOUT,60.4,left=- expected=128 total=-
+
+[exited with code 0]

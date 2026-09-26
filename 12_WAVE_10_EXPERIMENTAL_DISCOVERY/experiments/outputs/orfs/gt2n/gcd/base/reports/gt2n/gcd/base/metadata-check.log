@@ -1,0 +1,29 @@
+[WARN] synth__canonical_netlist__hash differs test: dd5c27f7b112ca304b4143b343b1305e2eff7ba6 == 94435b2c79066c9133b4aed43b6f5abf1ec21003
+[WARN] synth__netlist__hash differs test: c1aefb417b454190e509862dae984700a0730a5d == 102bf37d6da7bc1aa234e916ebbf91984197836d
+[INFO] synth__design__instance__area__stdcell pass test: 15.5313 <= 18.8
+[INFO] constraints__clocks__count pass test: 1 == 1
+[INFO] placeopt__design__instance__area pass test: 18.5432 <= 22
+[INFO] placeopt__design__instance__count__stdcell pass test: 705 <= 877
+[INFO] detailedplace__design__violations pass test: 0 == 0
+[INFO] cts__design__instance__count__setup_buffer pass test: 0 <= 76
+[INFO] cts__design__instance__count__hold_buffer pass test: 0 <= 76
+[INFO] cts__timing__setup__ws pass test: 158.356 >= -25
+[INFO] cts__timing__setup__tns pass test: 0 >= -100
+[INFO] cts__timing__hold__ws pass test: 41.4126 >= -25
+[INFO] cts__timing__hold__tns pass test: 0 >= -100
+[INFO] globalroute__antenna_diodes_count pass test: 0 <= 100
+[INFO] globalroute__timing__setup__ws pass test: 150.061 >= -25
+[INFO] globalroute__timing__setup__tns pass test: 0 >= -100
+[INFO] globalroute__timing__hold__ws pass test: 43.0553 >= -25
+[INFO] globalroute__timing__hold__tns pass test: 0 >= -100
+[INFO] detailedroute__route__wirelength pass test: 701 <= 848
+[INFO] detailedroute__route__drc_errors pass test: 0 <= 0
+[INFO] detailedroute__antenna__violating__nets pass test: 0 <= 0
+[INFO] detailedroute__antenna_diodes_count pass test: 0 <= 100
+[INFO] finish__timing__setup__ws pass test: 150.061 >= -25
+[INFO] finish__timing__setup__tns pass test: 0 >= -100
+[INFO] finish__timing__hold__ws pass test: 43.0553 >= -25
+[INFO] finish__timing__hold__tns pass test: 0 >= -100
+[INFO] finish__design__instance__area pass test: 61.0727 <= 73
+Metadata check warnings: 2
+All metadata rules passed (27 rules)

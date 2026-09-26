@@ -1,0 +1,6 @@
+usage: help [-a] [-d] [-h]
+       prints the list of available commands by group
+ -a       toggle printing hidden commands [default = no]
+ -d       print usage details to all commands [default = no]
+ -h       print the command usage
+======== ABC command line "help set"

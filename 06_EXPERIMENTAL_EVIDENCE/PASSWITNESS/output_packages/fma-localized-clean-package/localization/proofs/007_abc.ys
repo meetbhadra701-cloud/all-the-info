@@ -1,0 +1,10 @@
+read_rtlil "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-clean-package/localization/checkpoints/007_abc.rtlil"
+rename fma_impl passwitness_candidate
+hierarchy -top passwitness_candidate
+read_verilog -sv "/mnt/c/Users/meetb/Downloads/passwitness/fixtures/signed_fma_bug/source.v"
+read_verilog "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-clean-package/localization/checkpoint-miter.v"
+hierarchy -top passwitness_miter
+prep -top passwitness_miter
+flatten
+opt
+sat -prove mismatch 0 -verify -set-def-inputs -show-ports -dump_json "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-clean-package/localization/witnesses/007_abc.json" -dump_vcd "/mnt/c/Users/meetb/Downloads/passwitness/out/fma-localized-clean-package/localization/witnesses/007_abc.vcd"

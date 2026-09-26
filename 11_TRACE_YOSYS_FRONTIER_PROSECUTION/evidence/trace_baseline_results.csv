@@ -1,0 +1,30 @@
+job_id,rel_path,args,timeout_s,expected,tool_status,trace_result,max_polynomial,trace_elapsed_s,wall_s,cgroup_peak_mib,max_rss_kb,and_gates,subst_steps,trace_exit,diag,note
+BL01_readme_16_AR_RC,third_party/trace_d57aa9a7/example_circuits/multipliers/16_16_U_SP_AR_RC.aig,-mul -p -c -no-steps,900,CORRECT,RESULT,Correct,289,0.452007,2.02,8.0,36848,2784,32,0,,README documented example
+BL02_8_AR_RC,third_party/trace_d57aa9a7/example_circuits/multipliers/8_8_U_SP_AR_RC.aig,-mul -p -c -no-steps,900,CORRECT,RESULT,Correct,81,0.0386507,1.55,4.4,16832,624,16,0,,GenMul example
+BL03_beh_MUL_8,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mul -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,105,0.0272006,1.44,4.9,16832,463,479,0,,paper best config DYN+P+C
+BL04_beh_MUL_16,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_16.aig,-mul -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,351,0.451661,1.90,7.5,36224,2047,2079,0,,
+BL05_beh_MUL_32,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_32.aig,-mul -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,1295,4.35177,6.12,26.5,112304,8384,8448,0,,
+BL06_beh_MUL_64,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_64.aig,-mul -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,4909,67.3164,69.38,100.0,414416,33596,33724,0,,
+BL07_64_WT_KS,third_party/trace_d57aa9a7/example_circuits/multipliers/64_64_U_SP_WT_KS.aig,-mul -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,27310,288.091,293.09,317.4,1298704,51336,51464,0,,paper reports 98.84 s
+BL08_beh_mac_8,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig,-mac -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,130,0.063452,1.72,4.7,18368,596,613,0,,
+BL09_beh_mac_16,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_16.aig,-mac -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,412,0.402691,1.92,8.5,39280,2295,2328,0,,
+BL10_beh_mac_32,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_32.aig,-mac -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,2574,6.50218,8.03,30.2,127200,8870,8935,0,,paper reports 2.86 s
+BL11_beh_mac_64,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_64.aig,-mac -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,15135,272.892,275.03,126.3,521680,34521,34650,0,,paper reports 86.06 s
+BL12_NMAC_8_AR_RC,third_party/trace_d57aa9a7/example_circuits/macs/NMAC_8_8_U_SP_AR_RC.aig,-mac -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,165,0.19123,1.74,4.8,20416,776,793,0,,cin input is dangling
+BL13_NMAC_32_WT_KS,third_party/trace_d57aa9a7/example_circuits/macs/NMAC_32_32_U_SP_WT_KS.aig,-mac -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,6836,12.1319,13.87,63.1,260128,13220,13285,0,,
+BL14_ADD_8_RC,third_party/trace_d57aa9a7/example_circuits/adders/ADD_8_8_RC.aig,-add -no-steps,900,CORRECT,RESULT,Correct,26,0.00158697,1.02,4.6,10176,81,9,0,,
+BL15_ADD_128_CL,third_party/trace_d57aa9a7/example_circuits/adders/ADD_128_128_CL.aig,-add -no-steps,900,CORRECT,MEMOUT,,,,474.34,14336.0,58602912,,,9,Command terminated by signal 9,
+BL16_wrongmode_MUL8_as_mac,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,TIMEOUT,,,,902.56,1017.3,,,,137,,control: circuit is a*b not MAC
+BL17_wrongmode_mac8_as_mul,third_party/trace_d57aa9a7/example_circuits/macs/behavioral_mac_8.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,RESULT,Buggy,288,0.106098,1.26,4.4,18880,596,613,0,,control: circuit is MAC not a*b
+BL18_wrongsign_MUL8_signed,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-mul -s -dyn -p -c -no-steps,900,INCORRECT,RESULT,Buggy,105,0.0174094,1.67,5.2,16832,463,479,0,,control: unsigned circuit checked as signed
+BL19_MUTX_beh_MUL_8,netlists/BASELINE/MUTX_behavioral_MUL_8.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,RESULT,Buggy,2062,0.367999,2.20,5.1,22464,463,479,0,,gate-level mutant (oracle-proven exhaustive)
+BL20_MUTX_beh_mac_8,netlists/BASELINE/MUTX_behavioral_mac_8.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,RESULT,Buggy,130,0.0693647,1.52,5.0,18368,596,613,0,,gate-level mutant
+BL21_MUTX_16_WT_KS,netlists/BASELINE/MUTX_16_16_U_SP_WT_KS.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,TIMEOUT,,,,902.62,696.4,,,,137,,gate-level mutant
+BL22_MUTX_beh_MUL_32,netlists/BASELINE/MUTX_behavioral_MUL_32.aig,-mul -dyn -p -c -no-steps,900,INCORRECT,RESULT,Buggy,1295,6.02906,10.16,27.0,112832,8384,8448,0,,gate-level mutant
+BL23_MUTX_NMAC_8,netlists/BASELINE/MUTX_NMAC_8_8_U_SP_AR_RC.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,RESULT,Buggy,834,0.307537,2.58,5.1,23488,776,793,0,,gate-level mutant
+BL24_MUTX_beh_mac_32,netlists/BASELINE/MUTX_behavioral_mac_32.aig,-mac -dyn -p -c -no-steps,900,INCORRECT,TIMEOUT,,,,902.27,950.4,,,,137,,gate-level mutant
+BL25_IDENT_beh_MUL_8,netlists/BASELINE/IDENT_behavioral_MUL_8.aig,-mul -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,105,0.0205482,1.03,4.9,16832,463,479,0,,symbol-stripped identical copy
+BL26_IDENT_beh_mac_8,netlists/BASELINE/IDENT_behavioral_mac_8.aig,-mac -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,130,0.0444054,0.98,4.6,18368,596,613,0,,symbol-stripped identical copy
+BL27_IDENT_16_WT_KS,netlists/BASELINE/IDENT_16_16_U_SP_WT_KS.aig,-mul -dyn -p -c -no-steps,900,CORRECT,RESULT,Correct,596,0.903851,2.02,15.0,65328,3136,3168,0,,symbol-stripped identical copy
+BL28_gen_beh_MUL_8,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_8.aig,-gen -no-steps,900,UNKNOWN,NO_RESULT,,17,47.2714,48.31,552.6,2265200,463,16,0,,inspect -gen output
+BL29_idx_beh_MUL_16,third_party/trace_d57aa9a7/example_circuits/multipliers/behavioral_MUL_16.aig,-mul -no-steps,900,CORRECT,MEMOUT,,,,848.31,14336.0,58602448,,,9,Command terminated by signal 9,default idx without P/C

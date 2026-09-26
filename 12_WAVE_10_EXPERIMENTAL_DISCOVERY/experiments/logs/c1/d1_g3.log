@@ -1,0 +1,13 @@
+done mem_ctrl
+done mem_ctrl
+done voter
+done arbiter
+done cavlc
+done ctrl
+done dec
+done i2c
+done int2float
+done priority
+done router
+done des_perf
+done ethernet

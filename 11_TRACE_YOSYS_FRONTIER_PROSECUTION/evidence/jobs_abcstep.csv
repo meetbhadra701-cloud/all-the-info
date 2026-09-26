@@ -1,0 +1,55 @@
+job_id,rel_path,args,timeout_s,expected,note
+abcstep__A_mul_s_w8__booth_lp__balance___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__balance.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance
+abcstep__A_mul_s_w8__booth_lp__balance___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__balance.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance
+abcstep__A_mul_s_w8__booth_lp__dc2___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__dc2.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2
+abcstep__A_mul_s_w8__booth_lp__dc2___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__dc2.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2
+abcstep__A_mul_s_w8__booth_lp__dch___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__dch.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch
+abcstep__A_mul_s_w8__booth_lp__dch___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__dch.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch
+abcstep__A_mul_s_w8__booth_lp__fraig___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__fraig.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig
+abcstep__A_mul_s_w8__booth_lp__fraig___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__fraig.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig
+abcstep__A_mul_s_w8__booth_lp__refactor___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__refactor.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor
+abcstep__A_mul_s_w8__booth_lp__refactor___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__refactor.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor
+abcstep__A_mul_s_w8__booth_lp__resyn2___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__resyn2.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2
+abcstep__A_mul_s_w8__booth_lp__resyn2___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__resyn2.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2
+abcstep__A_mul_s_w8__booth_lp__rewrite___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__rewrite.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite
+abcstep__A_mul_s_w8__booth_lp__rewrite___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__rewrite.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite
+abcstep__A_mul_s_w8__booth_lp__strash___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__strash.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash
+abcstep__A_mul_s_w8__booth_lp__strash___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__strash.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash
+abcstep__A_mul_s_w8__booth_lp__yosysnomap___dyn_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__yosysnomap.aig,-mul -s -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap
+abcstep__A_mul_s_w8__booth_lp__yosysnomap___idx_p_c,netlists/ABCSTEP/A_mul_s_w8__booth_lp__yosysnomap.aig,-mul -s -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap
+abcstep__A_mul_u_w8__booth_pre_folded__balance___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__balance.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance
+abcstep__A_mul_u_w8__booth_pre_folded__balance___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__balance.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=balance
+abcstep__A_mul_u_w8__booth_pre_folded__dc2___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dc2.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2
+abcstep__A_mul_u_w8__booth_pre_folded__dc2___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dc2.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dc2
+abcstep__A_mul_u_w8__booth_pre_folded__dch___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dch.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch
+abcstep__A_mul_u_w8__booth_pre_folded__dch___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__dch.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=dch
+abcstep__A_mul_u_w8__booth_pre_folded__fraig___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__fraig.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig
+abcstep__A_mul_u_w8__booth_pre_folded__fraig___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__fraig.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=fraig
+abcstep__A_mul_u_w8__booth_pre_folded__refactor___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__refactor.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor
+abcstep__A_mul_u_w8__booth_pre_folded__refactor___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__refactor.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=refactor
+abcstep__A_mul_u_w8__booth_pre_folded__resyn2___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__resyn2.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2
+abcstep__A_mul_u_w8__booth_pre_folded__resyn2___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__resyn2.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=resyn2
+abcstep__A_mul_u_w8__booth_pre_folded__rewrite___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__rewrite.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite
+abcstep__A_mul_u_w8__booth_pre_folded__rewrite___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__rewrite.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=rewrite
+abcstep__A_mul_u_w8__booth_pre_folded__strash___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__strash.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash
+abcstep__A_mul_u_w8__booth_pre_folded__strash___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__strash.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=strash
+abcstep__A_mul_u_w8__booth_pre_folded__yosysnomap___dyn_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__yosysnomap.aig,-mul -dyn -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap
+abcstep__A_mul_u_w8__booth_pre_folded__yosysnomap___idx_p_c,netlists/ABCSTEP/A_mul_u_w8__booth_pre_folded__yosysnomap.aig,-mul -idx -p -c -no-steps,60,CORRECT,W=8;ABC step isolation;step=yosysnomap
+abcstep__B_dot2_u_w16__norm_pre__balance___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__balance.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=balance
+abcstep__B_dot2_u_w16__norm_pre__balance___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__balance.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=balance
+abcstep__B_dot2_u_w16__norm_pre__dc2___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dc2.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dc2
+abcstep__B_dot2_u_w16__norm_pre__dc2___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dc2.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dc2
+abcstep__B_dot2_u_w16__norm_pre__dch___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dch.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dch
+abcstep__B_dot2_u_w16__norm_pre__dch___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__dch.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=dch
+abcstep__B_dot2_u_w16__norm_pre__fraig___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__fraig.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=fraig
+abcstep__B_dot2_u_w16__norm_pre__fraig___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__fraig.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=fraig
+abcstep__B_dot2_u_w16__norm_pre__refactor___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__refactor.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=refactor
+abcstep__B_dot2_u_w16__norm_pre__refactor___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__refactor.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=refactor
+abcstep__B_dot2_u_w16__norm_pre__resyn2___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__resyn2.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=resyn2
+abcstep__B_dot2_u_w16__norm_pre__resyn2___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__resyn2.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=resyn2
+abcstep__B_dot2_u_w16__norm_pre__rewrite___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__rewrite.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=rewrite
+abcstep__B_dot2_u_w16__norm_pre__rewrite___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__rewrite.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=rewrite
+abcstep__B_dot2_u_w16__norm_pre__strash___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__strash.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=strash
+abcstep__B_dot2_u_w16__norm_pre__strash___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__strash.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=strash
+abcstep__B_dot2_u_w16__norm_pre__yosysnomap___dyn_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__yosysnomap.aig,-dot=2 -dyn -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=yosysnomap
+abcstep__B_dot2_u_w16__norm_pre__yosysnomap___idx_p_c,netlists/ABCSTEP/B_dot2_u_w16__norm_pre__yosysnomap.aig,-dot=2 -idx -p -c -no-steps,120,CORRECT,W=16;ABC step isolation;step=yosysnomap

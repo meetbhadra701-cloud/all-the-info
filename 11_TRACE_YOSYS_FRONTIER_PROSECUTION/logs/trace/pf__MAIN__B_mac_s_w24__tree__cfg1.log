@@ -1,0 +1,21 @@
+### FILE netlists/MAIN/B_mac_s_w24__tree.aig
+### ARGS -mac -s -idx -p -c -no-steps
+### TIMEOUT 240
+### START 2026-09-24T13:03:20-07:00
+██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░  Trace  ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██
+║ [Build]   compiled on: Apr 13 2026 at 16:17:50
+║           built as: Release version
+║ [Options] file: /data/netlists/MAIN/B_mac_s_w24__tree.aig
+║           mode: mac
+║           sign: signed
+║           method: idx
+║           phase optimization: enabled
+║           conflict detection: enabled
+║           progress steps: disabled
+║
+Killed
+### TRACE_EXIT 137
+### CGROUP_MEMORY_PEAK_BYTES 936595456
+### DOCKER_EXIT 0
+### WALL_SECONDS 241.69
+### END 2026-09-24T13:07:22-07:00

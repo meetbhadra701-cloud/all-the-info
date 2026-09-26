@@ -1,0 +1,61 @@
+{
+  "counterexample": null,
+  "errors": [],
+  "flow": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue1047/synthesis.ys",
+  "formal": {
+    "backend": "yosys-sat",
+    "counterexample_json": null,
+    "counterexample_vcd": null,
+    "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/logs/formal.log",
+    "model": {},
+    "reason": "The SAT solver established the equivalence property.",
+    "runtime_seconds": 0.6467627609963529,
+    "verdict": "PASS"
+  },
+  "inferences": [
+    "The tested combinational input space is equivalent under the supplied flow."
+  ],
+  "input_design": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue1047/source.v",
+  "output_directory": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c",
+  "parameters": {},
+  "paths": {
+    "candidate_metadata": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/work/candidate.json",
+    "candidate_netlist": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/work/candidate.v",
+    "formal_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/logs/formal.log",
+    "formal_script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/work/formal.ys",
+    "golden_metadata_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/logs/golden-metadata.log",
+    "miter": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/work/miter.v",
+    "synthesis_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/logs/synthesis.log",
+    "tool_version_log": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/logs/tool-version.log"
+  },
+  "schema_version": 1,
+  "status": "PASS",
+  "synthesis": {
+    "flow": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/issue1047/synthesis.ys",
+    "log_path": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/logs/synthesis.log",
+    "returncode": 0,
+    "runtime_seconds": 0.7559952550218441,
+    "script": "/mnt/c/Users/meetb/Downloads/passwitness/research/pilot_zero/out/1047c/work/candidate.ys"
+  },
+  "tool": {
+    "commit": "e8db64c609c7ae4574e66bbd475f5f10f36d7a31",
+    "executable": "/mnt/c/Users/meetb/Downloads/passwitness/tools/yosys-clean",
+    "executable_sha256": "7d58111d6119006406e3ba635cb646da07abd48f248a0fc2899a8037630883c6",
+    "patch_sha256": null,
+    "source_revision_claim": "e8db64c609c7ae4574e66bbd475f5f10f36d7a31",
+    "source_revision_verified": false,
+    "source_tree_dirty": null,
+    "verification_method": "Yosys -V output and SHA-256 of the executable path; source checkout was not supplied",
+    "version": "Yosys 0.69+ (git sha1 e8db64c60, Release, Clang /usr/bin/clang++ 18.1.3)",
+    "yosys_reported_commit": "e8db64c60",
+    "yosys_reported_version": "Yosys 0.69+ (git sha1 e8db64c60, Release, Clang /usr/bin/clang++ 18.1.3)"
+  },
+  "top_module": "top",
+  "unexecuted_checks": [],
+  "verified_facts": [
+    "Yosys version recorded as Yosys 0.69+ (git sha1 e8db64c60, Release, Clang /usr/bin/clang++ 18.1.3).",
+    "Formal backend: yosys-sat.",
+    "The golden RTL and synthesized candidate were independently loaded into a generated output-comparison miter.",
+    "Formal classification is PASS based on an explicit SAT proof marker."
+  ]
+}

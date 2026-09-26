@@ -1,0 +1,39 @@
+{
+ "job_id": "ctx__B_mac_u_w8__tree_pre__ctx1476___igs_p_c",
+ "results_csv": "trace_ctx_results.csv",
+ "netlist": "netlists/CONTROL/ctx/B_mac_u_w8__tree_pre__ctx1476.aig",
+ "args": "-mac -igs -p -c -no-steps",
+ "expected_by_oracle": "CORRECT",
+ "template_spec": "mac:uuu:8,8,16:17",
+ "witness_complement": {
+  "verdict": "WITNESS_SPURIOUS",
+  "i_means": "complement",
+  "remainder_terms": 2,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -32768,
+  "input_vector_hex": "0xffffffff",
+  "operands": [
+   "0xff",
+   "0xff",
+   "0xffff"
+  ],
+  "netlist_output": "0x1fe00",
+  "reference": "0x1fe00"
+ },
+ "witness_identity": {
+  "verdict": "WITNESS_SPURIOUS",
+  "i_means": "identity",
+  "remainder_terms": 2,
+  "internal_node_vars_in_remainder": [],
+  "remainder_value": -32768,
+  "input_vector_hex": "0x0",
+  "operands": [
+   "0x0",
+   "0x0",
+   "0x0"
+  ],
+  "netlist_output": "0x0",
+  "reference": "0x0"
+ },
+ "overall": "REMAINDER_INVALID"
+}

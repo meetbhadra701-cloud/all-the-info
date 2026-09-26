@@ -1,0 +1,5 @@
+read_verilog -sv rtl/B_dot2_s_w32.v
+synth -top top -arith_tree
+aigmap
+opt_clean
+write_aiger -symbols -map netlists/MAIN/B_dot2_s_w32__tree.map netlists/MAIN/B_dot2_s_w32__tree.aig

@@ -1,0 +1,3 @@
+netlists/MAIN/A_mul_s_w8__booth_lp_pre
+netlists/MAIN/A_mul_s_w16__booth_lp_pre
+netlists/MAIN/A_mul_s_w32__booth_lp_pre

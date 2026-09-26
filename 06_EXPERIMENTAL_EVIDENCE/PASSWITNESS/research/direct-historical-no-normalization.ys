@@ -1,0 +1,22 @@
+read_verilog -formal /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/rtl.v
+hierarchy -top top
+proc
+memory
+flatten top
+rename top gold_top
+design -stash gold
+design -reset
+read_verilog -formal /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/synth.v
+hierarchy -top top
+proc
+memory
+flatten top
+rename top gate_top
+design -stash gate
+design -reset
+design -copy-from gold gold_top
+design -copy-from gate gate_top
+miter -equiv -make_outputs -make_outcmp gold_top gate_top miter2
+flatten -wb miter2
+opt_clean
+sat -seq 2 -prove trigger 0 -verify -show-inputs -show-outputs miter2

@@ -1,0 +1,19 @@
+{
+ "job_id": "pf__MAIN__MUT_plus1_dot2_u_w8__tree__cfg5",
+ "results_csv": "trace_portfolio_w32_results.csv",
+ "netlist": "netlists/MAIN/MUT_plus1_dot2_u_w8__tree.aig",
+ "args": "-dot=2 -igsm -p -c -no-steps",
+ "expected_by_oracle": "INCORRECT",
+ "template_spec": "dot2:uuuu:8,8,8,8:17",
+ "witness_complement": {
+  "verdict": "NO_NONZERO_POINT_FOUND",
+  "remainder_terms": 904,
+  "candidates_tried": 20202,
+  "exhaustive": false,
+  "internal_node_vars_in_remainder": [
+   74
+  ]
+ },
+ "overall": "NO_WITNESS_FOUND",
+ "i_vars": false
+}

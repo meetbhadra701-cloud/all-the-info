@@ -1,0 +1,22 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+resynth [-corner corner] 
+resynth_annealing [-corner corner] [-slack_threshold slack_threshold]
+   [-seed seed] [-temp temp] [-iters iters] [-revert_after revert_after]
+   [-initial_ops initial_ops] 
+                                          
+resynth_genetic [-corner corner] [-slack_threshold slack_threshold] [-seed seed]
+   [-population_size population_size]
+   [-mutation_probability mutation_probability]
+   [-crossover_probability crossover_probability]
+   [-tournament_probability tournament_probability]
+   [-tournament_size tournament_size] [-iters iters] [-initial_ops initial_ops] 
+                                          
+restructure [-slack_threshold slack] [-depth_threshold depth]
+   [-target area|timing] [-abc_logfile logfile] [-liberty_file liberty_file]
+   [-tielo_port tielow_port] [-tiehi_port tiehigh_port] [-work_dir workdir_name] 
+                                    
+AutoTuner
+install

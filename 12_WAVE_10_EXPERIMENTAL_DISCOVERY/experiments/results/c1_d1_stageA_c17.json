@@ -1,0 +1,1 @@
+{"bench": "c17", "verdict": "PASS", "seconds": 0.031, "line": "Networks are equivalent after structural hashing.  Time =     0.00 sec"}

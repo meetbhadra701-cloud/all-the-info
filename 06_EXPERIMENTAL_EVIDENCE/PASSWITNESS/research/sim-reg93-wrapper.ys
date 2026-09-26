@@ -1,0 +1,21 @@
+read_verilog -formal /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/rtl.v
+hierarchy -top top
+proc
+memory
+flatten top
+rename top gold_top
+design -stash gold
+design -reset
+read_verilog -formal /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/synth.v
+hierarchy -top top
+proc
+memory
+flatten top
+rename top gate_top
+design -stash gate
+design -reset
+design -copy-from gold gold_top
+design -copy-from gate gate_top
+read_verilog -formal /workspace/research/pilot_two/sim-reg93-wrapper.v
+hierarchy -top simtop
+sim -n 1 -vcd /workspace/research/pilot_two/seed-6762640716476645086/fuzz-output/fuzz_1/yosys_3333e002/sim-reg93-wrapper.vcd -a

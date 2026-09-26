@@ -1,0 +1,3 @@
+job_id,rel_path,args,timeout_s,expected,note,mem
+long64__MAIN__B_mac_u_w64__norm_pre___dyn_p_c,netlists/MAIN/B_mac_u_w64__norm_pre.aig,-mac -dyn -p -c -no-steps,3600,CORRECT,W=64;1-hour budget after 900 s TIMEOUT x6;mem=10g,10g
+long64__MAIN__B_dot2_u_w64__tree_pre___dyn_p_c,netlists/MAIN/B_dot2_u_w64__tree_pre.aig,-dot=2 -dyn -p -c -no-steps,3600,CORRECT,W=64;1-hour budget after 900 s TIMEOUT x6;mem=10g,10g

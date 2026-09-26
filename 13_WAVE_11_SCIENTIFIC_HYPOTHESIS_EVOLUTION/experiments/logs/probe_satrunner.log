@@ -1,0 +1,112 @@
+-rwxr-xr-x 1 root root 159712 Jun 18  2025 /opt/or-tools/bin/sat_runner
+358d567c2bf14e88f18aebb631024127  /opt/or-tools/bin/sat_runner
+    --cp_model_stats (use StatisticsModelVisitor on model before solving.);
+    --num_gurobi_threads (Number of threads available for Gurobi.); default: 0;
+    --log_verification_errors (If --verify_solution is set: LOG(ERROR) all
+    --cp_model_check_dependent_variables (When true, check that solutions can be
+    --cp_model_check_intermediate_solutions (When true, all intermediate
+    --cp_model_dump_problematic_lns (DEBUG ONLY. Similar to
+      --cp_model_dump_submodels, but only dump fragment for which we got an
+    --cp_model_dump_response (DEBUG ONLY. If true, the final response of each
+    --cp_model_dump_text_proto (DEBUG ONLY, dump models in text proto instead of
+    --cp_model_export_model (DEBUG ONLY. When set to true, SolveCpModel() will
+    --cp_model_fingerprint_model (Fingerprint the model.); default: true;
+    --cp_model_ignore_hints (If true, ignore any supplied hints.);
+    --cp_model_ignore_objective (If true, ignore the objective.);
+    --cp_model_params (This is interpreted as a text SatParameters proto. The
+    --cp_model_load_debug_solution (DEBUG ONLY. When this is set to a non-empty
+    --cp_model_dump_models (DEBUG ONLY. When set to true, SolveCpModel() will
+    --cp_model_dump_prefix (Prefix filename for all dumped files);
+    --cp_model_dump_submodels (DEBUG ONLY. When set to true, solve will dump all
+    --cp_model_debug_postsolve (DEBUG ONLY. When set to true, the
+    --cp_model_dump_routes_support_graphs (DEBUG ONLY. When set to true,
+    --fingerprint_intermediate_solutions (Attach the fingerprint of intermediate
+    --hint_file (Protobuf file containing a CpModelResponse. The solution will
+    --input (Required: input file of the problem to solve. Many format are
+    --output (If non-empty, write the response there. By default it uses the
+    --params (Parameters for the sat solver in a text format of the
+    --wcnf_use_strong_slack (If true, when we add a slack variable to reify a
+    --cp_model_dump_solutions (DEBUG ONLY. If true, all the intermediate
+    --cp_model_dump_tightened_models (DEBUG ONLY. If true, dump tightened models
+== usage head
+sat_runner: Usage: see flags.
+This program solves a given problem with the CP-SAT solver.
+
+  Flags from root/or-tools/ortools/sat/sat_runner.cc:
+    --competition_mode (If true, output the log in a competition format.);
+      default: false;
+    --domain_file (Protobuf file containing a CpModelResponse. If present, the
+      tightened models will be used to reduce the domain of variables.);
+      default: "";
+    --fingerprint_intermediate_solutions (Attach the fingerprint of intermediate
+      solutions to the output.); default: false;
+    --force_interleave_search (If true, enable interleaved workers when
+      num_workers is 1.); default: false;
+    --hint_file (Protobuf file containing a CpModelResponse. The solution will
+      be used as a hint to bootstrap the search.); default: "";
+    --input (Required: input file of the problem to solve. Many format are
+      supported:.cnf (sat, max-sat, weighted max-sat), .opb (pseudo-boolean
+      sat/optim) and by default the CpModelProto proto (binary or text).);
+      default: "";
+    --output (If non-empty, write the response there. By default it uses the
+      binary format except if the file extension is '.txt'.); default: "";
+    --params (Parameters for the sat solver in a text format of the
+      SatParameters proto, example: --params=use_conflicts:true.); default: "";
+    --wcnf_use_strong_slack (If true, when we add a slack variable to reify a
+      soft clause, we enforce the fact that when it is true, the clause must be
+      false.); default: true;
+
+Try --helpfull to get a list of all flags or --help=substring shows help for
+flags which include specified substring in either in the name, or description or
+path.
+== version
+cmake
+libCbc.so
+libCbc.so.2
+libCbc.so.2.10.12
+libCbcSolver.so
+libCbcSolver.so.2
+libCbcSolver.so.2.10.12
+libCgl.so
+libCgl.so.0
+libCgl.so.0.60.9
+libClp.so
+libClp.so.1
+libClp.so.1.17.10
+libClpSolver.so
+libClpSolver.so.1
+libClpSolver.so.1.17.10
+libCoinUtils.so
+libCoinUtils.so.2
+libCoinUtils.so.2.11.12
+libOsi.so
+libOsi.so.0
+libOsi.so.0.108.11
+libOsiCbc.so
+libOsiCbc.so.2
+libOsiCbc.so.2.10.12
+libOsiClp.so
+libOsiClp.so.1
+libOsiClp.so.1.17.10
+libabsl_base.so
+libabsl_base.so.2505.0.0
+libabsl_city.so
+libabsl_city.so.2505.0.0
+libabsl_civil_time.so
+libabsl_civil_time.so.2505.0.0
+libabsl_cord.so
+libabsl_cord.so.2505.0.0
+libabsl_cord_internal.so
+libabsl_cord_internal.so.2505.0.0
+libabsl_cordz_functions.so
+libabsl_cordz_functions.so.2505.0.0
+libabsl_cordz_handle.so
+libabsl_cordz_handle.so.2505.0.0
+libabsl_cordz_info.so
+libabsl_cordz_info.so.2505.0.0
+libabsl_cordz_sample_token.so
+libabsl_cordz_sample_token.so.2505.0.0
+libabsl_crc32c.so
+libabsl_crc32c.so.2505.0.0
+libabsl_crc_cord_state.so
+libabsl_crc_cord_state.so.2505.0.0

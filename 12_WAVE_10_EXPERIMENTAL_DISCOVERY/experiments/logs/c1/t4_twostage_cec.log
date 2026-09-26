@@ -1,0 +1,9 @@
+{"area": 15895.39, "delay": 197081.23, "instances": 155848, "inputs": 256, "outputs": 128, "sim_patterns": 4096, "sim_verdict": "SIM_AGREE", "cex": null, "cells
+eval(isop) 9s
+[1;37mmapped                        :[0m i/o =  256/  128  lat =    0  and = 243761  lev =24978
+Networks are equivalent.  Time =    35.72 sec
+stageB c2==mine: 37s
+Networks are equivalent.  Time =    26.47 sec
+stageA orig==c2 (cec): 26s
+Networks are equivalent.  Time =   529.44 sec
+stageA orig==c2 (&cec): 530s

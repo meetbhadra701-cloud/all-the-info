@@ -1,0 +1,13 @@
+option,width,result,returncode,runtime_seconds,script,log,candidate
+default,4,FAIL,1,0.375893,work/configuration_formal/default_w4.ys,logs/configuration_formal/default_w4.log,work/configuration_isolation/default_w4.v
+strategy_fa,4,FAIL,1,0.377074,work/configuration_formal/strategy_fa_w4.ys,logs/configuration_formal/strategy_fa_w4.log,work/configuration_isolation/strategy_fa_w4.v
+strategy_42,4,FAIL,1,0.320077,work/configuration_formal/strategy_42_w4.ys,logs/configuration_formal/strategy_42_w4.log,work/configuration_isolation/strategy_42_w4.v
+final_ripple,4,FAIL,1,0.374818,work/configuration_formal/final_ripple_w4.ys,logs/configuration_formal/final_ripple_w4.log,work/configuration_isolation/final_ripple_w4.v
+final_prefix,4,FAIL,1,0.323669,work/configuration_formal/final_prefix_w4.ys,logs/configuration_formal/final_prefix_w4.log,work/configuration_isolation/final_prefix_w4.v
+no_fma,4,PASS,0,2.831826,work/configuration_formal/no_fma_w4.ys,logs/configuration_formal/no_fma_w4.log,work/configuration_isolation/no_fma_w4.v
+fa_ripple,4,FAIL,1,0.371920,work/configuration_formal/fa_ripple_w4.ys,logs/configuration_formal/fa_ripple_w4.log,work/configuration_isolation/fa_ripple_w4.v
+fa_prefix,4,FAIL,1,0.321642,work/configuration_formal/fa_prefix_w4.ys,logs/configuration_formal/fa_prefix_w4.log,work/configuration_isolation/fa_prefix_w4.v
+42_ripple,4,FAIL,1,0.374880,work/configuration_formal/42_ripple_w4.ys,logs/configuration_formal/42_ripple_w4.log,work/configuration_isolation/42_ripple_w4.v
+42_prefix,4,FAIL,1,0.322524,work/configuration_formal/42_prefix_w4.ys,logs/configuration_formal/42_prefix_w4.log,work/configuration_isolation/42_prefix_w4.v
+no_fma_ripple,4,PASS,0,2.837956,work/configuration_formal/no_fma_ripple_w4.ys,logs/configuration_formal/no_fma_ripple_w4.log,work/configuration_isolation/no_fma_ripple_w4.v
+no_fma_prefix,4,PASS,0,2.892960,work/configuration_formal/no_fma_prefix_w4.ys,logs/configuration_formal/no_fma_prefix_w4.log,work/configuration_isolation/no_fma_prefix_w4.v
