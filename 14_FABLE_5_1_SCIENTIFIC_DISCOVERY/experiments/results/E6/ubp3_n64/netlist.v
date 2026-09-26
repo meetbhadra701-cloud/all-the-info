@@ -1254,7 +1254,6 @@ module STREE_L22(clk, start, x, y);
 endmodule
 
 module top(clk, start, x, y);
-  reg \$auto$verilog_backend.cc:2454:dump_module$8  = 0;
   input clk;
   wire clk;
   input start;
@@ -1263,15 +1262,8 @@ module top(clk, start, x, y);
   wire [63:0] x;
   output [63:0] y;
   wire [63:0] y;
-  reg _0_;
-  reg _1_;
-  reg _2_;
-  reg _3_;
-  reg _4_;
-  reg _5_;
-  reg _6_;
-  reg ba21_0_0;
-  reg ba21_0_1;
+  wire ba21_0_0;
+  wire ba21_0_1;
   wire [12:0] gy0;
   wire [12:0] gy1;
   wire [12:0] gy10;
@@ -1362,7 +1354,6 @@ module top(clk, start, x, y);
   wire pn14_0;
   wire pn14_1;
   wire pn14_10;
-  wire pn14_11;
   wire pn14_12;
   wire pn14_2;
   wire pn14_3;
@@ -1636,7 +1627,6 @@ module top(clk, start, x, y);
   wire pp14_0;
   wire pp14_1;
   wire pp14_10;
-  wire pp14_11;
   wire pp14_12;
   wire pp14_2;
   wire pp14_3;
@@ -1842,14 +1832,22 @@ module top(clk, start, x, y);
   wire pp9_7;
   wire pp9_8;
   wire pp9_9;
-  reg sd1;
-  reg sd2;
-  wire st_line;
+  wire sd1;
+  wire sd2;
   wire st_tree;
-  reg stt1;
-  reg stt2;
-  reg stt3;
+  wire stt1;
+  wire stt2;
   wire zero;
+  sky130_fd_sc_hd__dfxtp_1 ba21_0_0_ff (
+    .CLK(clk),
+    .D(gy21),
+    .Q(ba21_0_0)
+  );
+  sky130_fd_sc_hd__dfxtp_1 ba21_0_1_ff (
+    .CLK(clk),
+    .D(ba21_0_0),
+    .Q(ba21_0_1)
+  );
   SGEN3 gen0 (
     .clk(clk),
     .start(start),
@@ -1987,1918 +1985,1911 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn0_0),
     .pos(pp0_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_1 (
     .a(gy0[1]),
     .clk(clk),
     .neg(pn0_1),
     .pos(pp0_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_10 (
     .a(gy0[10]),
     .clk(clk),
     .neg(pn0_10),
     .pos(pp0_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_11 (
     .a(gy0[11]),
     .clk(clk),
     .neg(pn0_11),
     .pos(pp0_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_12 (
     .a(gy0[12]),
     .clk(clk),
     .neg(pn0_12),
     .pos(pp0_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_2 (
     .a(gy0[2]),
     .clk(clk),
     .neg(pn0_2),
     .pos(pp0_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_3 (
     .a(gy0[3]),
     .clk(clk),
     .neg(pn0_3),
     .pos(pp0_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_4 (
     .a(gy0[4]),
     .clk(clk),
     .neg(pn0_4),
     .pos(pp0_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_5 (
     .a(gy0[5]),
     .clk(clk),
     .neg(pn0_5),
     .pos(pp0_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_6 (
     .a(gy0[6]),
     .clk(clk),
     .neg(pn0_6),
     .pos(pp0_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_7 (
     .a(gy0[7]),
     .clk(clk),
     .neg(pn0_7),
     .pos(pp0_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_8 (
     .a(gy0[8]),
     .clk(clk),
     .neg(pn0_8),
     .pos(pp0_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng0_9 (
     .a(gy0[9]),
     .clk(clk),
     .neg(pn0_9),
     .pos(pp0_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_0 (
     .a(gy10[0]),
     .clk(clk),
     .neg(pn10_0),
     .pos(pp10_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_1 (
     .a(gy10[1]),
     .clk(clk),
     .neg(pn10_1),
     .pos(pp10_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_10 (
     .a(gy10[10]),
     .clk(clk),
     .neg(pn10_10),
     .pos(pp10_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_11 (
     .a(gy10[11]),
     .clk(clk),
     .neg(pn10_11),
     .pos(pp10_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_12 (
     .a(gy10[12]),
     .clk(clk),
     .neg(pn10_12),
     .pos(pp10_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_2 (
     .a(gy10[2]),
     .clk(clk),
     .neg(pn10_2),
     .pos(pp10_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_3 (
     .a(gy10[3]),
     .clk(clk),
     .neg(pn10_3),
     .pos(pp10_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_4 (
     .a(gy10[4]),
     .clk(clk),
     .neg(pn10_4),
     .pos(pp10_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_5 (
     .a(gy10[5]),
     .clk(clk),
     .neg(pn10_5),
     .pos(pp10_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_6 (
     .a(gy10[6]),
     .clk(clk),
     .neg(pn10_6),
     .pos(pp10_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_7 (
     .a(gy10[7]),
     .clk(clk),
     .neg(pn10_7),
     .pos(pp10_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_8 (
     .a(gy10[8]),
     .clk(clk),
     .neg(pn10_8),
     .pos(pp10_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng10_9 (
     .a(gy10[9]),
     .clk(clk),
     .neg(pn10_9),
     .pos(pp10_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_0 (
     .a(gy11[0]),
     .clk(clk),
     .neg(pn11_0),
     .pos(pp11_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_1 (
     .a(gy11[1]),
     .clk(clk),
     .neg(pn11_1),
     .pos(pp11_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_10 (
     .a(gy11[10]),
     .clk(clk),
     .neg(pn11_10),
     .pos(pp11_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_11 (
     .a(gy11[11]),
     .clk(clk),
     .neg(pn11_11),
     .pos(pp11_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_12 (
     .a(gy11[12]),
     .clk(clk),
     .neg(pn11_12),
     .pos(pp11_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_2 (
     .a(gy11[2]),
     .clk(clk),
     .neg(pn11_2),
     .pos(pp11_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_3 (
     .a(gy11[3]),
     .clk(clk),
     .neg(pn11_3),
     .pos(pp11_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_4 (
     .a(gy11[4]),
     .clk(clk),
     .neg(pn11_4),
     .pos(pp11_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_5 (
     .a(gy11[5]),
     .clk(clk),
     .neg(pn11_5),
     .pos(pp11_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_6 (
     .a(gy11[6]),
     .clk(clk),
     .neg(pn11_6),
     .pos(pp11_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_7 (
     .a(gy11[7]),
     .clk(clk),
     .neg(pn11_7),
     .pos(pp11_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_8 (
     .a(gy11[8]),
     .clk(clk),
     .neg(pn11_8),
     .pos(pp11_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng11_9 (
     .a(gy11[9]),
     .clk(clk),
     .neg(pn11_9),
     .pos(pp11_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_0 (
     .a(gy12[0]),
     .clk(clk),
     .neg(pn12_0),
     .pos(pp12_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_1 (
     .a(gy12[1]),
     .clk(clk),
     .neg(pn12_1),
     .pos(pp12_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_10 (
     .a(gy12[10]),
     .clk(clk),
     .neg(pn12_10),
     .pos(pp12_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_11 (
     .a(gy12[11]),
     .clk(clk),
     .neg(pn12_11),
     .pos(pp12_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_12 (
     .a(gy12[12]),
     .clk(clk),
     .neg(pn12_12),
     .pos(pp12_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_2 (
     .a(gy12[2]),
     .clk(clk),
     .neg(pn12_2),
     .pos(pp12_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_3 (
     .a(gy12[3]),
     .clk(clk),
     .neg(pn12_3),
     .pos(pp12_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_4 (
     .a(gy12[4]),
     .clk(clk),
     .neg(pn12_4),
     .pos(pp12_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_5 (
     .a(gy12[5]),
     .clk(clk),
     .neg(pn12_5),
     .pos(pp12_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_6 (
     .a(gy12[6]),
     .clk(clk),
     .neg(pn12_6),
     .pos(pp12_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_7 (
     .a(gy12[7]),
     .clk(clk),
     .neg(pn12_7),
     .pos(pp12_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_8 (
     .a(gy12[8]),
     .clk(clk),
     .neg(pn12_8),
     .pos(pp12_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng12_9 (
     .a(gy12[9]),
     .clk(clk),
     .neg(pn12_9),
     .pos(pp12_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_0 (
     .a(gy13[0]),
     .clk(clk),
     .neg(pn13_0),
     .pos(pp13_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_1 (
     .a(gy13[1]),
     .clk(clk),
     .neg(pn13_1),
     .pos(pp13_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_10 (
     .a(gy13[10]),
     .clk(clk),
     .neg(pn13_10),
     .pos(pp13_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_11 (
     .a(gy13[11]),
     .clk(clk),
     .neg(pn13_11),
     .pos(pp13_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_12 (
     .a(gy13[12]),
     .clk(clk),
     .neg(pn13_12),
     .pos(pp13_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_2 (
     .a(gy13[2]),
     .clk(clk),
     .neg(pn13_2),
     .pos(pp13_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_3 (
     .a(gy13[3]),
     .clk(clk),
     .neg(pn13_3),
     .pos(pp13_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_4 (
     .a(gy13[4]),
     .clk(clk),
     .neg(pn13_4),
     .pos(pp13_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_5 (
     .a(gy13[5]),
     .clk(clk),
     .neg(pn13_5),
     .pos(pp13_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_6 (
     .a(gy13[6]),
     .clk(clk),
     .neg(pn13_6),
     .pos(pp13_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_7 (
     .a(gy13[7]),
     .clk(clk),
     .neg(pn13_7),
     .pos(pp13_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_8 (
     .a(gy13[8]),
     .clk(clk),
     .neg(pn13_8),
     .pos(pp13_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng13_9 (
     .a(gy13[9]),
     .clk(clk),
     .neg(pn13_9),
     .pos(pp13_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_0 (
     .a(gy14[0]),
     .clk(clk),
     .neg(pn14_0),
     .pos(pp14_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_1 (
     .a(gy14[1]),
     .clk(clk),
     .neg(pn14_1),
     .pos(pp14_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_10 (
     .a(gy14[10]),
     .clk(clk),
     .neg(pn14_10),
     .pos(pp14_10),
-    .start(st_line)
-  );
-  SNEG ng14_11 (
-    .a(gy14[11]),
-    .clk(clk),
-    .neg(pn14_11),
-    .pos(pp14_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_12 (
     .a(gy14[12]),
     .clk(clk),
     .neg(pn14_12),
     .pos(pp14_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_2 (
     .a(gy14[2]),
     .clk(clk),
     .neg(pn14_2),
     .pos(pp14_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_3 (
     .a(gy14[3]),
     .clk(clk),
     .neg(pn14_3),
     .pos(pp14_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_4 (
     .a(gy14[4]),
     .clk(clk),
     .neg(pn14_4),
     .pos(pp14_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_5 (
     .a(gy14[5]),
     .clk(clk),
     .neg(pn14_5),
     .pos(pp14_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_6 (
     .a(gy14[6]),
     .clk(clk),
     .neg(pn14_6),
     .pos(pp14_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_7 (
     .a(gy14[7]),
     .clk(clk),
     .neg(pn14_7),
     .pos(pp14_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_8 (
     .a(gy14[8]),
     .clk(clk),
     .neg(pn14_8),
     .pos(pp14_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng14_9 (
     .a(gy14[9]),
     .clk(clk),
     .neg(pn14_9),
     .pos(pp14_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_0 (
     .a(gy15[0]),
     .clk(clk),
     .neg(pn15_0),
     .pos(pp15_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_1 (
     .a(gy15[1]),
     .clk(clk),
     .neg(pn15_1),
     .pos(pp15_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_10 (
     .a(gy15[10]),
     .clk(clk),
     .neg(pn15_10),
     .pos(pp15_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_11 (
     .a(gy15[11]),
     .clk(clk),
     .neg(pn15_11),
     .pos(pp15_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_12 (
     .a(gy15[12]),
     .clk(clk),
     .neg(pn15_12),
     .pos(pp15_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_2 (
     .a(gy15[2]),
     .clk(clk),
     .neg(pn15_2),
     .pos(pp15_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_3 (
     .a(gy15[3]),
     .clk(clk),
     .neg(pn15_3),
     .pos(pp15_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_4 (
     .a(gy15[4]),
     .clk(clk),
     .neg(pn15_4),
     .pos(pp15_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_5 (
     .a(gy15[5]),
     .clk(clk),
     .neg(pn15_5),
     .pos(pp15_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_6 (
     .a(gy15[6]),
     .clk(clk),
     .neg(pn15_6),
     .pos(pp15_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_7 (
     .a(gy15[7]),
     .clk(clk),
     .neg(pn15_7),
     .pos(pp15_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_8 (
     .a(gy15[8]),
     .clk(clk),
     .neg(pn15_8),
     .pos(pp15_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng15_9 (
     .a(gy15[9]),
     .clk(clk),
     .neg(pn15_9),
     .pos(pp15_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_0 (
     .a(gy16[0]),
     .clk(clk),
     .neg(pn16_0),
     .pos(pp16_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_1 (
     .a(gy16[1]),
     .clk(clk),
     .neg(pn16_1),
     .pos(pp16_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_10 (
     .a(gy16[10]),
     .clk(clk),
     .neg(pn16_10),
     .pos(pp16_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_11 (
     .a(gy16[11]),
     .clk(clk),
     .neg(pn16_11),
     .pos(pp16_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_12 (
     .a(gy16[12]),
     .clk(clk),
     .neg(pn16_12),
     .pos(pp16_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_2 (
     .a(gy16[2]),
     .clk(clk),
     .neg(pn16_2),
     .pos(pp16_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_3 (
     .a(gy16[3]),
     .clk(clk),
     .neg(pn16_3),
     .pos(pp16_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_4 (
     .a(gy16[4]),
     .clk(clk),
     .neg(pn16_4),
     .pos(pp16_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_5 (
     .a(gy16[5]),
     .clk(clk),
     .neg(pn16_5),
     .pos(pp16_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_6 (
     .a(gy16[6]),
     .clk(clk),
     .neg(pn16_6),
     .pos(pp16_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_7 (
     .a(gy16[7]),
     .clk(clk),
     .neg(pn16_7),
     .pos(pp16_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_8 (
     .a(gy16[8]),
     .clk(clk),
     .neg(pn16_8),
     .pos(pp16_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng16_9 (
     .a(gy16[9]),
     .clk(clk),
     .neg(pn16_9),
     .pos(pp16_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_0 (
     .a(gy17[0]),
     .clk(clk),
     .neg(pn17_0),
     .pos(pp17_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_1 (
     .a(gy17[1]),
     .clk(clk),
     .neg(pn17_1),
     .pos(pp17_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_10 (
     .a(gy17[10]),
     .clk(clk),
     .neg(pn17_10),
     .pos(pp17_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_11 (
     .a(gy17[11]),
     .clk(clk),
     .neg(pn17_11),
     .pos(pp17_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_12 (
     .a(gy17[12]),
     .clk(clk),
     .neg(pn17_12),
     .pos(pp17_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_2 (
     .a(gy17[2]),
     .clk(clk),
     .neg(pn17_2),
     .pos(pp17_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_3 (
     .a(gy17[3]),
     .clk(clk),
     .neg(pn17_3),
     .pos(pp17_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_4 (
     .a(gy17[4]),
     .clk(clk),
     .neg(pn17_4),
     .pos(pp17_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_5 (
     .a(gy17[5]),
     .clk(clk),
     .neg(pn17_5),
     .pos(pp17_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_6 (
     .a(gy17[6]),
     .clk(clk),
     .neg(pn17_6),
     .pos(pp17_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_7 (
     .a(gy17[7]),
     .clk(clk),
     .neg(pn17_7),
     .pos(pp17_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_8 (
     .a(gy17[8]),
     .clk(clk),
     .neg(pn17_8),
     .pos(pp17_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng17_9 (
     .a(gy17[9]),
     .clk(clk),
     .neg(pn17_9),
     .pos(pp17_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_0 (
     .a(gy18[0]),
     .clk(clk),
     .neg(pn18_0),
     .pos(pp18_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_1 (
     .a(gy18[1]),
     .clk(clk),
     .neg(pn18_1),
     .pos(pp18_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_10 (
     .a(gy18[10]),
     .clk(clk),
     .neg(pn18_10),
     .pos(pp18_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_11 (
     .a(gy18[11]),
     .clk(clk),
     .neg(pn18_11),
     .pos(pp18_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_12 (
     .a(gy18[12]),
     .clk(clk),
     .neg(pn18_12),
     .pos(pp18_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_2 (
     .a(gy18[2]),
     .clk(clk),
     .neg(pn18_2),
     .pos(pp18_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_3 (
     .a(gy18[3]),
     .clk(clk),
     .neg(pn18_3),
     .pos(pp18_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_4 (
     .a(gy18[4]),
     .clk(clk),
     .neg(pn18_4),
     .pos(pp18_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_5 (
     .a(gy18[5]),
     .clk(clk),
     .neg(pn18_5),
     .pos(pp18_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_6 (
     .a(gy18[6]),
     .clk(clk),
     .neg(pn18_6),
     .pos(pp18_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_7 (
     .a(gy18[7]),
     .clk(clk),
     .neg(pn18_7),
     .pos(pp18_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_8 (
     .a(gy18[8]),
     .clk(clk),
     .neg(pn18_8),
     .pos(pp18_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng18_9 (
     .a(gy18[9]),
     .clk(clk),
     .neg(pn18_9),
     .pos(pp18_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_0 (
     .a(gy19[0]),
     .clk(clk),
     .neg(pn19_0),
     .pos(pp19_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_1 (
     .a(gy19[1]),
     .clk(clk),
     .neg(pn19_1),
     .pos(pp19_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_10 (
     .a(gy19[10]),
     .clk(clk),
     .neg(pn19_10),
     .pos(pp19_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_11 (
     .a(gy19[11]),
     .clk(clk),
     .neg(pn19_11),
     .pos(pp19_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_12 (
     .a(gy19[12]),
     .clk(clk),
     .neg(pn19_12),
     .pos(pp19_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_2 (
     .a(gy19[2]),
     .clk(clk),
     .neg(pn19_2),
     .pos(pp19_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_3 (
     .a(gy19[3]),
     .clk(clk),
     .neg(pn19_3),
     .pos(pp19_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_4 (
     .a(gy19[4]),
     .clk(clk),
     .neg(pn19_4),
     .pos(pp19_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_5 (
     .a(gy19[5]),
     .clk(clk),
     .neg(pn19_5),
     .pos(pp19_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_6 (
     .a(gy19[6]),
     .clk(clk),
     .neg(pn19_6),
     .pos(pp19_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_7 (
     .a(gy19[7]),
     .clk(clk),
     .neg(pn19_7),
     .pos(pp19_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_8 (
     .a(gy19[8]),
     .clk(clk),
     .neg(pn19_8),
     .pos(pp19_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng19_9 (
     .a(gy19[9]),
     .clk(clk),
     .neg(pn19_9),
     .pos(pp19_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_0 (
     .a(gy1[0]),
     .clk(clk),
     .neg(pn1_0),
     .pos(pp1_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_1 (
     .a(gy1[1]),
     .clk(clk),
     .neg(pn1_1),
     .pos(pp1_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_10 (
     .a(gy1[10]),
     .clk(clk),
     .neg(pn1_10),
     .pos(pp1_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_11 (
     .a(gy1[11]),
     .clk(clk),
     .neg(pn1_11),
     .pos(pp1_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_12 (
     .a(gy1[12]),
     .clk(clk),
     .neg(pn1_12),
     .pos(pp1_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_2 (
     .a(gy1[2]),
     .clk(clk),
     .neg(pn1_2),
     .pos(pp1_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_3 (
     .a(gy1[3]),
     .clk(clk),
     .neg(pn1_3),
     .pos(pp1_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_4 (
     .a(gy1[4]),
     .clk(clk),
     .neg(pn1_4),
     .pos(pp1_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_5 (
     .a(gy1[5]),
     .clk(clk),
     .neg(pn1_5),
     .pos(pp1_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_6 (
     .a(gy1[6]),
     .clk(clk),
     .neg(pn1_6),
     .pos(pp1_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_7 (
     .a(gy1[7]),
     .clk(clk),
     .neg(pn1_7),
     .pos(pp1_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_8 (
     .a(gy1[8]),
     .clk(clk),
     .neg(pn1_8),
     .pos(pp1_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng1_9 (
     .a(gy1[9]),
     .clk(clk),
     .neg(pn1_9),
     .pos(pp1_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_0 (
     .a(gy20[0]),
     .clk(clk),
     .neg(pn20_0),
     .pos(pp20_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_1 (
     .a(gy20[1]),
     .clk(clk),
     .neg(pn20_1),
     .pos(pp20_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_10 (
     .a(gy20[10]),
     .clk(clk),
     .neg(pn20_10),
     .pos(pp20_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_11 (
     .a(gy20[11]),
     .clk(clk),
     .neg(pn20_11),
     .pos(pp20_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_12 (
     .a(gy20[12]),
     .clk(clk),
     .neg(pn20_12),
     .pos(pp20_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_2 (
     .a(gy20[2]),
     .clk(clk),
     .neg(pn20_2),
     .pos(pp20_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_3 (
     .a(gy20[3]),
     .clk(clk),
     .neg(pn20_3),
     .pos(pp20_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_4 (
     .a(gy20[4]),
     .clk(clk),
     .neg(pn20_4),
     .pos(pp20_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_5 (
     .a(gy20[5]),
     .clk(clk),
     .neg(pn20_5),
     .pos(pp20_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_6 (
     .a(gy20[6]),
     .clk(clk),
     .neg(pn20_6),
     .pos(pp20_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_7 (
     .a(gy20[7]),
     .clk(clk),
     .neg(pn20_7),
     .pos(pp20_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_8 (
     .a(gy20[8]),
     .clk(clk),
     .neg(pn20_8),
     .pos(pp20_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng20_9 (
     .a(gy20[9]),
     .clk(clk),
     .neg(pn20_9),
     .pos(pp20_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng21_0 (
     .a(ba21_0_1),
     .clk(clk),
     .neg(pn21_0),
     .pos(pp21_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_0 (
     .a(gy2[0]),
     .clk(clk),
     .neg(pn2_0),
     .pos(pp2_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_1 (
     .a(gy2[1]),
     .clk(clk),
     .neg(pn2_1),
     .pos(pp2_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_10 (
     .a(gy2[10]),
     .clk(clk),
     .neg(pn2_10),
     .pos(pp2_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_11 (
     .a(gy2[11]),
     .clk(clk),
     .neg(pn2_11),
     .pos(pp2_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_12 (
     .a(gy2[12]),
     .clk(clk),
     .neg(pn2_12),
     .pos(pp2_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_2 (
     .a(gy2[2]),
     .clk(clk),
     .neg(pn2_2),
     .pos(pp2_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_3 (
     .a(gy2[3]),
     .clk(clk),
     .neg(pn2_3),
     .pos(pp2_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_4 (
     .a(gy2[4]),
     .clk(clk),
     .neg(pn2_4),
     .pos(pp2_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_5 (
     .a(gy2[5]),
     .clk(clk),
     .neg(pn2_5),
     .pos(pp2_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_6 (
     .a(gy2[6]),
     .clk(clk),
     .neg(pn2_6),
     .pos(pp2_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_7 (
     .a(gy2[7]),
     .clk(clk),
     .neg(pn2_7),
     .pos(pp2_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_8 (
     .a(gy2[8]),
     .clk(clk),
     .neg(pn2_8),
     .pos(pp2_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng2_9 (
     .a(gy2[9]),
     .clk(clk),
     .neg(pn2_9),
     .pos(pp2_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_0 (
     .a(gy3[0]),
     .clk(clk),
     .neg(pn3_0),
     .pos(pp3_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_1 (
     .a(gy3[1]),
     .clk(clk),
     .neg(pn3_1),
     .pos(pp3_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_10 (
     .a(gy3[10]),
     .clk(clk),
     .neg(pn3_10),
     .pos(pp3_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_11 (
     .a(gy3[11]),
     .clk(clk),
     .neg(pn3_11),
     .pos(pp3_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_12 (
     .a(gy3[12]),
     .clk(clk),
     .neg(pn3_12),
     .pos(pp3_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_2 (
     .a(gy3[2]),
     .clk(clk),
     .neg(pn3_2),
     .pos(pp3_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_3 (
     .a(gy3[3]),
     .clk(clk),
     .neg(pn3_3),
     .pos(pp3_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_4 (
     .a(gy3[4]),
     .clk(clk),
     .neg(pn3_4),
     .pos(pp3_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_5 (
     .a(gy3[5]),
     .clk(clk),
     .neg(pn3_5),
     .pos(pp3_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_6 (
     .a(gy3[6]),
     .clk(clk),
     .neg(pn3_6),
     .pos(pp3_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_7 (
     .a(gy3[7]),
     .clk(clk),
     .neg(pn3_7),
     .pos(pp3_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_8 (
     .a(gy3[8]),
     .clk(clk),
     .neg(pn3_8),
     .pos(pp3_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng3_9 (
     .a(gy3[9]),
     .clk(clk),
     .neg(pn3_9),
     .pos(pp3_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_0 (
     .a(gy4[0]),
     .clk(clk),
     .neg(pn4_0),
     .pos(pp4_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_1 (
     .a(gy4[1]),
     .clk(clk),
     .neg(pn4_1),
     .pos(pp4_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_10 (
     .a(gy4[10]),
     .clk(clk),
     .neg(pn4_10),
     .pos(pp4_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_11 (
     .a(gy4[11]),
     .clk(clk),
     .neg(pn4_11),
     .pos(pp4_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_12 (
     .a(gy4[12]),
     .clk(clk),
     .neg(pn4_12),
     .pos(pp4_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_2 (
     .a(gy4[2]),
     .clk(clk),
     .neg(pn4_2),
     .pos(pp4_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_3 (
     .a(gy4[3]),
     .clk(clk),
     .neg(pn4_3),
     .pos(pp4_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_4 (
     .a(gy4[4]),
     .clk(clk),
     .neg(pn4_4),
     .pos(pp4_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_5 (
     .a(gy4[5]),
     .clk(clk),
     .neg(pn4_5),
     .pos(pp4_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_6 (
     .a(gy4[6]),
     .clk(clk),
     .neg(pn4_6),
     .pos(pp4_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_7 (
     .a(gy4[7]),
     .clk(clk),
     .neg(pn4_7),
     .pos(pp4_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_8 (
     .a(gy4[8]),
     .clk(clk),
     .neg(pn4_8),
     .pos(pp4_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng4_9 (
     .a(gy4[9]),
     .clk(clk),
     .neg(pn4_9),
     .pos(pp4_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_0 (
     .a(gy5[0]),
     .clk(clk),
     .neg(pn5_0),
     .pos(pp5_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_1 (
     .a(gy5[1]),
     .clk(clk),
     .neg(pn5_1),
     .pos(pp5_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_10 (
     .a(gy5[10]),
     .clk(clk),
     .neg(pn5_10),
     .pos(pp5_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_11 (
     .a(gy5[11]),
     .clk(clk),
     .neg(pn5_11),
     .pos(pp5_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_12 (
     .a(gy5[12]),
     .clk(clk),
     .neg(pn5_12),
     .pos(pp5_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_2 (
     .a(gy5[2]),
     .clk(clk),
     .neg(pn5_2),
     .pos(pp5_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_3 (
     .a(gy5[3]),
     .clk(clk),
     .neg(pn5_3),
     .pos(pp5_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_4 (
     .a(gy5[4]),
     .clk(clk),
     .neg(pn5_4),
     .pos(pp5_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_5 (
     .a(gy5[5]),
     .clk(clk),
     .neg(pn5_5),
     .pos(pp5_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_6 (
     .a(gy5[6]),
     .clk(clk),
     .neg(pn5_6),
     .pos(pp5_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_7 (
     .a(gy5[7]),
     .clk(clk),
     .neg(pn5_7),
     .pos(pp5_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_8 (
     .a(gy5[8]),
     .clk(clk),
     .neg(pn5_8),
     .pos(pp5_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng5_9 (
     .a(gy5[9]),
     .clk(clk),
     .neg(pn5_9),
     .pos(pp5_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_0 (
     .a(gy6[0]),
     .clk(clk),
     .neg(pn6_0),
     .pos(pp6_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_1 (
     .a(gy6[1]),
     .clk(clk),
     .neg(pn6_1),
     .pos(pp6_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_10 (
     .a(gy6[10]),
     .clk(clk),
     .neg(pn6_10),
     .pos(pp6_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_11 (
     .a(gy6[11]),
     .clk(clk),
     .neg(pn6_11),
     .pos(pp6_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_12 (
     .a(gy6[12]),
     .clk(clk),
     .neg(pn6_12),
     .pos(pp6_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_2 (
     .a(gy6[2]),
     .clk(clk),
     .neg(pn6_2),
     .pos(pp6_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_3 (
     .a(gy6[3]),
     .clk(clk),
     .neg(pn6_3),
     .pos(pp6_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_4 (
     .a(gy6[4]),
     .clk(clk),
     .neg(pn6_4),
     .pos(pp6_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_5 (
     .a(gy6[5]),
     .clk(clk),
     .neg(pn6_5),
     .pos(pp6_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_6 (
     .a(gy6[6]),
     .clk(clk),
     .neg(pn6_6),
     .pos(pp6_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_7 (
     .a(gy6[7]),
     .clk(clk),
     .neg(pn6_7),
     .pos(pp6_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_8 (
     .a(gy6[8]),
     .clk(clk),
     .neg(pn6_8),
     .pos(pp6_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng6_9 (
     .a(gy6[9]),
     .clk(clk),
     .neg(pn6_9),
     .pos(pp6_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_0 (
     .a(gy7[0]),
     .clk(clk),
     .neg(pn7_0),
     .pos(pp7_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_1 (
     .a(gy7[1]),
     .clk(clk),
     .neg(pn7_1),
     .pos(pp7_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_10 (
     .a(gy7[10]),
     .clk(clk),
     .neg(pn7_10),
     .pos(pp7_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_11 (
     .a(gy7[11]),
     .clk(clk),
     .neg(pn7_11),
     .pos(pp7_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_12 (
     .a(gy7[12]),
     .clk(clk),
     .neg(pn7_12),
     .pos(pp7_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_2 (
     .a(gy7[2]),
     .clk(clk),
     .neg(pn7_2),
     .pos(pp7_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_3 (
     .a(gy7[3]),
     .clk(clk),
     .neg(pn7_3),
     .pos(pp7_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_4 (
     .a(gy7[4]),
     .clk(clk),
     .neg(pn7_4),
     .pos(pp7_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_5 (
     .a(gy7[5]),
     .clk(clk),
     .neg(pn7_5),
     .pos(pp7_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_6 (
     .a(gy7[6]),
     .clk(clk),
     .neg(pn7_6),
     .pos(pp7_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_7 (
     .a(gy7[7]),
     .clk(clk),
     .neg(pn7_7),
     .pos(pp7_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_8 (
     .a(gy7[8]),
     .clk(clk),
     .neg(pn7_8),
     .pos(pp7_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng7_9 (
     .a(gy7[9]),
     .clk(clk),
     .neg(pn7_9),
     .pos(pp7_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_0 (
     .a(gy8[0]),
     .clk(clk),
     .neg(pn8_0),
     .pos(pp8_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_1 (
     .a(gy8[1]),
     .clk(clk),
     .neg(pn8_1),
     .pos(pp8_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_10 (
     .a(gy8[10]),
     .clk(clk),
     .neg(pn8_10),
     .pos(pp8_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_11 (
     .a(gy8[11]),
     .clk(clk),
     .neg(pn8_11),
     .pos(pp8_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_12 (
     .a(gy8[12]),
     .clk(clk),
     .neg(pn8_12),
     .pos(pp8_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_2 (
     .a(gy8[2]),
     .clk(clk),
     .neg(pn8_2),
     .pos(pp8_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_3 (
     .a(gy8[3]),
     .clk(clk),
     .neg(pn8_3),
     .pos(pp8_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_4 (
     .a(gy8[4]),
     .clk(clk),
     .neg(pn8_4),
     .pos(pp8_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_5 (
     .a(gy8[5]),
     .clk(clk),
     .neg(pn8_5),
     .pos(pp8_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_6 (
     .a(gy8[6]),
     .clk(clk),
     .neg(pn8_6),
     .pos(pp8_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_7 (
     .a(gy8[7]),
     .clk(clk),
     .neg(pn8_7),
     .pos(pp8_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_8 (
     .a(gy8[8]),
     .clk(clk),
     .neg(pn8_8),
     .pos(pp8_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng8_9 (
     .a(gy8[9]),
     .clk(clk),
     .neg(pn8_9),
     .pos(pp8_9),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_0 (
     .a(gy9[0]),
     .clk(clk),
     .neg(pn9_0),
     .pos(pp9_0),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_1 (
     .a(gy9[1]),
     .clk(clk),
     .neg(pn9_1),
     .pos(pp9_1),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_10 (
     .a(gy9[10]),
     .clk(clk),
     .neg(pn9_10),
     .pos(pp9_10),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_11 (
     .a(gy9[11]),
     .clk(clk),
     .neg(pn9_11),
     .pos(pp9_11),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_12 (
     .a(gy9[12]),
     .clk(clk),
     .neg(pn9_12),
     .pos(pp9_12),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_2 (
     .a(gy9[2]),
     .clk(clk),
     .neg(pn9_2),
     .pos(pp9_2),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_3 (
     .a(gy9[3]),
     .clk(clk),
     .neg(pn9_3),
     .pos(pp9_3),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_4 (
     .a(gy9[4]),
     .clk(clk),
     .neg(pn9_4),
     .pos(pp9_4),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_5 (
     .a(gy9[5]),
     .clk(clk),
     .neg(pn9_5),
     .pos(pp9_5),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_6 (
     .a(gy9[6]),
     .clk(clk),
     .neg(pn9_6),
     .pos(pp9_6),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_7 (
     .a(gy9[7]),
     .clk(clk),
     .neg(pn9_7),
     .pos(pp9_7),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_8 (
     .a(gy9[8]),
     .clk(clk),
     .neg(pn9_8),
     .pos(pp9_8),
-    .start(st_line)
+    .start(sd2)
   );
   SNEG ng9_9 (
     .a(gy9[9]),
     .clk(clk),
     .neg(pn9_9),
     .pos(pp9_9),
-    .start(st_line)
+    .start(sd2)
   );
   STREE_L22 row0 (
     .clk(clk),
@@ -4284,58 +4275,32 @@ module top(clk, start, x, y);
     .x({ zero, pp20_11, pp19_6, pp18_0, pp17_4, pn16_8, pn15_10, pp14_8, pp13_7, pp12_3, pn11_11, pp10_7, pp9_10, pn8_3, pp7_9, pn6_1, pp5_0, pn4_0, pp3_4, pn2_7, pn1_7, pn0_8 }),
     .y(y[9])
   );
+  sky130_fd_sc_hd__dfxtp_1 sd1_ff (
+    .CLK(clk),
+    .D(start),
+    .Q(sd1)
+  );
+  sky130_fd_sc_hd__dfxtp_1 sd2_ff (
+    .CLK(clk),
+    .D(sd1),
+    .Q(sd2)
+  );
+  sky130_fd_sc_hd__dfxtp_1 stt1_ff (
+    .CLK(clk),
+    .D(start),
+    .Q(stt1)
+  );
+  sky130_fd_sc_hd__dfxtp_1 stt2_ff (
+    .CLK(clk),
+    .D(stt1),
+    .Q(stt2)
+  );
+  sky130_fd_sc_hd__dfxtp_1 stt3_ff (
+    .CLK(clk),
+    .D(stt2),
+    .Q(st_tree)
+  );
   sky130_fd_sc_hd__conb_1 tie0 (
     .LO(zero)
   );
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$8 ) begin end
-    _0_ = gy21;
-  end
-  always @(posedge clk) begin
-      ba21_0_0 <= _0_;
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$8 ) begin end
-    _1_ = ba21_0_0;
-  end
-  always @(posedge clk) begin
-      ba21_0_1 <= _1_;
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$8 ) begin end
-    _2_ = start;
-  end
-  always @(posedge clk) begin
-      sd1 <= _2_;
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$8 ) begin end
-    _3_ = sd1;
-  end
-  always @(posedge clk) begin
-      sd2 <= _3_;
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$8 ) begin end
-    _4_ = start;
-  end
-  always @(posedge clk) begin
-      stt1 <= _4_;
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$8 ) begin end
-    _5_ = stt1;
-  end
-  always @(posedge clk) begin
-      stt2 <= _5_;
-  end
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$8 ) begin end
-    _6_ = stt2;
-  end
-  always @(posedge clk) begin
-      stt3 <= _6_;
-  end
-  assign st_line = sd2;
-  assign st_tree = stt3;
 endmodule

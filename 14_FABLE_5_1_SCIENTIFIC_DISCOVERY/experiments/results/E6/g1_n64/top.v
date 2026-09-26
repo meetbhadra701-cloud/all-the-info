@@ -63,7 +63,7 @@ module top(input clk, input start, input [63:0] x, output [63:0] y);
   wire lp61, ln61; SNEG ng61 (.clk(clk), .start(start), .a(x[61]), .pos(lp61), .neg(ln61));
   wire lp62, ln62; SNEG ng62 (.clk(clk), .start(start), .a(x[62]), .pos(lp62), .neg(ln62));
   wire lp63, ln63; SNEG ng63 (.clk(clk), .start(start), .a(x[63]), .pos(lp63), .neg(ln63));
-  reg stt1; always @(posedge clk) stt1 <= start;
+  wire stt1; sky130_fd_sc_hd__dfxtp_1 stt1_ff (.CLK(clk), .D(start), .Q(stt1));
   wire st_tree = stt1; wire zero; sky130_fd_sc_hd__conb_1 tie0 (.HI(), .LO(zero));
   STREE_L64 row0 (.clk(clk), .start(st_tree), .x({lp63, lp62, zero, zero, zero, lp58, ln57, lp56, lp55, ln54, ln53, ln52, zero, lp50, lp49, zero, zero, zero, ln45, zero, lp43, ln42, ln41, ln40, lp39, lp38, ln37, lp36, zero, lp34, lp33, lp32, lp31, lp30, ln29, ln28, lp27, ln26, ln25, zero, zero, zero, lp21, zero, ln19, lp18, zero, ln16, zero, zero, lp13, zero, ln11, lp10, zero, zero, lp7, lp6, zero, zero, lp3, lp2, zero, lp0}), .y(y[0]));
   STREE_L64 row1 (.clk(clk), .start(st_tree), .x({ln63, lp62, zero, zero, lp59, ln58, zero, lp56, zero, ln54, lp53, zero, ln51, zero, lp49, ln48, zero, zero, ln45, zero, zero, ln42, zero, lp40, ln39, ln38, ln37, ln36, ln35, ln34, zero, zero, ln31, ln30, zero, lp28, zero, ln26, zero, zero, lp23, lp22, lp21, zero, zero, zero, ln17, ln16, zero, zero, zero, zero, zero, lp10, ln9, ln8, lp7, ln6, ln5, zero, lp3, ln2, lp1, ln0}), .y(y[1]));

@@ -111,6 +111,8 @@ def gen_rtl(name, g):
 
 
 def synth_seq(wd: Path, name: str, rtl: str, dont_use: list[str]):
+    if (wd / f'{name}_gl.v').exists() and (wd / f'{name}.v').exists() and (wd / f'{name}.v').read_text() == rtl:
+        return  # identical RTL already synthesized (deterministic flow): reuse
     (wd / f'{name}.v').write_text(rtl)
     du = ' '.join(f'-dont_use {c}' for c in dont_use)
     script = (f'read_verilog {name}.v; synth -flatten -top {name}; '
@@ -121,6 +123,11 @@ def synth_seq(wd: Path, name: str, rtl: str, dont_use: list[str]):
     if p.returncode != 0 or not (wd / f'{name}_gl_raw.v').exists():
         raise RuntimeError(f'seq synth failed: {name}\n{p.stderr[-2000:]}')
     (wd / f'{name}_gl.v').write_text((wd / f'{name}_gl_raw.v').read_text().replace(' signed ', ' '))
+
+
+def ff(q, d):
+    """Top-level D flip-flop as an explicit library cell (OpenSTA's netlist reader takes no behavioural processes)."""
+    return f'  wire {q}; sky130_fd_sc_hd__dfxtp_1 {q}_ff (.CLK(clk), .D({d}), .Q({q}));'
 
 
 def build_top(design, n, W, mods, depth):
@@ -148,7 +155,7 @@ def build_top(design, n, W, mods, depth):
             for i, p in enumerate(pats):
                 src = f'gy{b}[{i}]'
                 for t in range(D, Dmax):
-                    V.append(f'  reg ba{b}_{i}_{t}; always @(posedge clk) ba{b}_{i}_{t} <= {src};')
+                    V.append(ff(f'ba{b}_{i}_{t}', src))
                     src = f'ba{b}_{i}_{t}'
                 V.append(f'  wire pp{b}_{i}, pn{b}_{i}; {mods["NEG"]} ng{b}_{i} (.clk(clk), .start(st_line), .a({src}), .pos(pp{b}_{i}), .neg(pn{b}_{i}));')
                 lines[(b, p)] = (f'pp{b}_{i}', f'pn{b}_{i}')
@@ -166,12 +173,12 @@ def build_top(design, n, W, mods, depth):
         Dmax = line_lat - 1
         prev = 'start'
         for t in range(1, Dmax + 1):
-            V.append(f'  reg sd{t}; always @(posedge clk) sd{t} <= {prev};'); prev = f'sd{t}'
+            V.append(ff(f'sd{t}', prev)); prev = f'sd{t}'
         V.insert(1, '  wire st_line;')
         V.append(f'  assign st_line = {prev};')
     prev = 'start'
     for t in range(1, line_lat + 1):
-        V.append(f'  reg stt{t}; always @(posedge clk) stt{t} <= {prev};'); prev = f'stt{t}'
+        V.append(ff(f'stt{t}', prev)); prev = f'stt{t}'
     V.append(f'  wire st_tree = {prev}; wire zero; sky130_fd_sc_hd__conb_1 tie0 (.HI(), .LO(zero));')
     for i in range(m):
         parts = [leaf(i, k) or 'zero' for k in range(L)]

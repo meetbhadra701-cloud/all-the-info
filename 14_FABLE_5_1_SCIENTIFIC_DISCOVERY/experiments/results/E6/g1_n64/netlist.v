@@ -2104,7 +2104,6 @@ module STREE_L64(clk, start, x, y);
 endmodule
 
 module top(clk, start, x, y);
-  reg \$auto$verilog_backend.cc:2454:dump_module$2  = 0;
   input clk;
   wire clk;
   input start;
@@ -2113,7 +2112,6 @@ module top(clk, start, x, y);
   wire [63:0] x;
   output [63:0] y;
   wire [63:0] y;
-  reg _0_;
   wire ln0;
   wire ln1;
   wire ln10;
@@ -2243,7 +2241,6 @@ module top(clk, start, x, y);
   wire lp8;
   wire lp9;
   wire st_tree;
-  reg stt1;
   wire zero;
   SNEG ng0 (
     .a(x[0]),
@@ -3077,15 +3074,12 @@ module top(clk, start, x, y);
     .x({ zero, ln62, lp61, lp60, lp59, zero, lp57, lp56, zero, zero, lp53, lp52, zero, zero, ln49, ln48, ln47, lp46, ln45, zero, lp43, lp42, zero, ln40, lp39, ln38, lp37, zero, lp35, ln34, ln33, zero, ln31, lp30, lp29, ln28, lp27, lp26, ln25, zero, ln23, ln22, lp21, zero, ln19, zero, lp17, zero, zero, ln14, zero, zero, lp11, lp10, zero, zero, lp7, ln6, zero, lp4, ln3, zero, ln1, ln0 }),
     .y(y[9])
   );
+  sky130_fd_sc_hd__dfxtp_1 stt1_ff (
+    .CLK(clk),
+    .D(start),
+    .Q(st_tree)
+  );
   sky130_fd_sc_hd__conb_1 tie0 (
     .LO(zero)
   );
-  always @* begin
-    if (\$auto$verilog_backend.cc:2454:dump_module$2 ) begin end
-    _0_ = start;
-  end
-  always @(posedge clk) begin
-      stt1 <= _0_;
-  end
-  assign st_tree = stt1;
 endmodule

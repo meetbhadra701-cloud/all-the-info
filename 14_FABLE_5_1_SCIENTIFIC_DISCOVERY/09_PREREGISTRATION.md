@@ -79,7 +79,16 @@ This is the regime-(V) status quo (HNLPU / Ankhdjet style at the adder level).
 
 ## Deviation log
 
-(empty)
+The first three entries were logged before any E5 routing result was known.
+
+- **D1 (validation item 1): module-level simulation is subsumed by top-level simulation.**
+  - What was done: the assembled top netlist was simulated against numpy W@x with 64 random vectors, plus a mutation control. It exercises every module instance as used; the modules were not simulated one by one.
+  - Why it matters little: a module error that never shows at the top cannot change the measured function.
+- **D2 (validation item 4): the physical-level check is simulation-based, not formal `cec`.**
+  - What is done: the ORFS **final routed** netlist (6_final.v) is converted by Yosys and simulated by our AIG simulator against numpy (64 vectors), plus a mutation control. Script: `scripts/post_pnr_validate.py`.
+  - This is weaker than formal equivalence. It does catch any functional corruption by buffering, resizing or tie handling on the tested vectors.
+- **D3 (negative-control form):** the mutation control flips the polarity of one nonzero weight in the *reference* (W → W′), rather than editing the netlist. Detecting W′ ≠ netlist is equivalent to detecting a one-via change in the netlist against W.
+- **D4 (scheduling): runs are ordered U = 60, then U = 75, then U = 45** (the last only for designs that fail at 60). This does not change the definition of U_max over {45, 60, 75}.
 
 ## Amendment A1 — written after the 8×8 smoke build (module timing only) and BEFORE any n = 32 place-and-route data
 
@@ -155,3 +164,11 @@ At an equal clock (3.0 ns) and equal throughput, bit-serial UBP-g fabrics have *
 - Random W.
 - One size (64) and one PDK.
 - The negator-per-line structure is kept for both designs. The complement-line + via-programmed constant-correction refinement, which would help both, is not tested.
+
+## E6 deviation log
+
+- **D6.1 (netlist format; before any E6 PnR data): the top-level start-delay and alignment flip-flops were re-emitted as explicit `sky130_fd_sc_hd__dfxtp_1` instances.**
+  - What happened: the first E6 ORFS launch failed at stage 1 for all six jobs (OpenSTA `STA-0171` syntax error). The top module still held behavioural `always @(posedge clk)` registers, which Yosys's Verilog backend writes with a `reg … = 0` initializer.
+  - The fix: the same D flip-flops are instantiated as library cells, i.e. the cell `dfflibmap` would pick. Function, latency and every module are unchanged.
+  - The build was re-run, and validation plus the mutation control were re-checked on the new netlist before PnR.
+- **D6.2:** D1–D4 of E5 apply to E6 as well. The physical-level check uses the sequential simulator on 6_final.v (12 back-to-back words).

@@ -8,7 +8,8 @@ Pipeline per design:
      is the via program derived from W (i.i.d. ternary, seed 14);
   3. independent validation: Yosys (liberty cell functions) -> AIG -> our simulator vs numpy W@x, plus a
      one-connection mutation negative control;
-  4. ORFS configs for CORE_UTILIZATION in {30,45,60} with a 6.0 ns virtual clock.
+  4. ORFS configs for CORE_UTILIZATION in {45,60,75} with a 20 ns virtual clock (Amendment A1; the original
+     pre-registration's {30,45,60} / 6.0 ns is preserved in 09_PREREGISTRATION.md).
 Symmetric INT8 activations in [-127,127] (negation never overflows).
 """
 from __future__ import annotations
