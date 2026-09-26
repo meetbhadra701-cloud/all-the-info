@@ -10,6 +10,14 @@ Unit cost U = adders; B = bit-weighted adders (result widths). Medians over seed
 | 128 | 0.33 | 3 | 10763 | 5070 (UBP4) | 2.121 | 1.882 | 5032 (CBP4) | 4142 | 1.224 | 1.218 | 1.215 | 10.6 | all pass |
 | 128 | 0.5 | 3 | 8093 | 4866 (UBP4) | 1.660 | 1.515 | 4721 (CBP4) | 3598 | 1.357 | 1.336 | 1.314 | 8.1 | all pass |
 | 256 | 0.33 | 3 | 43626 | 18230 (UBP4) | 2.395 | 2.078 | 18226 (CBP4) | timeout >600 s | — | — | — | — | all pass |
+| 256 | 0.5 | 3 | 32571 | 17401 (UBP4) | 1.872 | 1.676 | 17093 (CBP5) | 13031 | 1.338 | 1.319 | 1.312 | 517.4 | all pass |
+| 512 | 0.33 | 3 | 175226 | 63800 (UBP5) | 2.748 | 2.363 | 63700 (CBP5) | not run | — | — | — | — | all pass |
+| 512 | 0.5 | 3 | 130626 | 62352 (UBP5) | 2.094 | 1.837 | 61237 (CBP5) | not run | — | — | — | — | all pass |
+| 1024 | 0.33 | 3 | 700799 | 231781 (UBP5) | 3.023 | 2.560 | 231779 (CBP5) | not run | — | — | — | — | all pass |
+| 1024 | 0.5 | 3 | 523190 | 225952 (UBP5) | 2.315 | 2.003 | 221400 (CBP6) | not run | — | — | — | — | all pass |
+| 2048 | 0.33 | 3 | 2807993 | 819344 (UBP6) | 3.427 | 2.834 | 819041 (CBP6) | not run | — | — | — | — | all pass |
+| 2048 | 0.5 | 3 | 2095396 | 809131 (UBP6) | 2.589 | 2.217 | 800749 (CBP6) | not run | — | — | — | — | all pass |
+| 4096 | 0.33 | 2 | 11236087 | 3029072 (UBP7) | 3.709 | 3.013 | 3019198 (CBP7) | not run | — | — | — | — | all pass |
 
 ## Regime-correct view (post-hoc refinement; exact closed forms, no W dependence for V)
 
@@ -21,7 +29,12 @@ F = full-custom (zeros skipped; weight-specific DAGs allowed).
 | 64 | 4032 | 1536 (g=4) | 2.62 | 1024 | 480 | 3.20 |
 | 128 | 16256 | 5120 (g=4) | 3.17 | 4096 | 1984 | 2.58 |
 | 256 | 65280 | 18432 (g=4) | 3.54 | 16384 | 8064 | 2.29 |
+| 512 | 261632 | 64058 (g=5) | 4.08 | 52429 | 25958 | 2.47 |
+| 1024 | 1047552 | 232596 (g=5) | 4.50 | 209715 | 104346 | 2.23 |
+| 2048 | 4192256 | 820448 (g=6) | 5.11 | 699051 | 348501 | 2.35 |
+| 4096 | 16773120 | 3031470 (g=7) | 5.53 | 2396745 | 1196325 | 2.53 |
 
 ## Pre-registered conditions
 
-- K2 (median UBP*/da4ml where da4ml finished) = 1.331 -> not killed; A1 part (<=1.25) -> not met
+- K1 (median g1/UBP* at n>=1024, conservative min of U and B ratios) = 2.560 -> not killed; A1 part (>=2) -> met
+- K2 (median UBP*/da4ml where da4ml finished) = 1.338 -> not killed; A1 part (<=1.25) -> not met

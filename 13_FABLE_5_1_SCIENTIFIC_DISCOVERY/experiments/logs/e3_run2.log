@@ -12,3 +12,11 @@ ISO 128 g1 4653257 {"trees": 4635486.72, "neg": 17770.24} True
 ISO 128 g2 3002449 {"trees": 2925848.32, "gen": 34017.92, "neg": 42583.04} True
 ISO 128 g3 2571859 {"trees": 2351947.52, "gen": 117821.72, "neg": 102090.17} True
 ISO 128 g4 2384246 {"trees": 1847400.96, "gen": 303078.72, "neg": 233766.4} True
+TREE 1024 g1 1024 8 {"tag": "delay", "D_target": null, "wall": 192.7286500930786, "gates": 74792, "area_stime": 388148.5, "delay_stime_ps": 7331.27, "area": 387943.15, "delay_ps": 5078.52, "levels": 58, "cec": true} True
+TREE 1024 g2 512 9 {"tag": "delay", "D_target": null, "wall": 28.01272463798523, "gates": 40875, "area_stime": 211285.14, "delay_stime_ps": 7110.48, "area": 211173.88, "delay_ps": 4861.66, "levels": 55, "cec": true} True
+TREE 1024 g3 342 10 {"tag": "delay", "D_target": null, "wall": 30.511324644088745, "gates": 30001, "area_stime": 154803.47, "delay_stime_ps": 6797.4, "area": 154721.37, "delay_ps": 4597.03, "levels": 52, "cec": true} True
+TREE 1024 g4 256 10 {"tag": "delay", "D_target": null, "wall": 14.00997805595398, "gates": 22209, "area_stime": 114887.68, "delay_stime_ps": 6306.88, "area": 114827.97, "delay_ps": 4345.35, "levels": 50, "cec": true} True
+ISO 1024 g1 303943219 {"trees": 303801057.28, "neg": 142161.92} True
+ISO 1024 g2 184753382 {"trees": 184140574.72, "gen": 272143.36, "neg": 340664.32} True
+ISO 1024 g3 147340885 {"trees": 145591818.24, "gen": 937093.6799999999, "neg": 811972.98} True
+ISO 1024 g4 121878602 {"trees": 117583841.28, "gen": 2424629.76, "neg": 1870131.2} True

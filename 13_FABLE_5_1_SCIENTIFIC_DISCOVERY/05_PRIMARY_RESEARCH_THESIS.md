@@ -103,6 +103,18 @@ Consequences:
 - Measured closed forms: 2.62× (n=64), 3.17× (128), 3.54× (256) at g = 4 (`experiments/results/E1_summary.md`).
 - Because both sides are W-independent, **this ratio holds for every weight matrix, trained or random.**
 
+**Gate-level evidence for regime (V) (E3, OBSERVED).**
+- Setup: weight-independent components (row trees over opaque via-selected leaves, universal generators, shared negators). Synthesized with Yosys + native ABC on SKY130 HD at iso-delay, with every component checked by our own AIG simulator and ABC `cec`.
+
+| n = m | per-input fabric | UBP2 | UBP3 | UBP4 |
+|---|---|---|---|---|
+| 128 | 4.65 mm² | 1.55× smaller | 1.81× smaller | 1.95× smaller |
+| 1024 | 303.9 mm² | 1.65× smaller | 2.06× smaller | **2.49× smaller** |
+
+- Cell area only.
+- The baseline gets the iso-delay slack, so the comparison is conservative.
+- Adding modelled select wiring to the *measured* cells (MODEL): g = 3 stays logic-bound at both 0.46 and 0.92 µm pitch (**2.06× at n = 1024**). g = 4 is wire-sensitive: 2.24× or 1.14×.
+
 **Correction found during this session (OBSERVED; it narrows the thesis).**
 - In regime (F), constant-propagated synthesis applies structural hashing (Yosys `opt_merge`, ABC `strash`). That merges partial sums which recur across rows of plain per-input balanced trees. It is the same pigeonhole sharing, obtained automatically.
 - At n = 128, hashing cuts the per-input tree from 10,929 to 5,884 adders (p0 = .33) and from 7,984 to 4,968 (p0 = .5). UBP4 is essentially unchanged (5,040 / 4,816). The hashed per-input tree is therefore only 1.17× / 1.03× worse than UBP.
@@ -153,7 +165,11 @@ The mechanism is abandoned in regime (V) if **either** of these holds:
 - after place-and-route with all candidate lines present, area(UBP_V, best g) > area(g1_V)/1.3 in both bit-serial and bit-parallel styles on SKY130 or ASAP7;
 - the full texts of HNLPU / Ankhdjet / Taalas show cross-neuron block sharing under metal-only programmability (novelty occupied).
 
-Already tested at the adder and cell level (E1, E2): see `06_…`.
+Already tested:
+- at the adder level (E1, closed forms);
+- at the cell level with weight-independent components at iso-delay (E3), where the (V) advantage **survived**: K3 not triggered, ADV3 met.
+
+Still untested: the physical select wiring (PnR).
 
 ### 14. Expected implementation challenges
 
@@ -173,9 +189,12 @@ Already tested at the adder and cell level (E1, E2): see `06_…`.
 
 ### 16. What success would establish
 
-- A W-independent construction that cuts the accumulation hardware of ternary/binary metal-programmable hardwired layers by about 3× in adders (exact) and by about 1.7–3× in area (model; measured at cell level in E2).
+- A W-independent construction that cuts the accumulation hardware of ternary/binary metal-programmable hardwired layers:
+  - by ≈ g× in adders (exact: 3.2–3.9× at g = 4 for n = 128–1024);
+  - by 1.95–2.49× in cell area at iso-delay (measured, E3);
+  - by about 2× including select wiring at g = 3 (model on measured cells).
 - A proof that it is port-optimal.
-- A measured price of universality of about 1.22–1.37× vs the strongest weight-specific CSE.
+- A measured price of universality of about 1.22–1.37× more adders than the strongest weight-specific CSE, which cannot be used in this regime.
 
 ### 17. What success would not establish
 

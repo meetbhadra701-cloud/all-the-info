@@ -2,87 +2,77 @@
 
 ## Classification
 
-**RESEARCH THESIS READY FOR INITIAL PROTOTYPE, conditional on a one-day full-text novelty check that this environment could not perform.**
+**RESEARCH THESIS READY FOR INITIAL PROTOTYPE, scoped to regime (V) (metal/via-programmable, weight-independent base layers) and conditional on a one-day full-text novelty check that this environment could not perform.**
 
-- **The thesis** (`05_…`): in metal/via-programmable hardwired inference silicon, universal block-pattern generators (UBP-g) share accumulation *across neurons* while keeping every base layer weight-independent.
-- **What it gives, for ternary/binary layers:**
-  - exactly about g× fewer accumulation adders than today's per-input fabrics (the ratio is independent of W);
-  - it is provably port-optimal (Theorem 1);
-  - it measures within 1.22–1.37× of the strongest weight-specific CSE (da4ml), which cannot be used in that regime at all.
-- **The condition:** the HNLPU (ASPLOS'26), Ankhdjet (2608.26206) and 2604.25183 full texts must not already contain cross-neuron block sharing under metal-only programmability. arXiv/ACM/IEEE were blocked for this session.
+- **The thesis** (`05_…`): in hardwired inference silicon whose base layers must be identical for every model, universal block-pattern generators (UBP-g) share accumulation *across neurons*. What that buys for ternary/binary layers:
+  - ≈ g× fewer accumulation adders than today's per-input fabrics (exact and W-independent);
+  - **1.95× (n = 128) and 2.49× (n = 1024) smaller cell area at iso-delay** (E3, measured on SKY130);
+  - about 2× including select wiring at g = 3 (model applied to the measured cells).
+- **Proof:** the fabric meets a programmable-port lower bound with equality (Theorem 1).
+- **The condition:** the full texts of HNLPU (ASPLOS'26), Ankhdjet (2608.26206) and 2604.25183 must not already contain cross-neuron block sharing under metal-only programmability.
 
-## What was actually accomplished
+**Explicitly NOT claimed (killed during the session):**
+- any advantage in full-custom silicon (regime F);
+- any advantage for 4-bit/FP4 weights.
 
-1. **Archive map** (`01_…`). Includes the Wave 11 data nobody had closed out: the covering headroom over the best heuristic is about 2–3% on half the circuits, so the thread was not continued.
-2. **A technology-shift-driven problem selection** (`02_…`). Model-specific silicon (Taalas HC1 → AMD acquisition Aug 2026; HNLPU ASPLOS'26; BitROM; Ankhdjet) creates a new constraint, *weight-independent base layers*. That constraint disables the classical tool, weight-specific CSE.
-3. **Hypotheses** with competing mechanisms, and their review (`03_…`, `04_…`). Three ideas were rejected as occupied: the block-precompute principle, generic CSE, and via-programmable model silicon as a concept.
-4. **A mechanism with a proof** (`05_…` §8): port and adder lower bounds for any via-programmable fabric. UBP meets the port bound with equality.
-5. **Pre-registered experiments** with fail-closed independent checking (`06_…`):
-   - **E1:** adder counts vs per-input sharing and vs da4ml, n = 64 … 4096, 3 seeds.
-   - **E2:** Yosys → AIG → native ABC on SKY130 at iso-delay.
-   - Wire model: labelled as a model.
-6. **Two engineering by-products:**
-   - the da4ml 0.6.0 input-layout hazard;
-   - YoWASP Yosys's silent in-process ABC exit.
+## What changed during the session, and why it matters
 
-   Neither was sent anywhere.
+- **The first experiments looked stronger than they were.** E1 showed 1.8–3.7× fewer adders than "per-input" trees in full-custom silicon.
+- **The gate-level run (E2) exposed the problem:** a 2× adder cut became only 1.17–1.19× area.
+- **Hypotheses tested in turn:**
+  1. Yosys `alumacc` absorbing shared sums: ruled out by a controlled test.
+  2. **Structural hashing:** Yosys `opt_merge` / ABC `strash` automatically merge partial sums that recur across rows of plain per-input trees. **Confirmed** (E1-hashed, n = 64–1024): hashed per-input trees come within 1.07–1.20× of UBP.
+- **Consequence.** E1's full-custom baseline was weak, which is exactly the Wave 10 failure mode. The claim was withdrawn for (F) and re-tested where it can hold. In regime (V) no weight-specific hashing or CSE can exist, because the base layers cannot know W. That is E3, pre-registered after the diagnosis and before its data. It passed.
 
-## Evidence summary (see 06 for tables)
+## Evidence summary
 
 | Claim | Status |
 |---|---|
-| Regime-(V) adder ratio g1_V / UBP_V = 2.62 / 3.17 / 3.54 at n = 64 / 128 / 256 (→ ≈ g for large m) | **Exact closed form, W-independent** |
-| Full-custom per-input vs UBP, adders: 1.78 → 2.12 → 2.40 (p0 = 0.33, n = 64 → 256); 1.47 → 1.66 (p0 = 0.5) | **OBSERVED**, 3 seeds, every construction independently checked |
-| UBP within 1.22–1.37× of da4ml; weight-specific block patterns (CBP) within 1.21–1.31× | **OBSERVED** at n ≤ 128. da4ml exceeds 600 s at n = 256 (under load; D2) |
+| (V) adders: g1_V/UBP_V = 2.62 / 3.17 / 3.54 / 3.88 at n = 64 / 128 / 256 / 1024 | **Exact closed form, W-independent** |
+| (V) cell area at iso-delay: 1.55 / 1.81 / **1.95** (n = 128; g = 2 / 3 / 4); 1.65 / 2.06 / **2.49** (n = 1024) | **OBSERVED (E3)**: 14/14 components valid (own AIG simulation + ABC `cec`); the baseline gets the delay slack |
+| (V) including select wiring: g = 3 → 1.81× (n = 128), 2.06× (n = 1024) at 0.46 and 0.92 µm pitch; g = 4 → 1.8–2.24× or 1.0–1.14× | **MODEL** on measured cells |
+| Price of universality: UBP needs 1.22–1.37× more adders than da4ml (weight-specific, not usable in V) | **OBSERVED** (n ≤ 256) |
 | Universality itself costs 1–4% (UBP vs CBP) | **OBSERVED** |
-| Gate-level area at iso-delay (SKY130) | **E2: see `results/E2_summary.md`** (patched below when complete) |
-| Area gain including select wiring: bit-parallel ≈ 1.7–2.3× (g = 2–3); bit-serial ≈ 3× (g = 3–4) | **MODEL only.** The main open risk. |
-| 4-bit/FP4: no useful gain (value-domain blocks are wire-bound; digit planes revert to about one leaf per site) | **MODEL/INFERRED.** Scope limit. |
+| (F): UBP vs hashed per-input 1.04–1.20×; da4ml better than both | **OBSERVED**, so **(F) claim withdrawn** |
+| Ternary ≈ 3× at g = 3 with 4.3 lines/input; binary ≈ 4× at g = 4 with 2 lines/input; int4 wire-bound | **Closed forms + line counts** |
 
-## Final scientific review (Part XVIII questions)
+## Final scientific review (Part XVIII)
 
 1. **Could this be done by changing an existing parameter?**
-   - Not in the (V) designs that exist. HNLPU groups within a neuron and Taalas pre-multiplies per input; adopting UBP adds generator arrays and changes neuron leaf counts and routing.
-   - In *runtime* LUT architectures, G is a parameter. The objection "just set G large and replace the mux with a via" is the honest core of the novelty risk (§15 of 05). The defence is the changed cost regime plus the optimality result, not a new principle.
+   - Not in the existing (V) designs. HNLPU groups within a neuron and Taalas pre-multiplies per input; adopting UBP adds a generator array and changes neuron leaf counts and routing.
+   - In runtime LUT-GEMM designs, the block size is a parameter. The honest core of the novelty risk: "set G large and replace the mux with a via". The defence is the changed cost regime, the port-optimality result, and the measured (V) gains.
 2. **Could a stronger baseline already produce the effect?**
-   - In full-custom (F), yes: da4ml gets 22–37% fewer adders than UBP.
-   - In (V), da4ml is inapplicable by definition. The strongest applicable baseline (per-input/in-neuron) is beaten by about g× in adders.
-3. **Is the novelty merely a new benchmark?** No. It is a construction, a bound, and measurements. No benchmark is proposed.
+   - In (F), yes. Tool hashing nearly does, and da4ml does better, so (F) is withdrawn.
+   - In (V), the strongest *applicable* baseline is the per-input universal fabric, which UBP beats at iso-delay by 1.95–2.49× in cell area.
+3. **Is the novelty merely a new benchmark?** No. It is a construction, a bound, a regime result and measurements.
 4. **Is the mechanism different from existing algorithms?**
-   - The mathematics is Four Russians/LUT-GEMM (a known ingredient).
-   - The *complete contribution* is different: cross-neuron sharing in a weight-independent fabric, a provable port-optimality, and a regime-specific optimum g set by row count and wiring. No retrieved source describes it. That is not proof of absence.
-5. **Would it matter if nobody used our software?** Yes. The construction and the bound are implementation-independent design knowledge.
-6. **Does the insight generalize beyond one example?**
-   - The (V) ratio is exact for all W.
-   - The (F) comparisons use i.i.d. ternary only: real checkpoints were blocked.
-   - E2 uses one matrix per p0.
-   - Wiring is modelled, not measured.
-   - Scope is ternary/binary, not 4-bit.
-7. **Are we promising a correctness guarantee without a proof?**
-   - Exactness holds by construction and is checked per instance: numeric at two levels, plus ABC `cec`.
-   - Universality holds by construction, since all patterns are present.
-   - Theorem 1 is proven in 05 §8.
-8. **Are we promising an improvement without an appropriate baseline?** No. The (V) status quo and the strongest (F) method are both included, and comparisons are at iso-delay (E2).
-9. **Have we confused a hypothesis with a result?** The wire-level gains are labelled MODEL throughout. Area including wiring is a hypothesis until PnR.
-10. **Would an expert find an obvious stronger prior method?**
-    - Possibly inside HNLPU's full text (its bit-serial POPCNT neurons could share inputs across neurons), or in Taalas HC2 (proprietary).
-    - Possibly in structured-ASIC DSP literature (via-programmable constant-coefficient filters). Not found in searches, which is not proof.
-11. **What result would make us abandon it?** Either of the §13 conditions:
-    - post-PnR area(UBP_V) > area(g1_V)/1.3 in both arithmetic styles;
-    - a full text showing the same construction.
+   - The mathematics is Four Russians / LUT-GEMM (a known ingredient).
+   - The complete contribution (cross-neuron sharing in weight-independent base layers, port-optimal, with the regime's optimal g) is not described in any retrieved source. Absence of search results is not proof.
+5. **Would it matter if nobody used our software?** Yes. The fabric construction and Theorem 1 are tool-independent.
+6. **Does it generalize beyond one example?**
+   - The (V) adder ratio holds for every W.
+   - The (V) cell-area ratio does not depend on W at all, since the components are W-independent. It is measured at two sizes on one library (SKY130).
+   - Wiring is modelled. ASAP7/advanced nodes are not tested.
+7. **Correctness guarantee without proof?** Exactness holds by construction and is checked per instance at three levels. Theorem 1 is proven.
+8. **Improvement without an appropriate baseline?** Not any more. The weak (F) baseline was caught and corrected; the (V) baseline is the status-quo universal fabric at iso-delay.
+9. **Hypothesis confused with result?** Wiring-inclusive numbers are labelled MODEL throughout.
+10. **Would an expert find an obvious stronger prior method?** Possibly inside HNLPU's full text (its bit-serial POPCNT neurons), Taalas HC2 (proprietary), or via-programmable structured-ASIC DSP work. This is the one-day check.
+11. **What result would make us abandon it?**
+    - Post-PnR area(UBP_V, g = 3) > area(g1_V)/1.3 in both arithmetic styles;
+    - or a full text describing the same cross-neuron construction under metal-only programmability.
 
 ## What to implement first (exact next steps)
 
-1. **Novelty check (1 day).** Read HNLPU §§ on the Sea-of-Neurons / neuron microarchitecture, Ankhdjet's macro description, and 2604.25183's design space. Allow arxiv.org and dl.acm.org in the environment's network settings. Decide: continue, or narrow to "bound + measurement".
-2. **Bit-serial generator** (`hwlayer.py` → sequential RTL):
-   - shared serial pattern generators;
-   - per-neuron serial adder/popcount trees;
-   - an explicit via-select netlist in which every candidate line is physically present.
-3. **Falsifying experiment:** OpenROAD/ORFS place-and-route of 256×256 macros on SKY130 (and ASAP7): g1_V vs UBP_V (g = 2, 3, 4), in bit-parallel and bit-serial styles, at equal clock. Measure area, wirelength, congestion and power.
-4. **Real weights:** BitNet-b1.58-2B4T layers for the (F) comparison with da4ml and CBP. This needs huggingface.co.
+1. **Novelty check (1 day).** Read the HNLPU Sea-of-Neurons / neuron microarchitecture sections, Ankhdjet's macro, and 2604.25183's design space. This requires allowing arxiv.org and dl.acm.org in the environment's network settings.
+2. **Falsifying PnR experiment (1–2 weeks).** OpenROAD/ORFS on SKY130 (+ ASAP7): a 256×256 via-programmable macro in which every candidate line is physically present in the programmable metal layers.
+   - Compare g1_V vs UBP3_V vs UBP4_V at equal clock.
+   - Measure area, wirelength, congestion and power.
+3. **Bit-serial variant** (HNLPU's arithmetic style), where the model predicts about 3× at g = 3–4.
+4. **Integration** into Ankhdjet's open SKY130 macro for an A/B at equal metal-only programmability; possible open-shuttle test vehicle.
+5. **Real BitNet-b1.58 layers.** They matter only for the (F) side comparisons; the (V) result is W-independent.
 
 ## Blockers encountered (precise)
 
-- **Egress policy:** arxiv.org, dl.acm.org, ieeexplore.ieee.org, semanticscholar.org, openreview.net, huggingface.co and personal sites are denied. This blocks the full-text novelty check and real checkpoints. It is fixable in the environment's network settings.
-- **GitHub release downloads** (OSS CAD Suite) are outside the session's repository scope. Worked around with a native ABC build plus YoWASP Yosys.
-- **Budget:** PnR (ORFS container) was not attempted, to stay within the advisory budget. It is the first prototype task.
+- **Egress policy:** arxiv.org, dl.acm.org, ieeexplore.ieee.org, semanticscholar.org, openreview.net, huggingface.co and several personal sites are denied (HTTP 403 from the policy gateway). This blocks the full-text novelty check and real checkpoints. It is fixable in the environment's network settings.
+- **GitHub release downloads** outside the session's repository scope are refused. Worked around with a native ABC build plus YoWASP Yosys.
+- **Budget:** PnR was not attempted in this session. It is the first prototype task.

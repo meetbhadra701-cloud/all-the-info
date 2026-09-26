@@ -47,7 +47,9 @@
   - (c) the select wiring in (V) does not consume the gain.
 - **CHEAPEST MEANINGFUL EXPERIMENT:** E1 (adder counts vs per-input and vs da4ml), then E2 (Yosys/ABC area on SKY130).
 - **REUSABLE BY OTHERS:** a generator plus a cost model for hardwired layers; a new baseline for hardwired-silicon papers.
-- **STATUS:** GENERATED, REVIEWED (`04_…`), TESTED in E1/E2 (see `06_…`).
+- **STATUS:** GENERATED, REVIEWED (`04_…`), TESTED.
+  - **(F): withdrawn.** Against structurally hashed per-input trees, the gain is only 1.04–1.20× (E1-hashed), and da4ml is better.
+  - **(V): supported.** Exact ≈ g× adders; E3 cell area at iso-delay 1.95× (n = 128) and 2.49× (n = 1024); model-adjusted about 2× at g = 3.
 
 ## A2 — The price of universality is small (a quantitative claim about A1 vs weight-specific CSE)
 
@@ -63,13 +65,13 @@
   - Also, da4ml optimizes delay as well as adders, so it is not purely adder-minimizing.
 - **KEY ASSUMPTION:** Real ternary checkpoints behave like i.i.d. weights for sharing purposes. **Untestable here:** huggingface.co is blocked.
 - **CHEAPEST EXPERIMENT:** E1 (i.i.d.), then real BitNet layers (future).
-- **STATUS:** GENERATED, TESTED partially in E1 (i.i.d. only).
+- **STATUS:** GENERATED, TESTED in E1 (i.i.d. only): UBP/da4ml = 1.22–1.37 in adders (n ≤ 256). The pre-registered '≤ 1.25' advance clause is not met in general; the price of universality is about 20–37%.
 
 ## A3 — Weight-specific block patterns (CBP) as a scalable CSE (regime F)
 
 - **INSIGHT:** Generating only the block patterns that are used, plus their parent closure, gives a linear-time CSE. It may match iterative CSE (da4ml) quality at LLM scale, where da4ml's runtime explodes.
 - **OBJECTION:** This is a restricted form of CSE. For large g it is the Lupanov construction; for CMM there are many fast heuristics (Hcub, RPAG, da4ml).
-- **STATUS:** GENERATED, TESTED in E1 as a control (it separates "block sharing" from "universality").
+- **STATUS:** GENERATED, TESTED in E1 as a control. CBP is within 1–4% of UBP, so universality itself is nearly free. CBP is no better than hashed per-input trees in (F), so A3 as a scalable (F) CSE is not competitive with da4ml's quality.
 
 ## A4 — Codebook-constrained ternary blocks (quantization–hardware co-design)
 

@@ -26,6 +26,9 @@ python3 scripts/e1_analyze.py results/E1_ternary.jsonl > results/E1_summary.md
 python3 scripts/e2_run.py results/E2_p33 128 0.33 & python3 scripts/e2_run.py results/E2_p50 128 0.5   # E2 (Yosys -> AIG -> native ABC, iso-delay)
 python3 scripts/e2_analyze.py results/E2_p33/E2_results.json results/E2_p50/E2_results.json > results/E2_summary.md
 python3 scripts/wire_model.py > results/wire_model.txt      # analytic regime-V model (MODEL, not measurement)
+python3 scripts/e1_hashed.py > results/E1_hashed.md         # strong (F) baseline: structurally hashed per-input trees
+python3 scripts/e3_run.py results/E3                          # E3: regime-V components (TREE/GEN/NEG), iso-delay, SKY130
+python3 scripts/e3_analyze.py results/E3/E3_results.json > results/E3_summary.md   # + model-adjusted table appended in-session
 ```
 
 ## Correctness checks built into the scripts (fail closed)
