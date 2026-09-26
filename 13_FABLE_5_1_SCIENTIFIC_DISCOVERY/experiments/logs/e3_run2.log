@@ -9,3 +9,6 @@ TREE 128 g2 64 9 {"tag": "delay", "D_target": null, "wall": 2.073906421661377, "
 TREE 128 g3 43 10 {"tag": "delay", "D_target": null, "wall": 1.8718338012695312, "gates": 3804, "area_stime": 19844.03, "delay_stime_ps": 4644.23, "area": 19833.73, "delay_ps": 3274.16, "levels": 36, "cec": true} True
 TREE 128 g4 32 10 {"tag": "delay", "D_target": null, "wall": 1.434739351272583, "gates": 2735, "area_stime": 14440.1, "delay_stime_ps": 4171.07, "area": 14432.82, "delay_ps": 2886.65, "levels": 34, "cec": true} True
 ISO 128 g1 4653257 {"trees": 4635486.72, "neg": 17770.24} True
+ISO 128 g2 3002449 {"trees": 2925848.32, "gen": 34017.92, "neg": 42583.04} True
+ISO 128 g3 2571859 {"trees": 2351947.52, "gen": 117821.72, "neg": 102090.17} True
+ISO 128 g4 2384246 {"trees": 1847400.96, "gen": 303078.72, "neg": 233766.4} True

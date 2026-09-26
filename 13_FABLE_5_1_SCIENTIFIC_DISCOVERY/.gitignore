@@ -1,9 +1,9 @@
-__pycache__/
-*.pyc
 # large, deterministically regenerable E2 intermediates (see REPRODUCTION.md)
-experiments/results/E2_*/**/design.aag
-experiments/results/E2_*/**/design.aig
-experiments/results/E2_*/**/mapped_*.blif
-experiments/results/E2_*/**/rtl.v
-experiments/results/E2_*/**/src.v
-experiments/results/E2_*/**/yosys.log
+*.pyc
+__pycache__/
+experiments/results/E*/**/design.aag
+experiments/results/E*/**/design.aig
+experiments/results/E*/**/mapped_*.blif
+experiments/results/E*/**/rtl.v
+experiments/results/E*/**/src.v
+experiments/results/E*/**/yosys.log
