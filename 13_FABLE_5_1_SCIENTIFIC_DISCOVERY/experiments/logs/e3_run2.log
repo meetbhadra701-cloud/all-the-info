@@ -4,3 +4,8 @@ GEN 4 {"tag": "delay", "D_target": null, "wall": 1.3753669261932373, "gates": 19
 NEG 8 {"tag": "delay", "D_target": null, "wall": 0.45665526390075684, "gates": 29, "area_stime": 138.88, "delay_stime_ps": 558.58, "area": 138.83, "delay_ps": 391.31, "levels": 4, "cec": true} True
 NEG 9 {"tag": "delay", "D_target": null, "wall": 0.44782376289367676, "gates": 35, "area_stime": 166.41, "delay_stime_ps": 591.72, "area": 166.34, "delay_ps": 401.96, "levels": 4, "cec": true} True
 NEG 10 {"tag": "delay", "D_target": null, "wall": 0.475954532623291, "gates": 35, "area_stime": 182.68, "delay_stime_ps": 665.68, "area": 182.63, "delay_ps": 418.67, "levels": 4, "cec": true} True
+TREE 128 g1 128 8 {"tag": "delay", "D_target": null, "wall": 5.398270130157471, "gates": 9022, "area_stime": 47179.0, "delay_stime_ps": 5255.52, "area": 47155.13, "delay_ps": 3663.41, "levels": 42, "cec": true} True
+TREE 128 g2 64 9 {"tag": "delay", "D_target": null, "wall": 2.073906421661377, "gates": 5234, "area_stime": 27694.06, "delay_stime_ps": 5082.52, "area": 27680.23, "delay_ps": 3477.88, "levels": 39, "cec": true} True
+TREE 128 g3 43 10 {"tag": "delay", "D_target": null, "wall": 1.8718338012695312, "gates": 3804, "area_stime": 19844.03, "delay_stime_ps": 4644.23, "area": 19833.73, "delay_ps": 3274.16, "levels": 36, "cec": true} True
+TREE 128 g4 32 10 {"tag": "delay", "D_target": null, "wall": 1.434739351272583, "gates": 2735, "area_stime": 14440.1, "delay_stime_ps": 4171.07, "area": 14432.82, "delay_ps": 2886.65, "levels": 34, "cec": true} True
+ISO 128 g1 4653257 {"trees": 4635486.72, "neg": 17770.24} True
