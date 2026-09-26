@@ -53,5 +53,14 @@ Hardware for AI inference and arithmetic synthesis; power/physical effects in da
 - Glitch-aware MAC (no distinct mechanism).
 - Standard-cell covering (Wave 11 data).
 
+## Status at 09:21 UTC
+- Written: 00, 01, 02, 03, 04, 05 (thesis, Theorem 1 proven), 06 (E1 part), 07 (decision draft), REPRODUCTION. All committed and pushed.
+- **E1:** n ≤ 256 done. da4ml at 256/p0=.5 finished in the cap: UBP/da4ml = 1.34. The 512–4096 cost-only rows are still running.
+- **E2:** two parallel runs (`results/E2_p33`, `results/E2_p50`); ABC mapping of g1 in progress. When done:
+  1. run `e2_analyze.py`, writing `E2_summary.md`;
+  2. patch 06/07/00 with the numbers;
+  3. commit and push.
+- **Scope file:** `results/scope_closed_forms.txt`. Ternary ≈ g× with 4.3 lines/input at g=3; binary ≈ 4× at g=4 with 2 lines/input; int4 no useful gain.
+
 ## Next authorized action
 Finish E1 (sizes up to 4096). Run E2 (gate level, iso-delay, SKY130 via native ABC), then the analytic wire model. Then write 05/06/07 and REPRODUCTION, and commit and push.
