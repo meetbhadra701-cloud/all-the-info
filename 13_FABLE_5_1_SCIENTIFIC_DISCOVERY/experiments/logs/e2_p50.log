@@ -1,0 +1,1 @@
+0.5 g1 {"U": 8100, "B": 80581, "aig_ands": 465695, "aig_check": true, "ow": 15, "map_delay": {"tag": "delay", "D_target": null, "wall": 645.7847902774811, "gates": 357213, "area_stime": 1931839.0, "delay_stime_ps": 7304.74, "area": 1930893.59, "delay_ps": 3900.23, "levels": 47, "cec": true}}

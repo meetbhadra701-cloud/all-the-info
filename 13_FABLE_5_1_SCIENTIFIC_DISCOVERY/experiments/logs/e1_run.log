@@ -17,3 +17,5 @@
 256 0.5 1 g1 32571 bestUBP (17400, 'UBP4') da4ml {'timeout': True, 'wall': 660.1273620128632}
 256 0.5 2 g1 32542 bestUBP (17401, 'UBP4') da4ml {'skipped': True}
 512 0.33 0 g1 174857 bestUBP (63821, 'UBP5') da4ml {'skipped': True}
+512 0.33 1 g1 175226 bestUBP (63768, 'UBP5') da4ml {'skipped': True}
+512 0.33 2 g1 175481 bestUBP (63800, 'UBP5') da4ml {'skipped': True}

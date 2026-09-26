@@ -1,0 +1,137 @@
+======== ABC command line "read_lib -w /home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/inputs/lib/sky130_fd_sc_hd__tt_025C_1v80.lib; read_aiger design.aig; strash; dch; map; topo; stime -p; print_stats; write_blif mapped_delay.blif; cec design.aig"
+Parsing finished successfully.  Parsing time =     0.11 sec
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_6" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_8" without logic function.
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbn_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfbbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfrtp_4".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfsbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfstp_4".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dfxtp_4".
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__diode_2" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_1" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_2" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__dlclkp_4" without logic function.
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbn_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtn_4".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlrtp_4".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbn_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtn_4".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__dlxtp_1".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_1".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_2".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_4".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__ebufn_8".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__edfxtp_1".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_0".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_1".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_2".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_4".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvn_8".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_1".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_2".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_4".
+Scl_LibertyReadGenlib() skipped three-state cell "sky130_fd_sc_hd__einvp_8".
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_bleeder_1" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_12" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_3" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_4" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_6" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__lpflow_decapkapwr_8" without logic function.
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__lpflow_inputisolatch_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbn_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfbbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtn_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfrtp_4".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfsbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfstp_4".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sdfxtp_4".
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_1" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_2" without logic function.
+Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__sdlclkp_4" without logic function.
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
+Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
+Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/inputs/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.20 sec
+Memory =   19.81 MB. Time =     0.20 sec
+Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+WireLoad = "none"  [1;33mGates = 357213[0m (  8.5 %)   [1;32mCap =  5.6 ff[0m (  1.2 %)   [1;36mArea =  1931839.00[0m ( 91.5 %)   [1;35mDelay =  7304.74 ps[0m  (  0.3 %)               
+Path  0 --     381 : 0   49 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout = 126.7 ff  Cmax =   0.0 ff  G =    0  
+Path  1 --    9950 : 1   52 sky130_fd_sc_hd__clkinv_1 A =   3.75  Df = 743.2 -210.0 ps  S = 966.0 ps  Cin =  3.1 ff  Cout = 137.9 ff  Cmax = 190.4 ff  G = 4301  
+Path  2 --    9952 : 2    2 sky130_fd_sc_hd__nor2_1   A =   3.75  Df =1102.0 -434.9 ps  S = 222.8 ps  Cin =  2.4 ff  Cout =   5.1 ff  Cmax =  86.1 ff  G =  206  
+Path  3 --    9953 : 1    3 sky130_fd_sc_hd__clkinv_1 A =   3.75  Df =1232.2 -469.1 ps  S =  90.8 ps  Cin =  3.1 ff  Cout =   7.3 ff  Cmax = 190.4 ff  G =  228  
+Path  4 --    9955 : 2    4 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =1349.8 -258.2 ps  S = 106.6 ps  Cin =  2.3 ff  Cout =   9.7 ff  Cmax = 166.6 ff  G =  400  
+Path  5 --    9958 : 3    1 sky130_fd_sc_hd__nand3_1  A =   5.00  Df =1428.4 -248.2 ps  S =  58.1 ps  Cin =  2.4 ff  Cout =   2.4 ff  Cmax = 146.5 ff  G =   98  
+Path  6 --    9959 : 2   24 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =1869.1  -20.6 ps  S = 547.7 ps  Cin =  2.3 ff  Cout =  60.7 ff  Cmax = 166.6 ff  G = 2508  
+Path  7 --    9961 : 1   18 sky130_fd_sc_hd__clkinv_1 A =   3.75  Df =2304.8  -89.7 ps  S = 367.1 ps  Cin =  3.1 ff  Cout =  43.8 ff  Cmax = 190.4 ff  G = 1369  
+Path  8 --  302400 : 2    2 sky130_fd_sc_hd__nor2_1   A =   3.75  Df =2516.0 -219.7 ps  S = 150.4 ps  Cin =  2.4 ff  Cout =   4.3 ff  Cmax =  86.1 ff  G =  176  
+Path  9 --  302402 : 2    2 sky130_fd_sc_hd__nor2_1   A =   3.75  Df =2592.0 -165.0 ps  S = 114.7 ps  Cin =  2.4 ff  Cout =   4.9 ff  Cmax =  86.1 ff  G =  200  
+Path 10 --  302403 : 4    9 sky130_fd_sc_hd__o211ai_1 A =   7.51  Df =2819.2 -172.1 ps  S = 498.0 ps  Cin =  2.3 ff  Cout =  21.7 ff  Cmax =  74.2 ff  G =  895  
+Path 11 --  302685 : 3    3 sky130_fd_sc_hd__nand3_1  A =   5.00  Df =3000.7 -125.1 ps  S = 161.4 ps  Cin =  2.4 ff  Cout =   7.4 ff  Cmax = 146.5 ff  G =  299  
+Path 12 --  302686 : 3    4 sky130_fd_sc_hd__nand3_1  A =   5.00  Df =3168.4 -165.5 ps  S = 120.9 ps  Cin =  2.4 ff  Cout =   8.9 ff  Cmax = 146.5 ff  G =  365  
+Path 13 --  302890 : 3    3 sky130_fd_sc_hd__a21boi_0 A =   7.51  Df =3562.9 -255.3 ps  S = 430.3 ps  Cin =  1.7 ff  Cout =  12.7 ff  Cmax =  48.5 ff  G =  717  
+Path 14 --  302911 : 3    2 sky130_fd_sc_hd__xnor3_4  A =  26.28  Df =4132.2 -393.2 ps  S =  97.2 ps  Cin =  3.7 ff  Cout =   6.0 ff  Cmax = 554.8 ff  G =  155  
+Path 15 --  302919 : 2    3 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =4232.7 -426.3 ps  S =  77.6 ps  Cin =  2.3 ff  Cout =   6.6 ff  Cmax = 166.6 ff  G =  273  
+Path 16 --  303192 : 3    4 sky130_fd_sc_hd__a21boi_0 A =   7.51  Df =4620.6 -248.6 ps  S = 437.5 ps  Cin =  1.7 ff  Cout =  12.9 ff  Cmax =  48.5 ff  G =  725  
+Path 17 --  303273 : 3    2 sky130_fd_sc_hd__xnor3_4  A =  26.28  Df =5186.9 -439.4 ps  S =  94.3 ps  Cin =  3.7 ff  Cout =   4.9 ff  Cmax = 554.8 ff  G =  126  
+Path 18 --  303275 : 2    2 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =5275.0 -469.7 ps  S =  62.2 ps  Cin =  2.3 ff  Cout =   4.9 ff  Cmax = 166.6 ff  G =  200  
+Path 19 --  303277 : 2    1 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =5324.5 -259.8 ps  S =  47.2 ps  Cin =  2.3 ff  Cout =   2.4 ff  Cmax = 166.6 ff  G =   99  
+Path 20 --  303278 : 2    3 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =5402.2 -274.3 ps  S =  79.4 ps  Cin =  2.3 ff  Cout =   6.8 ff  Cmax = 166.6 ff  G =  283  
+Path 21 --  303364 : 3    4 sky130_fd_sc_hd__nand3_1  A =   5.00  Df =5542.6  -17.8 ps  S = 127.7 ps  Cin =  2.4 ff  Cout =   9.7 ff  Cmax = 146.5 ff  G =  396  
+Path 22 --  303656 : 2    2 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =5619.6   -0.5 ps  S =  67.5 ps  Cin =  2.3 ff  Cout =   4.8 ff  Cmax = 166.6 ff  G =  199  
+Path 23 --  303680 : 3    1 sky130_fd_sc_hd__a21oi_1  A =   5.00  Df =5717.6  -61.3 ps  S =  87.7 ps  Cin =  2.3 ff  Cout =   1.8 ff  Cmax =  74.2 ff  G =   73  
+Path 24 --  303681 : 3    5 sky130_fd_sc_hd__o21ai_0  A =   5.00  Df =6054.5 -148.9 ps  S = 482.3 ps  Cin =  1.7 ff  Cout =  15.2 ff  Cmax =  50.4 ff  G =  854  
+Path 25 --  303875 : 3    1 sky130_fd_sc_hd__xnor3_4  A =  26.28  Df =6623.3 -329.9 ps  S =  87.8 ps  Cin =  3.7 ff  Cout =   2.4 ff  Cmax = 554.8 ff  G =   62  
+Path 26 --  303877 : 2    1 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =6691.4 -355.1 ps  S =  44.2 ps  Cin =  2.3 ff  Cout =   2.4 ff  Cmax = 166.6 ff  G =   99  
+Path 27 --  303888 : 2    2 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =6754.1 -160.6 ps  S =  83.2 ps  Cin =  2.3 ff  Cout =   7.0 ff  Cmax = 166.6 ff  G =  290  
+Path 28 --  303892 : 2    2 sky130_fd_sc_hd__nor2_1   A =   3.75  Df =6863.6 -217.3 ps  S = 110.6 ps  Cin =  2.4 ff  Cout =   4.7 ff  Cmax =  86.1 ff  G =  195  
+Path 29 --  304156 : 4    3 sky130_fd_sc_hd__nand4_1  A =   6.26  Df =6984.3  -72.0 ps  S = 132.1 ps  Cin =  2.3 ff  Cout =   7.1 ff  Cmax = 124.5 ff  G =  295  
+Path 30 --  304223 : 4    2 sky130_fd_sc_hd__a31oi_1  A =   6.26  Df =7174.3 -161.9 ps  S = 170.0 ps  Cin =  2.3 ff  Cout =   5.0 ff  Cmax =  65.9 ff  G =  202  
+Path 31 --  304278 : 4    1 sky130_fd_sc_hd__o211a_1  A =  10.01  Df =7304.7  -52.7 ps  S =  24.4 ps  Cin =  2.3 ff  Cout =   0.0 ff  Cmax = 183.1 ff  G =    0  
+Start-point = pi0380.  End-point = po1558.
+[1;37mdesign                        :[0m i/o = 1024/ 1920  lat =    0  nd =357213  edge = 849543  area =1930893.59  delay =3900.23  lev = 47
+Networks are equivalent.  Time =   523.98 sec
+
+rc=0 wall=645.8
