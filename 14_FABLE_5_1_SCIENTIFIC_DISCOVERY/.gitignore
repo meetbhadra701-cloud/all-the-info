@@ -1,0 +1,6 @@
+experiments/results/*/orfs/
+experiments/results/*/*/*.aag
+experiments/results/*/*/netlist_raw.v
+experiments/results/*/*/*_gl_raw.v
+__pycache__/
+*.pyc

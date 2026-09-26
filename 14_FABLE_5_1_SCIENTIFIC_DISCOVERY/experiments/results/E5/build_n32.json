@@ -1,0 +1,125 @@
+{
+ "n": 32,
+ "dont_use": [
+  "sky130_fd_sc_hd__probe_p_8",
+  "sky130_fd_sc_hd__probec_p_8",
+  "sky130_fd_sc_hd__lpflow_bleeder_1",
+  "sky130_fd_sc_hd__lpflow_clkbufkapwr_1",
+  "sky130_fd_sc_hd__lpflow_clkbufkapwr_16",
+  "sky130_fd_sc_hd__lpflow_clkbufkapwr_2",
+  "sky130_fd_sc_hd__lpflow_clkbufkapwr_4",
+  "sky130_fd_sc_hd__lpflow_clkbufkapwr_8",
+  "sky130_fd_sc_hd__lpflow_clkinvkapwr_1",
+  "sky130_fd_sc_hd__lpflow_clkinvkapwr_16",
+  "sky130_fd_sc_hd__lpflow_clkinvkapwr_2",
+  "sky130_fd_sc_hd__lpflow_clkinvkapwr_4",
+  "sky130_fd_sc_hd__lpflow_clkinvkapwr_8",
+  "sky130_fd_sc_hd__lpflow_decapkapwr_12",
+  "sky130_fd_sc_hd__lpflow_decapkapwr_3",
+  "sky130_fd_sc_hd__lpflow_decapkapwr_4",
+  "sky130_fd_sc_hd__lpflow_decapkapwr_6",
+  "sky130_fd_sc_hd__lpflow_decapkapwr_8",
+  "sky130_fd_sc_hd__lpflow_inputiso0n_1",
+  "sky130_fd_sc_hd__lpflow_inputiso0p_1",
+  "sky130_fd_sc_hd__lpflow_inputiso1n_1",
+  "sky130_fd_sc_hd__lpflow_inputiso1p_1",
+  "sky130_fd_sc_hd__lpflow_inputisolatch_1",
+  "sky130_fd_sc_hd__lpflow_isobufsrc_1",
+  "sky130_fd_sc_hd__lpflow_isobufsrc_16",
+  "sky130_fd_sc_hd__lpflow_isobufsrc_2",
+  "sky130_fd_sc_hd__lpflow_isobufsrc_4",
+  "sky130_fd_sc_hd__lpflow_isobufsrc_8",
+  "sky130_fd_sc_hd__lpflow_isobufsrckapwr_16",
+  "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1",
+  "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2",
+  "sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4",
+  "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4",
+  "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1",
+  "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2",
+  "sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4",
+  "sky130_fd_sc_hd__fill_1",
+  "sky130_fd_sc_hd__fill_2",
+  "sky130_fd_sc_hd__fill_4",
+  "sky130_fd_sc_hd__fill_8"
+ ],
+ "designs": {
+  "g1": {
+   "modules": {
+    "NEG": "NEG_W8",
+    "TREE": "TREE_L32_W8"
+   },
+   "validation": true,
+   "negctl_detects": true,
+   "ow": 13,
+   "module_timing": {
+    "NEG_W8": {
+     "delay_ns": 0.9913764780321799,
+     "area_um2": 90.08639667573703
+    },
+    "TREE_L32_W8": {
+     "delay_ns": 5.574703973343276,
+     "area_um2": 8967.350417776743
+    }
+   },
+   "tree_budget_ns": 3.50862352196782,
+   "logic_path_ns": 6.566080451375456
+  },
+  "ubp3": {
+   "modules": {
+    "NEG": "NEG_W10",
+    "GEN2": "GEN2_W10",
+    "GEN3": "GEN3_W10",
+    "TREE": "TREE_L11_W10"
+   },
+   "validation": true,
+   "negctl_detects": true,
+   "ow": 13,
+   "module_timing": {
+    "NEG_W10": {
+     "delay_ns": 1.4523126561471145,
+     "area_um2": 116.36160091033076
+    },
+    "GEN2_W10": {
+     "delay_ns": 2.4601677888313134,
+     "area_um2": 384.118403751188
+    },
+    "GEN3_W10": {
+     "delay_ns": 3.5896465215955686,
+     "area_um2": 1930.601678523658
+    },
+    "TREE_L11_W10": {
+     "delay_ns": 4.329847311146295,
+     "area_um2": 3245.612889557492
+    }
+   },
+   "tree_budget_ns": -0.5419591777426831,
+   "logic_path_ns": 9.371806488888978
+  },
+  "ubp4": {
+   "modules": {
+    "NEG": "NEG_W10",
+    "GEN4": "GEN4_W10",
+    "TREE": "TREE_L8_W10"
+   },
+   "validation": true,
+   "negctl_detects": true,
+   "ow": 13,
+   "module_timing": {
+    "NEG_W10": {
+     "delay_ns": 1.4523126561471145,
+     "area_um2": 116.36160091033076
+    },
+    "GEN4_W10": {
+     "delay_ns": 4.654139015747205,
+     "area_um2": 7563.503601204502
+    },
+    "TREE_L8_W10": {
+     "delay_ns": 3.6879856362247665,
+     "area_um2": 2248.406349991683
+    }
+   },
+   "tree_budget_ns": -1.6064516718943196,
+   "logic_path_ns": 9.794437308119086
+  }
+ }
+}

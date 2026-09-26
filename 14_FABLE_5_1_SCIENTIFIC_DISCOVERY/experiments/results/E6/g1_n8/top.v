@@ -1,0 +1,20 @@
+module top(input clk, input start, input [7:0] x, output [7:0] y);
+  wire lp0, ln0; SNEG ng0 (.clk(clk), .start(start), .a(x[0]), .pos(lp0), .neg(ln0));
+  wire lp1, ln1; SNEG ng1 (.clk(clk), .start(start), .a(x[1]), .pos(lp1), .neg(ln1));
+  wire lp2, ln2; SNEG ng2 (.clk(clk), .start(start), .a(x[2]), .pos(lp2), .neg(ln2));
+  wire lp3, ln3; SNEG ng3 (.clk(clk), .start(start), .a(x[3]), .pos(lp3), .neg(ln3));
+  wire lp4, ln4; SNEG ng4 (.clk(clk), .start(start), .a(x[4]), .pos(lp4), .neg(ln4));
+  wire lp5, ln5; SNEG ng5 (.clk(clk), .start(start), .a(x[5]), .pos(lp5), .neg(ln5));
+  wire lp6, ln6; SNEG ng6 (.clk(clk), .start(start), .a(x[6]), .pos(lp6), .neg(ln6));
+  wire lp7, ln7; SNEG ng7 (.clk(clk), .start(start), .a(x[7]), .pos(lp7), .neg(ln7));
+  reg stt1; always @(posedge clk) stt1 <= start;
+  wire st_tree = stt1; wire zero; sky130_fd_sc_hd__conb_1 tie0 (.HI(), .LO(zero));
+  STREE_L8 row0 (.clk(clk), .start(st_tree), .x({lp7, lp6, zero, zero, lp3, lp2, zero, lp0}), .y(y[0]));
+  STREE_L8 row1 (.clk(clk), .start(st_tree), .x({zero, zero, lp5, zero, ln3, lp2, zero, zero}), .y(y[1]));
+  STREE_L8 row2 (.clk(clk), .start(st_tree), .x({zero, zero, lp5, zero, ln3, lp2, zero, ln0}), .y(y[2]));
+  STREE_L8 row3 (.clk(clk), .start(st_tree), .x({lp7, lp6, ln5, ln4, lp3, ln2, ln1, zero}), .y(y[3]));
+  STREE_L8 row4 (.clk(clk), .start(st_tree), .x({lp7, lp6, ln5, lp4, zero, lp2, lp1, lp0}), .y(y[4]));
+  STREE_L8 row5 (.clk(clk), .start(st_tree), .x({zero, zero, ln5, zero, lp3, ln2, ln1, ln0}), .y(y[5]));
+  STREE_L8 row6 (.clk(clk), .start(st_tree), .x({lp7, ln6, ln5, ln4, zero, lp2, lp1, zero}), .y(y[6]));
+  STREE_L8 row7 (.clk(clk), .start(st_tree), .x({lp7, lp6, zero, zero, zero, lp2, ln1, lp0}), .y(y[7]));
+endmodule

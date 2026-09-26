@@ -1,0 +1,651 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+
+-- Running command `read_verilog TREE_L11_W10.v; synth -flatten -top TREE_L11_W10; abc -liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -dont_use sky130_fd_sc_hd__fill_1 -dont_use sky130_fd_sc_hd__fill_2 -dont_use sky130_fd_sc_hd__fill_4 -dont_use sky130_fd_sc_hd__fill_8; opt_clean; hilomap -singleton -hicell sky130_fd_sc_hd__conb_1 HI -locell sky130_fd_sc_hd__conb_1 LO; opt_clean -purge; write_verilog -noattr -noexpr -nohex -nodec TREE_L11_W10_gl_raw.v' --
+
+1. Executing Verilog-2005 frontend: TREE_L11_W10.v
+Parsing Verilog input from `TREE_L11_W10.v' to AST representation.
+Generating RTLIL representation for module `\TREE_L11_W10'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \TREE_L11_W10
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \TREE_L11_W10
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.3. Executing CHECK pass (checking for obvious problems).
+Checking module TREE_L11_W10...
+Found and reported 0 problems.
+
+2.4. Executing FLATTEN pass (flatten design).
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module TREE_L11_W10...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 10 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \TREE_L11_W10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \TREE_L11_W10.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 10 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing FSM pass (extract and optimize FSM).
+
+2.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 10 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \TREE_L11_W10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \TREE_L11_W10.
+Performed a total of 0 changes.
+
+2.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 10 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.10.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.11. Executing WREDUCE pass (reducing word size of cells).
+Removed top 2 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:13$1 ($add).
+Removed top 2 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:14$2 ($add).
+Removed top 2 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:15$3 ($add).
+Removed top 2 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:16$4 ($add).
+Removed top 2 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:17$5 ($add).
+Converting cell TREE_L11_W10.$add$TREE_L11_W10.v:18$6 ($add) from unsigned to signed.
+Removed top 2 bits (of 13) from port A of cell TREE_L11_W10.$add$TREE_L11_W10.v:18$6 ($add).
+Removed top 2 bits (of 13) from port B of cell TREE_L11_W10.$add$TREE_L11_W10.v:18$6 ($add).
+Removed top 1 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:18$6 ($add).
+Converting cell TREE_L11_W10.$add$TREE_L11_W10.v:19$7 ($add) from unsigned to signed.
+Removed top 2 bits (of 13) from port A of cell TREE_L11_W10.$add$TREE_L11_W10.v:19$7 ($add).
+Removed top 2 bits (of 13) from port B of cell TREE_L11_W10.$add$TREE_L11_W10.v:19$7 ($add).
+Removed top 1 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:19$7 ($add).
+Removed top 2 bits (of 13) from port A of cell TREE_L11_W10.$add$TREE_L11_W10.v:20$8 ($add).
+Removed top 1 bits (of 13) from port Y of cell TREE_L11_W10.$add$TREE_L11_W10.v:20$8 ($add).
+Converting cell TREE_L11_W10.$add$TREE_L11_W10.v:21$9 ($add) from unsigned to signed.
+Removed top 1 bits (of 13) from port A of cell TREE_L11_W10.$add$TREE_L11_W10.v:21$9 ($add).
+Removed top 1 bits (of 13) from port B of cell TREE_L11_W10.$add$TREE_L11_W10.v:21$9 ($add).
+Removed top 1 bits (of 13) from port B of cell TREE_L11_W10.$add$TREE_L11_W10.v:22$10 ($add).
+
+2.12. Executing PEEPOPT pass (run peephole optimizers).
+
+2.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module TREE_L11_W10:
+  creating $macc model for $add$TREE_L11_W10.v:22$10 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:21$9 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:20$8 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:19$7 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:18$6 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:17$5 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:16$4 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:15$3 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:14$2 ($add).
+  creating $macc model for $add$TREE_L11_W10.v:13$1 ($add).
+  merging $macc model for $add$TREE_L11_W10.v:13$1 into $add$TREE_L11_W10.v:18$6.
+  merging $macc model for $add$TREE_L11_W10.v:14$2 into $add$TREE_L11_W10.v:18$6.
+  merging $macc model for $add$TREE_L11_W10.v:15$3 into $add$TREE_L11_W10.v:19$7.
+  merging $macc model for $add$TREE_L11_W10.v:16$4 into $add$TREE_L11_W10.v:19$7.
+  merging $macc model for $add$TREE_L11_W10.v:17$5 into $add$TREE_L11_W10.v:20$8.
+  merging $macc model for $add$TREE_L11_W10.v:18$6 into $add$TREE_L11_W10.v:21$9.
+  merging $macc model for $add$TREE_L11_W10.v:19$7 into $add$TREE_L11_W10.v:21$9.
+  merging $macc model for $add$TREE_L11_W10.v:21$9 into $add$TREE_L11_W10.v:22$10.
+  merging $macc model for $add$TREE_L11_W10.v:20$8 into $add$TREE_L11_W10.v:22$10.
+  creating $macc cell for $add$TREE_L11_W10.v:22$10: $auto$alumacc.cc:399:replace_macc$11
+  created 0 $alu and 1 $macc cells.
+
+2.15. Executing SHARE pass (SAT-based resource sharing).
+
+2.16. Executing OPT pass (performing simple optimizations).
+
+2.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 10 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \TREE_L11_W10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \TREE_L11_W10.
+Performed a total of 0 changes.
+
+2.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 10 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+Removed 9 unused cells and 1 unused wires.
+<suppressed ~10 debug messages>
+
+2.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.16.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \TREE_L11_W10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \TREE_L11_W10.
+Performed a total of 0 changes.
+
+2.16.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 1 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.16.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.16.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.16.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.17. Executing MEMORY pass.
+
+2.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+<suppressed ~9 debug messages>
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 1 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.19.5. Finished fast OPT passes.
+
+2.20. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 1 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \TREE_L11_W10..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+2.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \TREE_L11_W10.
+Performed a total of 0 changes.
+
+2.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 1 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.21.6. Executing OPT_SHARE pass.
+
+2.21.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+
+2.21.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.21.10. Finished fast OPT passes. (There is nothing left to do.)
+
+2.22. Executing TECHMAP pass (map to technology primitives).
+
+2.22.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.22.2. Continuing TECHMAP pass.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \x [9:0] (10 bits, signed)
+  add \x [89:80] (10 bits, signed)
+  add \x [49:40] (10 bits, signed)
+  add \x [29:20] (10 bits, signed)
+  add \x [19:10] (10 bits, signed)
+  add \x [39:30] (10 bits, signed)
+  add \x [69:60] (10 bits, signed)
+  add \x [59:50] (10 bits, signed)
+  add \x [79:70] (10 bits, signed)
+  add \x [109:100] (10 bits, signed)
+  add \x [99:90] (10 bits, signed)
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001101 for cells of type $fa.
+Using template $paramod$2780480d52179e2db572a6e5133edf36e733d32e\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $and.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001101 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+No more expansions possible.
+<suppressed ~342 debug messages>
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+<suppressed ~95 debug messages>
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 642 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 624 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 606 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 597 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 589 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 581 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 577 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 573 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 569 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Computing hashes of 567 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+<suppressed ~225 debug messages>
+Removed a total of 75 cells.
+
+2.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+Removed 21 unused cells and 136 unused wires.
+<suppressed ~22 debug messages>
+
+2.23.5. Finished fast OPT passes.
+
+2.24. Executing ABC pass (technology mapping using ABC).
+
+2.24.1. Extracting gate netlist of module `\TREE_L11_W10' to `<abc-temp-dir>/input.blif'..
+
+2.24.1.1. Executed ABC.
+Extracted 546 gates and 656 wires to a netlist network with 110 inputs and 13 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled 0 0)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.24.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       29
+ABC RESULTS:            ANDNOT cells:        3
+ABC RESULTS:               MUX cells:        3
+ABC RESULTS:              NAND cells:      234
+ABC RESULTS:               NOR cells:        4
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:       40
+ABC RESULTS:             ORNOT cells:        2
+ABC RESULTS:              XNOR cells:       70
+ABC RESULTS:               XOR cells:      140
+ABC RESULTS:        internal signals:      533
+ABC RESULTS:           input signals:      110
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+Removing global temp directory.
+
+2.25. Executing OPT pass (performing simple optimizations).
+
+2.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module TREE_L11_W10.
+
+2.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\TREE_L11_W10'.
+Computing hashes of 526 cells of `\TREE_L11_W10'.
+Finding duplicate cells in `\TREE_L11_W10'.
+Removed a total of 0 cells.
+
+2.25.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+Removed 0 unused cells and 198 unused wires.
+<suppressed ~1 debug messages>
+
+2.25.5. Finished fast OPT passes.
+
+2.26. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `TREE_L11_W10'. Setting top module to TREE_L11_W10.
+
+2.26.1. Analyzing design hierarchy..
+Top module:  \TREE_L11_W10
+
+2.26.2. Analyzing design hierarchy..
+Top module:  \TREE_L11_W10
+Removed 0 unused modules.
+
+2.27. Printing statistics.
+
+=== TREE_L11_W10 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      536 wires
+      876 wire bits
+       23 public wires
+      363 public wire bits
+        2 ports
+      123 port bits
+      526 cells
+        3   $_ANDNOT_
+       29   $_AND_
+        3   $_MUX_
+      234   $_NAND_
+        4   $_NOR_
+        1   $_NOT_
+        2   $_ORNOT_
+       40   $_OR_
+       70   $_XNOR_
+      140   $_XOR_
+
+2.28. Executing CHECK pass (checking for obvious problems).
+Checking module TREE_L11_W10...
+Found and reported 0 problems.
+
+3. Executing ABC pass (technology mapping using ABC).
+
+3.1. Extracting gate netlist of module `\TREE_L11_W10' to `<abc-temp-dir>/input.blif'..
+
+3.1.1. Executed ABC.
+Extracted 526 gates and 636 wires to a netlist network with 110 inputs and 13 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled 0 0)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f352e82c.scl 
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+3.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21o_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__clkinv_1 cells:        9
+ABC RESULTS:   sky130_fd_sc_hd__maj3_1 cells:       89
+ABC RESULTS:   sky130_fd_sc_hd__mux2i_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor3b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_0 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_0 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       89
+ABC RESULTS:   sky130_fd_sc_hd__xnor3_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       29
+ABC RESULTS:   sky130_fd_sc_hd__xor3_1 cells:       34
+ABC RESULTS:        internal signals:      513
+ABC RESULTS:           input signals:      110
+ABC RESULTS:          output signals:       13
+Removing temp directory.
+Removing global temp directory.
+
+4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+Removed 0 unused cells and 636 unused wires.
+<suppressed ~1 debug messages>
+
+5. Executing HILOMAP pass (mapping to constant drivers).
+
+6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \TREE_L11_W10..
+Removed 0 unused cells and 21 unused wires.
+<suppressed ~21 debug messages>
+
+7. Executing Verilog backend.
+Dumping module `\TREE_L11_W10'.
+
+End of script. Logfile hash: 2e35bdfa1c, time: 0.56s, user: 0.08s, system: 0.03s, MEM: 27.90 MB peak
+Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Time spent: 89% 2x abc (0 sec), 2% 3x read_verilog (0 sec), ...

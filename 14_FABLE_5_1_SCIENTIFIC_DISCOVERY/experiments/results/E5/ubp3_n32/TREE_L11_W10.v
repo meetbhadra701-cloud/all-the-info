@@ -1,0 +1,25 @@
+module TREE_L11_W10(input [109:0] x, output [12:0] y);
+  wire signed [9:0] l0 = x[9:0];
+  wire signed [9:0] l1 = x[19:10];
+  wire signed [9:0] l2 = x[29:20];
+  wire signed [9:0] l3 = x[39:30];
+  wire signed [9:0] l4 = x[49:40];
+  wire signed [9:0] l5 = x[59:50];
+  wire signed [9:0] l6 = x[69:60];
+  wire signed [9:0] l7 = x[79:70];
+  wire signed [9:0] l8 = x[89:80];
+  wire signed [9:0] l9 = x[99:90];
+  wire signed [9:0] l10 = x[109:100];
+  wire signed [12:0] t0 = l0 + l1;
+  wire signed [12:0] t1 = l2 + l3;
+  wire signed [12:0] t2 = l4 + l5;
+  wire signed [12:0] t3 = l6 + l7;
+  wire signed [12:0] t4 = l8 + l9;
+  wire signed [12:0] t5 = t0 + t1;
+  wire signed [12:0] t6 = t2 + t3;
+  wire signed [12:0] t7 = t4 + l10;
+  wire signed [12:0] t8 = t5 + t6;
+  wire signed [12:0] t9 = t8 + t7;
+  wire signed [12:0] s = t9;
+  assign y = s;
+endmodule

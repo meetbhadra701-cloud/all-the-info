@@ -1,0 +1,713 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+
+-- Running command `read_verilog SGEN3.v; synth -flatten -top SGEN3; dfflibmap -liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -dont_use sky130_fd_sc_hd__fill_1 -dont_use sky130_fd_sc_hd__fill_2 -dont_use sky130_fd_sc_hd__fill_4 -dont_use sky130_fd_sc_hd__fill_8; abc -liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -dont_use sky130_fd_sc_hd__fill_1 -dont_use sky130_fd_sc_hd__fill_2 -dont_use sky130_fd_sc_hd__fill_4 -dont_use sky130_fd_sc_hd__fill_8; opt_clean; hilomap -singleton -hicell sky130_fd_sc_hd__conb_1 HI -locell sky130_fd_sc_hd__conb_1 LO; opt_clean -purge; write_verilog -noattr -noexpr -nohex -nodec SGEN3_gl_raw.v' --
+
+1. Executing Verilog-2005 frontend: SGEN3.v
+Parsing Verilog input from `SGEN3.v' to AST representation.
+Generating RTLIL representation for module `\SGEN3'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \SGEN3
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \SGEN3
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 40 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:49$115'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:47$114'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:45$113'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:43$112'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:41$111'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:39$110'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:37$109'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:36$108'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:34$107'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:33$106'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:31$105'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:30$104'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:29$96'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:27$87'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:25$77'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:23$68'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:21$58'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:19$49'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:17$39'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:15$30'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:13$20'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:11$11'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:9$8'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:8$7'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:7$6'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:6$5'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:5$4'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:4$3'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:3$2'.
+Creating decoders for process `\SGEN3.$proc$SGEN3.v:2$1'.
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\SGEN3.\al8_1' using process `\SGEN3.$proc$SGEN3.v:49$115'.
+  created $dff cell `$procdff$116' with positive edge clock.
+Creating register for signal `\SGEN3.\al7_1' using process `\SGEN3.$proc$SGEN3.v:47$114'.
+  created $dff cell `$procdff$117' with positive edge clock.
+Creating register for signal `\SGEN3.\al6_1' using process `\SGEN3.$proc$SGEN3.v:45$113'.
+  created $dff cell `$procdff$118' with positive edge clock.
+Creating register for signal `\SGEN3.\al5_1' using process `\SGEN3.$proc$SGEN3.v:43$112'.
+  created $dff cell `$procdff$119' with positive edge clock.
+Creating register for signal `\SGEN3.\al4_1' using process `\SGEN3.$proc$SGEN3.v:41$111'.
+  created $dff cell `$procdff$120' with positive edge clock.
+Creating register for signal `\SGEN3.\al3_1' using process `\SGEN3.$proc$SGEN3.v:39$110'.
+  created $dff cell `$procdff$121' with positive edge clock.
+Creating register for signal `\SGEN3.\al2_1' using process `\SGEN3.$proc$SGEN3.v:37$109'.
+  created $dff cell `$procdff$122' with positive edge clock.
+Creating register for signal `\SGEN3.\al2_0' using process `\SGEN3.$proc$SGEN3.v:36$108'.
+  created $dff cell `$procdff$123' with positive edge clock.
+Creating register for signal `\SGEN3.\al1_1' using process `\SGEN3.$proc$SGEN3.v:34$107'.
+  created $dff cell `$procdff$124' with positive edge clock.
+Creating register for signal `\SGEN3.\al1_0' using process `\SGEN3.$proc$SGEN3.v:33$106'.
+  created $dff cell `$procdff$125' with positive edge clock.
+Creating register for signal `\SGEN3.\al0_1' using process `\SGEN3.$proc$SGEN3.v:31$105'.
+  created $dff cell `$procdff$126' with positive edge clock.
+Creating register for signal `\SGEN3.\al0_0' using process `\SGEN3.$proc$SGEN3.v:30$104'.
+  created $dff cell `$procdff$127' with positive edge clock.
+Creating register for signal `\SGEN3.\g9' using process `\SGEN3.$proc$SGEN3.v:29$96'.
+  created $dff cell `$procdff$128' with positive edge clock.
+Creating register for signal `\SGEN3.\gc9' using process `\SGEN3.$proc$SGEN3.v:29$96'.
+  created $dff cell `$procdff$129' with positive edge clock.
+Creating register for signal `\SGEN3.\g8' using process `\SGEN3.$proc$SGEN3.v:27$87'.
+  created $dff cell `$procdff$130' with positive edge clock.
+Creating register for signal `\SGEN3.\gc8' using process `\SGEN3.$proc$SGEN3.v:27$87'.
+  created $dff cell `$procdff$131' with positive edge clock.
+Creating register for signal `\SGEN3.\g7' using process `\SGEN3.$proc$SGEN3.v:25$77'.
+  created $dff cell `$procdff$132' with positive edge clock.
+Creating register for signal `\SGEN3.\gc7' using process `\SGEN3.$proc$SGEN3.v:25$77'.
+  created $dff cell `$procdff$133' with positive edge clock.
+Creating register for signal `\SGEN3.\g6' using process `\SGEN3.$proc$SGEN3.v:23$68'.
+  created $dff cell `$procdff$134' with positive edge clock.
+Creating register for signal `\SGEN3.\gc6' using process `\SGEN3.$proc$SGEN3.v:23$68'.
+  created $dff cell `$procdff$135' with positive edge clock.
+Creating register for signal `\SGEN3.\g5' using process `\SGEN3.$proc$SGEN3.v:21$58'.
+  created $dff cell `$procdff$136' with positive edge clock.
+Creating register for signal `\SGEN3.\gc5' using process `\SGEN3.$proc$SGEN3.v:21$58'.
+  created $dff cell `$procdff$137' with positive edge clock.
+Creating register for signal `\SGEN3.\g4' using process `\SGEN3.$proc$SGEN3.v:19$49'.
+  created $dff cell `$procdff$138' with positive edge clock.
+Creating register for signal `\SGEN3.\gc4' using process `\SGEN3.$proc$SGEN3.v:19$49'.
+  created $dff cell `$procdff$139' with positive edge clock.
+Creating register for signal `\SGEN3.\g3' using process `\SGEN3.$proc$SGEN3.v:17$39'.
+  created $dff cell `$procdff$140' with positive edge clock.
+Creating register for signal `\SGEN3.\gc3' using process `\SGEN3.$proc$SGEN3.v:17$39'.
+  created $dff cell `$procdff$141' with positive edge clock.
+Creating register for signal `\SGEN3.\g2' using process `\SGEN3.$proc$SGEN3.v:15$30'.
+  created $dff cell `$procdff$142' with positive edge clock.
+Creating register for signal `\SGEN3.\gc2' using process `\SGEN3.$proc$SGEN3.v:15$30'.
+  created $dff cell `$procdff$143' with positive edge clock.
+Creating register for signal `\SGEN3.\g1' using process `\SGEN3.$proc$SGEN3.v:13$20'.
+  created $dff cell `$procdff$144' with positive edge clock.
+Creating register for signal `\SGEN3.\gc1' using process `\SGEN3.$proc$SGEN3.v:13$20'.
+  created $dff cell `$procdff$145' with positive edge clock.
+Creating register for signal `\SGEN3.\g0' using process `\SGEN3.$proc$SGEN3.v:11$11'.
+  created $dff cell `$procdff$146' with positive edge clock.
+Creating register for signal `\SGEN3.\gc0' using process `\SGEN3.$proc$SGEN3.v:11$11'.
+  created $dff cell `$procdff$147' with positive edge clock.
+Creating register for signal `\SGEN3.\st_d2' using process `\SGEN3.$proc$SGEN3.v:9$8'.
+  created $dff cell `$procdff$148' with positive edge clock.
+Creating register for signal `\SGEN3.\st_d1' using process `\SGEN3.$proc$SGEN3.v:8$7'.
+  created $dff cell `$procdff$149' with positive edge clock.
+Creating register for signal `\SGEN3.\x2_d2' using process `\SGEN3.$proc$SGEN3.v:7$6'.
+  created $dff cell `$procdff$150' with positive edge clock.
+Creating register for signal `\SGEN3.\x2_d1' using process `\SGEN3.$proc$SGEN3.v:6$5'.
+  created $dff cell `$procdff$151' with positive edge clock.
+Creating register for signal `\SGEN3.\x1_d2' using process `\SGEN3.$proc$SGEN3.v:5$4'.
+  created $dff cell `$procdff$152' with positive edge clock.
+Creating register for signal `\SGEN3.\x1_d1' using process `\SGEN3.$proc$SGEN3.v:4$3'.
+  created $dff cell `$procdff$153' with positive edge clock.
+Creating register for signal `\SGEN3.\x0_d2' using process `\SGEN3.$proc$SGEN3.v:3$2'.
+  created $dff cell `$procdff$154' with positive edge clock.
+Creating register for signal `\SGEN3.\x0_d1' using process `\SGEN3.$proc$SGEN3.v:2$1'.
+  created $dff cell `$procdff$155' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `SGEN3.$proc$SGEN3.v:49$115'.
+Removing empty process `SGEN3.$proc$SGEN3.v:47$114'.
+Removing empty process `SGEN3.$proc$SGEN3.v:45$113'.
+Removing empty process `SGEN3.$proc$SGEN3.v:43$112'.
+Removing empty process `SGEN3.$proc$SGEN3.v:41$111'.
+Removing empty process `SGEN3.$proc$SGEN3.v:39$110'.
+Removing empty process `SGEN3.$proc$SGEN3.v:37$109'.
+Removing empty process `SGEN3.$proc$SGEN3.v:36$108'.
+Removing empty process `SGEN3.$proc$SGEN3.v:34$107'.
+Removing empty process `SGEN3.$proc$SGEN3.v:33$106'.
+Removing empty process `SGEN3.$proc$SGEN3.v:31$105'.
+Removing empty process `SGEN3.$proc$SGEN3.v:30$104'.
+Removing empty process `SGEN3.$proc$SGEN3.v:29$96'.
+Removing empty process `SGEN3.$proc$SGEN3.v:27$87'.
+Removing empty process `SGEN3.$proc$SGEN3.v:25$77'.
+Removing empty process `SGEN3.$proc$SGEN3.v:23$68'.
+Removing empty process `SGEN3.$proc$SGEN3.v:21$58'.
+Removing empty process `SGEN3.$proc$SGEN3.v:19$49'.
+Removing empty process `SGEN3.$proc$SGEN3.v:17$39'.
+Removing empty process `SGEN3.$proc$SGEN3.v:15$30'.
+Removing empty process `SGEN3.$proc$SGEN3.v:13$20'.
+Removing empty process `SGEN3.$proc$SGEN3.v:11$11'.
+Removing empty process `SGEN3.$proc$SGEN3.v:9$8'.
+Removing empty process `SGEN3.$proc$SGEN3.v:8$7'.
+Removing empty process `SGEN3.$proc$SGEN3.v:7$6'.
+Removing empty process `SGEN3.$proc$SGEN3.v:6$5'.
+Removing empty process `SGEN3.$proc$SGEN3.v:5$4'.
+Removing empty process `SGEN3.$proc$SGEN3.v:4$3'.
+Removing empty process `SGEN3.$proc$SGEN3.v:3$2'.
+Removing empty process `SGEN3.$proc$SGEN3.v:2$1'.
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.3. Executing CHECK pass (checking for obvious problems).
+Checking module SGEN3...
+Found and reported 0 problems.
+
+2.4. Executing FLATTEN pass (flatten design).
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+Removed 6 unused cells and 61 unused wires.
+<suppressed ~13 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module SGEN3...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 119 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \SGEN3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \SGEN3.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing FSM pass (extract and optimize FSM).
+
+2.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \SGEN3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+2.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \SGEN3.
+Performed a total of 0 changes.
+
+2.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.10.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.11. Executing WREDUCE pass (reducing word size of cells).
+
+2.12. Executing PEEPOPT pass (run peephole optimizers).
+
+2.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module SGEN3:
+  created 0 $alu and 0 $macc cells.
+
+2.15. Executing SHARE pass (SAT-based resource sharing).
+
+2.16. Executing OPT pass (performing simple optimizations).
+
+2.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \SGEN3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~20 debug messages>
+
+2.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \SGEN3.
+Performed a total of 0 changes.
+
+2.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.16.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.17. Executing MEMORY pass.
+
+2.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+<suppressed ~5 debug messages>
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.19.5. Finished fast OPT passes.
+
+2.20. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \SGEN3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+2.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \SGEN3.
+Performed a total of 0 changes.
+
+2.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.21.6. Executing OPT_SHARE pass.
+
+2.21.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.21.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.21.10. Finished fast OPT passes. (There is nothing left to do.)
+
+2.22. Executing TECHMAP pass (map to technology primitives).
+
+2.22.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.22.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $dff.
+No more expansions possible.
+<suppressed ~193 debug messages>
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 116 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+
+2.23.5. Finished fast OPT passes.
+
+2.24. Executing ABC pass (technology mapping using ABC).
+
+2.24.1. Extracting gate netlist of module `\SGEN3' to `<abc-temp-dir>/input.blif'..
+
+2.24.1.1. Executed ABC.
+Extracted 83 gates and 102 wires to a netlist network with 18 inputs and 20 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled 0 0)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.24.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       10
+ABC RESULTS:              NAND cells:       20
+ABC RESULTS:                OR cells:       10
+ABC RESULTS:             ORNOT cells:       15
+ABC RESULTS:               XOR cells:       10
+ABC RESULTS:        internal signals:       64
+ABC RESULTS:           input signals:       18
+ABC RESULTS:          output signals:       20
+Removing temp directory.
+Removing global temp directory.
+
+2.25. Executing OPT pass (performing simple optimizations).
+
+2.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module SGEN3.
+
+2.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\SGEN3'.
+Computing hashes of 98 cells of `\SGEN3'.
+Finding duplicate cells in `\SGEN3'.
+Removed a total of 0 cells.
+
+2.25.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+Removed 0 unused cells and 103 unused wires.
+<suppressed ~16 debug messages>
+
+2.25.5. Finished fast OPT passes.
+
+2.26. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `SGEN3'. Setting top module to SGEN3.
+
+2.26.1. Analyzing design hierarchy..
+Top module:  \SGEN3
+
+2.26.2. Analyzing design hierarchy..
+Top module:  \SGEN3
+Removed 0 unused modules.
+
+2.27. Printing statistics.
+
+=== SGEN3 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      103 wires
+      117 wire bits
+       38 public wires
+       52 public wire bits
+        4 ports
+       18 port bits
+       98 cells
+       10   $_AND_
+       33   $_DFF_P_
+       20   $_NAND_
+       15   $_ORNOT_
+       10   $_OR_
+       10   $_XOR_
+
+2.28. Executing CHECK pass (checking for obvious problems).
+Checking module SGEN3...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__edfxtp_1 (noninv, pins=4, area=30.03) is a direct match for cell type $_DFFE_PP_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    \sky130_fd_sc_hd__edfxtp_1 _DFFE_PP_ (.CLK( C), .D( D), .DE( E), .Q( Q));
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~24 debug messages>
+Mapping DFF cells in module `\SGEN3':
+  mapped 33 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\SGEN3' to `<abc-temp-dir>/input.blif'..
+
+4.1.1. Executed ABC.
+Extracted 65 gates and 83 wires to a netlist network with 18 inputs and 20 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled 0 0)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f352e82c.scl 
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__maj3_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:        5
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       15
+ABC RESULTS:        internal signals:       45
+ABC RESULTS:           input signals:       18
+ABC RESULTS:          output signals:       20
+Removing temp directory.
+Removing global temp directory.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+Removed 0 unused cells and 83 unused wires.
+<suppressed ~1 debug messages>
+
+6. Executing HILOMAP pass (mapping to constant drivers).
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \SGEN3..
+Removed 0 unused cells and 14 unused wires.
+<suppressed ~14 debug messages>
+
+8. Executing Verilog backend.
+Dumping module `\SGEN3'.
+
+End of script. Logfile hash: 9e0a364f0c, time: 0.51s, user: 0.14s, system: 0.04s, MEM: 51.90 MB peak
+Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Time spent: 75% 2x abc (0 sec), 16% 1x dfflibmap (0 sec), ...
