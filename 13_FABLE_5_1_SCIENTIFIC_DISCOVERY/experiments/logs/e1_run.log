@@ -19,3 +19,5 @@
 512 0.33 0 g1 174857 bestUBP (63821, 'UBP5') da4ml {'skipped': True}
 512 0.33 1 g1 175226 bestUBP (63768, 'UBP5') da4ml {'skipped': True}
 512 0.33 2 g1 175481 bestUBP (63800, 'UBP5') da4ml {'skipped': True}
+512 0.5 0 g1 130753 bestUBP (62352, 'UBP5') da4ml {'skipped': True}
+512 0.5 1 g1 130626 bestUBP (62388, 'UBP5') da4ml {'skipped': True}
