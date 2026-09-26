@@ -4044,11 +4044,8 @@ module top(x, y);
   wire [129:0] gb8;
   wire [129:0] gb9;
   wire [9:0] pn0_0;
-  wire [9:0] pn0_1;
   wire [9:0] pn0_10;
   wire [9:0] pn0_11;
-  wire [9:0] pn0_12;
-  wire [9:0] pn0_2;
   wire [9:0] pn0_3;
   wire [9:0] pn0_4;
   wire [9:0] pn0_5;
@@ -4060,24 +4057,18 @@ module top(x, y);
   wire [9:0] pn10_1;
   wire [9:0] pn10_2;
   wire [9:0] pn10_3;
-  wire [9:0] pn1_0;
-  wire [9:0] pn1_1;
   wire [9:0] pn1_10;
-  wire [9:0] pn1_11;
   wire [9:0] pn1_12;
   wire [9:0] pn1_2;
   wire [9:0] pn1_3;
   wire [9:0] pn1_4;
-  wire [9:0] pn1_5;
   wire [9:0] pn1_6;
   wire [9:0] pn1_7;
   wire [9:0] pn1_8;
   wire [9:0] pn1_9;
-  wire [9:0] pn2_0;
   wire [9:0] pn2_1;
   wire [9:0] pn2_10;
   wire [9:0] pn2_11;
-  wire [9:0] pn2_12;
   wire [9:0] pn2_2;
   wire [9:0] pn2_3;
   wire [9:0] pn2_4;
@@ -4090,31 +4081,20 @@ module top(x, y);
   wire [9:0] pn3_1;
   wire [9:0] pn3_10;
   wire [9:0] pn3_11;
-  wire [9:0] pn3_12;
   wire [9:0] pn3_2;
-  wire [9:0] pn3_3;
   wire [9:0] pn3_4;
   wire [9:0] pn3_5;
-  wire [9:0] pn3_6;
   wire [9:0] pn3_7;
   wire [9:0] pn3_8;
-  wire [9:0] pn3_9;
   wire [9:0] pn4_0;
   wire [9:0] pn4_1;
-  wire [9:0] pn4_10;
   wire [9:0] pn4_11;
-  wire [9:0] pn4_12;
-  wire [9:0] pn4_2;
   wire [9:0] pn4_3;
   wire [9:0] pn4_4;
-  wire [9:0] pn4_5;
-  wire [9:0] pn4_6;
   wire [9:0] pn4_7;
-  wire [9:0] pn4_8;
   wire [9:0] pn4_9;
   wire [9:0] pn5_0;
   wire [9:0] pn5_1;
-  wire [9:0] pn5_10;
   wire [9:0] pn5_11;
   wire [9:0] pn5_12;
   wire [9:0] pn5_2;
@@ -4124,10 +4104,7 @@ module top(x, y);
   wire [9:0] pn5_6;
   wire [9:0] pn5_7;
   wire [9:0] pn5_8;
-  wire [9:0] pn5_9;
-  wire [9:0] pn6_0;
   wire [9:0] pn6_1;
-  wire [9:0] pn6_10;
   wire [9:0] pn6_11;
   wire [9:0] pn6_12;
   wire [9:0] pn6_2;
@@ -4137,25 +4114,18 @@ module top(x, y);
   wire [9:0] pn6_6;
   wire [9:0] pn6_7;
   wire [9:0] pn6_8;
-  wire [9:0] pn6_9;
-  wire [9:0] pn7_0;
   wire [9:0] pn7_1;
   wire [9:0] pn7_10;
   wire [9:0] pn7_11;
   wire [9:0] pn7_12;
   wire [9:0] pn7_2;
   wire [9:0] pn7_3;
-  wire [9:0] pn7_4;
-  wire [9:0] pn7_5;
   wire [9:0] pn7_6;
   wire [9:0] pn7_7;
   wire [9:0] pn7_8;
-  wire [9:0] pn7_9;
   wire [9:0] pn8_0;
-  wire [9:0] pn8_1;
   wire [9:0] pn8_10;
   wire [9:0] pn8_11;
-  wire [9:0] pn8_12;
   wire [9:0] pn8_2;
   wire [9:0] pn8_3;
   wire [9:0] pn8_4;
@@ -4163,51 +4133,29 @@ module top(x, y);
   wire [9:0] pn8_6;
   wire [9:0] pn8_7;
   wire [9:0] pn8_8;
-  wire [9:0] pn8_9;
   wire [9:0] pn9_0;
   wire [9:0] pn9_1;
-  wire [9:0] pn9_10;
-  wire [9:0] pn9_11;
   wire [9:0] pn9_12;
   wire [9:0] pn9_2;
   wire [9:0] pn9_3;
   wire [9:0] pn9_4;
-  wire [9:0] pn9_5;
-  wire [9:0] pn9_6;
   wire [9:0] pn9_7;
   wire [9:0] pn9_8;
   wire [9:0] pn9_9;
-  wire z0;
   wire z1;
   wire z10;
   wire z11;
   wire z12;
   wire z13;
   wire z14;
-  wire z15;
-  wire z16;
   wire z17;
-  wire z18;
-  wire z19;
   wire z2;
-  wire z20;
-  wire z21;
   wire z22;
-  wire z23;
-  wire z24;
-  wire z25;
   wire z26;
-  wire z27;
-  wire z28;
   wire z29;
-  wire z3;
   wire z30;
   wire z31;
-  wire z4;
-  wire z5;
-  wire z6;
   wire z7;
-  wire z8;
   wire z9;
   GEN3_W10 gen0 (
     .x(x[23:0]),
@@ -4257,10 +4205,6 @@ module top(x, y);
     .x(gb0[9:0]),
     .y(pn0_0)
   );
-  NEG_W10 neg0_1 (
-    .x(gb0[19:10]),
-    .y(pn0_1)
-  );
   NEG_W10 neg0_10 (
     .x(gb0[109:100]),
     .y(pn0_10)
@@ -4268,14 +4212,6 @@ module top(x, y);
   NEG_W10 neg0_11 (
     .x(gb0[119:110]),
     .y(pn0_11)
-  );
-  NEG_W10 neg0_12 (
-    .x(gb0[129:120]),
-    .y(pn0_12)
-  );
-  NEG_W10 neg0_2 (
-    .x(gb0[29:20]),
-    .y(pn0_2)
   );
   NEG_W10 neg0_3 (
     .x(gb0[39:30]),
@@ -4321,21 +4257,9 @@ module top(x, y);
     .x(gb10[39:30]),
     .y(pn10_3)
   );
-  NEG_W10 neg1_0 (
-    .x(gb1[9:0]),
-    .y(pn1_0)
-  );
-  NEG_W10 neg1_1 (
-    .x(gb1[19:10]),
-    .y(pn1_1)
-  );
   NEG_W10 neg1_10 (
     .x(gb1[109:100]),
     .y(pn1_10)
-  );
-  NEG_W10 neg1_11 (
-    .x(gb1[119:110]),
-    .y(pn1_11)
   );
   NEG_W10 neg1_12 (
     .x(gb1[129:120]),
@@ -4353,10 +4277,6 @@ module top(x, y);
     .x(gb1[49:40]),
     .y(pn1_4)
   );
-  NEG_W10 neg1_5 (
-    .x(gb1[59:50]),
-    .y(pn1_5)
-  );
   NEG_W10 neg1_6 (
     .x(gb1[69:60]),
     .y(pn1_6)
@@ -4373,10 +4293,6 @@ module top(x, y);
     .x(gb1[99:90]),
     .y(pn1_9)
   );
-  NEG_W10 neg2_0 (
-    .x(gb2[9:0]),
-    .y(pn2_0)
-  );
   NEG_W10 neg2_1 (
     .x(gb2[19:10]),
     .y(pn2_1)
@@ -4388,10 +4304,6 @@ module top(x, y);
   NEG_W10 neg2_11 (
     .x(gb2[119:110]),
     .y(pn2_11)
-  );
-  NEG_W10 neg2_12 (
-    .x(gb2[129:120]),
-    .y(pn2_12)
   );
   NEG_W10 neg2_2 (
     .x(gb2[29:20]),
@@ -4441,17 +4353,9 @@ module top(x, y);
     .x(gb3[119:110]),
     .y(pn3_11)
   );
-  NEG_W10 neg3_12 (
-    .x(gb3[129:120]),
-    .y(pn3_12)
-  );
   NEG_W10 neg3_2 (
     .x(gb3[29:20]),
     .y(pn3_2)
-  );
-  NEG_W10 neg3_3 (
-    .x(gb3[39:30]),
-    .y(pn3_3)
   );
   NEG_W10 neg3_4 (
     .x(gb3[49:40]),
@@ -4461,10 +4365,6 @@ module top(x, y);
     .x(gb3[59:50]),
     .y(pn3_5)
   );
-  NEG_W10 neg3_6 (
-    .x(gb3[69:60]),
-    .y(pn3_6)
-  );
   NEG_W10 neg3_7 (
     .x(gb3[79:70]),
     .y(pn3_7)
@@ -4472,10 +4372,6 @@ module top(x, y);
   NEG_W10 neg3_8 (
     .x(gb3[89:80]),
     .y(pn3_8)
-  );
-  NEG_W10 neg3_9 (
-    .x(gb3[99:90]),
-    .y(pn3_9)
   );
   NEG_W10 neg4_0 (
     .x(gb4[9:0]),
@@ -4485,21 +4381,9 @@ module top(x, y);
     .x(gb4[19:10]),
     .y(pn4_1)
   );
-  NEG_W10 neg4_10 (
-    .x(gb4[109:100]),
-    .y(pn4_10)
-  );
   NEG_W10 neg4_11 (
     .x(gb4[119:110]),
     .y(pn4_11)
-  );
-  NEG_W10 neg4_12 (
-    .x(gb4[129:120]),
-    .y(pn4_12)
-  );
-  NEG_W10 neg4_2 (
-    .x(gb4[29:20]),
-    .y(pn4_2)
   );
   NEG_W10 neg4_3 (
     .x(gb4[39:30]),
@@ -4509,21 +4393,9 @@ module top(x, y);
     .x(gb4[49:40]),
     .y(pn4_4)
   );
-  NEG_W10 neg4_5 (
-    .x(gb4[59:50]),
-    .y(pn4_5)
-  );
-  NEG_W10 neg4_6 (
-    .x(gb4[69:60]),
-    .y(pn4_6)
-  );
   NEG_W10 neg4_7 (
     .x(gb4[79:70]),
     .y(pn4_7)
-  );
-  NEG_W10 neg4_8 (
-    .x(gb4[89:80]),
-    .y(pn4_8)
   );
   NEG_W10 neg4_9 (
     .x(gb4[99:90]),
@@ -4536,10 +4408,6 @@ module top(x, y);
   NEG_W10 neg5_1 (
     .x(gb5[19:10]),
     .y(pn5_1)
-  );
-  NEG_W10 neg5_10 (
-    .x(gb5[109:100]),
-    .y(pn5_10)
   );
   NEG_W10 neg5_11 (
     .x(gb5[119:110]),
@@ -4577,21 +4445,9 @@ module top(x, y);
     .x(gb5[89:80]),
     .y(pn5_8)
   );
-  NEG_W10 neg5_9 (
-    .x(gb5[99:90]),
-    .y(pn5_9)
-  );
-  NEG_W10 neg6_0 (
-    .x(gb6[9:0]),
-    .y(pn6_0)
-  );
   NEG_W10 neg6_1 (
     .x(gb6[19:10]),
     .y(pn6_1)
-  );
-  NEG_W10 neg6_10 (
-    .x(gb6[109:100]),
-    .y(pn6_10)
   );
   NEG_W10 neg6_11 (
     .x(gb6[119:110]),
@@ -4629,14 +4485,6 @@ module top(x, y);
     .x(gb6[89:80]),
     .y(pn6_8)
   );
-  NEG_W10 neg6_9 (
-    .x(gb6[99:90]),
-    .y(pn6_9)
-  );
-  NEG_W10 neg7_0 (
-    .x(gb7[9:0]),
-    .y(pn7_0)
-  );
   NEG_W10 neg7_1 (
     .x(gb7[19:10]),
     .y(pn7_1)
@@ -4661,14 +4509,6 @@ module top(x, y);
     .x(gb7[39:30]),
     .y(pn7_3)
   );
-  NEG_W10 neg7_4 (
-    .x(gb7[49:40]),
-    .y(pn7_4)
-  );
-  NEG_W10 neg7_5 (
-    .x(gb7[59:50]),
-    .y(pn7_5)
-  );
   NEG_W10 neg7_6 (
     .x(gb7[69:60]),
     .y(pn7_6)
@@ -4681,17 +4521,9 @@ module top(x, y);
     .x(gb7[89:80]),
     .y(pn7_8)
   );
-  NEG_W10 neg7_9 (
-    .x(gb7[99:90]),
-    .y(pn7_9)
-  );
   NEG_W10 neg8_0 (
     .x(gb8[9:0]),
     .y(pn8_0)
-  );
-  NEG_W10 neg8_1 (
-    .x(gb8[19:10]),
-    .y(pn8_1)
   );
   NEG_W10 neg8_10 (
     .x(gb8[109:100]),
@@ -4700,10 +4532,6 @@ module top(x, y);
   NEG_W10 neg8_11 (
     .x(gb8[119:110]),
     .y(pn8_11)
-  );
-  NEG_W10 neg8_12 (
-    .x(gb8[129:120]),
-    .y(pn8_12)
   );
   NEG_W10 neg8_2 (
     .x(gb8[29:20]),
@@ -4733,10 +4561,6 @@ module top(x, y);
     .x(gb8[89:80]),
     .y(pn8_8)
   );
-  NEG_W10 neg8_9 (
-    .x(gb8[99:90]),
-    .y(pn8_9)
-  );
   NEG_W10 neg9_0 (
     .x(gb9[9:0]),
     .y(pn9_0)
@@ -4744,14 +4568,6 @@ module top(x, y);
   NEG_W10 neg9_1 (
     .x(gb9[19:10]),
     .y(pn9_1)
-  );
-  NEG_W10 neg9_10 (
-    .x(gb9[109:100]),
-    .y(pn9_10)
-  );
-  NEG_W10 neg9_11 (
-    .x(gb9[119:110]),
-    .y(pn9_11)
   );
   NEG_W10 neg9_12 (
     .x(gb9[129:120]),
@@ -4768,14 +4584,6 @@ module top(x, y);
   NEG_W10 neg9_4 (
     .x(gb9[49:40]),
     .y(pn9_4)
-  );
-  NEG_W10 neg9_5 (
-    .x(gb9[59:50]),
-    .y(pn9_5)
-  );
-  NEG_W10 neg9_6 (
-    .x(gb9[69:60]),
-    .y(pn9_6)
   );
   NEG_W10 neg9_7 (
     .x(gb9[79:70]),
@@ -4917,9 +4725,6 @@ module top(x, y);
     .x({ z9, z9, z9, z9, z9, z9, z9, z9, z9, z9, pn9_4, pn8_0, gb7[119:110], z9, z9, z9, z9, z9, z9, z9, z9, z9, z9, gb5[9:0], gb4[89:80], gb3[89:80], gb2[29:20], gb1[29:20], pn0_0 }),
     .y(y[129:117])
   );
-  sky130_fd_sc_hd__conb_1 tie0 (
-    .LO(z0)
-  );
   sky130_fd_sc_hd__conb_1 tie1 (
     .LO(z1)
   );
@@ -4938,56 +4743,20 @@ module top(x, y);
   sky130_fd_sc_hd__conb_1 tie14 (
     .LO(z14)
   );
-  sky130_fd_sc_hd__conb_1 tie15 (
-    .LO(z15)
-  );
-  sky130_fd_sc_hd__conb_1 tie16 (
-    .LO(z16)
-  );
   sky130_fd_sc_hd__conb_1 tie17 (
     .LO(z17)
-  );
-  sky130_fd_sc_hd__conb_1 tie18 (
-    .LO(z18)
-  );
-  sky130_fd_sc_hd__conb_1 tie19 (
-    .LO(z19)
   );
   sky130_fd_sc_hd__conb_1 tie2 (
     .LO(z2)
   );
-  sky130_fd_sc_hd__conb_1 tie20 (
-    .LO(z20)
-  );
-  sky130_fd_sc_hd__conb_1 tie21 (
-    .LO(z21)
-  );
   sky130_fd_sc_hd__conb_1 tie22 (
     .LO(z22)
-  );
-  sky130_fd_sc_hd__conb_1 tie23 (
-    .LO(z23)
-  );
-  sky130_fd_sc_hd__conb_1 tie24 (
-    .LO(z24)
-  );
-  sky130_fd_sc_hd__conb_1 tie25 (
-    .LO(z25)
   );
   sky130_fd_sc_hd__conb_1 tie26 (
     .LO(z26)
   );
-  sky130_fd_sc_hd__conb_1 tie27 (
-    .LO(z27)
-  );
-  sky130_fd_sc_hd__conb_1 tie28 (
-    .LO(z28)
-  );
   sky130_fd_sc_hd__conb_1 tie29 (
     .LO(z29)
-  );
-  sky130_fd_sc_hd__conb_1 tie3 (
-    .LO(z3)
   );
   sky130_fd_sc_hd__conb_1 tie30 (
     .LO(z30)
@@ -4995,20 +4764,8 @@ module top(x, y);
   sky130_fd_sc_hd__conb_1 tie31 (
     .LO(z31)
   );
-  sky130_fd_sc_hd__conb_1 tie4 (
-    .LO(z4)
-  );
-  sky130_fd_sc_hd__conb_1 tie5 (
-    .LO(z5)
-  );
-  sky130_fd_sc_hd__conb_1 tie6 (
-    .LO(z6)
-  );
   sky130_fd_sc_hd__conb_1 tie7 (
     .LO(z7)
-  );
-  sky130_fd_sc_hd__conb_1 tie8 (
-    .LO(z8)
   );
   sky130_fd_sc_hd__conb_1 tie9 (
     .LO(z9)

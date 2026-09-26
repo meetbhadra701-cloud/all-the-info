@@ -305,7 +305,7 @@ def main(out: Path, n: int, designs):
         top, latency = build_top(design, n, W, mods, depth)
         (wd / 'top.v').write_text(top)
         rd = ' '.join(f'read_verilog {f};' for f in files + ['top.v'])
-        p = dock(f"yosys -q -p 'read_liberty -lib {LIB}; {rd} hierarchy -top top; opt_clean -purge; "
+        p = dock(f"yosys -q -p 'read_liberty -lib {LIB}; {rd} hierarchy -top top; setattr -set keep 1 top/t:*; opt_clean -purge; "
                  f"write_verilog -noattr -noexpr -nohex -nodec netlist_raw.v'", wd)
         if p.returncode != 0:
             raise RuntimeError(p.stderr[-2000:])

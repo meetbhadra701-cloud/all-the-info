@@ -1354,7 +1354,6 @@ module top(clk, start, x, y);
   wire pn14_0;
   wire pn14_1;
   wire pn14_10;
-  wire pn14_11;
   wire pn14_12;
   wire pn14_2;
   wire pn14_3;
@@ -1628,7 +1627,6 @@ module top(clk, start, x, y);
   wire pp14_0;
   wire pp14_1;
   wire pp14_10;
-  wire pp14_11;
   wire pp14_12;
   wire pp14_2;
   wire pp14_3;
@@ -2456,13 +2454,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn14_10),
     .pos(pp14_10),
-    .start(sd2)
-  );
-  SNEG ng14_11 (
-    .a(gy14[11]),
-    .clk(clk),
-    .neg(pn14_11),
-    .pos(pp14_11),
     .start(sd2)
   );
   SNEG ng14_12 (

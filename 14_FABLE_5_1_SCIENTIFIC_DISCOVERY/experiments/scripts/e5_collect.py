@@ -6,8 +6,11 @@ python3 e5_collect.py E6_DIR 64 serial   > ../results/E6_summary.md   (bit-seria
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
+
+CONB_AREA = 3.7536  # sky130_fd_sc_hd__conb_1 (tie) cell area, um^2
 
 MODES = {
     # nick prefix, clock ns, timing decisive?, decision labels
@@ -33,8 +36,8 @@ def main(edir: Path, n: int, mode: str):
     else:
         print('SKY130 HD, ORFS (openroad/orfs image 69df744e2b5c), area-oriented module synthesis + dfflibmap, real 3.0 ns clock with CTS (E6 pre-registration).')
         print('valid = our cycle-accurate sequential AIG simulation of the full top netlist vs numpy W@x (12 back-to-back words) and the one-connection mutation is detected.\n')
-    print('| design | valid | util % | rc | synth cell area um^2 | final cell area um^2 | core area um^2 | GRT viol | DRT DRC | routed WL um | setup WS ns | hold WS ns | delay/period ns |')
-    print('|---|---|---|---|---|---|---|---|---|---|---|---|---|')
+    print('| design | valid | util % | rc | DCE-removed inst | synth cell area um^2 | tie cells (final) | final cell area um^2 | core area um^2 | GRT viol | DRT DRC | routed WL um | setup WS ns | hold WS ns | delay/period ns |')
+    print('|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|')
     res = {}
     f = lambda v, p=0: '—' if v is None else (f'{v:.{p}f}' if isinstance(v, float) else str(v))
     for d in sorted(build['designs']):
@@ -47,10 +50,17 @@ def main(edir: Path, n: int, mode: str):
             if not rcf.exists():
                 continue
             rc = rcf.read_text().strip()
-            fp, grt, drt, fin = (load(base / x) for x in ('2_1_floorplan.json', '5_1_grt.json', '5_2_route.json', '6_report.json'))
+            syn, fp, grt, drt, fin = (load(base / x) for x in ('1_synth.json', '2_1_floorplan.json', '5_1_grt.json', '5_2_route.json', '6_report.json'))
+            slog = base / '1_synth.log'
+            mm = re.search(r'Removed (\d+) unused instances', slog.read_text()) if slog.exists() else None
+            fv = edir / 'orfs' / 'results' / 'sky130hd' / nick / 'base' / '6_final.v'
+            ties = fv.read_text().count('sky130_fd_sc_hd__conb_1 ') if fv.exists() else None
             row = {
                 'rc': rc,
-                'synth_area': fp and fp.get('floorplan__design__instance__area'),
+                'synth_area': syn and syn.get('synth__design__instance__area'),
+                'fp_area': fp and fp.get('floorplan__design__instance__area'),
+                'dce': int(mm.group(1)) if mm else None,
+                'ties': ties,
                 'final_area': fin and fin.get('finish__design__instance__area__stdcell'),
                 'core_area': fp and fp.get('floorplan__design__core__area'),
                 'grt_viol': grt and grt.get('globalroute__design__violations'),
@@ -64,7 +74,7 @@ def main(edir: Path, n: int, mode: str):
             if M['timing_decisive']:
                 row['clean'] = row['clean'] and row['ws'] is not None and row['ws'] >= 0 and (row['hws'] is None or row['hws'] >= 0)
             res[(d, u)] = row
-            print(f"| {d} | {info['validation'] and info['negctl_detects']} | {u} | {rc} | {f(row['synth_area'])} | {f(row['final_area'])} | "
+            print(f"| {d} | {info['validation'] and info['negctl_detects']} | {u} | {rc} | {f(row['dce'])} | {f(row['synth_area'])} | {f(row['ties'])} | {f(row['final_area'])} | "
                   f"{f(row['core_area'])} | {f(row['grt_viol'])} | {f(row['drc'])} | {f(row['wl'])} | {f(row['ws'], 3)} | {f(row['hws'], 3)} | {f(row['delay'], 2)} |")
     if mode == 'serial':
         print('\nLatency (cycles from word start to first output bit) and throughput (cycles per word), from build_n64.json:\n')
@@ -79,8 +89,11 @@ def main(edir: Path, n: int, mode: str):
         if clean:
             u = max(clean)
             r = res[(d, u)]
-            routed[d] = dict(area=r['synth_area'] / (u / 100.0), final=r['final_area'] / (u / 100.0), u=u, delay=r['delay'], wl=r['wl'])
-            print(f"- {d}: U_max = {u}% -> routed area {routed[d]['area']:.0f} um^2 (final-cell-area basis {routed[d]['final']:.0f}); "
+            notie = r['final_area'] - CONB_AREA * (r['ties'] or 0)
+            routed[d] = dict(area=r['synth_area'] / (u / 100.0), final=r['final_area'] / (u / 100.0), notie=notie / (u / 100.0),
+                             u=u, delay=r['delay'], wl=r['wl'])
+            print(f"- {d}: U_max = {u}% -> routed area {routed[d]['area']:.0f} um^2 (final-cell basis {routed[d]['final']:.0f}; "
+                  f"final-minus-ties basis {routed[d]['notie']:.0f}); "
                   f"{'min period' if mode == 'serial' else 'natural delay'} {r['delay']:.2f} ns; routed WL {r['wl']}")
         else:
             print(f'- {d}: no qualifying route in tested range (or runs incomplete)')
@@ -90,7 +103,9 @@ def main(edir: Path, n: int, mode: str):
             best = min(ubps, key=lambda d: ubps[d]['area'])
             ratio = routed['g1']['area'] / ubps[best]['area']
             ratio_f = routed['g1']['final'] / ubps[best]['final']
-            print(f"\n**g1 / best UBP ({best}) routed-area ratio = {ratio:.3f}** (final-cell-area basis {ratio_f:.3f}); "
+            ratio_n = routed['g1']['notie'] / ubps[best]['notie']
+            print(f"\n**g1 / best UBP ({best}) routed-area ratio = {ratio:.3f}** (sensitivity: final-cell basis {ratio_f:.3f}, "
+                  f"final-minus-ties basis {ratio_n:.3f}); "
                   f"delay ratio {best}/g1 = {ubps[best]['delay'] / routed['g1']['delay']:.2f}; WL ratio g1/{best} = {routed['g1']['wl'] / ubps[best]['wl']:.2f}")
             for d, v in sorted(ubps.items()):
                 print(f"- g1 / {d} = {routed['g1']['area'] / v['area']:.3f}")

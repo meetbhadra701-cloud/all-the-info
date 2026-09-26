@@ -1,0 +1,195 @@
+
+4. Printing statistics.
+
+=== top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      362        - wires
+     7104        - wire bits
+      362        - public wires
+     7104        - public wire bits
+        2        - ports
+      672        - port bits
+       32  120.115 cells
+       32  120.115   sky130_fd_sc_hd__conb_1
+      360        - submodules
+        8        -   GEN4_W10
+      320        -   NEG_W10
+       32        -   TREE_L8_W10
+
+   Chip area for module '\top': 120.115200
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== TREE_L8_W10 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      228        - wires
+      319        - wire bits
+      228        - public wires
+      319        - public wire bits
+        2        - ports
+       93        - port bits
+      239 2.25E+03 cells
+        1    7.507   sky130_fd_sc_hd__a21boi_0
+        3   22.522   sky130_fd_sc_hd__a21o_1
+        9   45.043   sky130_fd_sc_hd__a21oi_1
+        2   12.512   sky130_fd_sc_hd__and2_0
+        4   25.024   sky130_fd_sc_hd__and3_1
+        4   15.014   sky130_fd_sc_hd__clkinv_1
+       50   500.48   sky130_fd_sc_hd__maj3_1
+       14    52.55   sky130_fd_sc_hd__nand2_1
+       11   68.816   sky130_fd_sc_hd__nand2b_1
+        3   15.014   sky130_fd_sc_hd__nand3_1
+       13   48.797   sky130_fd_sc_hd__nor2_1
+        4   25.024   sky130_fd_sc_hd__nor2b_1
+        2    10.01   sky130_fd_sc_hd__nor3_1
+        8   40.038   sky130_fd_sc_hd__o21ai_0
+        1    7.507   sky130_fd_sc_hd__o21bai_1
+        2   12.512   sky130_fd_sc_hd__or2_0
+       64  560.538   sky130_fd_sc_hd__xnor2_1
+        9  202.694   sky130_fd_sc_hd__xnor3_1
+       17  148.893   sky130_fd_sc_hd__xor2_1
+       18   427.91   sky130_fd_sc_hd__xor3_1
+
+   Chip area for module '\TREE_L8_W10': 2248.406400
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== NEG_W10 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       10        - wires
+       28        - wire bits
+       10        - public wires
+       28        - public wire bits
+        2        - ports
+       20        - port bits
+       17  116.362 cells
+        3   11.261   sky130_fd_sc_hd__nor2_1
+        3   15.014   sky130_fd_sc_hd__nor3_1
+        3   22.522   sky130_fd_sc_hd__o21a_1
+        2   15.014   sky130_fd_sc_hd__or4_1
+        3   26.275   sky130_fd_sc_hd__xnor2_1
+        3   26.275   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\NEG_W10': 116.361600
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== GEN4_W10 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      701        - wires
+     1131        - wire bits
+      701        - public wires
+     1131        - public wire bits
+        2        - ports
+      432        - port bits
+     1022 7.56E+03 cells
+        2   15.014   sky130_fd_sc_hd__a211oi_1
+        4   30.029   sky130_fd_sc_hd__a21boi_0
+       18   135.13   sky130_fd_sc_hd__a21o_1
+       42  210.202   sky130_fd_sc_hd__a21oi_1
+        1    8.758   sky130_fd_sc_hd__a221oi_1
+        1    8.758   sky130_fd_sc_hd__a2bb2oi_1
+        2   12.512   sky130_fd_sc_hd__a31oi_1
+        4   40.038   sky130_fd_sc_hd__a32o_1
+       42  262.752   sky130_fd_sc_hd__and2_0
+        7   43.792   sky130_fd_sc_hd__and3_1
+       70  262.752   sky130_fd_sc_hd__clkinv_1
+      143 1.43E+03   sky130_fd_sc_hd__maj3_1
+       88  330.317   sky130_fd_sc_hd__nand2_1
+       12   75.072   sky130_fd_sc_hd__nand2b_1
+       15   75.072   sky130_fd_sc_hd__nand3_1
+       83  311.549   sky130_fd_sc_hd__nor2_1
+       17  106.352   sky130_fd_sc_hd__nor2b_1
+       13   65.062   sky130_fd_sc_hd__nor3_1
+        1    6.256   sky130_fd_sc_hd__nor4_1
+        1    7.507   sky130_fd_sc_hd__o211ai_1
+       16  120.115   sky130_fd_sc_hd__o21a_1
+       34  170.163   sky130_fd_sc_hd__o21ai_0
+        1    8.758   sky130_fd_sc_hd__o2bb2ai_1
+        4   30.029   sky130_fd_sc_hd__o31ai_1
+        1    10.01   sky130_fd_sc_hd__o32a_1
+        3   26.275   sky130_fd_sc_hd__o32ai_1
+        3   18.768   sky130_fd_sc_hd__or2_0
+        1    7.507   sky130_fd_sc_hd__or4_1
+      244  2137.05   sky130_fd_sc_hd__xnor2_1
+       19   427.91   sky130_fd_sc_hd__xnor3_1
+      128 1.12E+03   sky130_fd_sc_hd__xor2_1
+        2   47.546   sky130_fd_sc_hd__xor3_1
+
+   Chip area for module '\GEN4_W10': 7563.504000
+     of which used for sequential elements: 0.000000 (0.00%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+    21296  1.7E+05 top
+     1022 7.56E+03 GEN4_W10
+       17  116.362 NEG_W10
+      239 2.25E+03 TREE_L8_W10
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+    16466        - wires
+    35320        - wire bits
+    16466        - public wires
+    35320        - public wire bits
+      722        - ports
+    13504        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+    21296  1.7E+05 cells
+       16  120.115   sky130_fd_sc_hd__a211oi_1
+       64  480.461   sky130_fd_sc_hd__a21boi_0
+      240  1.8E+03   sky130_fd_sc_hd__a21o_1
+      624 3.12E+03   sky130_fd_sc_hd__a21oi_1
+        8   70.067   sky130_fd_sc_hd__a221oi_1
+        8   70.067   sky130_fd_sc_hd__a2bb2oi_1
+       16  100.096   sky130_fd_sc_hd__a31oi_1
+       32  320.307   sky130_fd_sc_hd__a32o_1
+      400   2502.4   sky130_fd_sc_hd__and2_0
+      184 1.15E+03   sky130_fd_sc_hd__and3_1
+      688 2.58E+03   sky130_fd_sc_hd__clkinv_1
+       32  120.115   sky130_fd_sc_hd__conb_1
+     2744 2.75E+04   sky130_fd_sc_hd__maj3_1
+     1152 4.32E+03   sky130_fd_sc_hd__nand2_1
+      448  2.8E+03   sky130_fd_sc_hd__nand2b_1
+      216 1.08E+03   sky130_fd_sc_hd__nand3_1
+     2040 7.66E+03   sky130_fd_sc_hd__nor2_1
+      264 1.65E+03   sky130_fd_sc_hd__nor2b_1
+     1128 5.65E+03   sky130_fd_sc_hd__nor3_1
+        8   50.048   sky130_fd_sc_hd__nor4_1
+        8   60.058   sky130_fd_sc_hd__o211ai_1
+     1088 8.17E+03   sky130_fd_sc_hd__o21a_1
+      528 2.64E+03   sky130_fd_sc_hd__o21ai_0
+       32   240.23   sky130_fd_sc_hd__o21bai_1
+        8   70.067   sky130_fd_sc_hd__o2bb2ai_1
+       32   240.23   sky130_fd_sc_hd__o31ai_1
+        8   80.077   sky130_fd_sc_hd__o32a_1
+       24  210.202   sky130_fd_sc_hd__o32ai_1
+       88  550.528   sky130_fd_sc_hd__or2_0
+      648 4.86E+03   sky130_fd_sc_hd__or4_1
+     4960 4.34E+04   sky130_fd_sc_hd__xnor2_1
+      440 9.91E+03   sky130_fd_sc_hd__xnor3_1
+     2528 2.21E+04   sky130_fd_sc_hd__xor2_1
+      592 1.41E+04   sky130_fd_sc_hd__xor3_1
+      360  1.7E+05 submodules
+        8 6.05E+04   GEN4_W10
+      320 3.72E+04   NEG_W10
+       32 7.19E+04   TREE_L8_W10
+
+   Chip area for top module '\top': 169812.864000
+     of which used for sequential elements: 0.000000 (0.00%)
+

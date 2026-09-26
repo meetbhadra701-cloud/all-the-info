@@ -2316,48 +2316,37 @@ module top(clk, start, x, y);
   wire [39:0] gy8;
   wire [39:0] gy9;
   wire pn0_0;
-  wire pn0_1;
   wire pn0_10;
   wire pn0_11;
   wire pn0_12;
   wire pn0_13;
   wire pn0_14;
   wire pn0_15;
-  wire pn0_16;
   wire pn0_17;
   wire pn0_18;
   wire pn0_19;
   wire pn0_2;
-  wire pn0_20;
   wire pn0_21;
-  wire pn0_22;
   wire pn0_23;
   wire pn0_24;
   wire pn0_25;
   wire pn0_26;
   wire pn0_27;
   wire pn0_28;
-  wire pn0_29;
   wire pn0_3;
-  wire pn0_30;
-  wire pn0_31;
   wire pn0_32;
-  wire pn0_33;
   wire pn0_34;
   wire pn0_35;
   wire pn0_36;
   wire pn0_37;
   wire pn0_38;
   wire pn0_39;
-  wire pn0_4;
   wire pn0_5;
   wire pn0_6;
-  wire pn0_7;
   wire pn0_8;
   wire pn0_9;
   wire pn10_0;
   wire pn10_1;
-  wire pn10_10;
   wire pn10_11;
   wire pn10_12;
   wire pn10_13;
@@ -2365,7 +2354,6 @@ module top(clk, start, x, y);
   wire pn10_15;
   wire pn10_16;
   wire pn10_17;
-  wire pn10_18;
   wire pn10_19;
   wire pn10_2;
   wire pn10_20;
@@ -2374,31 +2362,21 @@ module top(clk, start, x, y);
   wire pn10_23;
   wire pn10_24;
   wire pn10_25;
-  wire pn10_26;
   wire pn10_27;
   wire pn10_28;
   wire pn10_29;
   wire pn10_3;
-  wire pn10_30;
   wire pn10_31;
-  wire pn10_32;
-  wire pn10_33;
   wire pn10_34;
-  wire pn10_35;
   wire pn10_36;
-  wire pn10_37;
   wire pn10_38;
-  wire pn10_39;
-  wire pn10_4;
   wire pn10_5;
   wire pn10_6;
   wire pn10_7;
-  wire pn10_8;
   wire pn10_9;
   wire pn11_0;
   wire pn11_1;
   wire pn11_10;
-  wire pn11_11;
   wire pn11_12;
   wire pn11_13;
   wire pn11_14;
@@ -2408,31 +2386,22 @@ module top(clk, start, x, y);
   wire pn11_18;
   wire pn11_19;
   wire pn11_2;
-  wire pn11_20;
-  wire pn11_21;
   wire pn11_22;
-  wire pn11_23;
-  wire pn11_24;
   wire pn11_25;
   wire pn11_26;
   wire pn11_27;
   wire pn11_28;
-  wire pn11_29;
   wire pn11_3;
   wire pn11_30;
   wire pn11_31;
-  wire pn11_32;
   wire pn11_33;
-  wire pn11_34;
   wire pn11_35;
   wire pn11_36;
-  wire pn11_37;
   wire pn11_38;
   wire pn11_39;
   wire pn11_4;
   wire pn11_5;
   wire pn11_6;
-  wire pn11_7;
   wire pn11_8;
   wire pn11_9;
   wire pn12_0;
@@ -2444,11 +2413,9 @@ module top(clk, start, x, y);
   wire pn12_14;
   wire pn12_15;
   wire pn12_16;
-  wire pn12_17;
   wire pn12_18;
   wire pn12_19;
   wire pn12_2;
-  wire pn12_20;
   wire pn12_21;
   wire pn12_22;
   wire pn12_23;
@@ -2456,19 +2423,12 @@ module top(clk, start, x, y);
   wire pn12_25;
   wire pn12_26;
   wire pn12_27;
-  wire pn12_28;
   wire pn12_29;
   wire pn12_3;
   wire pn12_30;
-  wire pn12_31;
-  wire pn12_32;
   wire pn12_33;
-  wire pn12_34;
   wire pn12_35;
-  wire pn12_36;
-  wire pn12_37;
   wire pn12_38;
-  wire pn12_39;
   wire pn12_4;
   wire pn12_5;
   wire pn12_6;
@@ -2481,7 +2441,6 @@ module top(clk, start, x, y);
   wire pn13_11;
   wire pn13_12;
   wire pn13_13;
-  wire pn13_14;
   wire pn13_15;
   wire pn13_16;
   wire pn13_17;
@@ -2493,17 +2452,10 @@ module top(clk, start, x, y);
   wire pn13_22;
   wire pn13_23;
   wire pn13_24;
-  wire pn13_25;
-  wire pn13_26;
   wire pn13_27;
-  wire pn13_28;
   wire pn13_29;
   wire pn13_3;
-  wire pn13_30;
-  wire pn13_31;
-  wire pn13_32;
   wire pn13_33;
-  wire pn13_34;
   wire pn13_35;
   wire pn13_36;
   wire pn13_37;
@@ -2511,11 +2463,8 @@ module top(clk, start, x, y);
   wire pn13_39;
   wire pn13_4;
   wire pn13_5;
-  wire pn13_6;
   wire pn13_7;
   wire pn13_8;
-  wire pn13_9;
-  wire pn14_0;
   wire pn14_1;
   wire pn14_10;
   wire pn14_11;
@@ -2523,9 +2472,7 @@ module top(clk, start, x, y);
   wire pn14_13;
   wire pn14_14;
   wire pn14_15;
-  wire pn14_16;
   wire pn14_17;
-  wire pn14_18;
   wire pn14_19;
   wire pn14_2;
   wire pn14_20;
@@ -2539,40 +2486,28 @@ module top(clk, start, x, y);
   wire pn14_28;
   wire pn14_29;
   wire pn14_3;
-  wire pn14_30;
-  wire pn14_31;
   wire pn14_32;
   wire pn14_33;
   wire pn14_34;
-  wire pn14_35;
   wire pn14_36;
-  wire pn14_37;
   wire pn14_38;
   wire pn14_39;
   wire pn14_4;
-  wire pn14_5;
   wire pn14_6;
   wire pn14_7;
   wire pn14_8;
-  wire pn14_9;
-  wire pn15_0;
   wire pn15_1;
   wire pn15_10;
-  wire pn15_11;
   wire pn15_12;
   wire pn15_13;
-  wire pn15_14;
   wire pn15_15;
   wire pn15_16;
   wire pn15_17;
   wire pn15_18;
-  wire pn15_19;
   wire pn15_2;
   wire pn15_20;
-  wire pn15_21;
   wire pn15_22;
   wire pn15_23;
-  wire pn15_24;
   wire pn15_25;
   wire pn15_26;
   wire pn15_27;
@@ -2582,18 +2517,12 @@ module top(clk, start, x, y);
   wire pn15_30;
   wire pn15_31;
   wire pn15_32;
-  wire pn15_33;
-  wire pn15_34;
   wire pn15_35;
   wire pn15_36;
-  wire pn15_37;
   wire pn15_38;
-  wire pn15_39;
   wire pn15_4;
   wire pn15_5;
   wire pn15_6;
-  wire pn15_7;
-  wire pn15_8;
   wire pn15_9;
   wire pn1_0;
   wire pn1_1;
@@ -2602,19 +2531,14 @@ module top(clk, start, x, y);
   wire pn1_12;
   wire pn1_13;
   wire pn1_14;
-  wire pn1_15;
   wire pn1_16;
   wire pn1_17;
   wire pn1_18;
   wire pn1_19;
   wire pn1_2;
-  wire pn1_20;
   wire pn1_21;
   wire pn1_22;
-  wire pn1_23;
-  wire pn1_24;
   wire pn1_25;
-  wire pn1_26;
   wire pn1_27;
   wire pn1_28;
   wire pn1_29;
@@ -2622,40 +2546,28 @@ module top(clk, start, x, y);
   wire pn1_30;
   wire pn1_31;
   wire pn1_32;
-  wire pn1_33;
   wire pn1_34;
   wire pn1_35;
   wire pn1_36;
-  wire pn1_37;
   wire pn1_38;
-  wire pn1_39;
-  wire pn1_4;
   wire pn1_5;
-  wire pn1_6;
   wire pn1_7;
   wire pn1_8;
   wire pn1_9;
   wire pn2_0;
   wire pn2_1;
-  wire pn2_10;
   wire pn2_11;
-  wire pn2_12;
   wire pn2_13;
   wire pn2_14;
   wire pn2_15;
   wire pn2_16;
-  wire pn2_17;
   wire pn2_18;
   wire pn2_19;
   wire pn2_2;
   wire pn2_20;
-  wire pn2_21;
-  wire pn2_22;
   wire pn2_23;
   wire pn2_24;
   wire pn2_25;
-  wire pn2_26;
-  wire pn2_27;
   wire pn2_28;
   wire pn2_29;
   wire pn2_3;
@@ -2663,28 +2575,22 @@ module top(clk, start, x, y);
   wire pn2_31;
   wire pn2_32;
   wire pn2_33;
-  wire pn2_34;
   wire pn2_35;
-  wire pn2_36;
   wire pn2_37;
-  wire pn2_38;
   wire pn2_39;
   wire pn2_4;
   wire pn2_5;
   wire pn2_6;
   wire pn2_7;
   wire pn2_8;
-  wire pn2_9;
   wire pn3_0;
   wire pn3_1;
   wire pn3_10;
   wire pn3_11;
   wire pn3_12;
-  wire pn3_13;
   wire pn3_14;
   wire pn3_15;
   wire pn3_16;
-  wire pn3_17;
   wire pn3_18;
   wire pn3_19;
   wire pn3_2;
@@ -2699,18 +2605,11 @@ module top(clk, start, x, y);
   wire pn3_28;
   wire pn3_29;
   wire pn3_3;
-  wire pn3_30;
   wire pn3_31;
-  wire pn3_32;
   wire pn3_33;
-  wire pn3_34;
   wire pn3_35;
-  wire pn3_36;
   wire pn3_37;
-  wire pn3_38;
   wire pn3_39;
-  wire pn3_4;
-  wire pn3_5;
   wire pn3_6;
   wire pn3_7;
   wire pn3_8;
@@ -2723,7 +2622,6 @@ module top(clk, start, x, y);
   wire pn4_13;
   wire pn4_14;
   wire pn4_15;
-  wire pn4_16;
   wire pn4_17;
   wire pn4_18;
   wire pn4_19;
@@ -2732,51 +2630,35 @@ module top(clk, start, x, y);
   wire pn4_21;
   wire pn4_22;
   wire pn4_23;
-  wire pn4_24;
   wire pn4_25;
   wire pn4_26;
   wire pn4_27;
-  wire pn4_28;
-  wire pn4_29;
   wire pn4_3;
   wire pn4_30;
   wire pn4_31;
   wire pn4_32;
-  wire pn4_33;
-  wire pn4_34;
   wire pn4_35;
   wire pn4_36;
-  wire pn4_37;
-  wire pn4_38;
   wire pn4_39;
   wire pn4_4;
-  wire pn4_5;
   wire pn4_6;
   wire pn4_7;
   wire pn4_8;
   wire pn4_9;
   wire pn5_0;
-  wire pn5_1;
   wire pn5_10;
   wire pn5_11;
   wire pn5_12;
-  wire pn5_13;
   wire pn5_14;
   wire pn5_15;
   wire pn5_16;
-  wire pn5_17;
   wire pn5_18;
   wire pn5_19;
   wire pn5_2;
   wire pn5_20;
   wire pn5_21;
-  wire pn5_22;
   wire pn5_23;
-  wire pn5_24;
   wire pn5_25;
-  wire pn5_26;
-  wire pn5_27;
-  wire pn5_28;
   wire pn5_29;
   wire pn5_3;
   wire pn5_30;
@@ -2784,16 +2666,12 @@ module top(clk, start, x, y);
   wire pn5_32;
   wire pn5_33;
   wire pn5_34;
-  wire pn5_35;
   wire pn5_36;
   wire pn5_37;
   wire pn5_38;
   wire pn5_39;
   wire pn5_4;
-  wire pn5_5;
-  wire pn5_6;
   wire pn5_7;
-  wire pn5_8;
   wire pn5_9;
   wire pn6_0;
   wire pn6_1;
@@ -2809,47 +2687,33 @@ module top(clk, start, x, y);
   wire pn6_19;
   wire pn6_2;
   wire pn6_20;
-  wire pn6_21;
-  wire pn6_22;
   wire pn6_23;
   wire pn6_24;
   wire pn6_25;
-  wire pn6_26;
-  wire pn6_27;
-  wire pn6_28;
   wire pn6_29;
   wire pn6_3;
   wire pn6_30;
   wire pn6_31;
-  wire pn6_32;
   wire pn6_33;
   wire pn6_34;
   wire pn6_35;
   wire pn6_36;
   wire pn6_37;
   wire pn6_38;
-  wire pn6_39;
   wire pn6_4;
-  wire pn6_5;
-  wire pn6_6;
   wire pn6_7;
   wire pn6_8;
   wire pn6_9;
   wire pn7_0;
-  wire pn7_1;
-  wire pn7_10;
   wire pn7_11;
   wire pn7_12;
   wire pn7_13;
-  wire pn7_14;
-  wire pn7_15;
   wire pn7_16;
   wire pn7_17;
   wire pn7_18;
   wire pn7_19;
   wire pn7_2;
   wire pn7_20;
-  wire pn7_21;
   wire pn7_22;
   wire pn7_23;
   wire pn7_24;
@@ -2859,18 +2723,14 @@ module top(clk, start, x, y);
   wire pn7_28;
   wire pn7_29;
   wire pn7_3;
-  wire pn7_30;
   wire pn7_31;
   wire pn7_32;
   wire pn7_33;
-  wire pn7_34;
   wire pn7_35;
   wire pn7_36;
-  wire pn7_37;
   wire pn7_38;
   wire pn7_39;
   wire pn7_4;
-  wire pn7_5;
   wire pn7_6;
   wire pn7_7;
   wire pn7_8;
@@ -2883,7 +2743,6 @@ module top(clk, start, x, y);
   wire pn8_13;
   wire pn8_14;
   wire pn8_15;
-  wire pn8_16;
   wire pn8_17;
   wire pn8_18;
   wire pn8_19;
@@ -2891,21 +2750,14 @@ module top(clk, start, x, y);
   wire pn8_20;
   wire pn8_21;
   wire pn8_22;
-  wire pn8_23;
-  wire pn8_24;
   wire pn8_25;
   wire pn8_26;
   wire pn8_27;
   wire pn8_28;
-  wire pn8_29;
   wire pn8_3;
-  wire pn8_30;
   wire pn8_31;
-  wire pn8_32;
   wire pn8_33;
-  wire pn8_34;
   wire pn8_35;
-  wire pn8_36;
   wire pn8_37;
   wire pn8_38;
   wire pn8_39;
@@ -2918,86 +2770,67 @@ module top(clk, start, x, y);
   wire pn9_0;
   wire pn9_1;
   wire pn9_10;
-  wire pn9_11;
   wire pn9_12;
   wire pn9_13;
   wire pn9_14;
   wire pn9_15;
-  wire pn9_16;
   wire pn9_17;
   wire pn9_18;
   wire pn9_19;
   wire pn9_2;
   wire pn9_20;
   wire pn9_21;
-  wire pn9_22;
   wire pn9_23;
-  wire pn9_24;
   wire pn9_25;
   wire pn9_26;
   wire pn9_27;
   wire pn9_28;
-  wire pn9_29;
   wire pn9_3;
-  wire pn9_30;
   wire pn9_31;
   wire pn9_32;
   wire pn9_33;
   wire pn9_34;
   wire pn9_35;
   wire pn9_36;
-  wire pn9_37;
   wire pn9_38;
   wire pn9_39;
   wire pn9_4;
-  wire pn9_5;
   wire pn9_6;
   wire pn9_7;
   wire pn9_8;
   wire pn9_9;
   wire pp0_0;
-  wire pp0_1;
   wire pp0_10;
   wire pp0_11;
   wire pp0_12;
   wire pp0_13;
   wire pp0_14;
   wire pp0_15;
-  wire pp0_16;
   wire pp0_17;
   wire pp0_18;
   wire pp0_19;
   wire pp0_2;
-  wire pp0_20;
   wire pp0_21;
-  wire pp0_22;
   wire pp0_23;
   wire pp0_24;
   wire pp0_25;
   wire pp0_26;
   wire pp0_27;
   wire pp0_28;
-  wire pp0_29;
   wire pp0_3;
-  wire pp0_30;
-  wire pp0_31;
   wire pp0_32;
-  wire pp0_33;
   wire pp0_34;
   wire pp0_35;
   wire pp0_36;
   wire pp0_37;
   wire pp0_38;
   wire pp0_39;
-  wire pp0_4;
   wire pp0_5;
   wire pp0_6;
-  wire pp0_7;
   wire pp0_8;
   wire pp0_9;
   wire pp10_0;
   wire pp10_1;
-  wire pp10_10;
   wire pp10_11;
   wire pp10_12;
   wire pp10_13;
@@ -3005,7 +2838,6 @@ module top(clk, start, x, y);
   wire pp10_15;
   wire pp10_16;
   wire pp10_17;
-  wire pp10_18;
   wire pp10_19;
   wire pp10_2;
   wire pp10_20;
@@ -3014,31 +2846,21 @@ module top(clk, start, x, y);
   wire pp10_23;
   wire pp10_24;
   wire pp10_25;
-  wire pp10_26;
   wire pp10_27;
   wire pp10_28;
   wire pp10_29;
   wire pp10_3;
-  wire pp10_30;
   wire pp10_31;
-  wire pp10_32;
-  wire pp10_33;
   wire pp10_34;
-  wire pp10_35;
   wire pp10_36;
-  wire pp10_37;
   wire pp10_38;
-  wire pp10_39;
-  wire pp10_4;
   wire pp10_5;
   wire pp10_6;
   wire pp10_7;
-  wire pp10_8;
   wire pp10_9;
   wire pp11_0;
   wire pp11_1;
   wire pp11_10;
-  wire pp11_11;
   wire pp11_12;
   wire pp11_13;
   wire pp11_14;
@@ -3048,31 +2870,22 @@ module top(clk, start, x, y);
   wire pp11_18;
   wire pp11_19;
   wire pp11_2;
-  wire pp11_20;
-  wire pp11_21;
   wire pp11_22;
-  wire pp11_23;
-  wire pp11_24;
   wire pp11_25;
   wire pp11_26;
   wire pp11_27;
   wire pp11_28;
-  wire pp11_29;
   wire pp11_3;
   wire pp11_30;
   wire pp11_31;
-  wire pp11_32;
   wire pp11_33;
-  wire pp11_34;
   wire pp11_35;
   wire pp11_36;
-  wire pp11_37;
   wire pp11_38;
   wire pp11_39;
   wire pp11_4;
   wire pp11_5;
   wire pp11_6;
-  wire pp11_7;
   wire pp11_8;
   wire pp11_9;
   wire pp12_0;
@@ -3084,11 +2897,9 @@ module top(clk, start, x, y);
   wire pp12_14;
   wire pp12_15;
   wire pp12_16;
-  wire pp12_17;
   wire pp12_18;
   wire pp12_19;
   wire pp12_2;
-  wire pp12_20;
   wire pp12_21;
   wire pp12_22;
   wire pp12_23;
@@ -3096,19 +2907,12 @@ module top(clk, start, x, y);
   wire pp12_25;
   wire pp12_26;
   wire pp12_27;
-  wire pp12_28;
   wire pp12_29;
   wire pp12_3;
   wire pp12_30;
-  wire pp12_31;
-  wire pp12_32;
   wire pp12_33;
-  wire pp12_34;
   wire pp12_35;
-  wire pp12_36;
-  wire pp12_37;
   wire pp12_38;
-  wire pp12_39;
   wire pp12_4;
   wire pp12_5;
   wire pp12_6;
@@ -3121,7 +2925,6 @@ module top(clk, start, x, y);
   wire pp13_11;
   wire pp13_12;
   wire pp13_13;
-  wire pp13_14;
   wire pp13_15;
   wire pp13_16;
   wire pp13_17;
@@ -3133,17 +2936,10 @@ module top(clk, start, x, y);
   wire pp13_22;
   wire pp13_23;
   wire pp13_24;
-  wire pp13_25;
-  wire pp13_26;
   wire pp13_27;
-  wire pp13_28;
   wire pp13_29;
   wire pp13_3;
-  wire pp13_30;
-  wire pp13_31;
-  wire pp13_32;
   wire pp13_33;
-  wire pp13_34;
   wire pp13_35;
   wire pp13_36;
   wire pp13_37;
@@ -3151,11 +2947,8 @@ module top(clk, start, x, y);
   wire pp13_39;
   wire pp13_4;
   wire pp13_5;
-  wire pp13_6;
   wire pp13_7;
   wire pp13_8;
-  wire pp13_9;
-  wire pp14_0;
   wire pp14_1;
   wire pp14_10;
   wire pp14_11;
@@ -3163,9 +2956,7 @@ module top(clk, start, x, y);
   wire pp14_13;
   wire pp14_14;
   wire pp14_15;
-  wire pp14_16;
   wire pp14_17;
-  wire pp14_18;
   wire pp14_19;
   wire pp14_2;
   wire pp14_20;
@@ -3179,40 +2970,28 @@ module top(clk, start, x, y);
   wire pp14_28;
   wire pp14_29;
   wire pp14_3;
-  wire pp14_30;
-  wire pp14_31;
   wire pp14_32;
   wire pp14_33;
   wire pp14_34;
-  wire pp14_35;
   wire pp14_36;
-  wire pp14_37;
   wire pp14_38;
   wire pp14_39;
   wire pp14_4;
-  wire pp14_5;
   wire pp14_6;
   wire pp14_7;
   wire pp14_8;
-  wire pp14_9;
-  wire pp15_0;
   wire pp15_1;
   wire pp15_10;
-  wire pp15_11;
   wire pp15_12;
   wire pp15_13;
-  wire pp15_14;
   wire pp15_15;
   wire pp15_16;
   wire pp15_17;
   wire pp15_18;
-  wire pp15_19;
   wire pp15_2;
   wire pp15_20;
-  wire pp15_21;
   wire pp15_22;
   wire pp15_23;
-  wire pp15_24;
   wire pp15_25;
   wire pp15_26;
   wire pp15_27;
@@ -3222,18 +3001,12 @@ module top(clk, start, x, y);
   wire pp15_30;
   wire pp15_31;
   wire pp15_32;
-  wire pp15_33;
-  wire pp15_34;
   wire pp15_35;
   wire pp15_36;
-  wire pp15_37;
   wire pp15_38;
-  wire pp15_39;
   wire pp15_4;
   wire pp15_5;
   wire pp15_6;
-  wire pp15_7;
-  wire pp15_8;
   wire pp15_9;
   wire pp1_0;
   wire pp1_1;
@@ -3242,19 +3015,14 @@ module top(clk, start, x, y);
   wire pp1_12;
   wire pp1_13;
   wire pp1_14;
-  wire pp1_15;
   wire pp1_16;
   wire pp1_17;
   wire pp1_18;
   wire pp1_19;
   wire pp1_2;
-  wire pp1_20;
   wire pp1_21;
   wire pp1_22;
-  wire pp1_23;
-  wire pp1_24;
   wire pp1_25;
-  wire pp1_26;
   wire pp1_27;
   wire pp1_28;
   wire pp1_29;
@@ -3262,40 +3030,28 @@ module top(clk, start, x, y);
   wire pp1_30;
   wire pp1_31;
   wire pp1_32;
-  wire pp1_33;
   wire pp1_34;
   wire pp1_35;
   wire pp1_36;
-  wire pp1_37;
   wire pp1_38;
-  wire pp1_39;
-  wire pp1_4;
   wire pp1_5;
-  wire pp1_6;
   wire pp1_7;
   wire pp1_8;
   wire pp1_9;
   wire pp2_0;
   wire pp2_1;
-  wire pp2_10;
   wire pp2_11;
-  wire pp2_12;
   wire pp2_13;
   wire pp2_14;
   wire pp2_15;
   wire pp2_16;
-  wire pp2_17;
   wire pp2_18;
   wire pp2_19;
   wire pp2_2;
   wire pp2_20;
-  wire pp2_21;
-  wire pp2_22;
   wire pp2_23;
   wire pp2_24;
   wire pp2_25;
-  wire pp2_26;
-  wire pp2_27;
   wire pp2_28;
   wire pp2_29;
   wire pp2_3;
@@ -3303,28 +3059,22 @@ module top(clk, start, x, y);
   wire pp2_31;
   wire pp2_32;
   wire pp2_33;
-  wire pp2_34;
   wire pp2_35;
-  wire pp2_36;
   wire pp2_37;
-  wire pp2_38;
   wire pp2_39;
   wire pp2_4;
   wire pp2_5;
   wire pp2_6;
   wire pp2_7;
   wire pp2_8;
-  wire pp2_9;
   wire pp3_0;
   wire pp3_1;
   wire pp3_10;
   wire pp3_11;
   wire pp3_12;
-  wire pp3_13;
   wire pp3_14;
   wire pp3_15;
   wire pp3_16;
-  wire pp3_17;
   wire pp3_18;
   wire pp3_19;
   wire pp3_2;
@@ -3339,18 +3089,11 @@ module top(clk, start, x, y);
   wire pp3_28;
   wire pp3_29;
   wire pp3_3;
-  wire pp3_30;
   wire pp3_31;
-  wire pp3_32;
   wire pp3_33;
-  wire pp3_34;
   wire pp3_35;
-  wire pp3_36;
   wire pp3_37;
-  wire pp3_38;
   wire pp3_39;
-  wire pp3_4;
-  wire pp3_5;
   wire pp3_6;
   wire pp3_7;
   wire pp3_8;
@@ -3363,7 +3106,6 @@ module top(clk, start, x, y);
   wire pp4_13;
   wire pp4_14;
   wire pp4_15;
-  wire pp4_16;
   wire pp4_17;
   wire pp4_18;
   wire pp4_19;
@@ -3372,51 +3114,35 @@ module top(clk, start, x, y);
   wire pp4_21;
   wire pp4_22;
   wire pp4_23;
-  wire pp4_24;
   wire pp4_25;
   wire pp4_26;
   wire pp4_27;
-  wire pp4_28;
-  wire pp4_29;
   wire pp4_3;
   wire pp4_30;
   wire pp4_31;
   wire pp4_32;
-  wire pp4_33;
-  wire pp4_34;
   wire pp4_35;
   wire pp4_36;
-  wire pp4_37;
-  wire pp4_38;
   wire pp4_39;
   wire pp4_4;
-  wire pp4_5;
   wire pp4_6;
   wire pp4_7;
   wire pp4_8;
   wire pp4_9;
   wire pp5_0;
-  wire pp5_1;
   wire pp5_10;
   wire pp5_11;
   wire pp5_12;
-  wire pp5_13;
   wire pp5_14;
   wire pp5_15;
   wire pp5_16;
-  wire pp5_17;
   wire pp5_18;
   wire pp5_19;
   wire pp5_2;
   wire pp5_20;
   wire pp5_21;
-  wire pp5_22;
   wire pp5_23;
-  wire pp5_24;
   wire pp5_25;
-  wire pp5_26;
-  wire pp5_27;
-  wire pp5_28;
   wire pp5_29;
   wire pp5_3;
   wire pp5_30;
@@ -3424,16 +3150,12 @@ module top(clk, start, x, y);
   wire pp5_32;
   wire pp5_33;
   wire pp5_34;
-  wire pp5_35;
   wire pp5_36;
   wire pp5_37;
   wire pp5_38;
   wire pp5_39;
   wire pp5_4;
-  wire pp5_5;
-  wire pp5_6;
   wire pp5_7;
-  wire pp5_8;
   wire pp5_9;
   wire pp6_0;
   wire pp6_1;
@@ -3449,47 +3171,33 @@ module top(clk, start, x, y);
   wire pp6_19;
   wire pp6_2;
   wire pp6_20;
-  wire pp6_21;
-  wire pp6_22;
   wire pp6_23;
   wire pp6_24;
   wire pp6_25;
-  wire pp6_26;
-  wire pp6_27;
-  wire pp6_28;
   wire pp6_29;
   wire pp6_3;
   wire pp6_30;
   wire pp6_31;
-  wire pp6_32;
   wire pp6_33;
   wire pp6_34;
   wire pp6_35;
   wire pp6_36;
   wire pp6_37;
   wire pp6_38;
-  wire pp6_39;
   wire pp6_4;
-  wire pp6_5;
-  wire pp6_6;
   wire pp6_7;
   wire pp6_8;
   wire pp6_9;
   wire pp7_0;
-  wire pp7_1;
-  wire pp7_10;
   wire pp7_11;
   wire pp7_12;
   wire pp7_13;
-  wire pp7_14;
-  wire pp7_15;
   wire pp7_16;
   wire pp7_17;
   wire pp7_18;
   wire pp7_19;
   wire pp7_2;
   wire pp7_20;
-  wire pp7_21;
   wire pp7_22;
   wire pp7_23;
   wire pp7_24;
@@ -3499,18 +3207,14 @@ module top(clk, start, x, y);
   wire pp7_28;
   wire pp7_29;
   wire pp7_3;
-  wire pp7_30;
   wire pp7_31;
   wire pp7_32;
   wire pp7_33;
-  wire pp7_34;
   wire pp7_35;
   wire pp7_36;
-  wire pp7_37;
   wire pp7_38;
   wire pp7_39;
   wire pp7_4;
-  wire pp7_5;
   wire pp7_6;
   wire pp7_7;
   wire pp7_8;
@@ -3523,7 +3227,6 @@ module top(clk, start, x, y);
   wire pp8_13;
   wire pp8_14;
   wire pp8_15;
-  wire pp8_16;
   wire pp8_17;
   wire pp8_18;
   wire pp8_19;
@@ -3531,21 +3234,14 @@ module top(clk, start, x, y);
   wire pp8_20;
   wire pp8_21;
   wire pp8_22;
-  wire pp8_23;
-  wire pp8_24;
   wire pp8_25;
   wire pp8_26;
   wire pp8_27;
   wire pp8_28;
-  wire pp8_29;
   wire pp8_3;
-  wire pp8_30;
   wire pp8_31;
-  wire pp8_32;
   wire pp8_33;
-  wire pp8_34;
   wire pp8_35;
-  wire pp8_36;
   wire pp8_37;
   wire pp8_38;
   wire pp8_39;
@@ -3558,39 +3254,31 @@ module top(clk, start, x, y);
   wire pp9_0;
   wire pp9_1;
   wire pp9_10;
-  wire pp9_11;
   wire pp9_12;
   wire pp9_13;
   wire pp9_14;
   wire pp9_15;
-  wire pp9_16;
   wire pp9_17;
   wire pp9_18;
   wire pp9_19;
   wire pp9_2;
   wire pp9_20;
   wire pp9_21;
-  wire pp9_22;
   wire pp9_23;
-  wire pp9_24;
   wire pp9_25;
   wire pp9_26;
   wire pp9_27;
   wire pp9_28;
-  wire pp9_29;
   wire pp9_3;
-  wire pp9_30;
   wire pp9_31;
   wire pp9_32;
   wire pp9_33;
   wire pp9_34;
   wire pp9_35;
   wire pp9_36;
-  wire pp9_37;
   wire pp9_38;
   wire pp9_39;
   wire pp9_4;
-  wire pp9_5;
   wire pp9_6;
   wire pp9_7;
   wire pp9_8;
@@ -3706,13 +3394,6 @@ module top(clk, start, x, y);
     .pos(pp0_0),
     .start(sd3)
   );
-  SNEG ng0_1 (
-    .a(gy0[1]),
-    .clk(clk),
-    .neg(pn0_1),
-    .pos(pp0_1),
-    .start(sd3)
-  );
   SNEG ng0_10 (
     .a(gy0[10]),
     .clk(clk),
@@ -3755,13 +3436,6 @@ module top(clk, start, x, y);
     .pos(pp0_15),
     .start(sd3)
   );
-  SNEG ng0_16 (
-    .a(gy0[16]),
-    .clk(clk),
-    .neg(pn0_16),
-    .pos(pp0_16),
-    .start(sd3)
-  );
   SNEG ng0_17 (
     .a(gy0[17]),
     .clk(clk),
@@ -3790,25 +3464,11 @@ module top(clk, start, x, y);
     .pos(pp0_2),
     .start(sd3)
   );
-  SNEG ng0_20 (
-    .a(gy0[20]),
-    .clk(clk),
-    .neg(pn0_20),
-    .pos(pp0_20),
-    .start(sd3)
-  );
   SNEG ng0_21 (
     .a(gy0[21]),
     .clk(clk),
     .neg(pn0_21),
     .pos(pp0_21),
-    .start(sd3)
-  );
-  SNEG ng0_22 (
-    .a(gy0[22]),
-    .clk(clk),
-    .neg(pn0_22),
-    .pos(pp0_22),
     .start(sd3)
   );
   SNEG ng0_23 (
@@ -3853,13 +3513,6 @@ module top(clk, start, x, y);
     .pos(pp0_28),
     .start(sd3)
   );
-  SNEG ng0_29 (
-    .a(gy0[29]),
-    .clk(clk),
-    .neg(pn0_29),
-    .pos(pp0_29),
-    .start(sd3)
-  );
   SNEG ng0_3 (
     .a(gy0[3]),
     .clk(clk),
@@ -3867,32 +3520,11 @@ module top(clk, start, x, y);
     .pos(pp0_3),
     .start(sd3)
   );
-  SNEG ng0_30 (
-    .a(gy0[30]),
-    .clk(clk),
-    .neg(pn0_30),
-    .pos(pp0_30),
-    .start(sd3)
-  );
-  SNEG ng0_31 (
-    .a(gy0[31]),
-    .clk(clk),
-    .neg(pn0_31),
-    .pos(pp0_31),
-    .start(sd3)
-  );
   SNEG ng0_32 (
     .a(gy0[32]),
     .clk(clk),
     .neg(pn0_32),
     .pos(pp0_32),
-    .start(sd3)
-  );
-  SNEG ng0_33 (
-    .a(gy0[33]),
-    .clk(clk),
-    .neg(pn0_33),
-    .pos(pp0_33),
     .start(sd3)
   );
   SNEG ng0_34 (
@@ -3937,13 +3569,6 @@ module top(clk, start, x, y);
     .pos(pp0_39),
     .start(sd3)
   );
-  SNEG ng0_4 (
-    .a(gy0[4]),
-    .clk(clk),
-    .neg(pn0_4),
-    .pos(pp0_4),
-    .start(sd3)
-  );
   SNEG ng0_5 (
     .a(gy0[5]),
     .clk(clk),
@@ -3956,13 +3581,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn0_6),
     .pos(pp0_6),
-    .start(sd3)
-  );
-  SNEG ng0_7 (
-    .a(gy0[7]),
-    .clk(clk),
-    .neg(pn0_7),
-    .pos(pp0_7),
     .start(sd3)
   );
   SNEG ng0_8 (
@@ -3991,13 +3609,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn10_1),
     .pos(pp10_1),
-    .start(sd3)
-  );
-  SNEG ng10_10 (
-    .a(gy10[10]),
-    .clk(clk),
-    .neg(pn10_10),
-    .pos(pp10_10),
     .start(sd3)
   );
   SNEG ng10_11 (
@@ -4047,13 +3658,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn10_17),
     .pos(pp10_17),
-    .start(sd3)
-  );
-  SNEG ng10_18 (
-    .a(gy10[18]),
-    .clk(clk),
-    .neg(pn10_18),
-    .pos(pp10_18),
     .start(sd3)
   );
   SNEG ng10_19 (
@@ -4112,13 +3716,6 @@ module top(clk, start, x, y);
     .pos(pp10_25),
     .start(sd3)
   );
-  SNEG ng10_26 (
-    .a(gy10[26]),
-    .clk(clk),
-    .neg(pn10_26),
-    .pos(pp10_26),
-    .start(sd3)
-  );
   SNEG ng10_27 (
     .a(gy10[27]),
     .clk(clk),
@@ -4147,32 +3744,11 @@ module top(clk, start, x, y);
     .pos(pp10_3),
     .start(sd3)
   );
-  SNEG ng10_30 (
-    .a(gy10[30]),
-    .clk(clk),
-    .neg(pn10_30),
-    .pos(pp10_30),
-    .start(sd3)
-  );
   SNEG ng10_31 (
     .a(gy10[31]),
     .clk(clk),
     .neg(pn10_31),
     .pos(pp10_31),
-    .start(sd3)
-  );
-  SNEG ng10_32 (
-    .a(gy10[32]),
-    .clk(clk),
-    .neg(pn10_32),
-    .pos(pp10_32),
-    .start(sd3)
-  );
-  SNEG ng10_33 (
-    .a(gy10[33]),
-    .clk(clk),
-    .neg(pn10_33),
-    .pos(pp10_33),
     .start(sd3)
   );
   SNEG ng10_34 (
@@ -4182,13 +3758,6 @@ module top(clk, start, x, y);
     .pos(pp10_34),
     .start(sd3)
   );
-  SNEG ng10_35 (
-    .a(gy10[35]),
-    .clk(clk),
-    .neg(pn10_35),
-    .pos(pp10_35),
-    .start(sd3)
-  );
   SNEG ng10_36 (
     .a(gy10[36]),
     .clk(clk),
@@ -4196,32 +3765,11 @@ module top(clk, start, x, y);
     .pos(pp10_36),
     .start(sd3)
   );
-  SNEG ng10_37 (
-    .a(gy10[37]),
-    .clk(clk),
-    .neg(pn10_37),
-    .pos(pp10_37),
-    .start(sd3)
-  );
   SNEG ng10_38 (
     .a(gy10[38]),
     .clk(clk),
     .neg(pn10_38),
     .pos(pp10_38),
-    .start(sd3)
-  );
-  SNEG ng10_39 (
-    .a(gy10[39]),
-    .clk(clk),
-    .neg(pn10_39),
-    .pos(pp10_39),
-    .start(sd3)
-  );
-  SNEG ng10_4 (
-    .a(gy10[4]),
-    .clk(clk),
-    .neg(pn10_4),
-    .pos(pp10_4),
     .start(sd3)
   );
   SNEG ng10_5 (
@@ -4243,13 +3791,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn10_7),
     .pos(pp10_7),
-    .start(sd3)
-  );
-  SNEG ng10_8 (
-    .a(gy10[8]),
-    .clk(clk),
-    .neg(pn10_8),
-    .pos(pp10_8),
     .start(sd3)
   );
   SNEG ng10_9 (
@@ -4278,13 +3819,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn11_10),
     .pos(pp11_10),
-    .start(sd3)
-  );
-  SNEG ng11_11 (
-    .a(gy11[11]),
-    .clk(clk),
-    .neg(pn11_11),
-    .pos(pp11_11),
     .start(sd3)
   );
   SNEG ng11_12 (
@@ -4350,39 +3884,11 @@ module top(clk, start, x, y);
     .pos(pp11_2),
     .start(sd3)
   );
-  SNEG ng11_20 (
-    .a(gy11[20]),
-    .clk(clk),
-    .neg(pn11_20),
-    .pos(pp11_20),
-    .start(sd3)
-  );
-  SNEG ng11_21 (
-    .a(gy11[21]),
-    .clk(clk),
-    .neg(pn11_21),
-    .pos(pp11_21),
-    .start(sd3)
-  );
   SNEG ng11_22 (
     .a(gy11[22]),
     .clk(clk),
     .neg(pn11_22),
     .pos(pp11_22),
-    .start(sd3)
-  );
-  SNEG ng11_23 (
-    .a(gy11[23]),
-    .clk(clk),
-    .neg(pn11_23),
-    .pos(pp11_23),
-    .start(sd3)
-  );
-  SNEG ng11_24 (
-    .a(gy11[24]),
-    .clk(clk),
-    .neg(pn11_24),
-    .pos(pp11_24),
     .start(sd3)
   );
   SNEG ng11_25 (
@@ -4413,13 +3919,6 @@ module top(clk, start, x, y);
     .pos(pp11_28),
     .start(sd3)
   );
-  SNEG ng11_29 (
-    .a(gy11[29]),
-    .clk(clk),
-    .neg(pn11_29),
-    .pos(pp11_29),
-    .start(sd3)
-  );
   SNEG ng11_3 (
     .a(gy11[3]),
     .clk(clk),
@@ -4441,25 +3940,11 @@ module top(clk, start, x, y);
     .pos(pp11_31),
     .start(sd3)
   );
-  SNEG ng11_32 (
-    .a(gy11[32]),
-    .clk(clk),
-    .neg(pn11_32),
-    .pos(pp11_32),
-    .start(sd3)
-  );
   SNEG ng11_33 (
     .a(gy11[33]),
     .clk(clk),
     .neg(pn11_33),
     .pos(pp11_33),
-    .start(sd3)
-  );
-  SNEG ng11_34 (
-    .a(gy11[34]),
-    .clk(clk),
-    .neg(pn11_34),
-    .pos(pp11_34),
     .start(sd3)
   );
   SNEG ng11_35 (
@@ -4474,13 +3959,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn11_36),
     .pos(pp11_36),
-    .start(sd3)
-  );
-  SNEG ng11_37 (
-    .a(gy11[37]),
-    .clk(clk),
-    .neg(pn11_37),
-    .pos(pp11_37),
     .start(sd3)
   );
   SNEG ng11_38 (
@@ -4516,13 +3994,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn11_6),
     .pos(pp11_6),
-    .start(sd3)
-  );
-  SNEG ng11_7 (
-    .a(gy11[7]),
-    .clk(clk),
-    .neg(pn11_7),
-    .pos(pp11_7),
     .start(sd3)
   );
   SNEG ng11_8 (
@@ -4602,13 +4073,6 @@ module top(clk, start, x, y);
     .pos(pp12_16),
     .start(sd3)
   );
-  SNEG ng12_17 (
-    .a(gy12[17]),
-    .clk(clk),
-    .neg(pn12_17),
-    .pos(pp12_17),
-    .start(sd3)
-  );
   SNEG ng12_18 (
     .a(gy12[18]),
     .clk(clk),
@@ -4628,13 +4092,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn12_2),
     .pos(pp12_2),
-    .start(sd3)
-  );
-  SNEG ng12_20 (
-    .a(gy12[20]),
-    .clk(clk),
-    .neg(pn12_20),
-    .pos(pp12_20),
     .start(sd3)
   );
   SNEG ng12_21 (
@@ -4686,13 +4143,6 @@ module top(clk, start, x, y);
     .pos(pp12_27),
     .start(sd3)
   );
-  SNEG ng12_28 (
-    .a(gy12[28]),
-    .clk(clk),
-    .neg(pn12_28),
-    .pos(pp12_28),
-    .start(sd3)
-  );
   SNEG ng12_29 (
     .a(gy12[29]),
     .clk(clk),
@@ -4714,32 +4164,11 @@ module top(clk, start, x, y);
     .pos(pp12_30),
     .start(sd3)
   );
-  SNEG ng12_31 (
-    .a(gy12[31]),
-    .clk(clk),
-    .neg(pn12_31),
-    .pos(pp12_31),
-    .start(sd3)
-  );
-  SNEG ng12_32 (
-    .a(gy12[32]),
-    .clk(clk),
-    .neg(pn12_32),
-    .pos(pp12_32),
-    .start(sd3)
-  );
   SNEG ng12_33 (
     .a(gy12[33]),
     .clk(clk),
     .neg(pn12_33),
     .pos(pp12_33),
-    .start(sd3)
-  );
-  SNEG ng12_34 (
-    .a(gy12[34]),
-    .clk(clk),
-    .neg(pn12_34),
-    .pos(pp12_34),
     .start(sd3)
   );
   SNEG ng12_35 (
@@ -4749,32 +4178,11 @@ module top(clk, start, x, y);
     .pos(pp12_35),
     .start(sd3)
   );
-  SNEG ng12_36 (
-    .a(gy12[36]),
-    .clk(clk),
-    .neg(pn12_36),
-    .pos(pp12_36),
-    .start(sd3)
-  );
-  SNEG ng12_37 (
-    .a(gy12[37]),
-    .clk(clk),
-    .neg(pn12_37),
-    .pos(pp12_37),
-    .start(sd3)
-  );
   SNEG ng12_38 (
     .a(gy12[38]),
     .clk(clk),
     .neg(pn12_38),
     .pos(pp12_38),
-    .start(sd3)
-  );
-  SNEG ng12_39 (
-    .a(gy12[39]),
-    .clk(clk),
-    .neg(pn12_39),
-    .pos(pp12_39),
     .start(sd3)
   );
   SNEG ng12_4 (
@@ -4861,13 +4269,6 @@ module top(clk, start, x, y);
     .pos(pp13_13),
     .start(sd3)
   );
-  SNEG ng13_14 (
-    .a(gy13[14]),
-    .clk(clk),
-    .neg(pn13_14),
-    .pos(pp13_14),
-    .start(sd3)
-  );
   SNEG ng13_15 (
     .a(gy13[15]),
     .clk(clk),
@@ -4945,32 +4346,11 @@ module top(clk, start, x, y);
     .pos(pp13_24),
     .start(sd3)
   );
-  SNEG ng13_25 (
-    .a(gy13[25]),
-    .clk(clk),
-    .neg(pn13_25),
-    .pos(pp13_25),
-    .start(sd3)
-  );
-  SNEG ng13_26 (
-    .a(gy13[26]),
-    .clk(clk),
-    .neg(pn13_26),
-    .pos(pp13_26),
-    .start(sd3)
-  );
   SNEG ng13_27 (
     .a(gy13[27]),
     .clk(clk),
     .neg(pn13_27),
     .pos(pp13_27),
-    .start(sd3)
-  );
-  SNEG ng13_28 (
-    .a(gy13[28]),
-    .clk(clk),
-    .neg(pn13_28),
-    .pos(pp13_28),
     .start(sd3)
   );
   SNEG ng13_29 (
@@ -4987,39 +4367,11 @@ module top(clk, start, x, y);
     .pos(pp13_3),
     .start(sd3)
   );
-  SNEG ng13_30 (
-    .a(gy13[30]),
-    .clk(clk),
-    .neg(pn13_30),
-    .pos(pp13_30),
-    .start(sd3)
-  );
-  SNEG ng13_31 (
-    .a(gy13[31]),
-    .clk(clk),
-    .neg(pn13_31),
-    .pos(pp13_31),
-    .start(sd3)
-  );
-  SNEG ng13_32 (
-    .a(gy13[32]),
-    .clk(clk),
-    .neg(pn13_32),
-    .pos(pp13_32),
-    .start(sd3)
-  );
   SNEG ng13_33 (
     .a(gy13[33]),
     .clk(clk),
     .neg(pn13_33),
     .pos(pp13_33),
-    .start(sd3)
-  );
-  SNEG ng13_34 (
-    .a(gy13[34]),
-    .clk(clk),
-    .neg(pn13_34),
-    .pos(pp13_34),
     .start(sd3)
   );
   SNEG ng13_35 (
@@ -5071,13 +4423,6 @@ module top(clk, start, x, y);
     .pos(pp13_5),
     .start(sd3)
   );
-  SNEG ng13_6 (
-    .a(gy13[6]),
-    .clk(clk),
-    .neg(pn13_6),
-    .pos(pp13_6),
-    .start(sd3)
-  );
   SNEG ng13_7 (
     .a(gy13[7]),
     .clk(clk),
@@ -5090,20 +4435,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn13_8),
     .pos(pp13_8),
-    .start(sd3)
-  );
-  SNEG ng13_9 (
-    .a(gy13[9]),
-    .clk(clk),
-    .neg(pn13_9),
-    .pos(pp13_9),
-    .start(sd3)
-  );
-  SNEG ng14_0 (
-    .a(gy14[0]),
-    .clk(clk),
-    .neg(pn14_0),
-    .pos(pp14_0),
     .start(sd3)
   );
   SNEG ng14_1 (
@@ -5155,25 +4486,11 @@ module top(clk, start, x, y);
     .pos(pp14_15),
     .start(sd3)
   );
-  SNEG ng14_16 (
-    .a(gy14[16]),
-    .clk(clk),
-    .neg(pn14_16),
-    .pos(pp14_16),
-    .start(sd3)
-  );
   SNEG ng14_17 (
     .a(gy14[17]),
     .clk(clk),
     .neg(pn14_17),
     .pos(pp14_17),
-    .start(sd3)
-  );
-  SNEG ng14_18 (
-    .a(gy14[18]),
-    .clk(clk),
-    .neg(pn14_18),
-    .pos(pp14_18),
     .start(sd3)
   );
   SNEG ng14_19 (
@@ -5267,20 +4584,6 @@ module top(clk, start, x, y);
     .pos(pp14_3),
     .start(sd3)
   );
-  SNEG ng14_30 (
-    .a(gy14[30]),
-    .clk(clk),
-    .neg(pn14_30),
-    .pos(pp14_30),
-    .start(sd3)
-  );
-  SNEG ng14_31 (
-    .a(gy14[31]),
-    .clk(clk),
-    .neg(pn14_31),
-    .pos(pp14_31),
-    .start(sd3)
-  );
   SNEG ng14_32 (
     .a(gy14[32]),
     .clk(clk),
@@ -5302,25 +4605,11 @@ module top(clk, start, x, y);
     .pos(pp14_34),
     .start(sd3)
   );
-  SNEG ng14_35 (
-    .a(gy14[35]),
-    .clk(clk),
-    .neg(pn14_35),
-    .pos(pp14_35),
-    .start(sd3)
-  );
   SNEG ng14_36 (
     .a(gy14[36]),
     .clk(clk),
     .neg(pn14_36),
     .pos(pp14_36),
-    .start(sd3)
-  );
-  SNEG ng14_37 (
-    .a(gy14[37]),
-    .clk(clk),
-    .neg(pn14_37),
-    .pos(pp14_37),
     .start(sd3)
   );
   SNEG ng14_38 (
@@ -5344,13 +4633,6 @@ module top(clk, start, x, y);
     .pos(pp14_4),
     .start(sd3)
   );
-  SNEG ng14_5 (
-    .a(gy14[5]),
-    .clk(clk),
-    .neg(pn14_5),
-    .pos(pp14_5),
-    .start(sd3)
-  );
   SNEG ng14_6 (
     .a(gy14[6]),
     .clk(clk),
@@ -5372,20 +4654,6 @@ module top(clk, start, x, y);
     .pos(pp14_8),
     .start(sd3)
   );
-  SNEG ng14_9 (
-    .a(gy14[9]),
-    .clk(clk),
-    .neg(pn14_9),
-    .pos(pp14_9),
-    .start(sd3)
-  );
-  SNEG ng15_0 (
-    .a(gy15[0]),
-    .clk(clk),
-    .neg(pn15_0),
-    .pos(pp15_0),
-    .start(sd3)
-  );
   SNEG ng15_1 (
     .a(gy15[1]),
     .clk(clk),
@@ -5400,13 +4668,6 @@ module top(clk, start, x, y);
     .pos(pp15_10),
     .start(sd3)
   );
-  SNEG ng15_11 (
-    .a(gy15[11]),
-    .clk(clk),
-    .neg(pn15_11),
-    .pos(pp15_11),
-    .start(sd3)
-  );
   SNEG ng15_12 (
     .a(gy15[12]),
     .clk(clk),
@@ -5419,13 +4680,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn15_13),
     .pos(pp15_13),
-    .start(sd3)
-  );
-  SNEG ng15_14 (
-    .a(gy15[14]),
-    .clk(clk),
-    .neg(pn15_14),
-    .pos(pp15_14),
     .start(sd3)
   );
   SNEG ng15_15 (
@@ -5456,13 +4710,6 @@ module top(clk, start, x, y);
     .pos(pp15_18),
     .start(sd3)
   );
-  SNEG ng15_19 (
-    .a(gy15[19]),
-    .clk(clk),
-    .neg(pn15_19),
-    .pos(pp15_19),
-    .start(sd3)
-  );
   SNEG ng15_2 (
     .a(gy15[2]),
     .clk(clk),
@@ -5477,13 +4724,6 @@ module top(clk, start, x, y);
     .pos(pp15_20),
     .start(sd3)
   );
-  SNEG ng15_21 (
-    .a(gy15[21]),
-    .clk(clk),
-    .neg(pn15_21),
-    .pos(pp15_21),
-    .start(sd3)
-  );
   SNEG ng15_22 (
     .a(gy15[22]),
     .clk(clk),
@@ -5496,13 +4736,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn15_23),
     .pos(pp15_23),
-    .start(sd3)
-  );
-  SNEG ng15_24 (
-    .a(gy15[24]),
-    .clk(clk),
-    .neg(pn15_24),
-    .pos(pp15_24),
     .start(sd3)
   );
   SNEG ng15_25 (
@@ -5568,20 +4801,6 @@ module top(clk, start, x, y);
     .pos(pp15_32),
     .start(sd3)
   );
-  SNEG ng15_33 (
-    .a(gy15[33]),
-    .clk(clk),
-    .neg(pn15_33),
-    .pos(pp15_33),
-    .start(sd3)
-  );
-  SNEG ng15_34 (
-    .a(gy15[34]),
-    .clk(clk),
-    .neg(pn15_34),
-    .pos(pp15_34),
-    .start(sd3)
-  );
   SNEG ng15_35 (
     .a(gy15[35]),
     .clk(clk),
@@ -5596,25 +4815,11 @@ module top(clk, start, x, y);
     .pos(pp15_36),
     .start(sd3)
   );
-  SNEG ng15_37 (
-    .a(gy15[37]),
-    .clk(clk),
-    .neg(pn15_37),
-    .pos(pp15_37),
-    .start(sd3)
-  );
   SNEG ng15_38 (
     .a(gy15[38]),
     .clk(clk),
     .neg(pn15_38),
     .pos(pp15_38),
-    .start(sd3)
-  );
-  SNEG ng15_39 (
-    .a(gy15[39]),
-    .clk(clk),
-    .neg(pn15_39),
-    .pos(pp15_39),
     .start(sd3)
   );
   SNEG ng15_4 (
@@ -5636,20 +4841,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn15_6),
     .pos(pp15_6),
-    .start(sd3)
-  );
-  SNEG ng15_7 (
-    .a(gy15[7]),
-    .clk(clk),
-    .neg(pn15_7),
-    .pos(pp15_7),
-    .start(sd3)
-  );
-  SNEG ng15_8 (
-    .a(gy15[8]),
-    .clk(clk),
-    .neg(pn15_8),
-    .pos(pp15_8),
     .start(sd3)
   );
   SNEG ng15_9 (
@@ -5708,13 +4899,6 @@ module top(clk, start, x, y);
     .pos(pp1_14),
     .start(sd3)
   );
-  SNEG ng1_15 (
-    .a(gy1[15]),
-    .clk(clk),
-    .neg(pn1_15),
-    .pos(pp1_15),
-    .start(sd3)
-  );
   SNEG ng1_16 (
     .a(gy1[16]),
     .clk(clk),
@@ -5750,13 +4934,6 @@ module top(clk, start, x, y);
     .pos(pp1_2),
     .start(sd3)
   );
-  SNEG ng1_20 (
-    .a(gy1[20]),
-    .clk(clk),
-    .neg(pn1_20),
-    .pos(pp1_20),
-    .start(sd3)
-  );
   SNEG ng1_21 (
     .a(gy1[21]),
     .clk(clk),
@@ -5771,32 +4948,11 @@ module top(clk, start, x, y);
     .pos(pp1_22),
     .start(sd3)
   );
-  SNEG ng1_23 (
-    .a(gy1[23]),
-    .clk(clk),
-    .neg(pn1_23),
-    .pos(pp1_23),
-    .start(sd3)
-  );
-  SNEG ng1_24 (
-    .a(gy1[24]),
-    .clk(clk),
-    .neg(pn1_24),
-    .pos(pp1_24),
-    .start(sd3)
-  );
   SNEG ng1_25 (
     .a(gy1[25]),
     .clk(clk),
     .neg(pn1_25),
     .pos(pp1_25),
-    .start(sd3)
-  );
-  SNEG ng1_26 (
-    .a(gy1[26]),
-    .clk(clk),
-    .neg(pn1_26),
-    .pos(pp1_26),
     .start(sd3)
   );
   SNEG ng1_27 (
@@ -5848,13 +5004,6 @@ module top(clk, start, x, y);
     .pos(pp1_32),
     .start(sd3)
   );
-  SNEG ng1_33 (
-    .a(gy1[33]),
-    .clk(clk),
-    .neg(pn1_33),
-    .pos(pp1_33),
-    .start(sd3)
-  );
   SNEG ng1_34 (
     .a(gy1[34]),
     .clk(clk),
@@ -5876,13 +5025,6 @@ module top(clk, start, x, y);
     .pos(pp1_36),
     .start(sd3)
   );
-  SNEG ng1_37 (
-    .a(gy1[37]),
-    .clk(clk),
-    .neg(pn1_37),
-    .pos(pp1_37),
-    .start(sd3)
-  );
   SNEG ng1_38 (
     .a(gy1[38]),
     .clk(clk),
@@ -5890,32 +5032,11 @@ module top(clk, start, x, y);
     .pos(pp1_38),
     .start(sd3)
   );
-  SNEG ng1_39 (
-    .a(gy1[39]),
-    .clk(clk),
-    .neg(pn1_39),
-    .pos(pp1_39),
-    .start(sd3)
-  );
-  SNEG ng1_4 (
-    .a(gy1[4]),
-    .clk(clk),
-    .neg(pn1_4),
-    .pos(pp1_4),
-    .start(sd3)
-  );
   SNEG ng1_5 (
     .a(gy1[5]),
     .clk(clk),
     .neg(pn1_5),
     .pos(pp1_5),
-    .start(sd3)
-  );
-  SNEG ng1_6 (
-    .a(gy1[6]),
-    .clk(clk),
-    .neg(pn1_6),
-    .pos(pp1_6),
     .start(sd3)
   );
   SNEG ng1_7 (
@@ -5953,25 +5074,11 @@ module top(clk, start, x, y);
     .pos(pp2_1),
     .start(sd3)
   );
-  SNEG ng2_10 (
-    .a(gy2[10]),
-    .clk(clk),
-    .neg(pn2_10),
-    .pos(pp2_10),
-    .start(sd3)
-  );
   SNEG ng2_11 (
     .a(gy2[11]),
     .clk(clk),
     .neg(pn2_11),
     .pos(pp2_11),
-    .start(sd3)
-  );
-  SNEG ng2_12 (
-    .a(gy2[12]),
-    .clk(clk),
-    .neg(pn2_12),
-    .pos(pp2_12),
     .start(sd3)
   );
   SNEG ng2_13 (
@@ -6002,13 +5109,6 @@ module top(clk, start, x, y);
     .pos(pp2_16),
     .start(sd3)
   );
-  SNEG ng2_17 (
-    .a(gy2[17]),
-    .clk(clk),
-    .neg(pn2_17),
-    .pos(pp2_17),
-    .start(sd3)
-  );
   SNEG ng2_18 (
     .a(gy2[18]),
     .clk(clk),
@@ -6037,20 +5137,6 @@ module top(clk, start, x, y);
     .pos(pp2_20),
     .start(sd3)
   );
-  SNEG ng2_21 (
-    .a(gy2[21]),
-    .clk(clk),
-    .neg(pn2_21),
-    .pos(pp2_21),
-    .start(sd3)
-  );
-  SNEG ng2_22 (
-    .a(gy2[22]),
-    .clk(clk),
-    .neg(pn2_22),
-    .pos(pp2_22),
-    .start(sd3)
-  );
   SNEG ng2_23 (
     .a(gy2[23]),
     .clk(clk),
@@ -6070,20 +5156,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn2_25),
     .pos(pp2_25),
-    .start(sd3)
-  );
-  SNEG ng2_26 (
-    .a(gy2[26]),
-    .clk(clk),
-    .neg(pn2_26),
-    .pos(pp2_26),
-    .start(sd3)
-  );
-  SNEG ng2_27 (
-    .a(gy2[27]),
-    .clk(clk),
-    .neg(pn2_27),
-    .pos(pp2_27),
     .start(sd3)
   );
   SNEG ng2_28 (
@@ -6135,13 +5207,6 @@ module top(clk, start, x, y);
     .pos(pp2_33),
     .start(sd3)
   );
-  SNEG ng2_34 (
-    .a(gy2[34]),
-    .clk(clk),
-    .neg(pn2_34),
-    .pos(pp2_34),
-    .start(sd3)
-  );
   SNEG ng2_35 (
     .a(gy2[35]),
     .clk(clk),
@@ -6149,25 +5214,11 @@ module top(clk, start, x, y);
     .pos(pp2_35),
     .start(sd3)
   );
-  SNEG ng2_36 (
-    .a(gy2[36]),
-    .clk(clk),
-    .neg(pn2_36),
-    .pos(pp2_36),
-    .start(sd3)
-  );
   SNEG ng2_37 (
     .a(gy2[37]),
     .clk(clk),
     .neg(pn2_37),
     .pos(pp2_37),
-    .start(sd3)
-  );
-  SNEG ng2_38 (
-    .a(gy2[38]),
-    .clk(clk),
-    .neg(pn2_38),
-    .pos(pp2_38),
     .start(sd3)
   );
   SNEG ng2_39 (
@@ -6212,13 +5263,6 @@ module top(clk, start, x, y);
     .pos(pp2_8),
     .start(sd3)
   );
-  SNEG ng2_9 (
-    .a(gy2[9]),
-    .clk(clk),
-    .neg(pn2_9),
-    .pos(pp2_9),
-    .start(sd3)
-  );
   SNEG ng3_0 (
     .a(gy3[0]),
     .clk(clk),
@@ -6254,13 +5298,6 @@ module top(clk, start, x, y);
     .pos(pp3_12),
     .start(sd3)
   );
-  SNEG ng3_13 (
-    .a(gy3[13]),
-    .clk(clk),
-    .neg(pn3_13),
-    .pos(pp3_13),
-    .start(sd3)
-  );
   SNEG ng3_14 (
     .a(gy3[14]),
     .clk(clk),
@@ -6280,13 +5317,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn3_16),
     .pos(pp3_16),
-    .start(sd3)
-  );
-  SNEG ng3_17 (
-    .a(gy3[17]),
-    .clk(clk),
-    .neg(pn3_17),
-    .pos(pp3_17),
     .start(sd3)
   );
   SNEG ng3_18 (
@@ -6387,25 +5417,11 @@ module top(clk, start, x, y);
     .pos(pp3_3),
     .start(sd3)
   );
-  SNEG ng3_30 (
-    .a(gy3[30]),
-    .clk(clk),
-    .neg(pn3_30),
-    .pos(pp3_30),
-    .start(sd3)
-  );
   SNEG ng3_31 (
     .a(gy3[31]),
     .clk(clk),
     .neg(pn3_31),
     .pos(pp3_31),
-    .start(sd3)
-  );
-  SNEG ng3_32 (
-    .a(gy3[32]),
-    .clk(clk),
-    .neg(pn3_32),
-    .pos(pp3_32),
     .start(sd3)
   );
   SNEG ng3_33 (
@@ -6415,25 +5431,11 @@ module top(clk, start, x, y);
     .pos(pp3_33),
     .start(sd3)
   );
-  SNEG ng3_34 (
-    .a(gy3[34]),
-    .clk(clk),
-    .neg(pn3_34),
-    .pos(pp3_34),
-    .start(sd3)
-  );
   SNEG ng3_35 (
     .a(gy3[35]),
     .clk(clk),
     .neg(pn3_35),
     .pos(pp3_35),
-    .start(sd3)
-  );
-  SNEG ng3_36 (
-    .a(gy3[36]),
-    .clk(clk),
-    .neg(pn3_36),
-    .pos(pp3_36),
     .start(sd3)
   );
   SNEG ng3_37 (
@@ -6443,32 +5445,11 @@ module top(clk, start, x, y);
     .pos(pp3_37),
     .start(sd3)
   );
-  SNEG ng3_38 (
-    .a(gy3[38]),
-    .clk(clk),
-    .neg(pn3_38),
-    .pos(pp3_38),
-    .start(sd3)
-  );
   SNEG ng3_39 (
     .a(gy3[39]),
     .clk(clk),
     .neg(pn3_39),
     .pos(pp3_39),
-    .start(sd3)
-  );
-  SNEG ng3_4 (
-    .a(gy3[4]),
-    .clk(clk),
-    .neg(pn3_4),
-    .pos(pp3_4),
-    .start(sd3)
-  );
-  SNEG ng3_5 (
-    .a(gy3[5]),
-    .clk(clk),
-    .neg(pn3_5),
-    .pos(pp3_5),
     .start(sd3)
   );
   SNEG ng3_6 (
@@ -6555,13 +5536,6 @@ module top(clk, start, x, y);
     .pos(pp4_15),
     .start(sd3)
   );
-  SNEG ng4_16 (
-    .a(gy4[16]),
-    .clk(clk),
-    .neg(pn4_16),
-    .pos(pp4_16),
-    .start(sd3)
-  );
   SNEG ng4_17 (
     .a(gy4[17]),
     .clk(clk),
@@ -6618,13 +5592,6 @@ module top(clk, start, x, y);
     .pos(pp4_23),
     .start(sd3)
   );
-  SNEG ng4_24 (
-    .a(gy4[24]),
-    .clk(clk),
-    .neg(pn4_24),
-    .pos(pp4_24),
-    .start(sd3)
-  );
   SNEG ng4_25 (
     .a(gy4[25]),
     .clk(clk),
@@ -6644,20 +5611,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn4_27),
     .pos(pp4_27),
-    .start(sd3)
-  );
-  SNEG ng4_28 (
-    .a(gy4[28]),
-    .clk(clk),
-    .neg(pn4_28),
-    .pos(pp4_28),
-    .start(sd3)
-  );
-  SNEG ng4_29 (
-    .a(gy4[29]),
-    .clk(clk),
-    .neg(pn4_29),
-    .pos(pp4_29),
     .start(sd3)
   );
   SNEG ng4_3 (
@@ -6688,20 +5641,6 @@ module top(clk, start, x, y);
     .pos(pp4_32),
     .start(sd3)
   );
-  SNEG ng4_33 (
-    .a(gy4[33]),
-    .clk(clk),
-    .neg(pn4_33),
-    .pos(pp4_33),
-    .start(sd3)
-  );
-  SNEG ng4_34 (
-    .a(gy4[34]),
-    .clk(clk),
-    .neg(pn4_34),
-    .pos(pp4_34),
-    .start(sd3)
-  );
   SNEG ng4_35 (
     .a(gy4[35]),
     .clk(clk),
@@ -6716,20 +5655,6 @@ module top(clk, start, x, y);
     .pos(pp4_36),
     .start(sd3)
   );
-  SNEG ng4_37 (
-    .a(gy4[37]),
-    .clk(clk),
-    .neg(pn4_37),
-    .pos(pp4_37),
-    .start(sd3)
-  );
-  SNEG ng4_38 (
-    .a(gy4[38]),
-    .clk(clk),
-    .neg(pn4_38),
-    .pos(pp4_38),
-    .start(sd3)
-  );
   SNEG ng4_39 (
     .a(gy4[39]),
     .clk(clk),
@@ -6742,13 +5667,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn4_4),
     .pos(pp4_4),
-    .start(sd3)
-  );
-  SNEG ng4_5 (
-    .a(gy4[5]),
-    .clk(clk),
-    .neg(pn4_5),
-    .pos(pp4_5),
     .start(sd3)
   );
   SNEG ng4_6 (
@@ -6786,13 +5704,6 @@ module top(clk, start, x, y);
     .pos(pp5_0),
     .start(sd3)
   );
-  SNEG ng5_1 (
-    .a(gy5[1]),
-    .clk(clk),
-    .neg(pn5_1),
-    .pos(pp5_1),
-    .start(sd3)
-  );
   SNEG ng5_10 (
     .a(gy5[10]),
     .clk(clk),
@@ -6814,13 +5725,6 @@ module top(clk, start, x, y);
     .pos(pp5_12),
     .start(sd3)
   );
-  SNEG ng5_13 (
-    .a(gy5[13]),
-    .clk(clk),
-    .neg(pn5_13),
-    .pos(pp5_13),
-    .start(sd3)
-  );
   SNEG ng5_14 (
     .a(gy5[14]),
     .clk(clk),
@@ -6840,13 +5744,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn5_16),
     .pos(pp5_16),
-    .start(sd3)
-  );
-  SNEG ng5_17 (
-    .a(gy5[17]),
-    .clk(clk),
-    .neg(pn5_17),
-    .pos(pp5_17),
     .start(sd3)
   );
   SNEG ng5_18 (
@@ -6884,13 +5781,6 @@ module top(clk, start, x, y);
     .pos(pp5_21),
     .start(sd3)
   );
-  SNEG ng5_22 (
-    .a(gy5[22]),
-    .clk(clk),
-    .neg(pn5_22),
-    .pos(pp5_22),
-    .start(sd3)
-  );
   SNEG ng5_23 (
     .a(gy5[23]),
     .clk(clk),
@@ -6898,39 +5788,11 @@ module top(clk, start, x, y);
     .pos(pp5_23),
     .start(sd3)
   );
-  SNEG ng5_24 (
-    .a(gy5[24]),
-    .clk(clk),
-    .neg(pn5_24),
-    .pos(pp5_24),
-    .start(sd3)
-  );
   SNEG ng5_25 (
     .a(gy5[25]),
     .clk(clk),
     .neg(pn5_25),
     .pos(pp5_25),
-    .start(sd3)
-  );
-  SNEG ng5_26 (
-    .a(gy5[26]),
-    .clk(clk),
-    .neg(pn5_26),
-    .pos(pp5_26),
-    .start(sd3)
-  );
-  SNEG ng5_27 (
-    .a(gy5[27]),
-    .clk(clk),
-    .neg(pn5_27),
-    .pos(pp5_27),
-    .start(sd3)
-  );
-  SNEG ng5_28 (
-    .a(gy5[28]),
-    .clk(clk),
-    .neg(pn5_28),
-    .pos(pp5_28),
     .start(sd3)
   );
   SNEG ng5_29 (
@@ -6982,13 +5844,6 @@ module top(clk, start, x, y);
     .pos(pp5_34),
     .start(sd3)
   );
-  SNEG ng5_35 (
-    .a(gy5[35]),
-    .clk(clk),
-    .neg(pn5_35),
-    .pos(pp5_35),
-    .start(sd3)
-  );
   SNEG ng5_36 (
     .a(gy5[36]),
     .clk(clk),
@@ -7024,32 +5879,11 @@ module top(clk, start, x, y);
     .pos(pp5_4),
     .start(sd3)
   );
-  SNEG ng5_5 (
-    .a(gy5[5]),
-    .clk(clk),
-    .neg(pn5_5),
-    .pos(pp5_5),
-    .start(sd3)
-  );
-  SNEG ng5_6 (
-    .a(gy5[6]),
-    .clk(clk),
-    .neg(pn5_6),
-    .pos(pp5_6),
-    .start(sd3)
-  );
   SNEG ng5_7 (
     .a(gy5[7]),
     .clk(clk),
     .neg(pn5_7),
     .pos(pp5_7),
-    .start(sd3)
-  );
-  SNEG ng5_8 (
-    .a(gy5[8]),
-    .clk(clk),
-    .neg(pn5_8),
-    .pos(pp5_8),
     .start(sd3)
   );
   SNEG ng5_9 (
@@ -7157,20 +5991,6 @@ module top(clk, start, x, y);
     .pos(pp6_20),
     .start(sd3)
   );
-  SNEG ng6_21 (
-    .a(gy6[21]),
-    .clk(clk),
-    .neg(pn6_21),
-    .pos(pp6_21),
-    .start(sd3)
-  );
-  SNEG ng6_22 (
-    .a(gy6[22]),
-    .clk(clk),
-    .neg(pn6_22),
-    .pos(pp6_22),
-    .start(sd3)
-  );
   SNEG ng6_23 (
     .a(gy6[23]),
     .clk(clk),
@@ -7190,27 +6010,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn6_25),
     .pos(pp6_25),
-    .start(sd3)
-  );
-  SNEG ng6_26 (
-    .a(gy6[26]),
-    .clk(clk),
-    .neg(pn6_26),
-    .pos(pp6_26),
-    .start(sd3)
-  );
-  SNEG ng6_27 (
-    .a(gy6[27]),
-    .clk(clk),
-    .neg(pn6_27),
-    .pos(pp6_27),
-    .start(sd3)
-  );
-  SNEG ng6_28 (
-    .a(gy6[28]),
-    .clk(clk),
-    .neg(pn6_28),
-    .pos(pp6_28),
     .start(sd3)
   );
   SNEG ng6_29 (
@@ -7239,13 +6038,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn6_31),
     .pos(pp6_31),
-    .start(sd3)
-  );
-  SNEG ng6_32 (
-    .a(gy6[32]),
-    .clk(clk),
-    .neg(pn6_32),
-    .pos(pp6_32),
     .start(sd3)
   );
   SNEG ng6_33 (
@@ -7290,32 +6082,11 @@ module top(clk, start, x, y);
     .pos(pp6_38),
     .start(sd3)
   );
-  SNEG ng6_39 (
-    .a(gy6[39]),
-    .clk(clk),
-    .neg(pn6_39),
-    .pos(pp6_39),
-    .start(sd3)
-  );
   SNEG ng6_4 (
     .a(gy6[4]),
     .clk(clk),
     .neg(pn6_4),
     .pos(pp6_4),
-    .start(sd3)
-  );
-  SNEG ng6_5 (
-    .a(gy6[5]),
-    .clk(clk),
-    .neg(pn6_5),
-    .pos(pp6_5),
-    .start(sd3)
-  );
-  SNEG ng6_6 (
-    .a(gy6[6]),
-    .clk(clk),
-    .neg(pn6_6),
-    .pos(pp6_6),
     .start(sd3)
   );
   SNEG ng6_7 (
@@ -7346,20 +6117,6 @@ module top(clk, start, x, y);
     .pos(pp7_0),
     .start(sd3)
   );
-  SNEG ng7_1 (
-    .a(gy7[1]),
-    .clk(clk),
-    .neg(pn7_1),
-    .pos(pp7_1),
-    .start(sd3)
-  );
-  SNEG ng7_10 (
-    .a(gy7[10]),
-    .clk(clk),
-    .neg(pn7_10),
-    .pos(pp7_10),
-    .start(sd3)
-  );
   SNEG ng7_11 (
     .a(gy7[11]),
     .clk(clk),
@@ -7379,20 +6136,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn7_13),
     .pos(pp7_13),
-    .start(sd3)
-  );
-  SNEG ng7_14 (
-    .a(gy7[14]),
-    .clk(clk),
-    .neg(pn7_14),
-    .pos(pp7_14),
-    .start(sd3)
-  );
-  SNEG ng7_15 (
-    .a(gy7[15]),
-    .clk(clk),
-    .neg(pn7_15),
-    .pos(pp7_15),
     .start(sd3)
   );
   SNEG ng7_16 (
@@ -7435,13 +6178,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn7_20),
     .pos(pp7_20),
-    .start(sd3)
-  );
-  SNEG ng7_21 (
-    .a(gy7[21]),
-    .clk(clk),
-    .neg(pn7_21),
-    .pos(pp7_21),
     .start(sd3)
   );
   SNEG ng7_22 (
@@ -7507,13 +6243,6 @@ module top(clk, start, x, y);
     .pos(pp7_3),
     .start(sd3)
   );
-  SNEG ng7_30 (
-    .a(gy7[30]),
-    .clk(clk),
-    .neg(pn7_30),
-    .pos(pp7_30),
-    .start(sd3)
-  );
   SNEG ng7_31 (
     .a(gy7[31]),
     .clk(clk),
@@ -7535,13 +6264,6 @@ module top(clk, start, x, y);
     .pos(pp7_33),
     .start(sd3)
   );
-  SNEG ng7_34 (
-    .a(gy7[34]),
-    .clk(clk),
-    .neg(pn7_34),
-    .pos(pp7_34),
-    .start(sd3)
-  );
   SNEG ng7_35 (
     .a(gy7[35]),
     .clk(clk),
@@ -7554,13 +6276,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn7_36),
     .pos(pp7_36),
-    .start(sd3)
-  );
-  SNEG ng7_37 (
-    .a(gy7[37]),
-    .clk(clk),
-    .neg(pn7_37),
-    .pos(pp7_37),
     .start(sd3)
   );
   SNEG ng7_38 (
@@ -7582,13 +6297,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn7_4),
     .pos(pp7_4),
-    .start(sd3)
-  );
-  SNEG ng7_5 (
-    .a(gy7[5]),
-    .clk(clk),
-    .neg(pn7_5),
-    .pos(pp7_5),
     .start(sd3)
   );
   SNEG ng7_6 (
@@ -7675,13 +6383,6 @@ module top(clk, start, x, y);
     .pos(pp8_15),
     .start(sd3)
   );
-  SNEG ng8_16 (
-    .a(gy8[16]),
-    .clk(clk),
-    .neg(pn8_16),
-    .pos(pp8_16),
-    .start(sd3)
-  );
   SNEG ng8_17 (
     .a(gy8[17]),
     .clk(clk),
@@ -7731,20 +6432,6 @@ module top(clk, start, x, y);
     .pos(pp8_22),
     .start(sd3)
   );
-  SNEG ng8_23 (
-    .a(gy8[23]),
-    .clk(clk),
-    .neg(pn8_23),
-    .pos(pp8_23),
-    .start(sd3)
-  );
-  SNEG ng8_24 (
-    .a(gy8[24]),
-    .clk(clk),
-    .neg(pn8_24),
-    .pos(pp8_24),
-    .start(sd3)
-  );
   SNEG ng8_25 (
     .a(gy8[25]),
     .clk(clk),
@@ -7773,25 +6460,11 @@ module top(clk, start, x, y);
     .pos(pp8_28),
     .start(sd3)
   );
-  SNEG ng8_29 (
-    .a(gy8[29]),
-    .clk(clk),
-    .neg(pn8_29),
-    .pos(pp8_29),
-    .start(sd3)
-  );
   SNEG ng8_3 (
     .a(gy8[3]),
     .clk(clk),
     .neg(pn8_3),
     .pos(pp8_3),
-    .start(sd3)
-  );
-  SNEG ng8_30 (
-    .a(gy8[30]),
-    .clk(clk),
-    .neg(pn8_30),
-    .pos(pp8_30),
     .start(sd3)
   );
   SNEG ng8_31 (
@@ -7801,13 +6474,6 @@ module top(clk, start, x, y);
     .pos(pp8_31),
     .start(sd3)
   );
-  SNEG ng8_32 (
-    .a(gy8[32]),
-    .clk(clk),
-    .neg(pn8_32),
-    .pos(pp8_32),
-    .start(sd3)
-  );
   SNEG ng8_33 (
     .a(gy8[33]),
     .clk(clk),
@@ -7815,25 +6481,11 @@ module top(clk, start, x, y);
     .pos(pp8_33),
     .start(sd3)
   );
-  SNEG ng8_34 (
-    .a(gy8[34]),
-    .clk(clk),
-    .neg(pn8_34),
-    .pos(pp8_34),
-    .start(sd3)
-  );
   SNEG ng8_35 (
     .a(gy8[35]),
     .clk(clk),
     .neg(pn8_35),
     .pos(pp8_35),
-    .start(sd3)
-  );
-  SNEG ng8_36 (
-    .a(gy8[36]),
-    .clk(clk),
-    .neg(pn8_36),
-    .pos(pp8_36),
     .start(sd3)
   );
   SNEG ng8_37 (
@@ -7920,13 +6572,6 @@ module top(clk, start, x, y);
     .pos(pp9_10),
     .start(sd3)
   );
-  SNEG ng9_11 (
-    .a(gy9[11]),
-    .clk(clk),
-    .neg(pn9_11),
-    .pos(pp9_11),
-    .start(sd3)
-  );
   SNEG ng9_12 (
     .a(gy9[12]),
     .clk(clk),
@@ -7953,13 +6598,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn9_15),
     .pos(pp9_15),
-    .start(sd3)
-  );
-  SNEG ng9_16 (
-    .a(gy9[16]),
-    .clk(clk),
-    .neg(pn9_16),
-    .pos(pp9_16),
     .start(sd3)
   );
   SNEG ng9_17 (
@@ -8004,25 +6642,11 @@ module top(clk, start, x, y);
     .pos(pp9_21),
     .start(sd3)
   );
-  SNEG ng9_22 (
-    .a(gy9[22]),
-    .clk(clk),
-    .neg(pn9_22),
-    .pos(pp9_22),
-    .start(sd3)
-  );
   SNEG ng9_23 (
     .a(gy9[23]),
     .clk(clk),
     .neg(pn9_23),
     .pos(pp9_23),
-    .start(sd3)
-  );
-  SNEG ng9_24 (
-    .a(gy9[24]),
-    .clk(clk),
-    .neg(pn9_24),
-    .pos(pp9_24),
     .start(sd3)
   );
   SNEG ng9_25 (
@@ -8053,25 +6677,11 @@ module top(clk, start, x, y);
     .pos(pp9_28),
     .start(sd3)
   );
-  SNEG ng9_29 (
-    .a(gy9[29]),
-    .clk(clk),
-    .neg(pn9_29),
-    .pos(pp9_29),
-    .start(sd3)
-  );
   SNEG ng9_3 (
     .a(gy9[3]),
     .clk(clk),
     .neg(pn9_3),
     .pos(pp9_3),
-    .start(sd3)
-  );
-  SNEG ng9_30 (
-    .a(gy9[30]),
-    .clk(clk),
-    .neg(pn9_30),
-    .pos(pp9_30),
     .start(sd3)
   );
   SNEG ng9_31 (
@@ -8116,13 +6726,6 @@ module top(clk, start, x, y);
     .pos(pp9_36),
     .start(sd3)
   );
-  SNEG ng9_37 (
-    .a(gy9[37]),
-    .clk(clk),
-    .neg(pn9_37),
-    .pos(pp9_37),
-    .start(sd3)
-  );
   SNEG ng9_38 (
     .a(gy9[38]),
     .clk(clk),
@@ -8142,13 +6745,6 @@ module top(clk, start, x, y);
     .clk(clk),
     .neg(pn9_4),
     .pos(pp9_4),
-    .start(sd3)
-  );
-  SNEG ng9_5 (
-    .a(gy9[5]),
-    .clk(clk),
-    .neg(pn9_5),
-    .pos(pp9_5),
     .start(sd3)
   );
   SNEG ng9_6 (

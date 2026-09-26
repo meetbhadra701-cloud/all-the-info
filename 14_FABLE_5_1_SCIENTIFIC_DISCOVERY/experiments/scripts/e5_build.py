@@ -290,7 +290,7 @@ def main(out: Path, n: int, designs: list[str]):
         # netlist for ORFS: re-emit modules + top through Yosys as strict structural Verilog.
         # No flatten, no cross-module optimization: only hierarchy resolution and dangling-wire purge.
         rd = ' '.join(f'read_verilog {f};' for f in files + ['top.v'])
-        p = dock(f"yosys -q -p 'read_liberty -lib {LIB}; {rd} hierarchy -top top; opt_clean -purge; "
+        p = dock(f"yosys -q -p 'read_liberty -lib {LIB}; {rd} hierarchy -top top; setattr -set keep 1 top/t:*; opt_clean -purge; "
                  f"write_verilog -noattr -noexpr -nohex -nodec netlist_raw.v'", wd)
         if p.returncode != 0:
             raise RuntimeError(f'netlist emission failed\n{p.stderr[-2000:]}')

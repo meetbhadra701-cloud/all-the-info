@@ -165,6 +165,50 @@ At an equal clock (3.0 ns) and equal throughput, bit-serial UBP-g fabrics have *
 - One size (64) and one PDK.
 - The negator-per-line structure is kept for both designs. The complement-line + via-programmed constant-correction refinement, which would help both, is not tested.
 
+## Amendment A2 (E5 and E6): weight-dependent pruning removed
+
+A2 is a genuine methodological defect, found and fixed **before any corrected-run data**.
+
+### What was found (23:45–00:05 UTC, after these runs finished)
+
+- **Runs finished at that point:** E5 g1/ubp3 at U = 60; E6 ubp3/ubp4 at U = 60.
+- **First source of pruning:** the netlist emission (`hierarchy; opt_clean -purge`) removed every negator instance whose output no row used.
+  - E5 ubp3: 35 of 134 removed. E5 ubp4: 223 of 320. E6 ubp4: 156 of 640.
+- **Second source of pruning:** ORFS's `synth_odb.tcl` runs `eliminate_dead_logic` after flattening. That removed generator logic feeding pattern lines no row selects.
+  - E5 ubp3: 180 instances. E5 ubp4: 2,722. E6 ubp3: 190. E6 ubp4: 1,719.
+  - g1: 0 in every run.
+
+### Why this is a defect, not a result
+
+- In regime V the base layers, i.e. the whole universal fabric, are **weight-independent**. Hardware for an unused line still exists on silicon.
+- Pruning it per W is exactly the weight-specific optimization the hypothesis is not allowed to use.
+- It understated UBP area: about 4% (E5 ubp3), 27% (E5 ubp4), 1.5% (E6 ubp3), 18% (E6 ubp4). The bias favours UBP.
+- The pre-registration's own stated intent was "modules are synthesized once and instantiated; no cross-module optimization".
+
+### Fix
+
+1. **Emission:** every top-level instance gets `keep` (`setattr -set keep 1 top/t:*`), so negator instances are never removed. The rebuilt netlists hold the full fabric.
+   - 134 / 320 / 274 / 640 negators, checked against the closed-form count.
+   - Re-validated against numpy with the mutation control.
+   - Script: `scripts/reemit_a2.py`; builders patched the same way.
+2. **ORFS:** `eliminate_dead_logic` is disabled through a mounted copy of `synth_odb.tcl` (`scripts/orfs_patch/`). Nothing else in the flow changes.
+3. **The g1 runs are kept as they are:** its netlists were already full fabrics (32 / 64 negators) and `eliminate_dead_logic` removed 0 instances. The patched and unpatched flows are therefore identical for g1.
+4. **Area basis made precise.** "Synthesized cell area" = ORFS `synth__design__instance__area` (`1_synth.json`), i.e. the netlist as handed to ORFS.
+   - It is taken **before** floorplan's `repair_tie_fanout`. That step splits each zero-leaf tie into one cell per load: +6,810 cells in g1 vs +430 in ubp3 at n = 32. This is an artifact that inflates g1: in a via fabric, zero is a ground connection.
+   - Floorplan, final, and final-minus-ties areas are reported as sensitivity bases.
+
+### Unchanged
+
+The K5/A5 and K6/A6 thresholds, the utilization protocol, and the clocks.
+
+### Preserved
+
+The pruned runs' logs, netlists and summaries: `results/E*/pruned_A1_runs/`, `results/E*_pruned_A1_summary.md`. They are reported, not used for decisions.
+
+### Known consequence
+
+At U = 60, ubp3's actual cell load differs only slightly from the pruned run (1.5–4%). ubp4's differs a lot.
+
 ## E6 deviation log
 
 - **D6.1 (netlist format; before any E6 PnR data): the top-level start-delay and alignment flip-flops were re-emitted as explicit `sky130_fd_sc_hd__dfxtp_1` instances.**

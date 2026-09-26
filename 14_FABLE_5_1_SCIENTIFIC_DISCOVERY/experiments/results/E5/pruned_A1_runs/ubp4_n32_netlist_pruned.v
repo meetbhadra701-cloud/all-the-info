@@ -7769,358 +7769,110 @@ module top(x, y);
   wire [399:0] gb5;
   wire [399:0] gb6;
   wire [399:0] gb7;
-  wire [9:0] pn0_0;
-  wire [9:0] pn0_1;
-  wire [9:0] pn0_10;
-  wire [9:0] pn0_11;
-  wire [9:0] pn0_12;
-  wire [9:0] pn0_13;
   wire [9:0] pn0_14;
-  wire [9:0] pn0_15;
-  wire [9:0] pn0_16;
-  wire [9:0] pn0_17;
   wire [9:0] pn0_18;
-  wire [9:0] pn0_19;
-  wire [9:0] pn0_2;
   wire [9:0] pn0_20;
-  wire [9:0] pn0_21;
   wire [9:0] pn0_22;
-  wire [9:0] pn0_23;
-  wire [9:0] pn0_24;
-  wire [9:0] pn0_25;
   wire [9:0] pn0_26;
   wire [9:0] pn0_27;
   wire [9:0] pn0_28;
-  wire [9:0] pn0_29;
-  wire [9:0] pn0_3;
-  wire [9:0] pn0_30;
-  wire [9:0] pn0_31;
-  wire [9:0] pn0_32;
   wire [9:0] pn0_33;
   wire [9:0] pn0_34;
   wire [9:0] pn0_35;
-  wire [9:0] pn0_36;
   wire [9:0] pn0_37;
-  wire [9:0] pn0_38;
-  wire [9:0] pn0_39;
   wire [9:0] pn0_4;
   wire [9:0] pn0_5;
-  wire [9:0] pn0_6;
-  wire [9:0] pn0_7;
   wire [9:0] pn0_8;
-  wire [9:0] pn0_9;
-  wire [9:0] pn1_0;
-  wire [9:0] pn1_1;
-  wire [9:0] pn1_10;
-  wire [9:0] pn1_11;
-  wire [9:0] pn1_12;
-  wire [9:0] pn1_13;
-  wire [9:0] pn1_14;
   wire [9:0] pn1_15;
   wire [9:0] pn1_16;
-  wire [9:0] pn1_17;
   wire [9:0] pn1_18;
-  wire [9:0] pn1_19;
-  wire [9:0] pn1_2;
-  wire [9:0] pn1_20;
   wire [9:0] pn1_21;
-  wire [9:0] pn1_22;
-  wire [9:0] pn1_23;
-  wire [9:0] pn1_24;
   wire [9:0] pn1_25;
-  wire [9:0] pn1_26;
-  wire [9:0] pn1_27;
   wire [9:0] pn1_28;
-  wire [9:0] pn1_29;
   wire [9:0] pn1_3;
   wire [9:0] pn1_30;
-  wire [9:0] pn1_31;
-  wire [9:0] pn1_32;
-  wire [9:0] pn1_33;
-  wire [9:0] pn1_34;
-  wire [9:0] pn1_35;
-  wire [9:0] pn1_36;
-  wire [9:0] pn1_37;
-  wire [9:0] pn1_38;
   wire [9:0] pn1_39;
-  wire [9:0] pn1_4;
-  wire [9:0] pn1_5;
-  wire [9:0] pn1_6;
-  wire [9:0] pn1_7;
-  wire [9:0] pn1_8;
-  wire [9:0] pn1_9;
   wire [9:0] pn2_0;
-  wire [9:0] pn2_1;
-  wire [9:0] pn2_10;
-  wire [9:0] pn2_11;
-  wire [9:0] pn2_12;
   wire [9:0] pn2_13;
   wire [9:0] pn2_14;
   wire [9:0] pn2_15;
-  wire [9:0] pn2_16;
   wire [9:0] pn2_17;
-  wire [9:0] pn2_18;
-  wire [9:0] pn2_19;
-  wire [9:0] pn2_2;
   wire [9:0] pn2_20;
-  wire [9:0] pn2_21;
-  wire [9:0] pn2_22;
   wire [9:0] pn2_23;
-  wire [9:0] pn2_24;
-  wire [9:0] pn2_25;
-  wire [9:0] pn2_26;
-  wire [9:0] pn2_27;
   wire [9:0] pn2_28;
-  wire [9:0] pn2_29;
-  wire [9:0] pn2_3;
   wire [9:0] pn2_30;
-  wire [9:0] pn2_31;
-  wire [9:0] pn2_32;
-  wire [9:0] pn2_33;
-  wire [9:0] pn2_34;
   wire [9:0] pn2_35;
-  wire [9:0] pn2_36;
-  wire [9:0] pn2_37;
   wire [9:0] pn2_38;
-  wire [9:0] pn2_39;
-  wire [9:0] pn2_4;
-  wire [9:0] pn2_5;
   wire [9:0] pn2_6;
-  wire [9:0] pn2_7;
-  wire [9:0] pn2_8;
-  wire [9:0] pn2_9;
-  wire [9:0] pn3_0;
   wire [9:0] pn3_1;
-  wire [9:0] pn3_10;
-  wire [9:0] pn3_11;
-  wire [9:0] pn3_12;
-  wire [9:0] pn3_13;
   wire [9:0] pn3_14;
-  wire [9:0] pn3_15;
-  wire [9:0] pn3_16;
   wire [9:0] pn3_17;
-  wire [9:0] pn3_18;
   wire [9:0] pn3_19;
   wire [9:0] pn3_2;
-  wire [9:0] pn3_20;
-  wire [9:0] pn3_21;
-  wire [9:0] pn3_22;
-  wire [9:0] pn3_23;
-  wire [9:0] pn3_24;
   wire [9:0] pn3_25;
-  wire [9:0] pn3_26;
-  wire [9:0] pn3_27;
-  wire [9:0] pn3_28;
-  wire [9:0] pn3_29;
-  wire [9:0] pn3_3;
-  wire [9:0] pn3_30;
-  wire [9:0] pn3_31;
-  wire [9:0] pn3_32;
   wire [9:0] pn3_33;
-  wire [9:0] pn3_34;
-  wire [9:0] pn3_35;
-  wire [9:0] pn3_36;
   wire [9:0] pn3_37;
-  wire [9:0] pn3_38;
-  wire [9:0] pn3_39;
-  wire [9:0] pn3_4;
   wire [9:0] pn3_5;
-  wire [9:0] pn3_6;
   wire [9:0] pn3_7;
-  wire [9:0] pn3_8;
   wire [9:0] pn3_9;
-  wire [9:0] pn4_0;
-  wire [9:0] pn4_1;
-  wire [9:0] pn4_10;
   wire [9:0] pn4_11;
   wire [9:0] pn4_12;
-  wire [9:0] pn4_13;
-  wire [9:0] pn4_14;
   wire [9:0] pn4_15;
   wire [9:0] pn4_16;
-  wire [9:0] pn4_17;
-  wire [9:0] pn4_18;
   wire [9:0] pn4_19;
-  wire [9:0] pn4_2;
-  wire [9:0] pn4_20;
   wire [9:0] pn4_21;
   wire [9:0] pn4_22;
-  wire [9:0] pn4_23;
   wire [9:0] pn4_24;
   wire [9:0] pn4_25;
   wire [9:0] pn4_26;
-  wire [9:0] pn4_27;
-  wire [9:0] pn4_28;
-  wire [9:0] pn4_29;
-  wire [9:0] pn4_3;
-  wire [9:0] pn4_30;
   wire [9:0] pn4_31;
-  wire [9:0] pn4_32;
   wire [9:0] pn4_33;
-  wire [9:0] pn4_34;
-  wire [9:0] pn4_35;
-  wire [9:0] pn4_36;
-  wire [9:0] pn4_37;
-  wire [9:0] pn4_38;
-  wire [9:0] pn4_39;
   wire [9:0] pn4_4;
-  wire [9:0] pn4_5;
-  wire [9:0] pn4_6;
-  wire [9:0] pn4_7;
-  wire [9:0] pn4_8;
   wire [9:0] pn4_9;
-  wire [9:0] pn5_0;
   wire [9:0] pn5_1;
-  wire [9:0] pn5_10;
-  wire [9:0] pn5_11;
-  wire [9:0] pn5_12;
   wire [9:0] pn5_13;
-  wire [9:0] pn5_14;
   wire [9:0] pn5_15;
-  wire [9:0] pn5_16;
-  wire [9:0] pn5_17;
   wire [9:0] pn5_18;
-  wire [9:0] pn5_19;
-  wire [9:0] pn5_2;
   wire [9:0] pn5_20;
   wire [9:0] pn5_21;
   wire [9:0] pn5_22;
-  wire [9:0] pn5_23;
   wire [9:0] pn5_24;
-  wire [9:0] pn5_25;
-  wire [9:0] pn5_26;
   wire [9:0] pn5_27;
-  wire [9:0] pn5_28;
-  wire [9:0] pn5_29;
-  wire [9:0] pn5_3;
-  wire [9:0] pn5_30;
-  wire [9:0] pn5_31;
-  wire [9:0] pn5_32;
-  wire [9:0] pn5_33;
-  wire [9:0] pn5_34;
-  wire [9:0] pn5_35;
-  wire [9:0] pn5_36;
   wire [9:0] pn5_37;
   wire [9:0] pn5_38;
   wire [9:0] pn5_39;
   wire [9:0] pn5_4;
-  wire [9:0] pn5_5;
-  wire [9:0] pn5_6;
-  wire [9:0] pn5_7;
-  wire [9:0] pn5_8;
   wire [9:0] pn5_9;
   wire [9:0] pn6_0;
   wire [9:0] pn6_1;
-  wire [9:0] pn6_10;
-  wire [9:0] pn6_11;
   wire [9:0] pn6_12;
   wire [9:0] pn6_13;
-  wire [9:0] pn6_14;
   wire [9:0] pn6_15;
   wire [9:0] pn6_16;
-  wire [9:0] pn6_17;
   wire [9:0] pn6_18;
   wire [9:0] pn6_19;
-  wire [9:0] pn6_2;
-  wire [9:0] pn6_20;
-  wire [9:0] pn6_21;
-  wire [9:0] pn6_22;
-  wire [9:0] pn6_23;
   wire [9:0] pn6_24;
-  wire [9:0] pn6_25;
-  wire [9:0] pn6_26;
-  wire [9:0] pn6_27;
-  wire [9:0] pn6_28;
-  wire [9:0] pn6_29;
   wire [9:0] pn6_3;
   wire [9:0] pn6_30;
-  wire [9:0] pn6_31;
-  wire [9:0] pn6_32;
-  wire [9:0] pn6_33;
-  wire [9:0] pn6_34;
   wire [9:0] pn6_35;
-  wire [9:0] pn6_36;
-  wire [9:0] pn6_37;
-  wire [9:0] pn6_38;
-  wire [9:0] pn6_39;
-  wire [9:0] pn6_4;
-  wire [9:0] pn6_5;
-  wire [9:0] pn6_6;
-  wire [9:0] pn6_7;
-  wire [9:0] pn6_8;
-  wire [9:0] pn6_9;
-  wire [9:0] pn7_0;
-  wire [9:0] pn7_1;
   wire [9:0] pn7_10;
-  wire [9:0] pn7_11;
-  wire [9:0] pn7_12;
-  wire [9:0] pn7_13;
-  wire [9:0] pn7_14;
   wire [9:0] pn7_15;
   wire [9:0] pn7_16;
-  wire [9:0] pn7_17;
-  wire [9:0] pn7_18;
-  wire [9:0] pn7_19;
-  wire [9:0] pn7_2;
   wire [9:0] pn7_20;
-  wire [9:0] pn7_21;
-  wire [9:0] pn7_22;
-  wire [9:0] pn7_23;
-  wire [9:0] pn7_24;
   wire [9:0] pn7_25;
   wire [9:0] pn7_26;
   wire [9:0] pn7_27;
   wire [9:0] pn7_28;
-  wire [9:0] pn7_29;
-  wire [9:0] pn7_3;
-  wire [9:0] pn7_30;
-  wire [9:0] pn7_31;
-  wire [9:0] pn7_32;
   wire [9:0] pn7_33;
-  wire [9:0] pn7_34;
-  wire [9:0] pn7_35;
   wire [9:0] pn7_36;
-  wire [9:0] pn7_37;
-  wire [9:0] pn7_38;
-  wire [9:0] pn7_39;
-  wire [9:0] pn7_4;
-  wire [9:0] pn7_5;
-  wire [9:0] pn7_6;
-  wire [9:0] pn7_7;
-  wire [9:0] pn7_8;
   wire [9:0] pn7_9;
-  wire z0;
-  wire z1;
   wire z10;
   wire z11;
   wire z12;
   wire z13;
-  wire z14;
-  wire z15;
-  wire z16;
-  wire z17;
-  wire z18;
-  wire z19;
   wire z2;
-  wire z20;
-  wire z21;
-  wire z22;
-  wire z23;
-  wire z24;
-  wire z25;
-  wire z26;
-  wire z27;
-  wire z28;
-  wire z29;
-  wire z3;
-  wire z30;
   wire z31;
-  wire z4;
-  wire z5;
-  wire z6;
   wire z7;
-  wire z8;
-  wire z9;
   GEN4_W10 gen0 (
     .x(x[31:0]),
     .y(gb0)
@@ -8153,81 +7905,21 @@ module top(x, y);
     .x(x[255:224]),
     .y(gb7)
   );
-  NEG_W10 neg0_0 (
-    .x(gb0[9:0]),
-    .y(pn0_0)
-  );
-  NEG_W10 neg0_1 (
-    .x(gb0[19:10]),
-    .y(pn0_1)
-  );
-  NEG_W10 neg0_10 (
-    .x(gb0[109:100]),
-    .y(pn0_10)
-  );
-  NEG_W10 neg0_11 (
-    .x(gb0[119:110]),
-    .y(pn0_11)
-  );
-  NEG_W10 neg0_12 (
-    .x(gb0[129:120]),
-    .y(pn0_12)
-  );
-  NEG_W10 neg0_13 (
-    .x(gb0[139:130]),
-    .y(pn0_13)
-  );
   NEG_W10 neg0_14 (
     .x(gb0[149:140]),
     .y(pn0_14)
-  );
-  NEG_W10 neg0_15 (
-    .x(gb0[159:150]),
-    .y(pn0_15)
-  );
-  NEG_W10 neg0_16 (
-    .x(gb0[169:160]),
-    .y(pn0_16)
-  );
-  NEG_W10 neg0_17 (
-    .x(gb0[179:170]),
-    .y(pn0_17)
   );
   NEG_W10 neg0_18 (
     .x(gb0[189:180]),
     .y(pn0_18)
   );
-  NEG_W10 neg0_19 (
-    .x(gb0[199:190]),
-    .y(pn0_19)
-  );
-  NEG_W10 neg0_2 (
-    .x(gb0[29:20]),
-    .y(pn0_2)
-  );
   NEG_W10 neg0_20 (
     .x(gb0[209:200]),
     .y(pn0_20)
   );
-  NEG_W10 neg0_21 (
-    .x(gb0[219:210]),
-    .y(pn0_21)
-  );
   NEG_W10 neg0_22 (
     .x(gb0[229:220]),
     .y(pn0_22)
-  );
-  NEG_W10 neg0_23 (
-    .x(gb0[239:230]),
-    .y(pn0_23)
-  );
-  NEG_W10 neg0_24 (
-    .x(gb0[249:240]),
-    .y(pn0_24)
-  );
-  NEG_W10 neg0_25 (
-    .x(gb0[259:250]),
-    .y(pn0_25)
   );
   NEG_W10 neg0_26 (
     .x(gb0[269:260]),
@@ -8241,26 +7933,6 @@ module top(x, y);
     .x(gb0[289:280]),
     .y(pn0_28)
   );
-  NEG_W10 neg0_29 (
-    .x(gb0[299:290]),
-    .y(pn0_29)
-  );
-  NEG_W10 neg0_3 (
-    .x(gb0[39:30]),
-    .y(pn0_3)
-  );
-  NEG_W10 neg0_30 (
-    .x(gb0[309:300]),
-    .y(pn0_30)
-  );
-  NEG_W10 neg0_31 (
-    .x(gb0[319:310]),
-    .y(pn0_31)
-  );
-  NEG_W10 neg0_32 (
-    .x(gb0[329:320]),
-    .y(pn0_32)
-  );
   NEG_W10 neg0_33 (
     .x(gb0[339:330]),
     .y(pn0_33)
@@ -8273,21 +7945,9 @@ module top(x, y);
     .x(gb0[359:350]),
     .y(pn0_35)
   );
-  NEG_W10 neg0_36 (
-    .x(gb0[369:360]),
-    .y(pn0_36)
-  );
   NEG_W10 neg0_37 (
     .x(gb0[379:370]),
     .y(pn0_37)
-  );
-  NEG_W10 neg0_38 (
-    .x(gb0[389:380]),
-    .y(pn0_38)
-  );
-  NEG_W10 neg0_39 (
-    .x(gb0[399:390]),
-    .y(pn0_39)
   );
   NEG_W10 neg0_4 (
     .x(gb0[49:40]),
@@ -8297,49 +7957,9 @@ module top(x, y);
     .x(gb0[59:50]),
     .y(pn0_5)
   );
-  NEG_W10 neg0_6 (
-    .x(gb0[69:60]),
-    .y(pn0_6)
-  );
-  NEG_W10 neg0_7 (
-    .x(gb0[79:70]),
-    .y(pn0_7)
-  );
   NEG_W10 neg0_8 (
     .x(gb0[89:80]),
     .y(pn0_8)
-  );
-  NEG_W10 neg0_9 (
-    .x(gb0[99:90]),
-    .y(pn0_9)
-  );
-  NEG_W10 neg1_0 (
-    .x(gb1[9:0]),
-    .y(pn1_0)
-  );
-  NEG_W10 neg1_1 (
-    .x(gb1[19:10]),
-    .y(pn1_1)
-  );
-  NEG_W10 neg1_10 (
-    .x(gb1[109:100]),
-    .y(pn1_10)
-  );
-  NEG_W10 neg1_11 (
-    .x(gb1[119:110]),
-    .y(pn1_11)
-  );
-  NEG_W10 neg1_12 (
-    .x(gb1[129:120]),
-    .y(pn1_12)
-  );
-  NEG_W10 neg1_13 (
-    .x(gb1[139:130]),
-    .y(pn1_13)
-  );
-  NEG_W10 neg1_14 (
-    .x(gb1[149:140]),
-    .y(pn1_14)
   );
   NEG_W10 neg1_15 (
     .x(gb1[159:150]),
@@ -8349,61 +7969,21 @@ module top(x, y);
     .x(gb1[169:160]),
     .y(pn1_16)
   );
-  NEG_W10 neg1_17 (
-    .x(gb1[179:170]),
-    .y(pn1_17)
-  );
   NEG_W10 neg1_18 (
     .x(gb1[189:180]),
     .y(pn1_18)
-  );
-  NEG_W10 neg1_19 (
-    .x(gb1[199:190]),
-    .y(pn1_19)
-  );
-  NEG_W10 neg1_2 (
-    .x(gb1[29:20]),
-    .y(pn1_2)
-  );
-  NEG_W10 neg1_20 (
-    .x(gb1[209:200]),
-    .y(pn1_20)
   );
   NEG_W10 neg1_21 (
     .x(gb1[219:210]),
     .y(pn1_21)
   );
-  NEG_W10 neg1_22 (
-    .x(gb1[229:220]),
-    .y(pn1_22)
-  );
-  NEG_W10 neg1_23 (
-    .x(gb1[239:230]),
-    .y(pn1_23)
-  );
-  NEG_W10 neg1_24 (
-    .x(gb1[249:240]),
-    .y(pn1_24)
-  );
   NEG_W10 neg1_25 (
     .x(gb1[259:250]),
     .y(pn1_25)
   );
-  NEG_W10 neg1_26 (
-    .x(gb1[269:260]),
-    .y(pn1_26)
-  );
-  NEG_W10 neg1_27 (
-    .x(gb1[279:270]),
-    .y(pn1_27)
-  );
   NEG_W10 neg1_28 (
     .x(gb1[289:280]),
     .y(pn1_28)
-  );
-  NEG_W10 neg1_29 (
-    .x(gb1[299:290]),
-    .y(pn1_29)
   );
   NEG_W10 neg1_3 (
     .x(gb1[39:30]),
@@ -8413,85 +7993,13 @@ module top(x, y);
     .x(gb1[309:300]),
     .y(pn1_30)
   );
-  NEG_W10 neg1_31 (
-    .x(gb1[319:310]),
-    .y(pn1_31)
-  );
-  NEG_W10 neg1_32 (
-    .x(gb1[329:320]),
-    .y(pn1_32)
-  );
-  NEG_W10 neg1_33 (
-    .x(gb1[339:330]),
-    .y(pn1_33)
-  );
-  NEG_W10 neg1_34 (
-    .x(gb1[349:340]),
-    .y(pn1_34)
-  );
-  NEG_W10 neg1_35 (
-    .x(gb1[359:350]),
-    .y(pn1_35)
-  );
-  NEG_W10 neg1_36 (
-    .x(gb1[369:360]),
-    .y(pn1_36)
-  );
-  NEG_W10 neg1_37 (
-    .x(gb1[379:370]),
-    .y(pn1_37)
-  );
-  NEG_W10 neg1_38 (
-    .x(gb1[389:380]),
-    .y(pn1_38)
-  );
   NEG_W10 neg1_39 (
     .x(gb1[399:390]),
     .y(pn1_39)
   );
-  NEG_W10 neg1_4 (
-    .x(gb1[49:40]),
-    .y(pn1_4)
-  );
-  NEG_W10 neg1_5 (
-    .x(gb1[59:50]),
-    .y(pn1_5)
-  );
-  NEG_W10 neg1_6 (
-    .x(gb1[69:60]),
-    .y(pn1_6)
-  );
-  NEG_W10 neg1_7 (
-    .x(gb1[79:70]),
-    .y(pn1_7)
-  );
-  NEG_W10 neg1_8 (
-    .x(gb1[89:80]),
-    .y(pn1_8)
-  );
-  NEG_W10 neg1_9 (
-    .x(gb1[99:90]),
-    .y(pn1_9)
-  );
   NEG_W10 neg2_0 (
     .x(gb2[9:0]),
     .y(pn2_0)
-  );
-  NEG_W10 neg2_1 (
-    .x(gb2[19:10]),
-    .y(pn2_1)
-  );
-  NEG_W10 neg2_10 (
-    .x(gb2[109:100]),
-    .y(pn2_10)
-  );
-  NEG_W10 neg2_11 (
-    .x(gb2[119:110]),
-    .y(pn2_11)
-  );
-  NEG_W10 neg2_12 (
-    .x(gb2[129:120]),
-    .y(pn2_12)
   );
   NEG_W10 neg2_13 (
     .x(gb2[139:130]),
@@ -8505,177 +8013,49 @@ module top(x, y);
     .x(gb2[159:150]),
     .y(pn2_15)
   );
-  NEG_W10 neg2_16 (
-    .x(gb2[169:160]),
-    .y(pn2_16)
-  );
   NEG_W10 neg2_17 (
     .x(gb2[179:170]),
     .y(pn2_17)
-  );
-  NEG_W10 neg2_18 (
-    .x(gb2[189:180]),
-    .y(pn2_18)
-  );
-  NEG_W10 neg2_19 (
-    .x(gb2[199:190]),
-    .y(pn2_19)
-  );
-  NEG_W10 neg2_2 (
-    .x(gb2[29:20]),
-    .y(pn2_2)
   );
   NEG_W10 neg2_20 (
     .x(gb2[209:200]),
     .y(pn2_20)
   );
-  NEG_W10 neg2_21 (
-    .x(gb2[219:210]),
-    .y(pn2_21)
-  );
-  NEG_W10 neg2_22 (
-    .x(gb2[229:220]),
-    .y(pn2_22)
-  );
   NEG_W10 neg2_23 (
     .x(gb2[239:230]),
     .y(pn2_23)
-  );
-  NEG_W10 neg2_24 (
-    .x(gb2[249:240]),
-    .y(pn2_24)
-  );
-  NEG_W10 neg2_25 (
-    .x(gb2[259:250]),
-    .y(pn2_25)
-  );
-  NEG_W10 neg2_26 (
-    .x(gb2[269:260]),
-    .y(pn2_26)
-  );
-  NEG_W10 neg2_27 (
-    .x(gb2[279:270]),
-    .y(pn2_27)
   );
   NEG_W10 neg2_28 (
     .x(gb2[289:280]),
     .y(pn2_28)
   );
-  NEG_W10 neg2_29 (
-    .x(gb2[299:290]),
-    .y(pn2_29)
-  );
-  NEG_W10 neg2_3 (
-    .x(gb2[39:30]),
-    .y(pn2_3)
-  );
   NEG_W10 neg2_30 (
     .x(gb2[309:300]),
     .y(pn2_30)
-  );
-  NEG_W10 neg2_31 (
-    .x(gb2[319:310]),
-    .y(pn2_31)
-  );
-  NEG_W10 neg2_32 (
-    .x(gb2[329:320]),
-    .y(pn2_32)
-  );
-  NEG_W10 neg2_33 (
-    .x(gb2[339:330]),
-    .y(pn2_33)
-  );
-  NEG_W10 neg2_34 (
-    .x(gb2[349:340]),
-    .y(pn2_34)
   );
   NEG_W10 neg2_35 (
     .x(gb2[359:350]),
     .y(pn2_35)
   );
-  NEG_W10 neg2_36 (
-    .x(gb2[369:360]),
-    .y(pn2_36)
-  );
-  NEG_W10 neg2_37 (
-    .x(gb2[379:370]),
-    .y(pn2_37)
-  );
   NEG_W10 neg2_38 (
     .x(gb2[389:380]),
     .y(pn2_38)
-  );
-  NEG_W10 neg2_39 (
-    .x(gb2[399:390]),
-    .y(pn2_39)
-  );
-  NEG_W10 neg2_4 (
-    .x(gb2[49:40]),
-    .y(pn2_4)
-  );
-  NEG_W10 neg2_5 (
-    .x(gb2[59:50]),
-    .y(pn2_5)
   );
   NEG_W10 neg2_6 (
     .x(gb2[69:60]),
     .y(pn2_6)
   );
-  NEG_W10 neg2_7 (
-    .x(gb2[79:70]),
-    .y(pn2_7)
-  );
-  NEG_W10 neg2_8 (
-    .x(gb2[89:80]),
-    .y(pn2_8)
-  );
-  NEG_W10 neg2_9 (
-    .x(gb2[99:90]),
-    .y(pn2_9)
-  );
-  NEG_W10 neg3_0 (
-    .x(gb3[9:0]),
-    .y(pn3_0)
-  );
   NEG_W10 neg3_1 (
     .x(gb3[19:10]),
     .y(pn3_1)
-  );
-  NEG_W10 neg3_10 (
-    .x(gb3[109:100]),
-    .y(pn3_10)
-  );
-  NEG_W10 neg3_11 (
-    .x(gb3[119:110]),
-    .y(pn3_11)
-  );
-  NEG_W10 neg3_12 (
-    .x(gb3[129:120]),
-    .y(pn3_12)
-  );
-  NEG_W10 neg3_13 (
-    .x(gb3[139:130]),
-    .y(pn3_13)
   );
   NEG_W10 neg3_14 (
     .x(gb3[149:140]),
     .y(pn3_14)
   );
-  NEG_W10 neg3_15 (
-    .x(gb3[159:150]),
-    .y(pn3_15)
-  );
-  NEG_W10 neg3_16 (
-    .x(gb3[169:160]),
-    .y(pn3_16)
-  );
   NEG_W10 neg3_17 (
     .x(gb3[179:170]),
     .y(pn3_17)
-  );
-  NEG_W10 neg3_18 (
-    .x(gb3[189:180]),
-    .y(pn3_18)
   );
   NEG_W10 neg3_19 (
     .x(gb3[199:190]),
@@ -8685,125 +8065,29 @@ module top(x, y);
     .x(gb3[29:20]),
     .y(pn3_2)
   );
-  NEG_W10 neg3_20 (
-    .x(gb3[209:200]),
-    .y(pn3_20)
-  );
-  NEG_W10 neg3_21 (
-    .x(gb3[219:210]),
-    .y(pn3_21)
-  );
-  NEG_W10 neg3_22 (
-    .x(gb3[229:220]),
-    .y(pn3_22)
-  );
-  NEG_W10 neg3_23 (
-    .x(gb3[239:230]),
-    .y(pn3_23)
-  );
-  NEG_W10 neg3_24 (
-    .x(gb3[249:240]),
-    .y(pn3_24)
-  );
   NEG_W10 neg3_25 (
     .x(gb3[259:250]),
     .y(pn3_25)
-  );
-  NEG_W10 neg3_26 (
-    .x(gb3[269:260]),
-    .y(pn3_26)
-  );
-  NEG_W10 neg3_27 (
-    .x(gb3[279:270]),
-    .y(pn3_27)
-  );
-  NEG_W10 neg3_28 (
-    .x(gb3[289:280]),
-    .y(pn3_28)
-  );
-  NEG_W10 neg3_29 (
-    .x(gb3[299:290]),
-    .y(pn3_29)
-  );
-  NEG_W10 neg3_3 (
-    .x(gb3[39:30]),
-    .y(pn3_3)
-  );
-  NEG_W10 neg3_30 (
-    .x(gb3[309:300]),
-    .y(pn3_30)
-  );
-  NEG_W10 neg3_31 (
-    .x(gb3[319:310]),
-    .y(pn3_31)
-  );
-  NEG_W10 neg3_32 (
-    .x(gb3[329:320]),
-    .y(pn3_32)
   );
   NEG_W10 neg3_33 (
     .x(gb3[339:330]),
     .y(pn3_33)
   );
-  NEG_W10 neg3_34 (
-    .x(gb3[349:340]),
-    .y(pn3_34)
-  );
-  NEG_W10 neg3_35 (
-    .x(gb3[359:350]),
-    .y(pn3_35)
-  );
-  NEG_W10 neg3_36 (
-    .x(gb3[369:360]),
-    .y(pn3_36)
-  );
   NEG_W10 neg3_37 (
     .x(gb3[379:370]),
     .y(pn3_37)
-  );
-  NEG_W10 neg3_38 (
-    .x(gb3[389:380]),
-    .y(pn3_38)
-  );
-  NEG_W10 neg3_39 (
-    .x(gb3[399:390]),
-    .y(pn3_39)
-  );
-  NEG_W10 neg3_4 (
-    .x(gb3[49:40]),
-    .y(pn3_4)
   );
   NEG_W10 neg3_5 (
     .x(gb3[59:50]),
     .y(pn3_5)
   );
-  NEG_W10 neg3_6 (
-    .x(gb3[69:60]),
-    .y(pn3_6)
-  );
   NEG_W10 neg3_7 (
     .x(gb3[79:70]),
     .y(pn3_7)
   );
-  NEG_W10 neg3_8 (
-    .x(gb3[89:80]),
-    .y(pn3_8)
-  );
   NEG_W10 neg3_9 (
     .x(gb3[99:90]),
     .y(pn3_9)
-  );
-  NEG_W10 neg4_0 (
-    .x(gb4[9:0]),
-    .y(pn4_0)
-  );
-  NEG_W10 neg4_1 (
-    .x(gb4[19:10]),
-    .y(pn4_1)
-  );
-  NEG_W10 neg4_10 (
-    .x(gb4[109:100]),
-    .y(pn4_10)
   );
   NEG_W10 neg4_11 (
     .x(gb4[119:110]),
@@ -8813,14 +8097,6 @@ module top(x, y);
     .x(gb4[129:120]),
     .y(pn4_12)
   );
-  NEG_W10 neg4_13 (
-    .x(gb4[139:130]),
-    .y(pn4_13)
-  );
-  NEG_W10 neg4_14 (
-    .x(gb4[149:140]),
-    .y(pn4_14)
-  );
   NEG_W10 neg4_15 (
     .x(gb4[159:150]),
     .y(pn4_15)
@@ -8829,25 +8105,9 @@ module top(x, y);
     .x(gb4[169:160]),
     .y(pn4_16)
   );
-  NEG_W10 neg4_17 (
-    .x(gb4[179:170]),
-    .y(pn4_17)
-  );
-  NEG_W10 neg4_18 (
-    .x(gb4[189:180]),
-    .y(pn4_18)
-  );
   NEG_W10 neg4_19 (
     .x(gb4[199:190]),
     .y(pn4_19)
-  );
-  NEG_W10 neg4_2 (
-    .x(gb4[29:20]),
-    .y(pn4_2)
-  );
-  NEG_W10 neg4_20 (
-    .x(gb4[209:200]),
-    .y(pn4_20)
   );
   NEG_W10 neg4_21 (
     .x(gb4[219:210]),
@@ -8856,10 +8116,6 @@ module top(x, y);
   NEG_W10 neg4_22 (
     .x(gb4[229:220]),
     .y(pn4_22)
-  );
-  NEG_W10 neg4_23 (
-    .x(gb4[239:230]),
-    .y(pn4_23)
   );
   NEG_W10 neg4_24 (
     .x(gb4[249:240]),
@@ -8873,137 +8129,37 @@ module top(x, y);
     .x(gb4[269:260]),
     .y(pn4_26)
   );
-  NEG_W10 neg4_27 (
-    .x(gb4[279:270]),
-    .y(pn4_27)
-  );
-  NEG_W10 neg4_28 (
-    .x(gb4[289:280]),
-    .y(pn4_28)
-  );
-  NEG_W10 neg4_29 (
-    .x(gb4[299:290]),
-    .y(pn4_29)
-  );
-  NEG_W10 neg4_3 (
-    .x(gb4[39:30]),
-    .y(pn4_3)
-  );
-  NEG_W10 neg4_30 (
-    .x(gb4[309:300]),
-    .y(pn4_30)
-  );
   NEG_W10 neg4_31 (
     .x(gb4[319:310]),
     .y(pn4_31)
-  );
-  NEG_W10 neg4_32 (
-    .x(gb4[329:320]),
-    .y(pn4_32)
   );
   NEG_W10 neg4_33 (
     .x(gb4[339:330]),
     .y(pn4_33)
   );
-  NEG_W10 neg4_34 (
-    .x(gb4[349:340]),
-    .y(pn4_34)
-  );
-  NEG_W10 neg4_35 (
-    .x(gb4[359:350]),
-    .y(pn4_35)
-  );
-  NEG_W10 neg4_36 (
-    .x(gb4[369:360]),
-    .y(pn4_36)
-  );
-  NEG_W10 neg4_37 (
-    .x(gb4[379:370]),
-    .y(pn4_37)
-  );
-  NEG_W10 neg4_38 (
-    .x(gb4[389:380]),
-    .y(pn4_38)
-  );
-  NEG_W10 neg4_39 (
-    .x(gb4[399:390]),
-    .y(pn4_39)
-  );
   NEG_W10 neg4_4 (
     .x(gb4[49:40]),
     .y(pn4_4)
-  );
-  NEG_W10 neg4_5 (
-    .x(gb4[59:50]),
-    .y(pn4_5)
-  );
-  NEG_W10 neg4_6 (
-    .x(gb4[69:60]),
-    .y(pn4_6)
-  );
-  NEG_W10 neg4_7 (
-    .x(gb4[79:70]),
-    .y(pn4_7)
-  );
-  NEG_W10 neg4_8 (
-    .x(gb4[89:80]),
-    .y(pn4_8)
   );
   NEG_W10 neg4_9 (
     .x(gb4[99:90]),
     .y(pn4_9)
   );
-  NEG_W10 neg5_0 (
-    .x(gb5[9:0]),
-    .y(pn5_0)
-  );
   NEG_W10 neg5_1 (
     .x(gb5[19:10]),
     .y(pn5_1)
-  );
-  NEG_W10 neg5_10 (
-    .x(gb5[109:100]),
-    .y(pn5_10)
-  );
-  NEG_W10 neg5_11 (
-    .x(gb5[119:110]),
-    .y(pn5_11)
-  );
-  NEG_W10 neg5_12 (
-    .x(gb5[129:120]),
-    .y(pn5_12)
   );
   NEG_W10 neg5_13 (
     .x(gb5[139:130]),
     .y(pn5_13)
   );
-  NEG_W10 neg5_14 (
-    .x(gb5[149:140]),
-    .y(pn5_14)
-  );
   NEG_W10 neg5_15 (
     .x(gb5[159:150]),
     .y(pn5_15)
   );
-  NEG_W10 neg5_16 (
-    .x(gb5[169:160]),
-    .y(pn5_16)
-  );
-  NEG_W10 neg5_17 (
-    .x(gb5[179:170]),
-    .y(pn5_17)
-  );
   NEG_W10 neg5_18 (
     .x(gb5[189:180]),
     .y(pn5_18)
-  );
-  NEG_W10 neg5_19 (
-    .x(gb5[199:190]),
-    .y(pn5_19)
-  );
-  NEG_W10 neg5_2 (
-    .x(gb5[29:20]),
-    .y(pn5_2)
   );
   NEG_W10 neg5_20 (
     .x(gb5[209:200]),
@@ -9017,65 +8173,13 @@ module top(x, y);
     .x(gb5[229:220]),
     .y(pn5_22)
   );
-  NEG_W10 neg5_23 (
-    .x(gb5[239:230]),
-    .y(pn5_23)
-  );
   NEG_W10 neg5_24 (
     .x(gb5[249:240]),
     .y(pn5_24)
   );
-  NEG_W10 neg5_25 (
-    .x(gb5[259:250]),
-    .y(pn5_25)
-  );
-  NEG_W10 neg5_26 (
-    .x(gb5[269:260]),
-    .y(pn5_26)
-  );
   NEG_W10 neg5_27 (
     .x(gb5[279:270]),
     .y(pn5_27)
-  );
-  NEG_W10 neg5_28 (
-    .x(gb5[289:280]),
-    .y(pn5_28)
-  );
-  NEG_W10 neg5_29 (
-    .x(gb5[299:290]),
-    .y(pn5_29)
-  );
-  NEG_W10 neg5_3 (
-    .x(gb5[39:30]),
-    .y(pn5_3)
-  );
-  NEG_W10 neg5_30 (
-    .x(gb5[309:300]),
-    .y(pn5_30)
-  );
-  NEG_W10 neg5_31 (
-    .x(gb5[319:310]),
-    .y(pn5_31)
-  );
-  NEG_W10 neg5_32 (
-    .x(gb5[329:320]),
-    .y(pn5_32)
-  );
-  NEG_W10 neg5_33 (
-    .x(gb5[339:330]),
-    .y(pn5_33)
-  );
-  NEG_W10 neg5_34 (
-    .x(gb5[349:340]),
-    .y(pn5_34)
-  );
-  NEG_W10 neg5_35 (
-    .x(gb5[359:350]),
-    .y(pn5_35)
-  );
-  NEG_W10 neg5_36 (
-    .x(gb5[369:360]),
-    .y(pn5_36)
   );
   NEG_W10 neg5_37 (
     .x(gb5[379:370]),
@@ -9093,22 +8197,6 @@ module top(x, y);
     .x(gb5[49:40]),
     .y(pn5_4)
   );
-  NEG_W10 neg5_5 (
-    .x(gb5[59:50]),
-    .y(pn5_5)
-  );
-  NEG_W10 neg5_6 (
-    .x(gb5[69:60]),
-    .y(pn5_6)
-  );
-  NEG_W10 neg5_7 (
-    .x(gb5[79:70]),
-    .y(pn5_7)
-  );
-  NEG_W10 neg5_8 (
-    .x(gb5[89:80]),
-    .y(pn5_8)
-  );
   NEG_W10 neg5_9 (
     .x(gb5[99:90]),
     .y(pn5_9)
@@ -9121,14 +8209,6 @@ module top(x, y);
     .x(gb6[19:10]),
     .y(pn6_1)
   );
-  NEG_W10 neg6_10 (
-    .x(gb6[109:100]),
-    .y(pn6_10)
-  );
-  NEG_W10 neg6_11 (
-    .x(gb6[119:110]),
-    .y(pn6_11)
-  );
   NEG_W10 neg6_12 (
     .x(gb6[129:120]),
     .y(pn6_12)
@@ -9136,10 +8216,6 @@ module top(x, y);
   NEG_W10 neg6_13 (
     .x(gb6[139:130]),
     .y(pn6_13)
-  );
-  NEG_W10 neg6_14 (
-    .x(gb6[149:140]),
-    .y(pn6_14)
   );
   NEG_W10 neg6_15 (
     .x(gb6[159:150]),
@@ -9149,10 +8225,6 @@ module top(x, y);
     .x(gb6[169:160]),
     .y(pn6_16)
   );
-  NEG_W10 neg6_17 (
-    .x(gb6[179:170]),
-    .y(pn6_17)
-  );
   NEG_W10 neg6_18 (
     .x(gb6[189:180]),
     .y(pn6_18)
@@ -9161,49 +8233,9 @@ module top(x, y);
     .x(gb6[199:190]),
     .y(pn6_19)
   );
-  NEG_W10 neg6_2 (
-    .x(gb6[29:20]),
-    .y(pn6_2)
-  );
-  NEG_W10 neg6_20 (
-    .x(gb6[209:200]),
-    .y(pn6_20)
-  );
-  NEG_W10 neg6_21 (
-    .x(gb6[219:210]),
-    .y(pn6_21)
-  );
-  NEG_W10 neg6_22 (
-    .x(gb6[229:220]),
-    .y(pn6_22)
-  );
-  NEG_W10 neg6_23 (
-    .x(gb6[239:230]),
-    .y(pn6_23)
-  );
   NEG_W10 neg6_24 (
     .x(gb6[249:240]),
     .y(pn6_24)
-  );
-  NEG_W10 neg6_25 (
-    .x(gb6[259:250]),
-    .y(pn6_25)
-  );
-  NEG_W10 neg6_26 (
-    .x(gb6[269:260]),
-    .y(pn6_26)
-  );
-  NEG_W10 neg6_27 (
-    .x(gb6[279:270]),
-    .y(pn6_27)
-  );
-  NEG_W10 neg6_28 (
-    .x(gb6[289:280]),
-    .y(pn6_28)
-  );
-  NEG_W10 neg6_29 (
-    .x(gb6[299:290]),
-    .y(pn6_29)
   );
   NEG_W10 neg6_3 (
     .x(gb6[39:30]),
@@ -9213,93 +8245,13 @@ module top(x, y);
     .x(gb6[309:300]),
     .y(pn6_30)
   );
-  NEG_W10 neg6_31 (
-    .x(gb6[319:310]),
-    .y(pn6_31)
-  );
-  NEG_W10 neg6_32 (
-    .x(gb6[329:320]),
-    .y(pn6_32)
-  );
-  NEG_W10 neg6_33 (
-    .x(gb6[339:330]),
-    .y(pn6_33)
-  );
-  NEG_W10 neg6_34 (
-    .x(gb6[349:340]),
-    .y(pn6_34)
-  );
   NEG_W10 neg6_35 (
     .x(gb6[359:350]),
     .y(pn6_35)
   );
-  NEG_W10 neg6_36 (
-    .x(gb6[369:360]),
-    .y(pn6_36)
-  );
-  NEG_W10 neg6_37 (
-    .x(gb6[379:370]),
-    .y(pn6_37)
-  );
-  NEG_W10 neg6_38 (
-    .x(gb6[389:380]),
-    .y(pn6_38)
-  );
-  NEG_W10 neg6_39 (
-    .x(gb6[399:390]),
-    .y(pn6_39)
-  );
-  NEG_W10 neg6_4 (
-    .x(gb6[49:40]),
-    .y(pn6_4)
-  );
-  NEG_W10 neg6_5 (
-    .x(gb6[59:50]),
-    .y(pn6_5)
-  );
-  NEG_W10 neg6_6 (
-    .x(gb6[69:60]),
-    .y(pn6_6)
-  );
-  NEG_W10 neg6_7 (
-    .x(gb6[79:70]),
-    .y(pn6_7)
-  );
-  NEG_W10 neg6_8 (
-    .x(gb6[89:80]),
-    .y(pn6_8)
-  );
-  NEG_W10 neg6_9 (
-    .x(gb6[99:90]),
-    .y(pn6_9)
-  );
-  NEG_W10 neg7_0 (
-    .x(gb7[9:0]),
-    .y(pn7_0)
-  );
-  NEG_W10 neg7_1 (
-    .x(gb7[19:10]),
-    .y(pn7_1)
-  );
   NEG_W10 neg7_10 (
     .x(gb7[109:100]),
     .y(pn7_10)
-  );
-  NEG_W10 neg7_11 (
-    .x(gb7[119:110]),
-    .y(pn7_11)
-  );
-  NEG_W10 neg7_12 (
-    .x(gb7[129:120]),
-    .y(pn7_12)
-  );
-  NEG_W10 neg7_13 (
-    .x(gb7[139:130]),
-    .y(pn7_13)
-  );
-  NEG_W10 neg7_14 (
-    .x(gb7[149:140]),
-    .y(pn7_14)
   );
   NEG_W10 neg7_15 (
     .x(gb7[159:150]),
@@ -9309,41 +8261,9 @@ module top(x, y);
     .x(gb7[169:160]),
     .y(pn7_16)
   );
-  NEG_W10 neg7_17 (
-    .x(gb7[179:170]),
-    .y(pn7_17)
-  );
-  NEG_W10 neg7_18 (
-    .x(gb7[189:180]),
-    .y(pn7_18)
-  );
-  NEG_W10 neg7_19 (
-    .x(gb7[199:190]),
-    .y(pn7_19)
-  );
-  NEG_W10 neg7_2 (
-    .x(gb7[29:20]),
-    .y(pn7_2)
-  );
   NEG_W10 neg7_20 (
     .x(gb7[209:200]),
     .y(pn7_20)
-  );
-  NEG_W10 neg7_21 (
-    .x(gb7[219:210]),
-    .y(pn7_21)
-  );
-  NEG_W10 neg7_22 (
-    .x(gb7[229:220]),
-    .y(pn7_22)
-  );
-  NEG_W10 neg7_23 (
-    .x(gb7[239:230]),
-    .y(pn7_23)
-  );
-  NEG_W10 neg7_24 (
-    .x(gb7[249:240]),
-    .y(pn7_24)
   );
   NEG_W10 neg7_25 (
     .x(gb7[259:250]),
@@ -9361,73 +8281,13 @@ module top(x, y);
     .x(gb7[289:280]),
     .y(pn7_28)
   );
-  NEG_W10 neg7_29 (
-    .x(gb7[299:290]),
-    .y(pn7_29)
-  );
-  NEG_W10 neg7_3 (
-    .x(gb7[39:30]),
-    .y(pn7_3)
-  );
-  NEG_W10 neg7_30 (
-    .x(gb7[309:300]),
-    .y(pn7_30)
-  );
-  NEG_W10 neg7_31 (
-    .x(gb7[319:310]),
-    .y(pn7_31)
-  );
-  NEG_W10 neg7_32 (
-    .x(gb7[329:320]),
-    .y(pn7_32)
-  );
   NEG_W10 neg7_33 (
     .x(gb7[339:330]),
     .y(pn7_33)
   );
-  NEG_W10 neg7_34 (
-    .x(gb7[349:340]),
-    .y(pn7_34)
-  );
-  NEG_W10 neg7_35 (
-    .x(gb7[359:350]),
-    .y(pn7_35)
-  );
   NEG_W10 neg7_36 (
     .x(gb7[369:360]),
     .y(pn7_36)
-  );
-  NEG_W10 neg7_37 (
-    .x(gb7[379:370]),
-    .y(pn7_37)
-  );
-  NEG_W10 neg7_38 (
-    .x(gb7[389:380]),
-    .y(pn7_38)
-  );
-  NEG_W10 neg7_39 (
-    .x(gb7[399:390]),
-    .y(pn7_39)
-  );
-  NEG_W10 neg7_4 (
-    .x(gb7[49:40]),
-    .y(pn7_4)
-  );
-  NEG_W10 neg7_5 (
-    .x(gb7[59:50]),
-    .y(pn7_5)
-  );
-  NEG_W10 neg7_6 (
-    .x(gb7[69:60]),
-    .y(pn7_6)
-  );
-  NEG_W10 neg7_7 (
-    .x(gb7[79:70]),
-    .y(pn7_7)
-  );
-  NEG_W10 neg7_8 (
-    .x(gb7[89:80]),
-    .y(pn7_8)
   );
   NEG_W10 neg7_9 (
     .x(gb7[99:90]),
@@ -9561,12 +8421,6 @@ module top(x, y);
     .x({ pn7_15, pn6_1, gb5[189:180], gb4[29:20], gb3[159:150], gb2[99:90], gb1[19:10], pn0_4 }),
     .y(y[129:117])
   );
-  sky130_fd_sc_hd__conb_1 tie0 (
-    .LO(z0)
-  );
-  sky130_fd_sc_hd__conb_1 tie1 (
-    .LO(z1)
-  );
   sky130_fd_sc_hd__conb_1 tie10 (
     .LO(z10)
   );
@@ -9579,82 +8433,13 @@ module top(x, y);
   sky130_fd_sc_hd__conb_1 tie13 (
     .LO(z13)
   );
-  sky130_fd_sc_hd__conb_1 tie14 (
-    .LO(z14)
-  );
-  sky130_fd_sc_hd__conb_1 tie15 (
-    .LO(z15)
-  );
-  sky130_fd_sc_hd__conb_1 tie16 (
-    .LO(z16)
-  );
-  sky130_fd_sc_hd__conb_1 tie17 (
-    .LO(z17)
-  );
-  sky130_fd_sc_hd__conb_1 tie18 (
-    .LO(z18)
-  );
-  sky130_fd_sc_hd__conb_1 tie19 (
-    .LO(z19)
-  );
   sky130_fd_sc_hd__conb_1 tie2 (
     .LO(z2)
-  );
-  sky130_fd_sc_hd__conb_1 tie20 (
-    .LO(z20)
-  );
-  sky130_fd_sc_hd__conb_1 tie21 (
-    .LO(z21)
-  );
-  sky130_fd_sc_hd__conb_1 tie22 (
-    .LO(z22)
-  );
-  sky130_fd_sc_hd__conb_1 tie23 (
-    .LO(z23)
-  );
-  sky130_fd_sc_hd__conb_1 tie24 (
-    .LO(z24)
-  );
-  sky130_fd_sc_hd__conb_1 tie25 (
-    .LO(z25)
-  );
-  sky130_fd_sc_hd__conb_1 tie26 (
-    .LO(z26)
-  );
-  sky130_fd_sc_hd__conb_1 tie27 (
-    .LO(z27)
-  );
-  sky130_fd_sc_hd__conb_1 tie28 (
-    .LO(z28)
-  );
-  sky130_fd_sc_hd__conb_1 tie29 (
-    .LO(z29)
-  );
-  sky130_fd_sc_hd__conb_1 tie3 (
-    .LO(z3)
-  );
-  sky130_fd_sc_hd__conb_1 tie30 (
-    .LO(z30)
   );
   sky130_fd_sc_hd__conb_1 tie31 (
     .LO(z31)
   );
-  sky130_fd_sc_hd__conb_1 tie4 (
-    .LO(z4)
-  );
-  sky130_fd_sc_hd__conb_1 tie5 (
-    .LO(z5)
-  );
-  sky130_fd_sc_hd__conb_1 tie6 (
-    .LO(z6)
-  );
   sky130_fd_sc_hd__conb_1 tie7 (
     .LO(z7)
-  );
-  sky130_fd_sc_hd__conb_1 tie8 (
-    .LO(z8)
-  );
-  sky130_fd_sc_hd__conb_1 tie9 (
-    .LO(z9)
   );
 endmodule

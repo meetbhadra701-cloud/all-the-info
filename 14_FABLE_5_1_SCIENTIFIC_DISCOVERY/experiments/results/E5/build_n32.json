@@ -93,7 +93,15 @@
     }
    },
    "tree_budget_ns": -0.5419591777426831,
-   "logic_path_ns": 9.371806488888978
+   "logic_path_ns": 9.371806488888978,
+   "reemit_A2": {
+    "validation": true,
+    "negctl_detects": true,
+    "neg_instances": 134,
+    "neg_expected_full_fabric": 134,
+    "full_fabric": true,
+    "yosys_stat_area_um2": 139262.3136
+   }
   },
   "ubp4": {
    "modules": {
@@ -119,7 +127,15 @@
     }
    },
    "tree_budget_ns": -1.6064516718943196,
-   "logic_path_ns": 9.794437308119086
+   "logic_path_ns": 9.794437308119086,
+   "reemit_A2": {
+    "validation": true,
+    "negctl_detects": true,
+    "neg_instances": 320,
+    "neg_expected_full_fabric": 320,
+    "full_fabric": true,
+    "yosys_stat_area_um2": 169812.864
+   }
   }
  }
 }

@@ -1,0 +1,128 @@
+
+4. Printing statistics.
+
+=== top ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+     1308        - wires
+     2058        - wire bits
+     1308        - public wires
+     2058        - public wire bits
+        4        - ports
+      130        - port bits
+        8  143.888 cells
+        1    3.754   sky130_fd_sc_hd__conb_1
+        7  140.134   sky130_fd_sc_hd__dfxtp_1
+      720        - submodules
+       16        -   SGEN4
+      640        -   SNEG
+       64        -   STREE_L16
+
+   Chip area for module '\top': 143.888000
+     of which used for sequential elements: 140.134400 (97.39%)
+
+=== STREE_L16 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+       81        - wires
+       96        - wire bits
+       81        - public wires
+       96        - public wire bits
+        4        - ports
+       19        - port bits
+       78  1261.21 cells
+       33  660.634   sky130_fd_sc_hd__dfxtp_1
+       15  150.144   sky130_fd_sc_hd__maj3_1
+       15    93.84   sky130_fd_sc_hd__nor2b_1
+       15  356.592   sky130_fd_sc_hd__xor3_1
+
+   Chip area for module '\STREE_L16': 1261.209600
+     of which used for sequential elements: 660.633600 (52.38%)
+
+=== SNEG ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+        9        - wires
+        9        - wire bits
+        9        - public wires
+        9        - public wire bits
+        5        - ports
+        5        - port bits
+        6   76.323 cells
+        3   60.058   sky130_fd_sc_hd__dfxtp_1
+        2    7.507   sky130_fd_sc_hd__nor2_1
+        1    8.758   sky130_fd_sc_hd__xor2_1
+
+   Chip area for module '\SNEG': 76.323200
+     of which used for sequential elements: 60.057600 (78.69%)
+
+=== SGEN4 ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      252        - wires
+      294        - wire bits
+      252        - public wires
+      294        - public wire bits
+        4        - ports
+       46        - port bits
+      288 3.67E+03 cells
+       18   90.086   sky130_fd_sc_hd__a21oi_1
+      126 2.52E+03   sky130_fd_sc_hd__dfxtp_1
+       18  180.173   sky130_fd_sc_hd__maj3_1
+       18  112.608   sky130_fd_sc_hd__nand2b_1
+       18   67.565   sky130_fd_sc_hd__nor2_1
+       36  225.216   sky130_fd_sc_hd__nor2b_1
+       54  472.954   sky130_fd_sc_hd__xnor2_1
+
+   Chip area for module '\SGEN4': 3671.020800
+     of which used for sequential elements: 2522.419200 (68.71%)
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+    13448 1.88E+05 top
+      288 3.67E+03 SGEN4
+        6   76.323 SNEG
+       78  1261.21 STREE_L16
+
+        +----------Count including submodules.
+        |        +-Area including submodules.
+        |        | 
+    16284        - wires
+    18666        - wire bits
+    16284        - public wires
+    18666        - public wire bits
+     3524        - ports
+     5282        - port bits
+        -        - memories
+        -        - memory bits
+        -        - processes
+    13448 1.88E+05 cells
+      288 1.44E+03   sky130_fd_sc_hd__a21oi_1
+        1    3.754   sky130_fd_sc_hd__conb_1
+     6055 1.21E+05   sky130_fd_sc_hd__dfxtp_1
+     1248 1.25E+04   sky130_fd_sc_hd__maj3_1
+      288  1.8E+03   sky130_fd_sc_hd__nand2b_1
+     1568 5.89E+03   sky130_fd_sc_hd__nor2_1
+     1536 9.61E+03   sky130_fd_sc_hd__nor2b_1
+      864 7.57E+03   sky130_fd_sc_hd__xnor2_1
+      640 5.61E+03   sky130_fd_sc_hd__xor2_1
+      960 2.28E+04   sky130_fd_sc_hd__xor3_1
+      720 1.88E+05 submodules
+       16 5.87E+04   SGEN4
+      640 4.88E+04   SNEG
+       64 8.07E+04   STREE_L16
+
+   Chip area for top module '\top': 188444.483200
+     of which used for sequential elements: 121216.256000 (64.32%)
+
