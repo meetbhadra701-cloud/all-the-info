@@ -1,0 +1,26 @@
+GEN 2 {"tag": "delay", "D_target": null, "wall": 0.41311168670654297, "gates": 104, "area_stime": 531.76, "delay_stime_ps": 1173.23, "area": 531.53, "delay_ps": 784.82, "levels": 8, "cec": true} True
+GEN 3 {"tag": "delay", "D_target": null, "wall": 0.8000075817108154, "gates": 536, "area_stime": 2741.38, "delay_stime_ps": 1836.0, "area": 2740.04, "delay_ps": 1221.92, "levels": 15, "cec": true} True
+GEN 4 {"tag": "delay", "D_target": null, "wall": 1.1488292217254639, "gates": 1912, "area_stime": 9476.59, "delay_stime_ps": 2831.69, "area": 9471.21, "delay_ps": 1743.41, "levels": 21, "cec": true} True
+NEG 8 {"tag": "delay", "D_target": null, "wall": 0.32455921173095703, "gates": 29, "area_stime": 138.88, "delay_stime_ps": 558.58, "area": 138.83, "delay_ps": 391.31, "levels": 4, "cec": true} True
+NEG 9 {"tag": "delay", "D_target": null, "wall": 0.3280003070831299, "gates": 35, "area_stime": 166.41, "delay_stime_ps": 591.72, "area": 166.34, "delay_ps": 401.96, "levels": 4, "cec": true} True
+NEG 10 {"tag": "delay", "D_target": null, "wall": 0.3221580982208252, "gates": 35, "area_stime": 182.68, "delay_stime_ps": 665.68, "area": 182.63, "delay_ps": 418.67, "levels": 4, "cec": true} True
+TREE 128 g1 128 8 {"tag": "delay", "D_target": null, "wall": 4.996479511260986, "gates": 9022, "area_stime": 47179.0, "delay_stime_ps": 5255.52, "area": 47155.13, "delay_ps": 3663.41, "levels": 42, "cec": true} True
+TREE 128 g2 64 9 {"tag": "delay", "D_target": null, "wall": 2.012418270111084, "gates": 5234, "area_stime": 27694.06, "delay_stime_ps": 5082.52, "area": 27680.23, "delay_ps": 3477.88, "levels": 39, "cec": true} True
+TREE 128 g3 43 10 {"tag": "delay", "D_target": null, "wall": 1.6268372535705566, "gates": 3804, "area_stime": 19844.03, "delay_stime_ps": 4644.23, "area": 19833.73, "delay_ps": 3274.16, "levels": 36, "cec": true} True
+TREE 128 g4 32 10 {"tag": "delay", "D_target": null, "wall": 1.326275110244751, "gates": 2735, "area_stime": 14440.1, "delay_stime_ps": 4171.07, "area": 14432.82, "delay_ps": 2886.65, "levels": 34, "cec": true} True
+ISO 128 g1 4653257 {"trees": 4635486.72, "neg": 17770.24} True
+ISO 128 g2 3002449 {"trees": 2925848.32, "gen": 34017.92, "neg": 42583.04} True
+ISO 128 g3 2571859 {"trees": 2351947.52, "gen": 117821.72, "neg": 102090.17} True
+ISO 128 g4 2384246 {"trees": 1847400.96, "gen": 303078.72, "neg": 233766.4} True
+Traceback (most recent call last):
+  File "/home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/scripts/e3_run.py", line 169, in <module>
+    main(Path(sys.argv[1]))
+  File "/home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/scripts/e3_run.py", line 131, in main
+    comps[name] = run_component(out / name, v, iw, ow, gold, rng)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/scripts/e3_run.py", line 100, in run_component
+    aag = yosys_to_aag(wd / 'src.v', wd)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/scripts/e2_run.py", line 97, in yosys_to_aag
+    raise RuntimeError(f'yosys failed in {wd}')
+RuntimeError: yosys failed in results/E3/TREE_n1024_g1_L1024_w8

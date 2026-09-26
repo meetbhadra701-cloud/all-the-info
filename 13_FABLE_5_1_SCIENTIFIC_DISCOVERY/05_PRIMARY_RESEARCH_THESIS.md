@@ -42,6 +42,7 @@ A secondary regime, **(F) full-custom** (base layers may depend on W), is used a
 | V | Taalas "Multiply-Select-Add": pre-multiply each input once and select per weight via a crossbar [summary, third-party analysis] | Products across rows, per input |
 | V | Ankhdjet: ternary add/sub/skip in a fixed CiROM macro [summary] | Nothing across inputs |
 | F | **da4ml 0.6.0** (TRETS 2025; in hls4ml): weight-specific CSE for constant matrix–vector products [OBSERVED: run here] | Arbitrary W-specific subexpressions |
+| F | Plain per-input trees + standard synthesis structural hashing (`opt_merge` / `strash`) [OBSERVED here] | Recurring input pairs and quads across rows. **This is automatic, and it nearly matches UBP in (F).** |
 | runtime W | LUT Tensor Core (ISCA'25), T-MAC, TeLLMe v2, TENET; ternary LUT generator 2604.25183 [summary] | Signed subset sums of G ≈ 3–4 activations, fetched by a weight-indexed mux |
 
 ### 4. Exact technical limitation
@@ -101,6 +102,12 @@ Consequences:
 
 - Measured closed forms: 2.62× (n=64), 3.17× (128), 3.54× (256) at g = 4 (`experiments/results/E1_summary.md`).
 - Because both sides are W-independent, **this ratio holds for every weight matrix, trained or random.**
+
+**Correction found during this session (OBSERVED; it narrows the thesis).**
+- In regime (F), constant-propagated synthesis applies structural hashing (Yosys `opt_merge`, ABC `strash`). That merges partial sums which recur across rows of plain per-input balanced trees. It is the same pigeonhole sharing, obtained automatically.
+- At n = 128, hashing cuts the per-input tree from 10,929 to 5,884 adders (p0 = .33) and from 7,984 to 4,968 (p0 = .5). UBP4 is essentially unchanged (5,040 / 4,816). The hashed per-input tree is therefore only 1.17× / 1.03× worse than UBP.
+- The gate-level full-custom run (E2) agrees: Yosys cell counts differ by only about 5% at 64×64.
+- **So A1 has no material value in regime (F)**, where da4ml is also better. **The thesis is claimed for regime (V) only.** There, no weight-specific hashing or CSE can exist by construction, and E3 tests the claim with weight-independent components.
 
 **Area model with select wiring (MODEL, `scripts/wire_model.py`).**
 - Per (row, block) site: area = max(logic, lines × bits × pitch × row-height).
@@ -175,7 +182,7 @@ Already tested at the adder and cell level (E1, E2): see `06_…`.
 - Anything about accuracy (the function is exact), energy (not measured) or time-multiplexed ROM designs (Taalas-class).
 - Benefits for 4-bit/FP4 weights.
 - Routability, until PnR is done.
-- Superiority over weight-specific CSE in regime (F); da4ml is better there.
+- Any advantage in regime (F). Measured: tool structural hashing recovers most of the sharing from plain per-input trees, and da4ml is better still.
 
 ### 18. What other researchers could reuse
 
