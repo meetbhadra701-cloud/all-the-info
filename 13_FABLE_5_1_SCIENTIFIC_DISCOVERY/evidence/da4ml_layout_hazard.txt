@@ -1,0 +1,8 @@
+da4ml 0.6.0 numpy 2.4.6 python 3.11.15
+K.flags C_CONTIGUOUS False F_CONTIGUOUS True
+solve(K).kernel == K  : False
+solve(K).kernel == K.T: True
+solve(ascontiguousarray(K)).kernel == K: True
+x@K            [-49.0, -31.0, 52.0, 18.0, 2.0, 168.0, -97.0, 305.0]
+pipeline(x)    [-197.0, -161.0, 16.0, 20.0, 34.0, -84.0, -72.0, 104.0] (F-ordered input: wrong)
+pipeline2(x)   [-49.0, -31.0, 52.0, 18.0, 2.0, 168.0, -97.0, 305.0] (C-ordered input: right)
