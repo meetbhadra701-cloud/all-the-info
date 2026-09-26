@@ -53,11 +53,27 @@ def check_component(aag, in_widths: list[int], out_widths: list[int], golden, rn
 
 
 def tree_v(L, w):
+    """Balanced pairwise sum with explicit wires (fanout-1 intermediates: Yosys alumacc folds them into one
+    multi-operand $macc). A single 1024-term expression exhausts the WASM call stack in AST simplify (E3 D1)."""
     ow = w + max(1, math.ceil(math.log2(L)))
-    terms = ' + '.join(f'$signed(x[{w*i+w-1}:{w*i}])' for i in range(L))
-    v = (f'module top(input [{w*L-1}:0] x, output [{ow-1}:0] y);\n'
-         f'  wire signed [{ow-1}:0] s = {terms};\n  assign y = s;\nendmodule\n')
-    return v, [w] * L, [ow], (lambda xs: [sum(xs)])
+    lines = [f'module top(input [{w*L-1}:0] x, output [{ow-1}:0] y);']
+    cur = []
+    for i in range(L):
+        lines.append(f'  wire signed [{w-1}:0] l{i} = x[{w*i+w-1}:{w*i}];')
+        cur.append((f'l{i}', w))
+    k = 0
+    while len(cur) > 1:
+        nxt = []
+        for i in range(0, len(cur) - 1, 2):
+            (a, wa), (b, wb) = cur[i], cur[i + 1]
+            wn = min(ow, max(wa, wb) + 1)
+            lines.append(f'  wire signed [{wn-1}:0] t{k} = {a} + {b};')
+            nxt.append((f't{k}', wn)); k += 1
+        if len(cur) % 2:
+            nxt.append(cur[-1])
+        cur = nxt
+    lines.append(f'  wire signed [{ow-1}:0] s = {cur[0][0]};\n  assign y = s;\nendmodule')
+    return '\n'.join(lines) + '\n', [w] * L, [ow], (lambda xs: [sum(xs)])
 
 
 def neg_v(w):

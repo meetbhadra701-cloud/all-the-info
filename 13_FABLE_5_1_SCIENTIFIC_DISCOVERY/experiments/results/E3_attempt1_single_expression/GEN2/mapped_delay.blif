@@ -1,0 +1,111 @@
+# Benchmark "design" written by ABC on Sat Sep 26 10:08:45 2026
+.model design
+.inputs x[0] x[1] x[2] x[3] x[4] x[5] x[6] x[7] x[8] x[9] x[10] x[11] x[12] \
+ x[13] x[14] x[15]
+.outputs y[0] y[1] y[2] y[3] y[4] y[5] y[6] y[7] y[8] y[9] y[10] y[11] \
+ y[12] y[13] y[14] y[15] y[16] y[17] y[18] y[19]
+.gate sky130_fd_sc_hd__xor2_1                           A=x[0] B=x[8] X=y[0]
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[0] Y=new_n38
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n38 B=x[8] Y=new_n39
+.gate sky130_fd_sc_hd__or2b_2                           A=x[1] B_N=x[9] X=new_n40
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[1] Y=new_n41
+.gate sky130_fd_sc_hd__nor2_1                           A=x[9] B=new_n41 Y=new_n42
+.gate sky130_fd_sc_hd__lpflow_inputiso0p_1              A=new_n40 SLEEP=new_n42 X=new_n43
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n39 B=new_n43 X=y[1]
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[10] Y=new_n45
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n45 B=x[2] Y=new_n46
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[2] Y=new_n47
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n47 B=x[10] Y=new_n48
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n46 B=new_n48 Y=new_n49
+.gate sky130_fd_sc_hd__a21oi_1                          A1=new_n39 A2=new_n40 B1=new_n42 Y=new_n50
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n49 B=new_n50 X=y[2]
+.gate sky130_fd_sc_hd__or2b_2                           A=x[11] B_N=x[3] X=new_n52
+.gate sky130_fd_sc_hd__or2b_2                           A=x[3] B_N=x[11] X=new_n53
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n52 B=new_n53 Y=new_n54
+.gate sky130_fd_sc_hd__o21ai_0                          A1=new_n49 A2=new_n50 B1=new_n46 Y=new_n55
+.gate sky130_fd_sc_hd__xnor2_1                          A=new_n54 B=new_n55 Y=y[3]
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[12] Y=new_n57
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n57 B=x[4] Y=new_n58
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[4] Y=new_n59
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n59 B=x[12] Y=new_n60
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n58 B=new_n60 Y=new_n61
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n61 Y=new_n62
+.gate sky130_fd_sc_hd__nand4_1                          A=new_n46 B=new_n48 C=new_n52 D=new_n53 Y=new_n63
+.gate sky130_fd_sc_hd__nor2_1                           A=x[10] B=new_n47 Y=new_n64
+.gate sky130_fd_sc_hd__a21boi_0                         A1=new_n64 A2=new_n53 B1_N=new_n52 Y=new_n65
+.gate sky130_fd_sc_hd__o21ai_0                          A1=new_n63 A2=new_n50 B1=new_n65 Y=new_n66
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n62 B=new_n66 X=y[4]
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[13] Y=new_n68
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n68 B=x[5] Y=new_n69
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[5] Y=new_n70
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n70 B=x[13] Y=new_n71
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n69 B=new_n71 Y=new_n72
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n58 Y=new_n73
+.gate sky130_fd_sc_hd__a21oi_1                          A1=new_n66 A2=new_n60 B1=new_n73 Y=new_n74
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n72 B=new_n74 X=y[5]
+.gate sky130_fd_sc_hd__xor2_1                           A=x[6] B=x[14] X=new_n76
+.gate sky130_fd_sc_hd__nor2_1                           A=new_n61 B=new_n72 Y=new_n77
+.gate sky130_fd_sc_hd__a21boi_0                         A1=new_n73 A2=new_n71 B1_N=new_n69 Y=new_n78
+.gate sky130_fd_sc_hd__a21boi_0                         A1=new_n66 A2=new_n77 B1_N=new_n78 Y=new_n79
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n76 B=new_n79 X=y[6]
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[15] Y=new_n81
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n81 B=x[7] Y=new_n82
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n82 Y=new_n83
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[7] Y=new_n84
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n84 B=x[15] Y=new_n85
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n85 Y=new_n86
+.gate sky130_fd_sc_hd__clkinv_1                         A=x[14] Y=new_n87
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n87 B=x[6] Y=new_n88
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n88 Y=new_n89
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n66 B=new_n77 Y=new_n90
+.gate sky130_fd_sc_hd__a21oi_1                          A1=new_n90 A2=new_n78 B1=new_n76 Y=new_n91
+.gate sky130_fd_sc_hd__o22ai_1                          A1=new_n83 A2=new_n86 B1=new_n89 B2=new_n91 Y=new_n92
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n82 B=new_n85 Y=new_n93
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n93 Y=new_n94
+.gate sky130_fd_sc_hd__o211ai_1                         A1=new_n76 A2=new_n79 B1=new_n88 C1=new_n94 Y=new_n95
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n92 B=new_n95 Y=y[7]
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n95 B=new_n82 Y=y[8]
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n95 B=new_n82 Y=y[9]
+.gate sky130_fd_sc_hd__xor2_1                           A=x[0] B=x[8] X=y[10]
+.gate sky130_fd_sc_hd__nand2_1                          A=x[0] B=x[8] Y=new_n100
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n100 B=new_n43 X=y[11]
+.gate sky130_fd_sc_hd__nor2_1                           A=x[1] B=x[9] Y=new_n102
+.gate sky130_fd_sc_hd__nand2_1                          A=x[1] B=x[9] Y=new_n103
+.gate sky130_fd_sc_hd__o21ai_0                          A1=new_n100 A2=new_n102 B1=new_n103 Y=new_n104
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n104 B=new_n49 X=y[12]
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n49 B=new_n104 Y=new_n106
+.gate sky130_fd_sc_hd__nand2_1                          A=x[2] B=x[10] Y=new_n107
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n106 B=new_n107 Y=new_n108
+.gate sky130_fd_sc_hd__xor2_1                           A=new_n54 B=new_n108 X=y[13]
+.gate sky130_fd_sc_hd__nand3_1                          A=new_n49 B=new_n54 C=new_n104 Y=new_n110
+.gate sky130_fd_sc_hd__nor2_1                           A=x[3] B=x[11] Y=new_n111
+.gate sky130_fd_sc_hd__nand2_1                          A=x[3] B=x[11] Y=new_n112
+.gate sky130_fd_sc_hd__o21a_1                           A1=new_n107 A2=new_n111 B1=new_n112 X=new_n113
+.gate sky130_fd_sc_hd__a21oi_1                          A1=new_n110 A2=new_n113 B1=new_n62 Y=new_n114
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n110 B=new_n113 Y=new_n115
+.gate sky130_fd_sc_hd__nor2_1                           A=new_n61 B=new_n115 Y=new_n116
+.gate sky130_fd_sc_hd__nor2_1                           A=new_n114 B=new_n116 Y=y[14]
+.gate sky130_fd_sc_hd__nor2_1                           A=new_n59 B=new_n57 Y=new_n118
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n72 B=new_n61 Y=new_n119
+.gate sky130_fd_sc_hd__a21oi_1                          A1=new_n110 A2=new_n113 B1=new_n119 Y=new_n120
+.gate sky130_fd_sc_hd__nor3_1                           A=new_n118 B=new_n72 C=new_n114 Y=new_n121
+.gate sky130_fd_sc_hd__a211oi_1                         A1=new_n118 A2=new_n72 B1=new_n120 C1=new_n121 Y=y[15]
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n70 B=new_n68 Y=new_n123
+.gate sky130_fd_sc_hd__nand2_1                          A=x[5] B=x[13] Y=new_n124
+.gate sky130_fd_sc_hd__a21boi_0                         A1=new_n118 A2=new_n123 B1_N=new_n124 Y=new_n125
+.gate sky130_fd_sc_hd__clkinv_1                         A=new_n125 Y=new_n126
+.gate sky130_fd_sc_hd__o21ai_0                          A1=new_n126 A2=new_n120 B1=new_n76 Y=new_n127
+.gate sky130_fd_sc_hd__nor3_1                           A=new_n76 B=new_n126 C=new_n120 Y=new_n128
+.gate sky130_fd_sc_hd__lpflow_inputiso0p_1              A=new_n127 SLEEP=new_n128 X=y[16]
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n76 B=new_n93 Y=new_n130
+.gate sky130_fd_sc_hd__nor2_1                           A=new_n119 B=new_n130 Y=new_n131
+.gate sky130_fd_sc_hd__nand2_1                          A=x[6] B=x[14] Y=new_n132
+.gate sky130_fd_sc_hd__nand2_1                          A=x[7] B=x[15] Y=new_n133
+.gate sky130_fd_sc_hd__o221ai_1                         A1=new_n132 A2=new_n94 B1=new_n125 B2=new_n130 C1=new_n133 Y=new_n134
+.gate sky130_fd_sc_hd__a21oi_1                          A1=new_n115 A2=new_n131 B1=new_n134 Y=new_n135
+.gate sky130_fd_sc_hd__nand3_1                          A=new_n127 B=new_n132 C=new_n94 Y=new_n136
+.gate sky130_fd_sc_hd__o21a_1                           A1=new_n94 A2=new_n135 B1=new_n136 X=y[17]
+.gate sky130_fd_sc_hd__nand3_1                          A=new_n127 B=new_n132 C=new_n93 Y=new_n138
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n138 B=new_n133 Y=y[18]
+.gate sky130_fd_sc_hd__nand2_1                          A=new_n138 B=new_n133 Y=y[19]
+.end

@@ -49,3 +49,10 @@ At iso-delay on SKY130, the cell area of a weight-independent (V) fabric built f
 ## Deviation log
 
 (empty)
+
+**D1 — tooling, after the n = 128 fabrics were computed and before any n = 1024 data existed.**
+- YoWASP Yosys aborted on TREE(1024, 8) with "wasm trap: call stack exhausted" in `AST::simplify`, because the tree was written as one 1024-term expression.
+- **Fix:** all trees are now emitted as balanced sums of explicit fanout-1 wires. Yosys `alumacc` merges these into a multi-operand `$macc`, as before.
+- For consistency the n = 128 trees are **re-run in the new form**. The first attempt's n = 128 results (single-expression form) are kept in `results/E3_attempt1_single_expression/` and reported alongside, not discarded:
+  - g1_V / UBP_V at iso-delay was 1.55 (g = 2), 1.81 (g = 3) and 1.95 (g = 4);
+  - all components passed the AIG check and ABC `cec`.

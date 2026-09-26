@@ -638,8 +638,8 @@ Warning: Treating undriven bit top.\x [31] like $anyseq.
 Warning: Treating a total of 32 undriven bits in top like $anyseq.
 
 Warnings: 33 unique messages, 66 total
-End of script. Logfile hash: 926720a6ce, time: 0.42s, user: 0.42s, system: 0.00s
+End of script. Logfile hash: 926720a6ce, time: 0.54s, user: 0.54s, system: 0.00s
 Yosys 0.69 (git sha1 9f75ca1f9, Release, Clang /workspace/YoWASP/yosys/wasi-sdk-33.0-x86_64-linux/share/cmake/../..//bin/clang++ 22.1.0)
-Time spent: 22% 16x opt_clean (0 sec), 19% 1x techmap (0 sec), ...
+Time spent: 27% 1x techmap (0 sec), 23% 16x opt_clean (0 sec), ...
 
-rc=0 wall=0.9
+rc=0 wall=1.1

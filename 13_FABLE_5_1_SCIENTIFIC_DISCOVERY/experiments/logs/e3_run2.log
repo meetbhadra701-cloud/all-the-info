@@ -1,0 +1,6 @@
+GEN 2 {"tag": "delay", "D_target": null, "wall": 0.4505045413970947, "gates": 104, "area_stime": 531.76, "delay_stime_ps": 1173.23, "area": 531.53, "delay_ps": 784.82, "levels": 8, "cec": true} True
+GEN 3 {"tag": "delay", "D_target": null, "wall": 0.8268945217132568, "gates": 536, "area_stime": 2741.38, "delay_stime_ps": 1836.0, "area": 2740.04, "delay_ps": 1221.92, "levels": 15, "cec": true} True
+GEN 4 {"tag": "delay", "D_target": null, "wall": 1.3753669261932373, "gates": 1912, "area_stime": 9476.59, "delay_stime_ps": 2831.69, "area": 9471.21, "delay_ps": 1743.41, "levels": 21, "cec": true} True
+NEG 8 {"tag": "delay", "D_target": null, "wall": 0.45665526390075684, "gates": 29, "area_stime": 138.88, "delay_stime_ps": 558.58, "area": 138.83, "delay_ps": 391.31, "levels": 4, "cec": true} True
+NEG 9 {"tag": "delay", "D_target": null, "wall": 0.44782376289367676, "gates": 35, "area_stime": 166.41, "delay_stime_ps": 591.72, "area": 166.34, "delay_ps": 401.96, "levels": 4, "cec": true} True
+NEG 10 {"tag": "delay", "D_target": null, "wall": 0.475954532623291, "gates": 35, "area_stime": 182.68, "delay_stime_ps": 665.68, "area": 182.63, "delay_ps": 418.67, "levels": 4, "cec": true} True

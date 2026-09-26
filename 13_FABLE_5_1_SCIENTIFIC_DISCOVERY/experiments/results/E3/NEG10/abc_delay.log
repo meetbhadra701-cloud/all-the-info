@@ -1,5 +1,5 @@
 ======== ABC command line "read_lib -w /home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/inputs/lib/sky130_fd_sc_hd__tt_025C_1v80.lib; read_aiger design.aig; strash; dch; map; topo; stime -p; print_stats; write_blif mapped_delay.blif; cec design.aig"
-Parsing finished successfully.  Parsing time =     0.10 sec
+Parsing finished successfully.  Parsing time =     0.17 sec
 Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_12" without logic function.
 Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_3" without logic function.
 Scl_LibertyReadGenlib() skipped cell "sky130_fd_sc_hd__decap_4" without logic function.
@@ -94,8 +94,8 @@ Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxbp_2".
 Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_1".
 Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_2".
 Scl_LibertyReadGenlib() skipped sequential cell "sky130_fd_sc_hd__sedfxtp_4".
-Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/inputs/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.19 sec
-Memory =   19.81 MB. Time =     0.19 sec
+Library "sky130_fd_sc_hd__tt_025C_1v80" from "/home/user/all-the-info/13_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/inputs/lib/sky130_fd_sc_hd__tt_025C_1v80.lib" has 334 cells (94 skipped: 63 seq; 13 tri-state; 18 no func; 0 dont_use; 0 with 2 outputs; 0 with 3+ outputs).  Time =     0.29 sec
+Memory =   19.81 MB. Time =     0.29 sec
 Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
 WireLoad = "none"  [1;33mGates =     35[0m ( 20.0 %)   [1;32mCap =  4.8 ff[0m (  3.1 %)   [1;36mArea =      182.68[0m ( 80.0 %)   [1;35mDelay =   665.68 ps[0m  ( 20.0 %)               
 Path  0 --       1 : 0    4 pi                        A =   0.00  Df =   0.0   -0.0 ps  S =   0.0 ps  Cin =  0.0 ff  Cout =  11.6 ff  Cmax =   0.0 ff  G =    0  
@@ -107,4 +107,4 @@ Start-point = pi0.  End-point = po09.
 [1;37mdesign                        :[0m i/o =   10/   11  lat =    0  nd =    35  edge =     86  area =182.63  delay =418.67  lev = 4
 Networks are equivalent.  Time =     0.01 sec
 
-rc=0 wall=0.3
+rc=0 wall=0.5

@@ -107,6 +107,6 @@ Path  5 --      95 : 4    3 sky130_fd_sc_hd__o211ai_1 A =   7.51  Df =1100.9  -9
 Path  6 --      96 : 2    1 sky130_fd_sc_hd__nand2_1  A =   3.75  Df =1173.2 -116.8 ps  S =  36.6 ps  Cin =  2.3 ff  Cout =   0.0 ff  Cmax = 166.6 ff  G =    0  
 Start-point = pi09.  End-point = po07.
 [1;37mdesign                        :[0m i/o =   16/   20  lat =    0  nd =   104  edge =    222  area =531.53  delay =784.82  lev = 8
-Networks are equivalent.  Time =     0.03 sec
+Networks are equivalent.  Time =     0.04 sec
 
-rc=0 wall=0.4
+rc=0 wall=0.5
