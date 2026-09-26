@@ -53,14 +53,15 @@ Hardware for AI inference and arithmetic synthesis; power/physical effects in da
 - Glitch-aware MAC (no distinct mechanism).
 - Standard-cell covering (Wave 11 data).
 
-## Status at 09:21 UTC
-- Written: 00, 01, 02, 03, 04, 05 (thesis, Theorem 1 proven), 06 (E1 part), 07 (decision draft), REPRODUCTION. All committed and pushed.
-- **E1:** n ≤ 256 done. da4ml at 256/p0=.5 finished in the cap: UBP/da4ml = 1.34. The 512–4096 cost-only rows are still running.
-- **E2:** two parallel runs (`results/E2_p33`, `results/E2_p50`); ABC mapping of g1 in progress. When done:
-  1. run `e2_analyze.py`, writing `E2_summary.md`;
-  2. patch 06/07/00 with the numbers;
-  3. commit and push.
-- **Scope file:** `results/scope_closed_forms.txt`. Ternary ≈ g× with 4.3 lines/input at g=3; binary ≈ 4× at g=4 with 2 lines/input; int4 no useful gain.
+## FINAL STATUS (about 11:05 UTC)
+- **Decision:** RESEARCH THESIS READY FOR INITIAL PROTOTYPE, scoped to regime (V) (via/metal-programmable, weight-independent base layers) and ternary/binary weights. It is conditional on a full-text novelty check of HNLPU / Ankhdjet / 2604.25183, which the egress block prevented here.
+- **E3 (the regime-V test, pre-registered after the diagnosis):** cell area at iso-delay on SKY130 is 1.95× (n=128) and 2.49× (n=1024) smaller at g=4. With modelled wiring on the measured cells, g=3 gives 1.81× and 2.06× (logic-bound at both pitches). 14/14 components valid.
+- **Correction:** in regime (F), structural hashing of plain per-input trees recovers most of the sharing (the UBP gain is only 1.04–1.20×; E1-hashed), and da4ml is better. **The (F) claim is withdrawn.** E2 (F, gate level) was stopped after the delay stage (D3) and is consistent.
+- **E1 registered verdicts:** K1 and K2 not triggered; the registered advance was NOT met (UBP/da4ml 1.34 > 1.25). E1 was stopped at 4096/p0=.5 with 2 of 3 seeds (D5).
+- **All processes stopped.** Everything is committed and pushed on branch `claude/compassionate-edison-91b73q`.
 
-## Next authorized action
-Finish E1 (sizes up to 4096). Run E2 (gate level, iso-delay, SKY130 via native ABC), then the analytic wire model. Then write 05/06/07 and REPRODUCTION, and commit and push.
+## Next authorized action (for the next session)
+1. Allow arxiv.org and dl.acm.org, then read the ★ papers (novelty check).
+2. Run OpenROAD/ORFS PnR of 256×256 via-programmable macros (g1_V vs UBP3_V vs UBP4_V), bit-parallel and bit-serial.
+3. Build a bit-serial generator.
+

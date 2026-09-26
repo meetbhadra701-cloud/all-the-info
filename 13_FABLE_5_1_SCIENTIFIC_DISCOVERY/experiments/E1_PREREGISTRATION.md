@@ -66,3 +66,14 @@
 - g = 1 is costed in cost-only mode: the same code path without op storage, with its closed form asserted.
 - UBP is built explicitly and checked with a batch of 4 when the generator has ≤ 6 M entries; otherwise it is costed only.
 - All constructions were explicitly checked at n ≤ 1024.
+
+**D5 — stopped at the end of the session (declared).**
+- The sweep was stopped with n = 4096, p0 = 0.50 at 2 of 3 seeds; every other cell has 3 seeds.
+- The remaining instance is a regime-(F), unhashed cost-only row, a comparison superseded by E1-hashed (see E3_PREREGISTRATION.md).
+
+**Registered verdicts (from `results/E1_summary.md`):**
+- **K1 not triggered.** The median over n ≥ 1024 of min(U, B) g1/UBP* is 2.47, so A1's size clause is met, *but against the unhashed per-input baseline, later shown to be weak*.
+- **K2 not triggered.** The median UBP*/da4ml is 1.34.
+- **A1's advance condition was NOT met,** because its da4ml clause (≤ 1.25) failed.
+
+The thesis's advance rests on E3 (regime V), which was pre-registered separately.

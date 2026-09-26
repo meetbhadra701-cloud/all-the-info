@@ -17,7 +17,8 @@ Unit cost U = adders; B = bit-weighted adders (result widths). Medians over seed
 | 1024 | 0.5 | 3 | 523190 | 225952 (UBP5) | 2.315 | 2.003 | 221400 (CBP6) | not run | — | — | — | — | all pass |
 | 2048 | 0.33 | 3 | 2807993 | 819344 (UBP6) | 3.427 | 2.834 | 819041 (CBP6) | not run | — | — | — | — | all pass |
 | 2048 | 0.5 | 3 | 2095396 | 809131 (UBP6) | 2.589 | 2.217 | 800749 (CBP6) | not run | — | — | — | — | all pass |
-| 4096 | 0.33 | 2 | 11236087 | 3029072 (UBP7) | 3.709 | 3.013 | 3019198 (CBP7) | not run | — | — | — | — | all pass |
+| 4096 | 0.33 | 3 | 11236861 | 3029059 (UBP7) | 3.710 | 3.013 | 3019202 (CBP7) | not run | — | — | — | — | all pass |
+| 4096 | 0.5 | 2 | 8385810 | 2993844 (UBP6) | 2.801 | 2.374 | 2922853 (CBP7) | not run | — | — | — | — | all pass |
 
 ## Regime-correct view (post-hoc refinement; exact closed forms, no W dependence for V)
 
@@ -36,5 +37,5 @@ F = full-custom (zeros skipped; weight-specific DAGs allowed).
 
 ## Pre-registered conditions
 
-- K1 (median g1/UBP* at n>=1024, conservative min of U and B ratios) = 2.560 -> not killed; A1 part (>=2) -> met
+- K1 (median g1/UBP* at n>=1024, conservative min of U and B ratios) = 2.467 -> not killed; A1 part (>=2) -> met
 - K2 (median UBP*/da4ml where da4ml finished) = 1.338 -> not killed; A1 part (<=1.25) -> not met

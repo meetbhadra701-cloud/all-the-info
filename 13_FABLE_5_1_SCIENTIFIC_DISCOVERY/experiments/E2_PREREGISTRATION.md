@@ -45,3 +45,11 @@
 - No area number had been produced at that point.
 
 **D2 — execution.** The first launch ran the two p0 values sequentially. The g1 AIG (128×128) has 558,121 ANDs, and `dch` needed about 3.4 GB and several minutes per mapping. To fit the session budget, the run was killed **before any mapping had completed** and relaunched as two parallel processes, `results/E2_p33` and `results/E2_p50`. Scripts, flow, matrices and thresholds are unchanged; `e2_analyze.py` merges the two JSON files.
+
+**D3 — stopped before completion (declared).**
+- At 10:55 UTC the run was stopped. Both processes had finished the delay-oriented stage for 6 of 7 designs (g1, ubp2, ubp3, ubp4, cbp4, da4ml; every design passed the independent AIG check and ABC `cec`). The behavioural design was still in its first ABC mapping after more than 30 CPU-minutes, and no iso-delay re-map had started.
+- **Reasons.**
+  - The remaining registered work (about 1–1.5 h per process) concerns regime (F).
+  - The thesis had already been withdrawn for (F) on stronger evidence: E1-hashed, i.e. structurally hashed per-input baselines at n = 64–1024, 3 seeds.
+  - Regime (V) is tested by E3.
+- **Reporting.** K2a is reported only as a bounded inference; K2b is not evaluated (`results/E2_summary.md`).
