@@ -1,0 +1,2 @@
+g1 {"validation": true, "negctl_detects": true, "latency_cycles": 7, "cycles_per_word": 14, "module_area_um2": {"SNEG_gl.v": 76.3231977618517, "STREE_L64_gl.v": 5144.934256406941}}
+ubp3 {"validation": true, "negctl_detects": true, "latency_cycles": 8, "cycles_per_word": 14, "module_area_um2": {"SNEG_gl.v": 76.3231977618517, "SGEN1_gl.v": 0.0, "SGEN3_gl.v": 979.6895517055759, "STREE_L22_gl.v": 1801.727989025892}}
