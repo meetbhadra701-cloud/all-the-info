@@ -58,6 +58,28 @@ def main(path):
         print(f'| {n} | {p0} | {len(rs)} | {st.median(g1U):.0f} | {st.median([b[0] for b in ub]):.0f} ({gstar}) | {r1U:.3f} | {r1B:.3f} | '
               f'{st.median([c[0] for c in cb]):.0f} ({cstar}) | {da_s} | {r2s} | {r2Bs} | {r3s} | {dws} | {ok} |')
         verdict_rows.append((n, p0, r1U, r1B, r2U))
+    # ---- regime-correct views (post-hoc refinement, logged as deviation D3 in E1_PREREGISTRATION.md)
+    import math
+    print('\n## Regime-correct view (post-hoc refinement; exact closed forms, no W dependence for V)\n')
+    print('V = via/metal-programmable (every weight site needs its adder input; generator universal; full row trees).')
+    print('F = full-custom (zeros skipped; weight-specific DAGs allowed).\n')
+    print('| n=m | g1_V = m(n-1) | best UBP_V (g) | g1_V/UBP_V | port bound (s=(3^g+1)/2) | adder lower bound | UBP_V / adder bound |')
+    print('|---|---|---|---|---|---|---|')
+    for n in sorted({k[0] for k in by}):
+        m = n
+        g1v = m * (n - 1)
+        best = None
+        for g in range(1, 9):
+            nb = math.ceil(n / g)
+            gen = sum((3 ** min(g, n - b * g) - 1) // 2 - min(g, n - b * g) for b in range(nb))
+            u = m * (nb - 1) + gen
+            if best is None or u < best[0]:
+                best = (u, g)
+        u, g = best
+        s = (3 ** g + 1) // 2
+        ports = m * n * math.log2(3) / math.log2(2 * s - 1)
+        abound = ports / 2 - m / 2
+        print(f'| {n} | {g1v} | {u} (g={g}) | {g1v/u:.2f} | {ports:.0f} | {abound:.0f} | {u/abound:.2f} |')
     print('\n## Pre-registered conditions\n')
     k1 = [(n, p0, r1U, r1B) for n, p0, r1U, r1B, _ in verdict_rows if n >= 1024]
     if k1:

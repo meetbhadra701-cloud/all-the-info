@@ -91,7 +91,7 @@ def yosys_to_aag(rtl: Path, wd: Path) -> Path:
     shutil.copy(rtl, wd / 'rtl.v')
     t = time.time()
     p = subprocess.run([YOSYS, '-p', 'read_verilog rtl.v; synth -flatten -top top -noabc; aigmap; opt_clean; '
-                        'write_aiger -ascii -symbols design.aag'], cwd=wd, capture_output=True, text=True, timeout=7200)
+                        'write_aiger -ascii -symbols design.aag; write_aiger -symbols design.aig'], cwd=wd, capture_output=True, text=True, timeout=7200)
     (wd / 'yosys.log').write_text(p.stdout + p.stderr + f'\nrc={p.returncode} wall={time.time()-t:.1f}\n')
     if p.returncode != 0 or not (wd / 'design.aag').exists():
         raise RuntimeError(f'yosys failed in {wd}')
@@ -100,19 +100,22 @@ def yosys_to_aag(rtl: Path, wd: Path) -> Path:
 
 def abc_map(wd: Path, dtarget: float | None, tag: str) -> dict:
     D = f' -D {dtarget:.2f}' if dtarget else ''
-    script = (f'read_lib -w {LIB}; read_aiger design.aag; strash; dch; map{D}; topo; stime -p; print_stats; '
-              f'write_blif mapped_{tag}.blif; cec design.aag')
+    script = (f'read_lib -w {LIB}; read_aiger design.aig; strash; dch; map{D}; topo; stime -p; print_stats; '
+              f'write_blif mapped_{tag}.blif; cec design.aig')
     t = time.time()
     p = subprocess.run([str(ABC), '-c', script], cwd=wd, capture_output=True, text=True, timeout=7200)
     out = p.stdout + p.stderr
     (wd / f'abc_{tag}.log').write_text(out + f'\nrc={p.returncode} wall={time.time()-t:.1f}\n')
     rec = {'tag': tag, 'D_target': dtarget, 'wall': time.time() - t}
-    ma = re.search(r'Area\s*=\s*([0-9.]+)', out)
-    md = re.search(r'Delay\s*=\s*([0-9.]+)\s*ps', out)
-    mg = re.search(r'Gates\s*=\s*(\d+)', out)
-    rec['area'] = float(ma.group(1)) if ma else None
-    rec['delay_ps'] = float(md.group(1)) if md else None
-    rec['gates'] = int(mg.group(1)) if mg else None
+    clean = re.sub(r'\x1b\[[0-9;]*m', '', out)
+    ms = re.search(r'Gates\s*=\s*(\d+).*?Area\s*=\s*([0-9.]+).*?Delay\s*=\s*([0-9.]+)\s*ps', clean)
+    mp = re.search(r'area\s*=\s*([0-9.]+)\s+delay\s*=\s*([0-9.]+)\s+lev\s*=\s*(\d+)', clean)
+    rec['gates'] = int(ms.group(1)) if ms else None
+    rec['area_stime'] = float(ms.group(2)) if ms else None
+    rec['delay_stime_ps'] = float(ms.group(3)) if ms else None
+    rec['area'] = float(mp.group(1)) if mp else None
+    rec['delay_ps'] = float(mp.group(2)) if mp else None  # mapper (load-independent) delay, same model as map -D
+    rec['levels'] = int(mp.group(3)) if mp else None
     rec['cec'] = 'Networks are equivalent' in out
     return rec
 

@@ -39,4 +39,9 @@
 
 ## Deviation log
 
-(empty at registration)
+**D1 — tooling, before any area data.**
+- YoWASP Yosys's in-process ABC exits silently (rc 0, output truncated), so step 2 was replaced by the registered "Yosys → AIG → native ABC" path.
+- ABC's `read_aiger` needs binary AIGER, so Yosys now writes both formats: ASCII for our simulator, binary for ABC.
+- No area number had been produced at that point.
+
+**D2 — execution.** The first launch ran the two p0 values sequentially. The g1 AIG (128×128) has 558,121 ANDs, and `dch` needed about 3.4 GB and several minutes per mapping. To fit the session budget, the run was killed **before any mapping had completed** and relaunched as two parallel processes, `results/E2_p33` and `results/E2_p50`. Scripts, flow, matrices and thresholds are unchanged; `e2_analyze.py` merges the two JSON files.

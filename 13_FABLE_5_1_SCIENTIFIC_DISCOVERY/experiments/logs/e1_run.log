@@ -10,3 +10,6 @@
 128 0.5 0 g1 8100 bestUBP (4866, 'UBP4') da4ml 3613
 128 0.5 1 g1 8074 bestUBP (4864, 'UBP4') da4ml 3584
 128 0.5 2 g1 8093 bestUBP (4885, 'UBP4') da4ml 3598
+256 0.33 0 g1 43626 bestUBP (18219, 'UBP4') da4ml {'timeout': True, 'wall': 660.1313519477844}
+256 0.33 1 g1 43613 bestUBP (18230, 'UBP4') da4ml {'skipped': True}
+256 0.33 2 g1 43683 bestUBP (18235, 'UBP4') da4ml {'skipped': True}

@@ -1,0 +1,12 @@
+# Regime-V analytic area model (MODEL, not measurement)
+
+m=n=1024 parallel pitch=0.46 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 1.67x (logic-bound); g=3: 2.29x (logic-bound); g=4: 1.43x (wire-bound); g=5: 0.54x (wire-bound); g=6: 0.22x (wire-bound)
+m=n=1024 parallel pitch=0.92 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 1.67x (logic-bound); g=3: 1.66x (wire-bound); g=4: 0.72x (wire-bound); g=5: 0.27x (wire-bound); g=6: 0.11x (wire-bound)
+m=n=1024 serial   pitch=0.46 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 2.00x (logic-bound); g=3: 2.97x (logic-bound); g=4: 3.11x (wire-bound); g=5: 1.28x (wire-bound); g=6: 0.51x (wire-bound)
+m=n=1024 serial   pitch=0.92 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 2.00x (logic-bound); g=3: 2.97x (logic-bound); g=4: 1.58x (wire-bound); g=5: 0.65x (wire-bound); g=6: 0.26x (wire-bound)
+
+m=n=4096 parallel pitch=0.46 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 1.67x (logic-bound); g=3: 2.30x (logic-bound); g=4: 1.45x (wire-bound); g=5: 0.55x (wire-bound); g=6: 0.22x (wire-bound)
+m=n=4096 parallel pitch=0.92 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 1.67x (logic-bound); g=3: 1.67x (wire-bound); g=4: 0.73x (wire-bound); g=5: 0.27x (wire-bound); g=6: 0.11x (wire-bound)
+m=n=4096 serial   pitch=0.46 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 2.00x (logic-bound); g=3: 2.99x (logic-bound); g=4: 3.18x (wire-bound); g=5: 1.31x (wire-bound); g=6: 0.52x (wire-bound)
+m=n=4096 serial   pitch=0.92 um | area(g=1)/area(g): g=1: 1.00x (logic-bound); g=2: 2.00x (logic-bound); g=3: 2.99x (logic-bound); g=4: 1.59x (wire-bound); g=5: 0.66x (wire-bound); g=6: 0.26x (wire-bound)
+

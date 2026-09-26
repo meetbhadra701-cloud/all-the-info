@@ -48,4 +48,21 @@
 
 ## Deviation log
 
-(empty at registration)
+**D1 — before any E1 data.** The independent checker exposed two problems during smoke tests:
+- **(a) da4ml 0.6.0 input-layout hazard.** `solve` treats an F-ordered array as its transpose and raises no error (`../evidence/da4ml_layout_hazard.txt`). All E1 da4ml calls use `np.ascontiguousarray`, and they assert `pipe.kernel == K`.
+- **(b) A bug in our own integer evaluator.** It ignored operand shifts. It was fixed and re-validated with 4 negative controls: flipped op sign, flipped output sign, and two shift/polarity mutations of da4ml circuits, all rejected.
+
+**D2 — during the run.** The da4ml 256×256 (p0 = 0.33, seed 0) instance hit the 600 s cap. It did so while a native ABC build (`make -j3`) shared the 4-core machine, so the timeout is **not a clean runtime measurement**.
+- By the registered rule, da4ml was then skipped for the remaining seeds and larger sizes at that p0.
+- A supplementary idle-machine da4ml run at 256 with a longer cap is reported separately, if run, and is not used for K2.
+
+**D3 — analysis, post hoc (declared; it does not change the registered test).** The registered "g = 1" cost Σ_i(nnz_i − 1) is the **full-custom** cost: zeros are skipped.
+- In a via-programmable fabric the base layers cannot know where zeros are, so the universal g = 1 fabric needs m(n − 1) adders.
+- The registered UBP cost uses a universal generator with row trees over nonzero blocks only. That is a hybrid between the two regimes.
+- `e1_analyze.py` therefore also prints exact regime-correct closed forms (V: g1_V = m(n−1) vs UBP_V with full trees), plus a counting lower bound.
+- The registered K1/K2/A1 are evaluated exactly as registered, on the registered quantities.
+
+**D4 — sizes ≥ 2048.**
+- g = 1 is costed in cost-only mode: the same code path without op storage, with its closed form asserted.
+- UBP is built explicitly and checked with a batch of 4 when the generator has ≤ 6 M entries; otherwise it is costed only.
+- All constructions were explicitly checked at n ≤ 1024.
