@@ -1216,3 +1216,4 @@ Number of nets:           33187
 [INFO DRT-0033] met5 shape region query size = 1403.
 [INFO DRT-0165] Start pin access.
 [INFO DRT-0078]   Complete 571 pins.
+[INFO DRT-0081]   Complete 79 unique inst patterns.
