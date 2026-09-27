@@ -217,3 +217,120 @@ At U = 60, ubp3's actual cell load differs only slightly from the pruned run (1.
   - The fix: the same D flip-flops are instantiated as library cells, i.e. the cell `dfflibmap` would pick. Function, latency and every module are unchanged.
   - The build was re-run, and validation plus the mutation control were re-checked on the new netlist before PnR.
 - **D6.2:** D1–D4 of E5 apply to E6 as well. The physical-level check uses the sequential simulator on 6_final.v (12 back-to-back words).
+
+---
+
+# Gates G2 and G3 — pre-registration
+
+Written 2026-09-27, after Gate 1 (15_GATE1_NOVELTY.md) and **before any G2 or G3 data**.
+
+## Why G3 runs first
+
+Gate 1 established something from primary source (Ankhdjet RTL) and from summaries (HNLPU, BitROM): the frontier's arithmetic is **bit-plane popcount**. Each cycle it consumes one activation bit per input, counts signed hits per output, then shift-accumulates over the 8 bit-planes.
+
+Our E6 baseline (A = g1-serial) used registered serial adders over 14 cycles/word instead. If the popcount per-input fabric beats UBP3-serial, then:
+- UBP-serial is dominated regardless of fixed-base behaviour;
+- G2 on UBP-serial would be moot.
+
+G3's decisive measurement therefore runs first. G2 is pre-registered conditionally below.
+
+## G3 — strongest competitor
+
+**Metric:** **A×T** = routed area (µm²) × time per output word (cycles_per_word × achieved minimum clock period).
+- Same technology and flow as E6: SKY130 HD, ORFS image 69df744e2b5c, NO_DCE, all instances kept.
+- n = m = 64; ternary W (seed 14, p0 = 0.4); INT8 activations; 14-bit outputs.
+- **Lower is better.**
+- Routed area = synthesized cell area / U_max, U ∈ {60, 75}, DRC-clean and setup/hold met at a 3.0 ns clock.
+
+**Designs:**
+
+| ID | Design | Status of its numbers |
+|---|---|---|
+| A | g1-serial (E6) | MEASURED, reused |
+| B | UBP3-serial (E6), **the thesis** | MEASURED, reused |
+| P | **Bit-plane popcount per-input fabric** (HNLPU/BitROM/Ankhdjet arithmetic in spatial form = DA with K = 1). See the spec below. | To be MEASURED |
+| D(K) | **Via-ROM distributed arithmetic**, K ∈ {2, 3, 4}, with and without OBC | MODELED |
+
+**P specification:**
+- Per input j: a shared current-bit line b_j and its complement b̄_j (one shared inverter).
+- Per (row i, input j): a via selects b_j (w = +1), b̄_j (w = −1) or tie-0 (w = 0) into leaf slot (i, j).
+- Per row: a combinational popcount of the 64 slots, then a pipeline register, then a shift-accumulator.
+  - The accumulator's init value is a **via-programmed constant** c_i = #{j : w_ij = −1}. It is exact: complement lanes give −b = b̄ − 1, and the per-word correction for two's-complement INT8 is +n_neg.
+  - The MSB plane is subtracted.
+- 8 cycles per word, plus pipeline latency.
+
+**D(K) specification:**
+- Per block b and cycle t, the K current bits address a one-hot word-line decoder, shared by all rows.
+- Per (row, block): a b_K-bit value is read from a 2^K-entry (2^(K−1) with OBC) via-ROM column group, with a sense per bitline.
+- Per row: an adder tree over ⌈n/K⌉ values, then the same accumulator as P.
+- **Model inputs:**
+  - ROM cell area from Ankhdjet's silicon-verified SKY130 cell (2.21 µm² as built; 0.65 µm² raw; +20% array overhead; INFERRED/UNVERIFIED);
+  - sense/precharge periphery (MODELED);
+  - per-row datapath MEASURED at synthesis in our flow, then divided by the same U as P.
+
+**Validation:** P and any revision design get sequential-AIG simulation against numpy W@x (bit-plane protocol), the mutation control, and post-PnR simulation of the final routed netlist.
+
+**Kill and advance conditions for the thesis (B):**
+
+| ID | Condition | Classification |
+|---|---|---|
+| K3a | A×T(P) ≤ A×T(B), both MEASURED routed | UBP3-serial is **dominated by the frontier-style per-input fabric**: killed as proposed (architectural competitiveness). E6's A6 was won against a weak baseline. |
+| K3b | Conservative D(K) model (as-built 2.21 µm² cell) with A×T ≤ A×T(B) for some K | Substantially weakened (via-ROM DA equivalent or better) |
+| S3 | A×T(B) ≤ 0.83 × min(A×T(P), A×T(D)), i.e. ≥ 1.2× better than every competitor | B survives G3 |
+
+## Bounded revision R1 (only if K3a fires)
+
+**R1 = UBP applied on top of the bit-plane popcount fabric ("UBP3-bitplane", design Q).**
+- Per block of 3 inputs, a shared generator computes, **each cycle**, all 13 canonical pattern values of the 3 current bits. It computes both polarities in **offset code**: value + #negative entries ∈ [0, |q|], at most 2 bits.
+- Per (row, block), a via selects one pattern bus or tie-0.
+- Per row: a compressor over 22 leaves of ≤ 2 bits (vs P's 64 one-bit slots), plus the same accumulator. The via-programmed constant absorbs the offsets.
+
+**Expected (DERIVED, before data):**
+- The compressor shrinks by at most ≈ 64/44 ≈ 1.45×, and the accumulator is unchanged, so the whole-row gain is smaller.
+- The select wiring stays at ≈ 44 programmable one-bit connections per row, vs P's ≈ 38.
+
+**Distinguishing experiment:** PnR of Q vs P, same protocol and metric.
+
+| ID | Condition | Classification |
+|---|---|---|
+| A-R1 | A×T(Q) ≤ A×T(P)/1.2 | Revision survives |
+| K-R1 | A×T(Q) > A×T(P)/1.1 | Revision killed |
+| (between) | | Inconclusive; no advance claimed |
+
+## G2 — fixed-base programmability (conditional)
+
+- It runs on the surviving UBP variant vs its strongest per-input baseline: **B vs A** if S3 holds; **Q vs P** if R1 survives.
+- **If nothing survives, G2 is moot and is not run.** The reason is recorded.
+
+**Protocol:**
+1. **Base = everything W-independent:**
+   - the fabric;
+   - one **via-site cell** per leaf: pin Z on li1 drives the leaf; the programmable pin A is on met4;
+   - one **line-tap cell** per line polarity: pin A on met1 from the line driver; programmable pin Z on met4;
+   - a PDN confined to met1–met3.
+2. **W-blind placement.** The base is placed once from W-independent connectivity only; there are no programmable nets during placement. `set_dont_touch` is set on all programmable pins; no W-dependent buffering or resizing.
+3. **Base routing once** on met1–met3 only (`MAX_ROUTING_LAYER = met3`). Result: DRC and area.
+4. **For each test matrix** (next item), programmable nets connect line-tap Z to via-site A. They are routed **on met4–met5 only**, in a run that contains only programmable nets; the base wires all sit at or below met3. Zero weights select the via-site's local tie option (identical footprint; no programmable wire).
+5. **Test matrices:**
+   - W1, W2: random, p0 = 0.4 (seeds 1001, 1002);
+   - W3: sparse, p0 = 0.8 (seed 1003);
+   - W4: dense, p0 = 0.1 (seed 1004);
+   - W5: adversarial, every row identical (seed 1005), the maximum line fan-out;
+   - real BitNet weights **if obtainable**. They are not expected: HuggingFace is blocked. If unavailable, the gap is documented.
+6. **Measurements:**
+   - base DRC;
+   - per W: programmable-layer GRT overflow, DRT DRC, met4/met5 wirelength;
+   - timing, MODELED: setup/hold at 3.0 ns with placement-based parasitics on the complete programmed netlist;
+   - functional check: the complete programmed netlist (fixed base + W program) simulated against numpy;
+   - a check that the program DEF contains no wires below met4;
+   - a check that the base database is byte-identical across all W.
+
+**Kill and advance conditions:**
+
+| ID | Condition | Classification |
+|---|---|---|
+| K2a | UBP base needs a lower U than the baseline's base (met1–met3 only) and the resulting ratio < 1.5 | Weakened |
+| K2b | Any test W fails programmable routing (overflow or DRC > 0) for the UBP variant where the baseline succeeds | Substantially weakened |
+| K2c | Modeled setup fails for any W for UBP where the baseline passes | Weakened |
+| K2d | Any W needs a lower-layer change: a program wire below met4, or a change to the base DB | Killed (not a fixed base) |
+| A2 | All five W route DRC-clean on met4–met5, timing is met, and the ratio holds (≥ 1.5 for B vs A; ≥ 1.2 for Q vs P) | Advance |
