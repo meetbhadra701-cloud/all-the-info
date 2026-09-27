@@ -34,14 +34,14 @@
 | ubp3 | 60 | 0 | +1.04 / +0.10 | 1.96 | 374,411 | 57,217 | ✓ |
 | ubp3 | **75** | 0 | +0.92 / +0.07 | 2.08 | 366,569 | 51,555 | ✓ |
 | ubp4 | 60 | 0 | +0.94 / +0.09 | 2.06 | 388,242 | 38,864 | ✓ |
-| ubp4 | 75 | «E6_UBP4_75» | | | | | |
+| ubp4 | 75 | 0 | +0.85 / +0.16 | 2.16 | 382,172 | 40,482 | ✓ |
 
 **Decision (pre-registered, A1/A2 basis):**
 - U_max = 75 for both g1 and ubp3.
 - Routed area: g1 445,579 vs ubp3 209,255 µm².
 - **Ratio 2.13×.** Sensitivity: 2.17× on final cells, 2.11× on final cells minus ties.
 - **A6 MET; K6 not triggered.**
-- ubp4: 1.77× at U = 60.
+- ubp4: U_max = 75, routed area 251,259 µm² → g1/ubp4 = 1.77×.
 
 **Also observed:**
 - **Timing:** the UBP designs meet the same 3.0 ns clock with more slack. Minimum period 2.08 vs 2.22 ns at U = 75.

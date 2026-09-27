@@ -10,6 +10,7 @@ valid = our cycle-accurate sequential AIG simulation of the full top netlist vs 
 | ubp3 | True | 60 | 0 | — | 156941 | 198 | 181452 | 259946 | 0 | 0 | 374411 | 1.044 | 0.104 | 1.96 |
 | ubp3 | True | 75 | 0 | — | 156941 | 198 | 179737 | 207488 | 0 | 0 | 366569 | 0.918 | 0.065 | 2.08 |
 | ubp4 | True | 60 | 0 | — | 188444 | 34 | 216431 | 312156 | 0 | 0 | 388242 | 0.939 | 0.089 | 2.06 |
+| ubp4 | True | 75 | 0 | — | 188444 | 34 | 214955 | 250710 | 0 | 0 | 382172 | 0.845 | 0.164 | 2.16 |
 
 Latency (cycles from word start to first output bit) and throughput (cycles per word), from build_n64.json:
 
@@ -21,9 +22,9 @@ Latency (cycles from word start to first output bit) and throughput (cycles per 
 
 - g1: U_max = 75% -> routed area 445579 um^2 (final-cell basis 520796; final-minus-ties basis 504641); min period 2.22 ns; routed WL 727322
 - ubp3: U_max = 75% -> routed area 209255 um^2 (final-cell basis 239649; final-minus-ties basis 238658); min period 2.08 ns; routed WL 366569
-- ubp4: U_max = 60% -> routed area 314073 um^2 (final-cell basis 360718; final-minus-ties basis 360506); min period 2.06 ns; routed WL 388242
+- ubp4: U_max = 75% -> routed area 251259 um^2 (final-cell basis 286607; final-minus-ties basis 286437); min period 2.16 ns; routed WL 382172
 
 **g1 / best UBP (ubp3) routed-area ratio = 2.129** (sensitivity: final-cell basis 2.173, final-minus-ties basis 2.114); delay ratio ubp3/g1 = 0.94; WL ratio g1/ubp3 = 1.98
 - g1 / ubp3 = 2.129
-- g1 / ubp4 = 1.419
+- g1 / ubp4 = 1.773
 - K6 (ratio < 1.3): not triggered; A6 (ratio >= 1.5): MET
