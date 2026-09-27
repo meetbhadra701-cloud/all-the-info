@@ -85,9 +85,10 @@
   - P 15.24e6
 - **G2, generic placement:** K2b → substantially weakened. B unroutable at U 60…8.
 - **G2, R2 structured base:**
-  - GRT: all 5 W route at U60 for B, P2 and A.
-  - A×T: B 8.10e6; P2 17.07e6; A 18.35e6.
-  - DRT at 20 iterations: B 1,167 / 881 / 416 at U60 / 52 / 45. P2 and A reach 0 at U60.
+  - GRT: all 5 W route for B at 60 / 52 / 45, P2 at 60 / 67 and A at 60 / 75.
+  - A×T: B 8.10e6; P2 14.98e6 (67%); A 14.28e6 (75%).
+  - DRT at 20 iterations: B 1,167 / 881 / 416 at U60 / 52 / 45. P2 and A reach 0 at every U.
+  - Post hoc, 64 iterations: B reaches 0 at U45.
   - → **G2 unresolved.**
 - **Classification: PROMISING BUT KEY GATE UNRESOLVED.**
 

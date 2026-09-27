@@ -63,3 +63,13 @@
 {"design":"ubp3s","util":45,"base":"structured","tag":"w3","grt_wl_um":86160,"met4_usage_overflow":"19.75% 0","met5_usage_overflow":"3.67% 0","total_overflow":null}
 {"design":"ubp3s","util":45,"base":"structured","tag":"w4","grt_wl_um":160625,"met4_usage_overflow":"35.33% 0","met5_usage_overflow":"8.42% 0","total_overflow":null}
 {"design":"ubp3s","util":45,"base":"structured","tag":"w5","grt_wl_um":21935,"met4_usage_overflow":"3.39% 0","met5_usage_overflow":"0.07% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w1","grt_wl_um":97455,"met4_usage_overflow":"17.65% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w2","grt_wl_um":98311,"met4_usage_overflow":"17.89% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w3","grt_wl_um":70455,"met4_usage_overflow":"14.14% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w4","grt_wl_um":109068,"met4_usage_overflow":"18.40% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w5","grt_wl_um":46119,"met4_usage_overflow":"6.14% 0","met5_usage_overflow":"0.10% 0","total_overflow":null}
+{"design":"pc2","util":67,"base":"structured","tag":"w1","grt_wl_um":94336,"met4_usage_overflow":"19.67% 0","met5_usage_overflow":"1.91% 0","total_overflow":null}
+{"design":"pc2","util":67,"base":"structured","tag":"w2","grt_wl_um":95006,"met4_usage_overflow":"19.92% 0","met5_usage_overflow":"1.75% 0","total_overflow":null}
+{"design":"pc2","util":67,"base":"structured","tag":"w3","grt_wl_um":67178,"met4_usage_overflow":"15.74% 0","met5_usage_overflow":"1.13% 0","total_overflow":null}
+{"design":"pc2","util":67,"base":"structured","tag":"w4","grt_wl_um":105604,"met4_usage_overflow":"20.51% 0","met5_usage_overflow":"1.78% 0","total_overflow":null}
+{"design":"pc2","util":67,"base":"structured","tag":"w5","grt_wl_um":43856,"met4_usage_overflow":"6.85% 0","met5_usage_overflow":"0.12% 0","total_overflow":null}

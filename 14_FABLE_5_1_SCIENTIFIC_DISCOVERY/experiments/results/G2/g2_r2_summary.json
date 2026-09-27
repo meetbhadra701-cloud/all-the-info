@@ -162,9 +162,70 @@
    416
   ],
   "secondary": false,
-  "modeled_ws_all_w1": null,
-  "modeled_ws_prog_w1": null,
-  "verified_post_pnr": []
+  "modeled_ws_all_w1": 0.8141789464843896,
+  "modeled_ws_prog_w1": 1.2858953901684345,
+  "T_ns": 2.025,
+  "area_um2": 377671,
+  "AxT": 10707166.34624,
+  "T_base_only_ns": 2.025,
+  "AxT_base_only": 10707166.34624,
+  "verified_post_pnr": [
+   "w1",
+   "w2"
+  ]
+ },
+ {
+  "design": "pc2",
+  "U": 67,
+  "base_drc": "0",
+  "base_setup_ws": -1.10415,
+  "base_hold_ws": 0.0262169,
+  "grt_overflow": {
+   "w1": 0,
+   "w2": 0,
+   "w3": 0,
+   "w4": 0,
+   "w5": 0
+  },
+  "grt_wl_um": {
+   "w1": 94336,
+   "w2": 95006,
+   "w3": 67178,
+   "w4": 105604,
+   "w5": 43856
+  },
+  "primary": true,
+  "drt_W": "w4",
+  "drt_final": 0,
+  "drt_trajectory": [
+   1940,
+   1279,
+   1124,
+   499,
+   284,
+   198,
+   153,
+   126,
+   101,
+   82,
+   30,
+   10,
+   8,
+   8,
+   0
+  ],
+  "secondary": true,
+  "modeled_ws_all_w1": -1.5973817824033176,
+  "modeled_ws_prog_w1": -1.5685124310493848,
+  "T_ns": 4.569,
+  "area_um2": 409943,
+  "AxT": 14982647.896559833,
+  "T_base_only_ns": 4.104,
+  "AxT_base_only": 13459749.81850746,
+  "verified_post_pnr": [
+   "w1",
+   "w4"
+  ]
  },
  {
   "design": "pc2",
@@ -213,6 +274,59 @@
   "AxT": 17066695.567187965,
   "T_base_only_ns": 3.654,
   "AxT_base_only": 13379888.330160001,
+  "verified_post_pnr": [
+   "w1",
+   "w4"
+  ]
+ },
+ {
+  "design": "g1s",
+  "U": 75,
+  "base_drc": "0",
+  "base_setup_ws": 0.853041,
+  "base_hold_ws": 0.0741668,
+  "grt_overflow": {
+   "w1": 0,
+   "w2": 0,
+   "w3": 0,
+   "w4": 0,
+   "w5": 0
+  },
+  "grt_wl_um": {
+   "w1": 97455,
+   "w2": 98311,
+   "w3": 70455,
+   "w4": 109068,
+   "w5": 46119
+  },
+  "primary": true,
+  "drt_W": "w4",
+  "drt_final": 0,
+  "drt_trajectory": [
+   1837,
+   1204,
+   1099,
+   482,
+   264,
+   193,
+   148,
+   123,
+   96,
+   65,
+   30,
+   16,
+   10,
+   10,
+   0
+  ],
+  "secondary": true,
+  "modeled_ws_all_w1": 0.6716951439500463,
+  "modeled_ws_prog_w1": 1.0113847537240872,
+  "T_ns": 2.147,
+  "area_um2": 475223,
+  "AxT": 14283970.136856,
+  "T_base_only_ns": 2.147,
+  "AxT_base_only": 14283970.136856,
   "verified_post_pnr": [
    "w1",
    "w4"

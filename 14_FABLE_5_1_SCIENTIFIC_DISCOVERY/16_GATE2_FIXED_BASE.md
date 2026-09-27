@@ -132,10 +132,10 @@ Base DRC is on met1–met3. The last five columns give met4/met5 usage, then tot
 | B | 45 | 0 | +0.97 / +0.05 | 43% / 10% · 0 | 43% / 10% · 0 | 20% / 4% · 0 | 35% / 8% · 0 | 3% / 0% · 0 |
 | P2 | 60 | 0 | −0.65 / −0.01 | 18% / 1% · 0 | 19% / 1% · 0 | 15% / 1% · 0 | 19% / 2% · 0 | 6% / 0% · 0 |
 | A | 60 | 0 | +0.79 / +0.09 | 15% / 0% · 0 | 15% / 0% · 0 | 12% / 0% · 0 | 16% / 0% · 0 | 5% / 0% · 0 |
-| P2 | 67 | R2_P2_67 | | | | | | |
-| A | 75 | R2_A_75 | | | | | | |
+| P2 | 67 | 0 | −1.10 / +0.03 | 20% / 2% · 0 | 20% / 2% · 0 | 16% / 1% · 0 | 21% / 2% · 0 | 7% / 0% · 0 |
+| A | 75 | 0 | +0.85 / +0.07 | 18% / 0% · 0 | 18% / 0% · 0 | 14% / 0% · 0 | 18% / 0% · 0 | 6% / 0% · 0 |
 
-**The primary criterion holds for every design at U60, for all five W.**
+**The primary criterion holds for every design at every tested U, for all five W.** The baselines' primary U_max are P2 67% and A 75%, the top of their grids.
 - B's W1 programmable wirelength falls from 490 mm (generic base) to **172 mm**.
 - P2's falls from 468 mm to 98 mm, and A's from 443 mm to 107 mm.
 - **The generic-placement collapse of §2 was a placement artifact.** A W-blind crossbar base removes it for every design.
@@ -149,6 +149,8 @@ Base DRC is on met1–met3. The last five columns give met4/met5 usage, then tot
 | B | 45 | W2 | 4,462 → 2,862 (it. 9) → 934 (it. 16) → 2,743 (it. 17, rip-up) → **416** (it. 20) | **fails** (281 shorts, 135 spacing) |
 | P2 | 60 | W4 | 1,875 → 1,203 → 417 → 108 → 12 → **0** (it. 13) | **passes** |
 | A | 60 | W4 | 1,730 → 1,217 → 451 → 145 → 12 → **0** (it. 16) | **passes** |
+| P2 | 67 | W4 | 1,940 → 1,279 → 499 → 101 → 10 → **0** (it. 14) | **passes** |
+| A | 75 | W4 | 1,837 → 1,204 → 482 → 96 → 10 → **0** (it. 14) | **passes** |
 
 **Where B's residual violations sit:**
 - Every one is on met4, spread across the bands and concentrated in the middle 40% of the core height. That is where the interval model puts each band's peak track demand: 22–23 lines in about 26–28 met4 tracks.
@@ -165,6 +167,8 @@ Base DRC is on met1–met3. The last five columns give met4/met5 usage, then tot
 | B | 45 | +0.81 | +1.29 | +0.01 | 2.03 ns |
 | P2 | 60 | −2.06 | **−1.66** | +0.00 | **4.66 ns** |
 | A | 60 | +0.61 | +0.92 | −0.00 | 2.21 ns |
+| P2 | 67 | −1.60 | −1.57 | −0.01 | 4.57 ns |
+| A | 75 | +0.67 | +1.01 | −0.01 | 2.15 ns |
 
 **Line count vs line load (MEASURED):**
 - B's lines are 4.3× more numerous but carry ≈ 2.6 sinks each, so they are fast.
@@ -184,8 +188,8 @@ A×T = base cell area / U × cycles × T.
 | B | 45 | ✓ | ✗ (416) | 10.71e6 | 10.71e6 | — | — |
 | P2 | 60 | ✓ | ✓ | 17.07e6 | 13.38e6 | 2.11 | 1.65 |
 | A | 60 | ✓ | ✓ (W4 at it. 16) | 18.35e6 | 18.35e6 | 2.27 | 2.27 |
-| P2 | 67 | R2_P2_67_PRI | | | | | |
-| A | 75 | R2_A_75_PRI | | | | | |
+| **P2** | **67** | ✓ | ✓ (W4 at it. 14) | **14.98e6** | 13.46e6 | **1.85** | 1.66 |
+| **A** | **75** | ✓ | ✓ (W4 at it. 14) | **14.28e6** | 14.28e6 | **1.76** | 1.76 |
 
 **Post-PnR functional checks** (complete programmed netlists vs numpy, mutation detected):
 - B W1 at U60, U52 and U45, and B W2 at U45;
@@ -207,9 +211,9 @@ A×T = base cell area / U × cycles × T.
 
 **Primary criterion (GRT, all five W): B passes at every U in its grid (60, 52, 45).**
 - At its primary U_max = 60, B's A×T is 8.10e6 µm²·ns.
-- That is 2.11× better than P2 (17.07e6), or 1.65× if P2's slow programmable lines are ignored.
-- It is 2.27× better than A (18.35e6).
-- Higher-U baselines: R2_BASES_TEXT.
+- Against each baseline at its own primary U_max (P2 67%, A 75%, both also DRC-clean), B is **1.85× better than P2** (14.98e6).
+  - The best P2 point with its programmable-path delay ignored is 1.65× (P2 at 60%, 13.38e6).
+- B is **1.76× better than A** (14.28e6).
 - R2-K would need B within 1.1× of the best baseline, or B unroutable. Neither holds.
 
 **Secondary criterion (DRC-clean detailed routing of the largest-WL program in 20 iterations):**
@@ -223,7 +227,7 @@ A×T = base cell area / U × cycles × T.
 |---|---|
 | Weight changes move base cells | **Never.** W-blind placement; every base ODB is byte-identical across all programs. |
 | Weight changes modify forbidden layers | **Never.** Program wires are only on met4/met5. |
-| Routability/timing collapse removes the advantage | **Generic placement:** yes, a collapse. **Structured base:** no collapse. GRT routes every W with margin, B has the best timing of the three designs, and the A×T advantage (2.1–2.3×) holds at GRT level. But B's detailed routing does not close within the pre-registered effort at any tested U, while the per-input fabrics' does. |
+| Routability/timing collapse removes the advantage | **Generic placement:** yes, a collapse. **Structured base:** no collapse. GRT routes every W with margin, B has the best timing of the three designs, and the A×T advantage (1.76–1.85× against each baseline's best U) holds at GRT level. But B's detailed routing does not close within the pre-registered effort at any tested U, while the per-input fabrics' does. |
 
 The fixed-base advantage is therefore **neither demonstrated nor removed**. That is the definition of an unresolved gate.
 
@@ -243,4 +247,21 @@ The fixed-base advantage is therefore **neither demonstrated nor removed**. That
 
 ### 5.5 Post-hoc diagnostic (not pre-registered; cannot change the classification)
 
-B at U45 with W2, detailed-routed with OpenROAD's default 64 iterations instead of the pre-registered 20: R2_POSTHOC.
+The same structured bases and the same largest-WL programs, detailed-routed with OpenROAD's default 64 iterations instead of the pre-registered 20.
+
+**Why run it:**
+- The ORFS base flows themselves use 64.
+- B's 20-iteration residuals were still falling.
+- It separates "the router ran out of iterations" from "the layout cannot close".
+
+| B at U | Program | Trajectory (64 iterations) | Final | DRC-clean A×T | vs P2 best (14.98e6 / 13.38e6 base-only T) | vs A best (14.28e6) |
+|---|---|---|---|---|---|---|
+| 45 | W2 | identical to the 20-iteration run through it. 20 (416), then 321 (it. 24) → 100 (it. 35) → 36 (it. 52) → 7 (it. 61) → **0** (it. 64) | **0: DRC-clean** | 10.71e6 | 1.40× / 1.25× | **1.33×** |
+| 52 | W1 | POSTHOC_52 | | 9.18e6 if clean | 1.63× / 1.46× | 1.56× |
+| 60 | W1 | POSTHOC_60 | | 8.10e6 if clean | 1.85× / 1.65× | 1.76× |
+
+**What this shows:**
+- At U45, B's programmable layer **can** be closed on SKY130 met4–met5 with default router effort. The pre-registered 20-iteration cap, not physical infeasibility, is what failed B there.
+- At U45, a DRC-clean B beats P2 by ≥ 1.2× but beats A (at 75%) by only 1.33×. The pre-registered A bar is 1.5×.
+- To clear both bars, B must close at U ≥ ≈ 51%.
+- **This is post hoc and does not change the pre-registered G2 classification (unresolved).** It does sharpen the decisive next experiment: a pre-registered repeat of R2 with 64 iterations, B at U52–60, against P2 at 67 and A at 75.

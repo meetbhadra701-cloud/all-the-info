@@ -22,8 +22,8 @@ P1  Accumulation hardware of hardwired linear layers when base layers are weight
 │       ├── G3 competitors (hardwired W): A×T B 6.10e6 < P2 11.23e6 < A 13.84e6 < P 15.24e6; DA(K≥2) ≥ P → SURVIVES (S3)
 │       ├── G2 fixed base, generic placement: B's W1/W2 unroutable on met4-met5 at U 60…8 → K2b: SUBSTANTIALLY WEAKENED
 │       └── R2 structured W-blind crossbar base (bounded revision):
-│           ├── GRT: all 5 W route for B at U60/52/45 and for P2, A at U60; A×T B 8.10e6 vs P2 17.07e6, A 18.35e6
-│           ├── DRT (20 it.): B 1,167 / 881 / 416 residual (U60/52/45) — P2, A close at U60
+│           ├── GRT: all 5 W route for B at U60/52/45, P2 at U60/67, A at U60/75; A×T B 8.10e6 vs P2 14.98e6, A 14.28e6
+│           ├── DRT (20 it.): B 1,167 / 881 / 416 residual (U60/52/45) — P2 and A close at every U; post hoc 64 it.: B closes at U45
 │           └── R2-K not fired, R2-A not granted → G2 UNRESOLVED; next: site/tap co-designed band (pre-register)
 └── H1.3 Cross-matrix generator sharing → MERGED as a design rule into H1.1/H1.2
 
@@ -40,7 +40,7 @@ P3  Hash-friendly full-custom CMVM                                 STATUS: KILLE
 | Branch | Problem | Mechanism | Assumptions | Evidence | Prior art | Experiment | Result | Decision | Next question |
 |---|---|---|---|---|---|---|---|---|---|
 | H1.1 | P1 | bit-parallel UBP | select buses fit | E1 closed forms; E3 cells; **E5 PnR** | LUT-GEMM (runtime); HNLPU (g = 1, provisional) | E5 | 1.67×; loses one utilization step to congestion; 1.10× delay | weakened; superseded | none (use H1.2) |
-| H1.2 | P1 | bit-serial UBP | 1-wire lines route like g1 (hardwired); lines reachable from all rows (fixed base) | **E6, G3, G2, R2 PnR** | HNLPU POPCNT; TENET/T-MAC (runtime); G1: likely obvious composition | E6, G3, G2, R2 | hardwired: 2.13× area, 1.84× A×T vs P2; fixed base: generic collapse, structured GRT 2.1–2.3× but DRT not closed | **PROMISING BUT KEY GATE UNRESOLVED** | Can a site/tap co-designed W-blind base close B's programmable DRT at U keeping ≥ 1.2× vs P2? |
+| H1.2 | P1 | bit-serial UBP | 1-wire lines route like g1 (hardwired); lines reachable from all rows (fixed base) | **E6, G3, G2, R2 PnR** | HNLPU POPCNT; TENET/T-MAC (runtime); G1: likely obvious composition | E6, G3, G2, R2 | hardwired: 2.13× area, 1.84× A×T vs P2; fixed base: generic collapse, structured GRT 1.76–1.85× but DRT not closed (20 it.) | **PROMISING BUT KEY GATE UNRESOLVED** | Can a site/tap co-designed W-blind base close B's programmable DRT at U keeping ≥ 1.2× vs P2? |
 | H2.1 | P2 | adapter-as-redundancy | defects within rank r | none | RRAM LoRA compensation | none possible here | — | reserve | Via-ROM defect statistics? |
 | H3.1 | P3 | hash-friendly pairing | — | E1-hashed (HIST-OBS) | Paar; da4ml | — | — | killed | — |
 

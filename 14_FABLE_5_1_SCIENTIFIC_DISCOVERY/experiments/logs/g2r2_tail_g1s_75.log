@@ -1,0 +1,12 @@
+g1s 75 base DRC: [INFO DRT-0199]   Number of violations = 0.
+{"design":"g1s","util":75,"base":"structured","tag":"w1","grt_wl_um":97455,"met4_usage_overflow":"17.65% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w2","grt_wl_um":98311,"met4_usage_overflow":"17.89% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w3","grt_wl_um":70455,"met4_usage_overflow":"14.14% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w4","grt_wl_um":109068,"met4_usage_overflow":"18.40% 0","met5_usage_overflow":"0.30% 0","total_overflow":null}
+{"design":"g1s","util":75,"base":"structured","tag":"w5","grt_wl_um":46119,"met4_usage_overflow":"6.14% 0","met5_usage_overflow":"0.10% 0","total_overflow":null}
+g1s 75 primary: w4
+{"design": "g1s", "tag": "w4", "netlist": "post-PnR (prog_w4_u75s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+g1s 75 DRT w4: G2_RESULT drc=0
+{"design": "g1s", "tag": "w1", "netlist": "post-PnR (prog_w1_u75s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+G2_TIMING setup_ws=6.716951439500463e-10 hold_ws=-9.367617792577221e-12
+G2_PROG_WS setup=1.0113847537240872e-9

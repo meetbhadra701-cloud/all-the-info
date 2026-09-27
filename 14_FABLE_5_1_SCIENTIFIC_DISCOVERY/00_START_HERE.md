@@ -16,7 +16,7 @@
   - MEASURED, DRC-clean, validated.
 - **Weight-independent fixed base** (G2):
   - With generic placement, UBP3's 548 programmable lines (vs 128) do not route at any utilization.
-  - A W-blind crossbar floorplan (R2) restores routing of all test W at GRT level, with a 2.1–2.3× A×T advantage.
+  - A W-blind crossbar floorplan (R2) restores routing of all test W at GRT level, with a 1.76–1.85× A×T advantage over the baselines' best.
   - But UBP3's detailed routing on SKY130's met4 does not close in the pre-registered effort, while the per-input fabrics' does.
 - **Novelty** (G1): likely an obvious composition. Only the physical results are new.
 - **Key open gate:** a DRC-clean fixed-base UBP that keeps its advantage.

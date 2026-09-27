@@ -1,0 +1,58 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+G2: removed 26287 base nets (all base wiring is at or below met3)
+G2: programmable nets 128, pins 2552
+[WARNING GRT-0300] Timing is not available, setting critical nets percentage to 0.
+[INFO GRT-0020] Min routing layer: met4
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 0
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 12
+[INFO GRT-0002] Maximum degree: 30
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal          0             0          0.00%
+met2       Vertical            0             0          0.00%
+met3       Horizontal          0             0          0.00%
+met4       Vertical        65430         65430          0.00%
+met5       Horizontal      20196         20196          0.00%
+---------------------------------------------------------------
+
+[INFO GRT-0197] Via related to pin nodes: 120
+[INFO GRT-0198] Via related Steiner nodes: 60
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 180
+[INFO GRT-0112] Final usage 3D: 12304
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Congestion
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1                 0             0            0.00%             0 /  0 /  0
+met2                 0             0            0.00%             0 /  0 /  0
+met3                 0             0            0.00%             0 /  0 /  0
+met4             65430         11704           17.89%             0 /  0 /  0
+met5             20196            60            0.30%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total            85626         11764           13.74%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 98311 um
+[INFO GRT-0014] Routed nets: 128
+[INFO GRT-0303] Global routing runtime = 00:00:00
+G2_GRT done

@@ -20,14 +20,14 @@
 | **G1** novelty / obviousness | **Materially downgraded, not killed.** No identical or technically equivalent mechanism was found; the one primary source (Ankhdjet RTL) is g = 1 per-weight accumulation. The combination (LUT-GEMM activation-group sharing + a via/metal-programmable W-independent base) is **likely obvious**. What remains is the physical consequences. | **Novelty** (downgrade) |
 | **G3** strongest competitor | **Survives (S3).** Hardwired-W regime, all MEASURED and post-PnR validated: B is **1.84×** better in A×T than the frontier-style bit-plane popcount fabric P2, **2.50×** better than P, and **2.27×** better than A. Via-ROM DA (K ≥ 2) is never smaller than the K = 1 popcount fabric for ternary W (DERIVED + MEASURED + INFERRED). | — |
 | **G2** fixed-base programmability, **generic placement** (pre-registered protocol) | **K2b fires → substantially weakened.** B's random programs do not route on met4–met5 at any base utilization from 60% down to 8%; A routes them at 60% and P2 at 45%. K2c (timing) and K2d (lower-layer change) do not fire. | **Physical programmability**, diagnosed as **methodology** (the placer clusters all line taps) |
-| **G2 / R2** structured W-blind crossbar base (the one bounded revision) | **Primary criterion:** B routes all five W at U60, with A×T **2.1×** better than P2 and **2.3×** better than A. **Secondary criterion (DRC-clean detailed routing in 20 iterations): B fails** at 60 and 52 (1,167 and 881 met4 violations, still falling). P2 and A pass at 60. B fails at 45 too (416). Higher-U baselines: R2_BASES. Pre-registered classification: **R2-K not fired, R2-A not granted → G2 UNRESOLVED** | **Physical programmability (unresolved)** |
+| **G2 / R2** structured W-blind crossbar base (the one bounded revision) | **Primary criterion (GRT):** B routes all five W at U60. Its A×T is **1.85×** better than P2 and **1.76×** better than A, each baseline taken at its own best U (P2 67%, A 75%). **Secondary criterion (DRC-clean detailed routing in 20 iterations): B fails** at U60 / 52 / 45 (1,167 / 881 / 416 met4 violations, falling). P2 and A pass at every U tested. Pre-registered classification: **R2-K not fired, R2-A not granted → G2 UNRESOLVED**. *Post hoc (64 iterations, the router default): B's hardest program closes DRC-clean at U45* (§5.5 of 16). | **Physical programmability (unresolved)** |
 
 ## 2. Classification: **PROMISING BUT KEY GATE UNRESOLVED**
 
 - **Not THESIS KILLED:**
   - No pre-registered kill fired: G1 was downgraded; G3 passed; G2 was substantially weakened on the generic protocol; and R2-K did not fire.
   - Weight changes never move base cells or touch forbidden layers.
-  - On the structured base, routing and timing do not collapse. B keeps a 2.1–2.3× A×T advantage at GRT level and has the fastest programmable paths.
+  - On the structured base, routing and timing do not collapse. B keeps a 1.76–1.85× A×T advantage at GRT level over each baseline's best, and has the fastest programmable paths.
   - The thesis is not dead. Its key physical claim is unproven.
 - **Not READY FOR FULL RESEARCH DEVELOPMENT:**
   - The thesis is about a **weight-independent** fabric, and there its advantage is not physically closed.
@@ -40,6 +40,8 @@
 
 ## 3. The research-development package (the 12 questions)
 
+The prompt asks for this package if the thesis survives all three gates. It did not fail any gate outright: G2 is unresolved, not failed. The package is given anyway, because it states exactly what is established and what is not. Read it with G2 open.
+
 ### 1. What exactly is new?
 
 **The mechanism** (UBP-g, bit-serial):
@@ -50,7 +52,8 @@
 **What is new is not the arithmetic.** Per G1 it is a likely-obvious composition. What is new is the physical characterization of that composition. None of the following appears in any retrieved source:
 - **Hardwired regime:** 2.13× less routed area than a per-input serial fabric, and 1.84× better A×T than the frontier's bit-plane popcount fabric (MEASURED, DRC-clean, validated).
 - **Fixed base, generic placement:** the 26-lines-per-3-inputs requirement collapses programmable routing.
-- **Fixed base, structured crossbar:** GRT routability is restored with a 2.1–2.3× A×T advantage (modeled timing), but detailed-route closure on SKY130's two programmable layers is not reached in 20 iterations, where the per-input fabrics close.
+- **Fixed base, structured crossbar:** GRT routability is restored with a 1.76–1.85× A×T advantage (modeled timing). Detailed-route closure on SKY130's two programmable layers is not reached in the pre-registered 20 iterations, where the per-input fabrics close.
+  - Post hoc, with the router's default 64 iterations, B closes at U45. There its A×T is 1.40× better than P2 but only 1.33× better than A.
 - **The line-count / line-load trade-off:** UBP needs 4.3× more programmable lines, but each is lightly loaded (≈ 2.6 sinks), so UBP's programmable paths are the fastest of the three designs.
 
 ### 2. What is already known?
@@ -94,7 +97,8 @@ The bit-plane popcount arithmetic of HNLPU, BitROM and Ankhdjet is DA with K = 1
 **Reachability bound (DERIVED; new in G2):**
 - A W-blind base must make (3^g − 1)/g lines per input reachable from every row: 26/3 ≈ 8.7 vs 2 for per-input fabrics.
 - In a structured crossbar, the densest band needs as many met4 tracks as the maximum overlap of its line intervals.
-- For our five W that is 22–23 of the band's lines. On SKY130 met4 (0.92 µm pitch) this bounds B's programmable-layer U_max to ≈ 44% at 75% track usage and ≈ 63% at 90% (`scripts/g2_track_model.py`). The measured DRT behaviour (not closed at 52–60) is consistent with this bound.
+- For the random W that is 22–23 of the band's 26 lines (W3: 13; W4: 19). On SKY130 met4 (0.92 µm pitch) this bounds B's programmable-layer U_max to ≈ 44% at 75% track usage and ≈ 63% at 90% (`scripts/g2_track_model.py`, spread taps).
+- The measured DRT behaviour is consistent with this bound: not closed at 45–60, and the residual falls with U, from 1,167 to 416.
 
 **DA bound (DERIVED):**
 - A ternary K-input DA leaf needs b_K = ⌈log₂(2K + 1)⌉ ≥ K bits for K ≤ 4, so it saves no compressor bits over K = 1.
@@ -120,7 +124,7 @@ The bit-plane popcount arithmetic of HNLPU, BitROM and Ankhdjet is DA with K = 1
 
 **Physically, for B, not yet closed:**
 - On the structured base, every program routes at GRT level.
-- Detailed routing of B's programmable layer leaves ~0.9–1.2k met4 violations at U52–60.
+- Detailed routing of B's programmable layer leaves 1,167 / 881 / 416 met4 violations at U60 / 52 / 45 after 20 iterations.
 - The per-input fabrics close.
 
 **Real model weights were not tested:** HuggingFace is blocked in this environment.
@@ -138,7 +142,8 @@ The bit-plane popcount arithmetic of HNLPU, BitROM and Ankhdjet is DA with K = 1
 
 **The best P-class fabric (P2) vs B:**
 - Hardwired: 1.84× worse in A×T (MEASURED).
-- Structured fixed base: 2.1× worse (1.65× if P2's slow programmable lines are ignored), at GRT level with modeled timing. P2 closes DRT there; B does not.
+- Structured fixed base, at GRT level with modeled timing: 1.85× worse (1.65× if P2's slow programmable lines are ignored). P2 closes DRT; B does not in 20 iterations.
+- DRC-clean comparison (post hoc, B at U45 with 64 iterations): P2 is 1.40× worse (1.25× if its line delay is ignored).
 
 ### 8. What is measured vs modeled?
 
