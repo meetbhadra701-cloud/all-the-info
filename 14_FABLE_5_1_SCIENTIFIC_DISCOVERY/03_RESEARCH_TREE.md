@@ -1,36 +1,45 @@
-# 03 — Research tree (living)
+# 03 — Research tree (final state, Wave 14)
 
 ```
 P1  Accumulation hardware of hardwired linear layers when base layers are weight-independent (regime V)
-│   parent: 13_FABLE_5_1 (HIST-OBS: survivor)
+│   parent: 13_FABLE_5_1 (HIST-OBS survivor)            STATUS: PROBLEM CONFIRMED — primary thesis
 ├── H1.1 Bit-parallel universal block patterns (UBP-g)
-│   ├── Mechanism: GEN(g) per block + TREE(⌈n/g⌉,w) per neuron + via-selected lines
-│   ├── Prior-art challenge: LUT-GEMM (ingredient); HNLPU in-neuron grouping (provisional delta)
-│   ├── Evidence (HIST-OBS): adders ≈ g× (exact); cells 1.95×/2.49× at iso-delay (E3)
-│   ├── Critical assumption: select wiring fits (MODEL only)
-│   ├── Experiment: E5 PnR, weight-independent hierarchy-preserved fabrics, SKY130, iso-clock   ← NEXT
-│   ├── Result: (pending)
-│   └── Decision: (pending)
-├── H1.2 Bit-serial UBP (evolution; single-wire lines; width-independent per-site cost)
-│   ├── Mechanism: serial-adder generators; popcount neurons fed by shared pattern streams
-│   ├── Critical assumption: no cycle penalty at iso-throughput; small serial generator overhead
-│   ├── Experiment: E6 gate-level iso-throughput (then PnR if budget)   ← only if justified by E5
-│   └── Result: (not started)
+│   ├── Mechanism: GEN(g) per block + NEG per line + TREE(⌈n/g⌉, w) per neuron; via selects line / −line / 0
+│   ├── Critical assumption: select wiring fits
+│   ├── Experiment: E5 (n = 32, SKY130, ORFS PnR; A1 relaxed clock; A2 full fabric)
+│   ├── Result: UBP3 DRC-clean at U = 60, global-route congestion at U = 75 (g1 routes at 75)
+│   │           → ratio «E5_RATIO» (2.08× at equal U); post-route delay 1.10× g1; select WL 1.58× lower
+│   └── Decision: «E5_VERDICT» — WEAKENED (routability-limited), superseded by H1.2
+├── H1.2 Bit-serial UBP  (evolution iteration 1)                  STATUS: SURVIVOR
+│   ├── Mechanism: serial registered adders; 1-wire pattern lines; serial trees fed by shared pattern streams
+│   ├── Why: bit-parallel generator depth (pre-placement 1.43× delay) and w-bit select buses
+│   ├── Experiment: E6 (n = 64, real 3.0 ns clock + CTS, equal throughput)
+│   ├── Result: UBP3 2.13× smaller routed area; DRC-clean at U = 75 like g1; timing met (2.08 vs 2.22 ns);
+│   │           +1 cycle latency; select WL 5.8× lower; final routed netlists = numpy W@x
+│   └── Decision: A6 MET → primary thesis (12); gates G1–G3 (14)
 └── H1.3 Cross-matrix generator sharing → MERGED as a design rule into H1.1/H1.2
 
-P2  Functional yield of hardwired weights (reserve; not executable here)
+P2  Functional yield of hardwired weights                          STATUS: RESERVE (not executable here)
 ├── H2.1 Adapter-as-redundancy (rank-r SRAM adapter replaces r defective rows)
 └── H2.2 Defect-benign one-hot encodings
 
-P3  Hash-friendly full-custom CMVM
-└── H3.1 greedy hash-maximizing pairing → MERGED/KILLED (= Paar-style CSE; da4ml stronger)
+P3  Hash-friendly full-custom CMVM                                 STATUS: KILLED (prior art)
+└── H3.1 Greedy hash-maximizing pairing → = Paar-style CSE; da4ml stronger
 ```
 
 ## Branch records
 
 | Branch | Problem | Mechanism | Assumptions | Evidence | Prior art | Experiment | Result | Decision | Next question |
 |---|---|---|---|---|---|---|---|---|---|
-| H1.1 | P1 | bit-parallel UBP | wiring fits at g = 3 | E1 closed forms; E3 cells | LUT-GEMM; HNLPU (prov.) | E5 PnR | pending | pending | Does routed area keep ≥ 1.5×? |
-| H1.2 | P1 | bit-serial UBP | width-independent per-site cost | none yet | HNLPU POPCNT (closest) | E6 | — | — | Does serialization remove the wire and width penalties? |
-| H2.1 | P2 | adapter-as-redundancy | defects within rank r | none | RRAM LoRA compensation; DNN yield tolerance | none possible here | — | reserve | Defect statistics of via ROMs? |
-| H3.1 | P3 | hash-friendly pairing | — | E1-hashed (HIST-OBS) | Paar; da4ml | — | — | merged/killed | — |
+| H1.1 | P1 | bit-parallel UBP | select buses fit | E1 closed forms; E3 cells; **E5 PnR** | LUT-GEMM (runtime); HNLPU (g = 1, provisional) | E5 | «E5_RATIO»; loses one utilization step to congestion; 1.10× delay | weakened; superseded | none (use H1.2) |
+| H1.2 | P1 | bit-serial UBP | 1-wire lines route like g1 | **E6 PnR** | HNLPU POPCNT (raw inputs); TENET (runtime mirror-half) | E6 | 2.13×; U_max 75 = g1; timing met; select WL 5.8× lower | **survivor → full development (gated)** | Does it survive fixed placement + top-metal-only routing (G2)? DA-via-ROM (G3)? |
+| H2.1 | P2 | adapter-as-redundancy | defects within rank r | none | RRAM LoRA compensation | none possible here | — | reserve | Via-ROM defect statistics? |
+| H3.1 | P3 | hash-friendly pairing | — | E1-hashed (HIST-OBS) | Paar; da4ml | — | — | killed | — |
+
+## Amendments and deviations affecting the tree
+
+| ID | What happened | Effect |
+|---|---|---|
+| A1 | Relaxed E5 clock | Removes the timing-repair confound |
+| A2 | W-dependent pruning removed; UBP runs repeated on full fabrics | Pruned runs superseded; they overstated E5 ubp3 by 4% and ubp4 by up to 27% |
+| D6.1 | E6 top-level flip-flops emitted as cells | Format fix only |

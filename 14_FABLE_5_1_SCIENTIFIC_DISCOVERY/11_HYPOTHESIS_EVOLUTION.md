@@ -36,8 +36,27 @@ PROPOSE H1.1 (bit-parallel UBP, inherited) → BUILD EVALUATOR (ORFS PnR + own s
 - **A6:** routed-area ratio ≥ 1.5 at a real 3.0 ns clock, with setup and hold met and equal throughput.
 - **K6:** ratio < 1.3, or UBP not DRC-clean with timing met where g1 is.
 
-**Result:** see 10 (E6).
+## Result of iteration 1 (10 §2–3)
 
-## Iteration 2: not used
+- **H1.2 PASSED (A6).** g1/UBP3 routed area = **2.13×**.
+  - Both designs are DRC-clean at U = 75, the top of the range.
+  - Both meet setup and hold at the real 3.0 ns clock; UBP3's minimum period is shorter (2.08 vs 2.22 ns).
+  - Latency is +1 cycle; throughput is equal.
+  - Select wiring is 5.8× lower.
+- **What E5 revealed about H1.1 changes the story behind the revision.**
+  - The *pre-placement* delay penalty that triggered the revision shrank to 1.10× post-route.
+  - A different bit-parallel cost appeared instead: **select-bus congestion.** Bit-parallel UBP fails global routing at U = 75, where g1 routes. That drops its ratio from 2.08× (equal U) to «E5_RATIO».
+  - H1.2 removes exactly this cost: single-wire lines route at U = 75 like g1.
+  - So the revision was justified, but by the *second* risk it named (w-bit select buses), not by the delay trigger.
+- **Distinguishing result, as pre-registered:** A6 met at the real clock with equal throughput. The bit-serial form routes where the bit-parallel form congests.
 
-The reasons are recorded in 13.
+## Iteration 2: not used (deliberately)
+
+1. **The revised mechanism passed.** A second revision would be optimization, not a response to failure.
+2. **The remaining risks are evaluator scope, not mechanism failures:**
+   - fixed placement / upper-metal-only routing;
+   - the DA-via-ROM baseline;
+   - novelty.
+
+   Each is better addressed as a gate (14) than as another mechanism change.
+3. **Budget:** preserving about $20 for recovery or follow-up, as instructed.
