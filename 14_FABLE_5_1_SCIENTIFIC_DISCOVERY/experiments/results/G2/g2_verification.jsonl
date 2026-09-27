@@ -17,3 +17,5 @@
 {"design": "g1s", "tag": "w1", "netlist": "post-PnR (prog_w1_u75s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
 {"design": "pc2", "tag": "w4", "netlist": "post-PnR (prog_w4_u67s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
 {"design": "pc2", "tag": "w1", "netlist": "post-PnR (prog_w1_u67s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
+{"design": "ubp3r3", "tag": "w14", "netlist": "pre-PnR (Verilog-level program)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "ubp3r3", "tag": "w4", "netlist": "pre-PnR (Verilog-level program)", "matches_numpy": true, "mutation_detected": true, "latency": 8}

@@ -1,0 +1,81 @@
+{
+ "tracks_per_band": {
+  "45": 30,
+  "52": 28,
+  "60": 26
+ },
+ "designs": {
+  "R2 (k=1, spread taps, 8-site taps)": {
+   "k": 1,
+   "tracks_lost_to_pad_columns": 6,
+   "peak_demand_per_dev_matrix": {
+    "D1": 23,
+    "D2": 23,
+    "D3": 12,
+    "D4": 17,
+    "D5": 1
+   },
+   "mean_band_demand_per_dev_matrix": {
+    "D1": 18.0,
+    "D2": 18.6,
+    "D3": 8.9,
+    "D4": 14.4,
+    "D5": 0.9
+   },
+   "worst_peak": 23,
+   "peak_over_usable_tracks": {
+    "45": 0.96,
+    "52": 1.05,
+    "60": 1.15
+   }
+  },
+  "R3 k=2": {
+   "k": 2,
+   "tracks_lost_to_pad_columns": 2,
+   "peak_demand_per_dev_matrix": {
+    "D1": 16,
+    "D2": 16,
+    "D3": 9,
+    "D4": 16,
+    "D5": 1
+   },
+   "mean_band_demand_per_dev_matrix": {
+    "D1": 13.1,
+    "D2": 13.0,
+    "D3": 7.0,
+    "D4": 12.0,
+    "D5": 0.9
+   },
+   "worst_peak": 16,
+   "peak_over_usable_tracks": {
+    "45": 0.57,
+    "52": 0.62,
+    "60": 0.67
+   }
+  },
+  "R3 k=4": {
+   "k": 4,
+   "tracks_lost_to_pad_columns": 2,
+   "peak_demand_per_dev_matrix": {
+    "D1": 12,
+    "D2": 10,
+    "D3": 7,
+    "D4": 10,
+    "D5": 1
+   },
+   "mean_band_demand_per_dev_matrix": {
+    "D1": 9.0,
+    "D2": 8.5,
+    "D3": 5.6,
+    "D4": 8.5,
+    "D5": 0.9
+   },
+   "worst_peak": 12,
+   "peak_over_usable_tracks": {
+    "45": 0.43,
+    "52": 0.46,
+    "60": 0.5
+   }
+  }
+ }
+}

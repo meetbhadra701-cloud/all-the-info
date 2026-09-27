@@ -33,6 +33,7 @@ if {$::env(MODE) eq "route" || $::env(MODE) eq "grt"} {
 } else {
   read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
   read_liberty /work/cells/g2_cells.lib
+  if {[file exists /work/cells/g2r3_cells.lib]} { read_liberty /work/cells/g2r3_cells.lib }
   g2_apply_program
   read_sdc $::env(BASE_SDC)
   source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
@@ -40,7 +41,7 @@ if {$::env(MODE) eq "route" || $::env(MODE) eq "grt"} {
   estimate_parasitics -placement
   puts "G2_TIMING setup_ws=[sta::worst_slack_cmd max] hold_ws=[sta::worst_slack_cmd min]"
   # worst setup slack of paths THROUGH the programmable nets (line-tap outputs): the part of timing the program owns
-  set tp [get_pins -of_objects [get_cells -filter "ref_name == LTAP"] -filter "direction == output"]
+  set tp [get_pins -of_objects [get_cells -filter "ref_name =~ LTAP*"] -filter "direction == output"]
   set pe [find_timing_paths -through $tp -path_delay max]
   if {[llength $pe]} { puts "G2_PROG_WS setup=[[lindex $pe 0] slack]" } else { puts "G2_PROG_WS setup=none" }
   if {[info exists ::env(REPORT_PATHS)] && $::env(REPORT_PATHS)} {

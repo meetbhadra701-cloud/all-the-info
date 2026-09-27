@@ -1,0 +1,53 @@
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO LTAP2
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN LTAP2 0 0 ;
+  SIZE 0.92 BY 2.72 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER li1 ;
+        RECT 0.085 1.015 0.345 1.665 ;
+    END
+  END A
+  PIN Z
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.15 0.80 0.77 1.92 ;
+    END
+  END Z
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 2.480 0.92 2.960 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 -0.240 0.92 0.240 ;
+    END
+  END VGND
+  OBS
+    LAYER met1 ;
+      RECT 0.52 0.90 0.84 1.80 ;
+    LAYER met2 ;
+      RECT 0.52 0.90 0.84 1.80 ;
+    LAYER met3 ;
+      RECT 0.45 0.80 0.87 1.90 ;
+  END
+END LTAP2
+END LIBRARY

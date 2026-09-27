@@ -22,12 +22,13 @@ from e6_build import read_aag_seq, sim_seq  # noqa: E402
 from g3_build import sim_bitplane  # noqa: E402
 
 G2LIB = '/work/cells/g2_cells.lib'
-LATENCY = {'ubp3s': 8, 'g1s': 7}
+G2R3LIB = '/work/cells/g2r3_cells.lib'
+LATENCY = {'ubp3s': 8, 'g1s': 7, 'ubp3r3': 8}
 
 
 def program_verilog(text: str, prog: dict) -> str:
     for src, sites in prog['nets'].items():
-        text, k = re.subn(rf'(LTAP lt_{src} \(\n\s+\.A\({src}\))(\n)', rf'\g<1>,\n    .Z(pg_{src})\g<2>', text)
+        text, k = re.subn(rf'(LTAP2? lt_{src} \(\n\s+\.A\(\w+\))(\n)', rf'\g<1>,\n    .Z(pg_{src})\g<2>', text)
         assert k == 1, src
         text = text.replace('module top(', f'module top(', 1)
         text = re.sub(r'(\n  input clk;)', rf'\n  wire pg_{src};\1', text, count=1)
@@ -55,7 +56,7 @@ def main(out: Path, design: str, tag: str, netlist: str | None):
     else:
         vname = Path(netlist).name
         src = f'post-PnR ({vname})'
-    p = dock(f"cd {design} && yosys -q -p 'read_liberty -ignore_miss_func {LIB}; read_liberty -ignore_miss_func {G2LIB}; "
+    p = dock(f"cd {design} && yosys -q -p 'read_liberty -ignore_miss_func {LIB}; read_liberty -ignore_miss_func {G2LIB}; read_liberty -ignore_miss_func {G2R3LIB}; "
              f"read_verilog {vname}; hierarchy -top top; flatten; synth -top top -noabc; dffunmap; setundef -zero -init; "
              f"aigmap; opt_clean; write_aiger -ascii -symbols v_{tag}.aag'", out)
     if p.returncode != 0:

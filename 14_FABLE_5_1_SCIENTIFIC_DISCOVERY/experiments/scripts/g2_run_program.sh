@@ -3,7 +3,8 @@
 #   route pass (met4-met5 only) + sta/netlist pass on the frozen base, then functional verification vs numpy.
 set -u
 G2=$1; D=$2; U=$3; T=$4
-if [[ $U == *s ]]; then NICK=g2s_${D}_u${U%s}; else NICK=g2_${D}_u${U}; fi
+if [[ $U == *r ]]; then NICK=g2r3_${D}_u${U%r}; KIND=r3
+elif [[ $U == *s ]]; then NICK=g2s_${D}_u${U%s}; else NICK=g2_${D}_u${U}; fi
 BASE=/work/orfs/results/sky130hd/$NICK/base
 OUT=/work/$D/prog_${T}_u${U}
 for MODE in ${MODES:-route sta}; do

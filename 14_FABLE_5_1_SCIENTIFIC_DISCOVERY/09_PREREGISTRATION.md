@@ -428,3 +428,145 @@ Written before any R2 data. This is a **methodology** revision; the architecture
 | (between) | | G2 unresolved |
 
 **If DRT fails for every design** (as at unstructured U60), the secondary criterion is reported as a testbed limit (SKY130 met4/met5 pitch and via4 size) and R2-A cannot be granted.
+
+# R3 — the final layout revision (pre-registered before any R3 physical result)
+
+Written 2026-09-27, in the final decision run. Committed and pushed before any R3 base is built.
+
+**Scope limits:** this is the last revision. There will be no R4, and no architecture change after R3. If R3 fails the decisive criterion at 52%, the thesis is killed.
+
+## Hypothesis
+
+Distributing the programmable access points spatially within each band will remove the local programmable-layer hotspot. UBP3-serial should then close detailed routing at ≥ 52% utilization, for all five weight programs, while keeping its physical advantage.
+
+## The R2 mechanism R3 attacks (from R2 data only)
+
+**Where the residual violations are:**
+- R2's 64-iteration residuals are all met4 shorts and spacing violations: 117 at U52, 410 at U60.
+- 110 of 117 (U52) and 399 of 410 (U60) lie in the middle 30–70% of the core height.
+- They are spread across the band width. They are only mildly enriched near via sites: 22% within 3 µm, against 11% for random points.
+
+**Cause: single-tap lines.**
+- Each line's programmable net runs from its one tap to ≈ 2.6 random sinks, so it spans most of the band height.
+- About 22–23 of a band's 26 lines overlap at mid-height.
+- Pad columns take ≈ 6 of the band's 28 met4 tracks at U52: the via-site column takes 2, and the 3.08 µm tap pads take 4.
+
+**DERIVED interval model** (`scripts/r3_design_model.py`), calibrated on R2: peak demand / usable tracks is
+- 0.96 at U45 (closed at 64 iterations);
+- 1.05 at U52 (117 left);
+- 1.15 at U60 (410 left).
+
+## R3 design
+
+Chosen from the R2 mechanism and development matrices D1–D5 only (seeds 2001–2005, the same generator as W1–W5). W1–W5 were never used for the design.
+
+1. **Segmented line access.**
+   - Every line L gets **four taps** `lt_L_s0..s3` (a new cell, LTAP2), all on the same base net L.
+   - The base routes each line as a W-independent spine on met1–met3 from its driver to its four taps.
+   - Rows are split into four segments of 16 rows. A program connects a via site in segment s only to its line's tap in segment s, so no programmable net spans more than a quarter of the band.
+2. **Area-neutral taps.**
+   - LTAP2 is 2 sites wide (0.92 × 2.72 µm), with a single-track met4 pad (0.62 × 1.12 µm) centred on a met4 track.
+   - 4 × 2 sites equals the 8 sites of R2's one LTAP, so the base cell area is unchanged at 169,952 µm². The electrical model is unchanged (the same buf_4-class Liberty as LTAP).
+3. **W-blind placement** (FIRM before global placement, ORFS `POST_PDN_TCL`, `scripts/r3_build.py`):
+   - 22 bands.
+   - The band's 64 via sites sit in one column at the band centre, row i at height (i + 0.5)/64, track-aligned.
+   - Tap (line t of the band's T lines, segment s) sits at height (s + (t + 0.5)/T)/4. Its x is the line's home position, (t + 0.5)/T of the band width, track-aligned.
+   - Every other cell is placed by ORFS from base connectivity.
+4. **Unchanged:**
+   - the logic (SGEN3, SNEG, STREE_L22, via-site selection) and its bit-serial protocol;
+   - VSITE cells, the met1-rail PDN (D-G2.2) and the 3.0 ns SDC;
+   - layers: base met1–met3, program met4–met5 plus identical-footprint VSITE master swaps;
+   - tools: ORFS image 69df744e2b5c, NO_DCE (no pruning);
+   - the W1–W5 programs themselves: the same W, re-derived from W and split by segment, checked equal to the G2 programs.
+
+**Prediction (DERIVED, development matrices; not a result):** the worst per-band peak demand falls from 23 to 12. Peak / usable tracks becomes 0.46 at U52 and 0.50 at U60.
+
+**Implementation check before this pre-registration (logical only):** the R3 base netlist plus split programs match numpy W@x pre-PnR for W14 and W4, with the mutation control detected.
+
+## Fixed base rules
+
+- W-independent cells.
+- W-independent placement: FIRM programmable-access cells, ORFS for the rest, placed once.
+- W-independent met1–met3 routing, done once.
+- Programming only through met4–met5 nets and VSITE_BUF → VSITE_ZERO swaps (identical footprint).
+- No pruning. No cell moves between matrices.
+
+## Baselines
+
+The established strongest fixed-base baselines are not weakened:
+- **A at U75:** A×T 14.28e6 µm²·ns; all 5 W route at GRT level; W4 closes DRT.
+- **P2 at U67:** A×T 14.98e6 µm²·ns; all 5 W route at GRT level; W4 closes DRT.
+
+**Tap-area credit** (because R3 introduces a 2-site tap):
+- Each baseline is credited with a single 2-site tap per line. That is −960.9 µm² of base cell area (128 × (10.0096 − 2.5024)).
+- A: 355,456 / 0.75 × 14 × 2.1470 = **14.25e6**.
+- P2: 273,701 / 0.67 × 8 × 4.5685 = **14.93e6**.
+
+**Strongest competitor: A, at 14.25e6.**
+
+## Decisive test: R3 at U = 52%
+
+1. Build the base once. Record its base DRC and sha256(6_final.odb).
+2. For each of W1, W2, W3, W4 and W5:
+   1. Apply only the program.
+   2. Global-route (as in R2), then detailed-route **met4–met5 only**, to normal completion. That is OpenROAD's default: up to 64 iterations, stopping at 0 violations.
+   3. Record:
+      - violations;
+      - met4 and met5 wirelength, and via4 count;
+      - GRT usage and overflow;
+      - modeled timing at 3.0 ns: setup and hold, and setup through the programmable nets.
+   4. Simulate the complete programmed netlist against numpy W@x, with the mutation control.
+   5. **Invariance checks:**
+      - sha256 of the base ODB unchanged;
+      - the program DEF has wiring on met4/met5 only and no base net re-routed;
+      - every instance's location and orientation in the program DEF equals the base DEF. Master names may differ only through VSITE_BUF → VSITE_ZERO.
+
+## Success at 52%: all must hold
+
+1. All five W reach **0** detailed-routing violations.
+2. All invariance checks pass for all five W.
+3. All five programmed netlists match numpy, and all mutation controls are detected.
+4. **Advantage.** A×T(B) = 169,952 / 0.52 × 14 × T_B must be ≤ 14.25e6 / 1.5 = **9.497e6**, i.e. **T_B ≤ 2.0755 ns**. This must hold under:
+   - the established rule: T_B = 3.0 − min(base final setup WS, W1 setup WS through programmable nets);
+   - the robustness rule: the same with the worst programmable-path WS over W1–W5.
+5. **Timing.** The base's final routed setup and hold WS are ≥ 0 at 3.0 ns. Every programmed netlist's modeled setup WS is ≥ 0 at 3.0 ns.
+
+## Failure → THESIS KILLED
+
+Any criterion failing at 52% kills the thesis, including detailed routing not reaching 0 for any W. There will be no R4, no narrowing to favourable matrices, no lowered threshold and no technology switch.
+
+## 60%
+
+- Built and tested with the same five-W protocol **only if 52% passes**.
+- The 60% advantage bound is A×T(B) = 169,952 / 0.60 × 14 × T_B ≤ 9.497e6, i.e. T_B ≤ 2.395 ns.
+- If 60% fails, the 52% result stands.
+- No other densities will be tested.
+
+## Pre-registered fairness measurement (reported; does not change the pass/fail rule above)
+
+**Why:** R3's segmented taps would also shorten P2's programmable lines. At U67, P2's modeled period is set by those lines: −1.57 ns through programmable nets, against −1.10 ns for its base.
+
+**P2-R3:** P2 is rebuilt with exactly R3's access structure at its demonstrated U67:
+- four 2-site taps per line (area-neutral);
+- the same segment rule;
+- sites at the band centre;
+- taps at home x and staggered y, in 64 bands.
+
+**Measured:**
+- base DRC;
+- GRT for all five W;
+- detailed routing (64 iterations) of its largest-WL program;
+- modeled W1 timing;
+- post-PnR verification of that program.
+
+**Reporting:**
+- If P2-R3 is a valid point (base and its hardest program DRC-clean) and its A×T is below 14.25e6, B's ratio against it will be reported as the **strongest-fair-competitor ratio**.
+- A shortfall below 1.5× would be stated in the final verdict as the standing qualification.
+- The P2 base-only-T bound, as in R2, is also reported.
+
+**No A-R3:** A's period is set by its base (+0.85 ns base vs +1.01 ns programmable at U75), and R3's taps don't change A's area. A therefore gains only the tap-area credit above.
+
+## Deviations
+
+- Implementation bugs (script errors, paths, legalization failures) may be fixed and logged in an R3 deviation log.
+- The geometry, the criteria, the router effort, the matrices and the baselines will not change after any R3 physical result is seen.
