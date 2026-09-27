@@ -3,8 +3,8 @@ Features included (+) or not (-): -GPU +GUI -Python
 This program is licensed under the BSD-3 license. See the LICENSE file for details.
 Components of this program may be licensed under more restrictive licenses which must be honored.
 [INFO ORD-0030] Using 2 thread(s).
-G2: removed 12564 base nets (all base wiring is at or below met3)
-G2: programmable nets 499, pins 1789
+G2: removed 33876 base nets (all base wiring is at or below met3)
+G2: programmable nets 127, pins 962
 [WARNING GRT-0300] Timing is not available, setting critical nets percentage to 0.
 [INFO GRT-0020] Min routing layer: met4
 [INFO GRT-0021] Max routing layer: met5
@@ -20,7 +20,7 @@ G2: programmable nets 499, pins 1789
 [INFO GRT-0004] Blockages: 0
 [INFO GRT-0019] Found 0 clock nets.
 [INFO GRT-0001] Minimum degree: 2
-[INFO GRT-0002] Maximum degree: 22
+[INFO GRT-0002] Maximum degree: 15
 
 [INFO GRT-0053] Routing resources analysis:
           Routing      Original      Derated      Resource
@@ -30,8 +30,8 @@ li1        Vertical            0             0          0.00%
 met1       Horizontal          0             0          0.00%
 met2       Vertical            0             0          0.00%
 met3       Horizontal          0             0          0.00%
-met4       Vertical        39897         39897          0.00%
-met5       Horizontal      11932         11932          0.00%
+met4       Vertical        63858         63858          0.00%
+met5       Horizontal      19400         19400          0.00%
 ---------------------------------------------------------------
 
 [INFO GRT-0101] Running extra iterations to remove congestion.
@@ -41,35 +41,11 @@ met5       Horizontal      11932         11932          0.00%
 [INFO GRT-0102] Start extra iteration 4/30
 [INFO GRT-0102] Start extra iteration 5/30
 [INFO GRT-0102] Start extra iteration 6/30
-[INFO GRT-0102] Start extra iteration 7/30
-[INFO GRT-0102] Start extra iteration 8/30
-[INFO GRT-0102] Start extra iteration 9/30
-[INFO GRT-0102] Start extra iteration 10/30
-[INFO GRT-0102] Start extra iteration 11/30
-[INFO GRT-0102] Start extra iteration 12/30
-[INFO GRT-0102] Start extra iteration 13/30
-[INFO GRT-0102] Start extra iteration 14/30
-[INFO GRT-0102] Start extra iteration 15/30
-[INFO GRT-0102] Start extra iteration 16/30
-[INFO GRT-0102] Start extra iteration 17/30
-[INFO GRT-0102] Start extra iteration 18/30
-[INFO GRT-0102] Start extra iteration 19/30
-[INFO GRT-0102] Start extra iteration 20/30
-[INFO GRT-0102] Start extra iteration 21/30
-[INFO GRT-0102] Start extra iteration 22/30
-[INFO GRT-0102] Start extra iteration 23/30
-[INFO GRT-0102] Start extra iteration 24/30
-[INFO GRT-0102] Start extra iteration 25/30
-[INFO GRT-0102] Start extra iteration 26/30
-[INFO GRT-0102] Start extra iteration 27/30
-[INFO GRT-0102] Start extra iteration 28/30
-[INFO GRT-0102] Start extra iteration 29/30
-[INFO GRT-0102] Start extra iteration 30/30
-[INFO GRT-0197] Via related to pin nodes: 1223
-[INFO GRT-0198] Via related Steiner nodes: 248
+[INFO GRT-0197] Via related to pin nodes: 585
+[INFO GRT-0198] Via related Steiner nodes: 331
 [INFO GRT-0199] Via filling finished.
-[INFO GRT-0111] Final number of vias: 15886
-[INFO GRT-0112] Final usage 3D: 102603
+[INFO GRT-0111] Final number of vias: 2099
+[INFO GRT-0112] Final usage 3D: 33952
 
 [INFO GRT-0096] Final congestion report:
 Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Congestion
@@ -78,13 +54,12 @@ li1                  0             0            0.00%             0 /  0 /  0
 met1                 0             0            0.00%             0 /  0 /  0
 met2                 0             0            0.00%             0 /  0 /  0
 met3                 0             0            0.00%             0 /  0 /  0
-met4             39897         30303           75.95%             1 /  3 / 637
-met5             11932         24642          206.52%             9 /  0 / 13522
+met4             63858         14278           22.36%             0 /  0 /  0
+met5             19400         13377           68.95%             0 /  0 /  0
 ---------------------------------------------------------------------------------------
-Total            51829         54945          106.01%            10 /  3 / 14159
+Total            83258         27655           33.22%             0 /  0 /  0
 
-[INFO GRT-0018] Total wirelength: 489617 um
-[INFO GRT-0014] Routed nets: 499
-[WARNING GRT-0115] Global routing finished with congestion. Check the congestion regions in the DRC Viewer.
-[INFO GRT-0303] Global routing runtime = 00:00:23
+[INFO GRT-0018] Total wirelength: 207027 um
+[INFO GRT-0014] Routed nets: 127
+[INFO GRT-0303] Global routing runtime = 00:00:01
 G2_GRT done
