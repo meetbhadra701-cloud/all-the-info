@@ -31,3 +31,6 @@
 {"design": "g1s", "tag": "w5", "netlist": "post-PnR (prog_w5_u75s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
 {"design": "ubp3r3", "tag": "w5", "netlist": "post-PnR (prog_w5_u60r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
 {"design": "ubp3r3", "tag": "w4", "netlist": "post-PnR (prog_w4_u60r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "g1s", "tag": "w1", "netlist": "post-PnR (prog_w1_u75s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+{"design": "pc2r3", "tag": "w1", "netlist": "post-PnR (prog_w1_u67r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
+{"design": "pc2r3", "tag": "w4", "netlist": "post-PnR (prog_w4_u67r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}

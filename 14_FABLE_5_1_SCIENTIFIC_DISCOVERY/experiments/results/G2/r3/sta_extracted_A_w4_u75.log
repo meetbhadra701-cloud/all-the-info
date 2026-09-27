@@ -1,0 +1,39 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+[WARNING ORD-2056] The following 1 liberty cell(s) do not have LEF masters and will be marked as dont-use:
+  LTAP2
+R3X_TIMING setup_ws=8.530449679966523e-10 hold_ws=7.416678382554664e-11
+R3X_PROG_WS setup=1.0460454724636747e-9
+Startpoint: ng23/_8_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: row1/_485_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock clk (rise edge)
+                     1.067    1.067   clock network delay (propagated)
+            0.059    0.000    1.067 ^ ng23/_8_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.048    0.445    0.589    1.656 ^ ng23/_8_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.191    0.534    0.551    2.207 ^ lt_ln23/Z (LTAP)
+   0.011    0.135    0.231    2.439 ^ vs_1_23/Z (VSITE_BUF)
+   0.010    0.104    0.473    2.911 v row1/_344_/X (sky130_fd_sc_hd__xor3_1)
+            0.104    0.001    2.912 v row1/_485_/D (sky130_fd_sc_hd__dfxtp_1)
+                              2.912   data arrival time
+
+                     3.000    3.000   clock clk (rise edge)
+                     1.090    4.090   clock network delay (propagated)
+                     0.000    4.090   clock reconvergence pessimism
+                              4.090 ^ row1/_485_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                    -0.132    3.958   library setup time
+                              3.958   data required time
+---------------------------------------------------------------------------
+                              3.958   data required time
+                             -2.912   data arrival time
+---------------------------------------------------------------------------
+                              1.046   slack (MET)
+
+

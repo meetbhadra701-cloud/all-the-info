@@ -68,3 +68,20 @@ Full history: `13_FABLE_5_1_SCIENTIFIC_DISCOVERY/01_RESEARCH_HISTORY_AND_LESSONS
    - B failed the 20-iteration criterion at U45–60. Post hoc, with 64 iterations, it closed at U45 but not at U52 (117 residual) or U60 (410): the cap was binding at 45 only.
    - The pre-registered classification stands. **Lesson:** pre-register tool effort at the tool's default unless there is a reason not to.
 9. **Line count and line load trade off.** UBP's lines are 4.3× more numerous but lightly loaded (≈ 2.6 sinks), so they are the fastest programmable paths. The per-input popcount fabric's heavily loaded lines cost it 1.6–1.7 ns.
+
+## Lessons from the final decision run, R3 (2026-09-27, NEW-OBS)
+
+10. **Measure the mechanism, then attack only the mechanism.**
+    - R2's residual violations were diagnosed from R2 data only: mid-height met4 overlap of single-tap lines, plus pad columns taking tracks.
+    - The R3 fix (four taps per line on a base spine, row quarters) was designed on development matrices and pre-registered with a DERIVED demand prediction.
+    - It closed every program at 52% and 60% in ≤ 14 iterations. met4 GRT usage fell from 47% to 16.5%.
+    - **Lesson:** an interval / track-demand model calibrated on the failing layout is enough to design the one revision that fixes it.
+11. **Segmentation moves wiring into the base; the base must then time it.**
+    - A line's spine lives in met1–met3 and ends at taps that have no timing endpoint until a program connects them. The base's timing repair never sees it.
+    - B's worst-case program (W5: every row identical) exposed a minimum-size flop driving a 109 fF spine.
+    - P2 rebuilt with the same taps ran 0.9 ns slower than P2 until its line drivers were sized (then 0.4 ns faster than P2).
+    - **Lesson:** a W-independent base needs worst-case load constraints on its programmable outputs, and fairness comparisons must give every design the same driver treatment.
+12. **Post-hoc rigor checks can move a claim without moving a classification.**
+    - The pre-registered rule gave 1.538× at 52%.
+    - Routed parasitics (1.495×) and a driver-sized competitor (1.478×) put it at break-even, while 60% held at ≥ 1.56×.
+    - **Lesson:** report the robust operating point (60%) as the headline, and keep the pre-registered pass as the decision of record.

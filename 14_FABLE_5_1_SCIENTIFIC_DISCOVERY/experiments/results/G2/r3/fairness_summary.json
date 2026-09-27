@@ -1,0 +1,170 @@
+{
+ "P2R3_preregistered": {
+  "U": 67,
+  "base_drc": 0,
+  "base_setup_ws_ns": -0.845813,
+  "base_hold_ws_ns": 0.0244096,
+  "base_sha256": "afde9bb09f052e3e63cf5eb78ef3f57c9bac9873ff75d173598055471662105b",
+  "grt_all_five": {},
+  "largest_wl_program": "w4",
+  "w4_drt_final": 0,
+  "w4_drt_iterations": 14,
+  "w4_invariants": true,
+  "w4_matches_numpy": true,
+  "w4_mutation_detected": true,
+  "w4_prog_ws_ns": -2.802686527303422,
+  "w1_prog_ws_ns": -2.4533695075490414,
+  "w1_matches_numpy": true,
+  "w1_mutation_detected": true,
+  "T_ns": 5.453369507549041,
+  "AxT": 17884577.62008877,
+  "valid_point": true,
+  "below_A75": false,
+  "P2R3_base_only_bound_AxT": 12612521.674101492,
+  "P2_R2_base_only_bound_AxT_U60": 13380000.0
+ },
+ "whatif_driver_sizing_posthoc": {
+  "pc2r3_w1_u67": {
+   "prog_ws_before_ns": -2.4533695075490414,
+   "prog_ws_after_ns": -1.1666583255021123,
+   "n_roots": 128,
+   "upsized": 128,
+   "delta_area_um2": 560.5377,
+   "root_masters": "sky130_fd_sc_hd__clkinv_1 64 sky130_fd_sc_hd__dfxtp_1 64"
+  },
+  "pc2r3_w4_u67": {
+   "prog_ws_before_ns": -2.802686527303422,
+   "prog_ws_after_ns": -1.442000296947299,
+   "n_roots": 128,
+   "upsized": 128,
+   "delta_area_um2": 560.5377,
+   "root_masters": "sky130_fd_sc_hd__clkinv_1 64 sky130_fd_sc_hd__dfxtp_1 64"
+  },
+  "ubp3r3_w1_u52": {
+   "prog_ws_before_ns": 1.0940741645981689,
+   "prog_ws_after_ns": 1.505330082807177,
+   "n_roots": 548,
+   "upsized": 548,
+   "delta_area_um2": 2056.9733,
+   "root_masters": "sky130_fd_sc_hd__dfxtp_1 548"
+  },
+  "ubp3r3_w5_u52": {
+   "prog_ws_before_ns": 0.9960041680301401,
+   "prog_ws_after_ns": 1.404651506220489,
+   "n_roots": 548,
+   "upsized": 548,
+   "delta_area_um2": 2056.9733,
+   "root_masters": "sky130_fd_sc_hd__dfxtp_1 548"
+  },
+  "ubp3r3_w1_u60": {
+   "prog_ws_before_ns": 0.8398939321807575,
+   "prog_ws_after_ns": 1.2294902873577485,
+   "n_roots": 548,
+   "upsized": 548,
+   "delta_area_um2": 2056.9733,
+   "root_masters": "sky130_fd_sc_hd__dfxtp_1 548"
+  },
+  "ubp3r3_w4_u60": {
+   "prog_ws_before_ns": 0.8246681115764432,
+   "prog_ws_after_ns": 1.2143634986472307,
+   "n_roots": 548,
+   "upsized": 548,
+   "delta_area_um2": 2056.9733,
+   "root_masters": "sky130_fd_sc_hd__dfxtp_1 548"
+  },
+  "ubp3r3_w5_u60": {
+   "prog_ws_before_ns": 0.7883704800093483,
+   "prog_ws_after_ns": 1.175530339736497,
+   "n_roots": 548,
+   "upsized": 548,
+   "delta_area_um2": 2056.9733,
+   "root_masters": "sky130_fd_sc_hd__dfxtp_1 548"
+  }
+ },
+ "B_driver_sized": {
+  "52": {
+   "T_W1_rule": 2.024314,
+   "T_worst_tested": 2.024314,
+   "AxT_W1_rule": 9374620.036298897,
+   "AxT_worst_tested": 9374620.036298897
+  },
+  "60": {
+   "T_W1_rule": 1.97759,
+   "T_worst_tested": 1.97759,
+   "AxT_W1_rule": 7937141.928528098,
+   "AxT_worst_tested": 7937141.928528098
+  }
+ },
+ "B_best_of_as_built_and_sized": {
+  "52": 9262513.424984617,
+  "60": 7937141.928528098
+ },
+ "B_base_only_bound": {
+  "52": 9262513.424984617,
+  "60": 7842225.432533334
+ },
+ "B_as_built": {
+  "52": 9262513.424984617,
+  "60": 8566001.41688704
+ },
+ "B_as_built_robust": {
+  "52": 9262513.424984617,
+  "60": 8770320.07090053
+ },
+ "competitors_AxT": {
+  "A75_credited": 14245459.697010929,
+  "P2_67_credited": 14930230.197594097,
+  "P2R3_67_measured": 17884577.62008877,
+  "P2R3_67_driver_sized_whatif": 13692636.156101778,
+  "P2R3_67_driver_sized_whatif_W4": 14597475.751522258,
+  "P2R3_67_base_only_bound": 12612521.674101492
+ },
+ "ratios": {
+  "A75_credited": {
+   "vs_B52_as_built": 1.5379691281834322,
+   "vs_B60_as_built": 1.6630232711527912,
+   "vs_B60_robust": 1.6242804802844801,
+   "vs_B52_best": 1.5379691281834322,
+   "vs_B60_best": 1.7947845490590433
+  },
+  "P2_67_credited": {
+   "vs_B52_as_built": 1.6118983598254695,
+   "vs_B60_as_built": 1.742963778661138,
+   "vs_B60_robust": 1.7023586456247852,
+   "vs_B52_best": 1.6118983598254695,
+   "vs_B60_best": 1.8810587402917753
+  },
+  "P2R3_67_measured": {
+   "vs_B52_as_built": 1.9308557839006288,
+   "vs_B60_as_built": 2.087856019359402,
+   "vs_B60_robust": 2.0392160691408376,
+   "vs_B52_best": 1.9308557839006288,
+   "vs_B60_best": 2.25327678163434
+  },
+  "P2R3_67_driver_sized_whatif": {
+   "vs_B52_as_built": 1.4782851616892008,
+   "vs_B60_as_built": 1.5984863286513211,
+   "vs_B60_robust": 1.5612470292313778,
+   "vs_B52_best": 1.4782851616892008,
+   "vs_B60_best": 1.7251343467712195
+  },
+  "P2R3_67_driver_sized_whatif_W4": {
+   "vs_B52_as_built": 1.575973505436134,
+   "vs_B60_as_built": 1.7041178306070266,
+   "vs_B60_robust": 1.6644176761525422,
+   "vs_B52_best": 1.575973505436134,
+   "vs_B60_best": 1.8391350290783175
+  },
+  "P2R3_67_base_only_bound": {
+   "vs_B52_as_built": 1.361673780691167,
+   "vs_B60_as_built": 1.472393134238471,
+   "vs_B60_robust": 1.4380913777536113,
+   "vs_B52_best": 1.361673780691167,
+   "vs_B60_best": 1.5890507928009823
+  }
+ },
+ "both_base_only": {
+  "U52": 1.361673780691167,
+  "U60": 1.6082834882275467
+ }
+}

@@ -2,7 +2,16 @@
 
 ## Decision
 
-**PROMISING BUT KEY GATE UNRESOLVED** (after gates G1–G3). See 14 and 18.
+**PHYSICALLY VALIDATED — NOVELTY PROVISIONAL** (the final UBP decision run, R3, 2026-09-27). See **19**.
+
+- **Every pre-registered R3 criterion passed at 52% and 60%.** On one frozen weight-independent base per density:
+  - all five weight programs route DRC-clean on met4–met5;
+  - the base is verified unchanged after every program;
+  - every programmed netlist is exact vs numpy;
+  - A×T is 1.54× (52%) / 1.66× (60%) better than the strongest fixed-base competitor.
+- **Standing qualification:** the advantage is robust at 60% (≥ 1.56× under every post-hoc check). At 52% it is at break-even (1.48–1.54×).
+- **Novelty is provisional:** the decisive full texts (HNLPU, Taalas, TENET / T-MAC, US 11,663,490) are blocked in this environment.
+- **Broad exploration stops; UBP is the research project.** The superseded class was PROMISING BUT KEY GATE UNRESOLVED (14, 18).
 
 ## Thesis in one paragraph
 
@@ -17,17 +26,23 @@
 - **Weight-independent fixed base** (G2):
   - With generic placement, UBP3's 548 programmable lines (vs 128) do not route at any utilization.
   - A W-blind crossbar floorplan (R2) restores routing of all test W at GRT level, with a 1.76–1.85× A×T advantage over the baselines' best.
-  - But UBP3's detailed routing on SKY130's met4 does not close in the pre-registered effort, while the per-input fabrics' does.
-- **Novelty** (G1): likely an obvious composition. Only the physical results are new.
-- **Key open gate:** a DRC-clean fixed-base UBP that keeps its advantage.
+  - But on R2, UBP3's detailed routing on SKY130's met4 does not close at a useful utilization.
+  - **R3, segmented line access** (each line a base spine with one programmable tap per quarter of the rows) closes it:
+    - 5 / 5 programs are DRC-clean at 52% and at 60%;
+    - A×T is 1.54× / 1.66× better than A, and 1.61× / 1.74× better than P2;
+    - P2 rebuilt with the same taps is weaker as built. With its line drivers sized (post hoc) it would be the strongest competitor, at 1.48× (52%) / 1.60–1.73× (60%).
+- **Novelty** (G1 plus the final narrow check): likely an obvious composition. The physical results and the reachability / segmentation law are the contribution. Provisional until the blocked full texts are read.
 
 ## Read in this order
 
 | File | What it contains |
 |---|---|
-| 18_GATES_VERDICT_AND_PACKAGE.md | Gate outcomes, final class, the 12-question package |
-| 14_RESEARCH_DECISION.md | The class and why; the key unresolved gate |
-| 15 / 16 / 17 | Gate 1 novelty · Gate 2 fixed base (+ R2) · Gate 3 DA / popcount competitors |
+| **19_FINAL_UBP_DECISION.md** | **The final verdict and package A–J** (contribution, architecture, math, physical evidence, competitors, scope, risks, 4–8-week plan, thesis, strongest attack) |
+| 16_GATE2_FIXED_BASE.md §6 | R3 tables: bases, the ten programs, advantage, routed-parasitic timing, the P2-R3 fairness point (§6.6) |
+| 09_PREREGISTRATION.md, section R3 | The R3 pre-registration (committed before any R3 result), its outcome and the deviation log D-R3.1–4 |
+| 18_GATES_VERDICT_AND_PACKAGE.md | Gates G1–G3 and the superseded class (PROMISING BUT KEY GATE UNRESOLVED) |
+| 14_RESEARCH_DECISION.md | The class history and why |
+| 15 / 16 / 17 | Gate 1 novelty · Gate 2 fixed base (+ R2, R3) · Gate 3 DA / popcount competitors |
 | 12_PRIMARY_RESEARCH_THESIS.md | The 24 required items |
 | 13_FINAL_META_REVIEW.md | The 13 mandatory questions |
 | 10_EXPERIMENTS_AND_RESULTS.md | E5/E6 tables; the A2 before/after |
@@ -46,7 +61,10 @@
 ## Status of the work
 
 - Git: branch `claude/compassionate-edison-91b73q`.
-  - Two pushes, each on the user's explicit request: `acca499..3912b89` (Wave 14), then the gate commits (from `234df16` on).
+  - Pushes, each on the user's explicit request:
+    - `acca499..3912b89` (Wave 14);
+    - the gate commits (from `234df16` on);
+    - the R3 / final-decision commits (from `f7f33ba` on). The final decision run authorized these, with no pull request and no merge.
   - Nothing else was published or sent.
 - Nothing was bought. No paid APIs were used. Nobody was contacted.
 - `13_WAVE_11_SCIENTIFIC_HYPOTHESIS_EVOLUTION/` is untouched.

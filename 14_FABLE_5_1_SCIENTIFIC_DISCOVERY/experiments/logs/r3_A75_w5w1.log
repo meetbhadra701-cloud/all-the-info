@@ -1,1 +1,2 @@
 {"design": "g1s", "tag": "w5", "netlist": "post-PnR (prog_w5_u75s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+{"design": "g1s", "tag": "w1", "netlist": "post-PnR (prog_w1_u75s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}

@@ -1,8 +1,31 @@
 # 14 — Research decision
 
-## Current classification (after gates G1–G3, 2026-09-27): **PROMISING BUT KEY GATE UNRESOLVED**
+## Current classification (final UBP decision run, R3, 2026-09-27): **PHYSICALLY VALIDATED — NOVELTY PROVISIONAL**
 
-The full package is in `18_GATES_VERDICT_AND_PACKAGE.md`. Gate details are in 15 (G1), 16 (G2) and 17 (G3). Every kill and advance condition was pre-registered in 09 before its data.
+The final package (A–J) is in `19_FINAL_UBP_DECISION.md`. The R3 physics is in 16 §6, and the pre-registration, outcome and deviation log in 09 (section R3).
+
+**R3 (the final layout revision: segmented line taps) passed every pre-registered criterion at the decisive 52% and at 60%:**
+- 5 of 5 programs DRC-clean at default router effort;
+- the base unchanged after every program (hash, placement, masters, layers, power grid);
+- 10 of 10 programmed netlists exact vs numpy, with the mutation detected;
+- timing met;
+- A×T 1.538× (52%) / 1.663× (60%) better than A at 75%, the strongest fixed-base competitor.
+
+**This closes G2**, the gate left unresolved below.
+
+**Why NOVELTY PROVISIONAL, not READY FOR PAPER-SCALE RESEARCH DEVELOPMENT:** the narrow prior-art check on the exact claimed object found no identical object. But the decisive full texts (HNLPU, the Taalas filings, TENET / T-MAC, US 11,663,490) are blocked here.
+
+**Standing qualification (post hoc):**
+- The advantage is robust at 60%: ≥ 1.56× against every measured or driver-sized competitor.
+- At 52% it is at break-even:
+  - 1.495× vs A with routed parasitics;
+  - 1.478× vs P2 rebuilt with the same taps and sized line drivers.
+
+**Consequence:** broad exploration stops, and UBP is the research project (the 4–8-week plan is in 19 §H).
+
+## Superseded classification (after gates G1–G3, before R3): PROMISING BUT KEY GATE UNRESOLVED
+
+The package for that class is in `18_GATES_VERDICT_AND_PACKAGE.md`. Gate details are in 15 (G1), 16 (G2) and 17 (G3). Every kill and advance condition was pre-registered in 09 before its data.
 
 | Gate | Outcome |
 |---|---|
@@ -23,7 +46,7 @@ The full package is in `18_GATES_VERDICT_AND_PACKAGE.md`. Gate details are in 15
   - After G1, the physical characterization is the **only** candidate contribution, so an unclosed G2 leaves the contribution unestablished.
 - **Not READY TO BEGIN PAPER-SCALE IMPLEMENTATION:** all of the above, plus no scale, no real weights and no energy data.
 
-## The key unresolved gate, and the decisive next experiment
+## The key unresolved gate, and the decisive next experiment (as written before R3; R3 was this experiment and passed)
 
 **G2 closure.** Does a W-blind fixed base exist in which UBP3-serial's programmable layer routes DRC-clean for all test W, at a utilization where its A×T stays ≥ 1.2× better than P2 and ≥ 1.5× better than A?
 
@@ -44,9 +67,10 @@ Post hoc, 64 iterations on the R2 layout close B only at U45, so router effort a
 
 ## Record-keeping
 
-- **Pushes:** two, each on the user's explicit request, to `claude/compassionate-edison-91b73q`:
+- **Pushes:** each on the user's explicit request, to `claude/compassionate-edison-91b73q`:
   - `acca499..3912b89` (Wave 14);
-  - the gate commits, from `234df16` on.
+  - the gate commits, from `234df16` on;
+  - the R3 / final-decision commits, from `f7f33ba` on. The final decision run authorized these, with no pull request and no merge.
 - Nothing else was published or sent.
 - Nothing was bought, no paid API was used, and nobody was contacted.
 - All EDA tools ran inside the ORFS container.

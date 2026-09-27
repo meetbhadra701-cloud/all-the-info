@@ -1,0 +1,39 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+[WARNING ORD-2056] The following 1 liberty cell(s) do not have LEF masters and will be marked as dont-use:
+  LTAP2
+R3X_TIMING setup_ws=8.530427475506031e-10 hold_ws=7.416678382554664e-11
+R3X_PROG_WS setup=1.129239812769356e-9
+Startpoint: ng53/_8_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: row21/_455_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+     Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------
+                     0.000    0.000   clock clk (rise edge)
+                     1.074    1.074   clock network delay (propagated)
+            0.063    0.000    1.074 ^ ng53/_8_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.046    0.429    0.579    1.653 ^ ng53/_8_/Q (sky130_fd_sc_hd__dfxtp_1)
+   0.167    0.466    0.504    2.157 ^ lt_ln53/Z (LTAP)
+   0.011    0.133    0.219    2.376 ^ vs_21_53/Z (VSITE_BUF)
+   0.005    0.083    0.439    2.815 v row21/_299_/X (sky130_fd_sc_hd__xor3_1)
+            0.083    0.000    2.815 v row21/_455_/D (sky130_fd_sc_hd__dfxtp_1)
+                              2.815   data arrival time
+
+                     3.000    3.000   clock clk (rise edge)
+                     1.069    4.069   clock network delay (propagated)
+                     0.000    4.069   clock reconvergence pessimism
+                              4.069 ^ row21/_455_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                    -0.124    3.945   library setup time
+                              3.945   data required time
+---------------------------------------------------------------------------
+                              3.945   data required time
+                             -2.815   data arrival time
+---------------------------------------------------------------------------
+                              1.129   slack (MET)
+
+

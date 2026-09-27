@@ -1,0 +1,35 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+WHATIF_BEFORE setup_ws=7.883704800093483e-10 hold_ws=2.1308893538574125e-10 prog_ws=7.883704800093483e-10
+WHATIF_ROOTS n_roots=548 upsized=548 delta_area_um2=2056.9733 masters=sky130_fd_sc_hd__dfxtp_1 548
+WHATIF_AFTER setup_ws=9.388838595469906e-10 hold_ws=2.1319990217705254e-10 prog_ws=1.175530339736497e-9
+Startpoint: row30/_126_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: y[30] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock clk (rise edge)
+                            1.028    1.028   clock network delay (propagated)
+                   0.059    0.000    1.028 ^ row30/_126_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.004    0.047    0.310    1.338 ^ row30/_126_/Q (sky130_fd_sc_hd__dfxtp_1)
+     1    0.040    0.388    0.717    2.055 ^ output89/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                   0.388    0.006    2.061 ^ y[30] (out)
+                                     2.061   data arrival time
+
+                            3.000    3.000   clock clk (rise edge)
+                            0.000    3.000   clock network delay (propagated)
+                            0.000    3.000   clock reconvergence pessimism
+                            0.000    3.000   output external delay
+                                     3.000   data required time
+---------------------------------------------------------------------------------
+                                     3.000   data required time
+                                    -2.061   data arrival time
+---------------------------------------------------------------------------------
+                                     0.939   slack (MET)
+
+

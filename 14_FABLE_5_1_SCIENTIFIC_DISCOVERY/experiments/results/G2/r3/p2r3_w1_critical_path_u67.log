@@ -1,0 +1,60 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+G2_TIMING setup_ws=-2.4533695075490414e-9 hold_ws=2.7627566900889633e-11
+G2_PROG_WS setup=-2.4533695075490414e-9
+Startpoint: ln_8/_1_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: row61/_664_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                            0.000    0.000   clock clk (rise edge)
+                            1.109    1.109   clock network delay (propagated)
+                   0.069    0.000    1.109 ^ ln_8/_1_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     6    0.107    0.991    0.969    2.078 ^ ln_8/_1_/Q (sky130_fd_sc_hd__dfxtp_1)
+     4    0.091    0.769    0.928    3.007 v ln_8/_0_/Y (sky130_fd_sc_hd__clkinv_1)
+     8    0.041    0.083    0.454    3.460 v lt_ln8_s3/Z (LTAP2)
+     2    0.012    0.075    0.145    3.606 v vs_61_8/Z (VSITE_BUF)
+     1    0.006    0.070    0.183    3.788 v row61/_370_/X (sky130_fd_sc_hd__xor2_1)
+     2    0.011    0.277    0.261    4.049 ^ row61/_371_/Y (sky130_fd_sc_hd__xnor2_1)
+     1    0.008    0.204    0.246    4.295 ^ row61/_373_/X (sky130_fd_sc_hd__xor2_1)
+     2    0.009    0.091    0.133    4.428 v row61/_374_/Y (sky130_fd_sc_hd__xnor2_1)
+     2    0.008    0.094    0.398    4.826 v row61/_379_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.012    0.114    0.194    5.020 v row61/_384_/Y (sky130_fd_sc_hd__xnor2_1)
+     2    0.061    0.981    0.758    5.778 ^ row61/_479_/Y (sky130_fd_sc_hd__nor3_2)
+     2    0.058    0.402    0.503    6.280 v row61/_482_/Y (sky130_fd_sc_hd__nor2_1)
+                   0.403    0.012    6.292 v row61/_664_/D (sky130_fd_sc_hd__dfxtp_1)
+                                     6.292   data arrival time
+
+                            3.000    3.000   clock clk (rise edge)
+                            1.103    4.103   clock network delay (propagated)
+                            0.000    4.103   clock reconvergence pessimism
+                                     4.103 ^ row61/_664_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                           -0.263    3.839   library setup time
+                                     3.839   data required time
+---------------------------------------------------------------------------------
+                                     3.839   data required time
+                                    -6.292   data arrival time
+---------------------------------------------------------------------------------
+                                    -2.453   slack (VIOLATED)
+
+
+STA-0232
+    while executing
+"utl::error STA $id $msg"
+    (procedure "sta_error" line 2)
+    invoked from within
+"sta_error 232 "net $net_path not found.""
+    invoked from within
+"report_net -digits 3 [get_nets -of_objects [get_pins -of_objects [get_cells -filter "ref_name == LTAP"] -filter "direction == output"]] > $::env(OUT)_..."
+    invoked from within
+"if {$::env(MODE) eq "route" || $::env(MODE) eq "grt"} {
+  set gone 0
+  foreach net [$blk getNets] {
+    set t [$net getSigType]
+    if {$t ne "POWER" ..."
+    (file "/scripts/g2_program.tcl" line 14)

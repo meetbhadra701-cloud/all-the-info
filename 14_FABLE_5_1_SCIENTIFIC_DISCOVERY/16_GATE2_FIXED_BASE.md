@@ -274,3 +274,159 @@ The same structured bases and the same largest-WL programs, detailed-routed with
 - **So router effort alone does not resolve G2.** The layout itself must free met4 tracks: stagger the site pins across the band, split the taps, and keep pads off line tracks. Alternatively, a third programmable layer.
 - **This is post hoc and does not change the pre-registered G2 classification (unresolved).**
 - It defines the decisive next experiment: a pre-registered site/tap co-designed band (R3), routed at 64 iterations, with B at U52–60 against P2 at 67 and A at 75.
+
+## 6. R3 — the final layout revision: segmented line taps (pre-registered in 09, R3)
+
+**What changed from R2 (layout only; logic, programs and criteria unchanged):**
+- Every line has **four taps** (LTAP2, 2 sites wide, single-track met4 pad) on its base net. The base routes each line as a spine on met1–met3 through its taps.
+- Rows are split into four segments. A leaf connects only to its line's tap in its own segment.
+- Taps sit at the line's home x, staggered in y. Sites stay in one track-aligned centre column per band.
+- Tap area is unchanged (4 × 2 sites = 8), so the base cell area is still 169,952 µm².
+- Chosen from R2's measured mechanism and development matrices only.
+
+### 6.1 Bases (MEASURED)
+
+| U % | Base DRC (met1–met3) | Base setup / hold WS (ns) | Base met2 GRT usage | Base ODB sha256 (first 12 hex) |
+|---|---|---|---|---|
+| 52 | 0 | +0.976 / +0.268 | 61.2% (R2: 20.7%) | aefbdaff878a |
+| 60 | 0 | +1.022 / +0.293 | — | 70add1cde3c5 |
+
+The line spines move the long wiring into the base, which had headroom: at 52%, R2's base used 20.7% of met2.
+
+### 6.2 All five programs, met4–met5 only, detailed routing to normal completion (64-iteration default)
+
+MEASURED, except the timing column, which is MODELED with placement parasitics as pre-registered. Every row has **0** GRT overflow and **0** residual DRT violations.
+
+| U % | W | DRT iterations to 0 | GRT met4 / met5 usage | met4 / met5 WL (µm) | via4 | Setup / hold / programmable-path WS (ns) | = numpy, mutation | Invariants (zero-site swaps) |
+|---|---|---|---|---|---|---|---|---|
+| 52 | W1 | 14 | 16.5% / 7.5% | 60,063 / 4,236 | 772 | +0.888 / +0.192 / +1.094 | ✓ ✓ | ✓ (118) |
+| 52 | W2 | 13 | 17.1% / 7.9% | 62,396 / 4,464 | 823 | +0.888 / +0.192 / +1.082 | ✓ ✓ | ✓ (115) |
+| 52 | W3 | 7 | 8.9% / 4.0% | 32,097 / 1,905 | 361 | +0.888 / +0.192 / +1.071 | ✓ ✓ | ✓ (734) |
+| 52 | W4 | 14 | 16.5% / 7.4% | 60,641 / 5,174 | 937 | +0.888 / +0.192 / +1.073 | ✓ ✓ | ✓ (7) |
+| 52 | W5 | 1 | 3.5% / 0.5% | 12,533 / 23 | 4 | +0.888 / +0.192 / +0.996 | ✓ ✓ | ✓ (64) |
+| 60 | W1 | 13 | 18.1% / 7.8% | 57,018 / 3,340 | 685 | +0.840 / +0.213 / +0.840 | ✓ ✓ | ✓ (118) |
+| 60 | W2 | 13 | 18.8% / 8.6% | 58,847 / 4,190 | 789 | +0.939 / +0.213 / +0.998 | ✓ ✓ | ✓ (115) |
+| 60 | W3 | 7 | 9.7% / 5.1% | 30,419 / 1,356 | 253 | +0.939 / +0.213 / +0.971 | ✓ ✓ | ✓ (734) |
+| 60 | W4 | 13 | 18.1% / 6.6% | 57,409 / 4,148 | 879 | +0.825 / +0.213 / +0.825 | ✓ ✓ | ✓ (7) |
+| 60 | W5 | 1 | 3.9% / 0.6% | 11,649 / 0 | 0 | +0.788 / +0.213 / +0.788 | ✓ ✓ | ✓ (64) |
+
+**Compared with R2 at 52%:**
+- W1's programmable wirelength falls from 181 mm to 64 mm.
+- met4 GRT usage falls from 47% to 16.5%.
+- Detailed routing goes from 881 residual violations after 20 iterations to **0 after 14**.
+
+**Invariants, checked after every program (`scripts/r3_invariance.py`):**
+- The base ODB hash is unchanged.
+- All instances keep their location, orientation and status: 14,027 at 52% and 14,078 at 60%.
+- Master changes are exactly the programmed zero-site swaps.
+- Routing exists only on met4/met5, using only the M4M5 via, and no base net is re-routed.
+- The power grid is byte-identical.
+- Records: `results/G2/r3/r3_results.jsonl` and `inv_*.json`.
+
+### 6.3 Advantage (pre-registered metric)
+
+- A×T = 169,952 / U × 14 × T.
+- Baselines as established, credited with a 2-site tap: A at U75 = 14.25e6, P2 at U67 = 14.93e6.
+- The threshold is 14.25e6 / 1.5 = 9.497e6.
+
+| U % | T, W1 rule (ns) | T, worst-program rule (ns) | A×T(B) | vs A (U75) | vs P2 (U67) | Pre-registered criteria |
+|---|---|---|---|---|---|---|
+| **52** | 2.024 | 2.024 | **9.26e6** | **1.538×** | 1.612× | **PASS** (all) |
+| **60** | 2.160 | 2.212 | **8.57e6** (worst: 8.77e6) | **1.663×** (worst: 1.624×) | 1.743× | **PASS** (all) |
+
+### 6.4 Rigor check: timing with routed parasitics (not pre-registered)
+
+**Method:**
+- Base nets use the base's own extracted SPEF (OpenRCX on the routed met1–met3).
+- Every programmable net uses a conservative lumped RC from its routed met4/met5 geometry: all wire capacitance sits behind the full wire resistance (`scripts/r3_prog_spef.py`, `r3_sta_extracted.tcl`).
+- Summary: `results/G2/r3/sta_extracted_summary.json`.
+
+| Design / U | Programmable-path WS by W, extracted (ns) | Base WS | T (W1 rule / worst program) | vs A (U75) (W1 / worst) |
+|---|---|---|---|---|
+| B, 52 | W1 +1.077, W2 +1.087, W3 +1.062, W4 +1.065, **W5 +0.918** | +0.976 | 2.024 / **2.082** | 1.538× / **1.495×** |
+| B, 60 | W1 +0.882, **W2 +0.853**, W3 +0.964, W4 +0.867, W5 +0.941 | +1.022 | 2.118 / 2.147 | 1.696× / **1.673×** |
+| A, 75 | W4 +1.046, W5 +0.944 | +0.853 | 2.147 (base-limited) | — |
+
+- The programmable nets themselves are electrically tiny: the largest R3 net is 28.6 Ω and 25 fF.
+- **W5 at 52%:** every row is identical, so each segment tap drives 16 sites. The worst path is **SNEG flop → base spine → tap → site**: a minimum-size flop (dfxtp_1) drives a 109 fF spine with a 1.0 ns slew. The base's timing repair never saw that path, because it exists only once a program connects a tap. A production base would size line drivers for the worst-case program; W-independent timing closure would need worst-case load constraints on the tap outputs.
+- **At 52%, the most conservative timing therefore puts UBP3 at the 1.5× boundary: 1.495×, 0.3% short.**
+- **At 60% it clears 1.6× under every timing model and program.**
+- Timing is met at 3.0 ns everywhere: minimum setup WS +0.79 ns, hold ≥ +0.19 ns.
+
+### 6.5 Gate-2 verdict after R3
+
+**G2 PASSES.**
+- **Pre-registered result:**
+  - A weight-independent UBP3 base, placed once, routed once on met1–met3 and never changed, accepts all five weight programs through met4–met5 alone.
+  - Every program is DRC-clean at default router effort and functionally exact.
+  - UBP3 keeps ≥ 1.5× lower A×T than the strongest fixed-base per-input fabric, at 52% (1.54×) and at 60% (1.66×).
+- **Rigor check:** with routed parasitics and the worst program, 52% is the break-even point (1.495–1.54×), and **60% is the robust operating point (≥ 1.67×)**.
+- **Fairness point** (P2 rebuilt with R3's taps, §6.6):
+  - As measured, P2-R3 is slower than P2, so A stays the strongest competitor.
+  - A post-hoc driver-sizing sensitivity makes P2-R3 the strongest competitor. It puts 52% at 1.48× and leaves 60% at ≥ 1.56×.
+  - **The robust operating point is 60%. At 52%, the advantage is at break-even.**
+
+### 6.6 Fairness: P2 rebuilt with R3's segmented taps
+
+**Pre-registered measurement.** Timing is MODELED as for B; everything else is MEASURED.
+
+**Base (U67):**
+- DRC 0 on met1–met3.
+- Setup / hold WS: −0.846 / +0.024 ns.
+- Cell area 274,662 µm², unchanged: the build is area-neutral.
+- ODB sha256 `afde9bb09f05…`.
+
+**GRT, all five W:** overflow 0 for every W. met4 usage is 6.6–17.4%; the largest wirelength is W4's, 92,156 µm.
+
+**W4 (largest-WL program):**
+- Detailed routing reaches **0 violations in 14 iterations**.
+- Invariants hold: base hash, placement, 650 zero/one master swaps, met4/met5 only, power grid.
+- The programmed netlist matches numpy, and the mutation is detected.
+- Programmable-path WS −2.803 ns.
+
+**W1:**
+- The programmed netlist matches numpy, and the mutation is detected.
+- **Programmable-path WS −2.453 ns**, against −1.57 ns for P2's original single tap.
+
+**A×T:** T = 3.0 − min(−0.846, −2.453) = 5.453 ns, so A×T(P2-R3) = **17.88e6**. That is worse than P2's own 14.93e6.
+
+**Under the pre-registered reporting rule:**
+- P2-R3 is a valid point, but its A×T is not below A's 14.25e6.
+- **The strongest fair competitor therefore remains A** (B: 1.538× at 52%, 1.663× at 60%). B is 1.93× / 2.09× better than P2-R3.
+- **Base-only-T bound, as in R2:** T = 3.846 ns gives 12.61e6. B is then 1.36× (52%) / 1.47× (60%) better. R2's best P2 base-only bound, 13.38e6 at U60, gives 1.44× / 1.56×.
+
+**Why P2-R3 is slower** (W1 critical path, `results/G2/r3/p2r3_w1_critical_path_u67.log`):
+- The minimum-size line flop (dfxtp_1) and its inverter (clkinv_1) now drive the full-height spine to four taps: 107 fF and 91 fF, with ≈ 1 ns slews. That is 1.9 ns of the path.
+- These nets have no timing endpoint until a program connects a tap, so the base's timing repair never sees them. This is the mechanism behind B's W5 path in §6.4.
+- P2's per-segment programmable nets are short. The loss is in the line drivers, not in the programmable layer.
+
+**Post-hoc sensitivity: spine-driver sizing (D-R3.4).** Not pre-registered; it changes no classification.
+- In both designs, every spine-root driver (the instance driving a base net that feeds a tap) is upsized to the drive-4 member of its own family.
+- This is W-independent and counted in area.
+- Method: MODELED STA only, nothing re-placed; `scripts/r3_whatif_drivers.tcl` → `results/G2/r3/whatif_drivers_*.log`, collected by `scripts/r3_fairness.py` → `fairness_summary.json`.
+
+| Design / U, W | Roots upsized (Δ cell area) | Programmable-path WS, before → after (ns) | T (ns) | A×T |
+|---|---|---|---|---|
+| P2-R3 / 67, W1 | 64 dfxtp_1 + 64 clkinv_1 (+561 µm²) | −2.453 → −1.167 | 4.167 | **13.69e6** |
+| P2-R3 / 67, W4 | same | −2.803 → −1.442 | 4.442 | 14.60e6 |
+| B / 52, W1 / W5 | 548 dfxtp_1 (+2,057 µm²) | +1.094 → +1.505 / +0.996 → +1.405 | 2.024: base-set, no gain | 9.37e6 (sizing only adds area; B keeps 9.26e6) |
+| B / 60, W1 / W4 / W5 | same | +0.840 → +1.229 / +0.825 → +1.214 / +0.788 → +1.176 | 1.978: now base-set | **7.94e6** |
+
+Ratios are the competitor's A×T divided by B's. B at 52% is as built (sizing does not help it).
+
+| Competitor | A×T (µm²·ns) | vs B, 52% (9.26e6) | vs B, 60% as built (8.57e6; worst program 8.77e6) | vs B, 60% driver-sized (7.94e6) |
+|---|---|---|---|---|
+| A at 75 (credited) | 14.25e6 | 1.538× | 1.663× (1.624×) | 1.795× |
+| P2 at 67 (credited) | 14.93e6 | 1.612× | 1.743× (1.702×) | 1.881× |
+| P2-R3 at 67, measured | 17.88e6 | 1.931× | 2.088× (2.039×) | 2.253× |
+| **P2-R3, driver-sized (W1 rule)** | **13.69e6** | **1.478×** | 1.598× (1.561×) | 1.725× |
+| P2-R3, driver-sized (W4) | 14.60e6 | 1.576× | 1.704× (1.664×) | 1.839× |
+| P2-R3 base-only-T bound (idealized) | 12.61e6 | 1.362× | 1.472× (1.438×) | 1.589× |
+
+**Reading:**
+- The pre-registered fairness point does not qualify the result: implemented with the same flow, R3's taps make P2 slower.
+- The sensitivity shows why that is not the end of the question. The slowdown is a line-driver artefact a designer would fix. Sized, P2-R3 becomes the strongest competitor, at 13.69e6.
+- **At 52%**, B beats that competitor by **1.478×, below the 1.5× bar**. With routed parasitics and the worst program, B beats A by 1.495× (§6.4). So 52% is at break-even under any treatment stricter than the pre-registered one.
+- **At 60%**, B stays ≥ 1.56× against every measured or driver-sized competitor under every timing rule: the worst case is 1.561×, B's worst program against the driver-sized P2-R3. With both designs sized it is 1.725×.
+- **The only pairing below 1.5× at 60%** is asymmetric: an idealized P2-R3 with zero programmable-line delay against an unsized B (1.44–1.47×). Give B the same sizing and it is 1.589×. Idealize both designs to their base-only T and it is 1.61×.
+- **Standing qualification, carried into the final verdict:** the ≥ 1.5× fixed-base advantage is **robust at 60%** and **marginal at 52%**.

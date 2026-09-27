@@ -1,0 +1,5575 @@
+*SPEF "ieee 1481-1999"
+*DESIGN "top"
+*DATE "r3"
+*VENDOR "r3_prog_spef"
+*PROGRAM "r3_prog_spef.py"
+*VERSION "1"
+*DESIGN_FLOW "NAME_SCOPE LOCAL" "PIN_CAP NONE"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 NS
+*C_UNIT 1 PF
+*R_UNIT 1 OHM
+*L_UNIT 1 HENRY
+
+*D_NET pgm_pn0_0_s0 1.630181e-02
+*CONN
+*I lt_pn0_0_s0:Z O
+*I vs_11_0:A I
+*CAP
+1 pgm_pn0_0_s0:1 1.630181e-02
+*RES
+1 lt_pn0_0_s0:Z pgm_pn0_0_s0:1 1.620693e+01
+2 pgm_pn0_0_s0:1 vs_11_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_0_s1 2.304872e-03
+*CONN
+*I lt_pn0_0_s1:Z O
+*I vs_16_0:A I
+*CAP
+1 pgm_pn0_0_s1:1 2.304872e-03
+*RES
+1 lt_pn0_0_s1:Z pgm_pn0_0_s1:1 2.615527e+00
+2 pgm_pn0_0_s1:1 vs_16_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_0_s3 1.675920e-02
+*CONN
+*I lt_pn0_0_s3:Z O
+*I vs_61_0:A I
+*CAP
+1 pgm_pn0_0_s3:1 1.675920e-02
+*RES
+1 lt_pn0_0_s3:Z pgm_pn0_0_s3:1 1.901804e+01
+2 pgm_pn0_0_s3:1 vs_61_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_11_s1 9.518705e-03
+*CONN
+*I lt_pn0_11_s1:Z O
+*I vs_24_0:A I
+*CAP
+1 pgm_pn0_11_s1:1 9.518705e-03
+*RES
+1 lt_pn0_11_s1:Z pgm_pn0_11_s1:1 1.080166e+01
+2 pgm_pn0_11_s1:1 vs_24_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_1_s0 1.734283e-02
+*CONN
+*I lt_pn0_1_s0:Z O
+*I vs_15_0:A I
+*CAP
+1 pgm_pn0_1_s0:1 1.734283e-02
+*RES
+1 lt_pn0_1_s0:Z pgm_pn0_1_s0:1 1.968033e+01
+2 pgm_pn0_1_s0:1 vs_15_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_1_s3 1.481280e-02
+*CONN
+*I lt_pn0_1_s3:Z O
+*I vs_59_0:A I
+*I vs_49_0:A I
+*CAP
+1 pgm_pn0_1_s3:1 1.481280e-02
+*RES
+1 lt_pn0_1_s3:Z pgm_pn0_1_s3:1 1.680930e+01
+2 pgm_pn0_1_s3:1 vs_59_0:A 1.000000e-03
+3 pgm_pn0_1_s3:1 vs_49_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_2_s0 1.356852e-03
+*CONN
+*I lt_pn0_2_s0:Z O
+*I vs_3_0:A I
+*CAP
+1 pgm_pn0_2_s0:1 1.356852e-03
+*RES
+1 lt_pn0_2_s0:Z pgm_pn0_2_s0:1 1.539732e+00
+2 pgm_pn0_2_s0:1 vs_3_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_2_s2 2.162669e-03
+*CONN
+*I lt_pn0_2_s2:Z O
+*I vs_36_0:A I
+*CAP
+1 pgm_pn0_2_s2:1 2.162669e-03
+*RES
+1 lt_pn0_2_s2:Z pgm_pn0_2_s2:1 2.454158e+00
+2 pgm_pn0_2_s2:1 vs_36_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_3_s3 6.725011e-03
+*CONN
+*I lt_pn0_3_s3:Z O
+*I vs_57_0:A I
+*CAP
+1 pgm_pn0_3_s3:1 6.725011e-03
+*RES
+1 lt_pn0_3_s3:Z pgm_pn0_3_s3:1 7.631422e+00
+2 pgm_pn0_3_s3:1 vs_57_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_4_s0 1.093481e-02
+*CONN
+*I lt_pn0_4_s0:Z O
+*I vs_14_0:A I
+*CAP
+1 pgm_pn0_4_s0:1 1.093481e-02
+*RES
+1 lt_pn0_4_s0:Z pgm_pn0_4_s0:1 1.240863e+01
+2 pgm_pn0_4_s0:1 vs_14_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_5_s0 8.064088e-03
+*CONN
+*I lt_pn0_5_s0:Z O
+*I vs_13_0:A I
+*CAP
+1 pgm_pn0_5_s0:1 8.064088e-03
+*RES
+1 lt_pn0_5_s0:Z pgm_pn0_5_s0:1 9.150983e+00
+2 pgm_pn0_5_s0:1 vs_13_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_5_s3 4.796385e-03
+*CONN
+*I lt_pn0_5_s3:Z O
+*I vs_58_0:A I
+*CAP
+1 pgm_pn0_5_s3:1 4.796385e-03
+*RES
+1 lt_pn0_5_s3:Z pgm_pn0_5_s3:1 5.442851e+00
+2 pgm_pn0_5_s3:1 vs_58_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_6_s1 3.178827e-03
+*CONN
+*I lt_pn0_6_s1:Z O
+*I vs_26_0:A I
+*CAP
+1 pgm_pn0_6_s1:1 3.178827e-03
+*RES
+1 lt_pn0_6_s1:Z pgm_pn0_6_s1:1 3.607276e+00
+2 pgm_pn0_6_s1:1 vs_26_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn0_7_s2 9.681646e-03
+*CONN
+*I lt_pn0_7_s2:Z O
+*I vs_34_0:A I
+*CAP
+1 pgm_pn0_7_s2:1 9.681646e-03
+*RES
+1 lt_pn0_7_s2:Z pgm_pn0_7_s2:1 1.098656e+01
+2 pgm_pn0_7_s2:1 vs_34_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_0_s0 1.322888e-02
+*CONN
+*I lt_pn10_0_s0:Z O
+*I vs_9_10:A I
+*CAP
+1 pgm_pn10_0_s0:1 1.322888e-02
+*RES
+1 lt_pn10_0_s0:Z pgm_pn10_0_s0:1 1.343973e+01
+2 pgm_pn10_0_s0:1 vs_9_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_0_s2 1.695769e-02
+*CONN
+*I lt_pn10_0_s2:Z O
+*I vs_44_10:A I
+*I vs_42_10:A I
+*I vs_39_10:A I
+*CAP
+1 pgm_pn10_0_s2:1 1.695769e-02
+*RES
+1 lt_pn10_0_s2:Z pgm_pn10_0_s2:1 1.924329e+01
+2 pgm_pn10_0_s2:1 vs_44_10:A 1.000000e-03
+3 pgm_pn10_0_s2:1 vs_42_10:A 1.000000e-03
+4 pgm_pn10_0_s2:1 vs_39_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_0_s3 1.509441e-02
+*CONN
+*I lt_pn10_0_s3:Z O
+*I vs_59_10:A I
+*CAP
+1 pgm_pn10_0_s3:1 1.509441e-02
+*RES
+1 lt_pn10_0_s3:Z pgm_pn10_0_s3:1 1.526874e+01
+2 pgm_pn10_0_s3:1 vs_59_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_1_s1 1.221463e-02
+*CONN
+*I lt_pn10_1_s1:Z O
+*I vs_25_10:A I
+*I vs_22_10:A I
+*I vs_18_10:A I
+*CAP
+1 pgm_pn10_1_s1:1 1.221463e-02
+*RES
+1 lt_pn10_1_s1:Z pgm_pn10_1_s1:1 1.386095e+01
+2 pgm_pn10_1_s1:1 vs_25_10:A 1.000000e-03
+3 pgm_pn10_1_s1:1 vs_22_10:A 1.000000e-03
+4 pgm_pn10_1_s1:1 vs_18_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_1_s3 1.981953e-03
+*CONN
+*I lt_pn10_1_s3:Z O
+*I vs_49_10:A I
+*CAP
+1 pgm_pn10_1_s3:1 1.981953e-03
+*RES
+1 lt_pn10_1_s3:Z pgm_pn10_1_s3:1 2.249084e+00
+2 pgm_pn10_1_s3:1 vs_49_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_2_s0 8.081864e-03
+*CONN
+*I lt_pn10_2_s0:Z O
+*I vs_8_10:A I
+*CAP
+1 pgm_pn10_2_s0:1 8.081864e-03
+*RES
+1 lt_pn10_2_s0:Z pgm_pn10_2_s0:1 9.171154e+00
+2 pgm_pn10_2_s0:1 vs_8_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_3_s0 1.178210e-02
+*CONN
+*I lt_pn10_3_s0:Z O
+*I vs_13_10:A I
+*CAP
+1 pgm_pn10_3_s0:1 1.178210e-02
+*RES
+1 lt_pn10_3_s0:Z pgm_pn10_3_s0:1 1.337012e+01
+2 pgm_pn10_3_s0:1 vs_13_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_5_s3 1.028008e-03
+*CONN
+*I lt_pn10_5_s3:Z O
+*I vs_54_10:A I
+*CAP
+1 pgm_pn10_5_s3:1 1.028008e-03
+*RES
+1 lt_pn10_5_s3:Z pgm_pn10_5_s3:1 1.166565e+00
+2 pgm_pn10_5_s3:1 vs_54_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_6_s1 3.315105e-03
+*CONN
+*I lt_pn10_6_s1:Z O
+*I vs_26_10:A I
+*CAP
+1 pgm_pn10_6_s1:1 3.315105e-03
+*RES
+1 lt_pn10_6_s1:Z pgm_pn10_6_s1:1 3.761921e+00
+2 pgm_pn10_6_s1:1 vs_26_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_6_s2 1.375220e-02
+*CONN
+*I lt_pn10_6_s2:Z O
+*I vs_47_10:A I
+*I vs_37_10:A I
+*CAP
+1 pgm_pn10_6_s2:1 1.375220e-02
+*RES
+1 lt_pn10_6_s2:Z pgm_pn10_6_s2:1 1.560575e+01
+2 pgm_pn10_6_s2:1 vs_47_10:A 1.000000e-03
+3 pgm_pn10_6_s2:1 vs_37_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_6_s3 2.056017e-03
+*CONN
+*I lt_pn10_6_s3:Z O
+*I vs_57_10:A I
+*CAP
+1 pgm_pn10_6_s3:1 2.056017e-03
+*RES
+1 lt_pn10_6_s3:Z pgm_pn10_6_s3:1 2.333131e+00
+2 pgm_pn10_6_s3:1 vs_57_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn10_8_s1 2.559652e-03
+*CONN
+*I lt_pn10_8_s1:Z O
+*I vs_28_10:A I
+*CAP
+1 pgm_pn10_8_s1:1 2.559652e-03
+*RES
+1 lt_pn10_8_s1:Z pgm_pn10_8_s1:1 2.904647e+00
+2 pgm_pn10_8_s1:1 vs_28_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pn11_0_s0 1.534606e-02
+*CONN
+*I lt_pn11_0_s0:Z O
+*I vs_11_11:A I
+*I vs_3_11:A I
+*I vs_2_11:A I
+*CAP
+1 pgm_pn11_0_s0:1 1.534606e-02
+*RES
+1 lt_pn11_0_s0:Z pgm_pn11_0_s0:1 1.741443e+01
+2 pgm_pn11_0_s0:1 vs_11_11:A 1.000000e-03
+3 pgm_pn11_0_s0:1 vs_3_11:A 1.000000e-03
+4 pgm_pn11_0_s0:1 vs_2_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pn11_0_s1 1.708212e-02
+*CONN
+*I lt_pn11_0_s1:Z O
+*I vs_29_11:A I
+*CAP
+1 pgm_pn11_0_s1:1 1.708212e-02
+*RES
+1 lt_pn11_0_s1:Z pgm_pn11_0_s1:1 1.938448e+01
+2 pgm_pn11_0_s1:1 vs_29_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pn11_2_s1 1.608374e-02
+*CONN
+*I lt_pn11_2_s1:Z O
+*I vs_31_11:A I
+*I vs_28_11:A I
+*CAP
+1 pgm_pn11_2_s1:1 1.608374e-02
+*RES
+1 lt_pn11_2_s1:Z pgm_pn11_2_s1:1 1.825154e+01
+2 pgm_pn11_2_s1:1 vs_31_11:A 1.000000e-03
+3 pgm_pn11_2_s1:1 vs_28_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pn11_2_s2 5.788842e-03
+*CONN
+*I lt_pn11_2_s2:Z O
+*I vs_39_11:A I
+*CAP
+1 pgm_pn11_2_s2:1 5.788842e-03
+*RES
+1 lt_pn11_2_s2:Z pgm_pn11_2_s2:1 6.569074e+00
+2 pgm_pn11_2_s2:1 vs_39_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pn11_2_s3 3.371393e-03
+*CONN
+*I lt_pn11_2_s3:Z O
+*I vs_49_11:A I
+*CAP
+1 pgm_pn11_2_s3:1 3.371393e-03
+*RES
+1 lt_pn11_2_s3:Z pgm_pn11_2_s3:1 3.825797e+00
+2 pgm_pn11_2_s3:1 vs_49_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pn11_6_s2 1.362778e-04
+*CONN
+*I lt_pn11_6_s2:Z O
+*I vs_40_11:A I
+*CAP
+1 pgm_pn11_6_s2:1 1.362778e-04
+*RES
+1 lt_pn11_6_s2:Z pgm_pn11_6_s2:1 1.546456e-01
+2 pgm_pn11_6_s2:1 vs_40_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pn11_7_s3 1.430916e-03
+*CONN
+*I lt_pn11_7_s3:Z O
+*I vs_58_11:A I
+*CAP
+1 pgm_pn11_7_s3:1 1.430916e-03
+*RES
+1 lt_pn11_7_s3:Z pgm_pn11_7_s3:1 1.623778e+00
+2 pgm_pn11_7_s3:1 vs_58_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_0_s0 1.103645e-02
+*CONN
+*I lt_pn12_0_s0:Z O
+*I vs_6_12:A I
+*I vs_3_12:A I
+*CAP
+1 pgm_pn12_0_s0:1 1.103645e-02
+*RES
+1 lt_pn12_0_s0:Z pgm_pn12_0_s0:1 9.943939e+00
+2 pgm_pn12_0_s0:1 vs_6_12:A 1.000000e-03
+3 pgm_pn12_0_s0:1 vs_3_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_0_s1 1.209334e-02
+*CONN
+*I lt_pn12_0_s1:Z O
+*I vs_24_12:A I
+*CAP
+1 pgm_pn12_0_s1:1 1.209334e-02
+*RES
+1 lt_pn12_0_s1:Z pgm_pn12_0_s1:1 1.186317e+01
+2 pgm_pn12_0_s1:1 vs_24_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_0_s3 1.899862e-02
+*CONN
+*I lt_pn12_0_s3:Z O
+*I vs_62_12:A I
+*I vs_53_12:A I
+*CAP
+1 pgm_pn12_0_s3:1 1.899862e-02
+*RES
+1 lt_pn12_0_s3:Z pgm_pn12_0_s3:1 1.955518e+01
+2 pgm_pn12_0_s3:1 vs_62_12:A 1.000000e-03
+3 pgm_pn12_0_s3:1 vs_53_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_1_s0 1.525024e-02
+*CONN
+*I lt_pn12_1_s0:Z O
+*I vs_12_12:A I
+*CAP
+1 pgm_pn12_1_s0:1 1.525024e-02
+*RES
+1 lt_pn12_1_s0:Z pgm_pn12_1_s0:1 1.602148e+01
+2 pgm_pn12_1_s0:1 vs_12_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_1_s1 1.170211e-02
+*CONN
+*I lt_pn12_1_s1:Z O
+*I vs_26_12:A I
+*CAP
+1 pgm_pn12_1_s1:1 1.170211e-02
+*RES
+1 lt_pn12_1_s1:Z pgm_pn12_1_s1:1 1.327935e+01
+2 pgm_pn12_1_s1:1 vs_26_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_1_s2 1.641851e-02
+*CONN
+*I lt_pn12_1_s2:Z O
+*I vs_45_12:A I
+*I vs_34_12:A I
+*CAP
+1 pgm_pn12_1_s2:1 1.641851e-02
+*RES
+1 lt_pn12_1_s2:Z pgm_pn12_1_s2:1 1.863143e+01
+2 pgm_pn12_1_s2:1 vs_45_12:A 1.000000e-03
+3 pgm_pn12_1_s2:1 vs_34_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_1_s3 4.046857e-03
+*CONN
+*I lt_pn12_1_s3:Z O
+*I vs_52_12:A I
+*I vs_51_12:A I
+*CAP
+1 pgm_pn12_1_s3:1 4.046857e-03
+*RES
+1 lt_pn12_1_s3:Z pgm_pn12_1_s3:1 4.592301e+00
+2 pgm_pn12_1_s3:1 vs_52_12:A 1.000000e-03
+3 pgm_pn12_1_s3:1 vs_51_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_2_s0 7.400475e-03
+*CONN
+*I lt_pn12_2_s0:Z O
+*I vs_8_12:A I
+*CAP
+1 pgm_pn12_2_s0:1 7.400475e-03
+*RES
+1 lt_pn12_2_s0:Z pgm_pn12_2_s0:1 8.397926e+00
+2 pgm_pn12_2_s0:1 vs_8_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_2_s2 1.492538e-02
+*CONN
+*I lt_pn12_2_s2:Z O
+*I vs_46_12:A I
+*I vs_44_12:A I
+*CAP
+1 pgm_pn12_2_s2:1 1.492538e-02
+*RES
+1 lt_pn12_2_s2:Z pgm_pn12_2_s2:1 1.693705e+01
+2 pgm_pn12_2_s2:1 vs_46_12:A 1.000000e-03
+3 pgm_pn12_2_s2:1 vs_44_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_4_s1 1.265013e-03
+*CONN
+*I lt_pn12_4_s1:Z O
+*I vs_22_12:A I
+*CAP
+1 pgm_pn12_4_s1:1 1.265013e-03
+*RES
+1 lt_pn12_4_s1:Z pgm_pn12_4_s1:1 1.435514e+00
+2 pgm_pn12_4_s1:1 vs_22_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_4_s3 8.298131e-03
+*CONN
+*I lt_pn12_4_s3:Z O
+*I vs_59_12:A I
+*CAP
+1 pgm_pn12_4_s3:1 8.298131e-03
+*RES
+1 lt_pn12_4_s3:Z pgm_pn12_4_s3:1 9.416570e+00
+2 pgm_pn12_4_s3:1 vs_59_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_5_s1 8.366269e-03
+*CONN
+*I lt_pn12_5_s1:Z O
+*I vs_18_12:A I
+*CAP
+1 pgm_pn12_5_s1:1 8.366269e-03
+*RES
+1 lt_pn12_5_s1:Z pgm_pn12_5_s1:1 9.493893e+00
+2 pgm_pn12_5_s1:1 vs_18_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_6_s0 3.501746e-03
+*CONN
+*I lt_pn12_6_s0:Z O
+*I vs_10_12:A I
+*CAP
+1 pgm_pn12_6_s0:1 3.501746e-03
+*RES
+1 lt_pn12_6_s0:Z pgm_pn12_6_s0:1 3.973719e+00
+2 pgm_pn12_6_s0:1 vs_10_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn12_7_s2 6.754637e-04
+*CONN
+*I lt_pn12_7_s2:Z O
+*I vs_41_12:A I
+*CAP
+1 pgm_pn12_7_s2:1 6.754637e-04
+*RES
+1 lt_pn12_7_s2:Z pgm_pn12_7_s2:1 7.665041e-01
+2 pgm_pn12_7_s2:1 vs_41_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_0_s0 2.304872e-03
+*CONN
+*I lt_pn13_0_s0:Z O
+*I vs_1_13:A I
+*CAP
+1 pgm_pn13_0_s0:1 2.304872e-03
+*RES
+1 lt_pn13_0_s0:Z pgm_pn13_0_s0:1 2.615527e+00
+2 pgm_pn13_0_s0:1 vs_1_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_0_s3 3.513596e-03
+*CONN
+*I lt_pn13_0_s3:Z O
+*I vs_50_13:A I
+*CAP
+1 pgm_pn13_0_s3:1 3.513596e-03
+*RES
+1 lt_pn13_0_s3:Z pgm_pn13_0_s3:1 3.987166e+00
+2 pgm_pn13_0_s3:1 vs_50_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_10_s1 5.572575e-03
+*CONN
+*I lt_pn13_10_s1:Z O
+*I vs_25_13:A I
+*CAP
+1 pgm_pn13_10_s1:1 5.572575e-03
+*RES
+1 lt_pn13_10_s1:Z pgm_pn13_10_s1:1 6.323659e+00
+2 pgm_pn13_10_s1:1 vs_25_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_1_s0 1.579044e-03
+*CONN
+*I lt_pn13_1_s0:Z O
+*I vs_2_13:A I
+*CAP
+1 pgm_pn13_1_s0:1 1.579044e-03
+*RES
+1 lt_pn13_1_s0:Z pgm_pn13_1_s0:1 1.791871e+00
+2 pgm_pn13_1_s0:1 vs_2_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_1_s2 3.326955e-03
+*CONN
+*I lt_pn13_1_s2:Z O
+*I vs_32_13:A I
+*CAP
+1 pgm_pn13_1_s2:1 3.326955e-03
+*RES
+1 lt_pn13_1_s2:Z pgm_pn13_1_s2:1 3.775369e+00
+2 pgm_pn13_1_s2:1 vs_32_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_1_s3 1.851896e-02
+*CONN
+*I lt_pn13_1_s3:Z O
+*I vs_63_13:A I
+*I vs_59_13:A I
+*I vs_55_13:A I
+*I vs_53_13:A I
+*CAP
+1 pgm_pn13_1_s3:1 1.851896e-02
+*RES
+1 lt_pn13_1_s3:Z pgm_pn13_1_s3:1 2.101499e+01
+2 pgm_pn13_1_s3:1 vs_63_13:A 1.000000e-03
+3 pgm_pn13_1_s3:1 vs_59_13:A 1.000000e-03
+4 pgm_pn13_1_s3:1 vs_55_13:A 1.000000e-03
+5 pgm_pn13_1_s3:1 vs_53_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_2_s0 1.613410e-02
+*CONN
+*I lt_pn13_2_s0:Z O
+*I vs_15_13:A I
+*I vs_11_13:A I
+*I vs_9_13:A I
+*CAP
+1 pgm_pn13_2_s0:1 1.613410e-02
+*RES
+1 lt_pn13_2_s0:Z pgm_pn13_2_s0:1 1.830869e+01
+2 pgm_pn13_2_s0:1 vs_15_13:A 1.000000e-03
+3 pgm_pn13_2_s0:1 vs_11_13:A 1.000000e-03
+4 pgm_pn13_2_s0:1 vs_9_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_2_s1 1.044895e-02
+*CONN
+*I lt_pn13_2_s1:Z O
+*I vs_26_13:A I
+*I vs_24_13:A I
+*CAP
+1 pgm_pn13_2_s1:1 1.044895e-02
+*RES
+1 lt_pn13_2_s1:Z pgm_pn13_2_s1:1 1.185728e+01
+2 pgm_pn13_2_s1:1 vs_26_13:A 1.000000e-03
+3 pgm_pn13_2_s1:1 vs_24_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_2_s2 1.827307e-02
+*CONN
+*I lt_pn13_2_s2:Z O
+*I vs_45_13:A I
+*I vs_42_13:A I
+*I vs_33_13:A I
+*CAP
+1 pgm_pn13_2_s2:1 1.827307e-02
+*RES
+1 lt_pn13_2_s2:Z pgm_pn13_2_s2:1 2.073595e+01
+2 pgm_pn13_2_s2:1 vs_45_13:A 1.000000e-03
+3 pgm_pn13_2_s2:1 vs_42_13:A 1.000000e-03
+4 pgm_pn13_2_s2:1 vs_33_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_2_s3 2.162669e-03
+*CONN
+*I lt_pn13_2_s3:Z O
+*I vs_52_13:A I
+*CAP
+1 pgm_pn13_2_s3:1 2.162669e-03
+*RES
+1 lt_pn13_2_s3:Z pgm_pn13_2_s3:1 2.454158e+00
+2 pgm_pn13_2_s3:1 vs_52_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_4_s1 4.977101e-03
+*CONN
+*I lt_pn13_4_s1:Z O
+*I vs_19_13:A I
+*I vs_18_13:A I
+*CAP
+1 pgm_pn13_4_s1:1 4.977101e-03
+*RES
+1 lt_pn13_4_s1:Z pgm_pn13_4_s1:1 5.647925e+00
+2 pgm_pn13_4_s1:1 vs_19_13:A 1.000000e-03
+3 pgm_pn13_4_s1:1 vs_18_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_5_s3 3.229190e-03
+*CONN
+*I lt_pn13_5_s3:Z O
+*I vs_57_13:A I
+*CAP
+1 pgm_pn13_5_s3:1 3.229190e-03
+*RES
+1 lt_pn13_5_s3:Z pgm_pn13_5_s3:1 3.664427e+00
+2 pgm_pn13_5_s3:1 vs_57_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn13_6_s1 1.116323e-02
+*CONN
+*I lt_pn13_6_s1:Z O
+*I vs_31_13:A I
+*CAP
+1 pgm_pn13_6_s1:1 1.116323e-02
+*RES
+1 lt_pn13_6_s1:Z pgm_pn13_6_s1:1 1.181556e+01
+2 pgm_pn13_6_s1:1 vs_31_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_0_s0 2.120617e-02
+*CONN
+*I lt_pn14_0_s0:Z O
+*I vs_15_14:A I
+*I vs_4_14:A I
+*CAP
+1 pgm_pn14_0_s0:1 2.120617e-02
+*RES
+1 lt_pn14_0_s0:Z pgm_pn14_0_s0:1 2.220425e+01
+2 pgm_pn14_0_s0:1 vs_15_14:A 1.000000e-03
+3 pgm_pn14_0_s0:1 vs_4_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_0_s1 9.759284e-03
+*CONN
+*I lt_pn14_0_s1:Z O
+*I vs_23_14:A I
+*CAP
+1 pgm_pn14_0_s1:1 9.759284e-03
+*RES
+1 lt_pn14_0_s1:Z pgm_pn14_0_s1:1 9.358507e+00
+2 pgm_pn14_0_s1:1 vs_23_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_0_s3 2.167323e-02
+*CONN
+*I lt_pn14_0_s3:Z O
+*I vs_61_14:A I
+*I vs_55_14:A I
+*I vs_51_14:A I
+*CAP
+1 pgm_pn14_0_s3:1 2.167323e-02
+*RES
+1 lt_pn14_0_s3:Z pgm_pn14_0_s3:1 2.145005e+01
+2 pgm_pn14_0_s3:1 vs_61_14:A 1.000000e-03
+3 pgm_pn14_0_s3:1 vs_55_14:A 1.000000e-03
+4 pgm_pn14_0_s3:1 vs_51_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_1_s0 2.974410e-03
+*CONN
+*I lt_pn14_1_s0:Z O
+*I vs_3_14:A I
+*CAP
+1 pgm_pn14_1_s0:1 2.974410e-03
+*RES
+1 lt_pn14_1_s0:Z pgm_pn14_1_s0:1 3.375307e+00
+2 pgm_pn14_1_s0:1 vs_3_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_1_s1 8.188516e-03
+*CONN
+*I lt_pn14_1_s1:Z O
+*I vs_21_14:A I
+*I vs_17_14:A I
+*CAP
+1 pgm_pn14_1_s1:1 8.188516e-03
+*RES
+1 lt_pn14_1_s1:Z pgm_pn14_1_s1:1 9.292181e+00
+2 pgm_pn14_1_s1:1 vs_21_14:A 1.000000e-03
+3 pgm_pn14_1_s1:1 vs_17_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_1_s2 1.440397e-02
+*CONN
+*I lt_pn14_1_s2:Z O
+*I vs_42_14:A I
+*I vs_41_14:A I
+*I vs_32_14:A I
+*CAP
+1 pgm_pn14_1_s2:1 1.440397e-02
+*RES
+1 lt_pn14_1_s2:Z pgm_pn14_1_s2:1 1.634536e+01
+2 pgm_pn14_1_s2:1 vs_42_14:A 1.000000e-03
+3 pgm_pn14_1_s2:1 vs_41_14:A 1.000000e-03
+4 pgm_pn14_1_s2:1 vs_32_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_1_s3 8.149591e-03
+*CONN
+*I lt_pn14_1_s3:Z O
+*I vs_53_14:A I
+*CAP
+1 pgm_pn14_1_s3:1 8.149591e-03
+*RES
+1 lt_pn14_1_s3:Z pgm_pn14_1_s3:1 6.247642e+00
+2 pgm_pn14_1_s3:1 vs_53_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_2_s0 1.157176e-02
+*CONN
+*I lt_pn14_2_s0:Z O
+*I vs_11_14:A I
+*I vs_6_14:A I
+*CAP
+1 pgm_pn14_2_s0:1 1.157176e-02
+*RES
+1 lt_pn14_2_s0:Z pgm_pn14_2_s0:1 1.313143e+01
+2 pgm_pn14_2_s0:1 vs_11_14:A 1.000000e-03
+3 pgm_pn14_2_s0:1 vs_6_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_2_s1 1.818123e-02
+*CONN
+*I lt_pn14_2_s1:Z O
+*I vs_31_14:A I
+*I vs_19_14:A I
+*CAP
+1 pgm_pn14_2_s1:1 1.818123e-02
+*RES
+1 lt_pn14_2_s1:Z pgm_pn14_2_s1:1 2.063173e+01
+2 pgm_pn14_2_s1:1 vs_31_14:A 1.000000e-03
+3 pgm_pn14_2_s1:1 vs_19_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_2_s2 3.421757e-03
+*CONN
+*I lt_pn14_2_s2:Z O
+*I vs_37_14:A I
+*CAP
+1 pgm_pn14_2_s2:1 3.421757e-03
+*RES
+1 lt_pn14_2_s2:Z pgm_pn14_2_s2:1 3.882948e+00
+2 pgm_pn14_2_s2:1 vs_37_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_2_s3 3.916504e-03
+*CONN
+*I lt_pn14_2_s3:Z O
+*I vs_49_14:A I
+*CAP
+1 pgm_pn14_2_s3:1 3.916504e-03
+*RES
+1 lt_pn14_2_s3:Z pgm_pn14_2_s3:1 4.444379e+00
+2 pgm_pn14_2_s3:1 vs_49_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_4_s0 2.509288e-03
+*CONN
+*I lt_pn14_4_s0:Z O
+*I vs_7_14:A I
+*CAP
+1 pgm_pn14_4_s0:1 2.509288e-03
+*RES
+1 lt_pn14_4_s0:Z pgm_pn14_4_s0:1 2.847495e+00
+2 pgm_pn14_4_s0:1 vs_7_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_4_s2 1.012899e-02
+*CONN
+*I lt_pn14_4_s2:Z O
+*I vs_45_14:A I
+*CAP
+1 pgm_pn14_4_s2:1 1.012899e-02
+*RES
+1 lt_pn14_4_s2:Z pgm_pn14_4_s2:1 1.149420e+01
+2 pgm_pn14_4_s2:1 vs_45_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn14_8_s3 2.257471e-03
+*CONN
+*I lt_pn14_8_s3:Z O
+*I vs_59_14:A I
+*CAP
+1 pgm_pn14_8_s3:1 2.257471e-03
+*RES
+1 lt_pn14_8_s3:Z pgm_pn14_8_s3:1 2.561737e+00
+2 pgm_pn14_8_s3:1 vs_59_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_0_s0 6.253964e-03
+*CONN
+*I lt_pn15_0_s0:Z O
+*I vs_4_15:A I
+*I vs_2_15:A I
+*I vs_1_15:A I
+*CAP
+1 pgm_pn15_0_s0:1 6.253964e-03
+*RES
+1 lt_pn15_0_s0:Z pgm_pn15_0_s0:1 7.096886e+00
+2 pgm_pn15_0_s0:1 vs_4_15:A 1.000000e-03
+3 pgm_pn15_0_s0:1 vs_2_15:A 1.000000e-03
+4 pgm_pn15_0_s0:1 vs_1_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_0_s1 7.139770e-03
+*CONN
+*I lt_pn15_0_s1:Z O
+*I vs_21_15:A I
+*CAP
+1 pgm_pn15_0_s1:1 7.139770e-03
+*RES
+1 lt_pn15_0_s1:Z pgm_pn15_0_s1:1 8.102083e+00
+2 pgm_pn15_0_s1:1 vs_21_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_1_s0 6.513646e-03
+*CONN
+*I lt_pn15_1_s0:Z O
+*I vs_6_15:A I
+*CAP
+1 pgm_pn15_1_s0:1 6.513646e-03
+*RES
+1 lt_pn15_1_s0:Z pgm_pn15_1_s0:1 6.107355e+00
+2 pgm_pn15_1_s0:1 vs_6_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_1_s2 2.032316e-03
+*CONN
+*I lt_pn15_1_s2:Z O
+*I vs_33_15:A I
+*CAP
+1 pgm_pn15_1_s2:1 2.032316e-03
+*RES
+1 lt_pn15_1_s2:Z pgm_pn15_1_s2:1 2.306236e+00
+2 pgm_pn15_1_s2:1 vs_33_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_2_s1 1.690140e-02
+*CONN
+*I lt_pn15_2_s1:Z O
+*I vs_31_15:A I
+*I vs_23_15:A I
+*CAP
+1 pgm_pn15_2_s1:1 1.690140e-02
+*RES
+1 lt_pn15_2_s1:Z pgm_pn15_2_s1:1 1.917941e+01
+2 pgm_pn15_2_s1:1 vs_31_15:A 1.000000e-03
+3 pgm_pn15_2_s1:1 vs_23_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_2_s3 1.424991e-02
+*CONN
+*I lt_pn15_2_s3:Z O
+*I vs_62_15:A I
+*CAP
+1 pgm_pn15_2_s3:1 1.424991e-02
+*RES
+1 lt_pn15_2_s3:Z pgm_pn15_2_s3:1 1.617055e+01
+2 pgm_pn15_2_s3:1 vs_62_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_4_s3 5.948820e-03
+*CONN
+*I lt_pn15_4_s3:Z O
+*I vs_58_15:A I
+*CAP
+1 pgm_pn15_4_s3:1 5.948820e-03
+*RES
+1 lt_pn15_4_s3:Z pgm_pn15_4_s3:1 6.750615e+00
+2 pgm_pn15_4_s3:1 vs_58_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn15_7_s1 1.481280e-03
+*CONN
+*I lt_pn15_7_s1:Z O
+*I vs_26_15:A I
+*CAP
+1 pgm_pn15_7_s1:1 1.481280e-03
+*RES
+1 lt_pn15_7_s1:Z pgm_pn15_7_s1:1 1.680930e+00
+2 pgm_pn15_7_s1:1 vs_26_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_0_s0 1.351240e-02
+*CONN
+*I lt_pn16_0_s0:Z O
+*I vs_9_16:A I
+*CAP
+1 pgm_pn16_0_s0:1 1.351240e-02
+*RES
+1 lt_pn16_0_s0:Z pgm_pn16_0_s0:1 1.347350e+01
+2 pgm_pn16_0_s0:1 vs_9_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_0_s1 1.574573e-02
+*CONN
+*I lt_pn16_0_s1:Z O
+*I vs_27_16:A I
+*I vs_22_16:A I
+*CAP
+1 pgm_pn16_0_s1:1 1.574573e-02
+*RES
+1 lt_pn16_0_s1:Z pgm_pn16_0_s1:1 1.586386e+01
+2 pgm_pn16_0_s1:1 vs_27_16:A 1.000000e-03
+3 pgm_pn16_0_s1:1 vs_22_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_0_s3 1.688765e-02
+*CONN
+*I lt_pn16_0_s3:Z O
+*I vs_60_16:A I
+*I vs_58_16:A I
+*I vs_54_16:A I
+*CAP
+1 pgm_pn16_0_s3:1 1.688765e-02
+*RES
+1 lt_pn16_0_s3:Z pgm_pn16_0_s3:1 1.759162e+01
+2 pgm_pn16_0_s3:1 vs_60_16:A 1.000000e-03
+3 pgm_pn16_0_s3:1 vs_58_16:A 1.000000e-03
+4 pgm_pn16_0_s3:1 vs_54_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_11_s0 1.465875e-02
+*CONN
+*I lt_pn16_11_s0:Z O
+*I vs_3_16:A I
+*CAP
+1 pgm_pn16_11_s0:1 1.465875e-02
+*RES
+1 lt_pn16_11_s0:Z pgm_pn16_11_s0:1 1.663448e+01
+2 pgm_pn16_11_s0:1 vs_3_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_11_s2 1.747910e-02
+*CONN
+*I lt_pn16_11_s2:Z O
+*I vs_33_16:A I
+*CAP
+1 pgm_pn16_11_s2:1 1.747910e-02
+*RES
+1 lt_pn16_11_s2:Z pgm_pn16_11_s2:1 1.983497e+01
+2 pgm_pn16_11_s2:1 vs_33_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_1_s1 1.216029e-02
+*CONN
+*I lt_pn16_1_s1:Z O
+*I vs_26_16:A I
+*I vs_25_16:A I
+*CAP
+1 pgm_pn16_1_s1:1 1.216029e-02
+*RES
+1 lt_pn16_1_s1:Z pgm_pn16_1_s1:1 1.251506e+01
+2 pgm_pn16_1_s1:1 vs_26_16:A 1.000000e-03
+3 pgm_pn16_1_s1:1 vs_25_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_1_s2 4.132771e-03
+*CONN
+*I lt_pn16_1_s2:Z O
+*I vs_36_16:A I
+*CAP
+1 pgm_pn16_1_s2:1 4.132771e-03
+*RES
+1 lt_pn16_1_s2:Z pgm_pn16_1_s2:1 4.689795e+00
+2 pgm_pn16_1_s2:1 vs_36_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_1_s3 1.466780e-02
+*CONN
+*I lt_pn16_1_s3:Z O
+*I vs_57_16:A I
+*I vs_48_16:A I
+*CAP
+1 pgm_pn16_1_s3:1 1.466780e-02
+*RES
+1 lt_pn16_1_s3:Z pgm_pn16_1_s3:1 1.478463e+01
+2 pgm_pn16_1_s3:1 vs_57_16:A 1.000000e-03
+3 pgm_pn16_1_s3:1 vs_48_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_2_s1 1.577859e-02
+*CONN
+*I lt_pn16_2_s1:Z O
+*I vs_30_16:A I
+*CAP
+1 pgm_pn16_2_s1:1 1.577859e-02
+*RES
+1 lt_pn16_2_s1:Z pgm_pn16_2_s1:1 1.790527e+01
+2 pgm_pn16_2_s1:1 vs_30_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_5_s0 1.061782e-02
+*CONN
+*I lt_pn16_5_s0:Z O
+*I vs_15_16:A I
+*CAP
+1 pgm_pn16_5_s0:1 1.061782e-02
+*RES
+1 lt_pn16_5_s0:Z pgm_pn16_5_s0:1 1.204891e+01
+2 pgm_pn16_5_s0:1 vs_15_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_5_s3 7.889297e-03
+*CONN
+*I lt_pn16_5_s3:Z O
+*I vs_49_16:A I
+*CAP
+1 pgm_pn16_5_s3:1 7.889297e-03
+*RES
+1 lt_pn16_5_s3:Z pgm_pn16_5_s3:1 8.952633e+00
+2 pgm_pn16_5_s3:1 vs_49_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_7_s3 7.524902e-03
+*CONN
+*I lt_pn16_7_s3:Z O
+*I vs_51_16:A I
+*CAP
+1 pgm_pn16_7_s3:1 7.524902e-03
+*RES
+1 lt_pn16_7_s3:Z pgm_pn16_7_s3:1 8.539124e+00
+2 pgm_pn16_7_s3:1 vs_51_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn16_8_s2 9.459454e-03
+*CONN
+*I lt_pn16_8_s2:Z O
+*I vs_35_16:A I
+*CAP
+1 pgm_pn16_8_s2:1 9.459454e-03
+*RES
+1 lt_pn16_8_s2:Z pgm_pn16_8_s2:1 1.073442e+01
+2 pgm_pn16_8_s2:1 vs_35_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_0_s1 1.851600e-03
+*CONN
+*I lt_pn17_0_s1:Z O
+*I vs_17_17:A I
+*CAP
+1 pgm_pn17_0_s1:1 1.851600e-03
+*RES
+1 lt_pn17_0_s1:Z pgm_pn17_0_s1:1 2.101163e+00
+2 pgm_pn17_0_s1:1 vs_17_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_0_s3 1.796793e-02
+*CONN
+*I lt_pn17_0_s3:Z O
+*I vs_62_17:A I
+*I vs_61_17:A I
+*CAP
+1 pgm_pn17_0_s3:1 1.796793e-02
+*RES
+1 lt_pn17_0_s3:Z pgm_pn17_0_s3:1 2.038968e+01
+2 pgm_pn17_0_s3:1 vs_62_17:A 1.000000e-03
+3 pgm_pn17_0_s3:1 vs_61_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_1_s1 1.134068e-02
+*CONN
+*I lt_pn17_1_s1:Z O
+*I vs_25_17:A I
+*I vs_23_17:A I
+*CAP
+1 pgm_pn17_1_s1:1 1.134068e-02
+*RES
+1 lt_pn17_1_s1:Z pgm_pn17_1_s1:1 1.286920e+01
+2 pgm_pn17_1_s1:1 vs_25_17:A 1.000000e-03
+3 pgm_pn17_1_s1:1 vs_23_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_1_s2 1.000753e-02
+*CONN
+*I lt_pn17_1_s2:Z O
+*I vs_40_17:A I
+*I vs_37_17:A I
+*CAP
+1 pgm_pn17_1_s2:1 1.000753e-02
+*RES
+1 lt_pn17_1_s2:Z pgm_pn17_1_s2:1 1.135636e+01
+2 pgm_pn17_1_s2:1 vs_40_17:A 1.000000e-03
+3 pgm_pn17_1_s2:1 vs_37_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_2_s0 1.429466e-02
+*CONN
+*I lt_pn17_2_s0:Z O
+*I vs_13_17:A I
+*I vs_11_17:A I
+*I vs_10_17:A I
+*I vs_6_17:A I
+*CAP
+1 pgm_pn17_2_s0:1 1.429466e-02
+*RES
+1 lt_pn17_2_s0:Z pgm_pn17_2_s0:1 1.536904e+01
+2 pgm_pn17_2_s0:1 vs_13_17:A 1.000000e-03
+3 pgm_pn17_2_s0:1 vs_11_17:A 1.000000e-03
+4 pgm_pn17_2_s0:1 vs_10_17:A 1.000000e-03
+5 pgm_pn17_2_s0:1 vs_6_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_2_s1 1.581118e-02
+*CONN
+*I lt_pn17_2_s1:Z O
+*I vs_31_17:A I
+*CAP
+1 pgm_pn17_2_s1:1 1.581118e-02
+*RES
+1 lt_pn17_2_s1:Z pgm_pn17_2_s1:1 1.794225e+01
+2 pgm_pn17_2_s1:1 vs_31_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_2_s2 1.640666e-02
+*CONN
+*I lt_pn17_2_s2:Z O
+*I vs_47_17:A I
+*CAP
+1 pgm_pn17_2_s2:1 1.640666e-02
+*RES
+1 lt_pn17_2_s2:Z pgm_pn17_2_s2:1 1.861798e+01
+2 pgm_pn17_2_s2:1 vs_47_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_2_s3 9.364652e-03
+*CONN
+*I lt_pn17_2_s3:Z O
+*I vs_58_17:A I
+*CAP
+1 pgm_pn17_2_s3:1 9.364652e-03
+*RES
+1 lt_pn17_2_s3:Z pgm_pn17_2_s3:1 1.062684e+01
+2 pgm_pn17_2_s3:1 vs_58_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn17_8_s2 4.574193e-03
+*CONN
+*I lt_pn17_8_s2:Z O
+*I vs_39_17:A I
+*CAP
+1 pgm_pn17_8_s2:1 4.574193e-03
+*RES
+1 lt_pn17_8_s2:Z pgm_pn17_8_s2:1 5.190712e+00
+2 pgm_pn17_8_s2:1 vs_39_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_0_s0 7.619873e-03
+*CONN
+*I lt_pn18_0_s0:Z O
+*I vs_5_18:A I
+*CAP
+1 pgm_pn18_0_s0:1 7.619873e-03
+*RES
+1 lt_pn18_0_s0:Z pgm_pn18_0_s0:1 6.786762e+00
+2 pgm_pn18_0_s0:1 vs_5_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_0_s2 5.433335e-03
+*CONN
+*I lt_pn18_0_s2:Z O
+*I vs_35_18:A I
+*I vs_33_18:A I
+*I vs_32_18:A I
+*CAP
+1 pgm_pn18_0_s2:1 5.433335e-03
+*RES
+1 lt_pn18_0_s2:Z pgm_pn18_0_s2:1 6.165651e+00
+2 pgm_pn18_0_s2:1 vs_35_18:A 1.000000e-03
+3 pgm_pn18_0_s2:1 vs_33_18:A 1.000000e-03
+4 pgm_pn18_0_s2:1 vs_32_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_0_s3 6.360785e-03
+*CONN
+*I lt_pn18_0_s3:Z O
+*I vs_52_18:A I
+*CAP
+1 pgm_pn18_0_s3:1 6.360785e-03
+*RES
+1 lt_pn18_0_s3:Z pgm_pn18_0_s3:1 5.357972e+00
+2 pgm_pn18_0_s3:1 vs_52_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_1_s1 1.938699e-02
+*CONN
+*I lt_pn18_1_s1:Z O
+*I vs_30_18:A I
+*I vs_22_18:A I
+*I vs_17_18:A I
+*CAP
+1 pgm_pn18_1_s1:1 1.938699e-02
+*RES
+1 lt_pn18_1_s1:Z pgm_pn18_1_s1:1 2.200001e+01
+2 pgm_pn18_1_s1:1 vs_30_18:A 1.000000e-03
+3 pgm_pn18_1_s1:1 vs_22_18:A 1.000000e-03
+4 pgm_pn18_1_s1:1 vs_17_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_1_s2 6.822776e-03
+*CONN
+*I lt_pn18_1_s2:Z O
+*I vs_38_18:A I
+*CAP
+1 pgm_pn18_1_s2:1 6.822776e-03
+*RES
+1 lt_pn18_1_s2:Z pgm_pn18_1_s2:1 7.742364e+00
+2 pgm_pn18_1_s2:1 vs_38_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_1_s3 1.492538e-02
+*CONN
+*I lt_pn18_1_s3:Z O
+*I vs_61_18:A I
+*I vs_60_18:A I
+*CAP
+1 pgm_pn18_1_s3:1 1.492538e-02
+*RES
+1 lt_pn18_1_s3:Z pgm_pn18_1_s3:1 1.693705e+01
+2 pgm_pn18_1_s3:1 vs_61_18:A 1.000000e-03
+3 pgm_pn18_1_s3:1 vs_60_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_2_s0 7.809308e-03
+*CONN
+*I lt_pn18_2_s0:Z O
+*I vs_8_18:A I
+*CAP
+1 pgm_pn18_2_s0:1 7.809308e-03
+*RES
+1 lt_pn18_2_s0:Z pgm_pn18_2_s0:1 8.861863e+00
+2 pgm_pn18_2_s0:1 vs_8_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_2_s1 1.608374e-02
+*CONN
+*I lt_pn18_2_s1:Z O
+*I vs_31_18:A I
+*CAP
+1 pgm_pn18_2_s1:1 1.608374e-02
+*RES
+1 lt_pn18_2_s1:Z pgm_pn18_2_s1:1 1.825154e+01
+2 pgm_pn18_2_s1:1 vs_31_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_6_s3 1.065929e-02
+*CONN
+*I lt_pn18_6_s3:Z O
+*I vs_63_18:A I
+*I vs_62_18:A I
+*I vs_55_18:A I
+*CAP
+1 pgm_pn18_6_s3:1 1.065929e-02
+*RES
+1 lt_pn18_6_s3:Z pgm_pn18_6_s3:1 1.209597e+01
+2 pgm_pn18_6_s3:1 vs_63_18:A 1.000000e-03
+3 pgm_pn18_6_s3:1 vs_62_18:A 1.000000e-03
+4 pgm_pn18_6_s3:1 vs_55_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn18_8_s1 3.768376e-03
+*CONN
+*I lt_pn18_8_s1:Z O
+*I vs_29_18:A I
+*CAP
+1 pgm_pn18_8_s1:1 3.768376e-03
+*RES
+1 lt_pn18_8_s1:Z pgm_pn18_8_s1:1 4.276286e+00
+2 pgm_pn18_8_s1:1 vs_29_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_0_s2 1.558426e-02
+*CONN
+*I lt_pn19_0_s2:Z O
+*I vs_43_19:A I
+*I vs_39_19:A I
+*CAP
+1 pgm_pn19_0_s2:1 1.558426e-02
+*RES
+1 lt_pn19_0_s2:Z pgm_pn19_0_s2:1 1.712042e+01
+2 pgm_pn19_0_s2:1 vs_43_19:A 1.000000e-03
+3 pgm_pn19_0_s2:1 vs_39_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_0_s3 1.198461e-02
+*CONN
+*I lt_pn19_0_s3:Z O
+*I vs_57_19:A I
+*CAP
+1 pgm_pn19_0_s3:1 1.198461e-02
+*RES
+1 lt_pn19_0_s3:Z pgm_pn19_0_s3:1 1.202775e+01
+2 pgm_pn19_0_s3:1 vs_57_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_1_s1 8.484772e-03
+*CONN
+*I lt_pn19_1_s1:Z O
+*I vs_23_19:A I
+*I vs_20_19:A I
+*I vs_18_19:A I
+*CAP
+1 pgm_pn19_1_s1:1 8.484772e-03
+*RES
+1 lt_pn19_1_s1:Z pgm_pn19_1_s1:1 9.628367e+00
+2 pgm_pn19_1_s1:1 vs_23_19:A 1.000000e-03
+3 pgm_pn19_1_s1:1 vs_20_19:A 1.000000e-03
+4 pgm_pn19_1_s1:1 vs_18_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_1_s3 1.152140e-02
+*CONN
+*I lt_pn19_1_s3:Z O
+*I vs_58_19:A I
+*CAP
+1 pgm_pn19_1_s3:1 1.152140e-02
+*RES
+1 lt_pn19_1_s3:Z pgm_pn19_1_s3:1 1.307427e+01
+2 pgm_pn19_1_s3:1 vs_58_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_2_s0 6.413942e-03
+*CONN
+*I lt_pn19_2_s0:Z O
+*I vs_7_19:A I
+*I vs_3_19:A I
+*CAP
+1 pgm_pn19_2_s0:1 6.413942e-03
+*RES
+1 lt_pn19_2_s0:Z pgm_pn19_2_s0:1 7.278427e+00
+2 pgm_pn19_2_s0:1 vs_7_19:A 1.000000e-03
+3 pgm_pn19_2_s0:1 vs_3_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_2_s1 1.102665e-02
+*CONN
+*I lt_pn19_2_s1:Z O
+*I vs_27_19:A I
+*CAP
+1 pgm_pn19_2_s1:1 1.102665e-02
+*RES
+1 lt_pn19_2_s1:Z pgm_pn19_2_s1:1 1.251284e+01
+2 pgm_pn19_2_s1:1 vs_27_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_2_s2 1.758872e-02
+*CONN
+*I lt_pn19_2_s2:Z O
+*I vs_46_19:A I
+*I vs_41_19:A I
+*I vs_40_19:A I
+*CAP
+1 pgm_pn19_2_s2:1 1.758872e-02
+*RES
+1 lt_pn19_2_s2:Z pgm_pn19_2_s2:1 1.995936e+01
+2 pgm_pn19_2_s2:1 vs_46_19:A 1.000000e-03
+3 pgm_pn19_2_s2:1 vs_41_19:A 1.000000e-03
+4 pgm_pn19_2_s2:1 vs_40_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_2_s3 1.728654e-02
+*CONN
+*I lt_pn19_2_s3:Z O
+*I vs_63_19:A I
+*I vs_60_19:A I
+*I vs_51_19:A I
+*CAP
+1 pgm_pn19_2_s3:1 1.728654e-02
+*RES
+1 lt_pn19_2_s3:Z pgm_pn19_2_s3:1 1.961645e+01
+2 pgm_pn19_2_s3:1 vs_63_19:A 1.000000e-03
+3 pgm_pn19_2_s3:1 vs_60_19:A 1.000000e-03
+4 pgm_pn19_2_s3:1 vs_51_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_3_s1 1.748298e-02
+*CONN
+*I lt_pn19_3_s1:Z O
+*I vs_31_19:A I
+*CAP
+1 pgm_pn19_3_s1:1 1.748298e-02
+*RES
+1 lt_pn19_3_s1:Z pgm_pn19_3_s1:1 1.725935e+01
+2 pgm_pn19_3_s1:1 vs_31_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_4_s3 7.480464e-03
+*CONN
+*I lt_pn19_4_s3:Z O
+*I vs_59_19:A I
+*CAP
+1 pgm_pn19_4_s3:1 7.480464e-03
+*RES
+1 lt_pn19_4_s3:Z pgm_pn19_4_s3:1 8.488696e+00
+2 pgm_pn19_4_s3:1 vs_59_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_6_s1 6.941278e-03
+*CONN
+*I lt_pn19_6_s1:Z O
+*I vs_29_19:A I
+*CAP
+1 pgm_pn19_6_s1:1 6.941278e-03
+*RES
+1 lt_pn19_6_s1:Z pgm_pn19_6_s1:1 7.876838e+00
+2 pgm_pn19_6_s1:1 vs_29_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn19_7_s0 1.115108e-02
+*CONN
+*I lt_pn19_7_s0:Z O
+*I vs_0_19:A I
+*CAP
+1 pgm_pn19_7_s0:1 1.115108e-02
+*RES
+1 lt_pn19_7_s0:Z pgm_pn19_7_s0:1 1.265404e+01
+2 pgm_pn19_7_s0:1 vs_0_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_0_s1 1.318339e-02
+*CONN
+*I lt_pn1_0_s1:Z O
+*I vs_26_1:A I
+*CAP
+1 pgm_pn1_0_s1:1 1.318339e-02
+*RES
+1 lt_pn1_0_s1:Z pgm_pn1_0_s1:1 1.496028e+01
+2 pgm_pn1_0_s1:1 vs_26_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_0_s2 2.304872e-03
+*CONN
+*I lt_pn1_0_s2:Z O
+*I vs_33_1:A I
+*CAP
+1 pgm_pn1_0_s2:1 2.304872e-03
+*RES
+1 lt_pn1_0_s2:Z pgm_pn1_0_s2:1 2.615527e+00
+2 pgm_pn1_0_s2:1 vs_33_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_10_s2 4.615668e-03
+*CONN
+*I lt_pn1_10_s2:Z O
+*I vs_42_1:A I
+*CAP
+1 pgm_pn1_10_s2:1 4.615668e-03
+*RES
+1 lt_pn1_10_s2:Z pgm_pn1_10_s2:1 5.237778e+00
+2 pgm_pn1_10_s2:1 vs_42_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_1_s0 1.572231e-02
+*CONN
+*I lt_pn1_1_s0:Z O
+*I vs_13_1:A I
+*I vs_10_1:A I
+*I vs_3_1:A I
+*CAP
+1 pgm_pn1_1_s0:1 1.572231e-02
+*RES
+1 lt_pn1_1_s0:Z pgm_pn1_1_s0:1 1.784139e+01
+2 pgm_pn1_1_s0:1 vs_13_1:A 1.000000e-03
+3 pgm_pn1_1_s0:1 vs_10_1:A 1.000000e-03
+4 pgm_pn1_1_s0:1 vs_3_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_1_s1 2.888496e-03
+*CONN
+*I lt_pn1_1_s1:Z O
+*I vs_19_1:A I
+*I vs_18_1:A I
+*CAP
+1 pgm_pn1_1_s1:1 2.888496e-03
+*RES
+1 lt_pn1_1_s1:Z pgm_pn1_1_s1:1 3.277813e+00
+2 pgm_pn1_1_s1:1 vs_19_1:A 1.000000e-03
+3 pgm_pn1_1_s1:1 vs_18_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_1_s3 4.046857e-03
+*CONN
+*I lt_pn1_1_s3:Z O
+*I vs_52_1:A I
+*I vs_50_1:A I
+*CAP
+1 pgm_pn1_1_s3:1 4.046857e-03
+*RES
+1 lt_pn1_1_s3:Z pgm_pn1_1_s3:1 4.592301e+00
+2 pgm_pn1_1_s3:1 vs_52_1:A 1.000000e-03
+3 pgm_pn1_1_s3:1 vs_50_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_2_s2 1.925071e-02
+*CONN
+*I lt_pn1_2_s2:Z O
+*I vs_47_1:A I
+*I vs_34_1:A I
+*CAP
+1 pgm_pn1_2_s2:1 1.925071e-02
+*RES
+1 lt_pn1_2_s2:Z pgm_pn1_2_s2:1 2.184537e+01
+2 pgm_pn1_2_s2:1 vs_47_1:A 1.000000e-03
+3 pgm_pn1_2_s2:1 vs_34_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_3_s0 1.046948e-02
+*CONN
+*I lt_pn1_3_s0:Z O
+*I vs_11_1:A I
+*CAP
+1 pgm_pn1_3_s0:1 1.046948e-02
+*RES
+1 lt_pn1_3_s0:Z pgm_pn1_3_s0:1 1.010809e+01
+2 pgm_pn1_3_s0:1 vs_11_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_7_s0 6.316178e-03
+*CONN
+*I lt_pn1_7_s0:Z O
+*I vs_14_1:A I
+*CAP
+1 pgm_pn1_7_s0:1 6.316178e-03
+*RES
+1 lt_pn1_7_s0:Z pgm_pn1_7_s0:1 7.167486e+00
+2 pgm_pn1_7_s0:1 vs_14_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn1_7_s1 7.933736e-03
+*CONN
+*I lt_pn1_7_s1:Z O
+*I vs_31_1:A I
+*CAP
+1 pgm_pn1_7_s1:1 7.933736e-03
+*RES
+1 lt_pn1_7_s1:Z pgm_pn1_7_s1:1 9.003061e+00
+2 pgm_pn1_7_s1:1 vs_31_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_0_s0 3.599510e-03
+*CONN
+*I lt_pn20_0_s0:Z O
+*I vs_2_20:A I
+*CAP
+1 pgm_pn20_0_s0:1 3.599510e-03
+*RES
+1 lt_pn20_0_s0:Z pgm_pn20_0_s0:1 4.084660e+00
+2 pgm_pn20_0_s0:1 vs_2_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_0_s2 1.803014e-02
+*CONN
+*I lt_pn20_0_s2:Z O
+*I vs_44_20:A I
+*I vs_35_20:A I
+*CAP
+1 pgm_pn20_0_s2:1 1.803014e-02
+*RES
+1 lt_pn20_0_s2:Z pgm_pn20_0_s2:1 2.046028e+01
+2 pgm_pn20_0_s2:1 vs_44_20:A 1.000000e-03
+3 pgm_pn20_0_s2:1 vs_35_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_0_s3 8.862071e-03
+*CONN
+*I lt_pn20_0_s3:Z O
+*I vs_54_20:A I
+*CAP
+1 pgm_pn20_0_s3:1 8.862071e-03
+*RES
+1 lt_pn20_0_s3:Z pgm_pn20_0_s3:1 8.484346e+00
+2 pgm_pn20_0_s3:1 vs_54_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_1_s0 2.974410e-03
+*CONN
+*I lt_pn20_1_s0:Z O
+*I vs_3_20:A I
+*CAP
+1 pgm_pn20_1_s0:1 2.974410e-03
+*RES
+1 lt_pn20_1_s0:Z pgm_pn20_1_s0:1 3.375307e+00
+2 pgm_pn20_1_s0:1 vs_3_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_1_s1 1.994293e-02
+*CONN
+*I lt_pn20_1_s1:Z O
+*I vs_31_20:A I
+*I vs_20_20:A I
+*CAP
+1 pgm_pn20_1_s1:1 1.994293e-02
+*RES
+1 lt_pn20_1_s1:Z pgm_pn20_1_s1:1 2.134667e+01
+2 pgm_pn20_1_s1:1 vs_31_20:A 1.000000e-03
+3 pgm_pn20_1_s1:1 vs_20_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_1_s3 1.981953e-03
+*CONN
+*I lt_pn20_1_s3:Z O
+*I vs_49_20:A I
+*CAP
+1 pgm_pn20_1_s3:1 1.981953e-03
+*RES
+1 lt_pn20_1_s3:Z pgm_pn20_1_s3:1 2.249084e+00
+2 pgm_pn20_1_s3:1 vs_49_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_2_s0 6.550220e-03
+*CONN
+*I lt_pn20_2_s0:Z O
+*I vs_7_20:A I
+*CAP
+1 pgm_pn20_2_s0:1 6.550220e-03
+*RES
+1 lt_pn20_2_s0:Z pgm_pn20_2_s0:1 7.433072e+00
+2 pgm_pn20_2_s0:1 vs_7_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_2_s1 1.579341e-02
+*CONN
+*I lt_pn20_2_s1:Z O
+*I vs_27_20:A I
+*I vs_16_20:A I
+*CAP
+1 pgm_pn20_2_s1:1 1.579341e-02
+*RES
+1 lt_pn20_2_s1:Z pgm_pn20_2_s1:1 1.792208e+01
+2 pgm_pn20_2_s1:1 vs_27_20:A 1.000000e-03
+3 pgm_pn20_2_s1:1 vs_16_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_2_s2 1.628815e-02
+*CONN
+*I lt_pn20_2_s2:Z O
+*I vs_46_20:A I
+*I vs_43_20:A I
+*I vs_39_20:A I
+*CAP
+1 pgm_pn20_2_s2:1 1.628815e-02
+*RES
+1 lt_pn20_2_s2:Z pgm_pn20_2_s2:1 1.848351e+01
+2 pgm_pn20_2_s2:1 vs_46_20:A 1.000000e-03
+3 pgm_pn20_2_s2:1 vs_43_20:A 1.000000e-03
+4 pgm_pn20_2_s2:1 vs_39_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_2_s3 7.406400e-03
+*CONN
+*I lt_pn20_2_s3:Z O
+*I vs_56_20:A I
+*CAP
+1 pgm_pn20_2_s3:1 7.406400e-03
+*RES
+1 lt_pn20_2_s3:Z pgm_pn20_2_s3:1 8.404650e+00
+2 pgm_pn20_2_s3:1 vs_56_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_4_s3 8.466996e-03
+*CONN
+*I lt_pn20_4_s3:Z O
+*I vs_60_20:A I
+*CAP
+1 pgm_pn20_4_s3:1 8.466996e-03
+*RES
+1 lt_pn20_4_s3:Z pgm_pn20_4_s3:1 9.608196e+00
+2 pgm_pn20_4_s3:1 vs_60_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_5_s1 5.658490e-03
+*CONN
+*I lt_pn20_5_s1:Z O
+*I vs_26_20:A I
+*CAP
+1 pgm_pn20_5_s1:1 5.658490e-03
+*RES
+1 lt_pn20_5_s1:Z pgm_pn20_5_s1:1 6.421153e+00
+2 pgm_pn20_5_s1:1 vs_26_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_5_s3 2.956635e-03
+*CONN
+*I lt_pn20_5_s3:Z O
+*I vs_57_20:A I
+*CAP
+1 pgm_pn20_5_s3:1 2.956635e-03
+*RES
+1 lt_pn20_5_s3:Z pgm_pn20_5_s3:1 3.355136e+00
+2 pgm_pn20_5_s3:1 vs_57_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn20_8_s2 2.156744e-03
+*CONN
+*I lt_pn20_8_s2:Z O
+*I vs_41_20:A I
+*CAP
+1 pgm_pn20_8_s2:1 2.156744e-03
+*RES
+1 lt_pn20_8_s2:Z pgm_pn20_8_s2:1 2.447434e+00
+2 pgm_pn20_8_s2:1 vs_41_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pn21_0_s0 4.479391e-03
+*CONN
+*I lt_pn21_0_s0:Z O
+*I vs_12_21:A I
+*I vs_9_21:A I
+*CAP
+1 pgm_pn21_0_s0:1 4.479391e-03
+*RES
+1 lt_pn21_0_s0:Z pgm_pn21_0_s0:1 5.083132e+00
+2 pgm_pn21_0_s0:1 vs_12_21:A 1.000000e-03
+3 pgm_pn21_0_s0:1 vs_9_21:A 1.000000e-03
+*END
+
+*D_NET pgm_pn21_0_s1 5.249656e-03
+*CONN
+*I lt_pn21_0_s1:Z O
+*I vs_31_21:A I
+*CAP
+1 pgm_pn21_0_s1:1 5.249656e-03
+*RES
+1 lt_pn21_0_s1:Z pgm_pn21_0_s1:1 5.957216e+00
+2 pgm_pn21_0_s1:1 vs_31_21:A 1.000000e-03
+*END
+
+*D_NET pgm_pn21_0_s2 5.199293e-03
+*CONN
+*I lt_pn21_0_s2:Z O
+*I vs_47_21:A I
+*CAP
+1 pgm_pn21_0_s2:1 5.199293e-03
+*RES
+1 lt_pn21_0_s2:Z pgm_pn21_0_s2:1 5.900064e+00
+2 pgm_pn21_0_s2:1 vs_47_21:A 1.000000e-03
+*END
+
+*D_NET pgm_pn21_0_s3 1.240128e-02
+*CONN
+*I lt_pn21_0_s3:Z O
+*I vs_50_21:A I
+*CAP
+1 pgm_pn21_0_s3:1 1.240128e-02
+*RES
+1 lt_pn21_0_s3:Z pgm_pn21_0_s3:1 1.407275e+01
+2 pgm_pn21_0_s3:1 vs_50_21:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_0_s0 1.861376e-02
+*CONN
+*I lt_pn2_0_s0:Z O
+*I vs_14_2:A I
+*I vs_1_2:A I
+*CAP
+1 pgm_pn2_0_s0:1 1.861376e-02
+*RES
+1 lt_pn2_0_s0:Z pgm_pn2_0_s0:1 2.112257e+01
+2 pgm_pn2_0_s0:1 vs_14_2:A 1.000000e-03
+3 pgm_pn2_0_s0:1 vs_1_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_0_s2 1.614003e-02
+*CONN
+*I lt_pn2_0_s2:Z O
+*I vs_44_2:A I
+*CAP
+1 pgm_pn2_0_s2:1 1.614003e-02
+*RES
+1 lt_pn2_0_s2:Z pgm_pn2_0_s2:1 1.831541e+01
+2 pgm_pn2_0_s2:1 vs_44_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_1_s0 7.622667e-03
+*CONN
+*I lt_pn2_1_s0:Z O
+*I vs_7_2:A I
+*CAP
+1 pgm_pn2_1_s0:1 7.622667e-03
+*RES
+1 lt_pn2_1_s0:Z pgm_pn2_1_s0:1 8.650066e+00
+2 pgm_pn2_1_s0:1 vs_7_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_1_s1 1.226796e-02
+*CONN
+*I lt_pn2_1_s1:Z O
+*I vs_25_2:A I
+*CAP
+1 pgm_pn2_1_s1:1 1.226796e-02
+*RES
+1 lt_pn2_1_s1:Z pgm_pn2_1_s1:1 1.392146e+01
+2 pgm_pn2_1_s1:1 vs_25_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_1_s2 1.579044e-03
+*CONN
+*I lt_pn2_1_s2:Z O
+*I vs_34_2:A I
+*CAP
+1 pgm_pn2_1_s2:1 1.579044e-03
+*RES
+1 lt_pn2_1_s2:Z pgm_pn2_1_s2:1 1.791871e+00
+2 pgm_pn2_1_s2:1 vs_34_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_1_s3 1.124884e-02
+*CONN
+*I lt_pn2_1_s3:Z O
+*I vs_58_2:A I
+*CAP
+1 pgm_pn2_1_s3:1 1.124884e-02
+*RES
+1 lt_pn2_1_s3:Z pgm_pn2_1_s3:1 1.276498e+01
+2 pgm_pn2_1_s3:1 vs_58_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_2_s1 1.296743e-02
+*CONN
+*I lt_pn2_2_s1:Z O
+*I vs_27_2:A I
+*CAP
+1 pgm_pn2_2_s1:1 1.296743e-02
+*RES
+1 lt_pn2_2_s1:Z pgm_pn2_2_s1:1 1.386293e+01
+2 pgm_pn2_2_s1:1 vs_27_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_2_s3 1.522786e-02
+*CONN
+*I lt_pn2_2_s3:Z O
+*I vs_60_2:A I
+*I vs_50_2:A I
+*CAP
+1 pgm_pn2_2_s3:1 1.522786e-02
+*RES
+1 lt_pn2_2_s3:Z pgm_pn2_2_s3:1 1.642803e+01
+2 pgm_pn2_2_s3:1 vs_60_2:A 1.000000e-03
+3 pgm_pn2_2_s3:1 vs_50_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_6_s1 3.495821e-03
+*CONN
+*I lt_pn2_6_s1:Z O
+*I vs_21_2:A I
+*CAP
+1 pgm_pn2_6_s1:1 3.495821e-03
+*RES
+1 lt_pn2_6_s1:Z pgm_pn2_6_s1:1 3.966995e+00
+2 pgm_pn2_6_s1:1 vs_21_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn2_8_s2 1.019270e-02
+*CONN
+*I lt_pn2_8_s2:Z O
+*I vs_36_2:A I
+*CAP
+1 pgm_pn2_8_s2:1 1.019270e-02
+*RES
+1 lt_pn2_8_s2:Z pgm_pn2_8_s2:1 1.013830e+01
+2 pgm_pn2_8_s2:1 vs_36_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_0_s0 2.441149e-03
+*CONN
+*I lt_pn3_0_s0:Z O
+*I vs_1_3:A I
+*CAP
+1 pgm_pn3_0_s0:1 2.441149e-03
+*RES
+1 lt_pn3_0_s0:Z pgm_pn3_0_s0:1 2.770173e+00
+2 pgm_pn3_0_s0:1 vs_1_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_0_s1 1.381145e-02
+*CONN
+*I lt_pn3_0_s1:Z O
+*I vs_25_3:A I
+*I vs_18_3:A I
+*CAP
+1 pgm_pn3_0_s1:1 1.381145e-02
+*RES
+1 lt_pn3_0_s1:Z pgm_pn3_0_s1:1 1.567299e+01
+2 pgm_pn3_0_s1:1 vs_25_3:A 1.000000e-03
+3 pgm_pn3_0_s1:1 vs_18_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_0_s3 2.088605e-03
+*CONN
+*I lt_pn3_0_s3:Z O
+*I vs_48_3:A I
+*CAP
+1 pgm_pn3_0_s3:1 2.088605e-03
+*RES
+1 lt_pn3_0_s3:Z pgm_pn3_0_s3:1 2.370111e+00
+2 pgm_pn3_0_s3:1 vs_48_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_1_s0 8.147040e-03
+*CONN
+*I lt_pn3_1_s0:Z O
+*I vs_7_3:A I
+*I vs_3_3:A I
+*CAP
+1 pgm_pn3_1_s0:1 8.147040e-03
+*RES
+1 lt_pn3_1_s0:Z pgm_pn3_1_s0:1 9.245115e+00
+2 pgm_pn3_1_s0:1 vs_7_3:A 1.000000e-03
+3 pgm_pn3_1_s0:1 vs_3_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_1_s1 1.493723e-02
+*CONN
+*I lt_pn3_1_s1:Z O
+*I vs_28_3:A I
+*I vs_27_3:A I
+*I vs_26_3:A I
+*CAP
+1 pgm_pn3_1_s1:1 1.493723e-02
+*RES
+1 lt_pn3_1_s1:Z pgm_pn3_1_s1:1 1.695050e+01
+2 pgm_pn3_1_s1:1 vs_28_3:A 1.000000e-03
+3 pgm_pn3_1_s1:1 vs_27_3:A 1.000000e-03
+4 pgm_pn3_1_s1:1 vs_26_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_2_s0 1.398921e-02
+*CONN
+*I lt_pn3_2_s0:Z O
+*I vs_13_3:A I
+*I vs_10_3:A I
+*I vs_8_3:A I
+*CAP
+1 pgm_pn3_2_s0:1 1.398921e-02
+*RES
+1 lt_pn3_2_s0:Z pgm_pn3_2_s0:1 1.587470e+01
+2 pgm_pn3_2_s0:1 vs_13_3:A 1.000000e-03
+3 pgm_pn3_2_s0:1 vs_10_3:A 1.000000e-03
+4 pgm_pn3_2_s0:1 vs_8_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_2_s2 1.306785e-02
+*CONN
+*I lt_pn3_2_s2:Z O
+*I vs_44_3:A I
+*I vs_38_3:A I
+*CAP
+1 pgm_pn3_2_s2:1 1.306785e-02
+*RES
+1 lt_pn3_2_s2:Z pgm_pn3_2_s2:1 1.482916e+01
+2 pgm_pn3_2_s2:1 vs_44_3:A 1.000000e-03
+3 pgm_pn3_2_s2:1 vs_38_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_2_s3 1.090222e-03
+*CONN
+*I lt_pn3_2_s3:Z O
+*I vs_51_3:A I
+*CAP
+1 pgm_pn3_2_s3:1 1.090222e-03
+*RES
+1 lt_pn3_2_s3:Z pgm_pn3_2_s3:1 1.237164e+00
+2 pgm_pn3_2_s3:1 vs_51_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_5_s3 8.200366e-03
+*CONN
+*I lt_pn3_5_s3:Z O
+*I vs_61_3:A I
+*CAP
+1 pgm_pn3_5_s3:1 8.200366e-03
+*RES
+1 lt_pn3_5_s3:Z pgm_pn3_5_s3:1 9.305628e+00
+2 pgm_pn3_5_s3:1 vs_61_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn3_8_s0 8.099639e-03
+*CONN
+*I lt_pn3_8_s0:Z O
+*I vs_4_3:A I
+*CAP
+1 pgm_pn3_8_s0:1 8.099639e-03
+*RES
+1 lt_pn3_8_s0:Z pgm_pn3_8_s0:1 9.191325e+00
+2 pgm_pn3_8_s0:1 vs_4_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_0_s1 1.922701e-02
+*CONN
+*I lt_pn4_0_s1:Z O
+*I vs_31_4:A I
+*CAP
+1 pgm_pn4_0_s1:1 1.922701e-02
+*RES
+1 lt_pn4_0_s1:Z pgm_pn4_0_s1:1 2.181847e+01
+2 pgm_pn4_0_s1:1 vs_31_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_1_s0 1.129920e-02
+*CONN
+*I lt_pn4_1_s0:Z O
+*I vs_10_4:A I
+*CAP
+1 pgm_pn4_1_s0:1 1.129920e-02
+*RES
+1 lt_pn4_1_s0:Z pgm_pn4_1_s0:1 1.282213e+01
+2 pgm_pn4_1_s0:1 vs_10_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_1_s2 6.686498e-03
+*CONN
+*I lt_pn4_1_s2:Z O
+*I vs_38_4:A I
+*CAP
+1 pgm_pn4_1_s2:1 6.686498e-03
+*RES
+1 lt_pn4_1_s2:Z pgm_pn4_1_s2:1 7.587718e+00
+2 pgm_pn4_1_s2:1 vs_38_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_1_s3 1.613410e-02
+*CONN
+*I lt_pn4_1_s3:Z O
+*I vs_62_4:A I
+*CAP
+1 pgm_pn4_1_s3:1 1.613410e-02
+*RES
+1 lt_pn4_1_s3:Z pgm_pn4_1_s3:1 1.830869e+01
+2 pgm_pn4_1_s3:1 vs_62_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_2_s0 1.881110e-02
+*CONN
+*I lt_pn4_2_s0:Z O
+*I vs_15_4:A I
+*CAP
+1 pgm_pn4_2_s0:1 1.881110e-02
+*RES
+1 lt_pn4_2_s0:Z pgm_pn4_2_s0:1 1.905442e+01
+2 pgm_pn4_2_s0:1 vs_15_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_2_s2 1.431213e-02
+*CONN
+*I lt_pn4_2_s2:Z O
+*I vs_45_4:A I
+*I vs_42_4:A I
+*CAP
+1 pgm_pn4_2_s2:1 1.431213e-02
+*RES
+1 lt_pn4_2_s2:Z pgm_pn4_2_s2:1 1.624115e+01
+2 pgm_pn4_2_s2:1 vs_45_4:A 1.000000e-03
+3 pgm_pn4_2_s2:1 vs_42_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_2_s3 1.494908e-02
+*CONN
+*I lt_pn4_2_s3:Z O
+*I vs_61_4:A I
+*I vs_51_4:A I
+*CAP
+1 pgm_pn4_2_s3:1 1.494908e-02
+*RES
+1 lt_pn4_2_s3:Z pgm_pn4_2_s3:1 1.696395e+01
+2 pgm_pn4_2_s3:1 vs_61_4:A 1.000000e-03
+3 pgm_pn4_2_s3:1 vs_51_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_3_s1 7.933736e-03
+*CONN
+*I lt_pn4_3_s1:Z O
+*I vs_26_4:A I
+*CAP
+1 pgm_pn4_3_s1:1 7.933736e-03
+*RES
+1 lt_pn4_3_s1:Z pgm_pn4_3_s1:1 9.003061e+00
+2 pgm_pn4_3_s1:1 vs_26_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_4_s3 2.423374e-03
+*CONN
+*I lt_pn4_4_s3:Z O
+*I vs_55_4:A I
+*CAP
+1 pgm_pn4_4_s3:1 2.423374e-03
+*RES
+1 lt_pn4_4_s3:Z pgm_pn4_4_s3:1 2.750001e+00
+2 pgm_pn4_4_s3:1 vs_55_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn4_5_s1 7.667105e-03
+*CONN
+*I lt_pn4_5_s1:Z O
+*I vs_28_4:A I
+*CAP
+1 pgm_pn4_5_s1:1 7.667105e-03
+*RES
+1 lt_pn4_5_s1:Z pgm_pn4_5_s1:1 8.700494e+00
+2 pgm_pn4_5_s1:1 vs_28_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_0_s0 3.463233e-03
+*CONN
+*I lt_pn5_0_s0:Z O
+*I vs_2_5:A I
+*I vs_1_5:A I
+*CAP
+1 pgm_pn5_0_s0:1 3.463233e-03
+*RES
+1 lt_pn5_0_s0:Z pgm_pn5_0_s0:1 3.930014e+00
+2 pgm_pn5_0_s0:1 vs_2_5:A 1.000000e-03
+3 pgm_pn5_0_s0:1 vs_1_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_0_s1 1.238234e-02
+*CONN
+*I lt_pn5_0_s1:Z O
+*I vs_24_5:A I
+*CAP
+1 pgm_pn5_0_s1:1 1.238234e-02
+*RES
+1 lt_pn5_0_s1:Z pgm_pn5_0_s1:1 1.175919e+01
+2 pgm_pn5_0_s1:1 vs_24_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_0_s2 1.301306e-02
+*CONN
+*I lt_pn5_0_s2:Z O
+*I vs_41_5:A I
+*CAP
+1 pgm_pn5_0_s2:1 1.301306e-02
+*RES
+1 lt_pn5_0_s2:Z pgm_pn5_0_s2:1 1.333879e+01
+2 pgm_pn5_0_s2:1 vs_41_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_0_s3 1.434175e-02
+*CONN
+*I lt_pn5_0_s3:Z O
+*I vs_59_5:A I
+*CAP
+1 pgm_pn5_0_s3:1 1.434175e-02
+*RES
+1 lt_pn5_0_s3:Z pgm_pn5_0_s3:1 1.627476e+01
+2 pgm_pn5_0_s3:1 vs_59_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_1_s0 1.747910e-02
+*CONN
+*I lt_pn5_1_s0:Z O
+*I vs_15_5:A I
+*I vs_12_5:A I
+*CAP
+1 pgm_pn5_1_s0:1 1.747910e-02
+*RES
+1 lt_pn5_1_s0:Z pgm_pn5_1_s0:1 1.983497e+01
+2 pgm_pn5_1_s0:1 vs_15_5:A 1.000000e-03
+3 pgm_pn5_1_s0:1 vs_12_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_1_s2 2.223417e-03
+*CONN
+*I lt_pn5_1_s2:Z O
+*I vs_33_5:A I
+*CAP
+1 pgm_pn5_1_s2:1 2.223417e-03
+*RES
+1 lt_pn5_1_s2:Z pgm_pn5_1_s2:1 1.094899e+00
+2 pgm_pn5_1_s2:1 vs_33_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_2_s0 8.659563e-03
+*CONN
+*I lt_pn5_2_s0:Z O
+*I vs_9_5:A I
+*CAP
+1 pgm_pn5_2_s0:1 8.659563e-03
+*RES
+1 lt_pn5_2_s0:Z pgm_pn5_2_s0:1 9.826717e+00
+2 pgm_pn5_2_s0:1 vs_9_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_2_s2 1.777522e-02
+*CONN
+*I lt_pn5_2_s2:Z O
+*I vs_43_5:A I
+*I vs_32_5:A I
+*CAP
+1 pgm_pn5_2_s2:1 1.777522e-02
+*RES
+1 lt_pn5_2_s2:Z pgm_pn5_2_s2:1 1.917475e+01
+2 pgm_pn5_2_s2:1 vs_43_5:A 1.000000e-03
+3 pgm_pn5_2_s2:1 vs_32_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_3_s1 1.183246e-02
+*CONN
+*I lt_pn5_3_s1:Z O
+*I vs_29_5:A I
+*CAP
+1 pgm_pn5_3_s1:1 1.183246e-02
+*RES
+1 lt_pn5_3_s1:Z pgm_pn5_3_s1:1 1.342727e+01
+2 pgm_pn5_3_s1:1 vs_29_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_5_s3 8.472922e-03
+*CONN
+*I lt_pn5_5_s3:Z O
+*I vs_61_5:A I
+*CAP
+1 pgm_pn5_5_s3:1 8.472922e-03
+*RES
+1 lt_pn5_5_s3:Z pgm_pn5_5_s3:1 9.614920e+00
+2 pgm_pn5_5_s3:1 vs_61_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_8_s2 1.187336e-02
+*CONN
+*I lt_pn5_8_s2:Z O
+*I vs_35_5:A I
+*CAP
+1 pgm_pn5_8_s2:1 1.187336e-02
+*RES
+1 lt_pn5_8_s2:Z pgm_pn5_8_s2:1 1.233344e+01
+2 pgm_pn5_8_s2:1 vs_35_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn5_8_s3 3.638024e-03
+*CONN
+*I lt_pn5_8_s3:Z O
+*I vs_58_5:A I
+*I vs_56_5:A I
+*CAP
+1 pgm_pn5_8_s3:1 3.638024e-03
+*RES
+1 lt_pn5_8_s3:Z pgm_pn5_8_s3:1 4.128364e+00
+2 pgm_pn5_8_s3:1 vs_58_5:A 1.000000e-03
+3 pgm_pn5_8_s3:1 vs_56_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_0_s2 2.304872e-03
+*CONN
+*I lt_pn6_0_s2:Z O
+*I vs_33_6:A I
+*CAP
+1 pgm_pn6_0_s2:1 2.304872e-03
+*RES
+1 lt_pn6_0_s2:Z pgm_pn6_0_s2:1 2.615527e+00
+2 pgm_pn6_0_s2:1 vs_33_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_1_s0 1.082223e-02
+*CONN
+*I lt_pn6_1_s0:Z O
+*I vs_9_6:A I
+*I vs_7_6:A I
+*CAP
+1 pgm_pn6_1_s0:1 1.082223e-02
+*RES
+1 lt_pn6_1_s0:Z pgm_pn6_1_s0:1 1.228087e+01
+2 pgm_pn6_1_s0:1 vs_9_6:A 1.000000e-03
+3 pgm_pn6_1_s0:1 vs_7_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_1_s1 1.085186e-02
+*CONN
+*I lt_pn6_1_s1:Z O
+*I vs_25_6:A I
+*CAP
+1 pgm_pn6_1_s1:1 1.085186e-02
+*RES
+1 lt_pn6_1_s1:Z pgm_pn6_1_s1:1 1.231449e+01
+2 pgm_pn6_1_s1:1 vs_25_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_2_s0 1.023268e-02
+*CONN
+*I lt_pn6_2_s0:Z O
+*I vs_8_6:A I
+*I vs_1_6:A I
+*CAP
+1 pgm_pn6_2_s0:1 1.023268e-02
+*RES
+1 lt_pn6_2_s0:Z pgm_pn6_2_s0:1 1.161186e+01
+2 pgm_pn6_2_s0:1 vs_8_6:A 1.000000e-03
+3 pgm_pn6_2_s0:1 vs_1_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_2_s1 1.996060e-02
+*CONN
+*I lt_pn6_2_s1:Z O
+*I vs_31_6:A I
+*CAP
+1 pgm_pn6_2_s1:1 1.996060e-02
+*RES
+1 lt_pn6_2_s1:Z pgm_pn6_2_s1:1 1.749087e+01
+2 pgm_pn6_2_s1:1 vs_31_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_2_s3 1.202704e-02
+*CONN
+*I lt_pn6_2_s3:Z O
+*I vs_59_6:A I
+*I vs_51_6:A I
+*CAP
+1 pgm_pn6_2_s3:1 1.202704e-02
+*RES
+1 lt_pn6_2_s3:Z pgm_pn6_2_s3:1 1.259547e+01
+2 pgm_pn6_2_s3:1 vs_59_6:A 1.000000e-03
+3 pgm_pn6_2_s3:1 vs_51_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_5_s1 9.897913e-03
+*CONN
+*I lt_pn6_5_s1:Z O
+*I vs_30_6:A I
+*CAP
+1 pgm_pn6_5_s1:1 9.897913e-03
+*RES
+1 lt_pn6_5_s1:Z pgm_pn6_5_s1:1 1.123197e+01
+2 pgm_pn6_5_s1:1 vs_30_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_6_s3 1.137327e-02
+*CONN
+*I lt_pn6_6_s3:Z O
+*I vs_63_6:A I
+*CAP
+1 pgm_pn6_6_s3:1 1.137327e-02
+*RES
+1 lt_pn6_6_s3:Z pgm_pn6_6_s3:1 1.290618e+01
+2 pgm_pn6_6_s3:1 vs_63_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_7_s3 4.630481e-03
+*CONN
+*I lt_pn6_7_s3:Z O
+*I vs_60_6:A I
+*CAP
+1 pgm_pn6_7_s3:1 4.630481e-03
+*RES
+1 lt_pn6_7_s3:Z pgm_pn6_7_s3:1 5.254587e+00
+2 pgm_pn6_7_s3:1 vs_60_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn6_8_s3 2.861833e-03
+*CONN
+*I lt_pn6_8_s3:Z O
+*I vs_57_6:A I
+*CAP
+1 pgm_pn6_8_s3:1 2.861833e-03
+*RES
+1 lt_pn6_8_s3:Z pgm_pn6_8_s3:1 3.247557e+00
+2 pgm_pn6_8_s3:1 vs_57_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_0_s0 1.288107e-02
+*CONN
+*I lt_pn7_0_s0:Z O
+*I vs_9_7:A I
+*I vs_5_7:A I
+*CAP
+1 pgm_pn7_0_s0:1 1.288107e-02
+*RES
+1 lt_pn7_0_s0:Z pgm_pn7_0_s0:1 1.362096e+01
+2 pgm_pn7_0_s0:1 vs_9_7:A 1.000000e-03
+3 pgm_pn7_0_s0:1 vs_5_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_0_s1 1.010233e-02
+*CONN
+*I lt_pn7_0_s1:Z O
+*I vs_23_7:A I
+*I vs_22_7:A I
+*I vs_18_7:A I
+*CAP
+1 pgm_pn7_0_s1:1 1.010233e-02
+*RES
+1 lt_pn7_0_s1:Z pgm_pn7_0_s1:1 1.146394e+01
+2 pgm_pn7_0_s1:1 vs_23_7:A 1.000000e-03
+3 pgm_pn7_0_s1:1 vs_22_7:A 1.000000e-03
+4 pgm_pn7_0_s1:1 vs_18_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_0_s2 2.058387e-02
+*CONN
+*I lt_pn7_0_s2:Z O
+*I vs_47_7:A I
+*I vs_40_7:A I
+*I vs_35_7:A I
+*I vs_34_7:A I
+*CAP
+1 pgm_pn7_0_s2:1 2.058387e-02
+*RES
+1 lt_pn7_0_s2:Z pgm_pn7_0_s2:1 2.335820e+01
+2 pgm_pn7_0_s2:1 vs_47_7:A 1.000000e-03
+3 pgm_pn7_0_s2:1 vs_40_7:A 1.000000e-03
+4 pgm_pn7_0_s2:1 vs_35_7:A 1.000000e-03
+5 pgm_pn7_0_s2:1 vs_34_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_0_s3 1.543198e-02
+*CONN
+*I lt_pn7_0_s3:Z O
+*I vs_59_7:A I
+*I vs_50_7:A I
+*CAP
+1 pgm_pn7_0_s3:1 1.543198e-02
+*RES
+1 lt_pn7_0_s3:Z pgm_pn7_0_s3:1 1.751193e+01
+2 pgm_pn7_0_s3:1 vs_59_7:A 1.000000e-03
+3 pgm_pn7_0_s3:1 vs_50_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_1_s0 3.241041e-03
+*CONN
+*I lt_pn7_1_s0:Z O
+*I vs_0_7:A I
+*CAP
+1 pgm_pn7_1_s0:1 3.241041e-03
+*RES
+1 lt_pn7_1_s0:Z pgm_pn7_1_s0:1 3.677875e+00
+2 pgm_pn7_1_s0:1 vs_0_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_1_s2 1.573712e-02
+*CONN
+*I lt_pn7_1_s2:Z O
+*I vs_45_7:A I
+*I vs_36_7:A I
+*CAP
+1 pgm_pn7_1_s2:1 1.573712e-02
+*RES
+1 lt_pn7_1_s2:Z pgm_pn7_1_s2:1 1.785820e+01
+2 pgm_pn7_1_s2:1 vs_45_7:A 1.000000e-03
+3 pgm_pn7_1_s2:1 vs_36_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_1_s3 1.009048e-02
+*CONN
+*I lt_pn7_1_s3:Z O
+*I vs_57_7:A I
+*CAP
+1 pgm_pn7_1_s3:1 1.009048e-02
+*RES
+1 lt_pn7_1_s3:Z pgm_pn7_1_s3:1 1.145050e+01
+2 pgm_pn7_1_s3:1 vs_57_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_2_s0 1.453432e-02
+*CONN
+*I lt_pn7_2_s0:Z O
+*I vs_13_7:A I
+*I vs_8_7:A I
+*CAP
+1 pgm_pn7_2_s0:1 1.453432e-02
+*RES
+1 lt_pn7_2_s0:Z pgm_pn7_2_s0:1 1.649329e+01
+2 pgm_pn7_2_s0:1 vs_13_7:A 1.000000e-03
+3 pgm_pn7_2_s0:1 vs_8_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_2_s3 3.472120e-03
+*CONN
+*I lt_pn7_2_s3:Z O
+*I vs_53_7:A I
+*I vs_52_7:A I
+*CAP
+1 pgm_pn7_2_s3:1 3.472120e-03
+*RES
+1 lt_pn7_2_s3:Z pgm_pn7_2_s3:1 3.940100e+00
+2 pgm_pn7_2_s3:1 vs_53_7:A 1.000000e-03
+3 pgm_pn7_2_s3:1 vs_52_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_3_s3 1.890113e-03
+*CONN
+*I lt_pn7_3_s3:Z O
+*I vs_51_7:A I
+*CAP
+1 pgm_pn7_3_s3:1 1.890113e-03
+*RES
+1 lt_pn7_3_s3:Z pgm_pn7_3_s3:1 2.144867e+00
+2 pgm_pn7_3_s3:1 vs_51_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_6_s3 9.364652e-03
+*CONN
+*I lt_pn7_6_s3:Z O
+*I vs_63_7:A I
+*I vs_60_7:A I
+*CAP
+1 pgm_pn7_6_s3:1 9.364652e-03
+*RES
+1 lt_pn7_6_s3:Z pgm_pn7_6_s3:1 1.062684e+01
+2 pgm_pn7_6_s3:1 vs_63_7:A 1.000000e-03
+3 pgm_pn7_6_s3:1 vs_60_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_8_s0 2.509288e-03
+*CONN
+*I lt_pn7_8_s0:Z O
+*I vs_12_7:A I
+*CAP
+1 pgm_pn7_8_s0:1 2.509288e-03
+*RES
+1 lt_pn7_8_s0:Z pgm_pn7_8_s0:1 2.847495e+00
+2 pgm_pn7_8_s0:1 vs_12_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn7_8_s1 1.227981e-02
+*CONN
+*I lt_pn7_8_s1:Z O
+*I vs_17_7:A I
+*CAP
+1 pgm_pn7_8_s1:1 1.227981e-02
+*RES
+1 lt_pn7_8_s1:Z pgm_pn7_8_s1:1 1.393491e+01
+2 pgm_pn7_8_s1:1 vs_17_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_0_s0 3.463233e-03
+*CONN
+*I lt_pn8_0_s0:Z O
+*I vs_2_8:A I
+*CAP
+1 pgm_pn8_0_s0:1 3.463233e-03
+*RES
+1 lt_pn8_0_s0:Z pgm_pn8_0_s0:1 3.930014e+00
+2 pgm_pn8_0_s0:1 vs_2_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_1_s0 1.606494e-02
+*CONN
+*I lt_pn8_1_s0:Z O
+*I vs_13_8:A I
+*I vs_8_8:A I
+*CAP
+1 pgm_pn8_1_s0:1 1.606494e-02
+*RES
+1 lt_pn8_1_s0:Z pgm_pn8_1_s0:1 1.694599e+01
+2 pgm_pn8_1_s0:1 vs_13_8:A 1.000000e-03
+3 pgm_pn8_1_s0:1 vs_8_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_1_s2 1.362778e-02
+*CONN
+*I lt_pn8_1_s2:Z O
+*I vs_43_8:A I
+*I vs_39_8:A I
+*CAP
+1 pgm_pn8_1_s2:1 1.362778e-02
+*RES
+1 lt_pn8_1_s2:Z pgm_pn8_1_s2:1 1.546456e+01
+2 pgm_pn8_1_s2:1 vs_43_8:A 1.000000e-03
+3 pgm_pn8_1_s2:1 vs_39_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_2_s0 1.063559e-02
+*CONN
+*I lt_pn8_2_s0:Z O
+*I vs_10_8:A I
+*CAP
+1 pgm_pn8_2_s0:1 1.063559e-02
+*RES
+1 lt_pn8_2_s0:Z pgm_pn8_2_s0:1 1.206908e+01
+2 pgm_pn8_2_s0:1 vs_10_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_2_s1 1.129920e-02
+*CONN
+*I lt_pn8_2_s1:Z O
+*I vs_27_8:A I
+*I vs_22_8:A I
+*CAP
+1 pgm_pn8_2_s1:1 1.129920e-02
+*RES
+1 lt_pn8_2_s1:Z pgm_pn8_2_s1:1 1.282213e+01
+2 pgm_pn8_2_s1:1 vs_27_8:A 1.000000e-03
+3 pgm_pn8_2_s1:1 vs_22_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_2_s3 2.035057e-02
+*CONN
+*I lt_pn8_2_s3:Z O
+*I vs_62_8:A I
+*I vs_51_8:A I
+*I vs_48_8:A I
+*CAP
+1 pgm_pn8_2_s3:1 2.035057e-02
+*RES
+1 lt_pn8_2_s3:Z pgm_pn8_2_s3:1 2.238517e+01
+2 pgm_pn8_2_s3:1 vs_62_8:A 1.000000e-03
+3 pgm_pn8_2_s3:1 vs_51_8:A 1.000000e-03
+4 pgm_pn8_2_s3:1 vs_48_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_3_s0 1.304119e-02
+*CONN
+*I lt_pn8_3_s0:Z O
+*I vs_14_8:A I
+*CAP
+1 pgm_pn8_3_s0:1 1.304119e-02
+*RES
+1 lt_pn8_3_s0:Z pgm_pn8_3_s0:1 1.479891e+01
+2 pgm_pn8_3_s0:1 vs_14_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_4_s1 6.372467e-03
+*CONN
+*I lt_pn8_4_s1:Z O
+*I vs_20_8:A I
+*I vs_17_8:A I
+*CAP
+1 pgm_pn8_4_s1:1 6.372467e-03
+*RES
+1 lt_pn8_4_s1:Z pgm_pn8_4_s1:1 7.231361e+00
+2 pgm_pn8_4_s1:1 vs_20_8:A 1.000000e-03
+3 pgm_pn8_4_s1:1 vs_17_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn8_5_s2 1.647183e-03
+*CONN
+*I lt_pn8_5_s2:Z O
+*I vs_40_8:A I
+*CAP
+1 pgm_pn8_5_s2:1 1.647183e-03
+*RES
+1 lt_pn8_5_s2:Z pgm_pn8_5_s2:1 1.869194e+00
+2 pgm_pn8_5_s2:1 vs_40_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_0_s0 5.981409e-03
+*CONN
+*I lt_pn9_0_s0:Z O
+*I vs_4_9:A I
+*CAP
+1 pgm_pn9_0_s0:1 5.981409e-03
+*RES
+1 lt_pn9_0_s0:Z pgm_pn9_0_s0:1 6.787595e+00
+2 pgm_pn9_0_s0:1 vs_4_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_0_s2 2.045916e-02
+*CONN
+*I lt_pn9_0_s2:Z O
+*I vs_46_9:A I
+*I vs_37_9:A I
+*CAP
+1 pgm_pn9_0_s2:1 2.045916e-02
+*RES
+1 lt_pn9_0_s2:Z pgm_pn9_0_s2:1 2.121258e+01
+2 pgm_pn9_0_s2:1 vs_46_9:A 1.000000e-03
+3 pgm_pn9_0_s2:1 vs_37_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_0_s3 4.944513e-03
+*CONN
+*I lt_pn9_0_s3:Z O
+*I vs_51_9:A I
+*CAP
+1 pgm_pn9_0_s3:1 4.944513e-03
+*RES
+1 lt_pn9_0_s3:Z pgm_pn9_0_s3:1 5.610944e+00
+2 pgm_pn9_0_s3:1 vs_51_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_1_s1 6.631263e-03
+*CONN
+*I lt_pn9_1_s1:Z O
+*I vs_21_9:A I
+*CAP
+1 pgm_pn9_1_s1:1 6.631263e-03
+*RES
+1 lt_pn9_1_s1:Z pgm_pn9_1_s1:1 5.952865e+00
+2 pgm_pn9_1_s1:1 vs_21_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_1_s2 1.154806e-02
+*CONN
+*I lt_pn9_1_s2:Z O
+*I vs_39_9:A I
+*I vs_32_9:A I
+*CAP
+1 pgm_pn9_1_s2:1 1.154806e-02
+*RES
+1 lt_pn9_1_s2:Z pgm_pn9_1_s2:1 1.310453e+01
+2 pgm_pn9_1_s2:1 vs_39_9:A 1.000000e-03
+3 pgm_pn9_1_s2:1 vs_32_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_1_s3 3.426659e-03
+*CONN
+*I lt_pn9_1_s3:Z O
+*I vs_48_9:A I
+*CAP
+1 pgm_pn9_1_s3:1 3.426659e-03
+*RES
+1 lt_pn9_1_s3:Z pgm_pn9_1_s3:1 2.604296e+00
+2 pgm_pn9_1_s3:1 vs_48_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_2_s0 1.261577e-02
+*CONN
+*I lt_pn9_2_s0:Z O
+*I vs_12_9:A I
+*I vs_8_9:A I
+*CAP
+1 pgm_pn9_2_s0:1 1.261577e-02
+*RES
+1 lt_pn9_2_s0:Z pgm_pn9_2_s0:1 1.375183e+01
+2 pgm_pn9_2_s0:1 vs_12_9:A 1.000000e-03
+3 pgm_pn9_2_s0:1 vs_8_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_2_s1 1.977805e-02
+*CONN
+*I lt_pn9_2_s1:Z O
+*I vs_31_9:A I
+*I vs_18_9:A I
+*CAP
+1 pgm_pn9_2_s1:1 1.977805e-02
+*RES
+1 lt_pn9_2_s1:Z pgm_pn9_2_s1:1 2.244378e+01
+2 pgm_pn9_2_s1:1 vs_31_9:A 1.000000e-03
+3 pgm_pn9_2_s1:1 vs_18_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_2_s2 1.349446e-02
+*CONN
+*I lt_pn9_2_s2:Z O
+*I vs_45_9:A I
+*CAP
+1 pgm_pn9_2_s2:1 1.349446e-02
+*RES
+1 lt_pn9_2_s2:Z pgm_pn9_2_s2:1 1.531327e+01
+2 pgm_pn9_2_s2:1 vs_45_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_2_s3 2.145199e-03
+*CONN
+*I lt_pn9_2_s3:Z O
+*I vs_50_9:A I
+*CAP
+1 pgm_pn9_2_s3:1 2.145199e-03
+*RES
+1 lt_pn9_2_s3:Z pgm_pn9_2_s3:1 1.582057e+00
+2 pgm_pn9_2_s3:1 vs_50_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_3_s1 1.322769e-02
+*CONN
+*I lt_pn9_3_s1:Z O
+*I vs_29_9:A I
+*CAP
+1 pgm_pn9_3_s1:1 1.322769e-02
+*RES
+1 lt_pn9_3_s1:Z pgm_pn9_3_s1:1 1.401429e+01
+2 pgm_pn9_3_s1:1 vs_29_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_4_s1 3.185431e-03
+*CONN
+*I lt_pn9_4_s1:Z O
+*I vs_23_9:A I
+*CAP
+1 pgm_pn9_4_s1:1 3.185431e-03
+*RES
+1 lt_pn9_4_s1:Z pgm_pn9_4_s1:1 2.130237e+00
+2 pgm_pn9_4_s1:1 vs_23_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_4_s3 1.226500e-02
+*CONN
+*I lt_pn9_4_s3:Z O
+*I vs_63_9:A I
+*CAP
+1 pgm_pn9_4_s3:1 1.226500e-02
+*RES
+1 lt_pn9_4_s3:Z pgm_pn9_4_s3:1 1.391810e+01
+2 pgm_pn9_4_s3:1 vs_63_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_5_s0 5.842916e-03
+*CONN
+*I lt_pn9_5_s0:Z O
+*I vs_3_9:A I
+*CAP
+1 pgm_pn9_5_s0:1 5.842916e-03
+*RES
+1 lt_pn9_5_s0:Z pgm_pn9_5_s0:1 5.377522e+00
+2 pgm_pn9_5_s0:1 vs_3_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pn9_9_s0 3.006861e-03
+*CONN
+*I lt_pn9_9_s0:Z O
+*I vs_10_9:A I
+*CAP
+1 pgm_pn9_9_s0:1 3.006861e-03
+*RES
+1 lt_pn9_9_s0:Z pgm_pn9_9_s0:1 2.415876e+00
+2 pgm_pn9_9_s0:1 vs_10_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_0_s1 5.797455e-03
+*CONN
+*I lt_pp0_0_s1:Z O
+*I vs_19_0:A I
+*CAP
+1 pgm_pp0_0_s1:1 5.797455e-03
+*RES
+1 lt_pp0_0_s1:Z pgm_pp0_0_s1:1 4.574737e+00
+2 pgm_pp0_0_s1:1 vs_19_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_0_s2 1.568676e-02
+*CONN
+*I lt_pp0_0_s2:Z O
+*I vs_43_0:A I
+*CAP
+1 pgm_pp0_0_s2:1 1.568676e-02
+*RES
+1 lt_pp0_0_s2:Z pgm_pp0_0_s2:1 1.780105e+01
+2 pgm_pp0_0_s2:1 vs_43_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_0_s3 7.636762e-03
+*CONN
+*I lt_pp0_0_s3:Z O
+*I vs_52_0:A I
+*CAP
+1 pgm_pp0_0_s3:1 7.636762e-03
+*RES
+1 lt_pp0_0_s3:Z pgm_pp0_0_s3:1 6.517970e+00
+2 pgm_pp0_0_s3:1 vs_52_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_1_s0 1.701830e-02
+*CONN
+*I lt_pp0_1_s0:Z O
+*I vs_12_0:A I
+*CAP
+1 pgm_pp0_1_s0:1 1.701830e-02
+*RES
+1 lt_pp0_1_s0:Z pgm_pp0_1_s0:1 1.687602e+01
+2 pgm_pp0_1_s0:1 vs_12_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_1_s2 3.729863e-03
+*CONN
+*I lt_pp0_1_s2:Z O
+*I vs_35_0:A I
+*CAP
+1 pgm_pp0_1_s2:1 3.729863e-03
+*RES
+1 lt_pp0_1_s2:Z pgm_pp0_1_s2:1 4.232582e+00
+2 pgm_pp0_1_s2:1 vs_35_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_2_s0 8.615124e-03
+*CONN
+*I lt_pp0_2_s0:Z O
+*I vs_8_0:A I
+*I vs_5_0:A I
+*CAP
+1 pgm_pp0_2_s0:1 8.615124e-03
+*RES
+1 lt_pp0_2_s0:Z pgm_pp0_2_s0:1 9.776289e+00
+2 pgm_pp0_2_s0:1 vs_8_0:A 1.000000e-03
+3 pgm_pp0_2_s0:1 vs_5_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_2_s1 1.581711e-02
+*CONN
+*I lt_pp0_2_s1:Z O
+*I vs_30_0:A I
+*CAP
+1 pgm_pp0_2_s1:1 1.581711e-02
+*RES
+1 lt_pp0_2_s1:Z pgm_pp0_2_s1:1 1.794897e+01
+2 pgm_pp0_2_s1:1 vs_30_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_2_s2 1.785535e-02
+*CONN
+*I lt_pp0_2_s2:Z O
+*I vs_44_0:A I
+*I vs_39_0:A I
+*I vs_37_0:A I
+*I vs_32_0:A I
+*CAP
+1 pgm_pp0_2_s2:1 1.785535e-02
+*RES
+1 lt_pp0_2_s2:Z pgm_pp0_2_s2:1 2.026193e+01
+2 pgm_pp0_2_s2:1 vs_44_0:A 1.000000e-03
+3 pgm_pp0_2_s2:1 vs_39_0:A 1.000000e-03
+4 pgm_pp0_2_s2:1 vs_37_0:A 1.000000e-03
+5 pgm_pp0_2_s2:1 vs_32_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_2_s3 1.896038e-03
+*CONN
+*I lt_pp0_2_s3:Z O
+*I vs_51_0:A I
+*CAP
+1 pgm_pp0_2_s3:1 1.896038e-03
+*RES
+1 lt_pp0_2_s3:Z pgm_pp0_2_s3:1 2.151590e+00
+2 pgm_pp0_2_s3:1 vs_51_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_5_s0 1.430916e-03
+*CONN
+*I lt_pp0_5_s0:Z O
+*I vs_7_0:A I
+*CAP
+1 pgm_pp0_5_s0:1 1.430916e-03
+*RES
+1 lt_pp0_5_s0:Z pgm_pp0_5_s0:1 1.623778e+00
+2 pgm_pp0_5_s0:1 vs_7_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_7_s0 9.924576e-04
+*CONN
+*I lt_pp0_7_s0:Z O
+*I vs_9_0:A I
+*CAP
+1 pgm_pp0_7_s0:1 9.924576e-04
+*RES
+1 lt_pp0_7_s0:Z pgm_pp0_7_s0:1 1.126223e+00
+2 pgm_pp0_7_s0:1 vs_9_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_7_s1 1.013492e-02
+*CONN
+*I lt_pp0_7_s1:Z O
+*I vs_17_0:A I
+*CAP
+1 pgm_pp0_7_s1:1 1.013492e-02
+*RES
+1 lt_pp0_7_s1:Z pgm_pp0_7_s1:1 1.150092e+01
+2 pgm_pp0_7_s1:1 vs_17_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_7_s2 7.803383e-03
+*CONN
+*I lt_pp0_7_s2:Z O
+*I vs_46_0:A I
+*CAP
+1 pgm_pp0_7_s2:1 7.803383e-03
+*RES
+1 lt_pp0_7_s2:Z pgm_pp0_7_s2:1 8.855139e+00
+2 pgm_pp0_7_s2:1 vs_46_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_8_s1 3.078100e-03
+*CONN
+*I lt_pp0_8_s1:Z O
+*I vs_27_0:A I
+*CAP
+1 pgm_pp0_8_s1:1 3.078100e-03
+*RES
+1 lt_pp0_8_s1:Z pgm_pp0_8_s1:1 3.492973e+00
+2 pgm_pp0_8_s1:1 vs_27_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp0_8_s2 7.258272e-03
+*CONN
+*I lt_pp0_8_s2:Z O
+*I vs_47_0:A I
+*CAP
+1 pgm_pp0_8_s2:1 7.258272e-03
+*RES
+1 lt_pp0_8_s2:Z pgm_pp0_8_s2:1 8.236557e+00
+2 pgm_pp0_8_s2:1 vs_47_0:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_0_s0 1.065650e-02
+*CONN
+*I lt_pp10_0_s0:Z O
+*I vs_7_10:A I
+*CAP
+1 pgm_pp10_0_s0:1 1.065650e-02
+*RES
+1 lt_pp10_0_s0:Z pgm_pp10_0_s0:1 1.023267e+01
+2 pgm_pp10_0_s0:1 vs_7_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_0_s1 1.131698e-02
+*CONN
+*I lt_pp10_0_s1:Z O
+*I vs_23_10:A I
+*I vs_20_10:A I
+*I vs_16_10:A I
+*CAP
+1 pgm_pp10_0_s1:1 1.131698e-02
+*RES
+1 lt_pp10_0_s1:Z pgm_pp10_0_s1:1 1.284231e+01
+2 pgm_pp10_0_s1:1 vs_23_10:A 1.000000e-03
+3 pgm_pp10_0_s1:1 vs_20_10:A 1.000000e-03
+4 pgm_pp10_0_s1:1 vs_16_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_0_s2 2.130039e-02
+*CONN
+*I lt_pp10_0_s2:Z O
+*I vs_45_10:A I
+*I vs_35_10:A I
+*CAP
+1 pgm_pp10_0_s2:1 2.130039e-02
+*RES
+1 lt_pp10_0_s2:Z pgm_pp10_0_s2:1 2.117094e+01
+2 pgm_pp10_0_s2:1 vs_45_10:A 1.000000e-03
+3 pgm_pp10_0_s2:1 vs_35_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_0_s3 1.054968e-02
+*CONN
+*I lt_pp10_0_s3:Z O
+*I vs_55_10:A I
+*CAP
+1 pgm_pp10_0_s3:1 1.054968e-02
+*RES
+1 lt_pp10_0_s3:Z pgm_pp10_0_s3:1 1.197158e+01
+2 pgm_pp10_0_s3:1 vs_55_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_1_s0 7.311598e-03
+*CONN
+*I lt_pp10_1_s0:Z O
+*I vs_5_10:A I
+*CAP
+1 pgm_pp10_1_s0:1 7.311598e-03
+*RES
+1 lt_pp10_1_s0:Z pgm_pp10_1_s0:1 8.297070e+00
+2 pgm_pp10_1_s0:1 vs_5_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_1_s3 2.029353e-02
+*CONN
+*I lt_pp10_1_s3:Z O
+*I vs_62_10:A I
+*CAP
+1 pgm_pp10_1_s3:1 2.029353e-02
+*RES
+1 lt_pp10_1_s3:Z pgm_pp10_1_s3:1 1.977263e+01
+2 pgm_pp10_1_s3:1 vs_62_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_2_s0 2.248583e-03
+*CONN
+*I lt_pp10_2_s0:Z O
+*I vs_1_10:A I
+*CAP
+1 pgm_pp10_2_s0:1 2.248583e-03
+*RES
+1 lt_pp10_2_s0:Z pgm_pp10_2_s0:1 2.551652e+00
+2 pgm_pp10_2_s0:1 vs_1_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_2_s2 6.061398e-03
+*CONN
+*I lt_pp10_2_s2:Z O
+*I vs_38_10:A I
+*I vs_34_10:A I
+*CAP
+1 pgm_pp10_2_s2:1 6.061398e-03
+*RES
+1 lt_pp10_2_s2:Z pgm_pp10_2_s2:1 6.878366e+00
+2 pgm_pp10_2_s2:1 vs_38_10:A 1.000000e-03
+3 pgm_pp10_2_s2:1 vs_34_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_4_s3 3.718013e-03
+*CONN
+*I lt_pp10_4_s3:Z O
+*I vs_50_10:A I
+*CAP
+1 pgm_pp10_4_s3:1 3.718013e-03
+*RES
+1 lt_pp10_4_s3:Z pgm_pp10_4_s3:1 4.219134e+00
+2 pgm_pp10_4_s3:1 vs_50_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_5_s0 1.108294e-02
+*CONN
+*I lt_pp10_5_s0:Z O
+*I vs_14_10:A I
+*CAP
+1 pgm_pp10_5_s0:1 1.108294e-02
+*RES
+1 lt_pp10_5_s0:Z pgm_pp10_5_s0:1 1.257672e+01
+2 pgm_pp10_5_s0:1 vs_14_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp10_5_s3 4.171284e-03
+*CONN
+*I lt_pp10_5_s3:Z O
+*I vs_53_10:A I
+*I vs_51_10:A I
+*CAP
+1 pgm_pp10_5_s3:1 4.171284e-03
+*RES
+1 lt_pp10_5_s3:Z pgm_pp10_5_s3:1 4.733499e+00
+2 pgm_pp10_5_s3:1 vs_53_10:A 1.000000e-03
+3 pgm_pp10_5_s3:1 vs_51_10:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_0_s1 9.951850e-03
+*CONN
+*I lt_pp11_0_s1:Z O
+*I vs_22_11:A I
+*CAP
+1 pgm_pp11_0_s1:1 9.951850e-03
+*RES
+1 lt_pp11_0_s1:Z pgm_pp11_0_s1:1 9.577028e+00
+2 pgm_pp11_0_s1:1 vs_22_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_0_s2 2.035874e-02
+*CONN
+*I lt_pp11_0_s2:Z O
+*I vs_45_11:A I
+*CAP
+1 pgm_pp11_0_s2:1 2.035874e-02
+*RES
+1 lt_pp11_0_s2:Z pgm_pp11_0_s2:1 2.023475e+01
+2 pgm_pp11_0_s2:1 vs_45_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_0_s3 1.533421e-02
+*CONN
+*I lt_pp11_0_s3:Z O
+*I vs_59_11:A I
+*CAP
+1 pgm_pp11_0_s3:1 1.533421e-02
+*RES
+1 lt_pp11_0_s3:Z pgm_pp11_0_s3:1 1.740099e+01
+2 pgm_pp11_0_s3:1 vs_59_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_1_s0 1.241033e-02
+*CONN
+*I lt_pp11_1_s0:Z O
+*I vs_8_11:A I
+*I vs_0_11:A I
+*CAP
+1 pgm_pp11_1_s0:1 1.241033e-02
+*RES
+1 lt_pp11_1_s0:Z pgm_pp11_1_s0:1 1.222289e+01
+2 pgm_pp11_1_s0:1 vs_8_11:A 1.000000e-03
+3 pgm_pp11_1_s0:1 vs_0_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_2_s0 9.601657e-03
+*CONN
+*I lt_pp11_2_s0:Z O
+*I vs_9_11:A I
+*CAP
+1 pgm_pp11_2_s0:1 9.601657e-03
+*RES
+1 lt_pp11_2_s0:Z pgm_pp11_2_s0:1 1.089579e+01
+2 pgm_pp11_2_s0:1 vs_9_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_5_s3 3.898729e-03
+*CONN
+*I lt_pp11_5_s3:Z O
+*I vs_51_11:A I
+*CAP
+1 pgm_pp11_5_s3:1 3.898729e-03
+*RES
+1 lt_pp11_5_s3:Z pgm_pp11_5_s3:1 4.424208e+00
+2 pgm_pp11_5_s3:1 vs_51_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_8_s1 3.632099e-03
+*CONN
+*I lt_pp11_8_s1:Z O
+*I vs_23_11:A I
+*CAP
+1 pgm_pp11_8_s1:1 3.632099e-03
+*RES
+1 lt_pp11_8_s1:Z pgm_pp11_8_s1:1 4.121640e+00
+2 pgm_pp11_8_s1:1 vs_23_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp11_8_s3 2.423374e-03
+*CONN
+*I lt_pp11_8_s3:Z O
+*I vs_56_11:A I
+*CAP
+1 pgm_pp11_8_s3:1 2.423374e-03
+*RES
+1 lt_pp11_8_s3:Z pgm_pp11_8_s3:1 2.750001e+00
+2 pgm_pp11_8_s3:1 vs_56_11:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_0_s1 2.002765e-02
+*CONN
+*I lt_pp12_0_s1:Z O
+*I vs_30_12:A I
+*I vs_29_12:A I
+*I vs_28_12:A I
+*CAP
+1 pgm_pp12_0_s1:1 2.002765e-02
+*RES
+1 lt_pp12_0_s1:Z pgm_pp12_0_s1:1 2.201873e+01
+2 pgm_pp12_0_s1:1 vs_30_12:A 1.000000e-03
+3 pgm_pp12_0_s1:1 vs_29_12:A 1.000000e-03
+4 pgm_pp12_0_s1:1 vs_28_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_0_s3 2.059885e-02
+*CONN
+*I lt_pp12_0_s3:Z O
+*I vs_63_12:A I
+*CAP
+1 pgm_pp12_0_s3:1 2.059885e-02
+*RES
+1 lt_pp12_0_s3:Z pgm_pp12_0_s3:1 2.151507e+01
+2 pgm_pp12_0_s3:1 vs_63_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_11_s1 6.514669e-03
+*CONN
+*I lt_pp12_11_s1:Z O
+*I vs_25_12:A I
+*CAP
+1 pgm_pp12_11_s1:1 6.514669e-03
+*RES
+1 lt_pp12_11_s1:Z pgm_pp12_11_s1:1 7.392730e+00
+2 pgm_pp12_11_s1:1 vs_25_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_1_s0 2.037294e-02
+*CONN
+*I lt_pp12_1_s0:Z O
+*I vs_15_12:A I
+*CAP
+1 pgm_pp12_1_s0:1 2.037294e-02
+*RES
+1 lt_pp12_1_s0:Z pgm_pp12_1_s0:1 2.197862e+01
+2 pgm_pp12_1_s0:1 vs_15_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_1_s1 7.145695e-03
+*CONN
+*I lt_pp12_1_s1:Z O
+*I vs_21_12:A I
+*CAP
+1 pgm_pp12_1_s1:1 7.145695e-03
+*RES
+1 lt_pp12_1_s1:Z pgm_pp12_1_s1:1 8.108806e+00
+2 pgm_pp12_1_s1:1 vs_21_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_2_s0 1.988063e-02
+*CONN
+*I lt_pp12_2_s0:Z O
+*I vs_13_12:A I
+*I vs_9_12:A I
+*I vs_5_12:A I
+*I vs_4_12:A I
+*I vs_1_12:A I
+*CAP
+1 pgm_pp12_2_s0:1 1.988063e-02
+*RES
+1 lt_pp12_2_s0:Z pgm_pp12_2_s0:1 2.166722e+01
+2 pgm_pp12_2_s0:1 vs_13_12:A 1.000000e-03
+3 pgm_pp12_2_s0:1 vs_9_12:A 1.000000e-03
+4 pgm_pp12_2_s0:1 vs_5_12:A 1.000000e-03
+5 pgm_pp12_2_s0:1 vs_4_12:A 1.000000e-03
+6 pgm_pp12_2_s0:1 vs_1_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_2_s1 3.104763e-03
+*CONN
+*I lt_pp12_2_s1:Z O
+*I vs_20_12:A I
+*CAP
+1 pgm_pp12_2_s1:1 3.104763e-03
+*RES
+1 lt_pp12_2_s1:Z pgm_pp12_2_s1:1 3.523229e+00
+2 pgm_pp12_2_s1:1 vs_20_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_2_s3 7.190133e-03
+*CONN
+*I lt_pp12_2_s3:Z O
+*I vs_55_12:A I
+*CAP
+1 pgm_pp12_2_s3:1 7.190133e-03
+*RES
+1 lt_pp12_2_s3:Z pgm_pp12_2_s3:1 8.159234e+00
+2 pgm_pp12_2_s3:1 vs_55_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_3_s1 1.606013e-03
+*CONN
+*I lt_pp12_3_s1:Z O
+*I vs_19_12:A I
+*CAP
+1 pgm_pp12_3_s1:1 1.606013e-03
+*RES
+1 lt_pp12_3_s1:Z pgm_pp12_3_s1:1 9.701983e-01
+2 pgm_pp12_3_s1:1 vs_19_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_4_s0 5.098566e-03
+*CONN
+*I lt_pp12_4_s0:Z O
+*I vs_2_12:A I
+*CAP
+1 pgm_pp12_4_s0:1 5.098566e-03
+*RES
+1 lt_pp12_4_s0:Z pgm_pp12_4_s0:1 5.785761e+00
+2 pgm_pp12_4_s0:1 vs_2_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_4_s3 2.156744e-03
+*CONN
+*I lt_pp12_4_s3:Z O
+*I vs_54_12:A I
+*CAP
+1 pgm_pp12_4_s3:1 2.156744e-03
+*RES
+1 lt_pp12_4_s3:Z pgm_pp12_4_s3:1 2.447434e+00
+2 pgm_pp12_4_s3:1 vs_54_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp12_8_s2 5.948820e-03
+*CONN
+*I lt_pp12_8_s2:Z O
+*I vs_37_12:A I
+*CAP
+1 pgm_pp12_8_s2:1 5.948820e-03
+*RES
+1 lt_pp12_8_s2:Z pgm_pp12_8_s2:1 6.750615e+00
+2 pgm_pp12_8_s2:1 vs_37_12:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_0_s0 8.142169e-03
+*CONN
+*I lt_pp13_0_s0:Z O
+*I vs_5_13:A I
+*I vs_4_13:A I
+*CAP
+1 pgm_pp13_0_s0:1 8.142169e-03
+*RES
+1 lt_pp13_0_s0:Z pgm_pp13_0_s0:1 7.667414e+00
+2 pgm_pp13_0_s0:1 vs_5_13:A 1.000000e-03
+3 pgm_pp13_0_s0:1 vs_4_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_0_s1 1.055414e-02
+*CONN
+*I lt_pp13_0_s1:Z O
+*I vs_23_13:A I
+*CAP
+1 pgm_pp13_0_s1:1 1.055414e-02
+*RES
+1 lt_pp13_0_s1:Z pgm_pp13_0_s1:1 1.054845e+01
+2 pgm_pp13_0_s1:1 vs_23_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_0_s2 1.936329e-02
+*CONN
+*I lt_pp13_0_s2:Z O
+*I vs_46_13:A I
+*CAP
+1 pgm_pp13_0_s2:1 1.936329e-02
+*RES
+1 lt_pp13_0_s2:Z pgm_pp13_0_s2:1 2.197312e+01
+2 pgm_pp13_0_s2:1 vs_46_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_1_s1 1.742874e-02
+*CONN
+*I lt_pp13_1_s1:Z O
+*I vs_30_13:A I
+*I vs_29_13:A I
+*I vs_28_13:A I
+*CAP
+1 pgm_pp13_1_s1:1 1.742874e-02
+*RES
+1 lt_pp13_1_s1:Z pgm_pp13_1_s1:1 1.977782e+01
+2 pgm_pp13_1_s1:1 vs_30_13:A 1.000000e-03
+3 pgm_pp13_1_s1:1 vs_29_13:A 1.000000e-03
+4 pgm_pp13_1_s1:1 vs_28_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_2_s0 8.615124e-03
+*CONN
+*I lt_pp13_2_s0:Z O
+*I vs_8_13:A I
+*CAP
+1 pgm_pp13_2_s0:1 8.615124e-03
+*RES
+1 lt_pp13_2_s0:Z pgm_pp13_2_s0:1 9.776289e+00
+2 pgm_pp13_2_s0:1 vs_8_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_2_s2 1.748503e-02
+*CONN
+*I lt_pp13_2_s2:Z O
+*I vs_47_13:A I
+*I vs_39_13:A I
+*I vs_37_13:A I
+*CAP
+1 pgm_pp13_2_s2:1 1.748503e-02
+*RES
+1 lt_pp13_2_s2:Z pgm_pp13_2_s2:1 1.984170e+01
+2 pgm_pp13_2_s2:1 vs_47_13:A 1.000000e-03
+3 pgm_pp13_2_s2:1 vs_39_13:A 1.000000e-03
+4 pgm_pp13_2_s2:1 vs_37_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_2_s3 1.177914e-02
+*CONN
+*I lt_pp13_2_s3:Z O
+*I vs_56_13:A I
+*I vs_48_13:A I
+*CAP
+1 pgm_pp13_2_s3:1 1.177914e-02
+*RES
+1 lt_pp13_2_s3:Z pgm_pp13_2_s3:1 1.336676e+01
+2 pgm_pp13_2_s3:1 vs_56_13:A 1.000000e-03
+3 pgm_pp13_2_s3:1 vs_48_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp13_3_s2 3.948955e-03
+*CONN
+*I lt_pp13_3_s2:Z O
+*I vs_38_13:A I
+*CAP
+1 pgm_pp13_3_s2:1 3.948955e-03
+*RES
+1 lt_pp13_3_s2:Z pgm_pp13_3_s2:1 3.484948e+00
+2 pgm_pp13_3_s2:1 vs_38_13:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_0_s1 9.673812e-03
+*CONN
+*I lt_pp14_0_s1:Z O
+*I vs_22_14:A I
+*CAP
+1 pgm_pp14_0_s1:1 9.673812e-03
+*RES
+1 lt_pp14_0_s1:Z pgm_pp14_0_s1:1 9.405495e+00
+2 pgm_pp14_0_s1:1 vs_22_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_0_s3 2.018688e-02
+*CONN
+*I lt_pp14_0_s3:Z O
+*I vs_62_14:A I
+*I vs_58_14:A I
+*CAP
+1 pgm_pp14_0_s3:1 2.018688e-02
+*RES
+1 lt_pp14_0_s3:Z pgm_pp14_0_s3:1 2.290771e+01
+2 pgm_pp14_0_s3:1 vs_62_14:A 1.000000e-03
+3 pgm_pp14_0_s3:1 vs_58_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_1_s2 1.868783e-02
+*CONN
+*I lt_pp14_1_s2:Z O
+*I vs_47_14:A I
+*CAP
+1 pgm_pp14_1_s2:1 1.868783e-02
+*RES
+1 lt_pp14_1_s2:Z pgm_pp14_1_s2:1 2.120661e+01
+2 pgm_pp14_1_s2:1 vs_47_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_2_s0 8.342569e-03
+*CONN
+*I lt_pp14_2_s0:Z O
+*I vs_8_14:A I
+*CAP
+1 pgm_pp14_2_s0:1 8.342569e-03
+*RES
+1 lt_pp14_2_s0:Z pgm_pp14_2_s0:1 9.466998e+00
+2 pgm_pp14_2_s0:1 vs_8_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_2_s1 1.201911e-02
+*CONN
+*I lt_pp14_2_s1:Z O
+*I vs_27_14:A I
+*CAP
+1 pgm_pp14_2_s1:1 1.201911e-02
+*RES
+1 lt_pp14_2_s1:Z pgm_pp14_2_s1:1 1.363907e+01
+2 pgm_pp14_2_s1:1 vs_27_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_2_s2 7.183628e-03
+*CONN
+*I lt_pp14_2_s2:Z O
+*I vs_39_14:A I
+*CAP
+1 pgm_pp14_2_s2:1 7.183628e-03
+*RES
+1 lt_pp14_2_s2:Z pgm_pp14_2_s2:1 7.011617e+00
+2 pgm_pp14_2_s2:1 vs_39_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_2_s3 2.136302e-02
+*CONN
+*I lt_pp14_2_s3:Z O
+*I vs_63_14:A I
+*I vs_50_14:A I
+*CAP
+1 pgm_pp14_2_s3:1 2.136302e-02
+*RES
+1 lt_pp14_2_s3:Z pgm_pp14_2_s3:1 2.424237e+01
+2 pgm_pp14_2_s3:1 vs_63_14:A 1.000000e-03
+3 pgm_pp14_2_s3:1 vs_50_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_5_s1 6.191750e-03
+*CONN
+*I lt_pp14_5_s1:Z O
+*I vs_26_14:A I
+*CAP
+1 pgm_pp14_5_s1:1 6.191750e-03
+*RES
+1 lt_pp14_5_s1:Z pgm_pp14_5_s1:1 7.026287e+00
+2 pgm_pp14_5_s1:1 vs_26_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_7_s2 9.948276e-03
+*CONN
+*I lt_pp14_7_s2:Z O
+*I vs_33_14:A I
+*CAP
+1 pgm_pp14_7_s2:1 9.948276e-03
+*RES
+1 lt_pp14_7_s2:Z pgm_pp14_7_s2:1 1.128913e+01
+2 pgm_pp14_7_s2:1 vs_33_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp14_8_s1 2.423374e-03
+*CONN
+*I lt_pp14_8_s1:Z O
+*I vs_24_14:A I
+*CAP
+1 pgm_pp14_8_s1:1 2.423374e-03
+*RES
+1 lt_pp14_8_s1:Z pgm_pp14_8_s1:1 2.750001e+00
+2 pgm_pp14_8_s1:1 vs_24_14:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_0_s0 1.330547e-02
+*CONN
+*I lt_pp15_0_s0:Z O
+*I vs_9_15:A I
+*I vs_8_15:A I
+*CAP
+1 pgm_pp15_0_s0:1 1.330547e-02
+*RES
+1 lt_pp15_0_s0:Z pgm_pp15_0_s0:1 1.338265e+01
+2 pgm_pp15_0_s0:1 vs_9_15:A 1.000000e-03
+3 pgm_pp15_0_s0:1 vs_8_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_0_s1 1.654294e-02
+*CONN
+*I lt_pp15_0_s1:Z O
+*I vs_28_15:A I
+*CAP
+1 pgm_pp15_0_s1:1 1.654294e-02
+*RES
+1 lt_pp15_0_s1:Z pgm_pp15_0_s1:1 1.877263e+01
+2 pgm_pp15_0_s1:1 vs_28_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_0_s2 9.356376e-03
+*CONN
+*I lt_pp15_0_s2:Z O
+*I vs_38_15:A I
+*CAP
+1 pgm_pp15_0_s2:1 9.356376e-03
+*RES
+1 lt_pp15_0_s2:Z pgm_pp15_0_s2:1 8.901294e+00
+2 pgm_pp15_0_s2:1 vs_38_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_0_s3 1.060998e-02
+*CONN
+*I lt_pp15_0_s3:Z O
+*I vs_55_15:A I
+*CAP
+1 pgm_pp15_0_s3:1 1.060998e-02
+*RES
+1 lt_pp15_0_s3:Z pgm_pp15_0_s3:1 1.046784e+01
+2 pgm_pp15_0_s3:1 vs_55_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_1_s1 8.182591e-03
+*CONN
+*I lt_pp15_1_s1:Z O
+*I vs_22_15:A I
+*I vs_17_15:A I
+*CAP
+1 pgm_pp15_1_s1:1 8.182591e-03
+*RES
+1 lt_pp15_1_s1:Z pgm_pp15_1_s1:1 9.285457e+00
+2 pgm_pp15_1_s1:1 vs_22_15:A 1.000000e-03
+3 pgm_pp15_1_s1:1 vs_17_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_1_s2 1.820435e-02
+*CONN
+*I lt_pp15_1_s2:Z O
+*I vs_46_15:A I
+*I vs_43_15:A I
+*I vs_39_15:A I
+*I vs_35_15:A I
+*CAP
+1 pgm_pp15_1_s2:1 1.820435e-02
+*RES
+1 lt_pp15_1_s2:Z pgm_pp15_1_s2:1 1.951774e+01
+2 pgm_pp15_1_s2:1 vs_46_15:A 1.000000e-03
+3 pgm_pp15_1_s2:1 vs_43_15:A 1.000000e-03
+4 pgm_pp15_1_s2:1 vs_39_15:A 1.000000e-03
+5 pgm_pp15_1_s2:1 vs_35_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_1_s3 1.009640e-02
+*CONN
+*I lt_pp15_1_s3:Z O
+*I vs_56_15:A I
+*I vs_51_15:A I
+*CAP
+1 pgm_pp15_1_s3:1 1.009640e-02
+*RES
+1 lt_pp15_1_s3:Z pgm_pp15_1_s3:1 1.145722e+01
+2 pgm_pp15_1_s3:1 vs_56_15:A 1.000000e-03
+3 pgm_pp15_1_s3:1 vs_51_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_2_s1 8.342569e-03
+*CONN
+*I lt_pp15_2_s1:Z O
+*I vs_24_15:A I
+*CAP
+1 pgm_pp15_2_s1:1 8.342569e-03
+*RES
+1 lt_pp15_2_s1:Z pgm_pp15_2_s1:1 9.466998e+00
+2 pgm_pp15_2_s1:1 vs_24_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_2_s2 1.734875e-02
+*CONN
+*I lt_pp15_2_s2:Z O
+*I vs_47_15:A I
+*I vs_37_15:A I
+*CAP
+1 pgm_pp15_2_s2:1 1.734875e-02
+*RES
+1 lt_pp15_2_s2:Z pgm_pp15_2_s2:1 1.968705e+01
+2 pgm_pp15_2_s2:1 vs_47_15:A 1.000000e-03
+3 pgm_pp15_2_s2:1 vs_37_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_3_s2 2.832207e-03
+*CONN
+*I lt_pp15_3_s2:Z O
+*I vs_34_15:A I
+*CAP
+1 pgm_pp15_3_s2:1 2.832207e-03
+*RES
+1 lt_pp15_3_s2:Z pgm_pp15_3_s2:1 3.213938e+00
+2 pgm_pp15_3_s2:1 vs_34_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_5_s0 8.235917e-03
+*CONN
+*I lt_pp15_5_s0:Z O
+*I vs_0_15:A I
+*CAP
+1 pgm_pp15_5_s0:1 8.235917e-03
+*RES
+1 lt_pp15_5_s0:Z pgm_pp15_5_s0:1 9.345971e+00
+2 pgm_pp15_5_s0:1 vs_0_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_6_s0 1.362778e-04
+*CONN
+*I lt_pp15_6_s0:Z O
+*I vs_7_15:A I
+*CAP
+1 pgm_pp15_6_s0:1 1.362778e-04
+*RES
+1 lt_pp15_6_s0:Z pgm_pp15_6_s0:1 1.546456e-01
+2 pgm_pp15_6_s0:1 vs_7_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_7_s1 1.115700e-02
+*CONN
+*I lt_pp15_7_s1:Z O
+*I vs_16_15:A I
+*CAP
+1 pgm_pp15_7_s1:1 1.115700e-02
+*RES
+1 lt_pp15_7_s1:Z pgm_pp15_7_s1:1 1.266076e+01
+2 pgm_pp15_7_s1:1 vs_16_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp15_8_s1 2.070829e-03
+*CONN
+*I lt_pp15_8_s1:Z O
+*I vs_27_15:A I
+*CAP
+1 pgm_pp15_8_s1:1 2.070829e-03
+*RES
+1 lt_pp15_8_s1:Z pgm_pp15_8_s1:1 2.349940e+00
+2 pgm_pp15_8_s1:1 vs_27_15:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_0_s0 1.134885e-02
+*CONN
+*I lt_pp16_0_s0:Z O
+*I vs_7_16:A I
+*CAP
+1 pgm_pp16_0_s0:1 1.134885e-02
+*RES
+1 lt_pp16_0_s0:Z pgm_pp16_0_s0:1 1.073038e+01
+2 pgm_pp16_0_s0:1 vs_7_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_0_s3 1.930421e-02
+*CONN
+*I lt_pp16_0_s3:Z O
+*I vs_62_16:A I
+*CAP
+1 pgm_pp16_0_s3:1 1.930421e-02
+*RES
+1 lt_pp16_0_s3:Z pgm_pp16_0_s3:1 2.004594e+01
+2 pgm_pp16_0_s3:1 vs_62_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_1_s0 1.871333e-02
+*CONN
+*I lt_pp16_1_s0:Z O
+*I vs_14_16:A I
+*I vs_10_16:A I
+*CAP
+1 pgm_pp16_1_s0:1 1.871333e-02
+*RES
+1 lt_pp16_1_s0:Z pgm_pp16_1_s0:1 1.894348e+01
+2 pgm_pp16_1_s0:1 vs_14_16:A 1.000000e-03
+3 pgm_pp16_1_s0:1 vs_10_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_1_s2 1.247180e-02
+*CONN
+*I lt_pp16_1_s2:Z O
+*I vs_42_16:A I
+*CAP
+1 pgm_pp16_1_s2:1 1.247180e-02
+*RES
+1 lt_pp16_1_s2:Z pgm_pp16_1_s2:1 1.301254e+01
+2 pgm_pp16_1_s2:1 vs_42_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_2_s0 2.296259e-02
+*CONN
+*I lt_pp16_2_s0:Z O
+*I vs_13_16:A I
+*CAP
+1 pgm_pp16_2_s0:1 2.296259e-02
+*RES
+1 lt_pp16_2_s0:Z pgm_pp16_2_s0:1 1.830585e+01
+2 pgm_pp16_2_s0:1 vs_13_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_2_s1 1.667784e-03
+*CONN
+*I lt_pp16_2_s1:Z O
+*I vs_18_16:A I
+*CAP
+1 pgm_pp16_2_s1:1 1.667784e-03
+*RES
+1 lt_pp16_2_s1:Z pgm_pp16_2_s1:1 8.963154e-01
+2 pgm_pp16_2_s1:1 vs_18_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_2_s2 1.457283e-02
+*CONN
+*I lt_pp16_2_s2:Z O
+*I vs_45_16:A I
+*CAP
+1 pgm_pp16_2_s2:1 1.457283e-02
+*RES
+1 lt_pp16_2_s2:Z pgm_pp16_2_s2:1 1.653699e+01
+2 pgm_pp16_2_s2:1 vs_45_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_2_s3 4.443260e-03
+*CONN
+*I lt_pp16_2_s3:Z O
+*I vs_53_16:A I
+*CAP
+1 pgm_pp16_2_s3:1 4.443260e-03
+*RES
+1 lt_pp16_2_s3:Z pgm_pp16_2_s3:1 3.901896e+00
+2 pgm_pp16_2_s3:1 vs_53_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_4_s0 6.322103e-03
+*CONN
+*I lt_pp16_4_s0:Z O
+*I vs_0_16:A I
+*CAP
+1 pgm_pp16_4_s0:1 6.322103e-03
+*RES
+1 lt_pp16_4_s0:Z pgm_pp16_4_s0:1 7.174209e+00
+2 pgm_pp16_4_s0:1 vs_0_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_5_s0 6.452456e-03
+*CONN
+*I lt_pp16_5_s0:Z O
+*I vs_1_16:A I
+*CAP
+1 pgm_pp16_5_s0:1 6.452456e-03
+*RES
+1 lt_pp16_5_s0:Z pgm_pp16_5_s0:1 7.322131e+00
+2 pgm_pp16_5_s0:1 vs_1_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_5_s1 6.452456e-03
+*CONN
+*I lt_pp16_5_s1:Z O
+*I vs_17_16:A I
+*CAP
+1 pgm_pp16_5_s1:1 6.452456e-03
+*RES
+1 lt_pp16_5_s1:Z pgm_pp16_5_s1:1 7.322131e+00
+2 pgm_pp16_5_s1:1 vs_17_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_6_s1 1.036303e-02
+*CONN
+*I lt_pp16_6_s1:Z O
+*I vs_16_16:A I
+*CAP
+1 pgm_pp16_6_s1:1 1.036303e-02
+*RES
+1 lt_pp16_6_s1:Z pgm_pp16_6_s1:1 1.175979e+01
+2 pgm_pp16_6_s1:1 vs_16_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp16_6_s2 6.588733e-03
+*CONN
+*I lt_pp16_6_s2:Z O
+*I vs_44_16:A I
+*CAP
+1 pgm_pp16_6_s2:1 6.588733e-03
+*RES
+1 lt_pp16_6_s2:Z pgm_pp16_6_s2:1 7.476777e+00
+2 pgm_pp16_6_s2:1 vs_44_16:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_0_s0 5.730202e-03
+*CONN
+*I lt_pp17_0_s0:Z O
+*I vs_3_17:A I
+*CAP
+1 pgm_pp17_0_s0:1 5.730202e-03
+*RES
+1 lt_pp17_0_s0:Z pgm_pp17_0_s0:1 4.786378e+00
+2 pgm_pp17_0_s0:1 vs_3_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_1_s0 1.910259e-02
+*CONN
+*I lt_pp17_1_s0:Z O
+*I vs_15_17:A I
+*I vs_14_17:A I
+*I vs_5_17:A I
+*CAP
+1 pgm_pp17_1_s0:1 1.910259e-02
+*RES
+1 lt_pp17_1_s0:Z pgm_pp17_1_s0:1 2.167727e+01
+2 pgm_pp17_1_s0:1 vs_15_17:A 1.000000e-03
+3 pgm_pp17_1_s0:1 vs_14_17:A 1.000000e-03
+4 pgm_pp17_1_s0:1 vs_5_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_2_s0 7.269099e-03
+*CONN
+*I lt_pp17_2_s0:Z O
+*I vs_7_17:A I
+*CAP
+1 pgm_pp17_2_s0:1 7.269099e-03
+*RES
+1 lt_pp17_2_s0:Z pgm_pp17_2_s0:1 6.964629e+00
+2 pgm_pp17_2_s0:1 vs_7_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_2_s2 2.236595e-03
+*CONN
+*I lt_pp17_2_s2:Z O
+*I vs_34_17:A I
+*CAP
+1 pgm_pp17_2_s2:1 2.236595e-03
+*RES
+1 lt_pp17_2_s2:Z pgm_pp17_2_s2:1 1.541793e+00
+2 pgm_pp17_2_s2:1 vs_34_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_2_s3 1.377887e-02
+*CONN
+*I lt_pp17_2_s3:Z O
+*I vs_60_17:A I
+*I vs_53_17:A I
+*CAP
+1 pgm_pp17_2_s3:1 1.377887e-02
+*RES
+1 lt_pp17_2_s3:Z pgm_pp17_2_s3:1 1.563601e+01
+2 pgm_pp17_2_s3:1 vs_60_17:A 1.000000e-03
+3 pgm_pp17_2_s3:1 vs_53_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_3_s2 4.040932e-03
+*CONN
+*I lt_pp17_3_s2:Z O
+*I vs_33_17:A I
+*CAP
+1 pgm_pp17_3_s2:1 4.040932e-03
+*RES
+1 lt_pp17_3_s2:Z pgm_pp17_3_s2:1 4.585577e+00
+2 pgm_pp17_3_s2:1 vs_33_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_5_s2 2.690004e-03
+*CONN
+*I lt_pp17_5_s2:Z O
+*I vs_36_17:A I
+*CAP
+1 pgm_pp17_5_s2:1 2.690004e-03
+*RES
+1 lt_pp17_5_s2:Z pgm_pp17_5_s2:1 3.052569e+00
+2 pgm_pp17_5_s2:1 vs_36_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp17_5_s3 4.630481e-03
+*CONN
+*I lt_pp17_5_s3:Z O
+*I vs_55_17:A I
+*I vs_52_17:A I
+*CAP
+1 pgm_pp17_5_s3:1 4.630481e-03
+*RES
+1 lt_pp17_5_s3:Z pgm_pp17_5_s3:1 5.254587e+00
+2 pgm_pp17_5_s3:1 vs_55_17:A 1.000000e-03
+3 pgm_pp17_5_s3:1 vs_52_17:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_0_s2 1.751527e-02
+*CONN
+*I lt_pp18_0_s2:Z O
+*I vs_44_18:A I
+*CAP
+1 pgm_pp18_0_s2:1 1.751527e-02
+*RES
+1 lt_pp18_0_s2:Z pgm_pp18_0_s2:1 1.815986e+01
+2 pgm_pp18_0_s2:1 vs_44_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_0_s3 1.690454e-02
+*CONN
+*I lt_pp18_0_s3:Z O
+*I vs_59_18:A I
+*I vs_54_18:A I
+*CAP
+1 pgm_pp18_0_s3:1 1.690454e-02
+*RES
+1 lt_pp18_0_s3:Z pgm_pp18_0_s3:1 1.732283e+01
+2 pgm_pp18_0_s3:1 vs_59_18:A 1.000000e-03
+3 pgm_pp18_0_s3:1 vs_54_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_10_s0 1.540827e-02
+*CONN
+*I lt_pp18_10_s0:Z O
+*I vs_0_18:A I
+*CAP
+1 pgm_pp18_10_s0:1 1.540827e-02
+*RES
+1 lt_pp18_10_s0:Z pgm_pp18_10_s0:1 1.748503e+01
+2 pgm_pp18_10_s0:1 vs_0_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_1_s0 1.237758e-02
+*CONN
+*I lt_pp18_1_s0:Z O
+*I vs_10_18:A I
+*CAP
+1 pgm_pp18_1_s0:1 1.237758e-02
+*RES
+1 lt_pp18_1_s0:Z pgm_pp18_1_s0:1 1.404585e+01
+2 pgm_pp18_1_s0:1 vs_10_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_2_s0 2.435224e-03
+*CONN
+*I lt_pp18_2_s0:Z O
+*I vs_3_18:A I
+*CAP
+1 pgm_pp18_2_s0:1 2.435224e-03
+*RES
+1 lt_pp18_2_s0:Z pgm_pp18_2_s0:1 2.763449e+00
+2 pgm_pp18_2_s0:1 vs_3_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_2_s2 1.680364e-02
+*CONN
+*I lt_pp18_2_s2:Z O
+*I vs_47_18:A I
+*CAP
+1 pgm_pp18_2_s2:1 1.680364e-02
+*RES
+1 lt_pp18_2_s2:Z pgm_pp18_2_s2:1 1.906847e+01
+2 pgm_pp18_2_s2:1 vs_47_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_3_s0 4.040932e-03
+*CONN
+*I lt_pp18_3_s0:Z O
+*I vs_6_18:A I
+*CAP
+1 pgm_pp18_3_s0:1 4.040932e-03
+*RES
+1 lt_pp18_3_s0:Z pgm_pp18_3_s0:1 4.585577e+00
+2 pgm_pp18_3_s0:1 vs_6_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_3_s2 1.003419e-02
+*CONN
+*I lt_pp18_3_s2:Z O
+*I vs_43_18:A I
+*CAP
+1 pgm_pp18_3_s2:1 1.003419e-02
+*RES
+1 lt_pp18_3_s2:Z pgm_pp18_3_s2:1 1.138662e+01
+2 pgm_pp18_3_s2:1 vs_43_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_7_s1 3.955018e-03
+*CONN
+*I lt_pp18_7_s1:Z O
+*I vs_27_18:A I
+*CAP
+1 pgm_pp18_7_s1:1 3.955018e-03
+*RES
+1 lt_pp18_7_s1:Z pgm_pp18_7_s1:1 4.488083e+00
+2 pgm_pp18_7_s1:1 vs_27_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp18_8_s2 7.207908e-03
+*CONN
+*I lt_pp18_8_s2:Z O
+*I vs_36_18:A I
+*CAP
+1 pgm_pp18_8_s2:1 7.207908e-03
+*RES
+1 lt_pp18_8_s2:Z pgm_pp18_8_s2:1 8.179405e+00
+2 pgm_pp18_8_s2:1 vs_36_18:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_0_s0 1.302195e-02
+*CONN
+*I lt_pp19_0_s0:Z O
+*I vs_9_19:A I
+*CAP
+1 pgm_pp19_0_s0:1 1.302195e-02
+*RES
+1 lt_pp19_0_s0:Z pgm_pp19_0_s0:1 1.334888e+01
+2 pgm_pp19_0_s0:1 vs_9_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_0_s1 1.635333e-03
+*CONN
+*I lt_pp19_0_s1:Z O
+*I vs_16_19:A I
+*CAP
+1 pgm_pp19_0_s1:1 1.635333e-03
+*RES
+1 lt_pp19_0_s1:Z pgm_pp19_0_s1:1 1.855747e+00
+2 pgm_pp19_0_s1:1 vs_16_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_1_s1 1.269903e-02
+*CONN
+*I lt_pp19_1_s1:Z O
+*I vs_26_19:A I
+*CAP
+1 pgm_pp19_1_s1:1 1.269903e-02
+*RES
+1 lt_pp19_1_s1:Z pgm_pp19_1_s1:1 1.298244e+01
+2 pgm_pp19_1_s1:1 vs_26_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_1_s2 1.628815e-02
+*CONN
+*I lt_pp19_1_s2:Z O
+*I vs_44_19:A I
+*I vs_36_19:A I
+*I vs_34_19:A I
+*CAP
+1 pgm_pp19_1_s2:1 1.628815e-02
+*RES
+1 lt_pp19_1_s2:Z pgm_pp19_1_s2:1 1.848351e+01
+2 pgm_pp19_1_s2:1 vs_44_19:A 1.000000e-03
+3 pgm_pp19_1_s2:1 vs_36_19:A 1.000000e-03
+4 pgm_pp19_1_s2:1 vs_34_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_2_s0 1.832936e-02
+*CONN
+*I lt_pp19_2_s0:Z O
+*I vs_15_19:A I
+*I vs_5_19:A I
+*CAP
+1 pgm_pp19_2_s0:1 1.832936e-02
+*RES
+1 lt_pp19_2_s0:Z pgm_pp19_2_s0:1 2.079983e+01
+2 pgm_pp19_2_s0:1 vs_15_19:A 1.000000e-03
+3 pgm_pp19_2_s0:1 vs_5_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_2_s1 6.111761e-03
+*CONN
+*I lt_pp19_2_s1:Z O
+*I vs_22_19:A I
+*I vs_19_19:A I
+*CAP
+1 pgm_pp19_2_s1:1 6.111761e-03
+*RES
+1 lt_pp19_2_s1:Z pgm_pp19_2_s1:1 6.935517e+00
+2 pgm_pp19_2_s1:1 vs_22_19:A 1.000000e-03
+3 pgm_pp19_2_s1:1 vs_19_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_2_s2 1.845675e-03
+*CONN
+*I lt_pp19_2_s2:Z O
+*I vs_35_19:A I
+*CAP
+1 pgm_pp19_2_s2:1 1.845675e-03
+*RES
+1 lt_pp19_2_s2:Z pgm_pp19_2_s2:1 2.094439e+00
+2 pgm_pp19_2_s2:1 vs_35_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_4_s0 1.300564e-03
+*CONN
+*I lt_pp19_4_s0:Z O
+*I vs_4_19:A I
+*CAP
+1 pgm_pp19_4_s0:1 1.300564e-03
+*RES
+1 lt_pp19_4_s0:Z pgm_pp19_4_s0:1 1.475857e+00
+2 pgm_pp19_4_s0:1 vs_4_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_6_s2 1.126365e-02
+*CONN
+*I lt_pp19_6_s2:Z O
+*I vs_47_19:A I
+*CAP
+1 pgm_pp19_6_s2:1 1.126365e-02
+*RES
+1 lt_pp19_6_s2:Z pgm_pp19_6_s2:1 1.278179e+01
+2 pgm_pp19_6_s2:1 vs_47_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp19_8_s0 5.697003e-03
+*CONN
+*I lt_pp19_8_s0:Z O
+*I vs_14_19:A I
+*CAP
+1 pgm_pp19_8_s0:1 5.697003e-03
+*RES
+1 lt_pp19_8_s0:Z pgm_pp19_8_s0:1 6.464857e+00
+2 pgm_pp19_8_s0:1 vs_14_19:A 1.000000e-03
+*END
+
+*D_NET pgm_pp1_0_s2 6.938927e-03
+*CONN
+*I lt_pp1_0_s2:Z O
+*I vs_36_1:A I
+*CAP
+1 pgm_pp1_0_s2:1 6.938927e-03
+*RES
+1 lt_pp1_0_s2:Z pgm_pp1_0_s2:1 6.158017e+00
+2 pgm_pp1_0_s2:1 vs_36_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pp1_1_s0 8.973594e-03
+*CONN
+*I lt_pp1_1_s0:Z O
+*I vs_7_1:A I
+*I vs_4_1:A I
+*I vs_2_1:A I
+*CAP
+1 pgm_pp1_1_s0:1 8.973594e-03
+*RES
+1 lt_pp1_1_s0:Z pgm_pp1_1_s0:1 1.018307e+01
+2 pgm_pp1_1_s0:1 vs_7_1:A 1.000000e-03
+3 pgm_pp1_1_s0:1 vs_4_1:A 1.000000e-03
+4 pgm_pp1_1_s0:1 vs_2_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pp1_1_s1 1.896382e-02
+*CONN
+*I lt_pp1_1_s1:Z O
+*I vs_29_1:A I
+*CAP
+1 pgm_pp1_1_s1:1 1.896382e-02
+*RES
+1 lt_pp1_1_s1:Z pgm_pp1_1_s1:1 1.879579e+01
+2 pgm_pp1_1_s1:1 vs_29_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pp1_2_s0 8.386427e-03
+*CONN
+*I lt_pp1_2_s0:Z O
+*I vs_8_1:A I
+*CAP
+1 pgm_pp1_2_s0:1 8.386427e-03
+*RES
+1 lt_pp1_2_s0:Z pgm_pp1_2_s0:1 8.376532e+00
+2 pgm_pp1_2_s0:1 vs_8_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pp1_2_s2 1.387367e-02
+*CONN
+*I lt_pp1_2_s2:Z O
+*I vs_44_1:A I
+*I vs_38_1:A I
+*CAP
+1 pgm_pp1_2_s2:1 1.387367e-02
+*RES
+1 lt_pp1_2_s2:Z pgm_pp1_2_s2:1 1.574359e+01
+2 pgm_pp1_2_s2:1 vs_44_1:A 1.000000e-03
+3 pgm_pp1_2_s2:1 vs_38_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pp1_5_s0 1.142363e-02
+*CONN
+*I lt_pp1_5_s0:Z O
+*I vs_15_1:A I
+*CAP
+1 pgm_pp1_5_s0:1 1.142363e-02
+*RES
+1 lt_pp1_5_s0:Z pgm_pp1_5_s0:1 1.296333e+01
+2 pgm_pp1_5_s0:1 vs_15_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pp1_6_s2 5.329645e-03
+*CONN
+*I lt_pp1_6_s2:Z O
+*I vs_43_1:A I
+*CAP
+1 pgm_pp1_6_s2:1 5.329645e-03
+*RES
+1 lt_pp1_6_s2:Z pgm_pp1_6_s2:1 6.047986e+00
+2 pgm_pp1_6_s2:1 vs_43_1:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_0_s0 2.241534e-02
+*CONN
+*I lt_pp20_0_s0:Z O
+*I vs_15_20:A I
+*I vs_8_20:A I
+*CAP
+1 pgm_pp20_0_s0:1 2.241534e-02
+*RES
+1 lt_pp20_0_s0:Z pgm_pp20_0_s0:1 2.372037e+01
+2 pgm_pp20_0_s0:1 vs_15_20:A 1.000000e-03
+3 pgm_pp20_0_s0:1 vs_8_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_0_s1 1.097393e-02
+*CONN
+*I lt_pp20_0_s1:Z O
+*I vs_23_20:A I
+*I vs_18_20:A I
+*CAP
+1 pgm_pp20_0_s1:1 1.097393e-02
+*RES
+1 lt_pp20_0_s1:Z pgm_pp20_0_s1:1 1.073687e+01
+2 pgm_pp20_0_s1:1 vs_23_20:A 1.000000e-03
+3 pgm_pp20_0_s1:1 vs_18_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_0_s2 1.084280e-02
+*CONN
+*I lt_pp20_0_s2:Z O
+*I vs_38_20:A I
+*I vs_32_20:A I
+*CAP
+1 pgm_pp20_0_s2:1 1.084280e-02
+*RES
+1 lt_pp20_0_s2:Z pgm_pp20_0_s2:1 1.091984e+01
+2 pgm_pp20_0_s2:1 vs_38_20:A 1.000000e-03
+3 pgm_pp20_0_s2:1 vs_32_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_0_s3 1.511678e-02
+*CONN
+*I lt_pp20_0_s3:Z O
+*I vs_58_20:A I
+*CAP
+1 pgm_pp20_0_s3:1 1.511678e-02
+*RES
+1 lt_pp20_0_s3:Z pgm_pp20_0_s3:1 1.486218e+01
+2 pgm_pp20_0_s3:1 vs_58_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_1_s0 1.975737e-02
+*CONN
+*I lt_pp20_1_s0:Z O
+*I vs_12_20:A I
+*CAP
+1 pgm_pp20_1_s0:1 1.975737e-02
+*RES
+1 lt_pp20_1_s0:Z pgm_pp20_1_s0:1 1.668434e+01
+2 pgm_pp20_1_s0:1 vs_12_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_1_s1 1.627038e-02
+*CONN
+*I lt_pp20_1_s1:Z O
+*I vs_29_20:A I
+*CAP
+1 pgm_pp20_1_s1:1 1.627038e-02
+*RES
+1 lt_pp20_1_s1:Z pgm_pp20_1_s1:1 1.846334e+01
+2 pgm_pp20_1_s1:1 vs_29_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_1_s2 1.632074e-02
+*CONN
+*I lt_pp20_1_s2:Z O
+*I vs_45_20:A I
+*CAP
+1 pgm_pp20_1_s2:1 1.632074e-02
+*RES
+1 lt_pp20_1_s2:Z pgm_pp20_1_s2:1 1.852049e+01
+2 pgm_pp20_1_s2:1 vs_45_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_2_s0 1.493130e-02
+*CONN
+*I lt_pp20_2_s0:Z O
+*I vs_13_20:A I
+*I vs_10_20:A I
+*CAP
+1 pgm_pp20_2_s0:1 1.493130e-02
+*RES
+1 lt_pp20_2_s0:Z pgm_pp20_2_s0:1 1.694377e+01
+2 pgm_pp20_2_s0:1 vs_13_20:A 1.000000e-03
+3 pgm_pp20_2_s0:1 vs_10_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_2_s1 1.317747e-02
+*CONN
+*I lt_pp20_2_s1:Z O
+*I vs_28_20:A I
+*CAP
+1 pgm_pp20_2_s1:1 1.317747e-02
+*RES
+1 lt_pp20_2_s1:Z pgm_pp20_2_s1:1 1.495355e+01
+2 pgm_pp20_2_s1:1 vs_28_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_2_s2 8.434408e-03
+*CONN
+*I lt_pp20_2_s2:Z O
+*I vs_40_20:A I
+*I vs_36_20:A I
+*CAP
+1 pgm_pp20_2_s2:1 8.434408e-03
+*RES
+1 lt_pp20_2_s2:Z pgm_pp20_2_s2:1 9.571215e+00
+2 pgm_pp20_2_s2:1 vs_40_20:A 1.000000e-03
+3 pgm_pp20_2_s2:1 vs_36_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_2_s3 1.901667e-02
+*CONN
+*I lt_pp20_2_s3:Z O
+*I vs_62_20:A I
+*I vs_48_20:A I
+*CAP
+1 pgm_pp20_2_s3:1 1.901667e-02
+*RES
+1 lt_pp20_2_s3:Z pgm_pp20_2_s3:1 2.157978e+01
+2 pgm_pp20_2_s3:1 vs_62_20:A 1.000000e-03
+3 pgm_pp20_2_s3:1 vs_48_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_3_s1 6.458381e-03
+*CONN
+*I lt_pp20_3_s1:Z O
+*I vs_24_20:A I
+*CAP
+1 pgm_pp20_3_s1:1 6.458381e-03
+*RES
+1 lt_pp20_3_s1:Z pgm_pp20_3_s1:1 7.328855e+00
+2 pgm_pp20_3_s1:1 vs_24_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_3_s3 1.623483e-03
+*CONN
+*I lt_pp20_3_s3:Z O
+*I vs_52_20:A I
+*CAP
+1 pgm_pp20_3_s3:1 1.623483e-03
+*RES
+1 lt_pp20_3_s3:Z pgm_pp20_3_s3:1 1.842299e+00
+2 pgm_pp20_3_s3:1 vs_52_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_4_s2 4.058501e-03
+*CONN
+*I lt_pp20_4_s2:Z O
+*I vs_34_20:A I
+*CAP
+1 pgm_pp20_4_s2:1 4.058501e-03
+*RES
+1 lt_pp20_4_s2:Z pgm_pp20_4_s2:1 2.833021e+00
+2 pgm_pp20_4_s2:1 vs_34_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp20_5_s1 6.316178e-03
+*CONN
+*I lt_pp20_5_s1:Z O
+*I vs_17_20:A I
+*CAP
+1 pgm_pp20_5_s1:1 6.316178e-03
+*RES
+1 lt_pp20_5_s1:Z pgm_pp20_5_s1:1 7.167486e+00
+2 pgm_pp20_5_s1:1 vs_17_20:A 1.000000e-03
+*END
+
+*D_NET pgm_pp21_0_s0 1.673846e-03
+*CONN
+*I lt_pp21_0_s0:Z O
+*I vs_4_21:A I
+*CAP
+1 pgm_pp21_0_s0:1 1.673846e-03
+*RES
+1 lt_pp21_0_s0:Z pgm_pp21_0_s0:1 1.899451e+00
+2 pgm_pp21_0_s0:1 vs_4_21:A 1.000000e-03
+*END
+
+*D_NET pgm_pp21_0_s1 1.063559e-02
+*CONN
+*I lt_pp21_0_s1:Z O
+*I vs_23_21:A I
+*I vs_21_21:A I
+*I vs_16_21:A I
+*CAP
+1 pgm_pp21_0_s1:1 1.063559e-02
+*RES
+1 lt_pp21_0_s1:Z pgm_pp21_0_s1:1 1.206908e+01
+2 pgm_pp21_0_s1:1 vs_23_21:A 1.000000e-03
+3 pgm_pp21_0_s1:1 vs_21_21:A 1.000000e-03
+4 pgm_pp21_0_s1:1 vs_16_21:A 1.000000e-03
+*END
+
+*D_NET pgm_pp21_0_s2 9.249112e-03
+*CONN
+*I lt_pp21_0_s2:Z O
+*I vs_41_21:A I
+*I vs_39_21:A I
+*I vs_35_21:A I
+*CAP
+1 pgm_pp21_0_s2:1 9.249112e-03
+*RES
+1 lt_pp21_0_s2:Z pgm_pp21_0_s2:1 1.049573e+01
+2 pgm_pp21_0_s2:1 vs_41_21:A 1.000000e-03
+3 pgm_pp21_0_s2:1 vs_39_21:A 1.000000e-03
+4 pgm_pp21_0_s2:1 vs_35_21:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_0_s0 2.038241e-03
+*CONN
+*I lt_pp2_0_s0:Z O
+*I vs_0_2:A I
+*CAP
+1 pgm_pp2_0_s0:1 2.038241e-03
+*RES
+1 lt_pp2_0_s0:Z pgm_pp2_0_s0:1 2.312960e+00
+2 pgm_pp2_0_s0:1 vs_0_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_0_s1 2.455666e-02
+*CONN
+*I lt_pp2_0_s1:Z O
+*I vs_31_2:A I
+*I vs_22_2:A I
+*I vs_20_2:A I
+*I vs_17_2:A I
+*CAP
+1 pgm_pp2_0_s1:1 2.455666e-02
+*RES
+1 lt_pp2_0_s1:Z pgm_pp2_0_s1:1 2.786646e+01
+2 pgm_pp2_0_s1:1 vs_31_2:A 1.000000e-03
+3 pgm_pp2_0_s1:1 vs_22_2:A 1.000000e-03
+4 pgm_pp2_0_s1:1 vs_20_2:A 1.000000e-03
+5 pgm_pp2_0_s1:1 vs_17_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_0_s2 2.337981e-02
+*CONN
+*I lt_pp2_0_s2:Z O
+*I vs_47_2:A I
+*I vs_37_2:A I
+*CAP
+1 pgm_pp2_0_s2:1 2.337981e-02
+*RES
+1 lt_pp2_0_s2:Z pgm_pp2_0_s2:1 2.438289e+01
+2 pgm_pp2_0_s2:1 vs_47_2:A 1.000000e-03
+3 pgm_pp2_0_s2:1 vs_37_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_0_s3 2.185276e-02
+*CONN
+*I lt_pp2_0_s3:Z O
+*I vs_63_2:A I
+*CAP
+1 pgm_pp2_0_s3:1 2.185276e-02
+*RES
+1 lt_pp2_0_s3:Z pgm_pp2_0_s3:1 2.221809e+01
+2 pgm_pp2_0_s3:1 vs_63_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_1_s1 8.211942e-03
+*CONN
+*I lt_pp2_1_s1:Z O
+*I vs_19_2:A I
+*I vs_16_2:A I
+*CAP
+1 pgm_pp2_1_s1:1 8.211942e-03
+*RES
+1 lt_pp2_1_s1:Z pgm_pp2_1_s1:1 7.314652e+00
+2 pgm_pp2_1_s1:1 vs_19_2:A 1.000000e-03
+3 pgm_pp2_1_s1:1 vs_16_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_1_s2 2.027259e-02
+*CONN
+*I lt_pp2_1_s2:Z O
+*I vs_46_2:A I
+*I vs_41_2:A I
+*I vs_35_2:A I
+*CAP
+1 pgm_pp2_1_s2:1 2.027259e-02
+*RES
+1 lt_pp2_1_s2:Z pgm_pp2_1_s2:1 2.123248e+01
+2 pgm_pp2_1_s2:1 vs_46_2:A 1.000000e-03
+3 pgm_pp2_1_s2:1 vs_41_2:A 1.000000e-03
+4 pgm_pp2_1_s2:1 vs_35_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_2_s0 1.090222e-03
+*CONN
+*I lt_pp2_2_s0:Z O
+*I vs_2_2:A I
+*CAP
+1 pgm_pp2_2_s0:1 1.090222e-03
+*RES
+1 lt_pp2_2_s0:Z pgm_pp2_2_s0:1 1.237164e+00
+2 pgm_pp2_2_s0:1 vs_2_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_2_s3 1.262643e-02
+*CONN
+*I lt_pp2_2_s3:Z O
+*I vs_54_2:A I
+*I vs_48_2:A I
+*CAP
+1 pgm_pp2_2_s3:1 1.262643e-02
+*RES
+1 lt_pp2_2_s3:Z pgm_pp2_2_s3:1 1.432825e+01
+2 pgm_pp2_2_s3:1 vs_54_2:A 1.000000e-03
+3 pgm_pp2_2_s3:1 vs_48_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_3_s3 2.781844e-03
+*CONN
+*I lt_pp2_3_s3:Z O
+*I vs_53_2:A I
+*CAP
+1 pgm_pp2_3_s3:1 2.781844e-03
+*RES
+1 lt_pp2_3_s3:Z pgm_pp2_3_s3:1 3.156787e+00
+2 pgm_pp2_3_s3:1 vs_53_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_7_s0 4.165359e-03
+*CONN
+*I lt_pp2_7_s0:Z O
+*I vs_5_2:A I
+*CAP
+1 pgm_pp2_7_s0:1 4.165359e-03
+*RES
+1 lt_pp2_7_s0:Z pgm_pp2_7_s0:1 4.726775e+00
+2 pgm_pp2_7_s0:1 vs_5_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp2_7_s1 6.935353e-03
+*CONN
+*I lt_pp2_7_s1:Z O
+*I vs_30_2:A I
+*CAP
+1 pgm_pp2_7_s1:1 6.935353e-03
+*RES
+1 lt_pp2_7_s1:Z pgm_pp2_7_s1:1 7.870114e+00
+2 pgm_pp2_7_s1:1 vs_30_2:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_0_s0 1.914703e-02
+*CONN
+*I lt_pp3_0_s0:Z O
+*I vs_14_3:A I
+*CAP
+1 pgm_pp3_0_s0:1 1.914703e-02
+*RES
+1 lt_pp3_0_s0:Z pgm_pp3_0_s0:1 2.172770e+01
+2 pgm_pp3_0_s0:1 vs_14_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_0_s1 1.788794e-02
+*CONN
+*I lt_pp3_0_s1:Z O
+*I vs_29_3:A I
+*CAP
+1 pgm_pp3_0_s1:1 1.788794e-02
+*RES
+1 lt_pp3_0_s1:Z pgm_pp3_0_s1:1 2.029891e+01
+2 pgm_pp3_0_s1:1 vs_29_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_0_s2 2.138968e-02
+*CONN
+*I lt_pp3_0_s2:Z O
+*I vs_47_3:A I
+*I vs_45_3:A I
+*I vs_33_3:A I
+*CAP
+1 pgm_pp3_0_s2:1 2.138968e-02
+*RES
+1 lt_pp3_0_s2:Z pgm_pp3_0_s2:1 2.427263e+01
+2 pgm_pp3_0_s2:1 vs_47_3:A 1.000000e-03
+3 pgm_pp3_0_s2:1 vs_45_3:A 1.000000e-03
+4 pgm_pp3_0_s2:1 vs_33_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_0_s3 1.909666e-02
+*CONN
+*I lt_pp3_0_s3:Z O
+*I vs_62_3:A I
+*CAP
+1 pgm_pp3_0_s3:1 1.909666e-02
+*RES
+1 lt_pp3_0_s3:Z pgm_pp3_0_s3:1 2.167055e+01
+2 pgm_pp3_0_s3:1 vs_62_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_1_s1 8.677338e-03
+*CONN
+*I lt_pp3_1_s1:Z O
+*I vs_22_3:A I
+*I vs_21_3:A I
+*I vs_20_3:A I
+*CAP
+1 pgm_pp3_1_s1:1 8.677338e-03
+*RES
+1 lt_pp3_1_s1:Z pgm_pp3_1_s1:1 9.846888e+00
+2 pgm_pp3_1_s1:1 vs_22_3:A 1.000000e-03
+3 pgm_pp3_1_s1:1 vs_21_3:A 1.000000e-03
+4 pgm_pp3_1_s1:1 vs_20_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_1_s3 1.116885e-02
+*CONN
+*I lt_pp3_1_s3:Z O
+*I vs_57_3:A I
+*CAP
+1 pgm_pp3_1_s3:1 1.116885e-02
+*RES
+1 lt_pp3_1_s3:Z pgm_pp3_1_s3:1 1.267421e+01
+2 pgm_pp3_1_s3:1 vs_57_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_2_s0 9.737935e-03
+*CONN
+*I lt_pp3_2_s0:Z O
+*I vs_9_3:A I
+*CAP
+1 pgm_pp3_2_s0:1 9.737935e-03
+*RES
+1 lt_pp3_2_s0:Z pgm_pp3_2_s0:1 1.105043e+01
+2 pgm_pp3_2_s0:1 vs_9_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_2_s1 2.082680e-03
+*CONN
+*I lt_pp3_2_s1:Z O
+*I vs_19_3:A I
+*CAP
+1 pgm_pp3_2_s1:1 2.082680e-03
+*RES
+1 lt_pp3_2_s1:Z pgm_pp3_2_s1:1 2.363388e+00
+2 pgm_pp3_2_s1:1 vs_19_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_2_s2 3.377318e-03
+*CONN
+*I lt_pp3_2_s2:Z O
+*I vs_36_3:A I
+*I vs_35_3:A I
+*CAP
+1 pgm_pp3_2_s2:1 3.377318e-03
+*RES
+1 lt_pp3_2_s2:Z pgm_pp3_2_s2:1 3.832520e+00
+2 pgm_pp3_2_s2:1 vs_36_3:A 1.000000e-03
+3 pgm_pp3_2_s2:1 vs_35_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp3_2_s3 2.838132e-03
+*CONN
+*I lt_pp3_2_s3:Z O
+*I vs_49_3:A I
+*CAP
+1 pgm_pp3_2_s3:1 2.838132e-03
+*RES
+1 lt_pp3_2_s3:Z pgm_pp3_2_s3:1 3.220662e+00
+2 pgm_pp3_2_s3:1 vs_49_3:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_0_s0 1.928330e-02
+*CONN
+*I lt_pp4_0_s0:Z O
+*I vs_14_4:A I
+*CAP
+1 pgm_pp4_0_s0:1 1.928330e-02
+*RES
+1 lt_pp4_0_s0:Z pgm_pp4_0_s0:1 2.188235e+01
+2 pgm_pp4_0_s0:1 vs_14_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_12_s3 1.439212e-02
+*CONN
+*I lt_pp4_12_s3:Z O
+*I vs_52_4:A I
+*CAP
+1 pgm_pp4_12_s3:1 1.439212e-02
+*RES
+1 lt_pp4_12_s3:Z pgm_pp4_12_s3:1 1.633192e+01
+2 pgm_pp4_12_s3:1 vs_52_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_1_s0 1.549732e-02
+*CONN
+*I lt_pp4_1_s0:Z O
+*I vs_12_4:A I
+*I vs_6_4:A I
+*CAP
+1 pgm_pp4_1_s0:1 1.549732e-02
+*RES
+1 lt_pp4_1_s0:Z pgm_pp4_1_s0:1 1.572595e+01
+2 pgm_pp4_1_s0:1 vs_12_4:A 1.000000e-03
+3 pgm_pp4_1_s0:1 vs_6_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_1_s1 1.054968e-02
+*CONN
+*I lt_pp4_1_s1:Z O
+*I vs_24_4:A I
+*I vs_17_4:A I
+*CAP
+1 pgm_pp4_1_s1:1 1.054968e-02
+*RES
+1 lt_pp4_1_s1:Z pgm_pp4_1_s1:1 1.197158e+01
+2 pgm_pp4_1_s1:1 vs_24_4:A 1.000000e-03
+3 pgm_pp4_1_s1:1 vs_17_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_1_s3 2.621866e-03
+*CONN
+*I lt_pp4_1_s3:Z O
+*I vs_50_4:A I
+*CAP
+1 pgm_pp4_1_s3:1 2.621866e-03
+*RES
+1 lt_pp4_1_s3:Z pgm_pp4_1_s3:1 2.975246e+00
+2 pgm_pp4_1_s3:1 vs_50_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_2_s0 1.014677e-02
+*CONN
+*I lt_pp4_2_s0:Z O
+*I vs_9_4:A I
+*CAP
+1 pgm_pp4_2_s0:1 1.014677e-02
+*RES
+1 lt_pp4_2_s0:Z pgm_pp4_2_s0:1 1.151437e+01
+2 pgm_pp4_2_s0:1 vs_9_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_2_s1 1.946402e-03
+*CONN
+*I lt_pp4_2_s1:Z O
+*I vs_19_4:A I
+*CAP
+1 pgm_pp4_2_s1:1 1.946402e-03
+*RES
+1 lt_pp4_2_s1:Z pgm_pp4_2_s1:1 2.208742e+00
+2 pgm_pp4_2_s1:1 vs_19_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_2_s2 8.434408e-03
+*CONN
+*I lt_pp4_2_s2:Z O
+*I vs_40_4:A I
+*I vs_36_4:A I
+*CAP
+1 pgm_pp4_2_s2:1 8.434408e-03
+*RES
+1 lt_pp4_2_s2:Z pgm_pp4_2_s2:1 9.571215e+00
+2 pgm_pp4_2_s2:1 vs_40_4:A 1.000000e-03
+3 pgm_pp4_2_s2:1 vs_36_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_2_s3 1.085186e-02
+*CONN
+*I lt_pp4_2_s3:Z O
+*I vs_58_4:A I
+*I vs_56_4:A I
+*CAP
+1 pgm_pp4_2_s3:1 1.085186e-02
+*RES
+1 lt_pp4_2_s3:Z pgm_pp4_2_s3:1 1.231449e+01
+2 pgm_pp4_2_s3:1 vs_58_4:A 1.000000e-03
+3 pgm_pp4_2_s3:1 vs_56_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_4_s0 1.300564e-03
+*CONN
+*I lt_pp4_4_s0:Z O
+*I vs_4_4:A I
+*CAP
+1 pgm_pp4_4_s0:1 1.300564e-03
+*RES
+1 lt_pp4_4_s0:Z pgm_pp4_4_s0:1 1.475857e+00
+2 pgm_pp4_4_s0:1 vs_4_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp4_4_s3 1.000457e-02
+*CONN
+*I lt_pp4_4_s3:Z O
+*I vs_60_4:A I
+*CAP
+1 pgm_pp4_4_s3:1 1.000457e-02
+*RES
+1 lt_pp4_4_s3:Z pgm_pp4_4_s3:1 1.135300e+01
+2 pgm_pp4_4_s3:1 vs_60_4:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_0_s0 1.567255e-02
+*CONN
+*I lt_pp5_0_s0:Z O
+*I vs_11_5:A I
+*I vs_8_5:A I
+*CAP
+1 pgm_pp5_0_s0:1 1.567255e-02
+*RES
+1 lt_pp5_0_s0:Z pgm_pp5_0_s0:1 1.606878e+01
+2 pgm_pp5_0_s0:1 vs_11_5:A 1.000000e-03
+3 pgm_pp5_0_s0:1 vs_8_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_0_s1 1.473638e-02
+*CONN
+*I lt_pp5_0_s1:Z O
+*I vs_26_5:A I
+*CAP
+1 pgm_pp5_0_s1:1 1.473638e-02
+*RES
+1 lt_pp5_0_s1:Z pgm_pp5_0_s1:1 1.500643e+01
+2 pgm_pp5_0_s1:1 vs_26_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_0_s2 2.370641e-02
+*CONN
+*I lt_pp5_0_s2:Z O
+*I vs_47_5:A I
+*I vs_37_5:A I
+*CAP
+1 pgm_pp5_0_s2:1 2.370641e-02
+*RES
+1 lt_pp5_0_s2:Z pgm_pp5_0_s2:1 2.690160e+01
+2 pgm_pp5_0_s2:1 vs_47_5:A 1.000000e-03
+3 pgm_pp5_0_s2:1 vs_37_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_0_s3 8.369843e-03
+*CONN
+*I lt_pp5_0_s3:Z O
+*I vs_53_5:A I
+*CAP
+1 pgm_pp5_0_s3:1 8.369843e-03
+*RES
+1 lt_pp5_0_s3:Z pgm_pp5_0_s3:1 7.781795e+00
+2 pgm_pp5_0_s3:1 vs_53_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_1_s0 6.585771e-03
+*CONN
+*I lt_pp5_1_s0:Z O
+*I vs_5_5:A I
+*I vs_3_5:A I
+*CAP
+1 pgm_pp5_1_s0:1 6.585771e-03
+*RES
+1 lt_pp5_1_s0:Z pgm_pp5_1_s0:1 7.473415e+00
+2 pgm_pp5_1_s0:1 vs_5_5:A 1.000000e-03
+3 pgm_pp5_1_s0:1 vs_3_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_1_s1 2.125933e-02
+*CONN
+*I lt_pp5_1_s1:Z O
+*I vs_31_5:A I
+*I vs_16_5:A I
+*CAP
+1 pgm_pp5_1_s1:1 2.125933e-02
+*RES
+1 lt_pp5_1_s1:Z pgm_pp5_1_s1:1 2.412471e+01
+2 pgm_pp5_1_s1:1 vs_31_5:A 1.000000e-03
+3 pgm_pp5_1_s1:1 vs_16_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_1_s2 1.488244e-02
+*CONN
+*I lt_pp5_1_s2:Z O
+*I vs_42_5:A I
+*CAP
+1 pgm_pp5_1_s2:1 1.488244e-02
+*RES
+1 lt_pp5_1_s2:Z pgm_pp5_1_s2:1 1.546013e+01
+2 pgm_pp5_1_s2:1 vs_42_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_2_s1 1.009538e-02
+*CONN
+*I lt_pp5_2_s1:Z O
+*I vs_25_5:A I
+*CAP
+1 pgm_pp5_2_s1:1 1.009538e-02
+*RES
+1 lt_pp5_2_s1:Z pgm_pp5_2_s1:1 1.017184e+01
+2 pgm_pp5_2_s1:1 vs_25_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_2_s2 6.730936e-03
+*CONN
+*I lt_pp5_2_s2:Z O
+*I vs_39_5:A I
+*CAP
+1 pgm_pp5_2_s2:1 6.730936e-03
+*RES
+1 lt_pp5_2_s2:Z pgm_pp5_2_s2:1 7.638146e+00
+2 pgm_pp5_2_s2:1 vs_39_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_6_s2 9.390735e-03
+*CONN
+*I lt_pp5_6_s2:Z O
+*I vs_45_5:A I
+*CAP
+1 pgm_pp5_6_s2:1 9.390735e-03
+*RES
+1 lt_pp5_6_s2:Z pgm_pp5_6_s2:1 9.516203e+00
+2 pgm_pp5_6_s2:1 vs_45_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp5_8_s0 5.697003e-03
+*CONN
+*I lt_pp5_8_s0:Z O
+*I vs_14_5:A I
+*CAP
+1 pgm_pp5_8_s0:1 5.697003e-03
+*RES
+1 lt_pp5_8_s0:Z pgm_pp5_8_s0:1 6.464857e+00
+2 pgm_pp5_8_s0:1 vs_14_5:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_0_s0 1.669699e-02
+*CONN
+*I lt_pp6_0_s0:Z O
+*I vs_11_6:A I
+*I vs_0_6:A I
+*CAP
+1 pgm_pp6_0_s0:1 1.669699e-02
+*RES
+1 lt_pp6_0_s0:Z pgm_pp6_0_s0:1 1.894744e+01
+2 pgm_pp6_0_s0:1 vs_11_6:A 1.000000e-03
+3 pgm_pp6_0_s0:1 vs_0_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_0_s1 1.997729e-02
+*CONN
+*I lt_pp6_0_s1:Z O
+*I vs_29_6:A I
+*I vs_27_6:A I
+*I vs_17_6:A I
+*CAP
+1 pgm_pp6_0_s1:1 1.997729e-02
+*RES
+1 lt_pp6_0_s1:Z pgm_pp6_0_s1:1 2.196157e+01
+2 pgm_pp6_0_s1:1 vs_29_6:A 1.000000e-03
+3 pgm_pp6_0_s1:1 vs_27_6:A 1.000000e-03
+4 pgm_pp6_0_s1:1 vs_17_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_0_s2 8.541060e-03
+*CONN
+*I lt_pp6_0_s2:Z O
+*I vs_37_6:A I
+*CAP
+1 pgm_pp6_0_s2:1 8.541060e-03
+*RES
+1 lt_pp6_0_s2:Z pgm_pp6_0_s2:1 9.692242e+00
+2 pgm_pp6_0_s2:1 vs_37_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_1_s1 3.276591e-03
+*CONN
+*I lt_pp6_1_s1:Z O
+*I vs_18_6:A I
+*CAP
+1 pgm_pp6_1_s1:1 3.276591e-03
+*RES
+1 lt_pp6_1_s1:Z pgm_pp6_1_s1:1 3.718217e+00
+2 pgm_pp6_1_s1:1 vs_18_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_1_s2 1.502907e-02
+*CONN
+*I lt_pp6_1_s2:Z O
+*I vs_43_6:A I
+*I vs_41_6:A I
+*I vs_34_6:A I
+*CAP
+1 pgm_pp6_1_s2:1 1.502907e-02
+*RES
+1 lt_pp6_1_s2:Z pgm_pp6_1_s2:1 1.705472e+01
+2 pgm_pp6_1_s2:1 vs_43_6:A 1.000000e-03
+3 pgm_pp6_1_s2:1 vs_41_6:A 1.000000e-03
+4 pgm_pp6_1_s2:1 vs_34_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_1_s3 1.000398e-02
+*CONN
+*I lt_pp6_1_s3:Z O
+*I vs_56_6:A I
+*CAP
+1 pgm_pp6_1_s3:1 1.000398e-02
+*RES
+1 lt_pp6_1_s3:Z pgm_pp6_1_s3:1 1.021211e+01
+2 pgm_pp6_1_s3:1 vs_56_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_2_s0 3.558035e-03
+*CONN
+*I lt_pp6_2_s0:Z O
+*I vs_4_6:A I
+*CAP
+1 pgm_pp6_2_s0:1 3.558035e-03
+*RES
+1 lt_pp6_2_s0:Z pgm_pp6_2_s0:1 4.037594e+00
+2 pgm_pp6_2_s0:1 vs_4_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_2_s1 6.742787e-03
+*CONN
+*I lt_pp6_2_s1:Z O
+*I vs_20_6:A I
+*I vs_16_6:A I
+*CAP
+1 pgm_pp6_2_s1:1 6.742787e-03
+*RES
+1 lt_pp6_2_s1:Z pgm_pp6_2_s1:1 7.651593e+00
+2 pgm_pp6_2_s1:1 vs_20_6:A 1.000000e-03
+3 pgm_pp6_2_s1:1 vs_16_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_2_s2 7.889297e-03
+*CONN
+*I lt_pp6_2_s2:Z O
+*I vs_40_6:A I
+*CAP
+1 pgm_pp6_2_s2:1 7.889297e-03
+*RES
+1 lt_pp6_2_s2:Z pgm_pp6_2_s2:1 8.952633e+00
+2 pgm_pp6_2_s2:1 vs_40_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_2_s3 1.030675e-02
+*CONN
+*I lt_pp6_2_s3:Z O
+*I vs_58_6:A I
+*CAP
+1 pgm_pp6_2_s3:1 1.030675e-02
+*RES
+1 lt_pp6_2_s3:Z pgm_pp6_2_s3:1 1.169591e+01
+2 pgm_pp6_2_s3:1 vs_58_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_5_s0 9.992715e-03
+*CONN
+*I lt_pp6_5_s0:Z O
+*I vs_14_6:A I
+*CAP
+1 pgm_pp6_5_s0:1 9.992715e-03
+*RES
+1 lt_pp6_5_s0:Z pgm_pp6_5_s0:1 1.133955e+01
+2 pgm_pp6_5_s0:1 vs_14_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_7_s2 2.695930e-03
+*CONN
+*I lt_pp6_7_s2:Z O
+*I vs_39_6:A I
+*CAP
+1 pgm_pp6_7_s2:1 2.695930e-03
+*RES
+1 lt_pp6_7_s2:Z pgm_pp6_7_s2:1 3.059293e+00
+2 pgm_pp6_7_s2:1 vs_39_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_7_s3 6.525255e-03
+*CONN
+*I lt_pp6_7_s3:Z O
+*I vs_61_6:A I
+*CAP
+1 pgm_pp6_7_s3:1 6.525255e-03
+*RES
+1 lt_pp6_7_s3:Z pgm_pp6_7_s3:1 3.403699e+00
+2 pgm_pp6_7_s3:1 vs_61_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp6_8_s1 8.117414e-04
+*CONN
+*I lt_pp6_8_s1:Z O
+*I vs_26_6:A I
+*CAP
+1 pgm_pp6_8_s1:1 8.117414e-04
+*RES
+1 lt_pp6_8_s1:Z pgm_pp6_8_s1:1 9.211496e-01
+2 pgm_pp6_8_s1:1 vs_26_6:A 1.000000e-03
+*END
+
+*D_NET pgm_pp7_0_s1 8.081864e-03
+*CONN
+*I lt_pp7_0_s1:Z O
+*I vs_21_7:A I
+*CAP
+1 pgm_pp7_0_s1:1 8.081864e-03
+*RES
+1 lt_pp7_0_s1:Z pgm_pp7_0_s1:1 9.171154e+00
+2 pgm_pp7_0_s1:1 vs_21_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pp7_1_s1 1.776943e-02
+*CONN
+*I lt_pp7_1_s1:Z O
+*I vs_28_7:A I
+*I vs_24_7:A I
+*I vs_16_7:A I
+*CAP
+1 pgm_pp7_1_s1:1 1.776943e-02
+*RES
+1 lt_pp7_1_s1:Z pgm_pp7_1_s1:1 2.016444e+01
+2 pgm_pp7_1_s1:1 vs_28_7:A 1.000000e-03
+3 pgm_pp7_1_s1:1 vs_24_7:A 1.000000e-03
+4 pgm_pp7_1_s1:1 vs_16_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pp7_2_s0 1.843897e-02
+*CONN
+*I lt_pp7_2_s0:Z O
+*I vs_15_7:A I
+*I vs_3_7:A I
+*CAP
+1 pgm_pp7_2_s0:1 1.843897e-02
+*RES
+1 lt_pp7_2_s0:Z pgm_pp7_2_s0:1 2.092422e+01
+2 pgm_pp7_2_s0:1 vs_15_7:A 1.000000e-03
+3 pgm_pp7_2_s0:1 vs_3_7:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_0_s0 1.793210e-02
+*CONN
+*I lt_pp8_0_s0:Z O
+*I vs_12_8:A I
+*I vs_6_8:A I
+*CAP
+1 pgm_pp8_0_s0:1 1.793210e-02
+*RES
+1 lt_pp8_0_s0:Z pgm_pp8_0_s0:1 1.834492e+01
+2 pgm_pp8_0_s0:1 vs_12_8:A 1.000000e-03
+3 pgm_pp8_0_s0:1 vs_6_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_0_s1 2.200177e-02
+*CONN
+*I lt_pp8_0_s1:Z O
+*I vs_31_8:A I
+*I vs_29_8:A I
+*I vs_24_8:A I
+*CAP
+1 pgm_pp8_0_s1:1 2.200177e-02
+*RES
+1 lt_pp8_0_s1:Z pgm_pp8_0_s1:1 2.268095e+01
+2 pgm_pp8_0_s1:1 vs_31_8:A 1.000000e-03
+3 pgm_pp8_0_s1:1 vs_29_8:A 1.000000e-03
+4 pgm_pp8_0_s1:1 vs_24_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_1_s2 8.289854e-03
+*CONN
+*I lt_pp8_1_s2:Z O
+*I vs_38_8:A I
+*I vs_36_8:A I
+*CAP
+1 pgm_pp8_1_s2:1 8.289854e-03
+*RES
+1 lt_pp8_1_s2:Z pgm_pp8_1_s2:1 7.691025e+00
+2 pgm_pp8_1_s2:1 vs_38_8:A 1.000000e-03
+3 pgm_pp8_1_s2:1 vs_36_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_1_s3 1.103257e-02
+*CONN
+*I lt_pp8_1_s3:Z O
+*I vs_57_8:A I
+*CAP
+1 pgm_pp8_1_s3:1 1.103257e-02
+*RES
+1 lt_pp8_1_s3:Z pgm_pp8_1_s3:1 1.251957e+01
+2 pgm_pp8_1_s3:1 vs_57_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_2_s1 1.554455e-02
+*CONN
+*I lt_pp8_2_s1:Z O
+*I vs_30_8:A I
+*CAP
+1 pgm_pp8_2_s1:1 1.554455e-02
+*RES
+1 lt_pp8_2_s1:Z pgm_pp8_2_s1:1 1.763968e+01
+2 pgm_pp8_2_s1:1 vs_30_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_2_s2 1.789386e-02
+*CONN
+*I lt_pp8_2_s2:Z O
+*I vs_47_8:A I
+*CAP
+1 pgm_pp8_2_s2:1 1.789386e-02
+*RES
+1 lt_pp8_2_s2:Z pgm_pp8_2_s2:1 2.030563e+01
+2 pgm_pp8_2_s2:1 vs_47_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_2_s3 1.339077e-02
+*CONN
+*I lt_pp8_2_s3:Z O
+*I vs_59_8:A I
+*I vs_50_8:A I
+*CAP
+1 pgm_pp8_2_s3:1 1.339077e-02
+*RES
+1 lt_pp8_2_s3:Z pgm_pp8_2_s3:1 1.519561e+01
+2 pgm_pp8_2_s3:1 vs_59_8:A 1.000000e-03
+3 pgm_pp8_2_s3:1 vs_50_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp8_5_s3 2.690004e-03
+*CONN
+*I lt_pp8_5_s3:Z O
+*I vs_52_8:A I
+*CAP
+1 pgm_pp8_5_s3:1 2.690004e-03
+*RES
+1 lt_pp8_5_s3:Z pgm_pp8_5_s3:1 3.052569e+00
+2 pgm_pp8_5_s3:1 vs_52_8:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_0_s0 4.471114e-03
+*CONN
+*I lt_pp9_0_s0:Z O
+*I vs_2_9:A I
+*CAP
+1 pgm_pp9_0_s0:1 4.471114e-03
+*RES
+1 lt_pp9_0_s0:Z pgm_pp9_0_s0:1 3.357587e+00
+2 pgm_pp9_0_s0:1 vs_2_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_0_s3 7.358724e-03
+*CONN
+*I lt_pp9_0_s3:Z O
+*I vs_52_9:A I
+*CAP
+1 pgm_pp9_0_s3:1 7.358724e-03
+*RES
+1 lt_pp9_0_s3:Z pgm_pp9_0_s3:1 6.346437e+00
+2 pgm_pp9_0_s3:1 vs_52_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_11_s1 5.304922e-03
+*CONN
+*I lt_pp9_11_s1:Z O
+*I vs_26_9:A I
+*CAP
+1 pgm_pp9_11_s1:1 5.304922e-03
+*RES
+1 lt_pp9_11_s1:Z pgm_pp9_11_s1:1 4.735716e+00
+2 pgm_pp9_11_s1:1 vs_26_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_1_s0 1.849526e-02
+*CONN
+*I lt_pp9_1_s0:Z O
+*I vs_13_9:A I
+*I vs_9_9:A I
+*I vs_6_9:A I
+*CAP
+1 pgm_pp9_1_s0:1 1.849526e-02
+*RES
+1 lt_pp9_1_s0:Z pgm_pp9_1_s0:1 2.098809e+01
+2 pgm_pp9_1_s0:1 vs_13_9:A 1.000000e-03
+3 pgm_pp9_1_s0:1 vs_9_9:A 1.000000e-03
+4 pgm_pp9_1_s0:1 vs_6_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_1_s1 1.740269e-02
+*CONN
+*I lt_pp9_1_s1:Z O
+*I vs_28_9:A I
+*I vs_25_9:A I
+*I vs_24_9:A I
+*I vs_17_9:A I
+*CAP
+1 pgm_pp9_1_s1:1 1.740269e-02
+*RES
+1 lt_pp9_1_s1:Z pgm_pp9_1_s1:1 1.803211e+01
+2 pgm_pp9_1_s1:1 vs_28_9:A 1.000000e-03
+3 pgm_pp9_1_s1:1 vs_25_9:A 1.000000e-03
+4 pgm_pp9_1_s1:1 vs_24_9:A 1.000000e-03
+5 pgm_pp9_1_s1:1 vs_17_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_1_s2 4.988951e-03
+*CONN
+*I lt_pp9_1_s2:Z O
+*I vs_36_9:A I
+*CAP
+1 pgm_pp9_1_s2:1 4.988951e-03
+*RES
+1 lt_pp9_1_s2:Z pgm_pp9_1_s2:1 5.661372e+00
+2 pgm_pp9_1_s2:1 vs_36_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_2_s0 1.387813e-02
+*CONN
+*I lt_pp9_2_s0:Z O
+*I vs_11_9:A I
+*CAP
+1 pgm_pp9_2_s0:1 1.387813e-02
+*RES
+1 lt_pp9_2_s0:Z pgm_pp9_2_s0:1 1.432046e+01
+2 pgm_pp9_2_s0:1 vs_11_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_2_s1 2.103094e-02
+*CONN
+*I lt_pp9_2_s1:Z O
+*I vs_30_9:A I
+*I vs_16_9:A I
+*CAP
+1 pgm_pp9_2_s1:1 2.103094e-02
+*RES
+1 lt_pp9_2_s1:Z pgm_pp9_2_s1:1 2.186142e+01
+2 pgm_pp9_2_s1:1 vs_30_9:A 1.000000e-03
+3 pgm_pp9_2_s1:1 vs_16_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_2_s2 2.701855e-03
+*CONN
+*I lt_pp9_2_s2:Z O
+*I vs_33_9:A I
+*CAP
+1 pgm_pp9_2_s2:1 2.701855e-03
+*RES
+1 lt_pp9_2_s2:Z pgm_pp9_2_s2:1 3.066016e+00
+2 pgm_pp9_2_s2:1 vs_33_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_2_s3 1.323376e-02
+*CONN
+*I lt_pp9_2_s3:Z O
+*I vs_60_9:A I
+*I vs_56_9:A I
+*CAP
+1 pgm_pp9_2_s3:1 1.323376e-02
+*RES
+1 lt_pp9_2_s3:Z pgm_pp9_2_s3:1 1.501743e+01
+2 pgm_pp9_2_s3:1 vs_60_9:A 1.000000e-03
+3 pgm_pp9_2_s3:1 vs_56_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_4_s0 1.269457e-02
+*CONN
+*I lt_pp9_4_s0:Z O
+*I vs_14_9:A I
+*CAP
+1 pgm_pp9_4_s0:1 1.269457e-02
+*RES
+1 lt_pp9_4_s0:Z pgm_pp9_4_s0:1 1.440557e+01
+2 pgm_pp9_4_s0:1 vs_14_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_8_s1 1.077677e-02
+*CONN
+*I lt_pp9_8_s1:Z O
+*I vs_19_9:A I
+*CAP
+1 pgm_pp9_8_s1:1 1.077677e-02
+*RES
+1 lt_pp9_8_s1:Z pgm_pp9_8_s1:1 1.094507e+01
+2 pgm_pp9_8_s1:1 vs_19_9:A 1.000000e-03
+*END
+
+*D_NET pgm_pp9_8_s3 4.437915e-03
+*CONN
+*I lt_pp9_8_s3:Z O
+*I vs_61_9:A I
+*CAP
+1 pgm_pp9_8_s3:1 4.437915e-03
+*RES
+1 lt_pp9_8_s3:Z pgm_pp9_8_s3:1 5.036066e+00
+2 pgm_pp9_8_s3:1 vs_61_9:A 1.000000e-03
+*END
+

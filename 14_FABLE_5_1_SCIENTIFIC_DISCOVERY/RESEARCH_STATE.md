@@ -1,4 +1,4 @@
-# RESEARCH_STATE — Wave 14 + gates G1–G3 (current)
+# RESEARCH_STATE — Wave 14 + gates G1–G3 + final UBP decision run (R3) (current)
 
 **Labels:**
 - **HIST-OBS:** previous experiment.
@@ -46,8 +46,12 @@
 
 - **(c) Fixed-base programmability.**
   - **Generic placement:** FAILED (K2b).
-  - **Structured W-blind crossbar (R2):** passes at GRT level; detailed-route closure on met4 is **UNRESOLVED**.
-- **(e) No stronger regime-V baseline:** holds in the hardwired regime (G3; DA dominated; P2 1.84× worse). On the fixed base, P2 and A close detailed routing where B does not.
+  - **Structured W-blind crossbar (R2):** passes at GRT level; detailed-route closure on met4 fails at useful U.
+  - **Segmented line access (R3):** **HOLDS.** All 5 W are DRC-clean at 52% and 60%, and the base is invariant (NEW-OBS).
+- **(e) No stronger regime-V baseline:**
+  - Holds in the hardwired regime (G3; DA dominated; P2 1.84× worse).
+  - On the R3 fixed base it holds against every measured competitor: A at 75% 1.54× / 1.66×; P2 1.61× / 1.74×; P2 with R3 taps 1.93× / 2.09×.
+  - A driver-sized P2-R3 (post hoc, STA-only) gives 1.48× at 52% and 1.60–1.73× at 60%.
 - **Novelty:** G1 → likely obvious composition. Only the physical characterization is new.
 
 ## Experimental status (NEW-OBS; final numbers in 10)
@@ -90,18 +94,41 @@
   - DRT at 20 iterations: B 1,167 / 881 / 416 at U60 / 52 / 45. P2 and A reach 0 at every U.
   - Post hoc, 64 iterations: B reaches 0 at U45 but not at U52 (117) or U60 (410). At U45: 1.40× vs P2, 1.33× vs A.
   - → **G2 unresolved.**
-- **Classification: PROMISING BUT KEY GATE UNRESOLVED.**
+- **Classification (after G1–G3): PROMISING BUT KEY GATE UNRESOLVED** — superseded by R3 below.
+
+## Final UBP decision run: R3 (NEW-OBS, 2026-09-27; details in 16 §6, 09 R3, 19)
+
+- **Design:** segmented line taps, pre-registered (commit f7f33ba) before any R3 result.
+  - Four 2-site taps per line on a base spine; sites connect only within their row quarter.
+  - Area-neutral: B's cell area stays 169,952 µm².
+  - W-blind placement from development matrices only.
+- **52% (decisive): PASS on all criteria.**
+  - 5 / 5 W reach 0 DRT violations in 14 / 13 / 7 / 14 / 1 iterations.
+  - Invariance 5 / 5; numpy + mutation 5 / 5.
+  - Base +0.976 / +0.268 ns.
+  - A×T 9.26e6: 1.538× vs A at 75% (credited), 1.612× vs P2 at 67%.
+- **60%: PASS on all criteria.** 5 / 5 DRC-clean (13 / 13 / 7 / 13 / 1). A×T 8.57e6: 1.663× vs A (worst program 1.624×).
+- **Routed-parasitic check (post hoc):** 52% worst program 1.495×; 60% 1.673×.
+- **P2-R3 at 67% (pre-registered fairness point):**
+  - Valid: DRC 0, W4 closes in 14 iterations, invariant, = numpy.
+  - A×T 17.88e6 (W1 programmable path −2.45 ns), so A stays the strongest competitor. Base-only bound 12.61e6.
+- **Driver-sizing sensitivity (post hoc, D-R3.4):** P2-R3 at 13.69e6 would lead; B then leads it by 1.478× (52%) and 1.598× / 1.725× (60%, as built / sized).
+- **Classification: PHYSICALLY VALIDATED — NOVELTY PROVISIONAL.**
+  - The advantage is robust at 60% and at break-even at 52%.
+  - The narrow prior-art check found no identical object, but the decisive full texts are blocked.
 
 ## Unresolved questions
 
-- **G2 closure (the key gate):** a site/tap co-designed W-blind base, pre-registered, vs P2 and A.
-- HNLPU / Taalas / TENET / T-MAC full texts (G1 is summary-based).
+- ~~G2 closure~~ **closed by R3** (pre-registered, passed at 52% and 60%).
+- Line-driver timing closure, implemented rather than simulated, for every design. It decides the 52% break-even and the driver-sized P2-R3 point.
+- HNLPU / Taalas / TENET / T-MAC / US 11,663,490 full texts (novelty is summary-based).
 - Scale ≥ 256 with real BitNet weights (HuggingFace blocked here).
 - An advanced PDK with ≥ 3 thin programmable layers; single-via programming.
 - Energy.
 
 ## Next authorized action
 
-None pending. The next step is the G2-closure experiment (14). It needs the researcher's go-ahead.
+None pending. The decision run ends here, as specified.
 
-The gate commits were pushed on the user's explicit request. Any further push also needs explicit authorization.
+- **Next:** the paper-scale plan in 19 §H. It starts with the parametric generator and line-driver closure, and needs the researcher's go-ahead.
+- **Pushes:** the R3 / final-decision work was pushed to `claude/compassionate-edison-91b73q` under the decision run's explicit authorization, with no pull request and no merge. Any later push needs new authorization.

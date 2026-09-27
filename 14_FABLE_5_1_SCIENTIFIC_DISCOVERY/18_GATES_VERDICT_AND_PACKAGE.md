@@ -1,5 +1,10 @@
 # 18 — Gates verdict and research-development package (Wave 14, gates G1–G3)
 
+> **Superseded by `19_FINAL_UBP_DECISION.md` (final decision run, R3):**
+> - The key unresolved gate below (G2 closure) was run as the pre-registered R3 and **passed** at 52% and 60%.
+> - The class is now **PHYSICALLY VALIDATED — NOVELTY PROVISIONAL**.
+> - This file is kept unchanged as the record of the pre-R3 state.
+
 **Labels:**
 - **MEASURED:** our flow — SKY130 HD, ORFS image 69df744e2b5c, own cycle-accurate simulator vs numpy.
 - **MODELED:** placement-parasitic timing, and the DA periphery.

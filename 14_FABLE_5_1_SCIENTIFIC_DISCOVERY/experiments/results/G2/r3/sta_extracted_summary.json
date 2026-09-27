@@ -1,0 +1,97 @@
+{
+ "method": "base nets: ORFS 6_final.spef (OpenRCX, routed met1-met3); programmable nets: conservative lumped RC from routed met4/met5 DEF geometry (r3_prog_spef.py); 3.0 ns clock, propagated clocks",
+ "B_ubp3r3": {
+  "52": {
+   "w1": {
+    "setup_ws_ns": 0.9756855323672653,
+    "hold_ws_ns": 0.2682021271738222,
+    "prog_ws_ns": 1.0769791725095956
+   },
+   "w2": {
+    "setup_ws_ns": 0.9756855323672653,
+    "hold_ws_ns": 0.2682021271738222,
+    "prog_ws_ns": 1.086544632045161
+   },
+   "w3": {
+    "setup_ws_ns": 0.9756855323672653,
+    "hold_ws_ns": 0.2682021271738222,
+    "prog_ws_ns": 1.061837062721338
+   },
+   "w4": {
+    "setup_ws_ns": 0.9756855323672653,
+    "hold_ws_ns": 0.2682021271738222,
+    "prog_ws_ns": 1.0653133930560443
+   },
+   "w5": {
+    "setup_ws_ns": 0.9177636428603364,
+    "hold_ws_ns": 0.2682021271738222,
+    "prog_ws_ns": 0.9177636428603364
+   },
+   "_summary": {
+    "T_w1_rule_ns": 2.0243,
+    "T_worst_program_ns": 2.0822,
+    "AxT_w1_rule": 9262513.424984617,
+    "AxT_worst_program": 9527544.744539235,
+    "ratio_vs_A75_w1_rule": 1.538,
+    "ratio_vs_A75_worst_program": 1.4952
+   }
+  },
+  "60": {
+   "w1": {
+    "setup_ws_ns": 0.8821243735468443,
+    "hold_ws_ns": 0.2927088571524905,
+    "prog_ws_ns": 0.8821243735468443
+   },
+   "w2": {
+    "setup_ws_ns": 0.8529339456941898,
+    "hold_ws_ns": 0.2927088571524905,
+    "prog_ws_ns": 0.8529339456941898
+   },
+   "w3": {
+    "setup_ws_ns": 0.9643998932773457,
+    "hold_ws_ns": 0.2927088571524905,
+    "prog_ws_ns": 0.9643998932773457
+   },
+   "w4": {
+    "setup_ws_ns": 0.8670604234595203,
+    "hold_ws_ns": 0.2927088571524905,
+    "prog_ws_ns": 0.8670604234595203
+   },
+   "w5": {
+    "setup_ws_ns": 0.9405212164637078,
+    "hold_ws_ns": 0.2927088571524905,
+    "prog_ws_ns": 0.9405212164637078
+   },
+   "_summary": {
+    "T_w1_rule_ns": 2.1179,
+    "T_worst_program_ns": 2.1471,
+    "AxT_w1_rule": 8398534.63089589,
+    "AxT_worst_program": 8514290.634765558,
+    "ratio_vs_A75_w1_rule": 1.6962,
+    "ratio_vs_A75_worst_program": 1.6731
+   }
+  }
+ },
+ "A_g1s_u75": {
+  "w4": {
+   "setup_ws_ns": 0.8530449679966523,
+   "hold_ws_ns": 0.07416678382554664,
+   "prog_ws_ns": 1.0460454724636747
+  },
+  "w5": {
+   "setup_ws_ns": 0.8530463002642819,
+   "hold_ws_ns": 0.07416678382554664,
+   "prog_ws_ns": 0.9435865422346978
+  },
+  "_summary": {
+   "T_ns": 2.147,
+   "note": "A period stays base-limited under extraction (prog paths +0.94/+1.05 ns > base +0.853 ns)",
+   "AxT_credited": 14245459.697010929
+  },
+  "w1": {
+   "setup_ws_ns": 0.853042747550603,
+   "hold_ws_ns": 0.07416678382554664,
+   "prog_ws_ns": 1.129239812769356
+  }
+ }
+}

@@ -570,3 +570,41 @@ Any criterion failing at 52% kills the thesis, including detailed routing not re
 
 - Implementation bugs (script errors, paths, legalization failures) may be fixed and logged in an R3 deviation log.
 - The geometry, the criteria, the router effort, the matrices and the baselines will not change after any R3 physical result is seen.
+
+## R3 outcome (recorded after the runs)
+
+**52% (decisive): PASS on every pre-registered criterion.**
+- **Routability:** all five W reach 0 DRT violations at default effort, in 14 / 13 / 7 / 14 / 1 iterations.
+- **Invariance:** all checks hold, including the base ODB hash (aefbdaff…).
+- **Correctness:** all five programmed netlists match numpy, and every mutation control is detected.
+- **Advantage:** A×T(B) = 9.263e6 ≤ 9.497e6, i.e. 1.538× vs A at U75 (credited) and 1.612× vs P2 at U67 (credited). The robustness rule gives the same T.
+- **Timing:** base +0.976 / +0.268 ns; programmed setup +0.888 ns.
+
+**60%: PASS on every criterion.**
+- **Routability:** 0 violations for all five W, in 13 / 13 / 7 / 13 / 1 iterations.
+- **Advantage:** A×T 8.566e6 → 1.663× vs A (robust: 8.770e6, 1.624×).
+
+**Pre-registered fairness measurement (P2-R3 at U67; reported, does not change pass/fail):**
+- **Validity:** a valid point. The base is DRC 0; GRT overflow is 0 for all five W; W4 (largest WL) reaches 0 violations in 14 iterations; invariants hold; W1 and W4 match numpy, with the mutation detected.
+- **A×T:** W1 programmable path −2.453 ns → T 5.453 ns → **A×T 17.88e6**. That is not below 14.25e6, so **the strongest fair competitor remains A**; no standing qualification is triggered by the measured point. B vs P2-R3: 1.93× (52%), 2.09× (60%).
+- **P2 base-only-T bound:** 12.61e6 → B 1.36× (52%) / 1.47× (60%).
+
+**Classification under the R3 rules: G2 passes.** UBP3 survives Gate 2.
+
+## R3 deviation log and post-hoc analyses (none changes the classification)
+
+- **D-R3.1 (implementation):**
+  - `r3_build.py` was generalized to build the pre-registered P2-R3 point after the pre-registration commit.
+  - The design rule is exactly as registered. No geometry, criterion, effort, matrix or baseline changed after any R3 result.
+- **D-R3.2 (post hoc, rigor): timing with routed parasitics.** Base nets use their extracted SPEF; programmable nets use lumped RC from their routed geometry.
+  - B at 52%: the W5 programmable path is +0.918 ns, below the base's +0.976. Under a worst-program rule that gives T = 2.082 ns and **1.495× vs A** (W1 rule: 1.538×).
+  - B at 60%: worst programmable path +0.853 ns (W2); T = 2.147 ns → **1.673×**.
+  - A at U75 stays base-limited under extraction (programmable +0.944 / +1.046 ns vs base +0.853 ns).
+  - Reading: 52% is at the break-even under the strictest timing model; 60% is robust.
+- **D-R3.3 (post hoc, for D-R3.2):** A's W1 and W5 programs were routed at U75 (64 iterations) to time A with routed parasitics. W5 is DRC-clean and matches numpy.
+- **D-R3.4 (post hoc, fairness sensitivity): spine-driver sizing.** P2-R3's critical path is its minimum-size line flop and inverter driving the full-height spine, a net the base's timing repair never sees.
+  - **Method:** in both designs, every spine-root driver was upsized to drive 4. This is W-independent and area-counted. STA only (`scripts/r3_whatif_drivers.tcl`, `r3_fairness.py`).
+  - **P2-R3:** 13.69e6 (W1 rule). It becomes the strongest competitor.
+  - **B at 52%:** base-set, so sizing does not help. It is **1.478×** better than the sized P2-R3, **below 1.5×**.
+  - **B at 60%:** sizing makes it base-set at 7.94e6, which is 1.725× better. As built, B is 1.598× better (1.561× on its worst program).
+  - **Reading:** stated in the final verdict as the standing qualification. **60% is the robust operating point; 52% is at break-even under any treatment stricter than the pre-registered one.** The pre-registered classification is unchanged.

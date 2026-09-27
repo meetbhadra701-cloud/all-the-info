@@ -109,3 +109,41 @@ python3 scripts/g3_da_model.py $PWD/results/G3/da_model          # → da_model.
 - gzipped congestion and DRC reports (`*.rpt.gz`).
 
 The ORFS trees (`results/G2/orfs/`) and the programmed netlists and DEFs are regenerable and not committed.
+
+## R3: the final layout revision (segmented line taps)
+
+All commands run from `experiments/`.
+
+1. **Cells, base, programs, placement plan and configs.**
+
+   ```
+   python3 scripts/r3_build.py cells    $PWD/results/G2
+   python3 scripts/r3_build.py base     $PWD/results/G2 52 60
+   python3 scripts/r3_build.py programs $PWD/results/G2 w1 w2 w3 w4 w5 w14
+   ```
+
+   - `cells` writes the LTAP2 LEF/Liberty and `dont_touch_r3.tcl`.
+   - `base` writes `ubp3r3/` and `cells/struct_ubp3r3.tcl`.
+   - `programs` re-derives each program from W and asserts it equals the G2 program.
+   - For the P2-R3 fairness point, append `pc2` to the `base` and `programs` commands, e.g. `... base $PWD/results/G2 67 pc2`.
+   - Design model (DERIVED, development matrices only): `python3 scripts/r3_design_model.py results/G2/r3`.
+2. **Pre-PnR functional check:** `python3 scripts/g2_verify.py $PWD/results/G2 ubp3r3 w14`.
+3. **Bases:** `NO_DCE=1 scripts/e5_run.sh $PWD/results/G2 ubp3r3:52r ubp3r3:60r pc2r3:67r`, then `sha256sum .../g2r3_ubp3r3_uU/base/6_final.odb > results/G2/r3/base_sha256_ubp3r3_uU.txt`.
+4. **Per program:** `scripts/r3_run_program.sh ubp3r3 52 w1`, and likewise for w2–w5 and for U = 60.
+   - It routes met4–met5 at 64 iterations, runs the modeled STA, writes the programmed netlist and checks it against numpy with the mutation control.
+   - It then runs `r3_invariance.py` and appends a record to `results/G2/r3/r3_results.jsonl`.
+5. **Scoring against the pre-registered criteria:** `python3 scripts/r3_collect.py 52`, and likewise for 60. Writes `results/G2/r3/r3_summary_uU.json`.
+6. **Routed-parasitic timing (post-hoc rigor check):**
+   - `python3 scripts/r3_prog_spef.py <program DEF> <out.spef>`.
+   - Then `openroad scripts/r3_sta_extracted.tcl`, with env BASE_ODB, BASE_SDC, BASE_SPEF, PROG_TCL and PROG_SPEF set.
+   - Summary: `results/G2/r3/sta_extracted_summary.json`.
+7. **P2-R3 fairness point (pre-registered), after its base (step 3):**
+   - `sha256sum .../g2r3_pc2r3_u67/base/6_final.odb > results/G2/r3/base_sha256_pc2r3_u67.txt`.
+   - GRT for all five W: `scripts/g2_grt_screen.sh $PWD/results/G2 pc2r3 67r wN`.
+   - The largest-WL program, routed, timed, verified and invariance-checked: `scripts/r3_run_program.sh pc2r3 67 w4`.
+   - W1 modeled timing and verification: `MODES=sta scripts/g2_run_program.sh $PWD/results/G2 pc2r3 67r w1`.
+   - Critical-path report: rerun that STA with `REPORT_PATHS=1` (saved as `results/G2/r3/p2r3_w1_critical_path_u67.log`).
+8. **Spine-driver sizing sensitivity (post hoc, D-R3.4), STA only:**
+   - Run `openroad scripts/r3_whatif_drivers.tcl`, with env BASE_ODB, BASE_SDC and PROG_TCL set to a base and program.
+   - Runs used: pc2r3 67 w1 / w4; ubp3r3 52 w1 / w5; ubp3r3 60 w1 / w4 / w5. Logs go to `results/G2/r3/whatif_drivers_<design>_<W>_u<U>.log`.
+   - Then `python3 scripts/r3_fairness.py`, which writes `results/G2/r3/fairness_summary.json` and prints the fairness table of 16 §6.6.
