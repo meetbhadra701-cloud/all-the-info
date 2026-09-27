@@ -1,0 +1,1 @@
+{"odb_unchanged": true, "n_instances": 14078, "placement_identical": true, "moved_or_changed_status": [], "n_master_swaps": 734, "masters_ok": true, "routed_layers": ["met4", "met5"], "via_masters": ["M4M5_PR"], "routed_non_pgm_nets": [], "layers_ok": true, "specialnets_identical": true, "all_invariants_hold": true}
