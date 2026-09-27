@@ -10,3 +10,8 @@ experiments/results/G3/orfs/
 experiments/results/*/*/programmed_*.v
 experiments/results/*/*/prog_*_programmed.v
 experiments/results/*/*/*_program.def
+# live G2/G3 ORFS logs: untracked while jobs run (final copies committed at the end)
+experiments/results/G2/*/orfs_u*.log
+experiments/results/G3/*/orfs_u*.log
+experiments/results/G2/*/orfs_u*.rc
+experiments/results/G3/*/orfs_u*.rc
