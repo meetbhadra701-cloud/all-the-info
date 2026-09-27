@@ -1,1 +1,2 @@
 {"design": "g1", "n": 32, "util": 60, "mode": "parallel", "total_um": 1122157, "intra_um": 528258, "output_um": 39010, "select_um": 536031, "tie_um": 18858, "intra_nets": 24137, "output_nets": 416, "select_nets": 480, "tie_nets": 6810}
+{"design": "ubp3", "n": 32, "util": 60, "mode": "parallel", "total_um": 685880, "fabric_um": 16162, "input_um": 15538, "intra_um": 292261, "output_um": 20874, "select_um": 339655, "tie_um": 1389, "fabric_nets": 290, "input_nets": 50, "intra_nets": 12672, "output_nets": 416, "select_nets": 1704, "tie_nets": 430}

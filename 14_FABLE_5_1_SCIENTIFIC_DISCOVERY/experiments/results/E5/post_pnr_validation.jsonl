@@ -1,1 +1,2 @@
 {"design": "g1", "n": 32, "util": 60, "mode": "parallel", "final_netlist_matches_numpy": true, "mutation_detected": true}
+{"design": "ubp3", "n": 32, "util": 60, "mode": "parallel", "final_netlist_matches_numpy": true, "mutation_detected": true}
