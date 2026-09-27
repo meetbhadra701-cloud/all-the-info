@@ -11,7 +11,7 @@ set blk [ord::get_db_block]
 foreach inst [$blk getInsts] { if {[$inst isDoNotTouch]} { $inst setDoNotTouch 0 } }
 foreach net [$blk getNets] { if {[$net isDoNotTouch]} { $net setDoNotTouch 0 } }
 source $::env(PROG_TCL)
-if {$::env(MODE) eq "route"} {
+if {$::env(MODE) eq "route" || $::env(MODE) eq "grt"} {
   set gone 0
   foreach net [$blk getNets] {
     set t [$net getSigType]
@@ -24,6 +24,7 @@ if {$::env(MODE) eq "route"} {
   puts "G2: programmable nets $np, pins $nterm"
   set_routing_layers -signal met4-met5 -clock met4-met5   ;# both ranges, or GRT's min layer stays at met2
   global_route -congestion_iterations 30 -verbose -allow_congestion -congestion_report_file $::env(OUT)_congestion.rpt
+  if {$::env(MODE) eq "grt"} { puts "G2_GRT done"; exit }
   detailed_route -output_drc $::env(OUT)_drc.rpt -droute_end_iter $::env(DRT_ITERS) -verbose 1
   set drc [detailed_route_num_drvs]
   puts "G2_RESULT drc=$drc"
