@@ -43,6 +43,11 @@ Full history: `13_FABLE_5_1_SCIENTIFIC_DISCOVERY/01_RESEARCH_HISTORY_AND_LESSONS
    - A fixed 6 ns iso-clock would have measured timing repair, not wiring. Hence Amendment A1: a relaxed clock plus natural delay reported separately.
    - The E3 "iso-delay" ratios (ABC model) are therefore probably **optimistic for bit-parallel UBP**: its real generator/negator delay leaves less budget for its trees (NEW-INF).
 3. **Generator/negator carry chains put a 1.43× delay penalty on bit-parallel UBP.** This is the reason for evolution iteration 1 (bit-serial, E6), where the penalty becomes +1 cycle of latency (7 → 8 cycles at n = 64).
-4. **Tool-format pitfalls** (engineering, recorded for reuse):
+4. **Default tool clean-ups silently made the "universal" fabric weight-specific (Amendment A2).**
+   - Yosys `opt_clean -purge` dropped negators of unused lines, and ORFS's `eliminate_dead_logic` dropped generator logic feeding unused lines. Together they understated UBP area by up to 27% (ubp4, n = 32).
+   - Nothing failed. The routed results looked clean and even validated functionally, because pruned logic is functionally dead.
+   - It was caught only by an **area cross-check**: ORFS `synth__design__instance__area` against Yosys `stat -liberty` of the same netlist, plus a closed-form count of negator instances.
+   - **Lesson for regime-V studies:** the invariant "fabric area does not depend on W" must be *checked*. Functional equivalence cannot detect its violation.
+5. **Tool-format pitfalls** (engineering, recorded for reuse):
    - OpenSTA's Verilog reader rejects `signed`, wire initializers and behavioural processes. Re-emit through Yosys, strip `signed`, and instantiate top-level flip-flops as cells.
    - OpenROAD needs `read_lef` before `link_design`. `sta::worst_slack` returns seconds.

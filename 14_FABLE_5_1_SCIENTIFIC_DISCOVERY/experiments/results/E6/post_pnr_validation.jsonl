@@ -1,1 +1,1 @@
-{"design": "ubp3", "n": 64, "util": 60, "mode": "serial", "final_netlist_matches_numpy": true, "mutation_detected": true}
+{"design": "g1", "n": 64, "util": 60, "mode": "serial", "final_netlist_matches_numpy": true, "mutation_detected": true}

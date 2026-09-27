@@ -44,6 +44,16 @@ Cell-level results (HIST-OBS) cannot answer this. The previous session's wire mo
 | Negative control | The same simulation against W′ (one weight's polarity flipped) must fail | the same |
 | Post-PnR | The ORFS **final routed** netlist (buffers, resizing, CTS, hold fixes, ties) → AIG → our simulator vs numpy, plus the mutation control | `post_pnr_validate.py` |
 
+## W-independence invariant (added by Amendment A2)
+
+A regime-V fabric must have **the same cells for every W**. Functional checks cannot see a violation, because pruned logic is dead. The evaluator therefore also checks:
+- **Negator instance count** in the emitted netlist equals the closed form: n for g1; Σ_blocks (3^|b| − 1)/2 for UBP.
+- **ORFS `synth__design__instance__area` equals Yosys `stat -liberty`** of the full netlist. This means no dead-logic elimination happened.
+
+**How it is enforced:**
+- every top-level instance carries `keep`;
+- ORFS runs with `eliminate_dead_logic` disabled (`scripts/orfs_patch/synth_odb.tcl`, mounted by `NO_DCE=1 scripts/e5_run.sh`).
+
 ## What the evaluator measures well
 
 - The **real** place-and-route cost of the W-dependent connections: detours, congestion and DRC limits, on a real 5-metal PDK.
