@@ -46,8 +46,7 @@
 ## Status of the work
 
 - Git: branch `claude/compassionate-edison-91b73q`.
-  - One push was made on the user's explicit request (`acca499..3912b89`).
-  - All later commits (the gates) are **local only**.
+  - Two pushes, each on the user's explicit request: `acca499..3912b89` (Wave 14), then the gate commits (from `234df16` on).
   - Nothing else was published or sent.
 - Nothing was bought. No paid APIs were used. Nobody was contacted.
 - `13_WAVE_11_SCIENTIFIC_HYPOTHESIS_EVOLUTION/` is untouched.

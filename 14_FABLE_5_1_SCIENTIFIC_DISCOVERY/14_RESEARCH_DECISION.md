@@ -44,6 +44,9 @@ Post hoc, 64 iterations on the R2 layout close B only at U45, so router effort a
 
 ## Record-keeping
 
-- **Pushes:** one push was made on the user's explicit request, earlier in this session (`acca499..3912b89`). Every later commit is **local only**, on `claude/compassionate-edison-91b73q`. Nothing else was pushed, published or sent.
+- **Pushes:** two, each on the user's explicit request, to `claude/compassionate-edison-91b73q`:
+  - `acca499..3912b89` (Wave 14);
+  - the gate commits, from `234df16` on.
+- Nothing else was published or sent.
 - Nothing was bought, no paid API was used, and nobody was contacted.
 - All EDA tools ran inside the ORFS container.

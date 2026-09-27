@@ -104,4 +104,4 @@
 
 None pending. The next step is the G2-closure experiment (14). It needs the researcher's go-ahead.
 
-Pushing the local gate commits also needs explicit authorization.
+The gate commits were pushed on the user's explicit request. Any further push also needs explicit authorization.
