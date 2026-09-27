@@ -1,0 +1,3 @@
+# G2 raw congestion / DRC reports: committed gzipped (*.rpt.gz) once analysis is complete
+14_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/results/G2/**/*_congestion.rpt
+14_FABLE_5_1_SCIENTIFIC_DISCOVERY/experiments/results/G2/**/*_drc.rpt

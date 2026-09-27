@@ -1,0 +1,150 @@
+{
+ "met4_pitch_um": 0.92,
+ "model": "ideal structured crossbar, taps at band centre",
+ "designs": {
+  "ubp3s": {
+   "bands": 22,
+   "lines_per_band_reserved": 26,
+   "base_cell_area_um2": 169952,
+   "W": {
+    "w1": {
+     "used_lines": 499,
+     "sinks": 1290,
+     "max_band_density_tap_centre": 26,
+     "max_band_density_tap_top": 26,
+     "mean_band_density": 22.68
+    },
+    "w2": {
+     "used_lines": 496,
+     "sinks": 1293,
+     "max_band_density_tap_centre": 26,
+     "max_band_density_tap_top": 26,
+     "mean_band_density": 22.55
+    },
+    "w3": {
+     "used_lines": 242,
+     "sinks": 674,
+     "max_band_density_tap_centre": 15,
+     "max_band_density_tap_top": 15,
+     "mean_band_density": 11.0
+    },
+    "w4": {
+     "used_lines": 390,
+     "sinks": 1401,
+     "max_band_density_tap_centre": 22,
+     "max_band_density_tap_top": 22,
+     "mean_band_density": 17.73
+    },
+    "w5": {
+     "used_lines": 21,
+     "sinks": 1344,
+     "max_band_density_tap_centre": 1,
+     "max_band_density_tap_top": 1,
+     "mean_band_density": 1.0
+    }
+   },
+   "max_density_all_W": 26,
+   "U_max_pct_by_theta": {
+    "0.6": 22.1,
+    "0.75": 34.5,
+    "0.9": 49.7
+   }
+  },
+  "pc2": {
+   "bands": 64,
+   "lines_per_band_reserved": 2,
+   "base_cell_area_um2": 274662,
+   "W": {
+    "w1": {
+     "used_lines": 128,
+     "sinks": 2456,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 2.0
+    },
+    "w2": {
+     "used_lines": 128,
+     "sinks": 2424,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 2.0
+    },
+    "w3": {
+     "used_lines": 127,
+     "sinks": 835,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 1.98
+    },
+    "w4": {
+     "used_lines": 128,
+     "sinks": 3650,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 2.0
+    },
+    "w5": {
+     "used_lines": 41,
+     "sinks": 2624,
+     "max_band_density_tap_centre": 1,
+     "max_band_density_tap_top": 1,
+     "mean_band_density": 1.0
+    }
+   },
+   "max_density_all_W": 2,
+   "U_max_pct_by_theta": {
+    "0.6": 100.0,
+    "0.75": 100.0,
+    "0.9": 100.0
+   }
+  },
+  "g1s": {
+   "bands": 64,
+   "lines_per_band_reserved": 2,
+   "base_cell_area_um2": 356417,
+   "W": {
+    "w1": {
+     "used_lines": 128,
+     "sinks": 2456,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 2.0
+    },
+    "w2": {
+     "used_lines": 128,
+     "sinks": 2424,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 2.0
+    },
+    "w3": {
+     "used_lines": 127,
+     "sinks": 835,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 1.98
+    },
+    "w4": {
+     "used_lines": 128,
+     "sinks": 3650,
+     "max_band_density_tap_centre": 2,
+     "max_band_density_tap_top": 2,
+     "mean_band_density": 2.0
+    },
+    "w5": {
+     "used_lines": 41,
+     "sinks": 2624,
+     "max_band_density_tap_centre": 1,
+     "max_band_density_tap_top": 1,
+     "mean_band_density": 1.0
+    }
+   },
+   "max_density_all_W": 2,
+   "U_max_pct_by_theta": {
+    "0.6": 100.0,
+    "0.75": 100.0,
+    "0.9": 100.0
+   }
+  }
+ }
+}

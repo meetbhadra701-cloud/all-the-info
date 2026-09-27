@@ -59,10 +59,42 @@ DA would beat P only if ROM cells cost below ≈ 0.06 µm² in SKY130 (K = 6, OB
 - **Speed:** T ≈ K × SUBCOL_ROWS = 512 cycles per dot product (64-row sub-columns). Its A×T per weight is therefore **≈ 10–40× worse** than any spatial fabric here (DERIVED from its RTL cycle count and cell data).
 - It dominates when throughput is not the constraint. It is not a competitor at equal throughput.
 
-## 3. The decisive MEASURED comparison: UBP3-serial (B) vs the frontier-style popcount fabric (P)
+## 3. The decisive MEASURED comparison: UBP3-serial (B) vs the frontier-style popcount fabrics (P, P2)
 
-(Filled from the routed results; see §5.)
+**Setup** (all MEASURED):
+- Same flow as E6: SKY130 HD, ORFS image 69df744e2b5c, NO_DCE (every instance kept), 64×64 ternary W (seed 14, p0 = 0.4), INT8 in, 14-bit out.
+- **Weights are hardwired**, and placement sees W. This is the E6 regime for every design in this table.
+- Routed area = synthesized cell area / U_max, where U_max is the highest U with DRC-clean detailed routing.
+- The period is each design's achieved minimum, 3.0 ns − setup WS; P ran at a 5.0 ns target (D-G3.1).
+- Every row is validated post-PnR: the final routed netlist, simulated by our cycle-accurate simulator, matches numpy W@x, and the mutation control is detected.
+
+| Design | Synth cell area µm² | U_max % | Routed area µm² | Cycles/word | Min period ns | **A×T µm²·ns** | vs B |
+|---|---|---|---|---|---|---|---|
+| **B** UBP3-serial (E6) | 156,941 | 75 | 209,255 | 14 | 2.082 | **6.10e6** | 1 |
+| A g1-serial (E6) | 334,184 | 75 | 445,579 | 14 | 2.219 | 13.84e6 | 2.27× |
+| P popcount (D-G3.1, 5 ns target) | 216,071 | 60 | 360,118 | 8 | 5.290 | 15.24e6 | 2.50× |
+| **P2** pipelined popcount | 250,124 | 60 | 416,873 | 8 | 3.368 | **11.23e6** | **1.84×** |
+| D(K), K ≥ 2 (via-ROM DA) | — | — | row area ≥ 1.27× P's (§2) | 8 | ≈ P-class | ≥ P-class (DERIVED) | ≥ 1.84× |
+
+**Why P and P2 lose U_max:**
+- **P at U75 (3.0 ns):** timing repair inflated it to 97% utilization, and detailed placement then failed. At 5 ns and U75 detailed placement failed again. It routes clean at U60.
+- **P2 at U75:** global routing failed with congestion (GRT-0232). At U60 it routes clean after 7 detailed-route iterations.
+- **B** routes at U75.
+
+The popcount trees over 64 one-bit leaves per row are wiring-heavy. The frontier arithmetic spends fewer cycles (8 vs 14) but pays in area and wiring.
 
 ## 4. Gate-3 verdict
 
-(See §5.)
+| ID | Condition | Result |
+|---|---|---|
+| K3a | A×T(P or P2) ≤ A×T(B) | **Not triggered.** The best per-input competitor, P2 at 11.23e6, is 1.84× worse than B. |
+| K3b | Conservative D(K) ≤ B | **Not triggered.** No D(K ≥ 2) row is smaller than P's row even with the optimistic ROM cell (§2), so D is at least P-class. |
+| S3 | A×T(B) ≤ 0.83 × min(competitors) | **Holds:** 6.10e6 ≤ 9.32e6. |
+
+**B survives Gate 3, in the regime where it was measured: weights hardwired, W-aware layout.**
+- **Via-ROM DA** is not a competitor for ternary weights at equal throughput:
+  - A spatial DA table leaf needs b_K ≥ K bits for K ≤ 4, so it saves no compressor bits over the K = 1 popcount fabric.
+  - A time-multiplexed via-ROM (Ankhdjet) is ≈ 10–40× worse in A×T; it is a different, area-first operating point.
+- **R1/Q not triggered:** the bounded revision R1 (UBP on top of the bit-plane fabric) was conditional on K3a, which did not fire.
+
+**What G3 does NOT establish:** that B's advantage survives when the layout may not see W. That is Gate 2's question (16_GATE2_FIXED_BASE.md). Every G3 number is a hardwired-weight number.

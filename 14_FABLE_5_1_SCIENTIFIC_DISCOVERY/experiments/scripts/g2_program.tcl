@@ -39,6 +39,10 @@ if {$::env(MODE) eq "route" || $::env(MODE) eq "grt"} {
   set_propagated_clock [all_clocks]
   estimate_parasitics -placement
   puts "G2_TIMING setup_ws=[sta::worst_slack_cmd max] hold_ws=[sta::worst_slack_cmd min]"
+  # worst setup slack of paths THROUGH the programmable nets (line-tap outputs): the part of timing the program owns
+  set tp [get_pins -of_objects [get_cells -filter "ref_name == LTAP"] -filter "direction == output"]
+  set pe [find_timing_paths -through $tp -path_delay max]
+  if {[llength $pe]} { puts "G2_PROG_WS setup=[[lindex $pe 0] slack]" } else { puts "G2_PROG_WS setup=none" }
   if {[info exists ::env(REPORT_PATHS)] && $::env(REPORT_PATHS)} {
     report_checks -path_delay max -fields {slew cap fanout} -digits 3
     report_net -digits 3 [get_nets -of_objects [get_pins -of_objects [get_cells -filter "ref_name == LTAP"] -filter "direction == output"]] > $::env(OUT)_ltap_nets.rpt

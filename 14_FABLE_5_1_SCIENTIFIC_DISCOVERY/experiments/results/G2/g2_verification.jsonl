@@ -4,3 +4,9 @@
 {"design": "ubp3s", "tag": "w1", "netlist": "post-PnR (prog_w1_u60_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
 {"design": "pc2", "tag": "w1", "netlist": "post-PnR (prog_w1_u60_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
 {"design": "g1s", "tag": "w14", "netlist": "pre-PnR (Verilog-level program)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+{"design": "g1s", "tag": "w1", "netlist": "post-PnR (prog_w1_u60_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+{"design": "ubp3s", "tag": "w1", "netlist": "post-PnR (prog_w1_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "ubp3s", "tag": "w1", "netlist": "post-PnR (prog_w1_u52s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "pc2", "tag": "w1", "netlist": "post-PnR (prog_w1_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
+{"design": "pc2", "tag": "w4", "netlist": "post-PnR (prog_w4_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
+{"design": "g1s", "tag": "w1", "netlist": "post-PnR (prog_w1_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}

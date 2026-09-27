@@ -1,1 +1,2 @@
 {"design": "pc", "nick": "g3_pc_n64_u60_c5", "final_netlist_matches_numpy": true, "latency": 11, "mutation_detected": true}
+{"design": "pc2", "nick": "g3_pc2_n64_u60", "final_netlist_matches_numpy": true, "latency": 12, "mutation_detected": true}
