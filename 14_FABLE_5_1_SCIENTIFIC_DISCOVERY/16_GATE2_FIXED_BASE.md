@@ -260,11 +260,17 @@ The same structured bases and the same largest-WL programs, detailed-routed with
 | B at U | Program | Trajectory (64 iterations) | Final | DRC-clean A×T | vs P2 best (14.98e6 / 13.38e6 base-only T) | vs A best (14.28e6) |
 |---|---|---|---|---|---|---|
 | 45 | W2 | identical to the 20-iteration run through it. 20 (416), then 321 (it. 24) → 100 (it. 35) → 36 (it. 52) → 7 (it. 61) → **0** (it. 64) | **0: DRC-clean** | 10.71e6 | 1.40× / 1.25× | **1.33×** |
-| 52 | W1 | POSTHOC_52 | | 9.18e6 if clean | 1.63× / 1.46× | 1.56× |
-| 60 | W1 | POSTHOC_60 | | 8.10e6 if clean | 1.85× / 1.65× | 1.76× |
+| 52 | W1 | 881 (it. 20) → 512 (it. 30) → 349 (it. 40) → 294 (it. 50) → 178 (it. 60) → **117** (it. 64) | **117: not closed** (90 shorts, 27 spacing) | (9.18e6 if clean) | (1.63× / 1.46×) | (1.56×) |
+| 60 | W1 | 1,167 (it. 20) → 702 (it. 30) → 628 (it. 40) → 518 (it. 50) → 439 (it. 60) → **410** (it. 64) | **410: not closed** (299 shorts, 111 spacing) | (8.10e6 if clean) | (1.85× / 1.65×) | (1.76×) |
 
 **What this shows:**
-- At U45, B's programmable layer **can** be closed on SKY130 met4–met5 with default router effort. The pre-registered 20-iteration cap, not physical infeasibility, is what failed B there.
-- At U45, a DRC-clean B beats P2 by ≥ 1.2× but beats A (at 75%) by only 1.33×. The pre-registered A bar is 1.5×.
-- To clear both bars, B must close at U ≥ ≈ 51%.
-- **This is post hoc and does not change the pre-registered G2 classification (unresolved).** It does sharpen the decisive next experiment: a pre-registered repeat of R2 with 64 iterations, B at U52–60, against P2 at 67 and A at 75.
+- **On the R2 layout, B's DRC-clean ceiling with default router effort is between 45% and 52%.**
+  - At U45 the 20-iteration cap was what failed B. With 64 iterations it closes.
+  - At U52 and U60 more effort helps but plateaus: 117 and 410 residual violations, falling by only ~30% over the last 20 iterations.
+- **At that ceiling (U45), a DRC-clean B beats P2 by 1.40× (1.25× if P2's line delay is ignored) but beats A (at 75%) by only 1.33×.**
+  - The pre-registered bars are ≥ 1.2× vs P2 and ≥ 1.5× vs A.
+  - B passes the first bar and misses the second.
+  - To clear both, B must close at U ≥ ≈ 51%.
+- **So router effort alone does not resolve G2.** The layout itself must free met4 tracks: stagger the site pins across the band, split the taps, and keep pads off line tracks. Alternatively, a third programmable layer.
+- **This is post hoc and does not change the pre-registered G2 classification (unresolved).**
+- It defines the decisive next experiment: a pre-registered site/tap co-designed band (R3), routed at 64 iterations, with B at U52–60 against P2 at 67 and A at 75.

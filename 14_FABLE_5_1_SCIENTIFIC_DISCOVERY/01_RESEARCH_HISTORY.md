@@ -65,6 +65,6 @@ Full history: `13_FABLE_5_1_SCIENTIFIC_DISCOVERY/01_RESEARCH_HISTORY_AND_LESSONS
    - **Lesson:** diagnose where the overflow is before concluding a physical failure is intrinsic.
 8. **A pre-registered effort cap below the tool default can manufacture a failure.**
    - The G2 protocol capped detailed routing at 20 iterations; ORFS uses 64.
-   - B failed the 20-iteration criterion at U45–60. Post hoc, with 64 iterations, it closed at U45.
+   - B failed the 20-iteration criterion at U45–60. Post hoc, with 64 iterations, it closed at U45 but not at U52 (117 residual) or U60 (410): the cap was binding at 45 only.
    - The pre-registered classification stands. **Lesson:** pre-register tool effort at the tool's default unless there is a reason not to.
 9. **Line count and line load trade off.** UBP's lines are 4.3× more numerous but lightly loaded (≈ 2.6 sinks), so they are the fastest programmable paths. The per-input popcount fabric's heavily loaded lines cost it 1.6–1.7 ns.

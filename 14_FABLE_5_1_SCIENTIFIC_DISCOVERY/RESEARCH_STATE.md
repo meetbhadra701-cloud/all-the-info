@@ -88,7 +88,7 @@
   - GRT: all 5 W route for B at 60 / 52 / 45, P2 at 60 / 67 and A at 60 / 75.
   - A×T: B 8.10e6; P2 14.98e6 (67%); A 14.28e6 (75%).
   - DRT at 20 iterations: B 1,167 / 881 / 416 at U60 / 52 / 45. P2 and A reach 0 at every U.
-  - Post hoc, 64 iterations: B reaches 0 at U45.
+  - Post hoc, 64 iterations: B reaches 0 at U45 but not at U52 (117) or U60 (410). At U45: 1.40× vs P2, 1.33× vs A.
   - → **G2 unresolved.**
 - **Classification: PROMISING BUT KEY GATE UNRESOLVED.**
 

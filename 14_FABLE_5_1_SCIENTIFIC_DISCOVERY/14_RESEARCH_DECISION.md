@@ -9,7 +9,7 @@ The full package is in `18_GATES_VERDICT_AND_PACKAGE.md`. Gate details are in 15
 | **G1** novelty | **Materially downgraded, not killed.** No identical or technically equivalent mechanism was found. The composition (activation-group LUT sharing + a via/metal-programmable W-independent base) is likely obvious. Only its physical consequences are new. |
 | **G3** strongest competitor | **Survives.** Hardwired-W regime, MEASURED and validated: A×T of B 6.10e6 vs P2 11.23e6 (1.84×), P 15.24e6 and A 13.84e6. Spatial via-ROM DA (K ≥ 2) is never smaller than the K = 1 popcount fabric for ternary W. |
 | **G2** fixed base, generic placement (pre-registered) | **K2b fires: substantially weakened.** B's random programs do not route on met4–met5 at any utilization from 60% to 8%. Diagnosis: the connectivity-driven placer clusters all 548 line taps. |
-| **G2 / R2** structured W-blind crossbar base (the one bounded revision) | **Unresolved.** At GRT level, B routes all five W at U60 with 1.85× (P2 at 67%) and 1.76× (A at 75%) better A×T under modeled timing. Its programmable-layer detailed routing does not close in the pre-registered 20 iterations at U60 / 52 / 45 (1,167 / 881 / 416 met4 violations), while P2 and A close at every U tested. R2-K does not fire; R2-A is not granted. *Post hoc: with 64 iterations B closes at U45, where it is 1.40× better than P2 but only 1.33× better than A.* |
+| **G2 / R2** structured W-blind crossbar base (the one bounded revision) | **Unresolved.** At GRT level, B routes all five W at U60 with 1.85× (P2 at 67%) and 1.76× (A at 75%) better A×T under modeled timing. Its programmable-layer detailed routing does not close in the pre-registered 20 iterations at U60 / 52 / 45 (1,167 / 881 / 416 met4 violations), while P2 and A close at every U tested. R2-K does not fire; R2-A is not granted. *Post hoc: with the router-default 64 iterations B closes at U45 but not at U52 (117) or U60 (410). At U45 it is 1.40× better than P2 but only 1.33× better than A (bar 1.5×).* |
 
 ## Why this class and not the others
 
@@ -32,9 +32,9 @@ The full package is in `18_GATES_VERDICT_AND_PACKAGE.md`. Gate details are in 15
 - split the taps into two half-height groups;
 - keep the pin pads off the line tracks.
 
-Run it against P2 and A on the same grid and criteria. Two sensitivities:
-- a third programmable layer (base met1–met2);
-- the ORFS-default 64 detailed-route iterations.
+Run it against P2 and A on the same grid and criteria. Route at the ORFS-default 64 detailed-route iterations. Sensitivity: a third programmable layer (base met1–met2).
+
+Post hoc, 64 iterations on the R2 layout close B only at U45, so router effort alone does not resolve G2. **B must close at U ≥ ≈ 51%** to keep both bars against P2 at 67% and A at 75%.
 
 **Kill** the via-programmable claim if B still cannot close at a utilization that keeps those ratios.
 

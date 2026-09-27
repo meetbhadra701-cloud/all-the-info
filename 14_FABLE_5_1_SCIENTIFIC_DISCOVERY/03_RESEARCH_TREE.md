@@ -23,7 +23,7 @@ P1  Accumulation hardware of hardwired linear layers when base layers are weight
 │       ├── G2 fixed base, generic placement: B's W1/W2 unroutable on met4-met5 at U 60…8 → K2b: SUBSTANTIALLY WEAKENED
 │       └── R2 structured W-blind crossbar base (bounded revision):
 │           ├── GRT: all 5 W route for B at U60/52/45, P2 at U60/67, A at U60/75; A×T B 8.10e6 vs P2 14.98e6, A 14.28e6
-│           ├── DRT (20 it.): B 1,167 / 881 / 416 residual (U60/52/45) — P2 and A close at every U; post hoc 64 it.: B closes at U45
+│           ├── DRT (20 it.): B 1,167 / 881 / 416 residual (U60/52/45) — P2 and A close at every U; post hoc 64 it.: B closes at U45 only (52: 117, 60: 410)
 │           └── R2-K not fired, R2-A not granted → G2 UNRESOLVED; next: site/tap co-designed band (pre-register)
 └── H1.3 Cross-matrix generator sharing → MERGED as a design rule into H1.1/H1.2
 

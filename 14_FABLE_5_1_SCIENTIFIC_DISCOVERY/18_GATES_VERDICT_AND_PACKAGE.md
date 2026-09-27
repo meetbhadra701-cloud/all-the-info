@@ -20,7 +20,7 @@
 | **G1** novelty / obviousness | **Materially downgraded, not killed.** No identical or technically equivalent mechanism was found; the one primary source (Ankhdjet RTL) is g = 1 per-weight accumulation. The combination (LUT-GEMM activation-group sharing + a via/metal-programmable W-independent base) is **likely obvious**. What remains is the physical consequences. | **Novelty** (downgrade) |
 | **G3** strongest competitor | **Survives (S3).** Hardwired-W regime, all MEASURED and post-PnR validated: B is **1.84×** better in A×T than the frontier-style bit-plane popcount fabric P2, **2.50×** better than P, and **2.27×** better than A. Via-ROM DA (K ≥ 2) is never smaller than the K = 1 popcount fabric for ternary W (DERIVED + MEASURED + INFERRED). | — |
 | **G2** fixed-base programmability, **generic placement** (pre-registered protocol) | **K2b fires → substantially weakened.** B's random programs do not route on met4–met5 at any base utilization from 60% down to 8%; A routes them at 60% and P2 at 45%. K2c (timing) and K2d (lower-layer change) do not fire. | **Physical programmability**, diagnosed as **methodology** (the placer clusters all line taps) |
-| **G2 / R2** structured W-blind crossbar base (the one bounded revision) | **Primary criterion (GRT):** B routes all five W at U60. Its A×T is **1.85×** better than P2 and **1.76×** better than A, each baseline taken at its own best U (P2 67%, A 75%). **Secondary criterion (DRC-clean detailed routing in 20 iterations): B fails** at U60 / 52 / 45 (1,167 / 881 / 416 met4 violations, falling). P2 and A pass at every U tested. Pre-registered classification: **R2-K not fired, R2-A not granted → G2 UNRESOLVED**. *Post hoc (64 iterations, the router default): B's hardest program closes DRC-clean at U45* (§5.5 of 16). | **Physical programmability (unresolved)** |
+| **G2 / R2** structured W-blind crossbar base (the one bounded revision) | **Primary criterion (GRT):** B routes all five W at U60. Its A×T is **1.85×** better than P2 and **1.76×** better than A, each baseline taken at its own best U (P2 67%, A 75%). **Secondary criterion (DRC-clean detailed routing in 20 iterations): B fails** at U60 / 52 / 45 (1,167 / 881 / 416 met4 violations, falling). P2 and A pass at every U tested. Pre-registered classification: **R2-K not fired, R2-A not granted → G2 UNRESOLVED**. *Post hoc (64 iterations, the router default): B closes DRC-clean at U45 but not at U52 (117) or U60 (410). At U45 it is 1.40× better than P2 but only 1.33× better than A (bar: 1.5×)* (§5.5 of 16). | **Physical programmability (unresolved)** |
 
 ## 2. Classification: **PROMISING BUT KEY GATE UNRESOLVED**
 
@@ -53,7 +53,7 @@ The prompt asks for this package if the thesis survives all three gates. It did 
 - **Hardwired regime:** 2.13× less routed area than a per-input serial fabric, and 1.84× better A×T than the frontier's bit-plane popcount fabric (MEASURED, DRC-clean, validated).
 - **Fixed base, generic placement:** the 26-lines-per-3-inputs requirement collapses programmable routing.
 - **Fixed base, structured crossbar:** GRT routability is restored with a 1.76–1.85× A×T advantage (modeled timing). Detailed-route closure on SKY130's two programmable layers is not reached in the pre-registered 20 iterations, where the per-input fabrics close.
-  - Post hoc, with the router's default 64 iterations, B closes at U45. There its A×T is 1.40× better than P2 but only 1.33× better than A.
+  - Post hoc, with the router's default 64 iterations, B closes at U45 but not at U52 or U60. At U45 its A×T is 1.40× better than P2 but only 1.33× better than A.
 - **The line-count / line-load trade-off:** UBP needs 4.3× more programmable lines, but each is lightly loaded (≈ 2.6 sinks), so UBP's programmable paths are the fastest of the three designs.
 
 ### 2. What is already known?
@@ -162,7 +162,9 @@ The bit-plane popcount arithmetic of HNLPU, BitROM and Ankhdjet is DA with K = 1
 
 ### 10. What is still missing before a paper?
 
-1. **DRT closure of B's programmable layer on a fixed base** at a utilization that keeps ≥ 1.2× over P2 and ≥ 1.5× over A. Needs site/tap co-design (staggered site columns, split taps, pin pads off the line tracks) or a third programmable layer — each is a new, separately pre-registered revision.
+1. **DRT closure of B's programmable layer on a fixed base** at a utilization that keeps ≥ 1.2× over P2 and ≥ 1.5× over A, i.e. U ≥ ≈ 51%.
+   - Today B closes only at U45 (post hoc, 64 iterations).
+   - This needs site/tap co-design (staggered site columns, split taps, pin pads off the line tracks) or a third programmable layer. Each is a new, separately pre-registered revision.
 2. **Scale:** n, m ≥ 256–1024. The line count grows with n; the reachability bound must be re-checked.
 3. **Real ternary weights** (BitNet b1.58) through the full G2 protocol.
 4. **An advanced node,** or at least a PDK with ≥ 3 thin programmable layers, and single-via programming.
@@ -174,7 +176,7 @@ The bit-plane popcount arithmetic of HNLPU, BitROM and Ankhdjet is DA with K = 1
 
 | Weeks | Work | Decision point |
 |---|---|---|
-| **1–2 (decisive)** | **G2 closure.** Pre-register **R3**, a site/tap co-designed band: via sites staggered across the band so each met4 pad owns a track; taps split into two half-height groups; pads kept off line tracks. Run B vs P2 vs A on the R2 grid and criteria. Sensitivities: 64 detailed-route iterations; a third programmable layer (base met1–met2). | **Kill** the via-programmable claim if B cannot close at a U that keeps ≥ 1.2× over P2 and ≥ 1.5× over A. Otherwise G2 passes. |
+| **1–2 (decisive)** | **G2 closure.** Pre-register **R3**, a site/tap co-designed band: via sites staggered across the band so each met4 pad owns a track; taps split into two half-height groups; pads kept off line tracks. Route at the router default (64 iterations). Run B at U52–60 vs P2 at 67 and A at 75, with R2's other criteria. Sensitivity: a third programmable layer (base met1–met2). Post hoc, R2 with 64 iterations closes B only at U45, which is not enough vs A. | **Kill** the via-programmable claim if B cannot close at a U that keeps ≥ 1.2× over P2 and ≥ 1.5× over A. Otherwise G2 passes. |
 | 3 | **Novelty closure.** A person with access reads HNLPU (ASPLOS'26), the Taalas filings (WO2025217724A1 applicant, HC-series) and the TENET / T-MAC full texts. Settle "anticipated" vs "obvious composition". | If anticipated: stop, or rescope to the physical study only. |
 | 3–4 | **Real weights.** BitNet b1.58 layers (supplied locally; HuggingFace is blocked here). 64 × 64 tiles through the full G2 protocol on the winning base. | Kill if real-weight programs fail where random ones pass. |
 | 5–6 | **Scale.** One 256 × 256 tile. Re-derive the reachability bound: lines grow ∝ n and sinks per line ∝ m, so the band density changes. Measure it. | Kill if the per-band track demand grows faster than the band width at scale. |
