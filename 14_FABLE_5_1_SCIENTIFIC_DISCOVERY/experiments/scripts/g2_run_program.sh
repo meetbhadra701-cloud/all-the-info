@@ -8,7 +8,7 @@ BASE=/work/orfs/results/sky130hd/$NICK/base
 OUT=/work/$D/prog_${T}_u${U}
 for MODE in route sta; do
   docker run --rm -v "$G2":/work -v "$(cd "$(dirname "$0")" && pwd)":/scripts -w /work \
-    -e BASE_ODB=$BASE/6_final.odb -e BASE_SDC=$BASE/6_final.sdc -e PROG_TCL=/work/$D/prog_$T.tcl -e OUT=$OUT -e MODE=$MODE \
+    -e BASE_ODB=$BASE/6_final.odb -e BASE_SDC=$BASE/6_final.sdc -e PROG_TCL=/work/$D/prog_$T.tcl -e OUT=$OUT -e MODE=$MODE -e DRT_ITERS=${DRT_ITERS:-20} \
     openroad/orfs:latest /OpenROAD-flow-scripts/tools/install/OpenROAD/bin/openroad -no_init -threads 2 -exit \
     /scripts/g2_program.tcl > "$G2/$D/prog_${T}_u${U}_$MODE.log" 2>&1
 done
