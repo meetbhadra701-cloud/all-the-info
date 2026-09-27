@@ -39,6 +39,10 @@ if {$::env(MODE) eq "route" || $::env(MODE) eq "grt"} {
   set_propagated_clock [all_clocks]
   estimate_parasitics -placement
   puts "G2_TIMING setup_ws=[sta::worst_slack_cmd max] hold_ws=[sta::worst_slack_cmd min]"
+  if {[info exists ::env(REPORT_PATHS)] && $::env(REPORT_PATHS)} {
+    report_checks -path_delay max -fields {slew cap fanout} -digits 3
+    report_net -digits 3 [get_nets -of_objects [get_pins -of_objects [get_cells -filter "ref_name == LTAP"] -filter "direction == output"]] > $::env(OUT)_ltap_nets.rpt
+  }
   set phys {}
   foreach lib [[ord::get_db] getLibs] { foreach m [$lib getMasters] {
     set sig 0; foreach mt [$m getMTerms] { if {[$mt getSigType] ne "POWER" && [$mt getSigType] ne "GROUND"} { set sig 1 } }

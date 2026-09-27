@@ -353,3 +353,78 @@ G3's decisive measurement therefore runs first. G2 is pre-registered conditional
   - **What happened:** the first B base (met1 rails + met2 straps) routed DRC-clean on met1–met3. The final power-grid check then reported 169 via-site / line-tap stacks shorting the met2 straps (`PSM-0043`). A fixed base cannot have via stacks through power straps.
   - **Change:** the base PDN is **met1 follow-pin rails only**, with no straps on any layer, and IR-drop analysis is disabled. Power integrity is out of scope.
   - **Consequence:** this favours every design equally, since no strap tracks are consumed. A real base would co-design strap columns with the via-site arrays at an equal area cost. Superseded log: `experiments/results/G2/superseded_strapPDN/`.
+
+## G2 pre-registered outcome (recorded 2026-09-27 ~06:35 UTC, before any R2 data)
+
+**Bases:** every fixed base is DRC-clean on met1–met3:
+- UBP3 at U ∈ {60, 45, 30, 15, 8};
+- P2 at U ∈ {60, 45};
+- A at U = 60.
+
+**Programmable GRT on met4–met5.** Cells give the overflow count; 0 = routes.
+
+| Design | U | W1 | W2 | W3 | W4 | W5 |
+|---|---|---|---|---|---|---|
+| UBP3 | 60 | 14,159 | 14,304 | 2,106 | 9,913 | 0 |
+| UBP3 | 45 | 14,719 | 14,755 | 1,849 | 9,790 | 0 |
+| UBP3 | 30 | 16,621 | 16,562 | 112 | 10,075 | 0 |
+| UBP3 | 15 | 12,291 | 12,263 | 0 | 3,134 | 0 |
+| UBP3 | 8 | 2,619 | 2,139 | 0 | 0 | 0 |
+| P2 | 60 | 466 | 415 | 0 | 3,962 | 0 |
+| P2 | 45 | 0 | 0 | 0 | 519 | 0 |
+| A | 60 | 0 | 0 | 0 | 108 | 0 |
+
+**DRT at U60 (programmable nets only, met4–met5).** No design converges:
+- A W1: 12,727 → 10,665 after 6 iterations. 8,814 of the violations are net-to-net met4 shorts; only 262 involve pins.
+- P2 W1: 24,818 → 23,178.
+- UBP3 W1: 66,520 → 121,693.
+
+**Classification:**
+- **K2b fires.** W1 and W2 fail for UBP3 at every U down to 8%. A routes them at U60 and P2 at U45, at GRT level. → **substantially weakened**.
+- **K2d does not fire.** No program wire lies below met4, and the base ODB hashes are recorded (`results/G2/base_odb_sha256_before_programs.txt`).
+
+**Diagnosis (overflow maps):**
+- The generic, connectivity-driven base placer cannot see the programmable nets, so it clusters every line tap next to the line generators and input pins.
+- A: all 128 taps sit within an 80 × 190 µm patch at the die edge.
+- UBP3 at 8%: 2,476 of 2,484 GRT overflows form one vertical stripe through the tap cluster. Its 499 used lines leave one patch, and the horizontal capacity across that patch (met5 at 3.4 µm pitch) grows only with the die side.
+- This is a **placement-methodology** failure mode, and it penalizes the design with the most lines. It does not show that a W-blind base must fail.
+- Hence the one bounded revision below.
+
+## R2 — structured (crossbar) W-blind base — the one bounded revision + distinguishing experiment
+
+Written before any R2 data. This is a **methodology** revision; the architecture is unchanged.
+
+**What changes and what doesn't:**
+- The base netlists and the via programs are unchanged; only the placement of the programmable-pin cells is fixed, W-blind, before global placement (`scripts/g2_struct.py`, ORFS `POST_PDN_TCL`).
+- **Bands:** one vertical band per line group: 22 bands for UBP3, one per 3-input block, 26 taps each; 64 bands for P2 and A, one per input, 2 taps each.
+- **Via sites:** the site of (row i, band k) sits at the band centre, at core height (i + 0.5)/64.
+- **Taps:** the band's taps sit next to the site column, spread evenly over the height; tap t of T sits at (t + 0.5)/T.
+- These cells are FIRM. Everything else is placed by ORFS from base connectivity.
+- Protocol, cells, PDN, programs, layers and tools are otherwise identical to G2.
+
+**Prediction (DERIVED, `scripts/g2_track_model.py` extended to spread taps, before data):**
+- UBP3's densest band needs 23 of the band's met4 tracks (W2). Its programmable-layer-limited U_max is therefore ≈ 44% if 75% of met4 tracks are usable, or ≈ 63% if 90% are.
+- P2 and A need 2 tracks per band, so their programmable layers are not binding.
+
+**Grid:**
+- B (UBP3): U ∈ {60, 52, 45}
+- P2: U ∈ {60, 67}
+- A: U ∈ {60, 75}
+
+**Primary criterion (U routes):** base DRC 0 on met1–met3 **and** GRT overflow 0 on met4–met5 for all five W.
+**Secondary criterion:** DRT (20 iterations) on the W with the largest GRT wirelength converges to 0 violations.
+**U_max:** the highest routed U in the grid.
+
+**Metric:** A×T = (G2 base synthesized cell area) / U_max × cycles/word × T.
+- Base cell areas: B 169,952; P2 274,662; A 356,417 µm².
+- T = 3.0 ns − min(final setup WS of the base, modeled setup WS of the W1-programmed netlist through programmable nets).
+
+**Conditions:**
+
+| ID | Condition | Classification |
+|---|---|---|
+| R2-A | A×T(B) ≤ A×T(P2)/1.2 **and** ≤ A×T(A)/1.5 at the primary U_max, **and** B's secondary criterion holds | G2 passes after R2 (advance) |
+| R2-K | A×T(B) > min(A×T(P2), A×T(A))/1.1, **or** B routes no U in its grid | R2 killed. G2 fails, so the via-programmable claim is killed. |
+| (between) | | G2 unresolved |
+
+**If DRT fails for every design** (as at unstructured U60), the secondary criterion is reported as a testbed limit (SKY130 met4/met5 pitch and via4 size) and R2-A cannot be granted.
