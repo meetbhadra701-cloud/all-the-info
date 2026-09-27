@@ -9,14 +9,16 @@ valid = our AIG simulation of the full top netlist vs numpy W@x (64 vectors) and
 | g1 | True | 75 | 0 | 0 | 289958 | 6810 | 334631 | 385405 | 0 | 0 | 1059947 | 8.363 | 1.184 | 11.64 |
 | ubp3 | True | 60 | 0 | — | 139262 | 430 | 156880 | 230341 | 0 | 0 | 685880 | 6.995 | 1.140 | 13.01 |
 | ubp3 | True | 75 | 2 | — | 139262 | — | — | 185037 | — | — | — | — | — | — |
+| ubp4 | True | 60 | 0 | — | 169813 | 172 | 188977 | 281802 | 0 | 0 | 964328 | 7.030 | 1.174 | 12.97 |
 | ubp4 | True | 75 | 2 | — | 169813 | — | — | 224893 | — | — | — | — | — | — |
 
 ## Decision (routed area = synthesized cell area / U_max; U_max = highest util with DRC-clean detailed route)
 
 - g1: U_max = 75% -> routed area 386611 um^2 (final-cell basis 446175; final-minus-ties basis 412092); natural delay 11.64 ns; routed WL 1059947
 - ubp3: U_max = 60% -> routed area 232103 um^2 (final-cell basis 261467; final-minus-ties basis 258777); natural delay 13.01 ns; routed WL 685880
-- ubp4: no qualifying route in tested range (or runs incomplete)
+- ubp4: U_max = 60% -> routed area 283022 um^2 (final-cell basis 314962; final-minus-ties basis 313886); natural delay 12.97 ns; routed WL 964328
 
 **g1 / best UBP (ubp3) routed-area ratio = 1.666** (sensitivity: final-cell basis 1.706, final-minus-ties basis 1.592); delay ratio ubp3/g1 = 1.12; WL ratio g1/ubp3 = 1.55
 - g1 / ubp3 = 1.666
+- g1 / ubp4 = 1.366
 - K5 (ratio < 1.3): not triggered; A5 (ratio >= 1.5): MET

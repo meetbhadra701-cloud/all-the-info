@@ -1,0 +1,2611 @@
+mkdir -p /work/orfs/results/sky130hd/ubp4_n32_u45/base/
+echo 20.0 > /work/orfs/results/sky130hd/ubp4_n32_u45/base/clock_period.txt
+/OpenROAD-flow-scripts/flow/scripts/synth.sh /OpenROAD-flow-scripts/flow/scripts/synth_canonicalize.tcl /work/orfs/logs/sky130hd/ubp4_n32_u45/base/1_1_yosys_canonicalize.log
+exec cp /work/ubp4_n32/netlist.v /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_2_yosys.v
+exec touch -r /work/ubp4_n32/netlist.v /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_2_yosys.v
+Elapsed time: 0:00.05[h:]min:sec. CPU time: user 0.04 sys 0.01 (96%). Peak memory: 27156KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_1_yosys_canonicalize                    0             26                  N/A
+/OpenROAD-flow-scripts/flow/scripts/synth.sh /OpenROAD-flow-scripts/flow/scripts/synth.tcl /work/orfs/logs/sky130hd/ubp4_n32_u45/base/1_2_yosys.log
+exec cp /work/ubp4_n32/netlist.v /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_2_yosys.v
+exec touch -r /work/ubp4_n32/netlist.v /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_2_yosys.v
+Elapsed time: 0:00.06[h:]min:sec. CPU time: user 0.04 sys 0.01 (91%). Peak memory: 27296KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_2_yosys                 .v              0             26 7a008e231d1edb9a09c8
+cp /work/ubp4_n32/constraint.sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_2_yosys.sdc
+touch -r /work/ubp4_n32/constraint.sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_2_yosys.sdc
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+mkdir -p /work/orfs/objects/sky130hd/ubp4_n32_u45/base
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 1_synth synth_odb
+Running synth_odb.tcl, stage 1_synth
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+link_design top
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_2_yosys.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Design area 169813 um^2 100% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_synth.odb
+write_sdc -no_timestamp /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_synth.sdc
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Elapsed time: 0:01.07[h:]min:sec. CPU time: user 0.80 sys 0.11 (85%). Peak memory: 159052KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+1_synth                   .odb            1            155 d4b7b73013eea0d52f74
+1_synth                   .sdc                             c5167e321845919ca71b
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_1_floorplan floorplan
+Running floorplan.tcl, stage 2_1_floorplan
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_synth.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/1_synth.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+Master sky130_ef_sc_hd__decap_12 is loaded but not used in the design
+
+==========================================================================
+Floorplan check_setup
+--------------------------------------------------------------------------
+number instances in verilog is 21296
+initialize_floorplan -utilization 45 -aspect_ratio 1 -core_space 2 -site unithd
+[INFO IFP-0107] Defining die area using utilization: 45.00% and aspect ratio: 1.
+[WARNING IFP-0028] Core area lower left (2.000, 2.000) snapped to (2.300, 2.720).
+[INFO IFP-0001] Added 225 rows of 1334 site unithd.
+[INFO IFP-0100] Die BBox:  (  0.000  0.000 ) ( 618.295 618.295 ) um
+[INFO IFP-0101] Core BBox: (  2.300  2.720 ) ( 615.940 614.720 ) um
+[INFO IFP-0102] Core area:                       375547.680 um^2
+[INFO IFP-0103] Total instances area:            169812.864 um^2
+[INFO IFP-0104] Effective utilization:                0.452
+[INFO IFP-0105] Number of instances:                  21296
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/make_tracks.tcl
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/fastroute.tcl
+set_dont_use "sky130_fd_sc_hd__probe_p_8 sky130_fd_sc_hd__probec_p_8 sky130_fd_sc_hd__lpflow_bleeder_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_1 sky130_fd_sc_hd__lpflow_clkbufkapwr_16 sky130_fd_sc_hd__lpflow_clkbufkapwr_2 sky130_fd_sc_hd__lpflow_clkbufkapwr_4 sky130_fd_sc_hd__lpflow_clkbufkapwr_8 sky130_fd_sc_hd__lpflow_clkinvkapwr_1 sky130_fd_sc_hd__lpflow_clkinvkapwr_16 sky130_fd_sc_hd__lpflow_clkinvkapwr_2 sky130_fd_sc_hd__lpflow_clkinvkapwr_4 sky130_fd_sc_hd__lpflow_clkinvkapwr_8 sky130_fd_sc_hd__lpflow_decapkapwr_12 sky130_fd_sc_hd__lpflow_decapkapwr_3 sky130_fd_sc_hd__lpflow_decapkapwr_4 sky130_fd_sc_hd__lpflow_decapkapwr_6 sky130_fd_sc_hd__lpflow_decapkapwr_8 sky130_fd_sc_hd__lpflow_inputiso0n_1 sky130_fd_sc_hd__lpflow_inputiso0p_1 sky130_fd_sc_hd__lpflow_inputiso1n_1 sky130_fd_sc_hd__lpflow_inputiso1p_1 sky130_fd_sc_hd__lpflow_inputisolatch_1 sky130_fd_sc_hd__lpflow_isobufsrc_1 sky130_fd_sc_hd__lpflow_isobufsrc_16 sky130_fd_sc_hd__lpflow_isobufsrc_2 sky130_fd_sc_hd__lpflow_isobufsrc_4 sky130_fd_sc_hd__lpflow_isobufsrc_8 sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4"
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/LO
+[INFO RSZ-0042] Inserted 172 tie sky130_fd_sc_hd__conb_1 instances.
+repair_tie_fanout -separation 0 sky130_fd_sc_hd__tt_025C_1v80/sky130_fd_sc_hd__conb_1/HI
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -setup -skip_last_gasp -sequence unbuffer,sizeup,swap,vt_swap -verbose
+[WARNING EST-0027] no estimated parasitics. Using wire load models.
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0505] Runtime: 0.12s
+Default units for flow
+ time 1ns
+ capacitance 1pF
+ resistance 1kohm
+ voltage 1v
+ current 1mA
+ power 1nW
+ distance 1um
+   Layer   | Unit Resistance | Unit Capacitance 
+           |       (kohm/um) |          (pF/um)
+------------------------------------------------
+       li1 |        7.18e-02 |         1.50e-04
+      met1 |        1.21e-03 |         1.72e-04
+      met2 |        1.22e-03 |         1.36e-04
+      met3 |        1.66e-04 |         2.15e-04
+      met4 |        1.68e-04 |         1.48e-04
+      met5 |        1.84e-05 |         1.54e-04
+------------------------------------------------
+
+   Layer   | Via Resistance 
+           |         (kohm) 
+----------------------------
+      mcon |       9.25e-03 
+       via |       4.50e-03 
+      via2 |       3.37e-03 
+      via3 |       3.77e-04 
+      via4 |       5.80e-06 
+----------------------------
+Report metrics stage 2, floorplan final...
+
+==========================================================================
+floorplan final report_design_area
+--------------------------------------------------------------------------
+Design area 170338 um^2 45% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_1_floorplan.odb
+write_sdc -no_timestamp /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_1_floorplan.sdc
+Elapsed time: 0:02.40[h:]min:sec. CPU time: user 1.95 sys 0.14 (86%). Peak memory: 214772KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_1_floorplan             .odb            2            209 989d148f9cf8c6ccd724
+2_1_floorplan             .sdc                             c5167e321845919ca71b
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_2_floorplan_macro macro_place
+Running macro_place.tcl, stage 2_2_floorplan_macro
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_1_floorplan.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_1_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+No macros found: Skipping macro_placement
+Design area 170338 um^2 45% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_2_floorplan_macro.odb
+Elapsed time: 0:00.73[h:]min:sec. CPU time: user 0.52 sys 0.06 (79%). Peak memory: 133212KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_2_floorplan_macro       .odb            0            130 989d148f9cf8c6ccd724
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_3_floorplan_tapcell tapcell
+Running tapcell.tcl, stage 2_3_floorplan_tapcell
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_2_floorplan_macro.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_1_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO TAP-0005] Inserted 4994 tapcells.
+Design area 176587 um^2 47% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_3_floorplan_tapcell.odb
+Elapsed time: 0:00.59[h:]min:sec. CPU time: user 0.49 sys 0.07 (96%). Peak memory: 133420KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_3_floorplan_tapcell     .odb            0            130 11951aab86608afbf03f
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 2_4_floorplan_pdn pdn
+Running pdn.tcl, stage 2_4_floorplan_pdn
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_3_floorplan_tapcell.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_1_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[WARNING PDN-1051] No instances found for grid (CORE_macro_grid_1).
+[WARNING PDN-1051] No instances found for grid (CORE_macro_grid_2).
+[INFO PDN-0001] Inserting grid: grid
+[INFO PDN-0500] Runtime: 0.21s
+Design area 176587 um^2 47% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_4_floorplan_pdn.odb
+Elapsed time: 0:01.46[h:]min:sec. CPU time: user 1.04 sys 0.08 (77%). Peak memory: 145308KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+2_4_floorplan_pdn         .odb            1            141 bf7dfe3f5740abd3600b
+cp /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_4_floorplan_pdn.odb /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.odb
+cp /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_1_floorplan.sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.sdc
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_1_place_gp_skip_io global_place_skip_io
+Running global_place_skip_io.tcl, stage 3_1_place_gp_skip_io
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+global_placement -skip_io -density 0.6 -pad_left 0 -pad_right 0
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  2.300  2.720 ) ( 615.940 614.720 ) um
+[INFO GPL-0016] Core area:                  375547.680 um^2
+[INFO GPL-0036] Movable instances area:     170338.368 um^2
+[INFO GPL-0037] Total instances area:       176586.861 um^2
+[INFO GPL-0035] Pin density area adjust:      6827.281 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:             26430
+[INFO GPL-0007] Movable instances:               21436
+[INFO GPL-0008] Fixed instances:                  4994
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                  21692
+[INFO GPL-0011] Number of pins:                  72860
+[INFO GPL-0012] Die BBox:       (  0.000  0.000 ) ( 618.295 618.295 ) um
+[INFO GPL-0013] Placement BBox: (  2.300  2.720 ) ( 615.940 614.720 ) um
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                375547.680 um^2
+[INFO GPL-0017] Fixed instances area:         6248.493 um^2
+[INFO GPL-0018] Movable instances area:     177165.649 um^2
+[INFO GPL-0019] Utilization:                    47.973 %
+[INFO GPL-0020] Standard cells area:        177165.649 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 21436	Region center = 0
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:      8.265 um^2
+[INFO GPL-0025] Ideal bin area:                 13.775 um^2
+[INFO GPL-0026] Ideal bin count:                 27263
+[INFO GPL-0027] Total bin area:             375547.680 um^2
+[INFO GPL-0028] Bin count (X, Y):         128 ,    128
+[INFO GPL-0029] Bin size (W * H):       4.794 *  4.781 um
+[INFO GPL-0030] Number of bins:                  16384
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9992 |  3.827746e+04 |   +0.00% |  8.03e-16 |      
+       10 |   0.9989 |  2.880814e+04 |  -24.74% |  1.31e-15 |      
+       20 |   0.9987 |  2.792811e+04 |   -3.05% |  2.13e-15 |      
+       30 |   0.9987 |  2.767545e+04 |   -0.90% |  3.47e-15 |      
+       40 |   0.9987 |  2.763604e+04 |   -0.14% |  5.65e-15 |      
+       50 |   0.9987 |  2.765239e+04 |   +0.06% |  9.20e-15 |      
+       60 |   0.9987 |  2.766592e+04 |   +0.05% |  1.50e-14 |      
+       70 |   0.9987 |  2.769503e+04 |   +0.11% |  2.44e-14 |      
+       80 |   0.9986 |  2.780723e+04 |   +0.41% |  3.98e-14 |      
+       90 |   0.9986 |  2.817874e+04 |   +1.34% |  6.48e-14 |      
+      100 |   0.9985 |  2.927448e+04 |   +3.89% |  1.06e-13 |      
+      110 |   0.9981 |  3.189925e+04 |   +8.97% |  1.72e-13 |      
+      120 |   0.9972 |  3.694940e+04 |  +15.83% |  2.80e-13 |      
+      130 |   0.9962 |  4.620449e+04 |  +25.05% |  4.55e-13 |      
+      140 |   0.9936 |  6.228762e+04 |  +34.81% |  7.40e-13 |      
+      150 |   0.9897 |  8.217914e+04 |  +31.93% |  1.20e-12 |      
+      160 |   0.9855 |  1.014203e+05 |  +23.41% |  1.96e-12 |      
+      170 |   0.9803 |  1.220317e+05 |  +20.32% |  3.18e-12 |      
+      180 |   0.9721 |  1.495615e+05 |  +22.56% |  5.16e-12 |      
+      190 |   0.9584 |  1.853733e+05 |  +23.94% |  8.38e-12 |      
+      200 |   0.9395 |  2.252775e+05 |  +21.53% |  1.36e-11 |      
+      210 |   0.9168 |  2.659124e+05 |  +18.04% |  2.20e-11 |      
+      220 |   0.8888 |  3.094893e+05 |  +16.39% |  3.57e-11 |      
+      230 |   0.8543 |  3.577258e+05 |  +15.59% |  5.79e-11 |      
+      240 |   0.8145 |  4.073148e+05 |  +13.86% |  9.38e-11 |      
+      250 |   0.7724 |  4.544408e+05 |  +11.57% |  1.52e-10 |      
+      260 |   0.7248 |  4.993859e+05 |   +9.89% |  2.46e-10 |      
+      270 |   0.6711 |  5.404651e+05 |   +8.23% |  3.99e-10 |      
+      280 |   0.6113 |  5.726416e+05 |   +5.95% |  6.48e-10 |      
+      290 |   0.5397 |  6.033412e+05 |   +5.36% |  1.05e-09 |      
+      300 |   0.4713 |  6.417529e+05 |   +6.37% |  1.71e-09 |      
+      310 |   0.4263 |  6.911738e+05 |   +7.70% |  2.77e-09 |      
+      320 |   0.3881 |  7.127932e+05 |   +3.13% |  4.49e-09 |      
+      330 |   0.3746 |  7.112669e+05 |   -0.21% |  7.32e-09 |      
+      340 |   0.3472 |  7.035776e+05 |   -1.08% |  1.17e-08 |      
+      350 |   0.3184 |  7.145321e+05 |   +1.56% |  1.72e-08 |      
+      360 |   0.3020 |  7.093207e+05 |   -0.73% |  2.53e-08 |      
+      370 |   0.2773 |  7.071531e+05 |   -0.31% |  3.73e-08 |      
+      380 |   0.2538 |  7.058262e+05 |   -0.19% |  5.50e-08 |      
+      390 |   0.2280 |  7.048940e+05 |   -0.13% |  8.10e-08 |      
+      400 |   0.2053 |  7.038239e+05 |   -0.15% |  1.19e-07 |      
+      410 |   0.1820 |  7.036362e+05 |   -0.03% |  1.76e-07 |      
+      420 |   0.1594 |  7.037994e+05 |   +0.02% |  2.59e-07 |      
+      430 |   0.1395 |  7.040673e+05 |   +0.04% |  3.81e-07 |      
+      440 |   0.1201 |  7.043256e+05 |   +0.04% |  5.62e-07 |      
+      450 |   0.1036 |  7.048875e+05 |   +0.08% |  8.27e-07 |      
+      453 |   0.0990 |  7.050619e+05 |          |  9.66e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 453
+[INFO GPL-1002] Placed Cell Area            177165.6491
+[INFO GPL-1003] Available Free Area         369299.1872
+[INFO GPL-1004] Minimum Feasible Density        0.4800 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.5330
+[INFO GPL-1008]     - For 80% usage of free space: 0.5997
+[INFO GPL-1009]     - For 50% usage of free space: 0.9595
+[INFO GPL-1014] Final placement area: 177165.65 (+0.00%)
+[INFO GPL-1018] Final HPWL (um): 705421.30
+Took 6 seconds: global_placement -skip_io -density 0.6 -pad_left 0 -pad_right 0
+Design area 176587 um^2 47% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_1_place_gp_skip_io.odb
+Elapsed time: 0:06.88[h:]min:sec. CPU time: user 5.74 sys 0.20 (86%). Peak memory: 174720KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_1_place_gp_skip_io      .odb            6            170 f060fdf9ecf71bfa54fd
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_2_place_iop io_placement
+Running io_placement.tcl, stage 3_2_place_iop
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_1_place_gp_skip_io.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+place_pins -hor_layers met3 -ver_layers met2
+Found 0 macro blocks.
+Using 2 tracks default min distance between IO pins.
+[INFO PPL-0001] Number of available slots 2242
+[INFO PPL-0002] Number of I/O             672
+[INFO PPL-0003] Number of I/O w/sink      672
+[INFO PPL-0004] Number of I/O w/o sink    0
+[INFO PPL-0005] Slots per section         200
+[INFO PPL-0008] Successfully assigned pins to sections.
+[INFO PPL-0012] I/O nets HPWL: 139855.23 um.
+Design area 176587 um^2 47% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_2_place_iop.odb
+Elapsed time: 0:00.93[h:]min:sec. CPU time: user 0.61 sys 0.08 (74%). Peak memory: 140132KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_2_place_iop             .odb            0            136 d3b794abbf4ed8aed51a
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_3_place_gp global_place
+Running global_place.tcl, stage 3_3_place_gp
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_2_place_iop.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[INFO RSZ-0026] Removed 0 buffers.
+Perform port buffering...
+[INFO RSZ-0027] Inserted 256 sky130_fd_sc_hd__clkdlybuf4s50_1 input buffers.
+[INFO RSZ-0028] Inserted 416 sky130_fd_sc_hd__clkdlybuf4s50_1 output buffers.
+global_placement -density 0.6 -pad_left 0 -pad_right 0 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+[INFO GPL-0001] ---- Initialize GPL Main Data Structures
+[INFO GPL-0002] DBU: 1000
+[INFO GPL-0003] SiteSize: (  0.460  2.720 ) um
+[INFO GPL-0004] CoreBBox: (  2.300  2.720 ) ( 615.940 614.720 ) um
+[INFO GPL-0016] Core area:                  375547.680 um^2
+[INFO GPL-0036] Movable instances area:     177064.819 um^2
+[INFO GPL-0037] Total instances area:       183313.312 um^2
+[INFO GPL-0035] Pin density area adjust:      7819.718 um^2
+[INFO GPL-0032] ---- Initialize Region: Top-level
+[INFO GPL-0006] Number of instances:             27102
+[INFO GPL-0007] Movable instances:               22108
+[INFO GPL-0008] Fixed instances:                  4994
+[INFO GPL-0009] Dummy instances:                     0
+[INFO GPL-0010] Number of nets:                  22364
+[INFO GPL-0011] Number of pins:                  74876
+[INFO GPL-0012] Die BBox:       (  0.000  0.000 ) ( 618.295 618.295 ) um
+[INFO GPL-0013] Placement BBox: (  2.300  2.720 ) ( 615.940 614.720 ) um
+[INFO GPL-0014] Region name: top-level.
+[INFO GPL-0015] Region area:                375547.680 um^2
+[INFO GPL-0017] Fixed instances area:         6248.493 um^2
+[INFO GPL-0018] Movable instances area:     184884.537 um^2
+[INFO GPL-0019] Utilization:                    50.064 %
+[INFO GPL-0020] Standard cells area:        184884.537 um^2
+[INFO GPL-0021] Large instances area:            0.000 um^2
+[INFO GPL-0005] ---- Execute Conjugate Gradient Initial Placement.
+[INFO GPL-0051] Source of initial instance position counters:
+	Odb location = 0	Core center = 22108	Region center = 0
+[InitialPlace]  Iter: 1 conjugate gradient residual: 0.00000191 HPWL: 918329261
+[InitialPlace]  Iter: 2 conjugate gradient residual: 0.00000053 HPWL: 428035305
+[InitialPlace]  Iter: 3 conjugate gradient residual: 0.00000023 HPWL: 427141028
+[InitialPlace]  Iter: 4 conjugate gradient residual: 0.00000084 HPWL: 427536251
+[InitialPlace]  Iter: 5 conjugate gradient residual: 0.00000149 HPWL: 427059241
+[INFO GPL-0033] ---- Initialize Nesterov Region: Top-level
+[INFO GPL-0023] Placement target density:       0.6000
+[INFO GPL-0024] Movable insts average area:      8.363 um^2
+[INFO GPL-0025] Ideal bin area:                 13.938 um^2
+[INFO GPL-0026] Ideal bin count:                 26944
+[INFO GPL-0027] Total bin area:             375547.680 um^2
+[INFO GPL-0028] Bin count (X, Y):         128 ,    128
+[INFO GPL-0029] Bin size (W * H):       4.794 *  4.781 um
+[INFO GPL-0030] Number of bins:                  16384
+[INFO GPL-0084] ---- Execute Nesterov Global Placement.
+[INFO GPL-0031] HPWL: Half-Perimeter Wirelength
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+        0 |   0.9670 |  2.921781e+05 |   +0.00% |  6.44e-16 |      
+       10 |   0.8660 |  4.350627e+05 |  +48.90% |  1.03e-15 |      
+       20 |   0.8135 |  5.001967e+05 |  +14.97% |  1.67e-15 |      
+       30 |   0.7891 |  5.255451e+05 |   +5.07% |  2.71e-15 |      
+       40 |   0.7784 |  5.355558e+05 |   +1.90% |  4.41e-15 |      
+       50 |   0.7774 |  5.371482e+05 |   +0.30% |  7.18e-15 |      
+       60 |   0.7811 |  5.337744e+05 |   -0.63% |  1.17e-14 |      
+       70 |   0.7850 |  5.294151e+05 |   -0.82% |  1.91e-14 |      
+       80 |   0.7862 |  5.271990e+05 |   -0.42% |  3.10e-14 |      
+       90 |   0.7852 |  5.275348e+05 |   +0.06% |  5.06e-14 |      
+      100 |   0.7833 |  5.290813e+05 |   +0.29% |  8.24e-14 |      
+      110 |   0.7826 |  5.304343e+05 |   +0.26% |  1.34e-13 |      
+      120 |   0.7828 |  5.310253e+05 |   +0.11% |  2.18e-13 |      
+      130 |   0.7831 |  5.310238e+05 |   -0.00% |  3.56e-13 |      
+      140 |   0.7830 |  5.310706e+05 |   +0.01% |  5.80e-13 |      
+      150 |   0.7823 |  5.315518e+05 |   +0.09% |  9.44e-13 |      
+      160 |   0.7813 |  5.324877e+05 |   +0.18% |  1.54e-12 |      
+      170 |   0.7800 |  5.340280e+05 |   +0.29% |  2.50e-12 |      
+      180 |   0.7782 |  5.367209e+05 |   +0.50% |  4.08e-12 |      
+      190 |   0.7747 |  5.413336e+05 |   +0.86% |  6.64e-12 |      
+      200 |   0.7692 |  5.484547e+05 |   +1.32% |  1.08e-11 |      
+      210 |   0.7610 |  5.586624e+05 |   +1.86% |  1.76e-11 |      
+      220 |   0.7495 |  5.723522e+05 |   +2.45% |  2.86e-11 |      
+      230 |   0.7341 |  5.892408e+05 |   +2.95% |  4.65e-11 |      
+      240 |   0.7122 |  6.084535e+05 |   +3.26% |  7.56e-11 |      
+      250 |   0.6853 |  6.291007e+05 |   +3.39% |  1.23e-10 |      
+      260 |   0.6514 |  6.498970e+05 |   +3.31% |  2.00e-10 |      
+[INFO GPL-0100] Timing-driven iteration 1/2, virtual: false.
+[INFO GPL-0101]    Iter: 266, overflow: 0.631, keep resizer changes at: 1, HPWL: 660196296
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     22536
+    final |     +0.6% |     108 |      73 |           109 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 106 slew violations.
+[INFO RSZ-0035] Found 8 fanout violations.
+[INFO RSZ-0036] Found 8 capacitance violations.
+[INFO RSZ-0039] Resized 108 instances.
+[INFO RSZ-0038] Inserted 73 buffers in 109 nets.
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |     21924
+     2100 |     +0.1% |       0 |       19 |     19824
+     4200 |     +0.1% |       0 |       19 |     17724
+     6300 |     +0.1% |       0 |       20 |     15624
+     8400 |     +0.1% |       2 |       34 |     13524
+    10500 |     +0.2% |       5 |       52 |     11424
+    12600 |     +0.2% |       7 |       64 |      9324
+    14700 |     +0.3% |       8 |       91 |      7224
+    16800 |     +0.4% |       9 |      120 |      5124
+    18900 |     +0.6% |      16 |      171 |      3024
+    21000 |     +0.7% |      38 |      238 |       924
+    final |     +1.2% |      73 |      445 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 8.61366e-09
+[INFO GPL-0107] Timing-driven: repair_design delta area: 3275.044 um^2 (+1.77%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 445 (+2.01%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 518, deleted: 73
+[INFO GPL-0110] Timing-driven: new target density: 0.6088683
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      270 |   0.6083 |  6.804048e+05 |   +4.69% |  3.24e-10 |      
+[INFO GPL-0038] Routability snapshot saved at iter = 274
+      273 |   0.5968 |  6.877778e+05 |          |           |      
+      280 |   0.5704 |  6.951819e+05 |   +2.17% |  5.27e-10 |      
+      290 |   0.5249 |  7.069262e+05 |   +1.69% |  8.58e-10 |      
+      300 |   0.4678 |  7.252599e+05 |   +2.59% |  1.39e-09 |      
+      310 |   0.4168 |  7.538827e+05 |   +3.95% |  2.26e-09 |      
+      320 |   0.3865 |  7.964239e+05 |   +5.64% |  3.67e-09 |      
+      330 |   0.3592 |  8.270911e+05 |   +3.85% |  5.96e-09 |      
+      340 |   0.3386 |  8.243005e+05 |   -0.34% |  9.23e-09 |      
+      350 |   0.3326 |  8.040588e+05 |   -2.46% |  1.36e-08 |      
+      360 |   0.3050 |  8.042174e+05 |   +0.02% |  2.00e-08 |      
+[INFO GPL-0040] Routability iteration: 1
+[INFO GPL-0088] Tiles the placer can act on: 5535 of 7921 (69.88%)
+[INFO GPL-0041] Total routing overflow: 379.5047
+[INFO GPL-0042] Number of overflowed tiles: 1515 (27.37%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 1.9851
+[INFO GPL-0044] Average top 1.0% routing congestion: 1.8853
+[INFO GPL-0045] Average top 2.0% routing congestion: 1.7696
+[INFO GPL-0046] Average top 5.0% routing congestion: 1.6124
+[INFO GPL-0047] Routability iteration weighted routing congestion: 1.9352
+[INFO GPL-0048] Routing congestion (1.9352) lower than previous minimum (1e+30). Updating minimum.
+[INFO GPL-0099] Routability inflation trimmed to 15.70% of what this iteration asked for; 25.00% of the 30.00% budget still unspent.
+[INFO GPL-0086] Inflated area:                9216.091 um^2 (+4.90%)
+[INFO GPL-0052] Placement target density:       0.6089
+[INFO GPL-0076] Removing fillers, count: Before: 4583, After: 3432 (-25.11%)
+[INFO GPL-0077] Filler area (um^2)     : Before: 36694.989, After: 27475.658 (-25.12%)
+[INFO GPL-0078] Removed fillers count: 1151, area removed: 9214.593 um^2. Remaining area to be compensated by modifying density: 1.498 um^2
+[INFO GPL-0058] White space area:           369299.187 um^2 (+0.00%)
+[INFO GPL-0059] Movable instances area:     224854.573 um^2 (+0.00%)
+[INFO GPL-0060] Total filler area:           27475.658 um^2 (-25.12%)
+[INFO GPL-0061] Total non-inflated area:    224851.330 um^2 (-0.00%)
+[INFO GPL-0062] Total inflated area:        234067.420 um^2 (-0.00%)
+[INFO GPL-0063] New Target Density:             0.6089
+[INFO GPL-0087] Routability end iteration: increase inflation and revert back to snapshot.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      370 |   0.5816 |  7.052941e+05 |   +0.00% |  5.16e-10 |      
+      380 |   0.5272 |  7.252222e+05 |   +2.83% |  7.58e-10 |      
+      390 |   0.4734 |  7.410172e+05 |   +2.18% |  1.12e-09 |      
+      400 |   0.4370 |  7.608649e+05 |   +2.68% |  1.64e-09 |      
+      410 |   0.4064 |  7.904325e+05 |   +3.89% |  2.41e-09 |      
+      420 |   0.3830 |  8.192440e+05 |   +3.65% |  3.54e-09 |      
+      430 |   0.3667 |  8.310765e+05 |   +1.44% |  5.21e-09 |      
+      440 |   0.3574 |  8.257416e+05 |   -0.64% |  7.68e-09 |      
+      450 |   0.3424 |  8.167506e+05 |   -1.09% |  1.13e-08 |      
+      460 |   0.3169 |  8.213432e+05 |   +0.56% |  1.67e-08 |      
+[INFO GPL-0040] Routability iteration: 2
+[INFO GPL-0088] Tiles the placer can act on: 5744 of 7921 (72.52%)
+[INFO GPL-0041] Total routing overflow: 257.8553
+[INFO GPL-0042] Number of overflowed tiles: 1275 (22.20%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 1.7685
+[INFO GPL-0044] Average top 1.0% routing congestion: 1.6872
+[INFO GPL-0045] Average top 2.0% routing congestion: 1.6005
+[INFO GPL-0046] Average top 5.0% routing congestion: 1.4659
+[INFO GPL-0047] Routability iteration weighted routing congestion: 1.7278
+[INFO GPL-0048] Routing congestion (1.7278) lower than previous minimum (1.935). Updating minimum.
+[INFO GPL-0099] Routability inflation trimmed to 25.69% of what this iteration asked for; 20.02% of the 30.00% budget still unspent.
+[INFO GPL-0086] Inflated area:                9221.728 um^2 (+4.67%)
+[INFO GPL-0052] Placement target density:       0.6089
+[INFO GPL-0076] Removing fillers, count: Before: 3432, After: 2281 (-33.54%)
+[INFO GPL-0077] Filler area (um^2)     : Before: 27475.658, After: 18261.066 (-33.54%)
+[INFO GPL-0078] Removed fillers count: 1151, area removed: 9214.593 um^2. Remaining area to be compensated by modifying density: 7.134 um^2
+[INFO GPL-0058] White space area:           369299.187 um^2 (+0.00%)
+[INFO GPL-0059] Movable instances area:     224854.573 um^2 (+0.00%)
+[INFO GPL-0060] Total filler area:           18261.066 um^2 (-33.54%)
+[INFO GPL-0061] Total non-inflated area:    224858.464 um^2 (+0.00%)
+[INFO GPL-0062] Total inflated area:        234080.191 um^2 (+0.00%)
+[INFO GPL-0063] New Target Density:             0.6089
+[INFO GPL-0087] Routability end iteration: increase inflation and revert back to snapshot.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      470 |   0.6288 |  6.875904e+05 |   +0.00% |  3.94e-10 |      
+      480 |   0.5752 |  7.261009e+05 |   +5.60% |  5.78e-10 |      
+      490 |   0.5036 |  7.550471e+05 |   +3.99% |  8.49e-10 |      
+      500 |   0.4552 |  7.741752e+05 |   +2.53% |  1.25e-09 |      
+      510 |   0.4245 |  8.024095e+05 |   +3.65% |  1.84e-09 |      
+      520 |   0.4031 |  8.332159e+05 |   +3.84% |  2.70e-09 |      
+      530 |   0.3838 |  8.534974e+05 |   +2.43% |  3.97e-09 |      
+      540 |   0.3721 |  8.529806e+05 |   -0.06% |  5.84e-09 |      
+      550 |   0.3557 |  8.446209e+05 |   -0.98% |  8.60e-09 |      
+      560 |   0.3364 |  8.461275e+05 |   +0.18% |  1.27e-08 |      
+      570 |   0.3109 |  8.610277e+05 |   +1.76% |  1.86e-08 |      
+[INFO GPL-0040] Routability iteration: 3
+[INFO GPL-0088] Tiles the placer can act on: 5961 of 7921 (75.26%)
+[INFO GPL-0041] Total routing overflow: 203.1855
+[INFO GPL-0042] Number of overflowed tiles: 1116 (18.72%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 1.6695
+[INFO GPL-0044] Average top 1.0% routing congestion: 1.5900
+[INFO GPL-0045] Average top 2.0% routing congestion: 1.5067
+[INFO GPL-0046] Average top 5.0% routing congestion: 1.3880
+[INFO GPL-0047] Routability iteration weighted routing congestion: 1.6298
+[INFO GPL-0048] Routing congestion (1.6298) lower than previous minimum (1.728). Updating minimum.
+[INFO GPL-0099] Routability inflation trimmed to 30.83% of what this iteration asked for; 15.03% of the 30.00% budget still unspent.
+[INFO GPL-0086] Inflated area:                9223.656 um^2 (+4.46%)
+[INFO GPL-0052] Placement target density:       0.6089
+[INFO GPL-0076] Removing fillers, count: Before: 2281, After: 1129 (-50.50%)
+[INFO GPL-0077] Filler area (um^2)     : Before: 18261.066, After: 9038.467 (-50.50%)
+[INFO GPL-0078] Removed fillers count: 1152, area removed: 9222.599 um^2. Remaining area to be compensated by modifying density: 1.057 um^2
+[INFO GPL-0058] White space area:           369299.187 um^2 (+0.00%)
+[INFO GPL-0059] Movable instances area:     224854.573 um^2 (+0.00%)
+[INFO GPL-0060] Total filler area:            9038.467 um^2 (-50.50%)
+[INFO GPL-0061] Total non-inflated area:    224859.521 um^2 (+0.00%)
+[INFO GPL-0062] Total inflated area:        234083.177 um^2 (+0.00%)
+[INFO GPL-0063] New Target Density:             0.6089
+[INFO GPL-0087] Routability end iteration: increase inflation and revert back to snapshot.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      580 |   0.6356 |  6.941656e+05 |   +0.00% |  4.25e-10 |      
+      590 |   0.5648 |  7.519155e+05 |   +8.32% |  6.23e-10 |      
+      600 |   0.4821 |  7.866139e+05 |   +4.61% |  9.15e-10 |      
+      610 |   0.4451 |  8.116237e+05 |   +3.18% |  1.35e-09 |      
+      620 |   0.4183 |  8.451464e+05 |   +4.13% |  1.98e-09 |      
+      630 |   0.4041 |  8.723435e+05 |   +3.22% |  2.90e-09 |      
+      640 |   0.3879 |  8.840939e+05 |   +1.35% |  4.27e-09 |      
+      650 |   0.3737 |  8.770614e+05 |   -0.80% |  6.30e-09 |      
+      660 |   0.3521 |  8.731719e+05 |   -0.44% |  9.27e-09 |      
+      670 |   0.3308 |  8.863931e+05 |   +1.51% |  1.36e-08 |      
+      680 |   0.3072 |  8.989771e+05 |   +1.42% |  2.01e-08 |      
+[INFO GPL-0040] Routability iteration: 4
+[INFO GPL-0088] Tiles the placer can act on: 6149 of 7921 (77.63%)
+[INFO GPL-0041] Total routing overflow: 169.4025
+[INFO GPL-0042] Number of overflowed tiles: 1040 (16.91%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 1.6185
+[INFO GPL-0044] Average top 1.0% routing congestion: 1.5453
+[INFO GPL-0045] Average top 2.0% routing congestion: 1.4656
+[INFO GPL-0046] Average top 5.0% routing congestion: 1.3455
+[INFO GPL-0047] Routability iteration weighted routing congestion: 1.5819
+[INFO GPL-0048] Routing congestion (1.5819) lower than previous minimum (1.63). Updating minimum.
+[INFO GPL-0099] Routability inflation trimmed to 35.25% of what this iteration asked for; 10.04% of the 30.00% budget still unspent.
+[INFO GPL-0086] Inflated area:                9224.457 um^2 (+4.27%)
+[INFO GPL-0052] Placement target density:       0.6089
+[INFO GPL-0076] Removing fillers, count: Before: 1129, After: 0 (-100.00%)
+[INFO GPL-0077] Filler area (um^2)     : Before: 9038.467, After: 0.000 (-100.00%)
+[INFO GPL-0078] Removed fillers count: 1129, area removed: 9038.467 um^2. Remaining area to be compensated by modifying density: 185.990 um^2
+[INFO GPL-0079] New target density: 0.6093853
+[INFO GPL-0058] White space area:           369299.187 um^2 (+0.00%)
+[INFO GPL-0059] Movable instances area:     225045.512 um^2 (+0.08%)
+[INFO GPL-0060] Total filler area:               0.000 um^2 (-100.00%)
+[INFO GPL-0061] Total non-inflated area:    225045.512 um^2 (+0.08%)
+[INFO GPL-0062] Total inflated area:        234269.969 um^2 (+0.08%)
+[INFO GPL-0063] New Target Density:             0.6094
+[INFO GPL-0087] Routability end iteration: increase inflation and revert back to snapshot.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      690 |   0.6438 |  7.047065e+05 |   +0.00% |  4.42e-10 |      
+      700 |   0.5547 |  7.794612e+05 |  +10.61% |  6.47e-10 |      
+      710 |   0.4669 |  8.171138e+05 |   +4.83% |  9.49e-10 |      
+      720 |   0.4447 |  8.499157e+05 |   +4.01% |  1.39e-09 |      
+      730 |   0.4173 |  8.871310e+05 |   +4.38% |  2.05e-09 |      
+      740 |   0.4062 |  9.101173e+05 |   +2.59% |  3.01e-09 |      
+      750 |   0.3878 |  9.130389e+05 |   +0.32% |  4.43e-09 |      
+      760 |   0.3716 |  9.061803e+05 |   -0.75% |  6.53e-09 |      
+      770 |   0.3521 |  9.122309e+05 |   +0.67% |  9.61e-09 |      
+      780 |   0.3312 |  9.298627e+05 |   +1.93% |  1.41e-08 |      
+      790 |   0.3131 |  9.371782e+05 |   +0.79% |  2.08e-08 |      
+[INFO GPL-0040] Routability iteration: 5
+[INFO GPL-0088] Tiles the placer can act on: 6368 of 7921 (80.39%)
+[INFO GPL-0041] Total routing overflow: 140.7620
+[INFO GPL-0042] Number of overflowed tiles: 987 (15.50%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 1.5171
+[INFO GPL-0044] Average top 1.0% routing congestion: 1.4502
+[INFO GPL-0045] Average top 2.0% routing congestion: 1.3795
+[INFO GPL-0046] Average top 5.0% routing congestion: 1.2870
+[INFO GPL-0047] Routability iteration weighted routing congestion: 1.4836
+[INFO GPL-0048] Routing congestion (1.4836) lower than previous minimum (1.582). Updating minimum.
+[INFO GPL-0099] Routability inflation trimmed to 41.15% of what this iteration asked for; 5.05% of the 30.00% budget still unspent.
+[INFO GPL-0086] Inflated area:                9226.017 um^2 (+4.10%)
+[INFO GPL-0052] Placement target density:       0.6094
+[INFO GPL-0076] Removing fillers, count: Before: 0, After: 0 (+0.00%)
+[INFO GPL-0077] Filler area (um^2)     : Before: 0.000, After: 0.000 (+0.00%)
+[INFO GPL-0078] Removed fillers count: 0, area removed: 0.000 um^2. Remaining area to be compensated by modifying density: 9226.016 um^2
+[INFO GPL-0079] New target density: 0.6343678
+[INFO GPL-0058] White space area:           369299.187 um^2 (+0.00%)
+[INFO GPL-0059] Movable instances area:     234271.523 um^2 (+4.10%)
+[INFO GPL-0060] Total filler area:               0.000 um^2 (+0.00%)
+[INFO GPL-0061] Total non-inflated area:    234271.528 um^2 (+4.10%)
+[INFO GPL-0062] Total inflated area:        243497.545 um^2 (+3.94%)
+[INFO GPL-0063] New Target Density:             0.6344
+[INFO GPL-0087] Routability end iteration: increase inflation and revert back to snapshot.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      800 |   0.6464 |  7.062011e+05 |   +0.00% |  4.42e-10 |      
+      810 |   0.5510 |  7.887721e+05 |  +11.69% |  6.46e-10 |      
+      820 |   0.4629 |  8.284612e+05 |   +5.03% |  9.48e-10 |      
+      830 |   0.4407 |  8.641995e+05 |   +4.31% |  1.39e-09 |      
+      840 |   0.4155 |  8.993912e+05 |   +4.07% |  2.04e-09 |      
+      850 |   0.4044 |  9.187545e+05 |   +2.15% |  3.01e-09 |      
+      860 |   0.3872 |  9.176255e+05 |   -0.12% |  4.43e-09 |      
+      870 |   0.3724 |  9.110150e+05 |   -0.72% |  6.52e-09 |      
+      880 |   0.3467 |  9.215198e+05 |   +1.15% |  9.60e-09 |      
+      890 |   0.3283 |  9.396006e+05 |   +1.96% |  1.41e-08 |      
+      900 |   0.3107 |  9.444999e+05 |   +0.52% |  2.08e-08 |      
+[INFO GPL-0040] Routability iteration: 6
+[INFO GPL-0088] Tiles the placer can act on: 6368 of 7921 (80.39%)
+[INFO GPL-0041] Total routing overflow: 134.8460
+[INFO GPL-0042] Number of overflowed tiles: 965 (15.15%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 1.5042
+[INFO GPL-0044] Average top 1.0% routing congestion: 1.4408
+[INFO GPL-0045] Average top 2.0% routing congestion: 1.3757
+[INFO GPL-0046] Average top 5.0% routing congestion: 1.2786
+[INFO GPL-0047] Routability iteration weighted routing congestion: 1.4725
+[INFO GPL-0048] Routing congestion (1.4725) lower than previous minimum (1.484). Updating minimum.
+[INFO GPL-0099] Routability inflation trimmed to 40.90% of what this iteration asked for; 0.06% of the 30.00% budget still unspent.
+[INFO GPL-0086] Inflated area:                9225.558 um^2 (+3.94%)
+[INFO GPL-0052] Placement target density:       0.6344
+[INFO GPL-0076] Removing fillers, count: Before: 0, After: 0 (+0.00%)
+[INFO GPL-0077] Filler area (um^2)     : Before: 0.000, After: 0.000 (+0.00%)
+[INFO GPL-0078] Removed fillers count: 0, area removed: 0.000 um^2. Remaining area to be compensated by modifying density: 9225.557 um^2
+[INFO GPL-0079] New target density: 0.6593491
+[INFO GPL-0058] White space area:           369299.187 um^2 (+0.00%)
+[INFO GPL-0059] Movable instances area:     243497.091 um^2 (+3.94%)
+[INFO GPL-0060] Total filler area:               0.000 um^2 (+0.00%)
+[INFO GPL-0061] Total non-inflated area:    243497.085 um^2 (+3.94%)
+[INFO GPL-0062] Total inflated area:        252722.642 um^2 (+3.79%)
+[INFO GPL-0063] New Target Density:             0.6593
+[INFO GPL-0087] Routability end iteration: increase inflation and revert back to snapshot.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+      910 |   0.6485 |  7.076457e+05 |   +0.00% |  4.42e-10 |      
+      920 |   0.5471 |  7.973359e+05 |  +12.67% |  6.46e-10 |      
+      930 |   0.4574 |  8.387652e+05 |   +5.20% |  9.47e-10 |      
+      940 |   0.4373 |  8.762913e+05 |   +4.47% |  1.39e-09 |      
+      950 |   0.4124 |  9.095830e+05 |   +3.80% |  2.04e-09 |      
+      960 |   0.4043 |  9.237477e+05 |   +1.56% |  3.01e-09 |      
+      970 |   0.3876 |  9.199468e+05 |   -0.41% |  4.43e-09 |      
+      980 |   0.3709 |  9.128985e+05 |   -0.77% |  6.52e-09 |      
+      990 |   0.3455 |  9.291035e+05 |   +1.78% |  9.60e-09 |      
+     1000 |   0.3263 |  9.465599e+05 |   +1.88% |  1.41e-08 |      
+     1010 |   0.3089 |  9.481674e+05 |   +0.17% |  2.08e-08 |      
+[INFO GPL-0040] Routability iteration: 7
+[INFO GPL-0088] Tiles the placer can act on: 6333 of 7921 (79.95%)
+[INFO GPL-0041] Total routing overflow: 126.8038
+[INFO GPL-0042] Number of overflowed tiles: 959 (15.14%)
+[INFO GPL-0043] Average top 0.5% routing congestion: 1.5026
+[INFO GPL-0044] Average top 1.0% routing congestion: 1.4427
+[INFO GPL-0045] Average top 2.0% routing congestion: 1.3761
+[INFO GPL-0046] Average top 5.0% routing congestion: 1.2747
+[INFO GPL-0047] Routability iteration weighted routing congestion: 1.4727
+[INFO GPL-0049] Routing congestion (1.4727) higher than minimum (1.4725). Consecutive non-improvement count: 1.
+[INFO GPL-0099] Routability inflation trimmed to 0.57% of what this iteration asked for; 0.00% of the 30.00% budget still unspent.
+[INFO GPL-0086] Inflated area:                 109.058 um^2 (+0.04%)
+[INFO GPL-0052] Placement target density:       0.6593
+[INFO GPL-0076] Removing fillers, count: Before: 0, After: 0 (+0.00%)
+[INFO GPL-0077] Filler area (um^2)     : Before: 0.000, After: 0.000 (+0.00%)
+[INFO GPL-0078] Removed fillers count: 0, area removed: 0.000 um^2. Remaining area to be compensated by modifying density: 109.058 um^2
+[INFO GPL-0079] New target density: 0.65964437
+[INFO GPL-0058] White space area:           369299.187 um^2 (+0.00%)
+[INFO GPL-0059] Movable instances area:     243606.127 um^2 (+0.04%)
+[INFO GPL-0060] Total filler area:               0.000 um^2 (+0.00%)
+[INFO GPL-0061] Total non-inflated area:    243606.143 um^2 (+0.04%)
+[INFO GPL-0062] Total inflated area:        243715.201 um^2 (+0.04%)
+[INFO GPL-0063] New Target Density:             0.6596
+[INFO GPL-0097] Total routability inflation 29.99% of the movable area spent the 30.00% budget, ending routability.
+[INFO GPL-0055] Reverting inflation values and target density from the iteration with minimum observed routing congestion.
+[INFO GPL-0056] Minimum observed routing congestion: 1.4725
+[INFO GPL-0057] Target density at minimum routing congestion: 0.6344
+[INFO GPL-0080] Restoring 0 previously removed fillers.
+[INFO GPL-0089] Routability finished. Reverting to minimal observed routing congestion, could not reach target.
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+     1020 |   0.6225 |  7.030671e+05 |   +0.00% |  4.42e-10 |      
+     1030 |   0.5424 |  7.703491e+05 |   +9.57% |  6.47e-10 |      
+     1040 |   0.4606 |  8.124832e+05 |   +5.47% |  9.49e-10 |      
+     1050 |   0.4333 |  8.527029e+05 |   +4.95% |  1.39e-09 |      
+     1060 |   0.4059 |  8.935678e+05 |   +4.79% |  2.05e-09 |      
+     1070 |   0.3953 |  9.184222e+05 |   +2.78% |  3.01e-09 |      
+     1080 |   0.3752 |  9.204110e+05 |   +0.22% |  4.43e-09 |      
+     1090 |   0.3648 |  9.121941e+05 |   -0.89% |  6.52e-09 |      
+     1100 |   0.3389 |  9.175708e+05 |   +0.59% |  9.61e-09 |      
+     1110 |   0.3188 |  9.365437e+05 |   +2.07% |  1.41e-08 |      
+     1120 |   0.3005 |  9.446713e+05 |   +0.87% |  2.08e-08 |      
+     1130 |   0.2783 |  9.350945e+05 |   -1.01% |  3.06e-08 |      
+     1140 |   0.2579 |  9.360121e+05 |   +0.10% |  4.51e-08 |      
+     1150 |   0.2374 |  9.394386e+05 |   +0.37% |  6.64e-08 |      
+     1160 |   0.2148 |  9.351925e+05 |   -0.45% |  9.79e-08 |      
+[INFO GPL-0100] Timing-driven iteration 2/2, virtual: false.
+[INFO GPL-0101]    Iter: 1170, overflow: 0.193, keep resizer changes at: 1, HPWL: 936742891
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     22981
+    final |     +1.5% |     154 |     110 |           157 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 155 slew violations.
+[INFO RSZ-0036] Found 8 capacitance violations.
+[INFO RSZ-0039] Resized 154 instances.
+[INFO RSZ-0038] Inserted 110 buffers in 157 nets.
+   Iter   |    Area   | Removed | Inserted |   Pins
+          |           | Buffers | Buffers  | Remaining
+-------------------------------------------------------
+        0 |     +0.0% |       0 |        0 |     21924
+     2100 |     +0.0% |      25 |       35 |     19824
+     4200 |     +0.1% |      25 |       40 |     17724
+     6300 |     +0.0% |      36 |       60 |     15624
+     8400 |     +0.0% |      67 |      116 |     13524
+    10500 |     +0.1% |      98 |      191 |     11424
+    12600 |     +0.2% |     118 |      236 |      9324
+    14700 |     +0.3% |     160 |      330 |      7224
+    16800 |     +0.4% |     200 |      415 |      5124
+    18900 |     +0.6% |     271 |      558 |      3024
+    21000 |     +0.9% |     347 |      716 |       924
+    final |     +1.3% |     555 |     1010 |         0
+-------------------------------------------------------
+[INFO GPL-0106] Timing-driven: worst slack 8.329484e-09
+[INFO GPL-0107] Timing-driven: repair_design delta area: 4459.501 um^2 (+1.83%)
+[INFO GPL-0108] Timing-driven: repair_design, gpl delta gcells: 565 (+2.51%)
+[INFO GPL-0109] Timing-driven: repair_design, gcells created: 1120, deleted: 555
+[INFO GPL-0110] Timing-driven: new target density: 0.67171997
+Iteration | Overflow |     HPWL (um) |  HPWL(%) |   Penalty | Group
+---------------------------------------------------------------
+     1170 |   0.1815 |  9.595536e+05 |   +2.60% |  1.44e-07 |      
+     1180 |   0.1638 |  9.567521e+05 |   -0.29% |  2.12e-07 |      
+     1190 |   0.1427 |  9.563576e+05 |   -0.04% |  3.12e-07 |      
+     1200 |   0.1231 |  9.559735e+05 |   -0.04% |  4.60e-07 |      
+     1210 |   0.1060 |  9.554497e+05 |   -0.05% |  6.77e-07 |      
+     1214 |   0.0990 |  9.550576e+05 |          |  8.22e-07 |      
+---------------------------------------------------------------
+[INFO GPL-1001] Global placement finished at iteration 1214
+[INFO GPL-1017] Routability mode iteration count: 840
+[INFO GPL-1005] Routability final weighted congestion: 1.4369
+[INFO GPL-1002] Placed Cell Area            238731.0295
+[INFO GPL-1003] Available Free Area         369299.1872
+[INFO GPL-1004] Minimum Feasible Density        0.5100 (cell_area / free_area)
+[INFO GPL-1006]   Suggested Target Densities:
+[INFO GPL-1007]     - For 90% usage of free space: 0.7183
+[INFO GPL-1008]     - For 80% usage of free space: 0.8081
+[INFO GPL-1011] Original area (um^2): 184884.54
+[INFO GPL-1012] Total routability artificial inflation: 46111.95 (+24.94%)
+[INFO GPL-1013] Total timing-driven delta area: 7734.55 (+4.18%)
+[INFO GPL-1014] Final placement area: 238731.03 (+29.12%)
+[INFO GPL-1018] Final HPWL (um): 955520.85
+Took 41 seconds: global_placement -density 0.6 -pad_left 0 -pad_right 0 -routability_driven -timing_driven -force_center_initial_place -min_phi_coef 0.95 -max_phi_coef 1.05
+estimate_parasitics -placement
+Report metrics stage 3, global place...
+
+==========================================================================
+global place report_design_area
+--------------------------------------------------------------------------
+Design area 191868 um^2 51% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_3_place_gp.odb
+Elapsed time: 0:45.60[h:]min:sec. CPU time: user 37.27 sys 2.42 (87%). Peak memory: 518148KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_3_place_gp              .odb           45            506 d1bb99e00aec7ff9dbbf
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_4_place_resized resize
+Running resize.tcl, stage 3_4_place_resized
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_3_place_gp.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+estimate_parasitics -placement
+Perform buffer insertion and gate resizing...
+repair_design -verbose -match_cell_footprint
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     23546
+     1000 |     +0.0% |       0 |       0 |             0 |     22546
+     2000 |     +0.0% |       0 |       0 |             0 |     21546
+     3000 |     +0.0% |       0 |       0 |             0 |     20546
+     4000 |     +0.0% |       0 |       0 |             0 |     19546
+     5000 |     +0.0% |       0 |       0 |             0 |     18546
+     6000 |     +0.0% |       0 |       0 |             0 |     17546
+     7000 |     +0.0% |       0 |       0 |             0 |     16546
+     8000 |     +0.0% |       0 |       0 |             0 |     15546
+     9000 |     +0.0% |       0 |       0 |             0 |     14546
+    10000 |     +0.0% |       0 |       0 |             0 |     13546
+    11000 |     +0.0% |       0 |       0 |             0 |     12546
+    12000 |     +0.0% |       0 |       0 |             0 |     11546
+    13000 |     +0.0% |       0 |       0 |             0 |     10546
+    14000 |     +0.0% |       0 |       0 |             0 |      9546
+    15000 |     +0.0% |       0 |       0 |             0 |      8546
+    16000 |     +0.0% |       1 |       1 |             1 |      7546
+    17000 |     +0.0% |       1 |       1 |             1 |      6546
+    18000 |     +0.0% |       1 |       1 |             1 |      5546
+    19000 |     +0.0% |       1 |       1 |             1 |      4546
+    20000 |     +0.0% |       1 |       1 |             1 |      3546
+    21000 |     +0.0% |       1 |       1 |             1 |      2546
+    22000 |     +0.0% |       1 |       1 |             1 |      1546
+    23000 |     +0.0% |       1 |       1 |             1 |       546
+    final |     +0.0% |       1 |       1 |             1 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0039] Resized 1 instances.
+[INFO RSZ-0038] Inserted 1 buffers in 1 nets.
+[INFO RSZ-0504] Runtime: 2.92s
+Floating nets: 
+Report metrics stage 3, resizer...
+No registers in design
+
+==========================================================================
+resizer report_design_area
+--------------------------------------------------------------------------
+Design area 191895 um^2 51% utilization.
+Instance count before 28112, after 28113
+Pin count before 76396, after 76398
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_4_place_resized.odb
+Elapsed time: 0:07.61[h:]min:sec. CPU time: user 6.47 sys 0.21 (87%). Peak memory: 228628KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_4_place_resized         .odb            7            223 aa65c2779d20454a8a05
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 3_5_place_dp detail_place
+Running detail_place.tcl, stage 3_5_place_dp
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_4_place_resized.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/2_floorplan.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+detailed_placement
+[INFO DPL-0006] Core area: 375547.68 um^2
+[INFO DPL-0007] Movable instances area: 185646.80 um^2
+[INFO DPL-0008] Fixed instances area within core: 6248.49 um^2
+[INFO DPL-0009] Utilization: 51.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 28113 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |       4102 |      1310 |      2786
+        1 |          4 |         2 |         2
+        2 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 2.
+[INFO DPL-0500] Runtime: 0.54s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves               23847
+total displacement      61890.3 u
+average displacement        2.2 u
+max displacement           11.6 u
+original HPWL          955531.0 u
+legalized HPWL         991243.9 u
+delta HPWL                    4 %
+
+improve_placement -max_displacement "5 1"
+Detailed placement improvement.
+[INFO DPL-0401] Setting random seed to 1.
+[INFO DPL-0402] Setting maximum displacement 5 1 to 13600 2720 units.
+[INFO DPL-0320] Collected 5666 fixed cells.
+[INFO DPL-0318] Collected 23119 single height cells.
+[INFO DPL-0321] Collected 0 wide cells.
+[INFO DPL-0322] Image (2300, 2720) - (615940, 614720)
+[INFO DPL-0310] Assigned 23119 cells into segments.  Movement in X-direction is 0.000000, movement in Y-direction is 0.000000.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+[INFO DPL-0303] Running algorithm for independent set matching.
+[INFO DPL-0300] Set matching objective is wirelength.
+[INFO DPL-0301] Pass   1 of matching; objective is 9.913226e+08.
+[INFO DPL-0302] End of matching; objective is 9.910220e+08, improvement is 0.03 percent.
+[INFO DPL-0303] Running algorithm for global swaps.
+[INFO DPL-0306] Pass   1 of global swaps; hpwl is 9.835628e+08.
+[INFO DPL-0307] End of global swaps; objective is 9.835628e+08, improvement is 0.75 percent.
+[INFO DPL-0303] Running algorithm for vertical swaps.
+[INFO DPL-0308] Pass   1 of vertical swaps; hpwl is 9.813743e+08.
+[INFO DPL-0309] End of vertical swaps; objective is 9.813743e+08, improvement is 0.22 percent.
+[INFO DPL-0303] Running algorithm for reordering.
+[INFO DPL-0304] Pass   1 of reordering; objective is 9.806916e+08.
+[INFO DPL-0305] End of reordering; objective is 9.806916e+08, improvement is 0.07 percent.
+[INFO DPL-0303] Running algorithm for random improvement.
+[INFO DPL-0324] Random improver is using random generator.
+[INFO DPL-0325] Random improver is using hpwl objective.
+[INFO DPL-0326] Random improver cost string is (a).
+[INFO DPL-0332] End of pass, Generator random called 462380 times.
+[INFO DPL-0335] Generator random, Cumulative attempts 462380, swaps 70178, moves 139957 since last reset.
+[INFO DPL-0333] End of pass, Objective hpwl, Initial cost 9.806916e+08, Scratch cost 9.747046e+08, Incremental cost 9.747046e+08, Mismatch? N
+[INFO DPL-0338] End of pass, Total cost is 9.747046e+08.
+[INFO DPL-0327] Pass   1 of random improver; improvement in cost is 0.61 percent.
+[INFO DPL-0328] End of random improver; improvement is 0.610485 percent.
+[INFO DPL-0380] Cell flipping.
+[INFO DPL-0382] Changed 0 cell orientations for row compatibility.
+[INFO DPL-0383] Performed 6567 cell flips.
+[INFO DPL-0384] End of flipping; objective is 9.632560e+08, improvement is 1.17 percent.
+[INFO DPL-0313] Found 0 cells in wrong regions.
+[INFO DPL-0315] Found 0 row alignment problems.
+[INFO DPL-0314] Found 0 site alignment problems.
+[INFO DPL-0311] Found 0 overlaps between adjacent cells.
+[INFO DPL-0312] Found 0 edge spacing violations and 0 padding violations.
+Place Optimization Analysis
+---------------------------------
+total attempts           462380
+relocated cells           11756
+total displacement      49359.3 u
+average displacement        4.2 u
+max displacement           16.1 u
+original HPWL          991243.9 u
+improved HPWL          962951.6 u
+delta HPWL                   -3 %
+
+Took 5 seconds: improve_placement -max_displacement "5 1"
+optimize_mirroring
+[INFO DPL-0020] Mirrored 1665 instances
+[INFO DPL-0021] HPWL before          962951.6 u
+[INFO DPL-0022] HPWL after           962791.2 u
+[INFO DPL-0023] HPWL delta               -0.0 %
+[INFO FLW-0012] Placement violations .
+estimate_parasitics -placement
+Report metrics stage 3, detailed place...
+No registers in design
+
+==========================================================================
+detailed place report_design_area
+--------------------------------------------------------------------------
+Design area 191895 um^2 51% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_5_place_dp.odb
+write_sdc -no_timestamp /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_place.sdc
+Elapsed time: 0:11.60[h:]min:sec. CPU time: user 10.24 sys 0.40 (91%). Peak memory: 252316KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+3_5_place_dp              .odb           11            246 08e28670d235edfd3d54
+cp /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_5_place_dp.odb /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_place.odb
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 4_1_cts cts
+Running cts.tcl, stage 4_1_cts
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_place.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/3_place.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+clock_tree_synthesis -sink_clustering_enable -repair_clock_nets
+[INFO CTS-0050] Root buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0051] Sink buffer is sky130_fd_sc_hd__clkbuf_16.
+[INFO CTS-0052] The following clock buffers will be used for CTS:
+                    sky130_fd_sc_hd__clkbuf_16
+[INFO CTS-0049] Characterization buffer is sky130_fd_sc_hd__clkbuf_16.
+[WARNING CTS-0083] No clock nets have been found.
+[INFO CTS-0008] TritonCTS found 0 clock nets.
+[WARNING CTS-0082] No valid clock nets in the design.
+[INFO CTS-0500] Runtime: 1.06s
+estimate_parasitics -placement
+detailed_placement
+[INFO DPL-0006] Core area: 375547.68 um^2
+[INFO DPL-0007] Movable instances area: 185646.80 um^2
+[INFO DPL-0008] Fixed instances area within core: 6248.49 um^2
+[INFO DPL-0009] Utilization: 51.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 28113 cells
+[INFO DPL-0500] Runtime: 0.17s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                   0
+total displacement      21184.8 u
+average displacement        0.8 u
+max displacement           10.1 u
+original HPWL          962791.2 u
+legalized HPWL         974683.8 u
+delta HPWL                    1 %
+
+estimate_parasitics -placement
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -match_cell_footprint -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0505] Runtime: 1.60s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.33s
+Warning: master sky130_ef_sc_hd__decap_12 has signal pins but no liberty cell
+Repair timing output passed lec test
+detailed_placement
+[INFO DPL-0006] Core area: 375547.68 um^2
+[INFO DPL-0007] Movable instances area: 185646.80 um^2
+[INFO DPL-0008] Fixed instances area within core: 6248.49 um^2
+[INFO DPL-0009] Utilization: 51.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 28113 cells
+[INFO DPL-0500] Runtime: 0.15s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                   0
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          974683.8 u
+legalized HPWL         974683.8 u
+delta HPWL                    0 %
+
+estimate_parasitics -placement
+Report metrics stage 4, cts final...
+No registers in design
+
+==========================================================================
+cts final report_design_area
+--------------------------------------------------------------------------
+Design area 191895 um^2 51% utilization.
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/4_1_cts.odb
+write_sdc -no_timestamp /work/orfs/results/sky130hd/ubp4_n32_u45/base/4_cts.sdc
+Elapsed time: 0:12.27[h:]min:sec. CPU time: user 11.05 sys 0.58 (94%). Peak memory: 279916KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+4_1_cts                   .odb           12            273 fdb410de9dc52cb194a2
+cp /work/orfs/results/sky130hd/ubp4_n32_u45/base/4_1_cts.odb /work/orfs/results/sky130hd/ubp4_n32_u45/base/4_cts.odb
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_1_grt global_route
+Running global_route.tcl, stage 5_1_grt
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/4_cts.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/4_cts.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+pin_access
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   top
+Die area:                 ( 0 0 ) ( 618295 618295 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     28113
+Number of terminals:      674
+Number of snets:          2
+Number of nets:           23375
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 102.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 611679.
+[INFO DRT-0033] mcon shape region query size = 314240.
+[INFO DRT-0033] met1 shape region query size = 72550.
+[INFO DRT-0033] via shape region query size = 25425.
+[INFO DRT-0033] met2 shape region query size = 15624.
+[INFO DRT-0033] via2 shape region query size = 20340.
+[INFO DRT-0033] met3 shape region query size = 15558.
+[INFO DRT-0033] via3 shape region query size = 20340.
+[INFO DRT-0033] met4 shape region query size = 6143.
+[INFO DRT-0033] via4 shape region query size = 1013.
+[INFO DRT-0033] met5 shape region query size = 1103.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 788 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 102 unique inst patterns.
+[INFO DRT-0082]   Complete 10000 groups.
+[INFO DRT-0084]   Complete 14920 groups.
+#scanned instances     = 28113
+#unique  instances     = 102
+#stdCellGenAp          = 2944
+#stdCellValidPlanarAp  = 18
+#stdCellValidViaAp     = 2272
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 76226
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:04:00, elapsed time = 00:04:04, memory = 251.10 (MB), peak = 255.50 (MB)
+Took 245 seconds: pin_access
+global_route -congestion_report_file /work/orfs/reports/sky130hd/ubp4_n32_u45/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[INFO GRT-0020] Min routing layer: met1
+[INFO GRT-0021] Max routing layer: met5
+[INFO GRT-0022] Global adjustment: 0%
+[INFO GRT-0023] Grid origin: (0, 0)
+[INFO GRT-0088] Layer li1     Track-Pitch = 0.4600  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met1    Track-Pitch = 0.3400  line-2-Via Pitch: 0.3400
+[INFO GRT-0088] Layer met2    Track-Pitch = 0.4600  line-2-Via Pitch: 0.3500
+[INFO GRT-0088] Layer met3    Track-Pitch = 0.6800  line-2-Via Pitch: 0.6150
+[INFO GRT-0088] Layer met4    Track-Pitch = 0.9200  line-2-Via Pitch: 1.0400
+[INFO GRT-0088] Layer met5    Track-Pitch = 3.4000  line-2-Via Pitch: 3.1100
+[INFO GRT-0003] Macros: 0
+[INFO GRT-0004] Blockages: 18224
+[INFO GRT-0019] Found 0 clock nets.
+[INFO GRT-0001] Minimum degree: 2
+[INFO GRT-0002] Maximum degree: 47
+
+[INFO GRT-0053] Routing resources analysis:
+          Routing      Original      Derated      Resource
+Layer     Direction    Resources     Resources    Reduction (%)
+---------------------------------------------------------------
+li1        Vertical            0             0          0.00%
+met1       Horizontal     125709         97122          22.74%
+met2       Vertical       101728         78144          23.18%
+met3       Horizontal      76076         59708          21.52%
+met4       Vertical        50160         35640          28.95%
+met5       Horizontal      11352          7920          30.23%
+---------------------------------------------------------------
+
+[INFO GRT-0101] Running extra iterations to remove congestion.
+[INFO GRT-0102] Start extra iteration 1/30
+[INFO GRT-0102] Start extra iteration 2/30
+[INFO GRT-0102] Start extra iteration 3/30
+[INFO GRT-0197] Via related to pin nodes: 111954
+[INFO GRT-0198] Via related Steiner nodes: 2000
+[INFO GRT-0199] Via filling finished.
+[INFO GRT-0111] Final number of vias: 140024
+[INFO GRT-0112] Final usage 3D: 572753
+
+[INFO GRT-0096] Final congestion report:
+Layer         Resource        Demand        Usage (%)    Max H / Max V / Total Congestion
+---------------------------------------------------------------------------------------
+li1                  0             0            0.00%             0 /  0 /  0
+met1             97122         66171           68.13%             0 /  0 /  0
+met2             78144         53294           68.20%             0 /  0 /  0
+met3             59708         17377           29.10%             0 /  0 /  0
+met4             35640         15799           44.33%             0 /  0 /  0
+met5              7920            40            0.51%             0 /  0 /  0
+---------------------------------------------------------------------------------------
+Total           278534        152681           54.82%             0 /  0 /  0
+
+[INFO GRT-0018] Total wirelength: 1381828 um
+[INFO GRT-0014] Routed nets: 21368
+[INFO GRT-0303] Global routing runtime = 00:00:06
+Took 7 seconds: global_route -congestion_report_file /work/orfs/reports/sky130hd/ubp4_n32_u45/base/congestion.rpt -congestion_iterations 30 -congestion_report_iter_step 5 -verbose
+[WARNING STA-0450] virtual clock clk can not be propagated.
+estimate_parasitics -global_routing
+Perform buffer insertion and gate resizing...
+repair_design -verbose
+Iteration |   Area    | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------------------
+        0 |     +0.0% |       0 |       0 |             0 |     23547
+     1000 |     +0.0% |       0 |       0 |             0 |     22547
+     2000 |     +0.0% |       0 |       0 |             0 |     21547
+     3000 |     +0.0% |       0 |       0 |             0 |     20547
+[WARNING RSZ-0104] Net pn6_38[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[9] only has one pin. Check if it is intended to be dangling.
+     4000 |     +0.0% |       0 |       0 |             0 |     19547
+[WARNING RSZ-0104] Net pn7_39[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_27[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_27[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_26[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_26[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_38[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_38[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_6[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_6[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_24[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_24[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_22[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_22[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_27[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_27[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_26[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_26[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_19[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_19[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_6[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_6[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_39[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_39[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_37[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_37[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_34[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_34[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_27[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_27[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_18[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_18[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_39[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_39[9] only has one pin. Check if it is intended to be dangling.
+     5000 |     +0.0% |       0 |       0 |             0 |     18547
+[WARNING RSZ-0104] Net pn3_36[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_36[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_34[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_34[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_32[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_26[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_26[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_24[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_24[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_16[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_16[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_4[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_4[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_24[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_24[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_16[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_16[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_37[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_37[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_36[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_36[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_35[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_35[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_33[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_33[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_20[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_20[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_39[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_39[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_24[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_24[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_23[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_23[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_17[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_17[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_16[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_16[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_4[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_4[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_30[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_30[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_29[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_23[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_23[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_21[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_21[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_31[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_31[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_29[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_25[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_25[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_23[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_23[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_22[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_22[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_17[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_17[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_26[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_26[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_25[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_25[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_23[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_23[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_17[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_17[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_16[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_16[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_39[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_35[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_35[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_20[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_20[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_17[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_17[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_39[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_36[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_35[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_35[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_31[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_31[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_27[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_27[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_23[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_23[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_22[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_22[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_21[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_21[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_20[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_20[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_18[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_18[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_31[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_31[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_25[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_25[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_22[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_22[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_21[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_21[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_19[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_19[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_18[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_18[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_11[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_11[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_6[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_6[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_38[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_36[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_34[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_34[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_33[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_32[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_32[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_27[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_27[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_26[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_26[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_24[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_24[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_22[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_22[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_17[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_17[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_6[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_39[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_31[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_31[9] only has one pin. Check if it is intended to be dangling.
+     6000 |     +0.0% |       0 |       0 |             0 |     17547
+[WARNING RSZ-0104] Net pn0_25[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_25[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_21[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_21[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_10[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_10[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_6[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_6[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_5[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_5[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_22[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_19[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_19[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_18[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_18[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_17[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_17[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_6[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_6[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_4[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_4[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_28[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_28[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_10[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_10[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_6[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_6[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_31[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_31[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_30[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_30[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_29[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_19[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_6[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_37[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_34[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_29[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_28[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_28[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_23[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_23[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_18[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_10[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_10[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_6[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_6[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_4[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_4[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_34[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_30[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_30[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_29[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_28[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_28[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_11[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_11[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_10[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_10[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_5[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_5[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_29[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_27[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_26[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_16[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_11[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_10[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_10[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_5[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_5[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_4[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_4[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_37[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_35[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_31[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_31[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_23[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_23[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_20[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_19[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_19[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_11[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_11[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_10[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_10[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_6[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_29[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_23[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_19[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_19[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_17[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_16[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_11[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_11[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_10[7] only has one pin. Check if it is intended to be dangling.
+     7000 |     +0.0% |       0 |       0 |             0 |     16547
+[WARNING RSZ-0104] Net pn7_5[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_4[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_24[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_23[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_22[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_21[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_11[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_11[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_5[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_5[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_31[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_28[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_27[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_26[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_23[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_22[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_17[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_11[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_11[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_10[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_5[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_5[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_28[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_28[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_23[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_19[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_17[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_16[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_11[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_11[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_10[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_10[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_7[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_7[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_6[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_5[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_5[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_39[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_39[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_37[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_35[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_34[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_34[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_30[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_30[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_27[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_20[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_17[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_10[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_39[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_39[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_36[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_35[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_34[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_34[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_31[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_28[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_26[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_24[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_23[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_22[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_21[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_20[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_18[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_16[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_11[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_10[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_7[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_7[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_5[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_4[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_31[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_24[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_22[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_21[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_19[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_18[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_16[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_16[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_10[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_6[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_5[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_38[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_38[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_37[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_36[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_36[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_35[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_35[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_34[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_33[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_32[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_29[8] only has one pin. Check if it is intended to be dangling.
+     8000 |     +0.0% |       0 |       0 |             0 |     15547
+[WARNING RSZ-0104] Net pn1_29[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_22[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_20[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_20[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_17[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_11[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_10[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_7[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_7[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_6[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_39[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_39[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_31[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_30[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_30[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_24[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_23[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_23[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_21[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_17[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_17[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_16[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_16[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_11[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_7[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_7[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_6[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_4[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_30[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_29[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_29[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_24[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_23[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_23[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_22[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_21[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_21[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_19[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_18[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_17[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_13[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_13[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_12[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_12[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_11[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_8[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_8[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_7[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_7[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_6[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_5[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_4[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_29[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_29[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_28[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_27[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_26[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_25[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_23[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_23[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_22[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[4] only has one pin. Check if it is intended to be dangling.
+     9000 |     +0.0% |       0 |       0 |             0 |     14547
+[WARNING RSZ-0104] Net pn6_17[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_17[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_11[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_10[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_8[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_8[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_7[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_7[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_6[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_5[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_31[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_30[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_26[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_25[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_23[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_23[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_19[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_17[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_17[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_16[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_16[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_11[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_10[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_7[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_5[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_39[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_37[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_35[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_35[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_32[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_28[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_27[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_23[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_20[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_20[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_18[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_17[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_17[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_10[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_6[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_4[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_39[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_36[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_35[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_35[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_30[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_28[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_27[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_26[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_24[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_23[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_23[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_22[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_21[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_21[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_20[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_20[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_18[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_16[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_15[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_10[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_8[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_8[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_7[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_4[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_36[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_32[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_27[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_26[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_25[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_24[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_22[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_21[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_21[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_18[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_11[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_11[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_10[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_8[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_8[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_7[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_7[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_6[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_4[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_37[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_34[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_34[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_33[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_32[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_32[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_31[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_27[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_26[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_24[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_23[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_22[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_19[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_17[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_12[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_12[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_10[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_7[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_39[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_36[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_32[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_31[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_25[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_24[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_21[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_21[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_19[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_10[6] only has one pin. Check if it is intended to be dangling.
+    10000 |     +0.0% |       0 |       0 |             0 |     13547
+[WARNING RSZ-0104] Net pn7_8[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_8[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_7[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_6[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_5[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_35[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_34[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_30[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_30[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_24[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_19[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_18[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_17[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_17[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_13[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_12[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_7[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_6[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_4[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_34[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_31[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_31[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_28[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_27[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_26[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_25[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_22[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_14[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_14[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_10[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_7[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_6[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_30[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_30[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_29[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_29[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_28[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_26[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_25[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_12[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_12[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_10[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_8[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_8[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_6[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_39[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_38[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_37[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_36[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_35[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_34[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_30[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_30[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_30[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_29[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_29[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_28[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_27[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_23[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_23[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_20[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_18[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn4_10[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_8[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_8[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_6[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_4[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_39[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_38[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_36[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_35[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_34[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_32[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_31[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_31[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_30[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_30[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_29[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_29[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_28[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_27[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_26[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_24[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_22[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_20[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_16[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_15[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_15[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_12[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_12[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_11[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_11[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn3_10[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_9[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_9[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_8[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_5[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_5[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_4[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_39[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_37[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_34[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_33[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_31[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_31[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_29[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_29[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_27[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_26[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_25[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_24[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_22[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_19[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_18[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_16[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_12[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_12[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn2_10[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_7[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_5[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_5[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_4[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_38[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_37[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_36[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_35[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_33[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_29[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_27[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_26[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_26[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_24[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_23[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_23[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_22[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_20[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_19[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_17[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_12[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_11[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_11[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn1_10[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_6[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_39[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_38[1] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_31[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_30[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_29[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_29[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_25[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_24[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_19[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_17[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_16[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_13[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_13[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_12[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_12[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_11[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_11[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn0_10[5] only has one pin. Check if it is intended to be dangling.
+    11000 |     +0.0% |       0 |       0 |             0 |     12547
+[WARNING RSZ-0104] Net pn7_6[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_5[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_4[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_39[1] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_38[1] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_37[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_32[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_31[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_29[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_21[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_19[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_18[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_14[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_14[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_13[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_11[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn7_11[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_9[8] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_9[9] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_8[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_6[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_5[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_5[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_4[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_39[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_38[1] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_37[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_36[1] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_33[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_32[1] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_31[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_29[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_27[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_25[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_21[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_20[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_17[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_14[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_11[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn6_11[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_8[7] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_6[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_5[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_5[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_36[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_35[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_34[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_33[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[2] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_32[3] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_31[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_31[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_28[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_28[6] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_26[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_25[5] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] Net pn5_19[4] only has one pin. Check if it is intended to be dangling.
+[WARNING RSZ-0104] message limit (1000) reached. This message will no longer print.
+    12000 |     +0.0% |       0 |       0 |             0 |     11547
+    13000 |     +0.0% |       0 |       0 |             0 |     10547
+    14000 |     +0.0% |       0 |       0 |             0 |      9547
+    15000 |     +0.0% |       0 |       0 |             0 |      8547
+    16000 |     +0.0% |       0 |       0 |             0 |      7547
+    17000 |     +0.0% |       0 |       0 |             0 |      6547
+    18000 |     +0.0% |       0 |       0 |             0 |      5547
+    19000 |     +0.0% |       0 |       0 |             0 |      4547
+    20000 |     +0.0% |       0 |       1 |             1 |      3547
+    21000 |     +0.0% |       0 |       1 |             1 |      2547
+    22000 |     +0.0% |       0 |       1 |             1 |      1547
+    23000 |     +0.0% |       0 |       1 |             1 |       547
+    final |     +0.0% |       0 |       1 |             1 |         0
+---------------------------------------------------------------------
+[INFO RSZ-0036] Found 1 capacitance violations.
+[INFO RSZ-0038] Inserted 1 buffers in 1 nets.
+[INFO RSZ-0504] Runtime: 5.39s
+Took 6 seconds: repair_design -verbose
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 375547.68 um^2
+[INFO DPL-0007] Movable instances area: 185654.31 um^2
+[INFO DPL-0008] Fixed instances area within core: 6248.49 um^2
+[INFO DPL-0009] Utilization: 51.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 28114 cells
+          |      Total |  Illegal |  Illegal
+Iteration | Violations |    Cells |    Sites
+---------------------------------------------
+        0 |          0 |         0 |         0
+Negotiation phase 1 converged at iteration 0.
+[INFO DPL-0500] Runtime: 0.23s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                  49
+total displacement          8.2 u
+average displacement        0.0 u
+max displacement            5.4 u
+original HPWL          974687.7 u
+legalized HPWL         974690.7 u
+delta HPWL                    0 %
+
+global_route -end_incremental -congestion_report_file /work/orfs/reports/sky130hd/ubp4_n32_u45/base/congestion_post_repair_design.rpt
+Repair setup and hold violations...
+estimate_parasitics -global_routing
+repair_timing -setup_margin 0 -hold_margin 0 -repair_tns 100 -verbose
+[INFO RSZ-0100] Repair move sequence: UnbufferMove SizeUpMove SwapPinsMove BufferMove CloneMove SplitLoadMove 
+[INFO RSZ-0098] No setup violations found
+[INFO RSZ-0505] Runtime: 1.97s
+[INFO RSZ-0033] No hold violations found.
+[INFO RSZ-0506] Runtime: 0.53s
+global_route -start_incremental
+detailed_placement
+[INFO DPL-0006] Core area: 375547.68 um^2
+[INFO DPL-0007] Movable instances area: 185654.31 um^2
+[INFO DPL-0008] Fixed instances area within core: 6248.49 um^2
+[INFO DPL-0009] Utilization: 51.1%
+[INFO DPL-0005] Diamond search max displacement: +/- 500 sites horizontally, +/- 100 rows vertically.
+[INFO DPL-1102] Legalizing using negotiation legalizer.
+[INFO DPL-1103] Negotiation base search window: +/-20 sites horizontally, +/-5 rows vertically 
+	Automatic search window extension enabled.
+	Search window extendable up to the max displacement cap of +/-500 sites, +/-100 rows near walls.
+[INFO DPL-1104] NegotiationLegalizer DRC penalty: 5.
+[INFO DPL-0392] Negotiation cell height distribution (1 unique row-count(s)):
+[INFO DPL-0393]   height 1 row(s): 28114 cells
+[INFO DPL-0500] Runtime: 0.21s
+Detailed Placement Analysis
+---------------------------------
+legalizer            negotiation
+total moves                   0
+total displacement          0.0 u
+average displacement        0.0 u
+max displacement            0.0 u
+original HPWL          974690.7 u
+legalized HPWL         974690.7 u
+delta HPWL                    0 %
+
+check_placement -verbose
+global_route -end_incremental -congestion_report_file /work/orfs/reports/sky130hd/ubp4_n32_u45/base/congestion_post_repair_timing.rpt
+estimate_parasitics -global_routing
+global_route -start_incremental
+global_route -end_incremental -congestion_report_file /work/orfs/reports/sky130hd/ubp4_n32_u45/base/congestion_post_recover_power.rpt
+Repair antennas...
+[INFO GRT-0012] Found 87 antenna violations.
+[INFO GRT-0302] Inserted 96 jumpers for 85 nets.
+[INFO GRT-0012] Found 5 antenna violations.
+[WARNING GRT-0243] Unable to repair antennas on net with diodes.
+[INFO DPL-0501] Legalized with 97 moves: displacement total 4.1 u, max 0.9 u; HPWL 974694.4 -> 974696.6 u (+0.0 %).
+[INFO DPL-0500] Runtime: 0.22s
+[INFO GRT-0015] Inserted 5 diodes.
+[INFO GRT-0012] Found 0 antenna violations.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+Estimate parasitics...
+estimate_parasitics -global_routing
+Report metrics stage 5, global route...
+No registers in design
+
+==========================================================================
+global route report_design_area
+--------------------------------------------------------------------------
+Design area 191915 um^2 51% utilization.
+[INFO FLW-0007] clock clk period 20.000000
+[INFO FLW-0008] Clock clk period 11.971
+[INFO FLW-0009] Clock clk slack 7.399
+write_sdc -no_timestamp /work/orfs/results/sky130hd/ubp4_n32_u45/base/updated_clks.sdc
+[WARNING STA-0450] virtual clock clk can not be propagated.
+[INFO FLW-0011] Path endpoint path count 2452
+write_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/5_1_grt.odb
+write_sdc -no_timestamp /work/orfs/results/sky130hd/ubp4_n32_u45/base/5_1_grt.sdc
+Elapsed time: 5:18.85[h:]min:sec. CPU time: user 319.66 sys 1.01 (100%). Peak memory: 610880KB.
+Log                       Ext     Elapsed/s Peak Memory/MB sha1sum result [0:20)
+5_1_grt                   .odb          318            596 872c92ea655e42d9bbff
+5_1_grt                   .sdc                             c5167e321845919ca71b
+/OpenROAD-flow-scripts/flow/scripts/flow.sh 5_2_route detail_route
+Running detail_route.tcl, stage 5_2_route
+read_liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_db /work/orfs/results/sky130hd/ubp4_n32_u45/base/5_1_grt.odb
+read_sdc /work/orfs/results/sky130hd/ubp4_n32_u45/base/5_1_grt.sdc
+source /OpenROAD-flow-scripts/flow/platforms/sky130hd/setRC.tcl
+[WARNING STA-0450] virtual clock clk can not be propagated.
+detailed_route -output_drc /work/orfs/reports/sky130hd/ubp4_n32_u45/base/5_route_drc.rpt -output_maze /work/orfs/results/sky130hd/ubp4_n32_u45/base/maze.log -droute_end_iter 64 -verbose 1 -drc_report_iter_step 5
+[INFO DRT-0149] Reading tech and libs.
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer mcon
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via2
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via3
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+[WARNING DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer via4
+
+Units:                1000
+Number of layers:     13
+Number of macros:     441
+Number of vias:       29
+Number of viarulegen: 25
+
+[INFO DRT-0150] Reading design.
+
+Design:                   top
+Die area:                 ( 0 0 ) ( 618295 618295 )
+Number of track patterns: 12
+Number of DEF vias:       0
+Number of components:     28119
+Number of terminals:      674
+Number of snets:          2
+Number of nets:           23376
+
+[INFO DRT-0167] List of default vias:
+  Layer via
+    default via: M1M2_PR
+  Layer via2
+    default via: M2M3_PR
+  Layer via3
+    default via: M3M4_PR
+  Layer via4
+    default via: M4M5_PR
+[INFO DRT-0162] Library cell analysis.
+[INFO DRT-0163] Instance analysis.
+[INFO DRT-0164] Number of unique instances = 104.
+[INFO DRT-0168] Init region query.
+[INFO DRT-0024]   Complete FR_MASTERSLICE.
+[INFO DRT-0024]   Complete Fr_VIA.
+[INFO DRT-0024]   Complete li1.
+[INFO DRT-0024]   Complete mcon.
+[INFO DRT-0024]   Complete met1.
+[INFO DRT-0024]   Complete via.
+[INFO DRT-0024]   Complete met2.
+[INFO DRT-0024]   Complete via2.
+[INFO DRT-0024]   Complete met3.
+[INFO DRT-0024]   Complete via3.
+[INFO DRT-0024]   Complete met4.
+[INFO DRT-0024]   Complete via4.
+[INFO DRT-0024]   Complete met5.
+[INFO DRT-0033] FR_MASTERSLICE shape region query size = 0.
+[INFO DRT-0033] FR_VIA shape region query size = 0.
+[INFO DRT-0033] li1 shape region query size = 611716.
+[INFO DRT-0033] mcon shape region query size = 314272.
+[INFO DRT-0033] met1 shape region query size = 72562.
+[INFO DRT-0033] via shape region query size = 25425.
+[INFO DRT-0033] met2 shape region query size = 15624.
+[INFO DRT-0033] via2 shape region query size = 20340.
+[INFO DRT-0033] met3 shape region query size = 15558.
+[INFO DRT-0033] via3 shape region query size = 20340.
+[INFO DRT-0033] met4 shape region query size = 6143.
+[INFO DRT-0033] via4 shape region query size = 1013.
+[INFO DRT-0033] met5 shape region query size = 1103.
+[INFO DRT-0165] Start pin access.
+[INFO DRT-0078]   Complete 798 pins.
+[INFO DRT-0079]   Complete 100 unique inst patterns.
+[INFO DRT-0081]   Complete 104 unique inst patterns.
+[INFO DRT-0082]   Complete 10000 groups.
+[INFO DRT-0084]   Complete 14921 groups.
+#scanned instances     = 28119
+#unique  instances     = 104
+#stdCellGenAp          = 2968
+#stdCellValidPlanarAp  = 18
+#stdCellValidViaAp     = 2296
+#stdCellPinNoAp        = 0
+#stdCellPinCnt         = 76228
+#instTermValidViaApCnt = 0
+#macroGenAp            = 0
+#macroValidPlanarAp    = 0
+#macroValidViaAp       = 0
+#macroNoAp             = 0
+[INFO DRT-0166] Complete pin access.
+[INFO DRT-0267] cpu time = 00:03:55, elapsed time = 00:03:41, memory = 406.96 (MB), peak = 412.59 (MB)
+[INFO DRT-0156] guideIn read 100000 guides.
+
+[INFO DRT-0157] Number of guides:     152603
+
+[INFO DRT-0169] Post process guides.
+[INFO DRT-0176] GCELLGRID X 0 DO 89 STEP 6900 ;
+[INFO DRT-0177] GCELLGRID Y 0 DO 89 STEP 6900 ;
+[INFO DRT-0026]   Complete 100000 origin guides.
+[INFO DRT-0028]   Complete FR_MASTERSLICE.
+[INFO DRT-0028]   Complete Fr_VIA.
+[INFO DRT-0028]   Complete li1.
+[INFO DRT-0028]   Complete mcon.
+[INFO DRT-0028]   Complete met1.
+[INFO DRT-0028]   Complete via.
+[INFO DRT-0028]   Complete met2.
+[INFO DRT-0028]   Complete via2.
+[INFO DRT-0028]   Complete met3.
+[INFO DRT-0028]   Complete via3.
+[INFO DRT-0028]   Complete met4.
+[INFO DRT-0028]   Complete via4.
+[INFO DRT-0028]   Complete met5.
+[INFO DRT-0178] Init guide query.
+[INFO DRT-0035]   Complete FR_MASTERSLICE (guide).
+[INFO DRT-0035]   Complete Fr_VIA (guide).
+[INFO DRT-0035]   Complete li1 (guide).
+[INFO DRT-0035]   Complete mcon (guide).
+[INFO DRT-0035]   Complete met1 (guide).
+[INFO DRT-0035]   Complete via (guide).
+[INFO DRT-0035]   Complete met2 (guide).
+[INFO DRT-0035]   Complete via2 (guide).
+[INFO DRT-0035]   Complete met3 (guide).
+[INFO DRT-0035]   Complete via3 (guide).
+[INFO DRT-0035]   Complete met4 (guide).
+[INFO DRT-0035]   Complete via4 (guide).
+[INFO DRT-0035]   Complete met5 (guide).
+[INFO DRT-0036] FR_MASTERSLICE guide region query size = 0.
+[INFO DRT-0036] FR_VIA guide region query size = 0.
+[INFO DRT-0036] li1 guide region query size = 55127.
+[INFO DRT-0036] mcon guide region query size = 0.
+[INFO DRT-0036] met1 guide region query size = 44315.
+[INFO DRT-0036] via guide region query size = 0.
+[INFO DRT-0036] met2 guide region query size = 21254.
+[INFO DRT-0036] via2 guide region query size = 0.
+[INFO DRT-0036] met3 guide region query size = 2479.
+[INFO DRT-0036] via3 guide region query size = 0.
+[INFO DRT-0036] met4 guide region query size = 874.
+[INFO DRT-0036] via4 guide region query size = 0.
+[INFO DRT-0036] met5 guide region query size = 38.
+[INFO DRT-0179] Init gr pin query.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 451.80 (MB), peak = 451.57 (MB)
+[INFO DRT-0245] skipped writing guide updates to database.
+[INFO DRT-0181] Start track assignment.
+[INFO DRT-0184] Done with 77255 vertical wires in 2 frboxes and 46832 horizontal wires in 2 frboxes.
+[INFO DRT-0186] Done with 8884 vertical wires in 2 frboxes and 17319 horizontal wires in 2 frboxes.
+[INFO DRT-0182] Complete track assignment.
+[INFO DRT-0267] cpu time = 00:00:10, elapsed time = 00:00:08, memory = 553.51 (MB), peak = 634.63 (MB)
+[INFO DRT-0187] Start routing data preparation.
+[INFO DRT-0267] cpu time = 00:00:00, elapsed time = 00:00:00, memory = 554.97 (MB), peak = 634.63 (MB)
+[INFO DRT-0194] Start detail routing.
+[INFO DRT-0195] Start 0th optimization iteration.
+    Completing 10% with 0 violations.
+    elapsed time = 00:00:40, memory = 804.33 (MB).
+    Completing 20% with 0 violations.
+    elapsed time = 00:01:29, memory = 1026.02 (MB).
+    Completing 30% with 6694 violations.
+    elapsed time = 00:02:03, memory = 1110.27 (MB).
+    Completing 40% with 6694 violations.
+    elapsed time = 00:02:55, memory = 1110.82 (MB).
+    Completing 50% with 6694 violations.
+    elapsed time = 00:03:47, memory = 1134.13 (MB).
+    Completing 60% with 13036 violations.
+    elapsed time = 00:04:32, memory = 1171.32 (MB).
+    Completing 70% with 13036 violations.
+    elapsed time = 00:05:31, memory = 1176.34 (MB).
+    Completing 80% with 19478 violations.
+    elapsed time = 00:06:30, memory = 1208.21 (MB).
+    Completing 90% with 19478 violations.
+    elapsed time = 00:07:31, memory = 1215.82 (MB).
+    Completing 100% with 25533 violations.
+    elapsed time = 00:08:32, memory = 1167.43 (MB).
+[INFO DRT-0199]   Number of violations = 27060.
+Viol/Layer         li1   mcon   met1    via   met2   met3   met4   met5
+Cut Spacing          0     81      0      0      0      0      0      0
+Metal Spacing        0      0   2876      0    766     83     10      0
+Min Hole             0      0      3      0      0      0      0      0
+Recheck             15      0    890      0    442     77     98      5
+Short                0      3  19655      7   1902    112     29      6
+[INFO DRT-0267] cpu time = 00:11:33, elapsed time = 00:08:33, memory = 1172.43 (MB), peak = 1263.00 (MB)
+Total wire length = 1107413 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 475989 um.
+Total wire length on LAYER met2 = 386919 um.
+Total wire length on LAYER met3 = 135446 um.
+Total wire length on LAYER met4 = 108536 um.
+Total wire length on LAYER met5 = 522 um.
+Total number of vias = 163304.
+Up-via summary (total 163304):
+
+-------------------------
+ FR_MASTERSLICE         0
+            li1     75391
+           met1     80175
+           met2      6024
+           met3      1668
+           met4        46
+-------------------------
+               163304
+
+
+[INFO DRT-0195] Start 1st optimization iteration.
+    Completing 10% with 27060 violations.
+    elapsed time = 00:00:36, memory = 1169.87 (MB).
+    Completing 20% with 27060 violations.
+    elapsed time = 00:01:17, memory = 1185.55 (MB).
+    Completing 30% with 25471 violations.
+    elapsed time = 00:01:55, memory = 1296.79 (MB).
+    Completing 40% with 25471 violations.
+    elapsed time = 00:02:36, memory = 1292.29 (MB).
+    Completing 50% with 25471 violations.
+    elapsed time = 00:03:36, memory = 1300.07 (MB).
+    Completing 60% with 23453 violations.
+    elapsed time = 00:04:12, memory = 1270.90 (MB).
+    Completing 70% with 23453 violations.
+    elapsed time = 00:05:03, memory = 1273.14 (MB).
+    Completing 80% with 21237 violations.
+    elapsed time = 00:06:05, memory = 1262.57 (MB).
+    Completing 90% with 21237 violations.
+    elapsed time = 00:06:57, memory = 1274.96 (MB).
+    Completing 100% with 19274 violations.
+    elapsed time = 00:07:42, memory = 1236.41 (MB).
+[INFO DRT-0199]   Number of violations = 19277.
+Viol/Layer        mcon   met1    via   met2   met3   met4
+Cut Spacing        260      0      0      0      0      0
+Metal Spacing        0   2648      0    408     70      1
+Min Hole             0      1      0      0      0      0
+Recheck              0      3      0      0      0      0
+Short                0  14920      1    951      9      5
+[INFO DRT-0267] cpu time = 00:10:57, elapsed time = 00:07:43, memory = 1225.76 (MB), peak = 1333.98 (MB)
+Total wire length = 1100916 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 470049 um.
+Total wire length on LAYER met2 = 383893 um.
+Total wire length on LAYER met3 = 138248 um.
+Total wire length on LAYER met4 = 108285 um.
+Total wire length on LAYER met5 = 440 um.
+Total number of vias = 161824.
+Up-via summary (total 161824):
+
+-------------------------
+ FR_MASTERSLICE         0
+            li1     75341
+           met1     78759
+           met2      6027
+           met3      1659
+           met4        38
+-------------------------
+               161824
+
+
+[INFO DRT-0195] Start 2nd optimization iteration.
+    Completing 10% with 19277 violations.
+    elapsed time = 00:00:31, memory = 1271.09 (MB).
+    Completing 20% with 19277 violations.
+    elapsed time = 00:01:09, memory = 1270.09 (MB).
+    Completing 30% with 19037 violations.
+    elapsed time = 00:01:32, memory = 1258.44 (MB).
+    Completing 40% with 19037 violations.
+    elapsed time = 00:02:11, memory = 1261.43 (MB).
+    Completing 50% with 19037 violations.
+    elapsed time = 00:02:42, memory = 1249.85 (MB).
+    Completing 60% with 18839 violations.
+    elapsed time = 00:03:14, memory = 1284.01 (MB).
+    Completing 70% with 18839 violations.
+    elapsed time = 00:03:53, memory = 1271.35 (MB).
+    Completing 80% with 18248 violations.
+    elapsed time = 00:04:19, memory = 1274.40 (MB).
+    Completing 90% with 18248 violations.
+    elapsed time = 00:04:57, memory = 1257.09 (MB).
+    Completing 100% with 17632 violations.
+    elapsed time = 00:05:22, memory = 1236.77 (MB).
+[INFO DRT-0199]   Number of violations = 17634.
+Viol/Layer        mcon   met1    via   met2   met3   met4
+Cut Spacing        230      0      0      0      0      0
+Metal Spacing        0   2358      0    327     57      1
+Recheck              0      2      0      0      0      0
+Short                0  13811      3    822     13     10
+[INFO DRT-0267] cpu time = 00:10:11, elapsed time = 00:05:23, memory = 1248.77 (MB), peak = 1333.98 (MB)
+Total wire length = 1099487 um.
+Total wire length on LAYER li1 = 0 um.
+Total wire length on LAYER met1 = 468847 um.
+Total wire length on LAYER met2 = 382884 um.
+Total wire length on LAYER met3 = 138877 um.
+Total wire length on LAYER met4 = 108450 um.
+Total wire length on LAYER met5 = 426 um.
+Total number of vias = 161051.
+Up-via summary (total 161051):
+
+-------------------------
+ FR_MASTERSLICE         0
+            li1     75356
+           met1     77897
+           met2      6095
+           met3      1663
+           met4        40
+-------------------------
+               161051
+
+
+[INFO DRT-0195] Start 3rd optimization iteration.
+    Completing 10% with 17634 violations.
+    elapsed time = 00:00:33, memory = 1271.85 (MB).
+    Completing 20% with 17634 violations.
+    elapsed time = 00:01:01, memory = 1282.23 (MB).
+    Completing 30% with 13976 violations.
+    elapsed time = 00:01:20, memory = 1302.48 (MB).
+    Completing 40% with 13976 violations.
+    elapsed time = 00:01:49, memory = 1306.71 (MB).

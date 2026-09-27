@@ -4,7 +4,4 @@ experiments/results/*/*/netlist_raw.v
 experiments/results/*/*/*_gl_raw.v
 __pycache__/
 *.pyc
-# live ORFS logs: untracked while jobs run; final logs are committed from experiments/results/*_logs/ at the end
-experiments/results/*/*/orfs_u*.log
-experiments/results/*/*/orfs_u*.rc
 experiments/results/*/orfs_pruned_A1/

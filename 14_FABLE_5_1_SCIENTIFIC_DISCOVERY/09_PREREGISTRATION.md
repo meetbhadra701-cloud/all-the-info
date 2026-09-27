@@ -89,6 +89,7 @@ The first three entries were logged before any E5 routing result was known.
   - This is weaker than formal equivalence. It does catch any functional corruption by buffering, resizing or tie handling on the tested vectors.
 - **D3 (negative-control form):** the mutation control flips the polarity of one nonzero weight in the *reference* (W → W′), rather than editing the netlist. Detecting W′ ≠ netlist is equivalent to detecting a one-via change in the netlist against W.
 - **D4 (scheduling): runs are ordered U = 60, then U = 75, then U = 45** (the last only for designs that fail at 60). This does not change the definition of U_max over {45, 60, 75}.
+- **D5 (E5 ubp4 U = 45).** Its U = 60 run stalled for several routing passes, so the U = 45 fallback was launched early (02:00 UTC), to save wall-clock time. At 02:31 U = 60 finished DRC-clean, so U = 45 was not needed and was stopped. The partial run is unused, and U_max = 60 as the protocol defines it.
 
 ## Amendment A1 — written after the 8×8 smoke build (module timing only) and BEFORE any n = 32 place-and-route data
 
