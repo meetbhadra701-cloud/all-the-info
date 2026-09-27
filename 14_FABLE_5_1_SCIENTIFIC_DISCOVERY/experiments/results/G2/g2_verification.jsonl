@@ -19,3 +19,9 @@
 {"design": "pc2", "tag": "w1", "netlist": "post-PnR (prog_w1_u67s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
 {"design": "ubp3r3", "tag": "w14", "netlist": "pre-PnR (Verilog-level program)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
 {"design": "ubp3r3", "tag": "w4", "netlist": "pre-PnR (Verilog-level program)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "pc2r3", "tag": "w14", "netlist": "pre-PnR (Verilog-level program)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
+{"design": "ubp3r3", "tag": "w2", "netlist": "post-PnR (prog_w2_u52r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "ubp3r3", "tag": "w1", "netlist": "post-PnR (prog_w1_u52r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "ubp3r3", "tag": "w3", "netlist": "post-PnR (prog_w3_u52r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "ubp3r3", "tag": "w5", "netlist": "post-PnR (prog_w5_u52r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "ubp3r3", "tag": "w4", "netlist": "post-PnR (prog_w4_u52r_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}

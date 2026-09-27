@@ -36,9 +36,9 @@ from g2_build import leaf_source  # noqa: E402
 
 K = 4
 N = 64
-SRC = 'ubp3s'
-DST = 'ubp3r3'
-LINE = re.compile(r'p([pn])(\d+)_(\d+)$')
+DESIGNS = {'ubp3s': ('ubp3r3', re.compile(r'p([pn])(\d+)_(\d+)$'), 'config_u52s.mk'),
+           'pc2': ('pc2r3', re.compile(r'l([pn])(\d+)()$'), 'config_u67s.mk')}
+SRC, DST, LINE, CFG = 'ubp3s', *DESIGNS['ubp3s']
 
 LTAP2_LEF = """VERSION 5.7 ;
 BUSBITCHARS "[]" ;
@@ -190,7 +190,7 @@ def band_lines(mp_lines):
     bands: dict[int, list[tuple[int, int, str]]] = {}
     for L in mp_lines:
         m = LINE.match(L)
-        bands.setdefault(int(m.group(2)), []).append((int(m.group(3)), 0 if m.group(1) == 'p' else 1, L))
+        bands.setdefault(int(m.group(2)), []).append((int(m.group(3) or 0), 0 if m.group(1) == 'p' else 1, L))
     return {b: [L for _, _, L in sorted(v)] for b, v in bands.items()}
 
 
@@ -204,7 +204,8 @@ def base(g2: Path, utils: list[int]):
     def rep(m):
         return ''.join(f'  LTAP2 {m.group(1)}_s{s} (\n    .A({m.group(3)})\n  );\n' for s in range(K))
     net2 = pat.sub(rep, net)
-    assert n_old == 548 and net2.count('LTAP2 lt_') == 548 * K and ' LTAP lt_' not in net2, n_old
+    n_lines = len(json.loads((src / 'mapping.json').read_text())['lines'])
+    assert n_old == n_lines and net2.count('LTAP2 lt_') == n_lines * K and ' LTAP lt_' not in net2, n_old
     (dst / 'netlist_base.v').write_text(net2)
     shutil.copy(src / 'constraint.sdc', dst / 'constraint.sdc')
     for f in src.glob('W_w*.npy'):
@@ -227,19 +228,19 @@ def base(g2: Path, utils: list[int]):
            f'set r3_nb {len(bl)}', 'set r3_plan {']
     tcl += [f'  {{{n} {b} {xf:.6f} {yf:.6f}}}' for n, b, xf, yf in plan]
     tcl += ['}', PLACER]
-    (g2 / 'cells' / 'struct_ubp3r3.tcl').write_text('\n'.join(tcl) + '\n')
-    cfg0 = (src / 'config_u52s.mk').read_text()
+    (g2 / 'cells' / f'struct_{DST}.tcl').write_text('\n'.join(tcl) + '\n')
+    cfg0 = (src / CFG).read_text()
     for u in utils:
-        cfg = cfg0.replace('/work/ubp3s/', f'/work/{DST}/')
+        cfg = cfg0.replace(f'/work/{SRC}/', f'/work/{DST}/')
         cfg = re.sub(r'DESIGN_NICKNAME = \S+', f'DESIGN_NICKNAME = g2r3_{DST}_u{u}', cfg)
         cfg = re.sub(r'CORE_UTILIZATION = \d+', f'CORE_UTILIZATION = {u}', cfg)
         cfg = cfg.replace('ADDITIONAL_LEFS = /work/cells/g2_cells.lef', 'ADDITIONAL_LEFS = /work/cells/g2_cells.lef /work/cells/g2r3_cells.lef')
         cfg = cfg.replace('ADDITIONAL_LIBS = /work/cells/g2_cells.lib', 'ADDITIONAL_LIBS = /work/cells/g2_cells.lib /work/cells/g2r3_cells.lib')
         cfg = cfg.replace('POST_SYNTH_TCL = /work/cells/dont_touch.tcl', 'POST_SYNTH_TCL = /work/cells/dont_touch_r3.tcl')
-        cfg = cfg.replace('POST_PDN_TCL = /work/cells/struct_ubp3s.tcl', 'POST_PDN_TCL = /work/cells/struct_ubp3r3.tcl')
-        assert cfg.count('/work/ubp3r3/') == 3 and 'g2r3_cells.lef' in cfg and 'struct_ubp3r3' in cfg and 'dont_touch_r3' in cfg
+        cfg = cfg.replace(f'POST_PDN_TCL = /work/cells/struct_{SRC}.tcl', f'POST_PDN_TCL = /work/cells/struct_{DST}.tcl')
+        assert cfg.count(f'/work/{DST}/') == 3 and 'g2r3_cells.lef' in cfg and f'struct_{DST}' in cfg and 'dont_touch_r3' in cfg
         (dst / f'config_u{u}r.mk').write_text(cfg)
-    print(json.dumps({'taps': 548 * K, 'sites': 1408, 'plan_cells': len(plan), 'configs': [f'config_u{u}r.mk' for u in utils]}))
+    print(json.dumps({'design': DST, 'taps': n_lines * K, 'plan_cells': len(plan), 'configs': [f'config_u{u}r.mk' for u in utils]}))
 
 
 def programs(g2: Path, tags: list[str]):
@@ -269,6 +270,8 @@ def programs(g2: Path, tags: list[str]):
              '  set mz [$db findMaster VSITE_ZERO]', '  set mo [$db findMaster VSITE_ONE]']
         for z in old['zeros']:
             T.append(f'  [$blk findInst {z}] swapMaster $mz')
+        for o in old.get('ones', []):
+            T.append(f'  [$blk findInst {o}] swapMaster $mo')
         for srcn, sites in nets.items():
             T.append(f'  set net [odb::dbNet_create $blk pgm_{srcn}]')
             T.append(f'  [[$blk findInst lt_{srcn}] findITerm Z] connect $net')
@@ -281,6 +284,9 @@ def programs(g2: Path, tags: list[str]):
 
 if __name__ == '__main__':
     cmd, g2 = sys.argv[1], Path(sys.argv[2])
+    if len(sys.argv) > 3 and sys.argv[-1] in DESIGNS and cmd != 'cells':   # optional trailing source design
+        SRC = sys.argv.pop()
+        DST, LINE, CFG = DESIGNS[SRC]
     if cmd == 'cells':
         cells(g2)
     elif cmd == 'base':

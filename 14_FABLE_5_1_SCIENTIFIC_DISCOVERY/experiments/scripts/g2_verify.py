@@ -63,7 +63,7 @@ def main(out: Path, design: str, tag: str, netlist: str | None):
         raise RuntimeError(p.stderr[-2500:])
     A = read_aag_seq(wd / f'v_{tag}.aag')
     W2 = W.copy(); i, j = map(int, np.argwhere(W != 0)[0]); W2[i, j] = -W2[i, j]
-    if design == 'pc2':
+    if design in ('pc2', 'pc2r3'):
         ok, lat = sim_bitplane(A, W, ow)
         neg = not sim_bitplane(A, W2, ow)[0]
     else:
