@@ -2,26 +2,32 @@
 
 ## Decision
 
-**RESEARCH THESIS READY FOR FULL DEVELOPMENT (gated).** See 14.
+**PROMISING BUT KEY GATE UNRESOLVED** (after gates G1–G3). See 14 and 18.
 
 ## Thesis in one paragraph
 
-- **The problem.** In hardwired LLM silicon whose base layers must stay weight-independent (regime V: HNLPU, Taalas, Ankhdjet), every neuron keeps one accumulation input per weight site.
-- **The mechanism.** Share, across *all* neurons, weight-independent generators of every signed subset sum of g-input blocks. Each neuron leaf then picks one line **by via**.
-- **The result.** In **bit-serial** form this halves the **routed** accumulation area on SKY130:
-  - **2.13×** vs the per-input universal fabric;
-  - both DRC-clean at 75% utilization;
-  - equal 3.0 ns clock and throughput, +1 cycle latency;
-  - 5.8× less via-programmed wiring;
-  - final routed netlists equal numpy W@x.
-- **The bit-parallel form** loses one utilization step to select-bus congestion (1.67×).
-- **Standing:** novelty is provisional and possibly obvious (LUT-GEMM + hardwiring). Three cheap gates decide whether to continue: HNLPU full text, fixed-placement routing, DA-via-ROM baseline.
+- **The problem.** In LLM silicon whose base layers must stay weight-independent (regime V: HNLPU, Taalas, Ankhdjet), every neuron keeps one accumulation input per weight site.
+- **The mechanism.** Share, across all neurons, weight-independent generators of every signed subset sum of g-input blocks. Each neuron leaf then picks one line by via/top metal.
+
+**Where the evidence stands:**
+- **Hardwired weights** (layout sees W; E6, G3):
+  - bit-serial UBP3 has 2.13× less routed area than the per-input serial fabric;
+  - its A×T is 1.84× better than the frontier's bit-plane popcount fabric;
+  - MEASURED, DRC-clean, validated.
+- **Weight-independent fixed base** (G2):
+  - With generic placement, UBP3's 548 programmable lines (vs 128) do not route at any utilization.
+  - A W-blind crossbar floorplan (R2) restores routing of all test W at GRT level, with a 2.1–2.3× A×T advantage.
+  - But UBP3's detailed routing on SKY130's met4 does not close in the pre-registered effort, while the per-input fabrics' does.
+- **Novelty** (G1): likely an obvious composition. Only the physical results are new.
+- **Key open gate:** a DRC-clean fixed-base UBP that keeps its advantage.
 
 ## Read in this order
 
 | File | What it contains |
 |---|---|
-| 14_RESEARCH_DECISION.md | The class, the checklist, gates G1–G3 |
+| 18_GATES_VERDICT_AND_PACKAGE.md | Gate outcomes, final class, the 12-question package |
+| 14_RESEARCH_DECISION.md | The class and why; the key unresolved gate |
+| 15 / 16 / 17 | Gate 1 novelty · Gate 2 fixed base (+ R2) · Gate 3 DA / popcount competitors |
 | 12_PRIMARY_RESEARCH_THESIS.md | The 24 required items |
 | 13_FINAL_META_REVIEW.md | The 13 mandatory questions |
 | 10_EXPERIMENTS_AND_RESULTS.md | E5/E6 tables; the A2 before/after |
@@ -39,6 +45,9 @@
 
 ## Status of the work
 
-- Git: **local commits only** on `claude/compassionate-edison-91b73q`. **Nothing pushed, published or sent.**
+- Git: branch `claude/compassionate-edison-91b73q`.
+  - One push was made on the user's explicit request (`acca499..3912b89`).
+  - All later commits (the gates) are **local only**.
+  - Nothing else was published or sent.
 - Nothing was bought. No paid APIs were used. Nobody was contacted.
 - `13_WAVE_11_SCIENTIFIC_HYPOTHESIS_EVOLUTION/` is untouched.

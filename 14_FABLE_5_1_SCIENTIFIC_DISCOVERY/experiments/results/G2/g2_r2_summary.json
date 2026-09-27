@@ -137,9 +137,31 @@
   },
   "primary": true,
   "drt_W": "w2",
-  "drt_final": null,
-  "drt_trajectory": [],
-  "secondary": null,
+  "drt_final": 416,
+  "drt_trajectory": [
+   4462,
+   3929,
+   3814,
+   3491,
+   3342,
+   3227,
+   3128,
+   3002,
+   2921,
+   2862,
+   1762,
+   1327,
+   1159,
+   1076,
+   1007,
+   963,
+   934,
+   2743,
+   646,
+   458,
+   416
+  ],
+  "secondary": false,
   "modeled_ws_all_w1": null,
   "modeled_ws_prog_w1": null,
   "verified_post_pnr": []
@@ -218,13 +240,27 @@
   },
   "primary": true,
   "drt_W": "w4",
-  "drt_final": null,
+  "drt_final": 0,
   "drt_trajectory": [
    1730,
    1217,
-   1004
+   1004,
+   451,
+   307,
+   248,
+   187,
+   145,
+   129,
+   89,
+   24,
+   12,
+   10,
+   5,
+   4,
+   4,
+   0
   ],
-  "secondary": null,
+  "secondary": true,
   "modeled_ws_all_w1": 0.6067000235532305,
   "modeled_ws_prog_w1": 0.9186837957031457,
   "T_ns": 2.207,
@@ -233,7 +269,8 @@
   "T_base_only_ns": 2.207,
   "AxT_base_only": 18357431.041273333,
   "verified_post_pnr": [
-   "w1"
+   "w1",
+   "w4"
   ]
  }
 ]

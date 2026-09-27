@@ -10,3 +10,6 @@
 {"design": "pc2", "tag": "w1", "netlist": "post-PnR (prog_w1_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
 {"design": "pc2", "tag": "w4", "netlist": "post-PnR (prog_w4_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 12}
 {"design": "g1s", "tag": "w1", "netlist": "post-PnR (prog_w1_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+{"design": "g1s", "tag": "w4", "netlist": "post-PnR (prog_w4_u60s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 7}
+{"design": "ubp3s", "tag": "w2", "netlist": "post-PnR (prog_w2_u45s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}
+{"design": "ubp3s", "tag": "w1", "netlist": "post-PnR (prog_w1_u45s_programmed.v)", "matches_numpy": true, "mutation_detected": true, "latency": 8}

@@ -1,59 +1,49 @@
 # 14 — Research decision
 
-## Classification: **RESEARCH THESIS READY FOR FULL DEVELOPMENT** (gated)
+## Current classification (after gates G1–G3, 2026-09-27): **PROMISING BUT KEY GATE UNRESOLVED**
 
-**Why this class:**
-- The mechanism has **survived an informative prototype experiment**. E5/E6 are physical PnR experiments with pre-registered kill conditions that could have fired.
-- The bit-serial form (H1.2) keeps a **2.13× routed-area advantage** over the per-input universal fabric at an equal real clock and equal throughput. It stays DRC-clean at the top of the tested utilization range, and its final routed netlists are functionally validated.
-- The run exposed a real physical price in the bit-parallel form: one utilization step lost to congestion. This shows the evaluator can discriminate.
-- The remaining work is research, not repair: a stronger baseline, fixed-placement routing, scale, and novelty. It justifies a multi-week implementation.
+The full package is in `18_GATES_VERDICT_AND_PACKAGE.md`. Gate details are in 15 (G1), 16 (G2) and 17 (G3). Every kill and advance condition was pre-registered in 09 before its data.
 
-## Positive-decision checklist (prompt §21)
-
-| Requirement | Status |
+| Gate | Outcome |
 |---|---|
-| Consequential problem | ✓ The dominant area term of metal/via-programmable LLM silicon (HNLPU, Taalas, Ankhdjet) |
-| Precise mechanism | ✓ UBP-g, exact and W-independent. Adders in closed form; port-optimal (Theorem 1). Bit-serial realization specified and validated. |
-| Defensible technical distinction | ◐ vs runtime LUT: via instead of mux, with the cost moved to wiring. vs hardwired g = 1: cross-neuron multi-input sharing. **The combination is not found, but obviousness risk is high. Provisional.** |
-| Causal reason it could work | ✓ Physically confirmed: select WL ≈ 1/g · (1 − p0)⁻¹ of g1's (5.8× measured); bit-serial removes bus congestion |
-| Trustworthy evaluator | ✓ Post-PnR functional validation vs numpy; mutation controls; W-independence invariant (A2); parser cross-check. Limitations declared (08). |
-| Meaningful falsifier | ✓ E5/E6 could have failed; the next falsifier (fixed-placement ECO) is specified |
-| Executable next step | ✓ See the gates below |
+| **G1** novelty | **Materially downgraded, not killed.** No identical or technically equivalent mechanism was found. The composition (activation-group LUT sharing + a via/metal-programmable W-independent base) is likely obvious. Only its physical consequences are new. |
+| **G3** strongest competitor | **Survives.** Hardwired-W regime, MEASURED and validated: A×T of B 6.10e6 vs P2 11.23e6 (1.84×), P 15.24e6 and A 13.84e6. Spatial via-ROM DA (K ≥ 2) is never smaller than the K = 1 popcount fabric for ternary W. |
+| **G2** fixed base, generic placement (pre-registered) | **K2b fires: substantially weakened.** B's random programs do not route on met4–met5 at any utilization from 60% to 8%. Diagnosis: the connectivity-driven placer clusters all 548 line taps. |
+| **G2 / R2** structured W-blind crossbar base (the one bounded revision) | **Unresolved.** At GRT level, B routes all five W at U60 with 2.1× (P2) and 2.3× (A) better A×T under modeled timing. Its programmable-layer detailed routing does not close in the pre-registered 20 iterations at U60/52/45 (1,167 / 881 / 416 met4 violations), while P2 and A close at U60. R2-K does not fire; R2-A is not granted. |
 
-## Why not the neighbouring classes
+## Why this class and not the others
 
-- **Not "READY FOR INITIAL PROTOTYPE":** that was the state before this session. The initial prototype experiment has now been run and passed.
-- **Not "NOVELTY OCCUPIED":**
-  - The occupying references cover **ingredients**: the LUT arithmetic, via fabrics, bit-serial neurons.
-  - No retrieved source shows the complete regime-V combination.
-  - This is **provisional** (HNLPU full text unread) and is gate G1.
-- **Not "MECHANISM FALSIFIED":** K5 and K6 did not trigger.
-- **Not "INSUFFICIENT EVIDENCE":** the evidence is physical, validated and discriminating. It is limited in scale and scope, which the gates address.
+- **Not THESIS KILLED:**
+  - No pre-registered kill condition fired: G1 was downgraded, not killed; G3 passed; G2 was substantially weakened on the generic protocol, and R2-K did not fire.
+  - Against the Gate-2 kill condition, W changes never move base cells or touch forbidden layers.
+  - On the structured base there is no routability or timing collapse. The advantage holds at GRT level, and B has the best timing.
+- **Not READY FOR FULL RESEARCH DEVELOPMENT:**
+  - The thesis is specifically about a **weight-independent** fabric, and its physical advantage in that regime is not closed.
+  - B fails the pre-registered detailed-route criterion at every tested utilization, where both per-input competitors pass.
+  - After G1, the physical characterization is the **only** candidate contribution, so an unclosed G2 leaves the contribution unestablished.
+- **Not READY TO BEGIN PAPER-SCALE IMPLEMENTATION:** all of the above, plus no scale, no real weights and no energy data.
 
-## Pre-registered outcomes
+## The key unresolved gate, and the decisive next experiment
 
-| | Result | Decision |
-|---|---|---|
-| **E6 (H1.2, bit-serial, n = 64)** | g1/UBP3 routed area 2.13× (both U_max = 75; timing met; +1 cycle latency) | **A6 MET** |
-| **E5 (H1.1, bit-parallel, n = 32)** | g1/UBP3 = 1.67× (UBP3 U_max = 60; congestion at 75) | A5 MET narrowly (1.59× on the tie-corrected basis) |
+**G2 closure.** Does a W-blind fixed base exist in which UBP3-serial's programmable layer routes DRC-clean for all test W, at a utilization where its A×T stays ≥ 1.2× better than P2 and ≥ 1.5× better than A?
 
-## Gates for the full-development phase
+**Next revision (not run here: this session's one bounded revision was R2).** Pre-register a site/tap co-designed band:
+- stagger the via sites across the band width, so each site's met4 pad sits on its own track;
+- split the taps into two half-height groups;
+- keep the pin pads off the line tracks.
 
-Each gate is cheap, and each can stop the project.
+Run it against P2 and A on the same grid and criteria. Two sensitivities:
+- a third programmable layer (base met1–met2);
+- the ORFS-default 64 detailed-route iterations.
 
-- **G1 — Novelty.** A person with access reads HNLPU (ASPLOS'26) and any Taalas disclosure. **Kill** if shared multi-input pattern streams across neurons are described.
-- **G2 — Fixed placement.** Place once with W₁, then ECO-reroute W₂ with W-dependent nets confined to the top metals. **Kill** if bit-serial UBP falls below 1.5× or fails to route where g1 routes.
-- **G3 — Strongest baseline.** Compare against ROM-based distributed arithmetic as a via-ROM macro: analytic plus a transistor-level area model at an advanced node. **Kill or rescope** if DA is ≥ 1.5× smaller per weight than UBP-serial.
+**Kill** the via-programmable claim if B still cannot close at a utilization that keeps those ratios.
 
-## If all gates pass (weeks 3–8)
+## Earlier (Wave 14, pre-gate) classification, superseded
 
-- n, m ≥ 256 with real BitNet b1.58 weights.
-- The ASAP7 PDK.
-- Activity-based power.
-- Integration into an open via-programmable macro.
+**RESEARCH THESIS READY FOR FULL DEVELOPMENT (gated)**, on E5/E6: bit-serial UBP3 2.13× smaller routed area than g1, hardwired W. The gates it named (G1–G3) have now been run; the result is the class above.
 
 ## Record-keeping
 
-- Everything is committed **locally only**, on branch `claude/compassionate-edison-91b73q`. **Nothing was pushed, published or sent.**
+- **Pushes:** one push was made on the user's explicit request, earlier in this session (`acca499..3912b89`). Every later commit is **local only**, on `claude/compassionate-edison-91b73q`. Nothing else was pushed, published or sent.
 - Nothing was bought, no paid API was used, and nobody was contacted.
-- The ORFS container ran all EDA tools in isolation.
+- All EDA tools ran inside the ORFS container.

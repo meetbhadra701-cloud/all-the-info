@@ -111,10 +111,136 @@ B would be ≥ 2.7× **worse** than A. A's W4 still overflows by 108 at U60, so 
 
 **The cluster is not intrinsic:** a base designer can lay the base out as a regular crossbar without knowing W. That is the bounded revision R2 (§4), pre-registered before any R2 data.
 
-## 4. R2 — structured (crossbar) W-blind base
+## 4. R2 — structured (crossbar) W-blind base (the one bounded revision; pre-registered in 09 before any R2 data)
 
-(Pending: results below are filled in from the R2 runs.)
+**What changes and what doesn't:**
+- The base netlists, cells, programs, layers and tools are unchanged.
+- Only the programmable-pin cells get a fixed, W-blind placement before global placement (`scripts/g2_struct.py`, ORFS `POST_PDN_TCL`):
+  - one vertical band per line group (22 for B, 64 for P2 and A);
+  - each band's 64 via sites at the band centre, one per row;
+  - each band's line taps beside them, spread evenly over the core height.
+- These cells are FIRM. Everything else is placed by ORFS from base connectivity.
+
+### 4.1 Bases, and programmable routing at GRT level (MEASURED)
+
+Base DRC is on met1–met3. The last five columns give met4/met5 usage, then total overflow, for each program.
+
+| Design | U % | Base DRC | Base setup / hold WS (ns) | W1 | W2 | W3 | W4 | W5 |
+|---|---|---|---|---|---|---|---|---|
+| B | 60 | 0 | +0.96 / +0.03 | 52% / 14% · 0 | 51% / 14% · 0 | 24% / 5% · 0 | 43% / 11% · 0 | 4% / 0% · 0 |
+| B | 52 | 0 | +0.99 / +0.09 | 47% / 12% · 0 | 47% / 12% · 0 | 22% / 4% · 0 | 38% / 10% · 0 | 4% / 0% · 0 |
+| B | 45 | 0 | +0.97 / +0.05 | 43% / 10% · 0 | 43% / 10% · 0 | 20% / 4% · 0 | 35% / 8% · 0 | 3% / 0% · 0 |
+| P2 | 60 | 0 | −0.65 / −0.01 | 18% / 1% · 0 | 19% / 1% · 0 | 15% / 1% · 0 | 19% / 2% · 0 | 6% / 0% · 0 |
+| A | 60 | 0 | +0.79 / +0.09 | 15% / 0% · 0 | 15% / 0% · 0 | 12% / 0% · 0 | 16% / 0% · 0 | 5% / 0% · 0 |
+| P2 | 67 | R2_P2_67 | | | | | | |
+| A | 75 | R2_A_75 | | | | | | |
+
+**The primary criterion holds for every design at U60, for all five W.**
+- B's W1 programmable wirelength falls from 490 mm (generic base) to **172 mm**.
+- P2's falls from 468 mm to 98 mm, and A's from 443 mm to 107 mm.
+- **The generic-placement collapse of §2 was a placement artifact.** A W-blind crossbar base removes it for every design.
+
+### 4.2 Detailed routing of the programmable layer: the secondary criterion (MEASURED; 20 iterations, largest-WL program)
+
+| Design | U % | Program | DRT violations by iteration | Final |
+|---|---|---|---|---|
+| B | 60 | W1 | 5,559 → 4,252 (it. 8) → 2,131 (it. 15) → 5,950 (it. 17, rip-up) → **1,167** (it. 20) | **fails** (925 met4 shorts, 242 met4 spacing) |
+| B | 52 | W1 | 5,056 → 3,419 (it. 9) → 1,666 (it. 16) → 4,452 (it. 17, rip-up) → **881** (it. 20) | **fails** (652 shorts, 229 spacing) |
+| B | 45 | W2 | 4,462 → 2,862 (it. 9) → 934 (it. 16) → 2,743 (it. 17, rip-up) → **416** (it. 20) | **fails** (281 shorts, 135 spacing) |
+| P2 | 60 | W4 | 1,875 → 1,203 → 417 → 108 → 12 → **0** (it. 13) | **passes** |
+| A | 60 | W4 | 1,730 → 1,217 → 451 → 145 → 12 → **0** (it. 16) | **passes** |
+
+**Where B's residual violations sit:**
+- Every one is on met4, spread across the bands and concentrated in the middle 40% of the core height. That is where the interval model puts each band's peak track demand: 22–23 lines in about 26–28 met4 tracks.
+- The band's single column of 64 via-site pins and 26 tap pins, all met4 pads, takes centre tracks every line must reach.
+- The per-input bands carry 2 lines. They close easily at 15–19% met4 usage.
+- B's residual counts fall monotonically, from ~5k to ~1k, but do not reach 0 within the pre-registered 20 iterations.
+
+### 4.3 Timing (MODELED; W1-programmed netlist, placement parasitics, 3.0 ns clock)
+
+| Design | U % | Worst setup WS | WS through programmable nets | Hold WS | **T** = 3.0 − min(base WS, programmable WS) |
+|---|---|---|---|---|---|
+| B | 60 | +0.91 | **+1.26** | +0.01 | **2.04 ns** |
+| B | 52 | +0.88 | +1.35 | +0.01 | 2.01 ns |
+| B | 45 | +0.81 | +1.29 | +0.01 | 2.03 ns |
+| P2 | 60 | −2.06 | **−1.66** | +0.00 | **4.66 ns** |
+| A | 60 | +0.61 | +0.92 | −0.00 | 2.21 ns |
+
+**Line count vs line load (MEASURED):**
+- B's lines are 4.3× more numerous but carry ≈ 2.6 sinks each, so they are fast.
+- P2's lines carry ≈ 19–38 sinks, run the full die height, and feed a deep popcount tree. That puts them 1.7 ns over budget.
+- A's lines feed registered serial adders directly.
+
+### 4.4 A×T on the structured fixed base (pre-registered metric)
+
+A×T = base cell area / U × cycles × T.
+- The "T base-only" sensitivity column ignores the programmable-path delay. That favours P2.
+- The "B = …×" columns give the baseline's A×T divided by B's A×T at U60.
+
+| Design | U % | Primary | Secondary | A×T (µm²·ns) | A×T, T base-only | B = …× better | B = …× better (T base-only) |
+|---|---|---|---|---|---|---|---|
+| **B** | 60 | ✓ | ✗ (1,167) | **8.10e6** | 8.10e6 | — | — |
+| B | 52 | ✓ | ✗ (881) | 9.18e6 | 9.18e6 | — | — |
+| B | 45 | ✓ | ✗ (416) | 10.71e6 | 10.71e6 | — | — |
+| P2 | 60 | ✓ | ✓ | 17.07e6 | 13.38e6 | 2.11 | 1.65 |
+| A | 60 | ✓ | ✓ (W4 at it. 16) | 18.35e6 | 18.35e6 | 2.27 | 2.27 |
+| P2 | 67 | R2_P2_67_PRI | | | | | |
+| A | 75 | R2_A_75_PRI | | | | | |
+
+**Post-PnR functional checks** (complete programmed netlists vs numpy, mutation detected):
+- B W1 at U60, U52 and U45, and B W2 at U45;
+- P2 W1 and W4 at U60;
+- A W1 at U60.
+- Records: `results/G2/g2_verification.jsonl`.
 
 ## 5. Gate-2 verdict
 
-(Pending R2.)
+### 5.1 Pre-registered protocol (generic placement)
+
+**K2b fires → substantially weakened.**
+- B has no routable utilization for random W (60 → 8%). The per-input fabrics route 4 of 5 W at 45–60%.
+- K2c (timing) and K2d (lower-layer change) do not fire.
+
+### 5.2 R2 (structured crossbar base, the one bounded revision)
+
+**R2-K does not fire, and R2-A is not granted → G2 UNRESOLVED.**
+
+**Primary criterion (GRT, all five W): B passes at every U in its grid (60, 52, 45).**
+- At its primary U_max = 60, B's A×T is 8.10e6 µm²·ns.
+- That is 2.11× better than P2 (17.07e6), or 1.65× if P2's slow programmable lines are ignored.
+- It is 2.27× better than A (18.35e6).
+- Higher-U baselines: R2_BASES_TEXT.
+- R2-K would need B within 1.1× of the best baseline, or B unroutable. Neither holds.
+
+**Secondary criterion (DRC-clean detailed routing of the largest-WL program in 20 iterations):**
+- **B fails at every U of its grid:** 1,167 / 881 / 416 residual met4 violations at U60 / 52 / 45, decreasing with U.
+- **P2 and A pass at U60,** closing at iterations 13 and 16.
+- The failure is **B-specific**, not a testbed limit, so the pre-registered R2-A ("… and B's secondary criterion holds") cannot be granted.
+
+### 5.3 Against the Gate-2 kill condition as stated
+
+| Condition | Outcome |
+|---|---|
+| Weight changes move base cells | **Never.** W-blind placement; every base ODB is byte-identical across all programs. |
+| Weight changes modify forbidden layers | **Never.** Program wires are only on met4/met5. |
+| Routability/timing collapse removes the advantage | **Generic placement:** yes, a collapse. **Structured base:** no collapse. GRT routes every W with margin, B has the best timing of the three designs, and the A×T advantage (2.1–2.3×) holds at GRT level. But B's detailed routing does not close within the pre-registered effort at any tested U, while the per-input fabrics' does. |
+
+The fixed-base advantage is therefore **neither demonstrated nor removed**. That is the definition of an unresolved gate.
+
+### 5.4 What was learned (the scientific content of G2)
+
+- **UBP's fixed-base cost is reachability, not ports.** B has 2.9× fewer programmable ports than the per-input fabrics (1,408 vs 4,096; Theorem 1), but 4.3× more programmable lines (548 vs 128), each of which must be reachable from all rows.
+  - A W-aware layout (E6/G3) hides this cost.
+  - A W-blind layout exposes it.
+- **Under connectivity-driven placement the cost is fatal:** every line originates in one tap cluster.
+- **Under a W-blind crossbar the cost becomes a per-band track budget:** 22–23 lines per band vs 2 for the per-input fabrics.
+  - It fits at GRT level at U60.
+  - It saturates SKY130's single fine programmable layer (met4, 0.92 µm) at detailed-route level.
+  - The residual violations fall monotonically as U falls (1,167 → 416).
+- **The line-count / line-load trade-off favours B on timing:**
+  - Its lines carry ≈ 2.6 sinks, giving +1.26 ns of slack on programmable paths.
+  - P2's carry 19–38 sinks and feed a deep popcount tree, giving −1.66 ns.
+
+### 5.5 Post-hoc diagnostic (not pre-registered; cannot change the classification)
+
+B at U45 with W2, detailed-routed with OpenROAD's default 64 iterations instead of the pre-registered 20: R2_POSTHOC.

@@ -1,4 +1,4 @@
-# RESEARCH_STATE — Wave 14 (final)
+# RESEARCH_STATE — Wave 14 + gates G1–G3 (current)
 
 **Labels:**
 - **HIST-OBS:** previous experiment.
@@ -42,11 +42,13 @@
 - **The combination:** not found. Obviousness is high; novelty is provisional.
 - **Untested competitor:** DA-via-ROM.
 
-## Critical assumptions
+## Critical assumptions (status after the gates)
 
-- **(c)** Fixed placement / top-metal routing behaves like placement-free routing. **Untested → gate G2.**
-- **(e)** No stronger regime-V baseline. **Untested → gate G3.**
-- **Novelty → gate G1.**
+- **(c) Fixed-base programmability.**
+  - **Generic placement:** FAILED (K2b).
+  - **Structured W-blind crossbar (R2):** passes at GRT level; detailed-route closure on met4 is **UNRESOLVED**.
+- **(e) No stronger regime-V baseline:** holds in the hardwired regime (G3; DA dominated; P2 1.84× worse). On the fixed base, P2 and A close detailed routing where B does not.
+- **Novelty:** G1 → likely obvious composition. Only the physical characterization is new.
 
 ## Experimental status (NEW-OBS; final numbers in 10)
 
@@ -73,15 +75,32 @@
   - Justified post hoc by the congestion that E5 revealed.
 - **Revision 2:** not used.
 
+## Gate results (NEW-OBS, 2026-09-27; details in 15–18)
+
+- **G1:** materially downgraded, not killed.
+- **G3:** survives (S3). A×T:
+  - B 6.10e6
+  - P2 11.23e6
+  - A 13.84e6
+  - P 15.24e6
+- **G2, generic placement:** K2b → substantially weakened. B unroutable at U 60…8.
+- **G2, R2 structured base:**
+  - GRT: all 5 W route at U60 for B, P2 and A.
+  - A×T: B 8.10e6; P2 17.07e6; A 18.35e6.
+  - DRT at 20 iterations: B 1,167 / 881 / 416 at U60 / 52 / 45. P2 and A reach 0 at U60.
+  - → **G2 unresolved.**
+- **Classification: PROMISING BUT KEY GATE UNRESOLVED.**
+
 ## Unresolved questions
 
-- HNLPU full text.
-- Fixed-placement ECO.
-- DA-via-ROM.
-- Scale ≥ 256 with real BitNet weights.
-- Advanced PDK.
+- **G2 closure (the key gate):** a site/tap co-designed W-blind base, pre-registered, vs P2 and A.
+- HNLPU / Taalas / TENET / T-MAC full texts (G1 is summary-based).
+- Scale ≥ 256 with real BitNet weights (HuggingFace blocked here).
+- An advanced PDK with ≥ 3 thin programmable layers; single-via programming.
 - Energy.
 
 ## Next authorized action
 
-None pending in this session. Gates G1–G3 (14) are the recommended next steps and need the researcher's go-ahead: G1 needs human full-text access.
+None pending. The next step is the G2-closure experiment (14). It needs the researcher's go-ahead.
+
+Pushing the local gate commits also needs explicit authorization.

@@ -1,0 +1,7 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 2 thread(s).
+G2_TIMING setup_ws=8.141789464843896e-10 hold_ws=7.624068043554644e-12
+G2_PROG_WS setup=1.2858953901684345e-9
