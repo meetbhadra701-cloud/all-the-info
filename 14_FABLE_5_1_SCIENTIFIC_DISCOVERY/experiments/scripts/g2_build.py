@@ -107,8 +107,8 @@ def base(out: Path, design: str, src: Path):
            f"export SYNTH_NETLIST_FILES = /work/{design}/netlist_base.v\nexport VERILOG_FILES = /work/{design}/netlist_base.v\n"
            f"export SDC_FILE = /work/{design}/constraint.sdc\nexport CORE_ASPECT_RATIO = 1\nexport CORE_MARGIN = 2\n"
            f"export ADDITIONAL_LEFS = /work/cells/g2_cells.lef\nexport ADDITIONAL_LIBS = /work/cells/g2_cells.lib\n"
-           f"export PDN_TCL = /work/cells/pdn_m123.tcl\nexport MAX_ROUTING_LAYER = met3\nexport MIN_CLK_ROUTING_LAYER = met2\n"
-           f"export POST_SYNTH_TCL = /work/cells/dont_touch.tcl\n")
+           f"export PDN_TCL = /work/cells/pdn_m1rails.tcl\nexport MAX_ROUTING_LAYER = met3\nexport MIN_CLK_ROUTING_LAYER = met2\n"
+           f"export PWR_NETS_VOLTAGES =\nexport GND_NETS_VOLTAGES =\nexport POST_SYNTH_TCL = /work/cells/dont_touch.tcl\n")
     for util in (45, 60, 75):
         (wd / f'config_u{util}.mk').write_text(cfg + f"export DESIGN_NICKNAME = g2_{design}_u{util}\nexport CORE_UTILIZATION = {util}\n")
     print(design, 'lines', len(lines_nets), 'rows', n_rows, 'leaves/row', leaves_per_row)

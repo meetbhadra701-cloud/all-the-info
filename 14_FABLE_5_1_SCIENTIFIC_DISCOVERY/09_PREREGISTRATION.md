@@ -342,3 +342,14 @@ G3's decisive measurement therefore runs first. G2 is pre-registered conditional
   - **Why this is a deviation:** holding the competitor to a clock chosen for B would weaken it artificially.
   - **Change:** P is re-run at a 5.0 ns clock (U = 75, then 60). The pipelined P2 keeps 3.0 ns.
   - **Unchanged:** A×T uses each design's achieved minimum period, so the metric is unaffected. The best of P and P2 is taken as "P" for K3a.
+
+## G2 deviation log
+
+- **D-G2.1 (baseline for G2).** Built before G3 finished: the P2 base (frontier-style per-input fabric) alongside B's.
+  - The pre-registration named A for the S3 case.
+  - A and P2 have the **same programmable structure**: 64 one-bit leaves per row, 2 line polarities per input. So G2's programmability test is equivalent for either. P2 is also the stronger per-input competitor if G3 shows it is.
+  - The final G2 baseline choice is recorded with the G3 result.
+- **D-G2.2 (power grid, 04:26 UTC, before any programmable-layer data).**
+  - **What happened:** the first B base (met1 rails + met2 straps) routed DRC-clean on met1–met3. The final power-grid check then reported 169 via-site / line-tap stacks shorting the met2 straps (`PSM-0043`). A fixed base cannot have via stacks through power straps.
+  - **Change:** the base PDN is **met1 follow-pin rails only**, with no straps on any layer, and IR-drop analysis is disabled. Power integrity is out of scope.
+  - **Consequence:** this favours every design equally, since no strap tracks are consumed. A real base would co-design strap columns with the via-site arrays at an equal area cost. Superseded log: `experiments/results/G2/superseded_strapPDN/`.
