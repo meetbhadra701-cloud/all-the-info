@@ -334,3 +334,11 @@ G3's decisive measurement therefore runs first. G2 is pre-registered conditional
 | K2c | Modeled setup fails for any W for UBP where the baseline passes | Weakened |
 | K2d | Any W needs a lower-layer change: a program wire below met4, or a change to the base DB | Killed (not a fixed base) |
 | A2 | All five W route DRC-clean on met4–met5, timing is met, and the ratio holds (≥ 1.5 for B vs A; ≥ 1.2 for Q vs P) | Advance |
+
+## G3 deviation log
+
+- **D-G3.1 (2026-09-27 04:00, before any P or P2 routed result).**
+  - **What happened:** unpipelined P cannot be packed at U = 75 with the 3.0 ns clock. Its input→popcount path is 4.46 ns pre-route, so timing repair inflated it from 216,071 to 277,770 µm² (97% utilization). Detailed placement then failed (`DPL-0033`).
+  - **Why this is a deviation:** holding the competitor to a clock chosen for B would weaken it artificially.
+  - **Change:** P is re-run at a 5.0 ns clock (U = 75, then 60). The pipelined P2 keeps 3.0 ns.
+  - **Unchanged:** A×T uses each design's achieved minimum period, so the metric is unaffected. The best of P and P2 is taken as "P" for K3a.

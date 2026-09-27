@@ -1,0 +1,809 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+
+-- Running command `read_verilog DAROW_K3.v; synth -flatten -top DAROW_K3; dfflibmap -liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -dont_use sky130_fd_sc_hd__fill_1 -dont_use sky130_fd_sc_hd__fill_2 -dont_use sky130_fd_sc_hd__fill_4 -dont_use sky130_fd_sc_hd__fill_8; abc -liberty /OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use sky130_fd_sc_hd__probe_p_8 -dont_use sky130_fd_sc_hd__probec_p_8 -dont_use sky130_fd_sc_hd__lpflow_bleeder_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkbufkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_1 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_16 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_2 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_clkinvkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_12 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_3 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_4 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_6 -dont_use sky130_fd_sc_hd__lpflow_decapkapwr_8 -dont_use sky130_fd_sc_hd__lpflow_inputiso0n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso0p_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1n_1 -dont_use sky130_fd_sc_hd__lpflow_inputiso1p_1 -dont_use sky130_fd_sc_hd__lpflow_inputisolatch_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_1 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_16 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_2 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_4 -dont_use sky130_fd_sc_hd__lpflow_isobufsrc_8 -dont_use sky130_fd_sc_hd__lpflow_isobufsrckapwr_16 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_hl_isowell_tap_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_4 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_1 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_2 -dont_use sky130_fd_sc_hd__lpflow_lsbuf_lh_isowell_tap_4 -dont_use sky130_fd_sc_hd__fill_1 -dont_use sky130_fd_sc_hd__fill_2 -dont_use sky130_fd_sc_hd__fill_4 -dont_use sky130_fd_sc_hd__fill_8; opt_clean; hilomap -singleton -hicell sky130_fd_sc_hd__conb_1 HI -locell sky130_fd_sc_hd__conb_1 LO; opt_clean -purge; write_verilog -noattr -noexpr -nohex -nodec DAROW_K3_gl_raw.v' --
+
+1. Executing Verilog-2005 frontend: DAROW_K3.v
+Parsing Verilog input from `DAROW_K3.v' to AST representation.
+Generating RTLIL representation for module `\DAROW_K3'.
+Successfully finished Verilog frontend.
+
+2. Executing SYNTH pass.
+
+2.1. Executing HIERARCHY pass (managing design hierarchy).
+
+2.1.1. Analyzing design hierarchy..
+Top module:  \DAROW_K3
+
+2.1.2. Analyzing design hierarchy..
+Top module:  \DAROW_K3
+Removed 0 unused modules.
+
+2.2. Executing PROC pass (convert processes to netlists).
+
+2.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+2.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+2.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 3 assignments to connections.
+
+2.2.4. Executing PROC_INIT pass (extract init attributes).
+
+2.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+2.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+2.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\DAROW_K3.$proc$DAROW_K3.v:53$43'.
+Creating decoders for process `\DAROW_K3.$proc$DAROW_K3.v:52$40'.
+Creating decoders for process `\DAROW_K3.$proc$DAROW_K3.v:45$22'.
+
+2.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+2.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\DAROW_K3.\outr' using process `\DAROW_K3.$proc$DAROW_K3.v:53$43'.
+  created $dff cell `$procdff$45' with positive edge clock.
+Creating register for signal `\DAROW_K3.\acc' using process `\DAROW_K3.$proc$DAROW_K3.v:52$40'.
+  created $dff cell `$procdff$46' with positive edge clock.
+Creating register for signal `\DAROW_K3.\pc' using process `\DAROW_K3.$proc$DAROW_K3.v:45$22'.
+  created $dff cell `$procdff$47' with positive edge clock.
+
+2.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+2.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `DAROW_K3.$proc$DAROW_K3.v:53$43'.
+Removing empty process `DAROW_K3.$proc$DAROW_K3.v:52$40'.
+Removing empty process `DAROW_K3.$proc$DAROW_K3.v:45$22'.
+Cleaned up 0 empty switches.
+
+2.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.3. Executing CHECK pass (checking for obvious problems).
+Checking module DAROW_K3...
+Found and reported 0 problems.
+
+2.4. Executing FLATTEN pass (flatten design).
+
+2.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 0 unused cells and 28 unused wires.
+<suppressed ~1 debug messages>
+
+2.7. Executing CHECK pass (checking for obvious problems).
+Checking module DAROW_K3...
+Found and reported 0 problems.
+
+2.8. Executing OPT pass (performing simple optimizations).
+
+2.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 44 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DAROW_K3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+2.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DAROW_K3.
+Performed a total of 0 changes.
+
+2.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 44 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.8.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.8.9. Finished fast OPT passes. (There is nothing left to do.)
+
+2.9. Executing FSM pass (extract and optimize FSM).
+
+2.9.1. Executing FSM_DETECT pass (finding FSMs in design).
+
+2.9.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+
+2.9.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.9.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+
+2.9.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+
+2.9.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+2.9.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+
+2.10. Executing OPT pass (performing simple optimizations).
+
+2.10.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.10.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 44 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.10.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DAROW_K3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+2.10.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DAROW_K3.
+Performed a total of 0 changes.
+
+2.10.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 44 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.10.6. Executing OPT_DFF pass (perform DFF optimizations).
+Adding SRST signal on $procdff$45 ($dff) from module DAROW_K3 (D = \acc [13:12], Q = \outr [13:12], rval = 2'00).
+
+2.10.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.10.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.10.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.10.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DAROW_K3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+2.10.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DAROW_K3.
+Performed a total of 0 changes.
+
+2.10.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 45 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.10.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.10.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.10.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.10.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.11. Executing WREDUCE pass (reducing word size of cells).
+Removed top 6 bits (of 14) from port A of cell DAROW_K3.$not$DAROW_K3.v:49$36 ($not).
+Removed top 2 bits (of 14) from mux cell DAROW_K3.$ternary$DAROW_K3.v:53$44 ($mux).
+Removed top 2 bits (of 14) from wire DAROW_K3.$0\outr[13:0].
+
+2.12. Executing PEEPOPT pass (run peephole optimizers).
+
+2.13. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+2.14. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module DAROW_K3:
+  creating $macc model for $add$DAROW_K3.v:52$42 ($add).
+  creating $macc model for $add$DAROW_K3.v:52$41 ($add).
+  creating $macc model for $add$DAROW_K3.v:44$21 ($add).
+  creating $macc model for $add$DAROW_K3.v:43$20 ($add).
+  creating $macc model for $add$DAROW_K3.v:42$19 ($add).
+  creating $macc model for $add$DAROW_K3.v:41$18 ($add).
+  creating $macc model for $add$DAROW_K3.v:40$17 ($add).
+  creating $macc model for $add$DAROW_K3.v:39$16 ($add).
+  creating $macc model for $add$DAROW_K3.v:38$15 ($add).
+  creating $macc model for $add$DAROW_K3.v:37$14 ($add).
+  creating $macc model for $add$DAROW_K3.v:36$13 ($add).
+  creating $macc model for $add$DAROW_K3.v:35$12 ($add).
+  creating $macc model for $add$DAROW_K3.v:34$11 ($add).
+  creating $macc model for $add$DAROW_K3.v:33$10 ($add).
+  creating $macc model for $add$DAROW_K3.v:32$9 ($add).
+  creating $macc model for $add$DAROW_K3.v:31$8 ($add).
+  creating $macc model for $add$DAROW_K3.v:30$7 ($add).
+  creating $macc model for $add$DAROW_K3.v:29$6 ($add).
+  creating $macc model for $add$DAROW_K3.v:28$5 ($add).
+  creating $macc model for $add$DAROW_K3.v:27$4 ($add).
+  creating $macc model for $add$DAROW_K3.v:26$3 ($add).
+  creating $macc model for $add$DAROW_K3.v:25$2 ($add).
+  creating $macc model for $add$DAROW_K3.v:24$1 ($add).
+  merging $macc model for $add$DAROW_K3.v:24$1 into $add$DAROW_K3.v:35$12.
+  merging $macc model for $add$DAROW_K3.v:25$2 into $add$DAROW_K3.v:35$12.
+  merging $macc model for $add$DAROW_K3.v:26$3 into $add$DAROW_K3.v:36$13.
+  merging $macc model for $add$DAROW_K3.v:27$4 into $add$DAROW_K3.v:36$13.
+  merging $macc model for $add$DAROW_K3.v:28$5 into $add$DAROW_K3.v:37$14.
+  merging $macc model for $add$DAROW_K3.v:29$6 into $add$DAROW_K3.v:37$14.
+  merging $macc model for $add$DAROW_K3.v:30$7 into $add$DAROW_K3.v:38$15.
+  merging $macc model for $add$DAROW_K3.v:31$8 into $add$DAROW_K3.v:38$15.
+  merging $macc model for $add$DAROW_K3.v:32$9 into $add$DAROW_K3.v:39$16.
+  merging $macc model for $add$DAROW_K3.v:33$10 into $add$DAROW_K3.v:39$16.
+  merging $macc model for $add$DAROW_K3.v:35$12 into $add$DAROW_K3.v:40$17.
+  merging $macc model for $add$DAROW_K3.v:36$13 into $add$DAROW_K3.v:40$17.
+  merging $macc model for $add$DAROW_K3.v:37$14 into $add$DAROW_K3.v:41$18.
+  merging $macc model for $add$DAROW_K3.v:38$15 into $add$DAROW_K3.v:41$18.
+  merging $macc model for $add$DAROW_K3.v:39$16 into $add$DAROW_K3.v:42$19.
+  merging $macc model for $add$DAROW_K3.v:34$11 into $add$DAROW_K3.v:42$19.
+  merging $macc model for $add$DAROW_K3.v:40$17 into $add$DAROW_K3.v:43$20.
+  merging $macc model for $add$DAROW_K3.v:41$18 into $add$DAROW_K3.v:43$20.
+  merging $macc model for $add$DAROW_K3.v:43$20 into $add$DAROW_K3.v:44$21.
+  merging $macc model for $add$DAROW_K3.v:42$19 into $add$DAROW_K3.v:44$21.
+  merging $macc model for $add$DAROW_K3.v:52$41 into $add$DAROW_K3.v:52$42.
+  creating $alu model for $macc $add$DAROW_K3.v:52$42.
+  creating $macc cell for $add$DAROW_K3.v:44$21: $auto$alumacc.cc:399:replace_macc$51
+  creating $alu cell for $add$DAROW_K3.v:52$42: $auto$alumacc.cc:548:replace_alu$52
+  created 1 $alu and 1 $macc cells.
+
+2.15. Executing SHARE pass (SAT-based resource sharing).
+
+2.16. Executing OPT pass (performing simple optimizations).
+
+2.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 45 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.16.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DAROW_K3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+2.16.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DAROW_K3.
+Performed a total of 0 changes.
+
+2.16.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 45 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.16.6. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 21 unused cells and 21 unused wires.
+<suppressed ~42 debug messages>
+
+2.16.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.16.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.16.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DAROW_K3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+2.16.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DAROW_K3.
+Performed a total of 0 changes.
+
+2.16.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 24 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.16.13. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.16.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.16.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.16.16. Finished fast OPT passes. (There is nothing left to do.)
+
+2.17. Executing MEMORY pass.
+
+2.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+2.17.2. Executing OPT_MEM_PRIORITY pass (removing unnecessary memory write priority relations).
+Performed a total of 0 transformations.
+
+2.17.3. Executing OPT_MEM_FEEDBACK pass (finding memory read-to-write feedback paths).
+
+2.17.4. Executing MEMORY_BMUX2ROM pass (converting muxes to ROMs).
+
+2.17.5. Executing MEMORY_DFF pass (merging $dff cells to $memrd).
+
+2.17.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.17.7. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+2.17.8. Executing OPT_MEM_WIDEN pass (optimize memories where all ports are wide).
+Performed a total of 0 transformations.
+
+2.17.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.17.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+2.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.19. Executing OPT pass (performing simple optimizations).
+
+2.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+<suppressed ~6 debug messages>
+
+2.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 24 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.19.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+2.19.5. Finished fast OPT passes.
+
+2.20. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+
+2.21. Executing OPT pass (performing simple optimizations).
+
+2.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 24 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DAROW_K3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+2.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DAROW_K3.
+    Consolidated identical input bits for $mux cell $ternary$DAROW_K3.v:49$37:
+      Old ports: A={ 6'000000 \pc }, B={ 6'111111 $auto$opt_expr.cc:206:group_cell_inputs$55 }, Y=\addend
+      New ports: A={ 1'0 \pc }, B={ 1'1 $auto$opt_expr.cc:206:group_cell_inputs$55 }, Y=\addend [8:0]
+      New connections: \addend [13:9] = { \addend [8] \addend [8] \addend [8] \addend [8] \addend [8] }
+    Consolidated identical input bits for $mux cell $ternary$DAROW_K3.v:50$38:
+      Old ports: A={ \acc [12:0] 1'0 }, B=14'00000000000000, Y=\base
+      New ports: A=\acc [12:0], B=13'0000000000000, Y=\base [13:1]
+      New connections: \base [0] = 1'0
+  Optimizing cells in module \DAROW_K3.
+Performed a total of 2 changes.
+
+2.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 24 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.21.6. Executing OPT_SHARE pass.
+
+2.21.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.21.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.21.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+2.21.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \DAROW_K3..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~6 debug messages>
+
+2.21.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \DAROW_K3.
+Performed a total of 0 changes.
+
+2.21.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 24 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.21.14. Executing OPT_SHARE pass.
+
+2.21.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.21.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+
+2.21.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.21.18. Finished fast OPT passes. (There is nothing left to do.)
+
+2.22. Executing TECHMAP pass (map to technology primitives).
+
+2.22.1. Executing Verilog-2005 frontend: /usr/local/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/usr/local/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+2.22.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $not.
+Using template $paramod$091610cd349a68bd5539cffd7126f0d76e9bca00\_90_alu for cells of type $alu.
+Using extmapper maccmap for cells of type $macc_v2.
+  add \x [2:0] (3 bits, unsigned)
+  add \x [50:48] (3 bits, unsigned)
+  add \x [26:24] (3 bits, unsigned)
+  add \x [14:12] (3 bits, unsigned)
+  add \x [8:6] (3 bits, unsigned)
+  add \x [5:3] (3 bits, unsigned)
+  add \x [11:9] (3 bits, unsigned)
+  add \x [20:18] (3 bits, unsigned)
+  add \x [17:15] (3 bits, unsigned)
+  add \x [23:21] (3 bits, unsigned)
+  add \x [38:36] (3 bits, unsigned)
+  add \x [32:30] (3 bits, unsigned)
+  add \x [29:27] (3 bits, unsigned)
+  add \x [35:33] (3 bits, unsigned)
+  add \x [44:42] (3 bits, unsigned)
+  add \x [41:39] (3 bits, unsigned)
+  add \x [47:45] (3 bits, unsigned)
+  add \x [62:60] (3 bits, unsigned)
+  add \x [56:54] (3 bits, unsigned)
+  add \x [53:51] (3 bits, unsigned)
+  add \x [59:57] (3 bits, unsigned)
+  add \x [65:63] (3 bits, unsigned)
+  packed 14 (6) bits / 2 words into adder tree
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $sdff.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000011 for cells of type $fa.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000100 for cells of type $fa.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000101 for cells of type $fa.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000110 for cells of type $fa.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000000111 for cells of type $fa.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001000 for cells of type $fa.
+Using template $paramod$a1bc51c02ce12ac21eb18988e83292af48ed7d72\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001110 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001110 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~665 debug messages>
+
+2.23. Executing OPT pass (performing simple optimizations).
+
+2.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+<suppressed ~213 debug messages>
+
+2.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 557 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.23.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 25 unused cells and 271 unused wires.
+<suppressed ~26 debug messages>
+
+2.23.5. Finished fast OPT passes.
+
+2.24. Executing ABC pass (technology mapping using ABC).
+
+2.24.1. Extracting gate netlist of module `\DAROW_K3' to `<abc-temp-dir>/input.blif'..
+
+2.24.1.1. Executed ABC.
+Extracted 496 gates and 611 wires to a netlist network with 114 inputs and 34 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled 0 0)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+2.24.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:       38
+ABC RESULTS:            ANDNOT cells:       20
+ABC RESULTS:               MUX cells:       19
+ABC RESULTS:              NAND cells:      169
+ABC RESULTS:               NOR cells:       10
+ABC RESULTS:               NOT cells:        1
+ABC RESULTS:                OR cells:       30
+ABC RESULTS:              XNOR cells:       43
+ABC RESULTS:               XOR cells:      103
+ABC RESULTS:        internal signals:      463
+ABC RESULTS:           input signals:      114
+ABC RESULTS:          output signals:       34
+Removing temp directory.
+Removing global temp directory.
+
+2.25. Executing OPT pass (performing simple optimizations).
+
+2.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module DAROW_K3.
+
+2.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\DAROW_K3'.
+Computing hashes of 469 cells of `\DAROW_K3'.
+Finding duplicate cells in `\DAROW_K3'.
+Removed a total of 0 cells.
+
+2.25.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+2.25.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 0 unused cells and 303 unused wires.
+<suppressed ~3 debug messages>
+
+2.25.5. Finished fast OPT passes.
+
+2.26. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `DAROW_K3'. Setting top module to DAROW_K3.
+
+2.26.1. Analyzing design hierarchy..
+Top module:  \DAROW_K3
+
+2.26.2. Analyzing design hierarchy..
+Top module:  \DAROW_K3
+Removed 0 unused modules.
+
+2.27. Printing statistics.
+
+=== DAROW_K3 ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      435 wires
+      661 wire bits
+       34 public wires
+      236 public wire bits
+        5 ports
+       84 port bits
+      469 cells
+       20   $_ANDNOT_
+       38   $_AND_
+       34   $_DFF_P_
+       19   $_MUX_
+      169   $_NAND_
+       10   $_NOR_
+        1   $_NOT_
+       30   $_OR_
+        2   $_SDFF_PN0_
+       43   $_XNOR_
+      103   $_XOR_
+
+2.28. Executing CHECK pass (checking for obvious problems).
+Checking module DAROW_K3...
+Found and reported 0 problems.
+
+3. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+  cell sky130_fd_sc_hd__dfxtp_1 (noninv, pins=3, area=20.02) is a direct match for cell type $_DFF_P_.
+  cell sky130_fd_sc_hd__dfrtn_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_NN0_.
+  cell sky130_fd_sc_hd__dfrtp_1 (noninv, pins=4, area=25.02) is a direct match for cell type $_DFF_PN0_.
+  cell sky130_fd_sc_hd__dfstp_2 (noninv, pins=4, area=26.28) is a direct match for cell type $_DFF_PN1_.
+  cell sky130_fd_sc_hd__edfxtp_1 (noninv, pins=4, area=30.03) is a direct match for cell type $_DFFE_PP_.
+  cell sky130_fd_sc_hd__dfbbn_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_NNN_.
+  cell sky130_fd_sc_hd__dfbbp_1 (noninv, pins=6, area=32.53) is a direct match for cell type $_DFFSR_PNN_.
+  final dff cell mappings:
+    unmapped dff cell: $_DFF_N_
+    \sky130_fd_sc_hd__dfxtp_1 _DFF_P_ (.CLK( C), .D( D), .Q( Q));
+    \sky130_fd_sc_hd__dfrtn_1 _DFF_NN0_ (.CLK_N( C), .D( D), .Q( Q), .RESET_B( R));
+    unmapped dff cell: $_DFF_NN1_
+    unmapped dff cell: $_DFF_NP0_
+    unmapped dff cell: $_DFF_NP1_
+    \sky130_fd_sc_hd__dfrtp_1 _DFF_PN0_ (.CLK( C), .D( D), .Q( Q), .RESET_B( R));
+    \sky130_fd_sc_hd__dfstp_2 _DFF_PN1_ (.CLK( C), .D( D), .Q( Q), .SET_B( R));
+    unmapped dff cell: $_DFF_PP0_
+    unmapped dff cell: $_DFF_PP1_
+    unmapped dff cell: $_DFFE_NN_
+    unmapped dff cell: $_DFFE_NP_
+    unmapped dff cell: $_DFFE_PN_
+    \sky130_fd_sc_hd__edfxtp_1 _DFFE_PP_ (.CLK( C), .D( D), .DE( E), .Q( Q));
+    \sky130_fd_sc_hd__dfbbn_1 _DFFSR_NNN_ (.CLK_N( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_NNP_
+    unmapped dff cell: $_DFFSR_NPN_
+    unmapped dff cell: $_DFFSR_NPP_
+    \sky130_fd_sc_hd__dfbbp_1 _DFFSR_PNN_ (.CLK( C), .D( D), .Q( Q), .Q_N(~Q), .RESET_B( R), .SET_B( S));
+    unmapped dff cell: $_DFFSR_PNP_
+    unmapped dff cell: $_DFFSR_PPN_
+    unmapped dff cell: $_DFFSR_PPP_
+
+3.1. Executing DFFLEGALIZE pass (convert FFs to types supported by the target).
+<suppressed ~24 debug messages>
+Mapping DFF cells in module `\DAROW_K3':
+  mapped 36 $_DFF_P_ cells to \sky130_fd_sc_hd__dfxtp_1 cells.
+
+4. Executing ABC pass (technology mapping using ABC).
+
+4.1. Extracting gate netlist of module `\DAROW_K3' to `<abc-temp-dir>/input.blif'..
+
+4.1.1. Executed ABC.
+Extracted 435 gates and 551 wires to a netlist network with 115 inputs and 36 outputs.
+Running ABC script: <abc-temp-dir>/abc.script
+ABC: UC Berkeley, ABC 1.01 (compiled 0 0)
+ABC: abc 01> empty
+ABC: abc 01> source <abc-temp-dir>/abc.script
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_scl /tmp/yosys-liberty-scl-cache/yosys_merged_f352e82c.scl 
+ABC: Warning: Detected 9 multi-output cells (for example, "sky130_fd_sc_hd__fa_1").
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &fraig -x 
+ABC: + &put 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf 
+ABC: + &put 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+ABC: 
+ABC: YOSYS_ABC_DONE 
+
+4.1.2. Re-integrating ABC results.
+ABC RESULTS:   sky130_fd_sc_hd__a211o_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21boi_0 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a21oi_1 cells:       16
+ABC RESULTS:   sky130_fd_sc_hd__a22oi_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__a31o_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__a31oi_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__a41oi_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__and2_0 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__and3_1 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__clkinv_1 cells:       11
+ABC RESULTS:   sky130_fd_sc_hd__maj3_1 cells:       51
+ABC RESULTS:   sky130_fd_sc_hd__mux2_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__mux2i_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nand2_1 cells:       12
+ABC RESULTS:   sky130_fd_sc_hd__nand2b_1 cells:       10
+ABC RESULTS:   sky130_fd_sc_hd__nand3_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand3b_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nand4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor2_1 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__nor2b_1 cells:        4
+ABC RESULTS:   sky130_fd_sc_hd__nor3_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__nor4_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o211ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__o21ai_0 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__o21bai_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o22ai_1 cells:        3
+ABC RESULTS:   sky130_fd_sc_hd__o2bb2ai_1 cells:        1
+ABC RESULTS:   sky130_fd_sc_hd__or2_0 cells:        2
+ABC RESULTS:   sky130_fd_sc_hd__xnor2_1 cells:       28
+ABC RESULTS:   sky130_fd_sc_hd__xnor3_1 cells:        6
+ABC RESULTS:   sky130_fd_sc_hd__xor2_1 cells:       17
+ABC RESULTS:   sky130_fd_sc_hd__xor3_1 cells:       43
+ABC RESULTS:        internal signals:      400
+ABC RESULTS:           input signals:      115
+ABC RESULTS:          output signals:       36
+Removing temp directory.
+Removing global temp directory.
+
+5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 0 unused cells and 550 unused wires.
+<suppressed ~1 debug messages>
+
+6. Executing HILOMAP pass (mapping to constant drivers).
+
+7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \DAROW_K3..
+Removed 1 unused cells and 26 unused wires.
+<suppressed ~27 debug messages>
+
+8. Executing Verilog backend.
+Dumping module `\DAROW_K3'.
+
+End of script. Logfile hash: 3d322bc93f, time: 1.00s, user: 0.20s, system: 0.11s, MEM: 52.02 MB peak
+Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)
+Time spent: 74% 2x abc (0 sec), 16% 1x dfflibmap (0 sec), ...

@@ -5,3 +5,8 @@ experiments/results/*/*/*_gl_raw.v
 __pycache__/
 *.pyc
 experiments/results/*/orfs_pruned_A1/
+experiments/results/G2/orfs/
+experiments/results/G3/orfs/
+experiments/results/*/*/programmed_*.v
+experiments/results/*/*/prog_*_programmed.v
+experiments/results/*/*/*_program.def

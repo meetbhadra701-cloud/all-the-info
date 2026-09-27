@@ -1,0 +1,213 @@
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO VSITE_BUF
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN VSITE_BUF 0 0 ;
+  SIZE 1.84 BY 2.72 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
+  PIN Z
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER li1 ;
+        RECT 0.085 1.015 0.425 1.665 ;
+    END
+  END Z
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.30 0.80 1.54 1.92 ;
+    END
+  END A
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 2.480 1.84 2.960 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 -0.240 1.84 0.240 ;
+    END
+  END VGND
+  OBS
+    LAYER met1 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met2 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met3 ;
+      RECT 0.45 0.80 1.40 1.90 ;
+  END
+END VSITE_BUF
+
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO VSITE_ZERO
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN VSITE_ZERO 0 0 ;
+  SIZE 1.84 BY 2.72 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
+  PIN Z
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER li1 ;
+        RECT 0.085 1.015 0.425 1.665 ;
+    END
+  END Z
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.30 0.80 1.54 1.92 ;
+    END
+  END A
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 2.480 1.84 2.960 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 -0.240 1.84 0.240 ;
+    END
+  END VGND
+  OBS
+    LAYER met1 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met2 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met3 ;
+      RECT 0.45 0.80 1.40 1.90 ;
+  END
+END VSITE_ZERO
+
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO VSITE_ONE
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN VSITE_ONE 0 0 ;
+  SIZE 1.84 BY 2.72 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
+  PIN Z
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER li1 ;
+        RECT 0.085 1.015 0.425 1.665 ;
+    END
+  END Z
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.30 0.80 1.54 1.92 ;
+    END
+  END A
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 2.480 1.84 2.960 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 -0.240 1.84 0.240 ;
+    END
+  END VGND
+  OBS
+    LAYER met1 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met2 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met3 ;
+      RECT 0.45 0.80 1.40 1.90 ;
+  END
+END VSITE_ONE
+
+VERSION 5.7 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO LTAP
+  CLASS CORE ;
+  ORIGIN 0 0 ;
+  FOREIGN LTAP 0 0 ;
+  SIZE 3.68 BY 2.72 ;
+  SYMMETRY X Y R90 ;
+  SITE unithd ;
+  PIN A
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER li1 ;
+        RECT 0.085 1.015 0.425 1.665 ;
+    END
+  END A
+  PIN Z
+    DIRECTION OUTPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.30 0.80 3.38 1.92 ;
+    END
+  END Z
+  PIN VPWR
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 2.480 3.68 2.960 ;
+    END
+  END VPWR
+  PIN VGND
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER met1 ;
+        RECT 0.00 -0.240 3.68 0.240 ;
+    END
+  END VGND
+  OBS
+    LAYER met1 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met2 ;
+      RECT 0.60 0.90 1.25 1.80 ;
+    LAYER met3 ;
+      RECT 0.45 0.80 1.40 1.90 ;
+  END
+END LTAP
+
+END LIBRARY

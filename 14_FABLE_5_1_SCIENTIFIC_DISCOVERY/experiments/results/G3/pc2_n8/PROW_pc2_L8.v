@@ -1,0 +1,28 @@
+module PROW_pc2_L8(input clk, input [7:0] ph, input [6:0] c, input [7:0] x, output [1:0] y);
+  wire [0:0] l0 = x[0:0];
+  wire [0:0] l1 = x[1:1];
+  wire [0:0] l2 = x[2:2];
+  wire [0:0] l3 = x[3:3];
+  wire [0:0] l4 = x[4:4];
+  wire [0:0] l5 = x[5:5];
+  wire [0:0] l6 = x[6:6];
+  wire [0:0] l7 = x[7:7];
+  wire [1:0] g0_0 = l0 + l1;
+  wire [1:0] g0_1 = l2 + l3;
+  wire [1:0] g0_2 = l4 + l5;
+  wire [1:0] g0_3 = l6 + l7;
+  wire [2:0] g0_4 = g0_0 + g0_1;
+  wire [2:0] g0_5 = g0_2 + g0_3;
+  wire [3:0] g0_6 = g0_4 + g0_5;
+  reg [3:0] pr0; always @(posedge clk) pr0 <= g0_6;
+  reg [3:0] pc; always @(posedge clk) pc <= pr0;
+  wire [10:0] pce = {{7{1'b0}}, pc};
+  wire cinj = (ph[1] & c[6]) | (ph[2] & c[5]) | (ph[3] & c[4]) | (ph[4] & c[3]) | (ph[5] & c[2]) | (ph[6] & c[1]) | (ph[7] & c[0]);
+  reg [10:0] acc;
+  wire [10:0] addend = ph[0] ? ~pce : pce;
+  wire [10:0] base = ph[0] ? 11'd0 : {acc[9:0], 1'b0};
+  wire cin = ph[0] | cinj;
+  always @(posedge clk) acc <= base + addend + cin;
+  reg [10:0] outr; always @(posedge clk) outr <= ph[0] ? acc : {2'b00, outr[10:2]};
+  assign y = outr[1:0];
+endmodule

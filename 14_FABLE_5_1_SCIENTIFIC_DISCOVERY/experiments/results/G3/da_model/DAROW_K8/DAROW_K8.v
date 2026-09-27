@@ -1,0 +1,27 @@
+module DAROW_K8(input clk, input [7:0] ph, input [6:0] c, input [39:0] x, output [1:0] y);
+  wire [4:0] l0 = x[4:0];
+  wire [4:0] l1 = x[9:5];
+  wire [4:0] l2 = x[14:10];
+  wire [4:0] l3 = x[19:15];
+  wire [4:0] l4 = x[24:20];
+  wire [4:0] l5 = x[29:25];
+  wire [4:0] l6 = x[34:30];
+  wire [4:0] l7 = x[39:35];
+  wire [5:0] t0 = l0 + l1;
+  wire [5:0] t1 = l2 + l3;
+  wire [5:0] t2 = l4 + l5;
+  wire [5:0] t3 = l6 + l7;
+  wire [6:0] t4 = t0 + t1;
+  wire [6:0] t5 = t2 + t3;
+  wire [7:0] t6 = t4 + t5;
+  reg [7:0] pc; always @(posedge clk) pc <= t6;
+  wire [13:0] pce = {{6{1'b0}}, pc};
+  wire cinj = (ph[1] & c[6]) | (ph[2] & c[5]) | (ph[3] & c[4]) | (ph[4] & c[3]) | (ph[5] & c[2]) | (ph[6] & c[1]) | (ph[7] & c[0]);
+  reg [13:0] acc;
+  wire [13:0] addend = ph[0] ? ~pce : pce;
+  wire [13:0] base = ph[0] ? 14'd0 : {acc[12:0], 1'b0};
+  wire cin = ph[0] | cinj;
+  always @(posedge clk) acc <= base + addend + cin;
+  reg [13:0] outr; always @(posedge clk) outr <= ph[0] ? acc : {2'b00, outr[13:2]};
+  assign y = outr[1:0];
+endmodule

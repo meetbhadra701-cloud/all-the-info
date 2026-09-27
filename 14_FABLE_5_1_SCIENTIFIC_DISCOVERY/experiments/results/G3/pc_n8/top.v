@@ -1,0 +1,28 @@
+module top(input clk, input start, input [7:0] x, output [15:0] y);
+  wire [7:0] ph; CTRL ctl (.clk(clk), .start(start), .ph(ph));
+  wire zero; sky130_fd_sc_hd__conb_1 tie0 (.HI(), .LO(zero));
+  wire lp0, ln0; PLINE ln_0 (.clk(clk), .a(x[0]), .pos(lp0), .neg(ln0));
+  wire lp1, ln1; PLINE ln_1 (.clk(clk), .a(x[1]), .pos(lp1), .neg(ln1));
+  wire lp2, ln2; PLINE ln_2 (.clk(clk), .a(x[2]), .pos(lp2), .neg(ln2));
+  wire lp3, ln3; PLINE ln_3 (.clk(clk), .a(x[3]), .pos(lp3), .neg(ln3));
+  wire lp4, ln4; PLINE ln_4 (.clk(clk), .a(x[4]), .pos(lp4), .neg(ln4));
+  wire lp5, ln5; PLINE ln_5 (.clk(clk), .a(x[5]), .pos(lp5), .neg(ln5));
+  wire lp6, ln6; PLINE ln_6 (.clk(clk), .a(x[6]), .pos(lp6), .neg(ln6));
+  wire lp7, ln7; PLINE ln_7 (.clk(clk), .a(x[7]), .pos(lp7), .neg(ln7));
+  wire hi0, lo0; sky130_fd_sc_hd__conb_1 ctie0 (.HI(hi0), .LO(lo0));
+  PROW_pc_L8 row0 (.clk(clk), .ph(ph), .c({lo0, lo0, lo0, lo0, lo0, lo0, lo0}), .x({lp7, lp6, zero, zero, lp3, lp2, zero, lp0}), .y(y[1:0]));
+  wire hi1, lo1; sky130_fd_sc_hd__conb_1 ctie1 (.HI(hi1), .LO(lo1));
+  PROW_pc_L8 row1 (.clk(clk), .ph(ph), .c({lo1, lo1, lo1, lo1, lo1, lo1, hi1}), .x({zero, zero, lp5, zero, ln3, lp2, zero, zero}), .y(y[3:2]));
+  wire hi2, lo2; sky130_fd_sc_hd__conb_1 ctie2 (.HI(hi2), .LO(lo2));
+  PROW_pc_L8 row2 (.clk(clk), .ph(ph), .c({lo2, lo2, lo2, lo2, lo2, hi2, lo2}), .x({zero, zero, lp5, zero, ln3, lp2, zero, ln0}), .y(y[5:4]));
+  wire hi3, lo3; sky130_fd_sc_hd__conb_1 ctie3 (.HI(hi3), .LO(lo3));
+  PROW_pc_L8 row3 (.clk(clk), .ph(ph), .c({lo3, lo3, lo3, lo3, hi3, lo3, lo3}), .x({lp7, lp6, ln5, ln4, lp3, ln2, ln1, zero}), .y(y[7:6]));
+  wire hi4, lo4; sky130_fd_sc_hd__conb_1 ctie4 (.HI(hi4), .LO(lo4));
+  PROW_pc_L8 row4 (.clk(clk), .ph(ph), .c({lo4, lo4, lo4, lo4, lo4, lo4, hi4}), .x({lp7, lp6, ln5, lp4, zero, lp2, lp1, lp0}), .y(y[9:8]));
+  wire hi5, lo5; sky130_fd_sc_hd__conb_1 ctie5 (.HI(hi5), .LO(lo5));
+  PROW_pc_L8 row5 (.clk(clk), .ph(ph), .c({lo5, lo5, lo5, lo5, hi5, lo5, lo5}), .x({zero, zero, ln5, zero, lp3, ln2, ln1, ln0}), .y(y[11:10]));
+  wire hi6, lo6; sky130_fd_sc_hd__conb_1 ctie6 (.HI(hi6), .LO(lo6));
+  PROW_pc_L8 row6 (.clk(clk), .ph(ph), .c({lo6, lo6, lo6, lo6, lo6, hi6, hi6}), .x({lp7, ln6, ln5, ln4, zero, lp2, lp1, zero}), .y(y[13:12]));
+  wire hi7, lo7; sky130_fd_sc_hd__conb_1 ctie7 (.HI(hi7), .LO(lo7));
+  PROW_pc_L8 row7 (.clk(clk), .ph(ph), .c({lo7, lo7, lo7, lo7, lo7, lo7, hi7}), .x({lp7, lp6, zero, zero, zero, lp2, ln1, lp0}), .y(y[15:14]));
+endmodule

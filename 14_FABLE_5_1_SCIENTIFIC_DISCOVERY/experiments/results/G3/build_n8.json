@@ -1,0 +1,27 @@
+{
+ "n": 8,
+ "ow": 11,
+ "protocol": "bit-plane MSB-first, 8 cycles/word, 2 output bits/cycle",
+ "designs": {
+  "pc2": {
+   "validation": true,
+   "negctl_detects": true,
+   "output_latency_cycles": 12,
+   "cycles_per_word": 8,
+   "module_timing": {
+    "CTRL_gl.v": {
+     "delay_ns": -1.0000000150474662e+39,
+     "area_um2": 200.1920018646075
+    },
+    "PLINE_gl.v": {
+     "delay_ns": -1.0000000150474662e+39,
+     "area_um2": 23.7727997010051
+    },
+    "PROW_pc2_L8_gl.v": {
+     "delay_ns": -1.0000000150474662e+39,
+     "area_um2": 1179.8816368369103
+    }
+   }
+  }
+ }
+}
