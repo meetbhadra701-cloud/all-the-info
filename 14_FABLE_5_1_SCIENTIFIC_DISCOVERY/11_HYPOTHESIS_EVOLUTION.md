@@ -45,7 +45,7 @@ PROPOSE H1.1 (bit-parallel UBP, inherited) → BUILD EVALUATOR (ORFS PnR + own s
   - Select wiring is 5.8× lower.
 - **What E5 revealed about H1.1 changes the story behind the revision.**
   - The *pre-placement* delay penalty that triggered the revision shrank to 1.10× post-route.
-  - A different bit-parallel cost appeared instead: **select-bus congestion.** Bit-parallel UBP fails global routing at U = 75, where g1 routes. That drops its ratio from 2.08× (equal U) to «E5_RATIO».
+  - A different bit-parallel cost appeared instead: **select-bus congestion.** Bit-parallel UBP fails global routing at U = 75, where g1 routes. That drops its ratio from 2.08× (equal U) to 1.67×.
   - H1.2 removes exactly this cost: single-wire lines route at U = 75 like g1.
   - So the revision was justified, but by the *second* risk it named (w-bit select buses), not by the delay trigger.
 - **Distinguishing result, as pre-registered:** A6 met at the real clock with equal throughput. The bit-serial form routes where the bit-parallel form congests.

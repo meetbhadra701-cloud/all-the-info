@@ -8,8 +8,8 @@ P1  Accumulation hardware of hardwired linear layers when base layers are weight
 │   ├── Critical assumption: select wiring fits
 │   ├── Experiment: E5 (n = 32, SKY130, ORFS PnR; A1 relaxed clock; A2 full fabric)
 │   ├── Result: UBP3 DRC-clean at U = 60, global-route congestion at U = 75 (g1 routes at 75)
-│   │           → ratio «E5_RATIO» (2.08× at equal U); post-route delay 1.10× g1; select WL 1.58× lower
-│   └── Decision: «E5_VERDICT» — WEAKENED (routability-limited), superseded by H1.2
+│   │           → ratio 1.67× (2.08× at equal U); post-route delay 1.10× g1; select WL 1.58× lower
+│   └── Decision: A5 MET narrowly (1.59× on the tie-corrected basis) — WEAKENED (routability-limited), superseded by H1.2
 ├── H1.2 Bit-serial UBP  (evolution iteration 1)                  STATUS: SURVIVOR
 │   ├── Mechanism: serial registered adders; 1-wire pattern lines; serial trees fed by shared pattern streams
 │   ├── Why: bit-parallel generator depth (pre-placement 1.43× delay) and w-bit select buses
@@ -31,7 +31,7 @@ P3  Hash-friendly full-custom CMVM                                 STATUS: KILLE
 
 | Branch | Problem | Mechanism | Assumptions | Evidence | Prior art | Experiment | Result | Decision | Next question |
 |---|---|---|---|---|---|---|---|---|---|
-| H1.1 | P1 | bit-parallel UBP | select buses fit | E1 closed forms; E3 cells; **E5 PnR** | LUT-GEMM (runtime); HNLPU (g = 1, provisional) | E5 | «E5_RATIO»; loses one utilization step to congestion; 1.10× delay | weakened; superseded | none (use H1.2) |
+| H1.1 | P1 | bit-parallel UBP | select buses fit | E1 closed forms; E3 cells; **E5 PnR** | LUT-GEMM (runtime); HNLPU (g = 1, provisional) | E5 | 1.67×; loses one utilization step to congestion; 1.10× delay | weakened; superseded | none (use H1.2) |
 | H1.2 | P1 | bit-serial UBP | 1-wire lines route like g1 | **E6 PnR** | HNLPU POPCNT (raw inputs); TENET (runtime mirror-half) | E6 | 2.13×; U_max 75 = g1; timing met; select WL 5.8× lower | **survivor → full development (gated)** | Does it survive fixed placement + top-metal-only routing (G2)? DA-via-ROM (G3)? |
 | H2.1 | P2 | adapter-as-redundancy | defects within rank r | none | RRAM LoRA compensation | none possible here | — | reserve | Via-ROM defect statistics? |
 | H3.1 | P3 | hash-friendly pairing | — | E1-hashed (HIST-OBS) | Paar; da4ml | — | — | killed | — |

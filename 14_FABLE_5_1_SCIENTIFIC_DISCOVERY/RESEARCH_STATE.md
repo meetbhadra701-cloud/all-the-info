@@ -57,7 +57,7 @@
 
 **E5 (bit-parallel, n = 32):**
 - UBP3 U_max = 60 (congestion at 75); g1 U_max = 75.
-- Ratio «E5_RATIO» («E5_VERDICT»). Delay 1.10×.
+- Ratio 1.67× (A5 MET narrowly; 1.59× on the tie-corrected basis). Delay 1.10× at equal U, 1.12× at U_max.
 - Post-PnR validated.
 
 **Amendments:**

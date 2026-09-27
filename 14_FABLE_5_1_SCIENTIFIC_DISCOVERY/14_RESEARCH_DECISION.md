@@ -35,7 +35,7 @@
 | | Result | Decision |
 |---|---|---|
 | **E6 (H1.2, bit-serial, n = 64)** | g1/UBP3 routed area 2.13× (both U_max = 75; timing met; +1 cycle latency) | **A6 MET** |
-| **E5 (H1.1, bit-parallel, n = 32)** | g1/UBP3 = «E5_RATIO» (UBP3 U_max = 60; congestion at 75) | «E5_VERDICT» |
+| **E5 (H1.1, bit-parallel, n = 32)** | g1/UBP3 = 1.67× (UBP3 U_max = 60; congestion at 75) | A5 MET narrowly (1.59× on the tie-corrected basis) |
 
 ## Gates for the full-development phase
 

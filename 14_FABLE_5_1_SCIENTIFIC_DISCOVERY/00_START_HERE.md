@@ -14,7 +14,7 @@
   - equal 3.0 ns clock and throughput, +1 cycle latency;
   - 5.8× less via-programmed wiring;
   - final routed netlists equal numpy W@x.
-- **The bit-parallel form** loses one utilization step to select-bus congestion («E5_RATIO»).
+- **The bit-parallel form** loses one utilization step to select-bus congestion (1.67×).
 - **Standing:** novelty is provisional and possibly obvious (LUT-GEMM + hardwiring). Three cheap gates decide whether to continue: HNLPU full text, fixed-placement routing, DA-via-ROM baseline.
 
 ## Read in this order

@@ -54,13 +54,13 @@
 | Design | U % | Outcome | Natural delay (ns) | Routed WL (µm) | Select WL (µm) | Post-PnR sim |
 |---|---|---|---|---|---|---|
 | g1 | 60 | DRC 0 | 11.87 | 1,122,157 | 536,031 | ✓ |
-| g1 | **75** | «E5_G1_75» | | | | |
+| g1 | **75** | DRC 0 | 11.64 | 1,059,947 | 479,020 | ✓ |
 | ubp3 | **60** | DRC 0 | 13.01 | 685,880 | 339,655 | ✓ |
 | ubp3 | 75 | **global-route congestion failure** (GRT-0116: 24 overflow edges, met2/met4) | — | — | — | — |
 | ubp4 | 60 | «E5_UBP4_60» | | | | |
 | ubp4 | 75 | **global-route congestion failure** (GRT-0116) | — | — | — | — |
 
-**Decision (pre-registered, A1/A2 basis):** «E5_DECISION»
+**Decision (pre-registered, A1/A2 basis):** U_max: g1 = 75, ubp3 = 60 → routed area g1 386,611 vs ubp3 232,103 µm² → **ratio 1.666×** (sensitivity: final-cell basis 1.71×, final-minus-ties basis 1.59×) → **A5 MET, K5 not triggered** — by a margin of 0.17 on the pre-registered basis (0.09 tie-corrected). At equal utilization (U = 60) the ratio is 2.08×; the difference is the utilization step lost to select-bus congestion. Natural delay at U_max: ubp3 13.01 ns vs g1 11.64 ns (1.12×).
 
 **Also observed:**
 - **Delay:** bit-parallel UBP3 is **10% slower** post-route (13.01 vs 11.87 ns). That is much less than the 1.43× pre-placement estimate: wire delay in the 2.1× larger g1 fabric absorbs most of the generator's logic depth.
