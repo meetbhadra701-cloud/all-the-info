@@ -1,5 +1,11 @@
 # 12 — Primary research thesis (Wave 14)
 
+> **Post-gate status (2026-09-27): read `18_GATES_VERDICT_AND_PACKAGE.md` first.** This thesis was written before gates G1–G3.
+> - The "halves routed area" claim holds **only with hardwired weights**: the layout saw W (E6, G3).
+> - In the thesis's own regime, a weight-independent fixed base, Gate 2 is **unresolved**. UBP3's programmable layer routes at GRT level with a 1.76–1.85× A×T advantage on a structured W-blind base, but did not close detailed routing within the pre-registered effort.
+> - G1 downgraded the novelty to a likely-obvious composition.
+> - Class: **PROMISING BUT KEY GATE UNRESOLVED**.
+
 **Title:** Universal block-pattern sharing for via/metal-programmable hardwired inference silicon — its bit-serial form halves routed accumulation area at equal clock and throughput.
 
 ## Thesis statement (template form)

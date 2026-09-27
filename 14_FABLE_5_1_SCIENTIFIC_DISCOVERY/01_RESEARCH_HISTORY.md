@@ -51,3 +51,20 @@ Full history: `13_FABLE_5_1_SCIENTIFIC_DISCOVERY/01_RESEARCH_HISTORY_AND_LESSONS
 5. **Tool-format pitfalls** (engineering, recorded for reuse):
    - OpenSTA's Verilog reader rejects `signed`, wire initializers and behavioural processes. Re-emit through Yosys, strip `signed`, and instantiate top-level flip-flops as cells.
    - OpenROAD needs `read_lef` before `link_design`. `sta::worst_slack` returns seconds.
+
+## Lessons from gates G1–G3 (2026-09-27, NEW-OBS)
+
+6. **A layout that sees W hides the cost a weight-independent base must pay.**
+   - E6 and G3 placed each line driver next to its 2–3 users. UBP's 5.8× select-wiring saving came from that.
+   - A fixed base must make all 548 lines reachable from every row, and that reachability is the real cost.
+   - **Lesson:** regime-V claims need a W-blind placement test (G2), not just a W-independent netlist (A2).
+7. **A generic placer can manufacture a collapse.**
+   - Connectivity-driven placement cannot see programmable nets. It clustered every line tap, and B failed at every utilization down to 8%.
+   - The overflow maps (one vertical stripe through the tap cluster) exposed the cause.
+   - A W-blind crossbar floorplan (R2) removed it for every design.
+   - **Lesson:** diagnose where the overflow is before concluding a physical failure is intrinsic.
+8. **A pre-registered effort cap below the tool default can manufacture a failure.**
+   - The G2 protocol capped detailed routing at 20 iterations; ORFS uses 64.
+   - B failed the 20-iteration criterion at U45–60. Post hoc, with 64 iterations, it closed at U45.
+   - The pre-registered classification stands. **Lesson:** pre-register tool effort at the tool's default unless there is a reason not to.
+9. **Line count and line load trade off.** UBP's lines are 4.3× more numerous but lightly loaded (≈ 2.6 sinks), so they are the fastest programmable paths. The per-input popcount fabric's heavily loaded lines cost it 1.6–1.7 ns.

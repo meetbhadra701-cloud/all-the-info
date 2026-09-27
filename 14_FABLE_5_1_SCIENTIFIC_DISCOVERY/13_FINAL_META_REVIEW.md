@@ -1,5 +1,7 @@
 # 13 — Final meta-review (mandatory)
 
+> **Post-gate status (2026-09-27):** this review predates gates G1–G3. The gate results and the current class (**PROMISING BUT KEY GATE UNRESOLVED**) are in `18_GATES_VERDICT_AND_PACKAGE.md`.
+
 This is an independent review of the whole Wave-14 investigation, written after all decisive runs.
 
 ## 1. What did we learn about the underlying scientific problem?

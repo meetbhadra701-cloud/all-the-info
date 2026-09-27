@@ -51,7 +51,7 @@ Cells give total overflow (met4 + met5); 0 means the program routes. Full record
 | P2 | 45 | 0 | 0 | 0 | 519 | 0 |
 | A | 60 | 0 | 0 | 0 | 108 | 0 |
 
-**B's random matrices (W1, W2) do not route at any utilization down to 8%**, which is a 7.5× larger die than its hardwired E6 layout. Both per-input fabrics route W1, W2, W3 and W5; only the dense W4 overflows, marginally.
+**B's random matrices (W1, W2) do not route at any utilization down to 8%.** At 8% the core is 2.11 mm², about 10× its hardwired E6 layout (0.21 mm²). Both per-input fabrics route W1, W2, W3 and W5; only the dense W4 overflows, marginally.
 
 ### 2.3 Detailed routing of the programmable nets (MEASURED)
 
@@ -63,7 +63,9 @@ At U60 no design's W1 program converges. The per-input designs do not pass detai
 | P2 | 24,818 → 23,178 |
 | B | 66,520 → 121,693, diverging |
 
-SKY130's only programmable layers are met4 (0.92 µm pitch) and met5 (3.4 µm pitch, 0.8 µm via4). GRT under-counts how little room they leave. This is a testbed limit that hits every design, and B hardest.
+SKY130's only programmable layers are met4 (0.92 µm pitch) and met5 (3.4 µm pitch, 0.8 µm via4). With generic placement, GRT under-counts how little room they leave for die-spanning Steiner trees.
+- This hits every design, and B hardest.
+- The structured base of §4 removes the problem for the per-input designs; they then close detailed routing.
 
 ### 2.4 Timing (MODELED: placement parasitics, complete W1-programmed netlist, 3.0 ns clock, U60)
 
@@ -192,9 +194,10 @@ A×T = base cell area / U × cycles × T.
 | **A** | **75** | ✓ | ✓ (W4 at it. 14) | **14.28e6** | 14.28e6 | **1.76** | 1.76 |
 
 **Post-PnR functional checks** (complete programmed netlists vs numpy, mutation detected):
-- B W1 at U60, U52 and U45, and B W2 at U45;
-- P2 W1 and W4 at U60;
-- A W1 at U60.
+- B: W1 at U60, U52 and U45, and W2 at U45;
+- P2: W1 and W4 at U60 and U67;
+- A: W1 and W4 at U60 and U75.
+- That is 12 structured-base programmed netlists, every one matching numpy with the mutation detected.
 - Records: `results/G2/g2_verification.jsonl`.
 
 ## 5. Gate-2 verdict
@@ -218,7 +221,7 @@ A×T = base cell area / U × cycles × T.
 
 **Secondary criterion (DRC-clean detailed routing of the largest-WL program in 20 iterations):**
 - **B fails at every U of its grid:** 1,167 / 881 / 416 residual met4 violations at U60 / 52 / 45, decreasing with U.
-- **P2 and A pass at U60,** closing at iterations 13 and 16.
+- **P2 and A pass at every U tested:** P2 at 60 and 67 (iterations 13 and 14), A at 60 and 75 (iterations 16 and 14).
 - The failure is **B-specific**, not a testbed limit, so the pre-registered R2-A ("… and B's secondary criterion holds") cannot be granted.
 
 ### 5.3 Against the Gate-2 kill condition as stated

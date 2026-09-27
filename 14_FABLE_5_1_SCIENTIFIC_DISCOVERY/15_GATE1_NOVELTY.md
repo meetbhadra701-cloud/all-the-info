@@ -75,3 +75,14 @@ Everything except Ankhdjet is **secondary**. No novelty is inferred from missing
 2. **Taalas disclosures.** Whether the WO2025217724A1 applicant is Taalas, and whether HC2 uses multi-input patterns. Google Patents blocked.
 3. **TENET / T-MAC full texts.** Whether either discusses a hardwired or constant-index variant. Blocked.
 4. **The Ankhdjet repository-side physical flow** (custom cells, LibreLane). Not in the wheel. `github.com/mpai17/ankhdjet` was not attached to this session.
+
+## Post-gate note (after G2 and G3)
+
+**What G3 leaves standing (item iii above):** in the hardwired regime, B beats the frontier's bit-plane popcount fabric by 1.84× in A×T, and DA is dominated.
+
+**What G2 adds to item (i), the physical characterization under W-independence:**
+- **UBP's fixed-base cost is reachability, not ports.** It has 548 programmable lines against 128 for a per-input fabric.
+- That cost is fatal under generic placement.
+- It routes at GRT level under a structured W-blind crossbar, but has not closed detailed routing within the pre-registered effort.
+- None of this appears in any retrieved source.
+- It is the strongest candidate contribution, and it is unfinished.
