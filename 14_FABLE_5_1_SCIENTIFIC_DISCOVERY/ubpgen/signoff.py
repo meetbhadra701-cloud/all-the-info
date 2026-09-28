@@ -81,8 +81,15 @@ def _docker(root: Path, script: str, env: dict, timeout=7200) -> str:
 
 
 def corner_libs(root: Path, corner: str) -> list[str]:
-    std = pdk.ORFS_TT if corner == 'tt' else f'/pdk/{pdk.CORNERS[corner][0]}'
-    return [std] + [f'/work/{c}' for c in access.custom_libs(corner) if (root / c).exists()]
+    """The corner's standard library + every custom-cell library of the design at that corner. A design directory
+    with a tt custom library but no clone at this corner is refused (the cells would be untimed)."""
+    out = [pdk.ORFS_TT if corner == 'tt' else f'/pdk/{pdk.CORNERS[corner][0]}']
+    for tt_lib, c_lib in zip(access.custom_libs('tt'), access.custom_libs(corner)):
+        if (root / tt_lib).exists():
+            if not (root / c_lib).exists():
+                raise RuntimeError(f'{root / c_lib} missing: write the corner clones (access.write_cells) first')
+            out.append(f'/work/{c_lib}')
+    return out
 
 
 PIN_ROW = re.compile(r'^\s*(?:\d+\s+)?(?:[\d.]+\s+)?(?:[\d.]+\s+)?(-?[\d.]+)\s+(-?[\d.]+)\s+[\^v]\s+(\S+)\s+\((\S+)\)\s*$')

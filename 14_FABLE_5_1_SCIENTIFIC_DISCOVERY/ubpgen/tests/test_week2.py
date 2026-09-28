@@ -205,7 +205,8 @@ def test_tap_cells_physical_accounting(tmp_path):
         for name in (f'LTAPB{k}', f'LTAPBW{k}'):
             cb = liberty.cell_block(lib, name)
             assert abs(liberty.area(cb) - nsites * access.SITE_AREA) < 1e-3, name
-            assert re.search(r'pin\s*\(\s*"A"\s*\)\s*\{\s*max_transition : 0\.3000;', cb), name
+            # exactly one max_transition on pin A, = S (buf_k carries its own 1.5 ns; the last attribute would win)
+            assert re.findall(r'max_transition\s*:\s*([^;]*);', liberty.pin_block(cb, 'A')) == ['0.3000'], name
             assert 'dont_use : true' in cb
             for kind in ('cell_rise', 'cell_fall', 'rise_transition', 'fall_transition'):
                 assert liberty.tables(cb, 'Z', kind) == liberty.tables(buf, 'X', kind), (name, kind)
@@ -232,6 +233,10 @@ def test_corner_clones():
             liberty.tables(liberty.cell_block(src, 'sky130_fd_sc_hd__buf_2'), 'X', 'rise_transition')
         assert liberty.tables(liberty.cell_block(w2, 'LTAPB2'), 'Z', 'rise_transition') != \
             liberty.tables(liberty.cell_block(tt, 'sky130_fd_sc_hd__buf_2'), 'X', 'rise_transition')
+        for tc in C.TAP_CLASSES:
+            for name in (f'LTAPB{tc[4:]}', f'LTAPBW{tc[4:]}'):
+                pa = liberty.pin_block(liberty.cell_block(w2, name), 'A')
+                assert re.findall(r'max_transition\s*:\s*([^;]*);', pa) == ['0.3000'], (corner, name)
 
 
 # ------------------------------------------------------------------------------------------ generation (docker)

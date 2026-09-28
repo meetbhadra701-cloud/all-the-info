@@ -117,9 +117,18 @@ def w2_lib(src: str, libname: str, slew: float) -> str:
         for name in (f'LTAPB{k}', f'LTAPBW{k}'):
             c = lib_cell(base, name, tap_sites(tc) * SITE_AREA, {'X': 'Z'})
             c = re.sub(r'cell_footprint\s*:\s*"[^"]*"\s*;', f'cell_footprint : "w2_{name.lower()}";\n        dont_use : true;', c)
-            c = re.sub(r'(pin\s*\(\s*"A"\s*\)\s*\{)', rf'\1\n            max_transition : {slew:.4f};', c, count=1)
-            cells.append(c)
+            cells.append(_set_input_max_transition(c, 'A', slew))
     return _lib_header(src, libname) + '\n' + '\n'.join(cells) + '\n}\n'
+
+
+def _set_input_max_transition(cell: str, pin: str, slew: float) -> str:
+    """Set the pin's max_transition to `slew`: the sky130 buffers already carry max_transition : 1.5 on their input
+    pins, and the LAST attribute wins, so the existing one is replaced (exactly one remains)."""
+    m = re.search(r'pin\s*\(\s*"%s"\s*\)\s*\{' % pin, cell)
+    start, end = m.end(), liberty._block(cell, m.start()).__len__() + m.start()
+    body = re.sub(r'\n\s*max_transition\s*:\s*[^;]*;', '', cell[start:end])
+    body = f'\n            max_transition : {slew:.4f};' + body
+    return cell[:start] + body + cell[end:]
 
 
 def w2_lef() -> str:

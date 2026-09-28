@@ -223,6 +223,21 @@ Tap area against the historical accounting:
    - Charging all of it would favour UBP by about 13% of P2's area. That would change the established metric in UBP's favour, so it is not done.
 2. **Critical-path reporting.** The sign-off path reports carry the driven net of every stage (`-fields … net`), so the critical driver and net are recorded, not only the cell. The measured slacks are unchanged: the historical B60 W1 re-run gives identical tt / ss / ff slacks.
 
+### 2.4 Implementation bug found in the first builds, fixed (1.8), builds restarted
+
+- **What happened.** The first B60 and A-R2 bases (started 03:36Z) reached global routing, but the flow's `repair_design` had changed nothing at 3_4:
+  - 0 cells resized;
+  - 0 buffers inserted;
+  - timing-driven placement found only 3 slew violations in the whole design.
+- **Diagnosis** (OpenSTA probe of the placed database, placement parasitics):
+  - the tap A pins had a slew of 0.74–0.88 ns;
+  - OpenSTA reported **no** slew violation there.
+- **Cause.** The sky130 `buf_<k>` input pin already carries `max_transition : 1.5`. The generator had *inserted* `max_transition : 0.30` in front of it instead of replacing it. Liberty's last attribute wins, so the limit stayed 1.5 ns and the pre-registered spine constraint was never seen.
+- **Fix** (`access.w2_lib`): the existing attribute is replaced, so exactly one `max_transition = S` remains on every tap input, at every corner.
+  - Probe with the fixed library on the same placed database: **2,192 of 2,192** tap pins violating, against 0 before.
+  - A test now requires exactly one `max_transition` equal to S on every tap input.
+- **Action.** Both partial builds were stopped before any program was routed or timed, and deleted. No Week 2 timing result existed. The designs are rebuilt from scratch with the fixed library; the rule, the classes and every other setting are unchanged.
+
 ## 3. Results
 
 ## 4. Decision
