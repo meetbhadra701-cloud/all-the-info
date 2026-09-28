@@ -6,7 +6,7 @@
 - the per-input serial baseline (A);
 - the bit-plane popcount baseline (P2).
 
-All three use the R3 segmented-access layout methodology. The specification is `../19_FINAL_UBP_DECISION.md`, whose §H Week 1 this package implements.
+All three use the R3 segmented-access layout methodology; `access.mode = r2` also gives the historical single-tap (R2) access of the per-input baselines. The specification is `../19_FINAL_UBP_DECISION.md` §H: Week 1 (the generator, `../20_WEEK1_DEVLOG.md`) and Week 2 (physical driver sizing and three-corner extracted sign-off, `../21_WEEK2_TIMING_CLOSURE.md`).
 
 The validated R3 implementation is the golden reference. `golden/manifest.json` freezes it. The generator reproduces it byte-for-byte: module netlists, cells, base netlists and program TCL (`tests/test_golden.py`).
 
@@ -20,10 +20,14 @@ python3 -m ubpgen generate ubpgen/configs/golden_r3_ubp3_u60.json   # all artifa
 python3 -m ubpgen verify   ubpgen/configs/golden_r3_ubp3_u60.json   # pre-PnR W@x + 2 mutation controls per program
 python3 -m ubpgen.golden   ubpgen/configs/golden_r3_ubp3_u60.json   # compare with the historical implementation
 python3 -m ubpgen base     ubpgen/configs/golden_r3_ubp3_u60.json   # ORFS flow of the frozen base (~20 min)
-python3 -m ubpgen program  ubpgen/configs/golden_r3_ubp3_u60.json --tags w1,w2   # route/STA/post-PnR/invariance
+python3 -m ubpgen program  ubpgen/configs/golden_r3_ubp3_u60.json --tags w1,w2   # route/STA/post-PnR/invariance/sign-off
+python3 -m ubpgen.pdk fetch                                  # once: the pinned ss / ff corner libraries (sha256-checked)
+python3 -m ubpgen signoff  ubpgen/configs/golden_r3_ubp3_u60.json --tags w1   # OpenRCX + tt/ss/ff STA of a routed program
+python3 -m ubpgen base     ubpgen/configs/w2_b60.json --prune   # Week 2: sized design; --prune drops intermediate ODBs
+python3 -m ubpgen.week2                                      # Week 2 decision table from the records of suite_week2
 python3 -m ubpgen summary  ubpgen/configs/golden_r3_ubp3_u60.json   # table + A x T
 python3 -m ubpgen all      CONFIG                            # everything, in order; non-zero exit on any failure
-python3 -m pytest -q ubpgen/tests                            # regression suite (~2 min; docker for most tests)
+python3 -m pytest -q ubpgen/tests                            # regression suite (~6 min; docker for most tests)
 python3 -m ubpgen.tables ubpgen/configs/suite_r3_tables.json --run   # the R3 tables from one command (resumable; hours)
 python3 -m ubpgen.snapshot ubpgen/configs/suite_r3_tables.json ubpgen/results/<dir>   # commit-sized provenance snapshot
 ```
@@ -52,7 +56,11 @@ Every verification and physical event appends a provenance-stamped record to `re
 | `access.taps_per_line` | 4 | K taps per line; rows split into K equal segments; K must divide m |
 | `layout.util` | 60 | ORFS core utilization (%) |
 | `layout.core_aspect_ratio`, `layout.core_margin` | 1, 2 | ORFS floorplan |
-| `spine_driver` | `as_synthesized` | `drive4`: every line (spine-root) driver upsized to drive 4, identically for every fabric (the fairness rule of §H) |
+| `spine_driver` | `as_synthesized` | `drive4`: every line (spine-root) driver upsized to drive 4, identically for every fabric (the Week-1 netlist-level option; not with `w2_load_rule`) |
+| `access.mode` | `r3` | `r3` = K taps per line on a base spine, R3 track-aligned placer; `r2` = one tap per line (K must be 1), the historical R2 structured placer |
+| `drivers.policy` | `historical` | `historical` = the validated abstract taps (R3 `LTAP2`: 2 sites with `buf_4` timing; R2 `LTAP`: 8 sites); `w2_load_rule` = Week 2: physical taps `LTAPB<k>` / `LTAPBW<k>` (2-site pad + `buf_<k>`), class chosen by the W-independent rule of `drivers.py`, tap A-pin `max_transition` = S enforced on the spines by the flow's `repair_design` |
+| `drivers.slew_target_ns` | 0.30 | S: the transition target (tt) of the rule |
+| `drivers.tap_class` | null | `w2_load_rule` only: the class; null = resolved at generation; if given it must equal the rule's choice |
 | `programs` | `[]` | `[{tag, seed, p0, same_rows?}]`: i.i.d. ternary with P(0) = p0. Or `[{tag, file}]`: a .npy m × n ternary matrix |
 | `flow.*` | see `params` | image id pin, NUM_CORES (determinism), DRT iteration cap (64), NO_DCE, nickname |
 | `verify.words`, `verify.seed` | 12, 3 | simulator stimulus |
@@ -66,7 +74,8 @@ Every verification and physical event appends a provenance-stamped record to `re
 - duplicate or ill-formed program tags;
 - `p0` outside [0, 1];
 - an unsupported activation width;
-- utilization outside 5–90%.
+- utilization outside 5–90%;
+- `access.mode = r2` with K ≠ 1, an unknown access mode or driver policy, a tap class without `w2_load_rule` or outside the candidates, `drive4` with `w2_load_rule`, S outside [0.05, 1.5] ns.
 
 ## Components
 
@@ -76,7 +85,12 @@ Every verification and physical event appends a provenance-stamped record to `re
 | `arch.py` | blocks, canonical patterns, line names, bands, the W → leaf selection rule, counts, latency |
 | `rtl.py` | which modules a configuration needs; Yosys synthesis (reused); spine-driver sizing |
 | `netlist.py` | the W-independent base top emitter; Yosys link (every instance kept); mapping |
-| `access.py` | R3: K taps per line (LTAP2), custom cells, W-blind placement plan + placer |
+| `access.py` | R3 (K taps per line) and R2 (one tap per line) access; tap masters; custom cells incl. the Week-2 physical taps and per-corner clones; W-blind placement plans + placers |
+| `drivers.py` | Week 2 `w2_load_rule`: the tap class from the worst-case W-independent load, and its re-check on the built base |
+| `pdk.py`, `liberty.py` | pinned ss / ff sign-off libraries (uncommitted cache); minimal Liberty reader |
+| `signoff.py` | merged base + program DEF, OpenRCX extraction, OpenSTA at tt / ss / ff (one session per corner) |
+| `accounting.py` | exact flow-sizing area: resized input cells + resizer-inserted cells, priced from Liberty |
+| `week2.py` | Week 2 per-design summary and the kill / pass decision (`configs/suite_week2.json`) |
 | `programs.py` | W generation / loading with provenance; program = per-segment nets + master swaps; TCL |
 | `orfs.py` | ORFS config / SDC; base build + freeze (sha256); program route (met4–met5) and STA; metrics |
 | `verify.py` | Yosys → AIGER → own simulators vs numpy; oracle and program mutation controls |

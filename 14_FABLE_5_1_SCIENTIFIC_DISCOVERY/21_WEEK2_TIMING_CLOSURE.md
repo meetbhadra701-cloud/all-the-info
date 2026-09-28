@@ -156,6 +156,73 @@ Week 2 replaces both with physical implementations. Every driver is instantiated
 
 ## 2. Implementation (filled during the week)
 
+### 2.1 Generator extensions (`ubpgen`, the only generation path)
+
+| Module | Week 2 addition |
+|---|---|
+| `config.py` | `access.mode` (`r3` / `r2`), `drivers.policy` (`historical` / `w2_load_rule`), `drivers.slew_target_ns`, `drivers.tap_class`; illegal combinations rejected (r2 with K ≠ 1, unknown policy, a tap class without the W2 policy, `drive4` with the W2 policy, S outside [0.05, 1.5] ns) |
+| `access.py` | R2 access (one tap per line, the validated `g2_struct` placer); the physical taps `LTAPB<k>` / `LTAPBW<k>` (LEF + Liberty for every candidate); per-corner clones of every custom cell |
+| `drivers.py` | the `w2_load_rule` tap-class rule (1.4), its record, and its re-check on the built geometry |
+| `pdk.py`, `liberty.py` | the pinned ss / ff libraries (sha256-verified download into an uncommitted cache); a minimal Liberty reader (areas, pin capacitances, NLDM tables) |
+| `signoff.py` + `resources/signoff_*.tcl` | merged base + program DEF, OpenRCX extraction, one OpenSTA session per corner (1.6) |
+| `accounting.py` | exact flow-sizing accounting: every final instance matched to the input netlist by flattened name and priced from Liberty |
+| `week2.py`, `configs/suite_week2.json` | the per-design summary and the decision (1.7) |
+| `golden.py` | the historical R2 builds (A at 75%, P2 at 67%) as golden references, alongside the R3 ones |
+
+The historical path is unchanged:
+- Every golden configuration defaults to `drivers.policy = historical`.
+- All 49 files of each Week 1 golden design keep their Week 1 sha256; generation only adds new cell files.
+- `access.mode = r2` reproduces the historical R2 builds of A and P2: byte-identical netlists and program TCL, semantically identical plan and flow configuration.
+
+**Regressions:** the suite now has 104 tests, all passing: the 59 existing ones plus 45 new. The new tests cover:
+- the driver-sizing rule is deterministic (same configuration → same choice and files);
+- W does not affect the choice (other programs → the same class, base netlist, plan and flow configuration);
+- illegal driver configurations fail;
+- an explicit tap class that differs from the rule's choice is refused, and the one permitted rebuild (`drivers.post_build_step = 1`) takes exactly the next class;
+- the golden unsized designs are unchanged;
+- the sized base differs from the unsized one only by the tap master;
+- the generalized Verilog programming equals the validated routine;
+- tap-cell area, `max_transition` and timing;
+- the corner clones, which reproduce the historical Liberty byte for byte at tt;
+- the DEF merge, the path parser and the area accounting.
+
+### 2.2 Tap classes chosen by the rule (resolved at generation, before any Week 2 build; now frozen in the configs)
+
+| Design | Worst tap: sinks, L_RSMT | C_wc | Candidates tried (transition at S = 0.30 ns input slew) | Class | Taps × sites |
+|---|---|---|---|---|---|
+| B60 | 16, 143 µm | 56.3 fF | buf_1 0.653, **buf_2 0.278** | buf_2 (`LTAPB2`) | 2,192 × 6 |
+| B52 | 16, 154 µm | 57.8 fF | buf_1 0.671, **buf_2 0.285** | buf_2 | 2,192 × 6 |
+| P2-R3 | 16, 154 µm | 57.9 fF | buf_1 0.673, **buf_2 0.285** | buf_2 | 512 × 6 |
+| A-R3 | 16, 166 µm | 59.6 fF | buf_1 0.693, **buf_2 0.293** | buf_2 | 512 × 6 |
+| A-R2 | 64, 681 µm | 241.2 fF | buf_1 2.75 … buf_8 0.383, **buf_12 0.276** | buf_12 (`LTAPBW12`) | 128 × 18 |
+| P2-R2 | 64, 633 µm | 234.0 fF | buf_1 2.67 … buf_8 0.372, **buf_12 0.268** | buf_12 | 128 × 18 |
+
+Tap area against the historical accounting:
+- B: 2,192 × 6 sites = 16,456 µm², against 5,485 µm² at 2 sites (+10,971 µm², +6.5% of B's cell area).
+- A-R2 and P2-R2: 128 × 18 sites = 2,883 µm², against 1,281 µm² for the historical 8-site LTAP (itself credited down to 320 µm²).
+- P2-R3: 512 × 6 sites = 3,844 µm², against 1,281 µm².
+
+### 2.3 Clarifications recorded before any Week 2 build
+
+1. **Area in A×T: the established floorplan instance area, unchanged.**
+   - "Taps and sizing included" (1.7) refers to the tap sizing: the physical taps are netlist cells, so their full area is in the floorplan instance area.
+   - The spine sizing is done by the unchanged flow *after* the floorplan (`repair_design` at global placement, 3_4 and 5_1), inside the fixed die (core = floorplan instance area / U). So it is not in the floorplan number. The die does not grow; the sizing cells take whitespace.
+   - **Physical cost, measured and reported, never ignored:** `accounting.py` prices every resized input cell and every resizer-inserted cell. For each design it reports:
+     - the flow sizing area;
+     - the same for its unsized counterpart;
+     - the increment, which is the Week 2 policy's spine-sizing cost;
+     - the effect on routability, congestion, DRT convergence and hold.
+   - **Sensitivities, reported and never decisive:**
+     - A_incr = A + the increment;
+     - A_phys = input-netlist area + all flow sizing;
+     - A_conv = every tap at 2 sites, the historical convention.
+   - **Why "all flow sizing" is not the decisive number.** The unsized historical builds already differ a lot in flow repair, all of it uncounted by the established metric:
+     - UBP3-R3: 1,244 µm² (60%) and 1,104 µm² (52%);
+     - A: 2,663 µm² (R2) and 2,635 µm² (R3);
+     - P2: 38,361 µm² (R3) and 36,805 µm² (R2), mostly timing-driven-placement buffers.
+   - Charging all of it would favour UBP by about 13% of P2's area. That would change the established metric in UBP's favour, so it is not done.
+2. **Critical-path reporting.** The sign-off path reports carry the driven net of every stage (`-fields … net`), so the critical driver and net are recorded, not only the cell. The measured slacks are unchanged: the historical B60 W1 re-run gives identical tt / ss / ff slacks.
+
 ## 3. Results
 
 ## 4. Decision
