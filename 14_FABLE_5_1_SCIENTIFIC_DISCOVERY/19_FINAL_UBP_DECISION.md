@@ -1,5 +1,10 @@
 # 19 — Final UBP decision (R3: the last layout revision)
 
+> **Superseded (2026-09-28). UBP is CLOSED: THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST.**
+> - The verdict below and the §H plan were overtaken by the pre-registered Week 2 test, which measured R = 1.473 < 1.5 at 60% (`21_WEEK2_TIMING_CLOSURE.md`).
+> - The canonical account and the list of withdrawn claims, including "robust at 60%", are in `22_UBP_PROJECT_CLOSEOUT.md` (§8).
+> - This file is kept unchanged as the record of the R3 decision.
+
 **Verdict: PHYSICALLY VALIDATED — NOVELTY PROVISIONAL**
 
 **Why not THESIS KILLED:** every pre-registered R3 criterion passed at the decisive 52% point, and again at 60%.

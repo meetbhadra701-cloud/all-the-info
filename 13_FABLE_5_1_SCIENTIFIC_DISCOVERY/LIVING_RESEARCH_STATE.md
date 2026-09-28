@@ -1,5 +1,7 @@
 # Living research state (working memory; survives context compaction)
 
+> **Historical (2026-09-28): UBP is CLOSED.** See `../14_FABLE_5_1_SCIENTIFIC_DISCOVERY/22_UBP_PROJECT_CLOSEOUT.md`.
+
 Labels: **OBSERVED** (run/read here) · **ARCHIVE** (established by an earlier wave's primary evidence) · **PAPER** · **INFERRED** · **UNVERIFIED** · **HYPOTHESIS** (proposed, not shown).
 
 ## Objective (the researcher's request, unchanged)

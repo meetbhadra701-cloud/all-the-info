@@ -1,5 +1,9 @@
 # 13_FABLE_5_1_SCIENTIFIC_DISCOVERY — start here
 
+> **UBP, proposed here and developed in `../14_FABLE_5_1_SCIENTIFIC_DISCOVERY/`, is CLOSED (2026-09-28): THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST.**
+> - This folder is the historical origin.
+> - Current status: `../14_FABLE_5_1_SCIENTIFIC_DISCOVERY/22_UBP_PROJECT_CLOSEOUT.md`.
+
 **Session date:** 2026-09-26. Investigator: Claude (single-threaded, no subagents, as requested).
 
 **Numbering note:** the archive already contains `13_WAVE_11_SCIENTIFIC_HYPOTHESIS_EVOLUTION/`. This folder uses the name the researcher requested; the two are unrelated waves.

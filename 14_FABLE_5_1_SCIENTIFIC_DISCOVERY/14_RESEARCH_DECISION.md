@@ -1,5 +1,9 @@
 # 14 — Research decision
 
+> **Superseded (2026-09-28). UBP is CLOSED: THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST** (R = 1.473 < 1.5; `21_WEEK2_TIMING_CLOSURE.md`).
+> - The classifications below are historical.
+> - Current status and withdrawn claims: `22_UBP_PROJECT_CLOSEOUT.md`.
+
 ## Current classification (final UBP decision run, R3, 2026-09-27): **PHYSICALLY VALIDATED — NOVELTY PROVISIONAL**
 
 The final package (A–J) is in `19_FINAL_UBP_DECISION.md`. The R3 physics is in 16 §6, and the pre-registration, outcome and deviation log in 09 (section R3).

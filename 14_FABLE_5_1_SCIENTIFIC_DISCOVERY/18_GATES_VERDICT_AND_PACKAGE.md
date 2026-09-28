@@ -1,5 +1,7 @@
 # 18 — Gates verdict and research-development package (Wave 14, gates G1–G3)
 
+> **UBP is CLOSED (2026-09-28): THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST.** See `22_UBP_PROJECT_CLOSEOUT.md`. Both this file and 19 are historical.
+
 > **Superseded by `19_FINAL_UBP_DECISION.md` (final decision run, R3):**
 > - The key unresolved gate below (G2 closure) was run as the pre-registered R3 and **passed** at 52% and 60%.
 > - The class is now **PHYSICALLY VALIDATED — NOVELTY PROVISIONAL**.

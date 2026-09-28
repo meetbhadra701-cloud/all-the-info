@@ -1,5 +1,11 @@
 # RESEARCH_STATE — Wave 14 + gates G1–G3 + final UBP decision run (R3) + development Weeks 1–2 (current)
 
+> **CURRENT STATUS (2026-09-28): UBP IS CLOSED — THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST** (R = 1.473 < 1.5 at 60%, conservative corner).
+> - The state below is the record at the end of Week 2. Its "unresolved questions" and "next action" are not pursued.
+> - Closeout: `22_UBP_PROJECT_CLOSEOUT.md`.
+> - Reusable assets: `23_REUSABLE_RESEARCH_ASSETS.md`.
+> - Lessons: `24_LESSONS_FOR_NEXT_THESIS.md`.
+
 **Labels:**
 - **HIST-OBS:** previous experiment.
 - **HIST-INT:** previous reasoning.
@@ -153,3 +159,12 @@
 
 - **Next:** the paper-scale plan in 19 §H. It starts with the parametric generator and line-driver closure, and needs the researcher's go-ahead.
 - **Pushes:** the R3 / final-decision work was pushed to `claude/compassionate-edison-91b73q` under the decision run's explicit authorization, with no pull request and no merge. Any later push needs new authorization.
+
+## Closeout (2026-09-28, transition run)
+
+The researcher decided to close UBP permanently.
+- **Written:** 22 (closeout), 23 (reusable assets), 24 (lessons).
+- **Extracted:** the generic harness, `SUPPORTING_ARTIFACTS/research_harness/`, with equivalence tests. `ubpgen/` itself is unchanged.
+- **Added:** superseded notices on 12, 13, 14, 18 and 19.
+- **Pushed** to `claude/compassionate-edison-91b73q` under the transition run's authorization, with no pull request and no merge.
+- **Final state:** closed. Nothing further is planned for UBP.

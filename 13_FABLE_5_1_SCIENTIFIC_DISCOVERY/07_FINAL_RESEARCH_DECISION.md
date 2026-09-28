@@ -1,5 +1,7 @@
 # 07 — Final research decision
 
+> **Superseded (2026-09-28).** The thesis below was developed in `../14_FABLE_5_1_SCIENTIFIC_DISCOVERY/` and closed there: THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST (`22_UBP_PROJECT_CLOSEOUT.md`). This classification is historical.
+
 ## Classification
 
 **RESEARCH THESIS READY FOR INITIAL PROTOTYPE, scoped to regime (V) (metal/via-programmable, weight-independent base layers) and conditional on a one-day full-text novelty check that this environment could not perform.**

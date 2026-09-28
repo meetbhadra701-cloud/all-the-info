@@ -1,5 +1,7 @@
 # 13 — Final meta-review (mandatory)
 
+> **UBP is CLOSED (2026-09-28): THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST.** See `22_UBP_PROJECT_CLOSEOUT.md` and the retrospective `24_LESSONS_FOR_NEXT_THESIS.md`.
+
 > **Post-gate status (2026-09-27):** this review predates gates G1–G3. The gate results and the current class (**PROMISING BUT KEY GATE UNRESOLVED**) are in `18_GATES_VERDICT_AND_PACKAGE.md`.
 
 This is an independent review of the whole Wave-14 investigation, written after all decisive runs.

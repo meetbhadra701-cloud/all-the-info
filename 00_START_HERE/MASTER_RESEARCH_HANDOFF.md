@@ -1,5 +1,22 @@
 # Master Research Handoff
 
+## Current status (2026-09-28)
+
+**UBP IS CLOSED: THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST.**
+
+UBP was the universal block-pattern fabric for weight-independent inference silicon (Waves 13–14 "Fable"; `13_FABLE_5_1_SCIENTIFIC_DISCOVERY/` → `14_FABLE_5_1_SCIENTIFIC_DISCOVERY/`). At its pre-registered 60% operating point, fully physically sized and signed off at three corners, its conservative A×T advantage over the strongest baseline was 1.473×, below the required 1.5×. It is not to be rescued or restarted.
+
+| Read | For |
+|---|---|
+| `14_FABLE_5_1_SCIENTIFIC_DISCOVERY/22_UBP_PROJECT_CLOSEOUT.md` | The canonical closeout (what worked, why it was killed, withdrawn claims, claims that remain true) |
+| `14_FABLE_5_1_SCIENTIFIC_DISCOVERY/21_WEEK2_TIMING_CLOSURE.md` | The decisive experiment |
+| `14_FABLE_5_1_SCIENTIFIC_DISCOVERY/23_REUSABLE_RESEARCH_ASSETS.md` | Reusable infrastructure vs UBP-specific code |
+| `14_FABLE_5_1_SCIENTIFIC_DISCOVERY/24_LESSONS_FOR_NEXT_THESIS.md` | Lessons with evidence |
+| `SUPPORTING_ARTIFACTS/research_harness/` | The extracted, tested research harness (config → verify → mutation control → baseline → physical flow → extraction → multi-corner timing → decision) |
+| `SUPPORTING_ARTIFACTS/NEXT_THESIS_RESEARCH_RULES.md` | Twelve rules for the next thesis |
+
+Sections 1–11 below predate the Fable waves and are kept as written. For Waves 13–14, the folder documents above are authoritative.
+
 ## Evidence status
 
 This package is a curated local recovery, not a complete computer backup. Claims labeled **direct artifact** are supported by files copied into this package. Claims labeled **transcript-derived** come from final-session messages in a locally accessible Codex backup database; the original reports were not recovered. Claims labeled **interpretation** are synthesis across those records and should be rechecked against primary artifacts when available.
@@ -83,6 +100,8 @@ Directly recovered and completed: MUXWISE Experiments 1–4 as documented; the Y
 **Resolved as engineering evidence:** MUXWISE arithmetic-tree defect and `-no-fma` workaround; PassWitness implementation/reduction evidence; several Wave 5 mapper and electrical seams.
 
 **Killed or redefined:** MOSAIC, HBRoute, DITSpec-HLS in its original form, DeltaRTL, ArchWitness, GhostForge as originally framed, fixed-format FPExtrema hardness, and generic retiming/certificate/liveness formulations.
+
+**Closed (2026-09-28):** UBP, the weight-independent universal block-pattern fabric (Waves 13–14). It was killed by its pre-registered Week 2 physical-fairness test; see the current-status section at the top.
 
 **Missing/uncertain:** explicit Wave 8 and Wave 9 research packages; original Wave 3–6 reports; some candidate dossiers; clean source/build provenance for the Yosys defect; and material that may remain on another computer or account.
 

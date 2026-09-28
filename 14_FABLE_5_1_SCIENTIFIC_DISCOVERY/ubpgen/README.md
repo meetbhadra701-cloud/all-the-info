@@ -1,5 +1,9 @@
 # ubpgen: parametric generator for the weight-independent UBP fabric
 
+> **Status (2026-09-28): UBP is CLOSED** (`../22_UBP_PROJECT_CLOSEOUT.md`).
+> - `ubpgen` is kept unchanged as the reproducible record of Weeks 1–2.
+> - New work should use the extracted, architecture-free harness in `../../SUPPORTING_ARTIFACTS/research_harness/`.
+
 `ubpgen` builds, from one JSON configuration, every artifact needed to verify and physically implement a weight-independent fixed-base matrix–vector fabric:
 
 - the bit-serial UBP-g fabric (B);

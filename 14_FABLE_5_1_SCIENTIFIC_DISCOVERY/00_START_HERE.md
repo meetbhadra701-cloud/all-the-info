@@ -1,6 +1,22 @@
 # 00 — START HERE (Wave 14)
 
-## Decision
+## CURRENT STATUS (2026-09-28): UBP IS CLOSED
+
+**THESIS CLOSED — KILLED BY PREREGISTERED WEEK 2 PHYSICAL-FAIRNESS TEST.**
+- Physically sized UBP3-R3 at 60% reached A×T ≈ 17.64 M at the conservative corner, against 25.99 M for the strongest sized baseline (A-R2).
+- R = **1.473**, below the pre-registered 1.5.
+- No Week 3, no rescue, no "UBP v2".
+
+| Read | For |
+|---|---|
+| **`22_UBP_PROJECT_CLOSEOUT.md`** | The canonical closeout: thesis, mechanism, what worked, history, the decisive experiment, why it was killed, withdrawn claims, claims that remain true |
+| `21_WEEK2_TIMING_CLOSURE.md` | The decisive experiment: pre-registration, dev log, results |
+| `23_REUSABLE_RESEARCH_ASSETS.md` | What is UBP-specific vs reusable; the extracted harness `../SUPPORTING_ARTIFACTS/research_harness/` |
+| `24_LESSONS_FOR_NEXT_THESIS.md` | Lessons, with their UBP evidence; the rules are in `../SUPPORTING_ARTIFACTS/NEXT_THESIS_RESEARCH_RULES.md` |
+
+Everything below this section is the historical record, kept as it was written. The "PHYSICALLY VALIDATED — NOVELTY PROVISIONAL" decision is superseded.
+
+## Decision (historical, superseded by the status above)
 
 **PHYSICALLY VALIDATED — NOVELTY PROVISIONAL** (the final UBP decision run, R3, 2026-09-27). See **19**.
 
