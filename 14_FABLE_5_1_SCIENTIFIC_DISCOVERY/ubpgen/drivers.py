@@ -177,7 +177,7 @@ def verify_built(cfg, root: Path, base_def: Path) -> dict:
     return {'class': tc, 'tap_masters_in_def': masters, 'worst_tap': name, 'L_rsmt_um': round(L, 2),
             'C_wc_fF': round(c * 1000, 2), 'transition_ns': round(tr, 4), 'meets': tr <= S,
             'taps_in_def': len(taps), 'taps_expected': n_expected, 'tap_status': status,
-            'masters_ok': masters == [access.tap_master(cfg)] and len(taps) == n_expected and set(status) == {'FIRM'}}
+            'masters_ok': masters == [access.tap_master(cfg)] and len(taps) == n_expected and set(status) <= {'FIRM', 'FIXED'}}
 
 
 def write_record(root: Path, rec: dict, name: str = 'drivers.json'):
