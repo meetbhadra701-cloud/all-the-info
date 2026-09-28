@@ -174,7 +174,7 @@ The historical path is unchanged:
 - All 49 files of each Week 1 golden design keep their Week 1 sha256; generation only adds new cell files.
 - `access.mode = r2` reproduces the historical R2 builds of A and P2: byte-identical netlists and program TCL, semantically identical plan and flow configuration.
 
-**Regressions:** the suite now has 104 tests, all passing: the 59 existing ones plus 45 new. The new tests cover:
+**Regressions:** the suite now has 106 tests, all passing at the end of the week. That is the 59 existing ones plus 47 new; the new count includes the config-load cases for the added configurations. The new tests cover:
 - the driver-sizing rule is deterministic (same configuration → same choice and files);
 - W does not affect the choice (other programs → the same class, base netlist, plan and flow configuration);
 - illegal driver configurations fail;
@@ -255,6 +255,197 @@ Tap area against the historical accounting:
 - The A-R2 base, built at the same commit, went the same way: 0 DRC; tap rule met (worst tap `lt_ln36`, 684.9 µm, 241.7 fF, 0.276 ns); 128 `LTAPBW12` FIXED. It was re-checked with an identical sha256 (`1d9398c9…`).
 - Every later design was built after `dc081b6`.
 
+### 2.5 Two further notes on the implementation
+
+- **Legacy placement STA.** The validated program-routing script (reused unmodified) also runs a placement-parasitic STA. It reads only the historical tap libraries, so for W2 designs it cannot time through the taps. Its numbers are marked "n/a" for W2 designs and are used nowhere; every Week 2 timing number comes from the extracted sign-off, which reads every library.
+- **Historical rows.** The unsized designs are re-timed by the same sign-off:
+  - UBP3-R3 60% / 52% and P2-R3 67%: the Week 1 `ubpgen` reproductions. P2-R3's missing W2, W3 and W5 were routed here, with 0 DRC; all checks pass.
+  - A-R3 75%: the Week 1 `ubpgen` point.
+  - A-R2 75% (W1, W4, W5) and P2-R2 67% (W4): the historical G2 builds. These are the only programs routed historically. Their frozen base DEF/SDC and routed program DEFs are copied, unmodified, into the generated golden-R2 run directories, whose netlists are byte-identical to the historical ones.
+
 ## 3. Results
 
+Every number here is either **MEASURED** (DRC, area, correctness) or **EXTRACTED** (timing: OpenRCX on the merged base + program, then OpenSTA at tt / ss / ff). The tap rule's pre-build estimates (2.2) are MODELED. Machine-generated tables: `ubpgen/results/week2/week2.md`; per-design records and sign-off reports: `ubpgen/results/week2/<design>/`.
+
+### 3.1 What was physically built
+
+| Design (`w2_load_rule`) | U | Taps (class × count) | Spine sizing by the flow: violating nets at placement → repeaters left in the frozen base | Cell utilization: floorplan → placement → final | Base DRC (DRT iterations) | Tap rule on the built geometry |
+|---|---|---|---|---|---|---|
+| **B60** UBP3-R3 | 60% | `LTAPB2` × 2,192 | 551 nets → 609 repeaters, 4,835 µm² (unsized: 58) | 60.4 → 64.1 → 69.6% | 0 (13) | worst tap 145.3 µm, 56.6 fF, 0.279 ns |
+| **A-R2** | 75% | `LTAPBW12` × 128 | 80 nets → 293 repeaters, 2,625 µm² (unsized: 219) | 75.4 → 77.9 → 83.9% | 0 (14) | 684.9 µm, 241.7 fF, 0.276 ns |
+| P2-R3 | 67% | `LTAPB2` × 512 | — | 67 → 77 → 83% | **not routable**: global routing congested (GRT-0116) | — |
+| **P2-R3 fallback** | 60% | `LTAPB2` × 512 | 136 nets → 3,943 resizer cells in total (P2 repairs its row logic heavily either way; unsized 67%: 3,560) | 60.3 → 68.7 → 75.8% | 0 (19) | 166.1 µm, 59.7 fF, 0.294 ns |
+| P2-R2 | 67% | `LTAPBW12` × 128 | — | 67 → 76 → 82% | **not routable**: global routing congested (GRT-0232) | — |
+| **P2-R2 fallback** | 60% | `LTAPBW12` × 128 | 72 + 167 nets → 3,760 resizer cells in total (unsized 67%: 3,512) | 60.5 → 68.5 → 76.0% | 0 (16) | 671.3 µm, 239.7 fF, 0.274 ns |
+| B52 | 52% | `LTAPB2` × 2,192 | 551 nets → 817 repeaters, 6,366 µm² (unsized: 51) | 52.3 → 56.2 → 61.1% | 0 (9) | 153.9 µm, 57.9 fF, 0.285 ns |
+| A-R3 | 75% | `LTAPB2` × 512 | 130 nets → 492 repeaters, 4,394 µm² (unsized: 222) | 75.5 → 78.4 → 84.5% | 0 (9) | 168.3 µm, 60.0 fF, 0.295 ns |
+
+For comparison, the unsized bases' timing-driven placement repaired only a handful of nets in its first pass (B60: 3 nets, 29 buffers; P2-R3: 8). Every tap stayed `FIXED` with the configured master. Every base met the rule on its built geometry, so the permitted rebuild was never used.
+
+### 3.2 Programs
+
+Every design, W1–W5:
+- 0 DRT violations (64-iteration cap);
+- frozen-base invariance;
+- post-PnR netlist = numpy W@x, oracle mutation detected;
+- pre-PnR W@x, oracle and program mutations detected.
+
+| Design | DRT iterations W1–W5 | Correct |
+|---|---|---|
+| B60 sized | 14, 13, 6, 13, 1 | yes |
+| B60 unsized (historical) | 13, 13, 7, 13, 1 | yes |
+| A-R2 sized | 18, 14, 9, 14, 7 | yes |
+| P2-R3 60% sized | 9, 9, 8, 13, 2 | yes |
+| P2-R3 67% unsized (historical) | 14, 9, 7, 14, 3 | yes |
+| P2-R2 60% sized | 13, 13, 13, 14, 5 | yes |
+| B52 sized | 16, 15, 7, 13, 1 | yes |
+| B52 unsized (historical) | 14, 13, 7, 14, 1 | yes |
+| A-R3 sized | 13, 9, 8, 14, 1 | yes |
+
+### 3.3 Extracted sign-off, three corners
+
+Worst program per corner. T = 3.0 ns − setup WNS. "Prog" = worst setup slack through a programmable net.
+
+| Design | Corner | Worst program | T (ns) | Hold WNS, min over W1–W5 | Critical path | Through programmable wiring | Largest stage (cell, net, delay) | Prog slack | Tap-input transition |
+|---|---|---|---|---|---|---|---|---|---|
+| **B60 sized** | tt | W3 | 2.134 | +0.208 | `stt3_ff` → row40 tree | **no** (control broadcast) | dfxtp_4, `st_tree`, 0.819 ns | +0.98 (W5) | 0.303 ns |
+| | ss | W4 | **4.180** | +0.605 | `stt3_ff` → row40 tree | **no** | dfxtp_4, `st_tree`, 1.471 ns | −0.91 (W5) | 0.479 |
+| | ff | W1 | 1.403 | +0.096 | row34 → output `y[34]` | no | output buffer, 0.509 ns | +1.72 | 0.229 |
+| B60 unsized (hist.) | tt | W2 | 2.157 | +0.287 | spine `ng16_4` → tap → site → row41 | **yes** | dfxtp_1 spine flop, `pn16_4`, 1.195 ns | = critical | 1.321 |
+| | ss | W2 | 4.213 | +0.622 | same | yes | dfxtp_1, `pn16_4`, 2.061 ns | = critical | 2.090 |
+| | ff | W4 | 1.367 | +0.149 | output path | no | output buffer | +1.64 | 0.999 |
+| **A-R2 sized** | tt | W2 | 2.184 | +0.073 | row24 → output `y[24]` | no | output buffer, 0.775 ns | +1.43 (W5) | 0.212 |
+| | ss | W2 | **3.888** | +0.341 | `stt1_ff` → row59 tree | **no** (control broadcast) | buf_4 (placement buffer), 0.964 ns | −0.10 (W5) | 0.335 |
+| | ff | W2 | 1.504 | +0.006 | output path | no | output buffer, 0.539 ns | +2.02 | 0.160 |
+| A-R2 unsized (hist., W1/W4/W5) | ss | W1 | 4.208 | +0.307 | `stt1_ff` → row5 tree | no | dfxtp_4, `st_tree`, 1.322 ns | −0.89 (W5) | 0.748 |
+| | ff | W1 | 1.481 | **−0.0001** | output path | no | | | |
+| **P2-R3 60% sized** | tt | W4 | 6.040 | +0.345 | spine → tap → site → row popcount | yes | nor3_2, `g40_6[3]` (row logic), 1.32 ns | = critical | 0.274 |
+| | ss | W4 | 11.245 | +0.685 | same | yes | nor3_1, `g48_6[3]` (row logic), 2.27 ns | = critical | 0.516 |
+| | ff | W4 | 3.801 | +0.218 | same | yes | nor3_2, row logic, 0.92 ns | = critical | 0.185 |
+| P2-R3 67% unsized (hist.) | tt / ss / ff | W4 | 6.927 / 13.097 / 4.440 | +0.024 / +0.221 / **−0.023** | spine → tap → row popcount | yes | row logic 1.27 / 2.32 ns | | 1.97 / 3.09 / 1.48 |
+| **P2-R2 60% sized** | tt / ss / ff | W4 | 5.455 / 10.440 / 3.453 | +0.002 / +0.250 / **−0.038** | spine → tap → site → row popcount | yes | row logic (nor3_2 / o21ai_1, `g48_6[*]`): 1.29 / 2.31 / 0.90 ns | = critical | 0.254 / 0.401 / 0.192 |
+| **B52 sized** | tt | W1 | 2.210 | +0.320 | `stt3_ff` → row47 tree | **no** (control broadcast) | dfxtp_4, `st_tree`, 0.913 ns | +1.11 | 0.307 |
+| | ss | W1 | 4.398 | +0.651 | same | **no** | dfxtp_4, `st_tree`, 1.635 ns | −0.67 | 0.486 |
+| | ff | W4 | 1.453 | +0.166 | output path | no | output buffer, 0.553 ns | +1.80 | 0.231 |
+| **A-R3 sized** | tt / ss / ff | W4 | 2.219 / 4.380 / 1.485 | +0.092 / +0.341 / +0.012 | `stt1_ff` → row8 tree (tt, ss); output path (ff) | no | dfxtp_4, `st_tree`: 0.922 / 1.631 ns | +1.25 / −0.44 / +1.90 | 0.174 / 0.276 / 0.132 |
+
+**Worst-case tap load check (1.4).** W5 connects every used line to every site of every segment. Its routed, extracted transitions at tt, against S = 0.30 ns:
+
+| Design | Site inputs (the tap's far sinks) | Tap inputs (spine) |
+|---|---|---|
+| B60 | 0.283 ns | 0.298 ns |
+| A-R2 | 0.266 ns | 0.212 ns |
+| P2-R3 60% | 0.302 ns | 0.272 ns |
+| P2-R2 60% | 0.283 ns | 0.254 ns |
+| B52 | 0.285 ns | 0.305 ns |
+| A-R3 | 0.288 ns | 0.174 ns |
+
+- The MODELED rule and the EXTRACTED result agree to within 3%. P2-R3's sites are 2 ps over S, and B52's tap inputs 5 ps; both are reported, not adjusted.
+- For comparison, the unsized historical builds:
+  - B60: 0.168 ns at the sites (the idealized `LTAP2` carries `buf_4` timing in 2 sites), but 1.31 ns at its tap inputs;
+  - A-R2: 0.634 ns at the sites.
+
+### 3.4 Result table (60%; the conservative comparison decides)
+
+A×T = floorplan instance area / U × cycles per word × T; T = the worst of W1–W5 at ss. "Relative to UBP" = A×T / A×T(B60 sized).
+
+| Design | U | Driver policy | Area (µm²) | Worst-program period (tt) | Worst-corner period (ss) | A×T | Relative to UBP | DRC | Correct |
+|---|---|---|---|---|---|---|---|---|---|
+| UBP3-R3, unsized **(historical)** | 60% | historical: LTAP2 (2 sites, buf_4 timing); spines as synthesized | 169,952 | 2.157 ns (W2) | 4.213 ns (W2) | 16.71 M | 0.95 | 0 | yes |
+| **UBP3-R3, physically sized (new)** | 60% | `w2_load_rule`: buf_2 taps × 2,192; spines by `repair_design` | 180,922 | 2.134 ns (W3) | 4.180 ns (W4) | **17.64 M** | 1.00 | 0 | yes |
+| **A-R2, physically sized (new): the strongest physical baseline** | 75% | `w2_load_rule`: buf_12 taps × 128 | 358,018 | 2.184 ns (W2) | 3.888 ns (W2) | **25.99 M** | **1.47** | 0 | yes |
+| P2-R3, unsized **(historical)** | 67% | historical | 274,662 | 6.927 ns (W4) | 13.097 ns (W4) | 42.95 M | 2.43 | 0 | yes; ff hold −0.023 ns |
+| **P2-R3, physically sized (new)** | 60% (67% not routable) | `w2_load_rule`: buf_2 taps × 512 | 277,225 | 6.040 ns (W4) | 11.245 ns (W4) | 41.57 M | 2.36 | 0 | yes |
+| P2-R2, physically sized (new) | 60% (67% not routable) | `w2_load_rule`: buf_12 taps × 128 | 276,264 | 5.455 ns (W4) | 10.440 ns (W4) | 38.46 M | 2.18 | 0 | yes; **ff hold −0.038 ns** |
+| A-R3, physically sized (new) | 75% | `w2_load_rule`: buf_2 taps × 512 | 358,979 | 2.219 ns (W4) | 4.380 ns (W4) | 29.35 M | 1.66 | 0 | yes |
+
+**R (conservative) = 25.99 M / 17.64 M = 1.473**, set by A-R2. The other competitors are weaker: A-R3 1.66, P2-R2 2.18, P2-R3 2.36. Every pre-registered competitor was built, and each was physically sized.
+
+### 3.5 Why the conservative ratio is 1.47
+
+1. **The driver-timing objection is closed.** Sizing moved UBP's programmable paths off the critical path at every corner:
+   - tap-input transition 1.32 → 0.30 ns (tt);
+   - programmable-path slack at ss −1.21 → −0.42 to −0.91 ns;
+   - at tt, +0.98 ns or more.
+2. **The ss period of both B60 and A-R2 is now set by the same W-independent control broadcast, not by programmable wiring.**
+   - This is the reduction trees' start strobe `st_tree`: one flop to the first tree stage of all 64 rows.
+   - The pre-registered rule sizes line and tap drivers only, for every fabric; this net is left to the unchanged flow, which closes timing at tt.
+   - B60: the flop, flow-upsized to `dfxtp_4`, drives 25 loads and 256 fF directly, which costs 1.471 ns at ss. **T_ss = 4.180 ns.**
+   - A-R2: the flow buffered the same net earlier (the flop drives 10 loads, 59 fF). **T_ss = 3.888 ns.**
+3. **The flow's handling of this net shifts about ±0.3 ns with placement.**
+   - The same `stt3_ff` path, timed on the same program (W4):
+     - unsized B60: T = 3.893 ns at ss (then masked by the 4.11 ns spine path);
+     - sized B60: T = 4.180 ns;
+     - tt slack +1.035 → +0.867 ns.
+   - A-R2 moved the other way: 4.208 ns unsized, 3.888 ns sized.
+   - B60 needed a repeater on every spine: 551 violating nets at placement, 609 repeaters left in the frozen base, utilization 60.4 → 64.1% after placement. That changed its placement.
+   - This is part of the physical cost of sizing: measured, not modeled.
+4. **Area.** Physical taps cost B 2,192 × 4 extra sites = +10,971 µm² (+6.5% of its floorplan area), against +0.7% for A-R2 (128 taps).
+   - Under the historical 2-site convention (a sensitivity, never decisive) the conservative R would be 1.557.
+5. **Together.** R = (A-R2 area / 0.75) / (B60 area / 0.60) × T_A / T_B = 1.583 × (3.888 / 4.180) = **1.473**.
+
+### 3.6 Physical cost of sizing
+
+- **Area.** Tap buffers are in the floorplan instance area: B +6.5%, A-R2 +0.7%, P2-R3 +0.9%. Flow sizing on top (spine buffers and resizes), each against its unsized counterpart:
+  - B60: 5,318 µm² (vs 1,244), increment **+4,074 µm²**;
+  - A-R2: 3,080 µm² (vs 2,663), increment +418 µm²;
+  - P2-R3 (60%): 42,463 µm² (vs 38,361 at 67% unsized), +4,103 µm²;
+  - P2-R2 (60%): 40,480 µm² (vs 36,805), +3,675 µm²;
+  - B52: 6,849 µm² (vs 1,104), +5,746 µm²;
+  - A-R3: 4,850 µm² (vs 2,635), +2,215 µm².
+- **Routability.**
+  - P2 at its established 67% is **no longer routable** in either access mode: its cells grow from 67% to 82–83% utilization. The pre-registered 60% fallback routes cleanly.
+  - B60 and A-R2 route their bases with 0 DRC in 13–14 DRT iterations (unsized B60: 10), with final cell utilization 69.6% (unsized 68.5%) and 83.9%.
+- **DRT convergence (programs).** Unchanged within noise (above).
+- **Hold.**
+  - Every sized design holds ≥ 0 at every corner, except P2-R2 at ff: −0.038 ns, an input-port path. As pre-registered, it is reported as a failure of that competitor at ff and kept in the competitor set.
+  - The tightest passing one is A-R2 at ff: +0.006 ns.
+  - Three unsized historical designs fail hold at ff by 0.0001–0.023 ns: A-R2, A-R3 and P2-R3. These are input-port paths closed at tt only.
+
+### 3.7 Ablation: unsized historical vs physically sized (conservative ss period, worst program)
+
+| Fabric | Unsized T_ss | Sized T_ss | What limits the sized design at ss |
+|---|---|---|---|
+| UBP3-R3 60% | 4.213 ns (spine) | 4.180 ns | control broadcast |
+| A-R2 75% | 4.208 ns (control) | 3.888 ns | control broadcast |
+| P2-R3 | 13.097 ns (67%) | 11.245 ns (60%) | its own row popcount logic |
+| P2-R2 | 10.395 ns (67%, W4 only) | 10.440 ns (60%) | its own row popcount logic |
+| UBP3-R3 52% | 4.042 ns (spine W5; control path 3.965 ns) | 4.398 ns | control broadcast |
+| A-R3 75% | 4.360 ns (control) | 4.380 ns | control broadcast |
+
+### 3.8 Sensitivities (reported, not decisive)
+
+| Variant | R |
+|---|---|
+| **Conservative, decisive** (ss, worst program, floorplan area) | **1.473** |
+| Nominal: tt, W1 (the established rule) | 1.621 |
+| Nominal: tt, worst program | 1.621 |
+| ff, worst program | 1.680 (A-R3; A-R2 1.697) |
+| Conservative + flow-sizing increment (A_incr) | 1.442 |
+| Conservative + all flow sizing (A_phys) | 1.445 |
+| Conservative, historical 2-site tap convention (A_conv) | 1.557 |
+| 52% (B52 vs the same competitors), conservative / nominal | 1.213 / 1.355 |
+
 ## 4. Decision
+
+**Pre-registered rule (1.7):** R = min over the physically sized competitors of A×T_cons / A×T_cons(B60); R < 1.5 → KILL.
+
+- **B60 is valid:** 5 / 5 programs correct, 0 DRC, hold ≥ 0 at tt / ss / ff.
+- **A×T_cons(B60)** = 180,922 µm² / 0.60 × 14 × 4.180 ns = **17.64 M**.
+- **Strongest competitor: A-R2**, physically sized at 75%: 358,018 µm² / 0.75 × 14 × 3.888 ns = **25.99 M**.
+- **R = 1.473 < 1.5.**
+
+# WEEK 2 KILL CONDITION TRIGGERED
+
+**Why, exactly:**
+1. The driver objection itself is closed: UBP's programmable paths are no longer critical at any corner (3.5).
+2. At the conservative corner, both B60 and A-R2 are limited by the same W-independent control broadcast, the tree-start strobe. The pre-registered rule does not size it, for any fabric, and the tt-closing flow buffered it worse in B60: 4.180 vs 3.888 ns. Before sizing, this path was 3.893 ns in B60, masked by the spine; sizing's placement changes moved it by +0.29 ns.
+3. Physical taps cost B +6.5% area (2,192 taps), against +0.7% for A.
+4. Together: 1.583 (area / U) × 0.930 (T) = 1.473.
+
+**What the kill is not:**
+- **Not a failure of programmability, correctness or routability at 60%.** B60 routes, and every program is exact and invariant.
+- **Not a nominal failure:** at tt the ratio is 1.62.
+- **It holds under every area accounting except the historical 2-site tap convention** (1.557), which the pre-registration excludes from the decision.
+
+**Consequence (per the Week 2 instructions):** no new architecture and no rescue in this run; Week 3 is not started. The 52% point (secondary) is weaker still: 1.21 conservative, 1.36 nominal. Its larger core lengthens the same control broadcast (T_ss 4.40 ns).

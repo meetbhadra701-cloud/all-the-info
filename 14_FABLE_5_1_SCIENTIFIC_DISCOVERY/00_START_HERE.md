@@ -40,6 +40,19 @@
 - Its 12 routed programs match the historical records with 0 differences.
 - One command rebuilds the R3 tables: `python3 -m ubpgen.tables ubpgen/configs/suite_r3_tables.json --run`.
 
+**Week 2 (§H): WEEK 2 KILL CONDITION TRIGGERED** (2026-09-28). See **`21_WEEK2_TIMING_CLOSURE.md`**.
+- **What was built.** Every design was rebuilt with physically sized drivers, under a pre-registered W-independent rule applied identically to all fabrics:
+  - physical tap buffers: 2-site pad + buf_k, area counted;
+  - spine drivers sized by the flow's own `repair_design`.
+- **Sign-off:** OpenRCX-extracted, merged base + program, at tt / ss / ff.
+- **What passed:** UBP3-R3 at 60% routes and is exact for all five programs; its driver-timing objection is closed (its programmable paths are no longer critical at any corner).
+- **The ratio.** Against the strongest physically sized baseline (A-R2, 75%), R is 1.62 at tt but **1.47 at the conservative corner** (ss, worst program), below the 1.5 kill line.
+- **The cause** is the combination of two things:
+  - UBP pays +6.5% area for 2,192 physical taps;
+  - at ss both designs are limited by the same unsized, W-independent tree-start control broadcast, which the tt-closing flow buffered worse in UBP (4.18 vs 3.89 ns).
+- P2 is not routable at 67% once sized; at 60% it is 2.36× worse than UBP.
+- Per the instructions: no rescue in the same run, and Week 3 not started.
+
 ## Read in this order
 
 | File | What it contains |

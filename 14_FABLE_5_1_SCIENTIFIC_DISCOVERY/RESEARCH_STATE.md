@@ -1,4 +1,4 @@
-# RESEARCH_STATE — Wave 14 + gates G1–G3 + final UBP decision run (R3) (current)
+# RESEARCH_STATE — Wave 14 + gates G1–G3 + final UBP decision run (R3) + development Weeks 1–2 (current)
 
 **Labels:**
 - **HIST-OBS:** previous experiment.
@@ -117,10 +117,29 @@
   - The advantage is robust at 60% and at break-even at 52%.
   - The narrow prior-art check found no identical object, but the decisive full texts are blocked.
 
+## Week 2: physical timing closure (NEW-OBS, 2026-09-28; details in 21)
+
+- **Pre-registered and committed before any build** (21 §1): a W-independent rule, the same for every fabric.
+  - Tap drivers: the smallest buf_k meeting 0.30 ns at the worst-case segment load. They are physical cells (2-site pad + buffer, area counted).
+  - Spine drivers: sized by the flow's own `repair_design` through a `max_transition` constraint on the tap inputs.
+  - Sign-off: OpenRCX-extracted, merged base + program; tt / ss / ff.
+  - Decisive: worst program at ss.
+- **Built** (all through `ubpgen`, all programs 0 DRC, exact, invariant):
+  - B60 and B52;
+  - A-R2 at 75% and A-R3;
+  - P2-R3 and P2-R2 at 60%, since both fail global routing at 67% once sized.
+- **Driver objection closed for UBP:**
+  - tap-input transition 1.32 → 0.30 ns;
+  - programmable paths no longer critical at any corner.
+- **Kill condition triggered.** R = A×T_cons(A-R2 sized) / A×T_cons(B60 sized) = 25.99 M / 17.64 M = **1.473 < 1.5**. Nominal (tt) 1.62; 52% (secondary) 1.21.
+- **Cause:**
+  - physical taps cost UBP +6.5% area;
+  - at ss both designs are limited by the same unsized W-independent tree-start broadcast, which the tt-closing flow buffered worse in B60 (4.18 vs 3.89 ns; the same path was 3.89 ns in the unsized B60).
+
 ## Unresolved questions
 
 - ~~G2 closure~~ **closed by R3** (pre-registered, passed at 52% and 60%).
-- Line-driver timing closure, implemented rather than simulated, for every design. It decides the 52% break-even and the driver-sized P2-R3 point.
+- ~~Line-driver timing closure, implemented rather than simulated~~ **done in Week 2** (21): implemented and extracted; the Week 2 kill condition triggered (R = 1.47 at ss).
 - HNLPU / Taalas / TENET / T-MAC / US 11,663,490 full texts (novelty is summary-based).
 - Scale ≥ 256 with real BitNet weights (HuggingFace blocked here).
 - An advanced PDK with ≥ 3 thin programmable layers; single-via programming.
@@ -128,7 +147,9 @@
 
 ## Next authorized action
 
-None pending. The decision run ends here, as specified.
+**Week 2 ended with its kill condition triggered** (21 §4). Per the Week 2 instructions: no new architecture, no rescue, Week 3 not started. The next step is the researcher's decision.
+
+(Before Week 2:) None pending. The decision run ends here, as specified.
 
 - **Next:** the paper-scale plan in 19 §H. It starts with the parametric generator and line-driver closure, and needs the researcher's go-ahead.
 - **Pushes:** the R3 / final-decision work was pushed to `claude/compassionate-edison-91b73q` under the decision run's explicit authorization, with no pull request and no merge. Any later push needs new authorization.
