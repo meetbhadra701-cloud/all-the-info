@@ -10,3 +10,4 @@ experiments/results/G3/orfs/
 experiments/results/*/*/programmed_*.v
 experiments/results/*/*/prog_*_programmed.v
 experiments/results/*/*/*_program.def
+ubpgen_runs/

@@ -1,0 +1,144 @@
+{
+ "purpose": "Golden reference of the validated R3 implementation (19_FINAL_UBP_DECISION.md). Frozen; do not edit.",
+ "frozen_at_commit": "05bce6a8166096af1490652f4ea4496b8ef067f9",
+ "parameters": {
+  "design": "UBP3-serial (fabric ubp), n = m = 64, g = 3, INT8 activations, 14-bit output words, latency 8",
+  "access": "R3 segmented taps: K = 4 LTAP2 per line on a base spine, 4 row segments of 16, 22 bands",
+  "physical": "SKY130 HD, ORFS image sha256:69df744e..., NUM_CORES 2, NO_DCE, met1-rail PDN, base met1-met3, programs met4-met5, 3.0 ns clock, CORE_UTILIZATION 60 (decisive point 52), aspect 1, margin 2",
+  "programs": "W1..W5 = g2_build seeds 1001..1005 (p0 0.4, 0.4, 0.8, 0.1, 0.4 identical rows); W14 = seed 14",
+  "validated_results": "U60: 5/5 programs 0 DRT violations (13/13/7/13/1 it.), base setup/hold +1.022/+0.293 ns, A x T 8.566e6 (1.663x vs A@75); U52: 5/5 (14/13/7/14/1), A x T 9.263e6",
+  "historical_base_odb_sha256": {
+   "ubp3r3_u60": "70add1cde3c5d12580ca52796776ef2188837eea3995aa9d2c744f3977fef026",
+   "ubp3r3_u52": "aefbdaff878a (see base_sha256_ubp3r3_u52.txt)",
+   "pc2r3_u67": "afde9bb09f05 (see base_sha256_pc2r3_u67.txt)"
+  },
+  "historical_command_chain": [
+   "python3 scripts/e6_build.py $PWD/results/E6 64 g1 ubp3 ubp4  (+ reemit_a2.py: every instance kept)",
+   "python3 scripts/g2_cells.py $PWD/results/G2/cells",
+   "python3 scripts/g2_build.py base $PWD/results/G2 ubp3s $PWD/results/E6/ubp3_n64",
+   "python3 scripts/g2_build.py program $PWD/results/G2 ubp3s w1 1001 0.4  (w2..w5, w14 likewise)",
+   "python3 scripts/g2_struct.py $PWD/results/G2 ubp3s 60 52 45  (R2 configs, source of config_u52s.mk)",
+   "python3 scripts/r3_build.py cells|base|programs $PWD/results/G2 ...",
+   "NO_DCE=1 scripts/e5_run.sh $PWD/results/G2 ubp3r3:60r",
+   "scripts/r3_run_program.sh ubp3r3 60 w1  (w2..w5)",
+   "python3 scripts/r3_collect.py 60"
+  ]
+ },
+ "files": {
+  "scripts (the validated chain)": {
+   "scripts/e5_build.py": "3a9356e887ae51940535c8c16ddbf9f84a74f6e4681ddc3529eafbe537f95ab1",
+   "scripts/e6_build.py": "8ca83a803a1a0490c6871aef793ba5eb706a8ed4f51467ec16879b65b3c23134",
+   "scripts/g3_build.py": "fc5a5a22d5c856d5a520c5300f814cc8808002f52dc1f21226e7993128551420",
+   "scripts/g2_cells.py": "002e3758d6182ceca679f2137d3a6cff716536f35e978b8af36497da6136b603",
+   "scripts/g2_build.py": "bcce3c2d58dffd27bb75e3251e898385795231a5fc112c0077bc4c8215a32094",
+   "scripts/g2_struct.py": "ff82bb5e1a4dd526a6181bdf6416fcf04c0b697947e5649a58259a0f308245b4",
+   "scripts/r3_build.py": "47c336303f54f7ccec45cafe17acdad5ce1f6b72f3bde32287db166d4c40979e",
+   "scripts/e5_run.sh": "2558ea52247fd970788b05ccd94fdc1499360f970d37bc97fafc78d1bd500a59",
+   "scripts/orfs_patch/synth_odb.tcl": "f18a40acc7b27863718bef9e92ee5c8a2633799f1f53a720afff216e107cdf21",
+   "scripts/g2_program.tcl": "01f484ad06b45090011b24e8138325415b4f626a605f3e245cb2f8aa27675b22",
+   "scripts/g2_run_program.sh": "1e2b6e1e44dd8c173622d6e874e9b605cd4e131b7f95308e44b831424cbd3145",
+   "scripts/r3_run_program.sh": "18dea6b18192210fa734f69287c2134bf704607f918d3ad3d7c331b362b25ec3",
+   "scripts/g2_verify.py": "b3d460751959b365e04b766402c8a0667b93b398d00bb1f05ac2d44613c18ab3",
+   "scripts/r3_invariance.py": "143c15cacae442ba0e321e1c28257253e49a64a33ff06aa89efd3ff09a0be6c1",
+   "scripts/r3_collect.py": "d803272ff7762346eacc8695ea8c64de52287a3617cfeccf4077a8a206bab5c0"
+  },
+  "UBP3 modules (E6)": {
+   "results/E6/ubp3_n64/SGEN1.v": "9b9ec31db261af4df98b50943b4c8548a7350dee23ed45d24733219193fb0e93",
+   "results/E6/ubp3_n64/SGEN1_gl.v": "95ec4584bc4a0d6c6f475947f89c171ed6b7e290ecdb502d724f0d06bf11fae8",
+   "results/E6/ubp3_n64/SGEN3.v": "0d95090507ac8a102018641c561e392ba57a5eeea8d395d1cf3ee65c0d2eb2ee",
+   "results/E6/ubp3_n64/SGEN3_gl.v": "d76fe80bbb6e202bb1c6aa45e63a80a6f30d07ab7e224c39c2c2063a7a31a46c",
+   "results/E6/ubp3_n64/SNEG.v": "faedca88eee6046f630162c0eabe72d490f63b155f8a99c6b06ce3fbb0d67f1a",
+   "results/E6/ubp3_n64/SNEG_gl.v": "893ef6945c0094f805f649129a4a6db383ed8a11ea3a70cffcd5ba31eed36e76",
+   "results/E6/ubp3_n64/STREE_L22.v": "47454d76e61c6960f5e12aa1f63b1d815fcc98b9c5c147368ef8334209e6890e",
+   "results/E6/ubp3_n64/STREE_L22_gl.v": "de73757379225027f255fb01db047f01b305a34d195c186241c141ead1dece11"
+  },
+  "P2 modules (G3)": {
+   "results/G3/pc2_n64/CTRL.v": "1ae078e8bce751bcbcf2851c2714318d94fa546f92ec794ab4bce4819e40fc75",
+   "results/G3/pc2_n64/CTRL_gl.v": "60109657a43c31c70b2a918d90dd4e956b7b668b7ca8b2d8a36cfd04d04c6330",
+   "results/G3/pc2_n64/PLINE.v": "5b0334753bdb8bae5acfbfa69d170d1bd9a68944bbd0305557defe3551de60c4",
+   "results/G3/pc2_n64/PLINE_gl.v": "e376462cb18513deecd43f0c07985583d5c4345ba2da16af10c54287c8f79a1c",
+   "results/G3/pc2_n64/PROW_pc2_L64.v": "d3fadf4faa24b6fee32ca01f5ffa5a267aebb42572767cbe9fa28bea565e5729",
+   "results/G3/pc2_n64/PROW_pc2_L64_gl.v": "d4a0a6664c2f0edd0b395029601b3eb112052f115bdc0e419dda13a8c943bfa4"
+  },
+  "A modules (E6)": {
+   "results/E6/g1_n64/SNEG.v": "faedca88eee6046f630162c0eabe72d490f63b155f8a99c6b06ce3fbb0d67f1a",
+   "results/E6/g1_n64/SNEG_gl.v": "893ef6945c0094f805f649129a4a6db383ed8a11ea3a70cffcd5ba31eed36e76",
+   "results/E6/g1_n64/STREE_L64.v": "d352cfaacebd4fec65b62030537cf504dfa146ee73f03cd3a8b1389ddd7317e2",
+   "results/E6/g1_n64/STREE_L64_gl.v": "1efd44b29851e7e48305f862421c603a862ef47c25ca4779fa3ceb4288a42c63"
+  },
+  "cells": {
+   "results/G2/cells/g2_cells.lef": "89a5d9bb79fa26bc00261ea43202cdf78241d85850cae13e71ede83bc2369c82",
+   "results/G2/cells/g2_cells.lib": "d225bb73bceb36173f6ff07c17c9f5aae771146219ba86a3c63850102f2146c8",
+   "results/G2/cells/g2r3_cells.lef": "aa67486628dc0d412ea8518942091c927a9c11da3c8ac246f9b3b9deac272245",
+   "results/G2/cells/g2r3_cells.lib": "2dc7553f001c1b81e959762d66229e9d07b102761b6bfb308d163ca37312dea8",
+   "results/G2/cells/dont_touch_r3.tcl": "40841bfd04efa0ff5b41928dc56d39718eccdb2b1e5faa7a62f6496653ea0e45",
+   "results/G2/cells/pdn_m1rails.tcl": "6330b0de839fec4b46f58fd64c8a0cdacec0a28459cbb5f7305749546a090a63",
+   "results/G2/cells/struct_ubp3r3.tcl": "4c818e45d825df907636ed9ec8e277207e128312bd00a06ea15abc9976add41b",
+   "results/G2/cells/struct_pc2r3.tcl": "b020a3b01cdf0cfacb691d24231f7804c3a3db81db7f019aaf0709b58de87d9b"
+  },
+  "UBP3 logic base (G2/R2)": {
+   "results/G2/ubp3s/top_base.v": "7c44b02cc19732df05de62c562cc58fe066e521256fdcfe867d0e1be70b0e775",
+   "results/G2/ubp3s/netlist_base.v": "c7494f5cbf6a08082a6e1716121135b97ac68372587bfbe59f23ea44a00564bc",
+   "results/G2/ubp3s/mapping.json": "282004597e13ee1abe8e4d4081c438679845ed864576ea3ee05736184f412207"
+  },
+  "UBP3 R3 base + programs": {
+   "results/G2/ubp3r3/netlist_base.v": "5fb995b8d3884fa920150dfc3aa895fec80d9c46a5e2629c7589557baac72067",
+   "results/G2/ubp3r3/mapping.json": "e6fc81c4941e36e428d55578ab7cf695b1da33e55623922cddff9c7315fdd2de",
+   "results/G2/ubp3r3/config_u52r.mk": "1c90ade1b98c6c66f146cda979d5eabac215ce6d5c0145d98995b15e545635ea",
+   "results/G2/ubp3r3/config_u60r.mk": "635edbeb7a7c7b5e4dd7763d952bacf6c1f0985d1be4d5c24422cf43553b83d6",
+   "results/G2/ubp3r3/constraint.sdc": "15adaee47c75afc873c640e4cfbc36ce359cb98eb1989896972f816f0645fb25",
+   "results/G2/ubp3r3/prog_w1.json": "b02d5ea1dd4e611502124e531faa9c2097a5ef5826409e1a35c8c2016d1b7d17",
+   "results/G2/ubp3r3/prog_w1.tcl": "432d7ae564afd4e2899cea19fae069034f888a86ec9563a3fb91e6b17fc61ee6",
+   "results/G2/ubp3r3/W_w1.npy": "439f01337c2a5241443174630ce001886a1963932465a77f34e76187460feec4",
+   "results/G2/ubp3r3/prog_w2.json": "573244fa6d1f6721ebce190092dc3baca032daef4a5d1da548c723149ea3dad6",
+   "results/G2/ubp3r3/prog_w2.tcl": "352445af4403fabad4c37fe3d0402e67b9bd01f8e167b721a981712f129999fe",
+   "results/G2/ubp3r3/W_w2.npy": "580552222af70f8e590be40b9b1fe89b842e31d2553a55ad7b7b45abd4ba0623",
+   "results/G2/ubp3r3/prog_w3.json": "64f955aa715751c1e659f1c0e87c9b800f506a615929007e01ce18940ceaea5c",
+   "results/G2/ubp3r3/prog_w3.tcl": "21c88008ee2a0221145eb9bac8f982fe231168b83f7f31fd26a418ec3d065c09",
+   "results/G2/ubp3r3/W_w3.npy": "ac1d34002ccb98fcf5487ecc3eae4bc3e32a191cad27282a0d32d26240d06ca5",
+   "results/G2/ubp3r3/prog_w4.json": "092fd59ca1b97e6acdbff8ceaee62de20a1ae113992682c7750076287a049a53",
+   "results/G2/ubp3r3/prog_w4.tcl": "76ea8603ab0a108c735c987889727ccde3540982ffe7655b4371441aa974cda4",
+   "results/G2/ubp3r3/W_w4.npy": "f227ca234e4938a8a1aaae1aaa0d7cde077660227848313c83aebeda29422caf",
+   "results/G2/ubp3r3/prog_w5.json": "eb8d6d43c704ca45349daef491e21f26564368504e9ba3c66bbef7712d9d480f",
+   "results/G2/ubp3r3/prog_w5.tcl": "45dc60c19ad3dfe065a683cc0e534daf6844c4707b0575afbf78fdaf711a320a",
+   "results/G2/ubp3r3/W_w5.npy": "b38ec982869b033df30c5ce5afee2dd5fde0174847268c57a48b91237e28fddc",
+   "results/G2/ubp3r3/prog_w14.json": "d6337bade6c277051aab4d3595a4f2ccff631c06f634fd4fa47d8c64181533f7",
+   "results/G2/ubp3r3/prog_w14.tcl": "df7c44cd6d62107a7e56f07cd9dce5a04a1be54eaaee7419c6517a7dc0d878e7",
+   "results/G2/ubp3r3/W_w14.npy": "44726424398e069b42614ca1497175eb6c789c9953d261b2847b7508aa609bbe"
+  },
+  "P2 R3 base + programs": {
+   "results/G2/pc2r3/netlist_base.v": "0724cd64e4342010beaea5cc86c43e8883f674741ad0288400781468eae27d2b",
+   "results/G2/pc2r3/mapping.json": "3d4f8316a0b83c3af660d250e6f0164a4c62e39df254cc26dcfbc4c3dfbbc760",
+   "results/G2/pc2r3/config_u67r.mk": "ff6b08c145eb75eeb2e873ceaf66ec512ba8a9e17f8b1f905165f3632bb6a4a9",
+   "results/G2/pc2r3/constraint.sdc": "15adaee47c75afc873c640e4cfbc36ce359cb98eb1989896972f816f0645fb25",
+   "results/G2/pc2r3/prog_w1.json": "54a4c3db8b56537428aced8cce779140c49c4b880e01c1e539bf60390e32bc6b",
+   "results/G2/pc2r3/prog_w1.tcl": "a2b7a9c2ae57e9d532d5fdf094ccb5a54bbf0e66e73ee7b8362f5f0d31c90476",
+   "results/G2/pc2r3/W_w1.npy": "439f01337c2a5241443174630ce001886a1963932465a77f34e76187460feec4",
+   "results/G2/pc2r3/prog_w2.json": "38bc17aa31418a2b8a991148e4f9fc76a13625cb3066a8356e9e8e78b3409bd2",
+   "results/G2/pc2r3/prog_w2.tcl": "0be1ddfdfc174c8b2801c894015bd75216eff1ef58aa06be9fb0222b8ac4aa94",
+   "results/G2/pc2r3/W_w2.npy": "580552222af70f8e590be40b9b1fe89b842e31d2553a55ad7b7b45abd4ba0623",
+   "results/G2/pc2r3/prog_w3.json": "8a78dc5575642a3b3a037d2b52499fa2336406996b1017428bd804ccd1b2eb82",
+   "results/G2/pc2r3/prog_w3.tcl": "4f11fb239633d03c2991bc6c4e7a62692a7e54dc3405ece4483f2a8cd2264df6",
+   "results/G2/pc2r3/W_w3.npy": "ac1d34002ccb98fcf5487ecc3eae4bc3e32a191cad27282a0d32d26240d06ca5",
+   "results/G2/pc2r3/prog_w4.json": "fd8b692bf5d4a1d01b38314084ce44a4ca088b6558be8d75270bc336436f3835",
+   "results/G2/pc2r3/prog_w4.tcl": "0c5740bdafd2976b6ab8d8ed418aab47f218259466f9716a8b506815d9ca86a4",
+   "results/G2/pc2r3/W_w4.npy": "f227ca234e4938a8a1aaae1aaa0d7cde077660227848313c83aebeda29422caf",
+   "results/G2/pc2r3/prog_w5.json": "9e187c71832c5efb391e0b9eb9ed356980a93c78333bef3cff182c2a955ae78e",
+   "results/G2/pc2r3/prog_w5.tcl": "f459e32e2ed02a5559ed34c25d6c02869e22de775b8ca569bdd323baaac0b81d",
+   "results/G2/pc2r3/W_w5.npy": "b38ec982869b033df30c5ce5afee2dd5fde0174847268c57a48b91237e28fddc"
+  },
+  "A logic base (G2)": {
+   "results/G2/g1s/netlist_base.v": "6e11e6536a20e9f578a155c30d28b921f705db90574abf95d92f848f3037d150",
+   "results/G2/g1s/mapping.json": "e1ce40ac094a15803ab6abc32a7824c2276d12bc5ff911289b1a9f618952f341"
+  },
+  "R3 records": {
+   "results/G2/r3/r3_results.jsonl": "c09e0c450ba02ab8074b2a8b973318fdd9f4172fa8a27abcc4bc62ec49e3de5f",
+   "results/G2/r3/r3_summary_u52.json": "7b0625b648535a7c130afa18cd3129ea52ba1734d241539e930e52ba23e8c14c",
+   "results/G2/r3/r3_summary_u60.json": "b32a4b8fbed5e27c01585537a221d345d1c7ec973a3806af5759da87e80eae50",
+   "results/G2/r3/base_sha256_ubp3r3_u52.txt": "c8abebe77587f6b1acd69a6b9d72fb876558cb2b6a1041a96f551a0bda6a24af",
+   "results/G2/r3/base_sha256_ubp3r3_u60.txt": "86ccdb30b5a3d094188f7fa9fed1f04b01ecf48c11c827d9ab6f906e63e1e2b2",
+   "results/G2/r3/base_sha256_pc2r3_u67.txt": "6cb6cf53cd8fa9f424cbabf6b7703cf27aaa83db9fd314d3027e3361b72324a6",
+   "results/G2/r3/fairness_summary.json": "3a6fd702b9e6e8b33a6e9d7f018296d7be365ef5e6af4ca63339fc3b5bdcc23c"
+  }
+ }
+}
