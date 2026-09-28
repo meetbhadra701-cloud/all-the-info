@@ -69,7 +69,7 @@ def tabulate(suite: dict, suite_dir: Path) -> dict:
         root = RUNS / cfg.name
         if not (root / 'records' / 'base.json').exists():
             continue
-        s = pipeline.summarize(cfg, root)
+        s = pipeline.summarize(cfg, root, d.get('tags'))
         hd = d.get('historical_design')
         gold = json.loads((root / 'records' / 'golden_compare.json').read_text())['pass'] \
             if (root / 'records' / 'golden_compare.json').exists() else None

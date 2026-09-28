@@ -101,7 +101,7 @@ def axt(cell_area: float, util: int, cycles: int, t_ns: float) -> float:
     return cell_area / (util / 100) * cycles * t_ns
 
 
-def summarize(cfg: Config, root: Path) -> dict:
+def summarize(cfg: Config, root: Path, required: list[str] | None = None) -> dict:
     """Latest record per program + A x T under the established (first program) and robust (worst program) rules."""
     root = root.resolve()
     base = json.loads((root / 'records' / 'base.json').read_text())['result']
@@ -111,7 +111,8 @@ def summarize(cfg: Config, root: Path) -> dict:
         for line in p.read_text().splitlines():
             r = json.loads(line)['result']
             recs[r['tag']] = r
-    tags = [s['tag'] for s in cfg.raw['programs'] if s['tag'] in recs]
+    required = required or [s['tag'] for s in cfg.raw['programs']]
+    tags = [t for t in required if t in recs]
     cyc = arch.cycles_per_word(cfg)
     clk = cfg.raw['clock_ns']
     out = {'name': cfg.name, 'fabric': cfg.fabric, 'util': cfg.util, 'K': cfg.K, 'base': base, 'programs': recs}
@@ -122,6 +123,7 @@ def summarize(cfg: Config, root: Path) -> dict:
         out.update({'T_established_ns': t_est, 'T_robust_ns': t_rob,
                     'AxT_established': axt(base['cell_area_um2'], cfg.util, cyc, t_est),
                     'AxT_robust': axt(base['cell_area_um2'], cfg.util, cyc, t_rob),
-                    'all_programs_pass': all(recs[t]['pass'] for t in tags) and len(tags) == len(cfg.raw['programs'])})
+                    'programs_required': required, 'programs_missing': [t for t in required if t not in recs],
+                    'all_programs_pass': all(recs[t]['pass'] for t in tags) and len(tags) == len(required)})
     (root / 'records' / 'summary.json').write_text(json.dumps(out, indent=1))
     return out
