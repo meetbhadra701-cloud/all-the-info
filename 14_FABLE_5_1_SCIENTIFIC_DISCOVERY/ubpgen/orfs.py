@@ -93,11 +93,28 @@ def build_base(cfg, root: Path) -> dict:
                 mounts, workdir='/OpenROAD-flow-scripts/flow')
     rc = int((root / 'physical' / 'orfs_base.rc').read_text().strip() or 1)
     bp = base_paths(cfg, root)
-    if rc != 0 or not bp['odb'].exists():
-        raise RuntimeError(f'ORFS base flow failed (rc {rc}); see {root / "physical" / "orfs_base.log"}')
+    gds = gds_status(root, rc)
+    ok = bp['odb'].exists() and bp['report'].exists() and (rc == 0 or gds == 'expected-failure')
+    if not ok:
+        raise RuntimeError(f'ORFS base flow failed (rc {rc}, gds {gds}); see {root / "physical" / "orfs_base.log"}')
     sha = hashlib.sha256(bp['odb'].read_bytes()).hexdigest()
     (root / 'physical' / 'base_odb.sha256').write_text(sha + '\n')
-    return base_metrics(cfg, root)
+    m = base_metrics(cfg, root)
+    m.update({'orfs_rc': rc, 'gds_merge': gds})
+    return m
+
+
+def gds_status(root: Path, rc: int) -> str:
+    """The via-site and tap cells are abstract (no GDS), so KLayout's final GDS merge (after 6_final.odb/def and
+    6_report are written) fails with exactly these errors; the historical R3 runs have the same rc 2. Any other
+    failure is a real failure."""
+    if rc == 0:
+        return 'ok'
+    log = (root / 'physical' / 'orfs_base.log').read_text()
+    errs = set(re.findall(r"\[ERROR\] LEF Cell '(\w+)' has no matching GDS", log))
+    only_gds = ('do-gds-merged] Error' in log and errs and errs <= {'LTAP2', 'LTAP', 'VSITE_BUF', 'VSITE_ZERO', 'VSITE_ONE'}
+                and log.count('] Error') == log.count('gds-merged] Error') + log.count('6_1_merged.gds] Error'))
+    return 'expected-failure' if only_gds else 'unexpected-failure'
 
 
 def base_metrics(cfg, root: Path) -> dict:

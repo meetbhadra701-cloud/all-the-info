@@ -117,6 +117,33 @@ def compare(cfg, root: Path) -> dict:
     return {'config': cfg.name, 'results': res, 'notes': notes, 'failures': fails, 'pass': not fails}
 
 
+def compare_physical(cfg, root: Path, hist_nick: str) -> dict:
+    """Frozen base vs the historical base of the same configuration: ODB hash, every cell's master/placement,
+    the routed base wiring (per-net DEF routing text), and the report metrics."""
+    import hashlib
+    from . import orfs
+    from ._legacy import SCRIPTS  # noqa: F401
+    import r3_invariance
+    hb = G2 / 'orfs' / 'results' / 'sky130hd' / hist_nick / 'base'
+    hl = G2 / 'orfs' / 'logs' / 'sky130hd' / hist_nick / 'base'
+    bp = orfs.base_paths(cfg, root)
+    if not (hb / '6_final.def').exists():
+        return {'available': False}
+    sha_new = hashlib.sha256(bp['odb'].read_bytes()).hexdigest()
+    sha_old = hashlib.sha256((hb / '6_final.odb').read_bytes()).hexdigest()
+    dn, do = bp['def'].read_text(), (hb / '6_final.def').read_text()
+    cn, co = r3_invariance.comps(dn), r3_invariance.comps(do)
+    moved = [k for k in co if cn.get(k) != co[k]]
+    nets = lambda t: r3_invariance.section(t, '\nNETS', 'END NETS')
+    rn, ro = json.loads(bp['report'].read_text()), json.loads((hl / '6_report.json').read_text())
+    keys = ('finish__timing__setup__ws', 'finish__timing__hold__ws', 'finish__design__core__area', 'finish__design__instance__area')
+    return {'available': True, 'odb_sha256_identical': sha_new == sha_old, 'odb_sha256': {'generated': sha_new, 'historical': sha_old},
+            'def_identical_except_header': dn.split('\nVERSION', 1)[1] == do.split('\nVERSION', 1)[1] if '\nVERSION' in dn else dn == do,
+            'components': len(cn), 'components_differing': len(moved) + len(set(cn) - set(co)), 'examples': moved[:5],
+            'routed_nets_identical': nets(dn) == nets(do),
+            'report': {k: (rn.get(k), ro.get(k)) for k in keys}}
+
+
 def main(argv=None):
     import argparse
     from . import config as C
