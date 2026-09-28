@@ -80,10 +80,13 @@ def base_paths(cfg, root: Path) -> dict:
             'report': lg / '6_report.json', 'route_log': lg / '5_2_route.log'}
 
 
-def build_base(cfg, root: Path) -> dict:
-    """Run the full ORFS flow once on the W-independent base; freeze it (sha256 of 6_final.odb)."""
+def build_base(cfg, root: Path, rerun: bool = False) -> dict:
+    """Run the full ORFS flow once on the W-independent base; freeze it (sha256 of 6_final.odb).
+    A completed run (rc file + 6_final.odb present) is only re-checked and frozen, unless rerun."""
     check_image(cfg)
     (root / 'physical').mkdir(exist_ok=True)
+    if not rerun and (root / 'physical' / 'orfs_base.rc').exists() and base_paths(cfg, root)['odb'].exists():
+        return _freeze(cfg, root)
     mounts = []
     if cfg.raw['flow']['no_dce']:
         mounts.append(f'{SCRIPTS / "orfs_patch" / "synth_odb.tcl"}:/OpenROAD-flow-scripts/flow/scripts/synth_odb.tcl:ro')
@@ -91,6 +94,10 @@ def build_base(cfg, root: Path) -> dict:
     p = _docker(root, ['bash', '-c', f'make DESIGN_CONFIG=/work/orfs/config.mk WORK_HOME=/work/physical/orfs '
                                      f'NUM_CORES={nc} > /work/physical/orfs_base.log 2>&1; echo $? > /work/physical/orfs_base.rc'],
                 mounts, workdir='/OpenROAD-flow-scripts/flow')
+    return _freeze(cfg, root)
+
+
+def _freeze(cfg, root: Path) -> dict:
     rc = int((root / 'physical' / 'orfs_base.rc').read_text().strip() or 1)
     bp = base_paths(cfg, root)
     gds = gds_status(root, rc)
