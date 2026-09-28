@@ -68,9 +68,16 @@
    }
   },
   {
-   "key": "P2R2",
+   "key": "P2R2_67",
    "config": "w2_p2r2.json",
    "label": "P2-R2 67% physically sized",
+   "role": "failed",
+   "failure": "base not routable: global routing congestion too high (GRT-0232, during antenna repair) after sizing; pre-registered fallback: 60%"
+  },
+  {
+   "key": "P2R2",
+   "config": "w2_p2r2_u60.json",
+   "label": "P2-R2 60% physically sized (fallback)",
    "role": "competitor",
    "counterpart": {
     "config": "golden_r2_pc2_u67.json",

@@ -2,7 +2,8 @@
 
 python3 -m ubpgen.snapshot ubpgen/configs/suite_r3_tables.json ubpgen/results/week1
 Per design: config.json, generation.json (git/tools/config hash + sha256 of every generated file), records/*
-(base, verify, physical, golden comparisons, summary). Plus tables.md / tables.json. No netlists, ODBs or DEFs.
+(base, verify, physical, sign-off, accounting, golden comparisons, summary) and the sign-off reports (Week 2).
+Plus tables.md / tables.json (Week 1) or week2.md / week2.json (Week 2). No netlists, ODBs or DEFs.
 """
 from __future__ import annotations
 
@@ -30,7 +31,15 @@ def main(argv=None):
             shutil.copy(src / f, out / f)
         for f in (src / 'records').glob('*'):
             shutil.copy(f, out / 'records' / f.name)
-    for f in ('tables.md', 'tables.json'):
+        # Week 2: the sign-off reports (critical paths, transitions, spine drivers; text, a few kB each)
+        for f in sorted((src / 'programs').glob('*/signoff/*.log')) + sorted((src / 'programs').glob('*/signoff/signoff.json')):
+            d = out / 'signoff' / f.parent.parent.name
+            d.mkdir(parents=True, exist_ok=True)
+            shutil.copy(f, d / f.name)
+        for f in ('base_cli.log',):
+            if (src / f).exists():
+                shutil.copy(src / f, out / f)
+    for f in ('tables.md', 'tables.json', 'week2.md', 'week2.json'):
         p = RUNS / suite.stem / f
         if p.exists():
             shutil.copy(p, dest / f)
