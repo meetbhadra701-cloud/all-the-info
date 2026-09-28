@@ -170,9 +170,14 @@ def verify_built(cfg, root: Path, base_def: Path) -> dict:
     c = (cfg.m // cfg.K) * site_cap_pf() + C_MET4_PF_PER_UM * L
     tr = liberty.output_transition(f'sky130_fd_sc_hd__{tc}', 'X', S, c, 'tt')
     masters = sorted({t[5] for t in taps})
+    status = {}
+    for s in re.findall(r'^\s*-\s+lt_\S+\s+\S+\s+\+\s+(PLACED|FIRM|FIXED)', d[d.index('\nCOMPONENTS'):d.index('END COMPONENTS')], flags=re.M):
+        status[s] = status.get(s, 0) + 1
+    n_expected = len(arch.lines(cfg)) * (cfg.K if access.mode(cfg) == 'r3' else 1)
     return {'class': tc, 'tap_masters_in_def': masters, 'worst_tap': name, 'L_rsmt_um': round(L, 2),
             'C_wc_fF': round(c * 1000, 2), 'transition_ns': round(tr, 4), 'meets': tr <= S,
-            'masters_ok': masters == [access.tap_master(cfg)]}
+            'taps_in_def': len(taps), 'taps_expected': n_expected, 'tap_status': status,
+            'masters_ok': masters == [access.tap_master(cfg)] and len(taps) == n_expected and set(status) == {'FIRM'}}
 
 
 def write_record(root: Path, rec: dict, name: str = 'drivers.json'):

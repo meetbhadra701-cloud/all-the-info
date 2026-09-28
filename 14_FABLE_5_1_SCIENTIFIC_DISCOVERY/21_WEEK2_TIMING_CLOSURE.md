@@ -238,6 +238,15 @@ Tap area against the historical accounting:
   - A test now requires exactly one `max_transition` equal to S on every tap input.
 - **Action.** Both partial builds were stopped before any program was routed or timed, and deleted. No Week 2 timing result existed. The designs are rebuilt from scratch with the fixed library; the rule, the classes and every other setting are unchanged.
 
+**Second issue, found when the constraint became active (rebuild 04:00Z):**
+- **What happened.** Every W2 base now stopped in timing-driven global placement with `RSZ-3006`: "Load pin 'lt_pn9_9_s0/A' is dont_touch. Cannot insert a buffer."
+- **Cause.** The POST_SYNTH hook marks taps and via sites `dont_touch`, which protects them through synthesis and floorplan buffer removal. A load pin of a `dont_touch` instance cannot be re-connected, so `repair_design` can neither buffer a spine in front of its taps nor skip it; it aborts the flow. The historical designs never hit this because nothing violated at their taps.
+- **Fix** (`access.W2_RELEASE`, W2 designs only). The placement hook releases `dont_touch` on the taps right after the W-blind placer fixes them FIRM; the via sites keep theirs.
+  - FIRM cells are fixed for every later placer.
+  - Probes on the failed B60 database: `remove_buffers` (which global placement runs first) keeps all 2,192 released FIRM taps (0 removed). `repair_design` then fixes all 548 spines (1,647 buffers inserted, 4 cells resized, +4.4% cell area), with 0 tap pins above S and a worst tap-input slew of 0.177 ns (placement parasitics).
+  - The built-base check now also requires the full tap count, the configured master and FIRM status on every tap.
+- **Action.** The four partial run directories (B60, A-R2, P2-R3, P2-R2; none past global placement) were deleted, and every design is rebuilt from scratch. The rule, the classes, the flow settings and everything else are unchanged.
+
 ## 3. Results
 
 ## 4. Decision

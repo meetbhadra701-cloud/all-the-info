@@ -253,6 +253,36 @@ def markdown(ds: dict, dec: dict) -> str:
                  f"{_f(tm['T_ns']['tt'].get('w1'), 3)} | {_f(tm['T_worst_ns']['tt'], 3)} | {_f(tm['T_worst_ns']['ss'], 3)} | "
                  f"{_f(tm['T_worst_ns']['ff'], 3)} | {_f(tm['hold_min_ns']['tt'], 3)} / {_f(tm['hold_min_ns']['ss'], 3)} / "
                  f"{_f(tm['hold_min_ns']['ff'], 3)} | {_f(d['AxT']['nominal_w1'])} | {_f(d['AxT']['conservative'])} |")
+    L += ['', '## Critical paths (worst program per corner; extracted, merged base + program)', '',
+          '| Design | Corner | Worst program | T (ns) | Setup WNS | Hold WNS (min over W1–W5) | Critical path | Through programmable net | Largest stage: cell, net, delay | Tap-input / site-input max transition (ns) |',
+          '|---|---|---|---|---|---|---|---|---|---|']
+    for d in ds.values():
+        if d is None or 'timing' not in d:
+            continue
+        tm = d['timing']
+        for c in CORNERS:
+            t = tm['worst_program'][c]
+            k = d['programs'][t]['corners'][c]
+            cr, ls = k['critical'], k['critical']['largest_stage'] or {}
+            L.append(f"| {d['label']} | {c} | {t} | {k['T_ns']:.3f} | {k['setup_ws_ns']:+.3f} | {tm['hold_min_ns'][c]:+.3f} | "
+                     f"{cr['start']} → {cr['end']} | {'yes' if cr['through_programmable_net'] else 'no'} | "
+                     f"{ls.get('cell', '—').replace('sky130_fd_sc_hd__', '')}, {ls.get('net')}, {_f(ls.get('delay_ns'), 3)} | "
+                     f"{_f(k['tap_input_max_transition_ns'], 3)} / {_f(k['site_input_max_transition_ns'], 3)} |")
+    L += ['', '## Physical cost of the drivers (routability, area, DRT convergence)', '',
+          '| Design | Taps × sites (tap area µm²) | Flow sizing µm² (unsized counterpart; increment) | Resized / resizer buffers | Program DRT iterations (W1–W5) | Program GRT met4 / met5 usage max | Base DRC |',
+          '|---|---|---|---|---|---|---|']
+    for d in ds.values():
+        if d is None:
+            continue
+        a, acc = d['areas'], d['accounting']
+        ins = sum(v['count'] for v in acc['inserted'].values() if v['kind'].startswith('resizer'))
+        its = [d['programs'][t].get('drt_iterations_run') for t in d['programs']]
+        g4 = [((d['programs'][t].get('grt') or {}).get('met4') or {}).get('usage_pct') for t in d['programs']]
+        g5 = [((d['programs'][t].get('grt') or {}).get('met5') or {}).get('usage_pct') for t in d['programs']]
+        mx = lambda v: _f(max([x for x in v if x is not None], default=None), 1)
+        L.append(f"| {d['label']} | {a['taps']} × {a['tap_sites']} ({_f(a['tap_area_um2'])}) | {_f(a['flow_sizing_um2'])} "
+                 f"({_f(a['counterpart_flow_sizing_um2'])}; {_f(a['sizing_increment_um2'])}) | {acc['resized']['count']} / {ins} | "
+                 f"{', '.join('—' if x is None else str(x) for x in its)} | {mx(g4)}% / {mx(g5)}% | {d['drc']['base']} |")
     L += ['', '## Decision', '', '```', json.dumps(dec, indent=1), '```', '']
     return '\n'.join(L)
 

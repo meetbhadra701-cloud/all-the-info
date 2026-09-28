@@ -301,7 +301,8 @@ def test_sized_base_differs_only_by_the_tap_master(gen, sized, unsized, old, nam
     assert na == nu.replace(f'  {old} lt_', f'  {new} lt_')
     assert (a / 'netlist' / 'netlist_logic.v').read_text() == (u / 'netlist' / 'netlist_logic.v').read_text()
     pa, pu = (a / 'layout' / 'place_access.tcl').read_text(), (u / 'layout' / 'place_access.tcl').read_text()
-    assert pa.split('\n', 1)[1] == pu.split('\n', 1)[1]            # the W-blind plan is unchanged
+    assert pa.split('\n', 1)[1] == pu.split('\n', 1)[1] + access.W2_RELEASE + '\n'   # the W-blind plan is unchanged;
+    assert access.W2_RELEASE not in pu                               # only the tap dont_touch release is added
     for t in ('w1', 'w5'):
         assert (a / 'programs' / t / 'prog.tcl').read_text() == (u / 'programs' / t / 'prog.tcl').read_text()
 
