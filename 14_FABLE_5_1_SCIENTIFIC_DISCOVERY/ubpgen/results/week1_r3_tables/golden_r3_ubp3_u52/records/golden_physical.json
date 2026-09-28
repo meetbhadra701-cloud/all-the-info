@@ -1,0 +1,31 @@
+{
+ "available": true,
+ "odb_sha256_identical": true,
+ "odb_sha256": {
+  "generated": "aefbdaff878af710148fcdd64f5b413e1435ca6a63cf06a028e5d04c6da352db",
+  "historical": "aefbdaff878af710148fcdd64f5b413e1435ca6a63cf06a028e5d04c6da352db"
+ },
+ "def_identical_except_header": true,
+ "components": 14027,
+ "components_differing": 0,
+ "examples": [],
+ "routed_nets_identical": true,
+ "report": {
+  "finish__timing__setup__ws": [
+   0.975686,
+   0.975686
+  ],
+  "finish__timing__hold__ws": [
+   0.268202,
+   0.268202
+  ],
+  "finish__design__core__area": [
+   324261,
+   324261
+  ],
+  "finish__design__instance__area": [
+   194658,
+   194658
+  ]
+ }
+}

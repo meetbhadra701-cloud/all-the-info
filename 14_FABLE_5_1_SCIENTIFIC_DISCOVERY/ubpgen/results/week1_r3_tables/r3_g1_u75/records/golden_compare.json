@@ -1,0 +1,34 @@
+{
+ "config": "r3_g1_u75",
+ "results": {
+  "rtl/SNEG.v": "BYTE",
+  "rtl/SNEG_gl.v": "BYTE",
+  "rtl/STREE_L64.v": "BYTE",
+  "rtl/STREE_L64_gl.v": "BYTE",
+  "cells/g2_cells.lef": "BYTE",
+  "cells/g2_cells.lib": "BYTE",
+  "cells/g2r3_cells.lef": "BYTE",
+  "cells/g2r3_cells.lib": "BYTE",
+  "cells/dont_touch_r3.tcl": "BYTE",
+  "cells/pdn_m1rails.tcl": "BYTE",
+  "netlist/netlist_logic.v": "BYTE",
+  "netlist/mapping.json": "SEMANTIC",
+  "programs/w1/W.npy": "SEMANTIC",
+  "programs/w1/prog.json": "SEMANTIC",
+  "programs/w2/W.npy": "SEMANTIC",
+  "programs/w2/prog.json": "SEMANTIC",
+  "programs/w3/W.npy": "SEMANTIC",
+  "programs/w3/prog.json": "SEMANTIC",
+  "programs/w4/W.npy": "SEMANTIC",
+  "programs/w4/prog.json": "SEMANTIC",
+  "programs/w5/W.npy": "SEMANTIC",
+  "programs/w5/prog.json": "SEMANTIC",
+  "programs/w14/W.npy": "SEMANTIC",
+  "programs/w14/prog.json": "SEMANTIC"
+ },
+ "notes": {
+  "netlist/mapping.json": "compared with the single-tap G2 mapping (no historical R3 build of this fabric)"
+ },
+ "failures": {},
+ "pass": true
+}

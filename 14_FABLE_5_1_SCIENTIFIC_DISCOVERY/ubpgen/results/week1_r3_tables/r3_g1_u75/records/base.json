@@ -1,0 +1,97 @@
+{
+ "time_utc": "2026-09-28T00:35:23+00:00",
+ "command": "physical-base",
+ "git": {
+  "commit": "c236df3298dd96d20f986011efaf39074d04e599",
+  "branch": "claude/compassionate-edison-91b73q",
+  "generator_tree_dirty": true
+ },
+ "tools": {
+  "orfs_image": "openroad/orfs:latest",
+  "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+  "yosys": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "host": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39"
+ },
+ "config_sha256": "28bbc8749a3910804d3c370e43d489d735c14683fcee1fa6bab7db36cff85a15",
+ "config": {
+  "name": "r3_g1_u75",
+  "fabric": "g1",
+  "n": 64,
+  "m": 64,
+  "g": null,
+  "activation_bits": 8,
+  "clock_ns": 3.0,
+  "access": {
+   "taps_per_line": 4
+  },
+  "layout": {
+   "util": 75,
+   "core_aspect_ratio": 1,
+   "core_margin": 2
+  },
+  "spine_driver": "as_synthesized",
+  "programs": [
+   {
+    "tag": "w1",
+    "seed": 1001,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w2",
+    "seed": 1002,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w3",
+    "seed": 1003,
+    "p0": 0.8,
+    "same_rows": false
+   },
+   {
+    "tag": "w4",
+    "seed": 1004,
+    "p0": 0.1,
+    "same_rows": false
+   },
+   {
+    "tag": "w5",
+    "seed": 1005,
+    "p0": 0.4,
+    "same_rows": true
+   },
+   {
+    "tag": "w14",
+    "seed": 14,
+    "p0": 0.4,
+    "same_rows": false
+   }
+  ],
+  "flow": {
+   "orfs_image": "openroad/orfs:latest",
+   "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+   "num_cores": 2,
+   "drt_iters": 64,
+   "no_dce": true,
+   "nickname": "ubpgen_r3_g1_u75"
+  },
+  "verify": {
+   "words": 12,
+   "seed": 3
+  }
+ },
+ "result": {
+  "odb_sha256": "4d6736e729350695d07cdcbfb6712135c7cb0b35877a7a75a31d6b9ac8e9dea3",
+  "drc_final": 0,
+  "setup_ws_ns": 0.774809,
+  "hold_ws_ns": 0.064646,
+  "core_area_um2": 473881,
+  "cell_area_um2": 356417,
+  "instance_count": 57516,
+  "orfs_rc": 2,
+  "gds_merge": "expected-failure"
+ }
+}
