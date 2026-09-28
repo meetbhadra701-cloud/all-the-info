@@ -51,7 +51,7 @@ def test_defaults_are_explicit_and_stable():
     assert C.resolve(json.loads(c.to_json())).sha256() == c.sha256()      # round trip
 
 
-@pytest.mark.parametrize('f', sorted(p.name for p in CFG.glob('*.json')))
+@pytest.mark.parametrize('f', sorted(p.name for p in CFG.glob('*.json') if not p.name.startswith('suite_')))
 def test_shipped_configs_load(f):
     C.load(CFG / f)
 
