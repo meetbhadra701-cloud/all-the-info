@@ -83,7 +83,7 @@ def tabulate(suite: dict, suite_dir: Path) -> dict:
                              'base_odb_identical_to_historical': (s['base']['odb_sha256'] == hist_sha) if hist_sha else None,
                              'base': s['base'], 'T_established_ns': s.get('T_established_ns'),
                              'AxT_established': s.get('AxT_established'), 'AxT_robust': s.get('AxT_robust'),
-                             'ratio_vs_strongest': comp / s['AxT_established'] if s.get('AxT_established') else None,
+                             'ratio_vs_strongest': comp / s['AxT_established'] if s.get('AxT_established') and cfg.fabric == 'ubp' else None,
                              'all_programs_pass': s.get('all_programs_pass')}
         for tag in d.get('tags', [p['tag'] for p in cfg.raw['programs']]):
             r = s['programs'].get(tag)
@@ -103,7 +103,10 @@ def tabulate(suite: dict, suite_dir: Path) -> dict:
                     if not same:
                         diffs.append(f'{cfg.name} {tag} {k}: generated {mine} vs historical {v}')
             rows.append(row)
-    return {'designs': designs, 'programs': rows, 'differences_vs_historical': diffs}
+    bs = {n: d for n, d in designs.items() if d['fabric'] == 'ubp' and d['AxT_established']}
+    cs = {n: d for n, d in designs.items() if d['fabric'] != 'ubp' and d['AxT_established']}
+    matrix = {b: {c: cd['AxT_established'] / bd['AxT_established'] for c, cd in cs.items()} for b, bd in bs.items()}
+    return {'designs': designs, 'programs': rows, 'differences_vs_historical': diffs, 'B_vs_measured_competitors': matrix}
 
 
 def markdown(t: dict) -> str:
@@ -114,7 +117,8 @@ def markdown(t: dict) -> str:
         b = d['base']
         L.append(f"| {n} | {d['util']} | {d['K']} | {b['drc_final']} | {b['setup_ws_ns']:+.3f} / {b['hold_ws_ns']:+.3f} | "
                  f"{d['base_odb_identical_to_historical']} | {d['AxT_established'] or float('nan'):.4e} | "
-                 f"{(d['ratio_vs_strongest'] or float('nan')):.3f}× | {d['all_programs_pass']} |")
+                 + (f"{d['ratio_vs_strongest']:.3f}×" if d['ratio_vs_strongest'] else '— (competitor)')
+                 + f" | {d['all_programs_pass']} |")
     L += ['', '| Design | W | DRT final (it.) | met4 / met5 WL (µm) | via4 | setup / prog-path WS (ns) | post-PnR = numpy, mutation | invariants | historical (it., met4 WL, prog WS) |',
           '|---|---|---|---|---|---|---|---|---|']
     for r in t['programs']:
@@ -123,6 +127,12 @@ def markdown(t: dict) -> str:
         L.append(f"| {r['design']} | {r['tag']} | {r['drt_final']} ({r['drt_iterations_run']}) | {r['wl_met4']:,.0f} / {r['wl_met5']:,.0f} | "
                  f"{r['vias']} | {r['setup_ws_ns']:+.3f} / {r['prog_setup_ws_ns']:+.3f} | {r['post_pnr_numpy']}, {r['mutation']} | "
                  f"{r['invariants']} | {hs} |")
+    if t.get('B_vs_measured_competitors'):
+        comps = sorted({c for v in t['B_vs_measured_competitors'].values() for c in v})
+        L += ['', '**B advantage over the competitors measured in this suite** (competitor A×T / B A×T, established rule):', '',
+              '| B design | ' + ' | '.join(comps) + ' |', '|---|' + '---|' * len(comps)]
+        for b, v in t['B_vs_measured_competitors'].items():
+            L.append(f'| {b} | ' + ' | '.join(f'{v[c]:.3f}×' for c in comps) + ' |')
     L += ['', f"**Differences vs the historical records:** {len(t['differences_vs_historical'])}"]
     L += [f'- {x}' for x in t['differences_vs_historical']]
     return '\n'.join(L) + '\n'
