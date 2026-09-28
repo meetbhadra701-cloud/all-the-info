@@ -1,5 +1,5 @@
 {
- "_comment": "Week 2 decision table (21_WEEK2_TIMING_CLOSURE.md 1.5 / 1.7). role: B = the UBP point that decides (60%); competitor = the pre-registered decision set (Week-2 physical model); historical = unsized designs, re-timed by the same sign-off, reported but not decision competitors; B52 = the 52% sensitivity. Fallback designs (A at 70%, P2 at 60%) are added here only if a pre-registered point fails to route. counterpart: the unsized (historical-policy) build of the same design, for the incremental flow-sizing cost of the Week-2 policy (base_def given when the build is the historical G2 one, not a ubpgen run).",
+ "_comment": "Week 2 decision table (21_WEEK2_TIMING_CLOSURE.md 1.5 / 1.7). role: B = the UBP point that decides (60%); competitor = the pre-registered decision set (Week-2 physical model); historical = unsized designs, re-timed by the same sign-off, reported but not decision competitors; B52 = the 52% sensitivity. Fallback designs (A at 70%, P2 at 60%) are added here only if a pre-registered point fails to route. counterpart: the unsized (historical-policy) build of the same design, for the incremental flow-sizing cost of the Week-2 policy (base_def given when the build is the historical G2 one, not a ubpgen run). role failed: a pre-registered point that could not be built (reported, replaced by its fallback).",
  "name": "suite_week2",
  "tags": [
   "w1",
@@ -52,9 +52,16 @@
    "role": "historical"
   },
   {
-   "key": "P2R3",
+   "key": "P2R3_67",
    "config": "w2_p2r3.json",
    "label": "P2-R3 67% physically sized",
+   "role": "failed",
+   "failure": "base not routable: global routing congested (GRT-0116; met1/met2/met3 overflow 24/1/12) after the flow grew the cell utilization from 67% to 83% (sizing + P2 timing repair); pre-registered fallback: 60%"
+  },
+  {
+   "key": "P2R3",
+   "config": "w2_p2r3_u60.json",
+   "label": "P2-R3 60% physically sized (fallback)",
    "role": "competitor",
    "counterpart": {
     "key": "P2R3_hist"

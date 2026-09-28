@@ -296,12 +296,17 @@ def main(argv=None):
     a = ap.parse_args(argv)
     sp = Path(a.suite).resolve()
     s = json.loads(sp.read_text())
-    ds = {e['key']: design(e, s, sp.parent, s['tags']) for e in s['designs']}
+    ds = {e['key']: design(e, s, sp.parent, s['tags']) for e in s['designs'] if e['role'] != 'failed'}
+    failed = [e for e in s['designs'] if e['role'] == 'failed']
     dec = decide(ds, s['kill_ratio'])
     out = Path(a.out) if a.out else RUNS / s['name']
     out.mkdir(parents=True, exist_ok=True)
-    (out / 'week2.json').write_text(json.dumps({'designs': ds, 'decision': dec}, indent=1))
-    (out / 'week2.md').write_text(markdown(ds, dec))
+    (out / 'week2.json').write_text(json.dumps({'designs': ds, 'failed_points': failed, 'decision': dec}, indent=1))
+    md = markdown(ds, dec)
+    if failed:
+        md += '\n## Pre-registered points that could not be built (replaced by their fallback)\n\n' + ''.join(
+            f"- **{e['label']}** (`{e['config']}`): {e['failure']}\n" for e in failed)
+    (out / 'week2.md').write_text(md)
     print(json.dumps({k: (None if v is None else {'complete': v['complete'], 'correct': v['correct'],
                                                   'AxT_cons': v.get('AxT', {}).get('conservative')}) for k, v in ds.items()}))
     print(json.dumps({k: dec[k] for k in ('verdict', 'missing') if k in dec}))

@@ -1,0 +1,47 @@
+{
+ "_comment": "Week 2, P2-R3 pre-registered fallback (21_WEEK2 1.5): the sized base at 67% failed global routing (GRT-0116 congestion), so P2 is retried at 60%; the tap class is re-resolved by the rule for this core | drivers.tap_class frozen from the w2_load_rule selection at generation (buf_2: worst-case transition 0.2913 ns <= 0.30 ns)",
+ "name": "w2_p2r3_u60",
+ "fabric": "pc2",
+ "n": 64,
+ "m": 64,
+ "access": {
+  "mode": "r3",
+  "taps_per_line": 4
+ },
+ "layout": {
+  "util": 60
+ },
+ "drivers": {
+  "policy": "w2_load_rule",
+  "slew_target_ns": 0.3,
+  "tap_class": "buf_2"
+ },
+ "programs": [
+  {
+   "tag": "w1",
+   "seed": 1001,
+   "p0": 0.4
+  },
+  {
+   "tag": "w2",
+   "seed": 1002,
+   "p0": 0.4
+  },
+  {
+   "tag": "w3",
+   "seed": 1003,
+   "p0": 0.8
+  },
+  {
+   "tag": "w4",
+   "seed": 1004,
+   "p0": 0.1
+  },
+  {
+   "tag": "w5",
+   "seed": 1005,
+   "p0": 0.4,
+   "same_rows": true
+  }
+ ]
+}
