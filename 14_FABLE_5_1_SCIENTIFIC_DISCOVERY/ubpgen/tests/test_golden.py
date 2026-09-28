@@ -3,6 +3,7 @@
   * the historical reference has not drifted (manifest sha256);
   * the generator reproduces the validated R3 designs (UBP3 at 52% and 60%, P2-R3 at 67%) and the A logic base:
     byte-identical module netlists, cells, base netlists and program TCL; semantically identical plan/config/W;
+  * (Week 2) access.mode r2 reproduces the historical R2 builds of A (75%) and P2 (67%) the same way;
   * invariance on the historical routed programs: the physically routed program DEFs of the validated R3 60% run,
     checked against the GENERATED program, satisfy every invariant (needs the local ORFS results; skipped if absent).
 """
@@ -28,7 +29,8 @@ def test_reference_has_not_drifted():
 
 
 @docker
-@pytest.mark.parametrize('cfgname', ['golden_r3_ubp3_u60', 'golden_r3_ubp3_u52', 'golden_r3_pc2_u67', 'r3_g1_u75'])
+@pytest.mark.parametrize('cfgname', ['golden_r3_ubp3_u60', 'golden_r3_ubp3_u52', 'golden_r3_pc2_u67', 'r3_g1_u75',
+                                     'golden_r2_g1_u75', 'golden_r2_pc2_u67'])
 def test_generator_reproduces_validated_design(cfgname, tmp_path):
     c = C.load(HERE / 'configs' / f'{cfgname}.json')
     pipeline.generate(c, tmp_path)
