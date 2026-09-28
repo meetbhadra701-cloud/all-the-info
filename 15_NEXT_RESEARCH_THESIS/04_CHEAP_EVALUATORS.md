@@ -282,3 +282,65 @@ The open tool's gap on XOR-dominated miters is **real and categorical**: at leas
 - The closing technique (GF(2) linear algebra for XOR-dense regions, BDDs, Gauss–Jordan SAT) is published (01 §1.1).
 
 **Classification: ENGINEERING** (a known principle to be integrated into an open tool). LIN-CEC stays killed as a research thesis.
+
+## XACC-E2 — physical cost at PE level: **PASS with structural headroom** (R_cost = 0.738)
+
+`experiments/xacc/physical.py` → `results/e2_decision.json`, `results/e2_records.jsonl`, `results/e2_loop_paths.json`; the RTL is `rtl/xacc_pe.v`.
+
+All 15 design points (4 PEs + readout, × 3 clock targets) are **valid**:
+- ORFS sky130hd flow completed, with 0 detailed-routing violations;
+- hold slack ≥ 0 at tt, ss and ff;
+- the post-route `6_final.v` matches its golden on 1,024 streams × about 4,100 cycles through our own AIGER simulator (the readout: 1,024 × 398 cycles, including RNE ties).
+
+Before the physical runs, every RTL passed with mutation controls. The design mutants were detected for EXACT and FP32_RNE1; the reference mutants (59-bit wrap, RZ-for-RNE) were detected.
+
+**Best point per design** (lowest A×T at ss; area = final standard cells excluding fill, decap and taps; T = clock − worst setup slack; EXTRACTED):
+
+| Design | Target | Area (µm²) | T_tt (ns) | T_ss (ns) | T_ff (ns) | A×T_ss (µm²·ns) | Limiting path at ss |
+|---|---|---|---|---|---|---|---|
+| **EXACT** (60-bit accumulator) | 8.0 | 47,593 | 8.23 | 17.47 | 4.96 | **0.832 M** | common front end (A1 → S1), not the loop |
+| FP32_RNE1 (IEEE RNE, 1-cycle loop) | 8.0 | 66,075 | 11.59 | 23.23 | 7.19 | 1.535 M | accumulation loop (acc) |
+| FP32_RZ1 (truncating, 1-cycle loop) | 8.0 | 63,388 | 10.84 | 21.41 | 6.77 | 1.357 M | accumulation loop (acc) |
+| **FP32_RNE_I2** (2-stage loop, 2 interleaved accumulators) | 8.0 | 62,731 | 9.08 | 18.27 | 5.58 | **1.146 M** (strongest FP32) | loop stage B1 (acc → sum3) |
+| READOUT (60-bit → FP32 RNE, shared) | 8.0 | 13,355 | 7.78 | 15.51 | 4.82 | — | — |
+
+All three targets of every design are in `results/e2_decision.json`. The other targets give 0.87–0.91 M for EXACT and 1.23–1.60 M for the FP32 designs.
+
+**Decision (pre-registered).**
+- A_EXACT,eff = 47,593 + 13,355 / 16 = 48,428 µm².
+- R_cost = 48,428 × 17.472 / 1.146 M = **0.738**, which is ≤ 0.90: **PASS with structural headroom.**
+- The strongest competitor is FP32_RNE_I2, the throughput-optimal FP32 structure.
+
+**Reported sensitivities (not decisive):**
+
+| Reading | Value |
+|---|---|
+| R_cost with N_share = 1 (a readout per PE; the conservative bound) | 0.929 (parity) |
+| R_cost with N_share = 64 | 0.729 |
+| R_cost at tt / ff | 0.700 / 0.686 |
+| Area-only ratio (N_share = 16) | 0.772 |
+| Against the truncating FP32_RZ1 | 0.62 |
+| Against the IEEE single-cycle FP32_RNE1 | 0.55 |
+| Readout at its best-A×T point instead of its minimum area (**clarification D3**) | 0.738 (the same point) |
+
+**Accumulation-loop paths** (the pre-registered diagnostic; slack into the accumulator registers, `loop_paths.tcl`):
+
+| Design | Loop path, tt (ns) | Loop path, ss (ns) | Is the loop the limiter? |
+|---|---|---|---|
+| EXACT | 3.2–4.0 | 6.3–7.9 | **no**: the front end (8.2 / 17.5 ns) limits T |
+| FP32_RNE1 | 11.6–11.7 | 23.2–23.3 | yes |
+| FP32_RZ1 | 10.8–11.0 | 21.3–21.6 | yes |
+| FP32_RNE_I2 | stage B2 5.0–6.5; stage B1 about 9.1 | stage B2 9.8–12.9; stage B1 about 18.3 | yes (B1) |
+
+**Reading.**
+- The mechanism's causal claim is borne out physically. Removing normalisation and rounding from the loop makes the exact accumulation loop **2.3–2.9× shorter** than the FP32 loops, so short that it no longer limits the PE.
+- The exact PE is also **23% smaller**, despite 60 bits of state, a 48-bit shifter and the amortised readout.
+- **What E2 does not show:**
+  - (i) array-level storage (tensor memory / register file) for 60-bit accumulators;
+  - (ii) a vendor-style *fused multi-term* FP accumulator (several block contributions per cycle with shared alignment), which is the strongest industrial baseline and was not implemented;
+  - (iii) energy;
+  - (iv) a flow where the front end is pipelined finer. At the pre-registered stage boundaries, every design shares the same front end, so the ratio is a PE-level ratio, not an accumulator-only one.
+
+**Classification consequence.** E2 cannot revive XACC: its pre-registered importance claim was killed by E1b. E2 settles the *cost* half of the near-miss (06) with structural headroom. It also exposes a second, separate route: exact accumulation as an **efficiency** mechanism, independent of determinism. That would be a new candidate with its own importance argument and its own strongest baseline, the fused vendor accumulator (08).
+
+**Deviation D3 (clarification, logged).** The pre-registration did not say which readout point to amortise. The minimum valid readout area was used, because the readout sits off the loop and converts one result per K/16 cycles per PE, so its period does not limit throughput. The alternative choice gives the same point and the same R here.

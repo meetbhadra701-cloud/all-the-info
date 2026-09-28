@@ -15,7 +15,7 @@ Decisive claims never rest on [S] alone.
 The scan deliberately starts where the archive's earlier searches stopped.
 - The 2026-09-23 investigation's register of about 45 probes found **no survivor** (`10_OPUS_5_5_INVESTIGATION_2026-09-23/INVESTIGATION_REPORT.md` §B–C).
 - TRACE closed open arithmetic-LEC certification (`11_TRACE_YOSYS_FRONTIER_PROSECUTION/`).
-- Waves 10–11 closed or parked mapping, elastic buffering and timing repair (`12_…/06_FINAL_DECISION.md`, `13_WAVE_11_…/04_HYPOTHESIS_EVOLUTION.md`).
+- Waves 10–11 closed or parked mapping, elastic buffering and timing repair (`12_WAVE_10_EXPERIMENTAL_DISCOVERY/06_FINAL_DECISION.md`, `13_WAVE_11_SCIENTIFIC_HYPOTHESIS_EVOLUTION/04_HYPOTHESIS_EVOLUTION.md`).
 - UBP is closed (`14_FABLE_5_1_SCIENTIFIC_DISCOVERY/22_UBP_PROJECT_CLOSEOUT.md`).
 
 These are not re-searched here. They are the exclusion set, together with `05_KILLED_CANDIDATES/RESEARCH_KILL_DATABASE.md` and the rediscovery warnings in `00_START_HERE/MASTER_RESEARCH_HANDOFF.md` §9.

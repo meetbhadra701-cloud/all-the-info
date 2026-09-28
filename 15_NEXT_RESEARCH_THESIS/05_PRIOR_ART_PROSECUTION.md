@@ -31,13 +31,13 @@ The claimed effect: bitwise order-invariance, where FP32 accumulation is order-s
 | Determinism by fixing reduction order | Batch-invariant kernels (Thinking Machines) [S]; TBIK (2511.17826) [S]; fixed-configuration upcast GEMM (2609.25624) [S]; compiler enforcement and static verification (2609.11356) [S] | Different mechanism for the same goal (software, order-fixing rather than order-free) |
 | Width bound from the scale format | The 60 / 92 / 533–561-bit table (04 E1a), from exhaustive enumeration | **Not found** in any summary or repository |
 | FP32-accumulated NVFP4 is exact in benign regimes, with a sharp order-sensitivity transition at a span of about 11–13 binades | 04 post-hoc | **Not found**. Closest are generic statements that FP accumulation is order-dependent [S], and tensor-core accumulation models (2512.07004) [S] |
-| Cost of exact vs FP32 accumulation at PE level | Qualcomm FP8 vs INT8 (2303.17951) [S] argues FP accumulators beat Kulisch for FP8-E4 (per product) | **Opposing prior claim**; E2 measures the NVFP4 per-block case (appended to 04 when complete) |
+| Cost of exact vs FP32 accumulation at PE level | Qualcomm FP8 vs INT8 (2303.17951) [S] argues FP accumulators beat Kulisch for FP8-E4 (per product) | **Opposing prior claim, contradicted for the NVFP4 per-block case.** E2 measured A×T_ss 0.738× the strongest FP32 accumulator on SKY130 (04). The strongest *vendor* fused multi-term accumulator was not implemented |
 
 **Classification: OBVIOUS COMPOSITION of known ingredients, unless the regime-plus-cost interaction is established.**
 - A long accumulator for a narrow format is the textbook use of Kulisch accumulation. A reviewer would call "use a Kulisch accumulator for NVFP4" obvious.
 - What would be distinct is the *measured interaction*: the phase transition, together with a real-model demonstration that NVFP4 GEMMs cross it, together with exact accumulation at ≤ FP32 cost.
 
-  That is a non-obvious, quantitative statement no found source makes. It is the only route to "distinct contribution", and it is *unproven*: the transition is post hoc on synthetic outliers, and the cost result is pending or measured separately.
+  That is a non-obvious, quantitative statement no found source makes. It is the only route to "distinct contribution", and it is *unproven*: the transition is post hoc on synthetic outliers, The cost half is now measured at PE level (E2), but only against single-contribution FP32 adders.
 
 **Full texts that could overturn the classification:**
 - 2606.23698 and 2609.25624, for any exact-accumulation or determinism hardware discussion of FP4/FP8;

@@ -29,7 +29,7 @@ This document records the **strongest near-miss**, stated in the required final 
 | Mechanism exactness | Exact path 100% order-invariant, equal to an independent element-level integer GEMM (04 E1b); PE RTL and post-route netlists match the exact golden, mutants detected (04 E2) | MEASURED | holds |
 | **Premise on benign data** | FP32 accumulation of NVFP4 blocks is order-invariant for ≥ 99.9% of outputs on Gaussian, Student-t and 20×-outlier data (04 E1b) | MEASURED | **false, which killed XACC as registered** |
 | Premise in regime Z | ×1000 outliers: 97.5–100% of outputs order-sensitive, thousands of ULP spread (04 post hoc) | MEASURED, **post hoc, synthetic** | plausible; not established |
-| Cost at PE level | 04 E2: see the decision table there | EXTRACTED | E2 in progress at this checkpoint (see 04 Part 2 when complete) |
+| Cost at PE level | 04 E2: exact vs IEEE-RNE, truncating and pipelined-interleaved FP32 accumulator PEs; 15 valid, verified SKY130 layouts; extracted tt/ss/ff | EXTRACTED | **PASS with structural headroom:** A×T_ss 0.738× the strongest FP32 design (0.929 with a readout per PE); area 0.77×; accumulation loop 2.3–2.9× shorter |
 
 ## Why it is not selected
 
@@ -41,4 +41,15 @@ This document records the **strongest near-miss**, stated in the required final 
 
 - **Real-model block-scale span statistics and order sensitivity** under deployed NVFP4 recipes, with and without rotation (08, XACC-HDR-1). This needs model weights; they cannot be downloaded in this environment.
 - **Full texts** of the tensor-core accumulation models (2512.07004) and the NVFP4 hardware reports. They say whether vendors already accumulate NVFP4 block contributions exactly, which would make the mechanism pre-existing.
-- **An array-level cost that includes accumulator storage** (tensor memory or register-file capacity). E2 measures PE-local accumulators only.
+- **An array-level cost that includes accumulator storage** (tensor memory or register-file capacity), **and a vendor-style fused multi-term FP accumulator baseline.** E2 measures PE-local, one-block-per-cycle accumulators against single-contribution FP32 adders.
+
+## A second route the evidence opened (not a result)
+
+E2 shows exact accumulation is *cheaper* than FP32 accumulation at PE level, independent of any determinism argument. That suggests a distinct candidate: **exact accumulation as an efficiency mechanism for block-scaled 4-bit matrix units.**
+
+It is not selected here, and not claimed. By the rules it starts at rule 1, with:
+- its own importance case: the accumulator's share of real tensor-core area and energy;
+- its own strongest baseline: the vendor fused, truncating multi-term accumulators described by the tensor-core models of 2512.07004, whose full text is blocked here;
+- its own pre-registration.
+
+See 08.
