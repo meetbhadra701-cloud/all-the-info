@@ -176,7 +176,10 @@ def decide():
     res = {'rows': rows, 'best': best}
     need = ['pe_exact', 'pe_fp32_rne1', 'pe_fp32_rz1', 'pe_fp32_rne_i2', 'readout60']
     if all(k in best for k in need):
-        ro = best['readout60']['area_um2']
+        # the readout is off the accumulation loop and shared by N_share PEs (it converts one result per
+        # K/16 cycles per PE), so its own period does not limit throughput: use its smallest valid area
+        ro = min(r['area_um2'] for r in rows if r.get('top') == 'readout60' and r.get('valid'))
+        res['readout_area_um2'] = ro
         ex = best['pe_exact']
         eff = {n: ex['area_um2'] + ro / n for n in (1, 16, 64)}
         comp = {k: best[k]['AxT_ss'] for k in ('pe_fp32_rne1', 'pe_fp32_rz1', 'pe_fp32_rne_i2')}
@@ -185,6 +188,9 @@ def decide():
         # ratio_rule reports competitor/candidate; the pre-registered R_cost is its inverse
         res['R_cost'] = 1.0 / res['decision']['R']
         res['R_cost_by_share'] = {n: eff[n] * ex['T_ss'] / min(comp.values()) for n in eff}
+        # deviation D3 check: the same ratio with the readout point chosen by its own A x T_ss instead of min area
+        ro2 = best['readout60']['area_um2']
+        res['R_cost_readout_at_best_axt_point'] = (ex['area_um2'] + ro2 / 16) * ex['T_ss'] / min(comp.values())
         res['verdict'] = ('PASS (structural headroom)' if res['R_cost'] <= 0.90 else
                           'PASS (cost parity)' if res['R_cost'] <= 1.10 else 'KILL')
         for c in ('tt', 'ff'):
