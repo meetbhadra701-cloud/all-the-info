@@ -24,6 +24,8 @@ python3 -m ubpgen program  ubpgen/configs/golden_r3_ubp3_u60.json --tags w1,w2  
 python3 -m ubpgen summary  ubpgen/configs/golden_r3_ubp3_u60.json   # table + A x T
 python3 -m ubpgen all      CONFIG                            # everything, in order; non-zero exit on any failure
 python3 -m pytest -q ubpgen/tests                            # regression suite (~2 min; docker for most tests)
+python3 -m ubpgen.tables ubpgen/configs/suite_r3_tables.json --run   # the R3 tables from one command (resumable; hours)
+python3 -m ubpgen.snapshot ubpgen/configs/suite_r3_tables.json ubpgen/results/<dir>   # commit-sized provenance snapshot
 ```
 
 Outputs go to `ubpgen_runs/<name>/`, which is not committed. `pipeline.py` documents the layout. Each output directory holds `config.json`, a resolved configuration with every default explicit. It also holds `generation.json`, which records:
@@ -80,7 +82,8 @@ Every verification and physical event appends a provenance-stamped record to `re
 | `verify.py` | Yosys → AIGER → own simulators vs numpy; oracle and program mutation controls |
 | `invariance.py` | frozen-base checks (validated R3 check + programmable-connectivity check) |
 | `pipeline.py` | generate → verify → base → programs → summary, with records |
-| `golden.py` | comparison with the historical implementation (BYTE / SEMANTIC / DIFF) |
+| `golden.py` | comparison with the historical implementation (BYTE / SEMANTIC / DIFF), incl. the frozen physical base |
+| `tables.py`, `snapshot.py` | suite runner + R3 tables vs historical records; provenance snapshot |
 | `_legacy.py` | the single import point of the validated research code (reused, never modified) |
 
 **Reuse policy.** The following components were validated in the R3 run, so `_legacy.py` imports them unchanged:

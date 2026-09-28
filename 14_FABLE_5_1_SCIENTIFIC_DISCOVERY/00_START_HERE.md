@@ -33,6 +33,13 @@
     - P2 rebuilt with the same taps is weaker as built. With its line drivers sized (post hoc) it would be the strongest competitor, at 1.48× (52%) / 1.60–1.73× (60%).
 - **Novelty** (G1 plus the final narrow check): likely an obvious composition. The physical results and the reachability / segmentation law are the contribution. Provisional until the blocked full texts are read.
 
+## Development (after the decision)
+
+**Week 1 (§H) is complete: `ubpgen/`** is a parametric generator for B, A and P2 with R3 access. See **`20_WEEK1_DEVLOG.md`**.
+- It reproduces the validated R3 designs bit-for-bit, down to identical frozen-base ODBs.
+- Its 12 routed programs match the historical records with 0 differences.
+- One command rebuilds the R3 tables: `python3 -m ubpgen.tables ubpgen/configs/suite_r3_tables.json --run`.
+
 ## Read in this order
 
 | File | What it contains |
