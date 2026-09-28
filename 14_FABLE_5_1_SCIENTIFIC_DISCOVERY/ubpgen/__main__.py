@@ -3,7 +3,8 @@
   python3 -m ubpgen generate CONFIG [--out DIR]          # generate every artifact (no PnR)
   python3 -m ubpgen verify   CONFIG [--out DIR] [--tags w1,w2] [--no-mutations]   # pre-PnR W@x checks
   python3 -m ubpgen base     CONFIG [--out DIR]          # ORFS flow of the W-independent base, frozen (sha256)
-  python3 -m ubpgen program  CONFIG [--out DIR] --tags w1,...   # route/STA/post-PnR check/invariance per program
+  python3 -m ubpgen program  CONFIG [--out DIR] --tags w1,...   # route/STA/post-PnR check/invariance/sign-off
+  python3 -m ubpgen signoff  CONFIG [--out DIR] --tags w1,...   # sign-off (OpenRCX + tt/ss/ff) of routed programs
   python3 -m ubpgen summary  CONFIG [--out DIR]          # A x T and per-program table
   python3 -m ubpgen all      CONFIG [--out DIR]          # generate -> verify -> base -> every program -> summary
   python3 -m ubpgen params                               # print the documented parameter table
@@ -25,11 +26,13 @@ RUNS = Path(__file__).resolve().parent.parent / 'ubpgen_runs'
 
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(prog='ubpgen')
-    ap.add_argument('cmd', choices=['generate', 'verify', 'base', 'program', 'summary', 'all', 'params'])
+    ap.add_argument('cmd', choices=['generate', 'verify', 'base', 'program', 'signoff', 'summary', 'all', 'params'])
     ap.add_argument('config', nargs='?')
     ap.add_argument('--out')
     ap.add_argument('--tags')
     ap.add_argument('--no-mutations', action='store_true')
+    ap.add_argument('--prune', action='store_true', help='base: delete intermediate stage databases after the freeze')
+    ap.add_argument('--no-signoff', action='store_true', help='program: skip the sign-off step')
     a = ap.parse_args(argv)
     if a.cmd == 'params':
         for k, (d, doc) in C.PARAMS.items():
@@ -47,12 +50,21 @@ def main(argv=None) -> int:
         for r in pipeline.verify_prepnr(cfg, root, tags, not a.no_mutations):
             print(json.dumps(r)); ok &= r['pass']
     if a.cmd in ('base', 'all') and ok:
-        print(json.dumps(pipeline.build_base(cfg, root)))
+        m = pipeline.build_base(cfg, root, prune=a.prune)
+        print(json.dumps(m))
+        v = m.get('tap_rule_verification')
+        if v is not None and not (v['meets'] and v['masters_ok']):
+            print('TAP RULE RE-CHECK FAILED on the built geometry: rebuild once with drivers.post_build_step = 1 (21_WEEK2 1.4)')
+            ok = False
     if a.cmd in ('program', 'all') and ok:
         for t in tags or [p['tag'] for p in cfg.raw['programs']]:
-            r = pipeline.run_program(cfg, root, t)
+            r = pipeline.run_program(cfg, root, t, with_signoff=not a.no_signoff)
             print(json.dumps({k: r[k] for k in ('tag', 'drt_final', 'drt_iterations_run', 'setup_ws_ns', 'prog_setup_ws_ns', 'pass')}))
             ok &= r['pass']
+    if a.cmd == 'signoff':
+        for t in tags or [p['tag'] for p in cfg.raw['programs']]:
+            r = pipeline.run_signoff(cfg, root, t)
+            print(json.dumps({t: {c: (round(v['setup_ws_ns'], 4), round(v['hold_ws_ns'], 4)) for c, v in r['corners'].items()}}))
     if a.cmd in ('summary', 'all'):
         s = pipeline.summarize(cfg, root)
         print(json.dumps({k: v for k, v in s.items() if k != 'programs'}))

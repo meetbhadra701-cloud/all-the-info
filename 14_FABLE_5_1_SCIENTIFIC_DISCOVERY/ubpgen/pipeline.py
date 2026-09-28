@@ -18,7 +18,7 @@ import hashlib
 import json
 from pathlib import Path
 
-from . import access, arch, invariance, netlist, orfs, programs, provenance, rtl, verify
+from . import access, arch, drivers, invariance, netlist, orfs, programs, provenance, rtl, signoff, verify
 from .config import Config
 
 GENERATED = ('rtl', 'cells', 'netlist', 'layout', 'orfs', 'programs')
@@ -44,17 +44,25 @@ def generate(cfg: Config, root: Path, config_dir: Path | None = None) -> dict:
     root = root.resolve()
     root.mkdir(parents=True, exist_ok=True)
     orfs.check_image(cfg)
-    (root / 'config.json').write_text(cfg.to_json() + '\n')
-    access.write_cells(root)
+    access.write_cells(cfg, root)
     mods = rtl.synthesize(cfg, root / 'rtl')
     netlist.link(cfg, root, mods)
+    sizing = None
+    if access.w2(cfg):                     # Week-2 rule: resolve (or check) the tap class before the taps exist
+        sizing = drivers.resolve(cfg, root)
+        want = cfg.raw['drivers']['tap_class']
+        if want is not None and want != sizing['class']:
+            raise RuntimeError(f"drivers.tap_class {want} differs from the rule's choice {sizing['class']}")
+        cfg = cfg.with_overrides(drivers__tap_class=sizing['class'])
+        drivers.write_record(root, {'selection': sizing})
+    (root / 'config.json').write_text(cfg.to_json() + '\n')
     access.expand(cfg, root)
     netlist.write_mapping(cfg, root)
     access.write_plan(cfg, root)
     orfs.write(cfg, root)
     progs = [programs.write(cfg, root, spec, config_dir) for spec in cfg.raw['programs']]
     gen = provenance.record(cfg, 'generate', {
-        'counts': arch.counts(cfg), 'modules': mods, 'programs': progs,
+        'counts': arch.counts(cfg), 'modules': mods, 'programs': progs, 'driver_sizing': sizing,
         'module_facts': rtl.module_plan(cfg)['facts'], 'files': file_hashes(root)})
     (root / 'generation.json').write_text(json.dumps(gen, indent=1))
     return gen
@@ -62,6 +70,7 @@ def generate(cfg: Config, root: Path, config_dir: Path | None = None) -> dict:
 
 def verify_prepnr(cfg: Config, root: Path, tags=None, mutations=True) -> list[dict]:
     root = root.resolve()
+    cfg = resolved(cfg, root)
     out = []
     for spec in cfg.raw['programs']:
         if tags and spec['tag'] not in tags:
@@ -72,18 +81,48 @@ def verify_prepnr(cfg: Config, root: Path, tags=None, mutations=True) -> list[di
     return out
 
 
-def build_base(cfg: Config, root: Path) -> dict:
+def build_base(cfg: Config, root: Path, prune: bool = False) -> dict:
     root = root.resolve()
+    cfg = resolved(cfg, root)
     m = orfs.build_base(cfg, root)
+    if access.w2(cfg):     # the pre-registered verification of the tap-class rule on the built geometry
+        m['tap_rule_verification'] = drivers.verify_built(cfg, root, orfs.base_paths(cfg, root)['def'])
+        drivers.write_record(root, {'verification': m['tap_rule_verification']})
+    if prune:
+        m['pruned_stage_files'] = orfs.prune_base(cfg, root)
     rec = provenance.record(cfg, 'physical-base', {'result': m})
     (root / 'records').mkdir(exist_ok=True)
     (root / 'records' / 'base.json').write_text(json.dumps(rec, indent=1))
     return m
 
 
-def run_program(cfg: Config, root: Path, tag: str) -> dict:
-    """Route (met4-met5 only), STA, post-PnR functional check, invariance -- one record."""
+def resolved(cfg: Config, root: Path) -> Config:
+    """The configuration as generated (config.json: the W2 tap class resolved), checked against the given one."""
+    p = root.resolve() / 'config.json'
+    if not p.exists():
+        return cfg
+    from .config import resolve
+    gen = resolve(json.loads(p.read_text()))
+    a, b = json.loads(gen.to_json()), json.loads(cfg.to_json())
+    a['drivers']['tap_class'] = b['drivers']['tap_class'] = None
+    if a != b:
+        raise RuntimeError(f'{p} was generated from a different configuration')
+    return gen
+
+
+def run_signoff(cfg: Config, root: Path, tag: str) -> dict:
+    """Merged base + program OpenRCX extraction and tt/ss/ff STA of an already-routed program (appends a record)."""
     root = root.resolve()
+    cfg = resolved(cfg, root)
+    rec = signoff.run(cfg, root, tag)
+    _append(root, 'signoff.jsonl', provenance.record(cfg, f'signoff {tag}', {'result': rec}))
+    return rec
+
+
+def run_program(cfg: Config, root: Path, tag: str, with_signoff: bool = True) -> dict:
+    """Route (met4-met5 only), STA, post-PnR functional check, invariance, sign-off -- one record."""
+    root = root.resolve()
+    cfg = resolved(cfg, root)
     pd = root / 'programs' / tag
     bp = orfs.base_paths(cfg, root)
     sha = (root / 'physical' / 'base_odb.sha256').read_text().split()[0]
@@ -94,6 +133,8 @@ def run_program(cfg: Config, root: Path, tag: str) -> dict:
     rec['invariance'] = invariance.check(bp['def'], pd / 'pnr_program.def', pd / 'prog.json', bp['odb'], sha)
     rec['pass'] = (rec['drt_final'] == 0 and rec['post_pnr']['pass'] and rec['invariance']['all_invariants_hold'])
     _append(root, 'physical.jsonl', provenance.record(cfg, f'physical-program {tag}', {'result': rec}))
+    if with_signoff and rec['drt_final'] == 0:
+        rec['signoff'] = run_signoff(cfg, root, tag)
     return rec
 
 

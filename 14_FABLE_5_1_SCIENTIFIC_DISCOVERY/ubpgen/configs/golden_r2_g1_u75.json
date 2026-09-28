@@ -1,0 +1,50 @@
+{
+ "_comment": "GOLDEN (Week 2): the historical R2 (single-tap structured) A build at 75%, unsized (LTAP). Historical: results/G2/g1s, base orfs/results/sky130hd/g2s_g1s_u75",
+ "name": "golden_r2_g1_u75",
+ "fabric": "g1",
+ "n": 64,
+ "m": 64,
+ "access": {
+  "mode": "r2",
+  "taps_per_line": 1
+ },
+ "layout": {
+  "util": 75
+ },
+ "programs": [
+  {
+   "tag": "w1",
+   "seed": 1001,
+   "p0": 0.4
+  },
+  {
+   "tag": "w2",
+   "seed": 1002,
+   "p0": 0.4
+  },
+  {
+   "tag": "w3",
+   "seed": 1003,
+   "p0": 0.8
+  },
+  {
+   "tag": "w4",
+   "seed": 1004,
+   "p0": 0.1
+  },
+  {
+   "tag": "w5",
+   "seed": 1005,
+   "p0": 0.4,
+   "same_rows": true
+  },
+  {
+   "tag": "w14",
+   "seed": 14,
+   "p0": 0.4
+  }
+ ],
+ "flow": {
+  "nickname": "g2s_g1s_u75"
+ }
+}

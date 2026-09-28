@@ -112,8 +112,9 @@ def mapping(cfg) -> dict:
     mp = {'lines': arch.lines(cfg), 'rows': {rowname(i): lpr for i in range(cfg.m)},
           'leaves_per_row': lpr, 'n_rows': cfg.m}
     K = cfg.K
+    from . import access
     mp.update({'taps_per_line': K, 'segment_rows': cfg.m // K,
-               'taps': {L: [f'lt_{L}_s{s}' for s in range(K)] for L in mp['lines']}})
+               'taps': {L: access.tap_names(cfg, L) for L in mp['lines']}})
     return mp
 
 

@@ -28,7 +28,14 @@ HIST = {
             'plan': G2 / 'cells' / 'struct_pc2r3.tcl'},
     'g1': {'logic': G2 / 'g1s', 'r3': None, 'modules': EXP / 'E6' / 'g1_n64', 'plan': None},
 }
-CELL_FILES = ['g2_cells.lef', 'g2_cells.lib', 'g2r3_cells.lef', 'g2r3_cells.lib', 'dont_touch_r3.tcl', 'pdn_m1rails.tcl']
+# access.mode r2: the historical single-tap structured (R2) builds -- one LTAP per line, g2_struct placement
+HIST_R2 = {
+    'ubp': {'logic': G2 / 'ubp3s', 'modules': EXP / 'E6' / 'ubp3_n64', 'plan': G2 / 'cells' / 'struct_ubp3s.tcl'},
+    'pc2': {'logic': G2 / 'pc2', 'modules': EXP / 'G3' / 'pc2_n64', 'plan': G2 / 'cells' / 'struct_pc2.tcl'},
+    'g1': {'logic': G2 / 'g1s', 'modules': EXP / 'E6' / 'g1_n64', 'plan': G2 / 'cells' / 'struct_g1s.tcl'},
+}
+CELL_FILES = ['g2_cells.lef', 'g2_cells.lib', 'g2r3_cells.lef', 'g2r3_cells.lib', 'dont_touch_r3.tcl', 'pdn_m1rails.tcl',
+              'dont_touch.tcl']
 
 
 def _cmp_bytes(a: Path, b: Path) -> str:
@@ -42,6 +49,10 @@ def mk_vars(text: str) -> dict:
 
 
 def compare(cfg, root: Path) -> dict:
+    if access.w2(cfg):
+        raise ValueError('golden comparison is defined for the historical (unsized) driver policy only')
+    if access.mode(cfg) == 'r2':
+        return compare_r2(cfg, root)
     h = HIST[cfg.fabric]
     res: dict[str, str] = {}
     notes: dict[str, str] = {}
@@ -113,6 +124,59 @@ def compare(cfg, root: Path) -> dict:
         res[f'programs/{t}/prog.json'] = 'SEMANTIC' if same else 'DIFF'
         if h['r3']:
             res[f'programs/{t}/prog.tcl'] = _cmp_bytes(pd / 'prog.tcl', h['r3'] / f'prog_{t}.tcl')
+    fails = {k: v for k, v in res.items() if v not in ('BYTE', 'SEMANTIC')}
+    return {'config': cfg.name, 'results': res, 'notes': notes, 'failures': fails, 'pass': not fails}
+
+
+def compare_r2(cfg, root: Path) -> dict:
+    """access.mode r2 (historical taps): the generated design against the historical R2 (g2_struct) build."""
+    h = HIST_R2[cfg.fabric]
+    res: dict[str, str] = {}
+    notes: dict[str, str] = {}
+    for p in sorted((root / 'rtl').glob('*.v')):
+        if not p.name.endswith('_gl_raw.v'):
+            res[f'rtl/{p.name}'] = _cmp_bytes(p, h['modules'] / p.name)
+    for c in CELL_FILES:
+        res[f'cells/{c}'] = _cmp_bytes(root / 'cells' / c, G2 / 'cells' / c)
+    res['netlist/netlist_logic.v'] = _cmp_bytes(root / 'netlist' / 'netlist_logic.v', h['logic'] / 'netlist_base.v')
+    res['netlist/netlist_base.v'] = _cmp_bytes(root / 'netlist' / 'netlist_base.v', h['logic'] / 'netlist_base.v')
+    a = json.loads((root / 'netlist' / 'mapping.json').read_text())
+    b = json.loads((h['logic'] / 'mapping.json').read_text())
+    res['netlist/mapping.json'] = ('BYTE' if (root / 'netlist' / 'mapping.json').read_bytes() == (h['logic'] / 'mapping.json').read_bytes()
+                                   else 'SEMANTIC' if all(a[k] == b[k] for k in ('lines', 'rows', 'leaves_per_row', 'n_rows')) else 'DIFF')
+    gen, old = (root / 'layout' / 'place_access.tcl').read_text(), h['plan'].read_text()
+    same_entries = access.parse_plan_r2(gen) == access.parse_plan_r2(old) and len(access.parse_plan_r2(old)) > 0
+    same_placer = gen.split('\n}\n', 1)[1] == old.split('\n}\n', 1)[1]
+    same_nb = re.search(r'set g2_nb (\d+)', gen).group(1) == re.search(r'set g2_nb (\d+)', old).group(1)
+    res['layout/place_access.tcl'] = 'SEMANTIC' if same_entries and same_placer and same_nb else 'DIFF'
+    notes['layout/place_access.tcl'] = 'plan entries, band count and placer TCL identical; only the comment line differs'
+    old_mk = h['logic'] / f'config_u{cfg.util}s.mk'
+    if not old_mk.exists():
+        res['orfs/config.mk'] = 'MISSING-HISTORICAL'
+    else:
+        a, b = mk_vars((root / 'orfs' / 'config.mk').read_text()), mk_vars(old_mk.read_text())
+        d = h['logic'].name
+        norm = lambda v: (v.replace(f'/work/{d}/netlist_base.v', '/work/netlist/netlist_base.v')
+                          .replace(f'/work/{d}/constraint.sdc', '/work/orfs/constraint.sdc')
+                          .replace(f'/work/cells/{h["plan"].name}', '/work/layout/place_access.tcl'))
+        diff = {k: (a.get(k), b.get(k)) for k in set(a) | set(b) if norm(str(a.get(k))) != norm(str(b.get(k)))}
+        res['orfs/config.mk'] = 'SEMANTIC' if not diff else 'DIFF'
+        notes['orfs/config.mk'] = 'same variables and values; paths differ only by the mount layout' if not diff else str(diff)
+    res['orfs/constraint.sdc'] = _cmp_bytes(root / 'orfs' / 'constraint.sdc', h['logic'] / 'constraint.sdc')
+    for spec in cfg.raw['programs']:
+        t = spec['tag']
+        pd = root / 'programs' / t
+        oldW = h['logic'] / f'W_{t}.npy'
+        res[f'programs/{t}/W.npy'] = ('MISSING-HISTORICAL' if not oldW.exists() else
+                                      'SEMANTIC' if np.array_equal(np.load(pd / 'W.npy'), np.load(oldW)) else 'DIFF')
+        oldp = h['logic'] / f'prog_{t}.json'
+        if not oldp.exists():
+            res[f'programs/{t}/prog.json'] = 'MISSING-HISTORICAL'
+            continue
+        new, old = json.loads((pd / 'prog.json').read_text()), json.loads(oldp.read_text())
+        same = new['nets'] == old['nets'] and new['zeros'] == old['zeros'] and new.get('ones', []) == old.get('ones', [])
+        res[f'programs/{t}/prog.json'] = 'SEMANTIC' if same else 'DIFF'
+        res[f'programs/{t}/prog.tcl'] = _cmp_bytes(pd / 'prog.tcl', h['logic'] / f'prog_{t}.tcl')
     fails = {k: v for k, v in res.items() if v not in ('BYTE', 'SEMANTIC')}
     return {'config': cfg.name, 'results': res, 'notes': notes, 'failures': fails, 'pass': not fails}
 

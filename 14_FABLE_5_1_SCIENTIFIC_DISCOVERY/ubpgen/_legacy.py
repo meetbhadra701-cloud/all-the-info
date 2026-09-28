@@ -21,6 +21,7 @@ import e6_build  # noqa: E402
 import g2_cells  # noqa: E402
 import g3_build  # noqa: E402
 import r3_build  # noqa: E402
+import g2_struct  # noqa: E402
 
 IMAGE = e5_build.IMAGE
 LIB = e5_build.LIB
@@ -53,3 +54,4 @@ g2_cells_main = g2_cells.main
 LTAP2_LEF = r3_build.LTAP2_LEF
 DONT_TOUCH_R3 = r3_build.DONT_TOUCH
 R3_PLACER = r3_build.PLACER
+R2_PLACER = g2_struct.PLACER

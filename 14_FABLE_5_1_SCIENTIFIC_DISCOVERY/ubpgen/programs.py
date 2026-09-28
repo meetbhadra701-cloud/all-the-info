@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from pathlib import Path
 
 import numpy as np
@@ -65,11 +66,14 @@ def derive(cfg, W: np.ndarray, tag: str, spec: dict) -> dict:
         if cfg.fabric == 'pc2':
             c = arch.row_constant(W, i)
             ones += [f'cst_{i}_{b}' for b in range(arch.CONST_BITS) if (c >> b) & 1]
-    seg = cfg.m // cfg.K
-    nets = {}
-    for L, sites in whole.items():
-        for s in sites:
-            nets.setdefault(f'{L}_s{int(s.split("_")[1]) // seg}', []).append(s)
+    if cfg.raw['access']['mode'] == 'r2':          # one tap lt_<line> per line: whole-line nets
+        nets = whole
+    else:                                          # R3: one net per (line, row segment), tap lt_<line>_s<seg>
+        seg = cfg.m // cfg.K
+        nets = {}
+        for L, sites in whole.items():
+            for s in sites:
+                nets.setdefault(f'{L}_s{int(s.split("_")[1]) // seg}', []).append(s)
     prog = {'tag': tag, **{k: v for k, v in spec.items() if k != 'tag'}, 'nets': nets, 'zeros': zeros, 'ones': ones,
             'n_prog_nets': len(nets), 'n_prog_pins': sum(len(v) for v in nets.values()) + len(nets)}
     return prog
@@ -89,8 +93,28 @@ def program_tcl(prog: dict) -> str:
 
 
 def program_verilog(base_netlist: str, prog: dict) -> str:
-    """Apply a program at the Verilog level (pre-PnR functional check). Reuses the validated g2_verify routine,
-    whose tap pattern `LTAP2? lt_<net>` matches the per-segment tap names lt_<line>_s<seg>."""
+    """Apply a program at the Verilog level (pre-PnR functional check). Same edits as the validated
+    g2_verify.program_verilog, with the tap master generalized from `LTAP2?` to any `LTAP*` master (the Week-2
+    physical taps LTAPB<k> / LTAPBW<k>); for LTAP / LTAP2 netlists the output is identical (tested)."""
+    text = base_netlist
+    for src, sites in prog['nets'].items():
+        text, k = re.subn(rf'(LTAP\w* lt_{src} \(\n\s+\.A\(\w+\))(\n)', rf'\g<1>,\n    .Z(pg_{src})\g<2>', text)
+        assert k == 1, src
+        text = re.sub(r'(\n  input clk;)', rf'\n  wire pg_{src};\1', text, count=1)
+        for s in sites:
+            text, k = re.subn(rf'(VSITE_BUF {s} \(\n)(\s+)(\.Z\()', rf'\g<1>\g<2>.A(pg_{src}),\n\g<2>\g<3>', text)
+            assert k == 1, s
+    for z in prog['zeros']:
+        text, k = re.subn(rf'VSITE_BUF {z} \(', f'VSITE_ZERO {z} (', text)
+        assert k == 1, z
+    for o in prog['ones']:
+        text, k = re.subn(rf'VSITE_ZERO {o} \(', f'VSITE_ONE {o} (', text)
+        assert k == 1, o
+    return text
+
+
+def program_verilog_legacy(base_netlist: str, prog: dict) -> str:
+    """The validated routine itself (LTAP / LTAP2 netlists only); kept for the equality test."""
     return g2_verify.program_verilog(base_netlist, prog)
 
 

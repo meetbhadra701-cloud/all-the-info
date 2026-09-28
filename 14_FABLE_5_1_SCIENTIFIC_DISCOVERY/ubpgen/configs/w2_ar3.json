@@ -1,0 +1,47 @@
+{
+ "_comment": "Week 2, A with R3 access, 75% (optional competitor) | drivers.tap_class frozen from the w2_load_rule selection at generation (buf_2: worst-case transition 0.2934 ns <= 0.30 ns)",
+ "name": "w2_ar3",
+ "fabric": "g1",
+ "n": 64,
+ "m": 64,
+ "access": {
+  "mode": "r3",
+  "taps_per_line": 4
+ },
+ "layout": {
+  "util": 75
+ },
+ "drivers": {
+  "policy": "w2_load_rule",
+  "slew_target_ns": 0.3,
+  "tap_class": "buf_2"
+ },
+ "programs": [
+  {
+   "tag": "w1",
+   "seed": 1001,
+   "p0": 0.4
+  },
+  {
+   "tag": "w2",
+   "seed": 1002,
+   "p0": 0.4
+  },
+  {
+   "tag": "w3",
+   "seed": 1003,
+   "p0": 0.8
+  },
+  {
+   "tag": "w4",
+   "seed": 1004,
+   "p0": 0.1
+  },
+  {
+   "tag": "w5",
+   "seed": 1005,
+   "p0": 0.4,
+   "same_rows": true
+  }
+ ]
+}

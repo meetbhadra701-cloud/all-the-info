@@ -1,0 +1,47 @@
+{
+ "_comment": "Week 2, P2, R2 access (the historically strongest P2), 67% | drivers.tap_class frozen from the w2_load_rule selection at generation (buf_12: worst-case transition 0.2681 ns <= 0.30 ns)",
+ "name": "w2_p2r2",
+ "fabric": "pc2",
+ "n": 64,
+ "m": 64,
+ "access": {
+  "mode": "r2",
+  "taps_per_line": 1
+ },
+ "layout": {
+  "util": 67
+ },
+ "drivers": {
+  "policy": "w2_load_rule",
+  "slew_target_ns": 0.3,
+  "tap_class": "buf_12"
+ },
+ "programs": [
+  {
+   "tag": "w1",
+   "seed": 1001,
+   "p0": 0.4
+  },
+  {
+   "tag": "w2",
+   "seed": 1002,
+   "p0": 0.4
+  },
+  {
+   "tag": "w3",
+   "seed": 1003,
+   "p0": 0.8
+  },
+  {
+   "tag": "w4",
+   "seed": 1004,
+   "p0": 0.1
+  },
+  {
+   "tag": "w5",
+   "seed": 1005,
+   "p0": 0.4,
+   "same_rows": true
+  }
+ ]
+}

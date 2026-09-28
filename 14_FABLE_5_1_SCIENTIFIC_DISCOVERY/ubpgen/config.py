@@ -14,6 +14,9 @@ from pathlib import Path
 
 FABRICS = ('ubp', 'g1', 'pc2')
 SPINE_DRIVERS = ('as_synthesized', 'drive4')
+ACCESS_MODES = ('r3', 'r2')
+DRIVER_POLICIES = ('historical', 'w2_load_rule')
+TAP_CLASSES = ('buf_1', 'buf_2', 'buf_4', 'buf_6', 'buf_8', 'buf_12', 'buf_16')   # sky130_fd_sc_hd, ascending area
 
 # name -> (default, description). "REQUIRED" marks a mandatory field.
 PARAMS = {
@@ -27,6 +30,17 @@ PARAMS = {
     'clock_ns': (3.0, 'SDC clock period'),
     'access.taps_per_line': (4, 'K: programmable taps per line (R3 segmented access); rows split into K segments; '
                                 'K divides m'),
+    'access.mode': ('r3', "'r3' = segmented access (K taps per line on a base spine, R3 track-aligned placer); "
+                          "'r2' = one tap per line (K = 1), R2 structured placer (the historical per-input baselines)"),
+    'drivers.policy': ('historical', "'historical' = validated abstract taps (R3: LTAP2, 2 sites, buf_4 timing; R2: LTAP, "
+                                     "8 sites) and line drivers as synthesized; 'w2_load_rule' = Week-2 physical rule "
+                                     "(21_WEEK2_TIMING_CLOSURE.md 1.4): tap = 2-site pad + buf_k (class by the worst-case "
+                                     "load rule), tap A-pin max_transition enforced on the spine by the flow's repair_design"),
+    'drivers.slew_target_ns': (0.30, "w2_load_rule: transition target S at tt (tap outputs at worst-case load; tap inputs)"),
+    'drivers.tap_class': (None, "w2_load_rule: resolved tap class (one of %s); null = resolved by the rule at generation; "
+                                "if given it must equal the rule's choice" % (TAP_CLASSES,)),
+    'drivers.post_build_step': (0, "w2_load_rule: 0 = the rule's class; 1 = the next larger class, the single rebuild the "
+                                   "rule permits when its re-check on the built geometry fails (21_WEEK2 1.4)"),
     'layout.util': (60, 'ORFS CORE_UTILIZATION (%)'),
     'layout.core_aspect_ratio': (1, 'ORFS CORE_ASPECT_RATIO'),
     'layout.core_margin': (2, 'ORFS CORE_MARGIN (um)'),
@@ -101,10 +115,11 @@ class Config:
 
     def with_overrides(self, **dotted) -> 'Config':
         raw = copy.deepcopy(self.raw)
+        default_nick = raw['flow']['nickname'] == f'ubpgen_{raw["name"]}'
         for k, v in dotted.items():
             _set(raw, k.replace('__', '.'), v)
-        if 'flow.nickname' not in {k.replace('__', '.') for k in dotted}:
-            raw['flow']['nickname'] = None
+        if default_nick and 'flow.nickname' not in {k.replace('__', '.') for k in dotted}:
+            raw['flow']['nickname'] = None       # follow a renamed design; an explicit nickname is kept
         return resolve(raw)
 
 
@@ -168,6 +183,19 @@ def validate(c: dict):
     u = c['layout']['util']
     need(isinstance(u, int) and 5 <= u <= 90, 'layout.util must be an integer percentage in [5, 90]')
     need(c['spine_driver'] in SPINE_DRIVERS, f'spine_driver must be one of {SPINE_DRIVERS}')
+    a, d = c['access'], c['drivers']
+    need(a['mode'] in ACCESS_MODES, f'access.mode must be one of {ACCESS_MODES}')
+    need(a['mode'] != 'r2' or K == 1, 'access.mode r2 has exactly one tap per line: access.taps_per_line must be 1')
+    need(d['policy'] in DRIVER_POLICIES, f'drivers.policy must be one of {DRIVER_POLICIES}')
+    need(d['policy'] == 'historical' or c['spine_driver'] == 'as_synthesized',
+         "spine_driver 'drive4' is the Week-1 netlist-level option; with drivers.policy w2_load_rule the flow sizes spines")
+    need(isinstance(d['slew_target_ns'], (int, float)) and 0.05 <= d['slew_target_ns'] <= 1.5,
+         'drivers.slew_target_ns must be in [0.05, 1.5] ns')
+    need(d['tap_class'] is None or d['tap_class'] in TAP_CLASSES, f'drivers.tap_class must be null or one of {TAP_CLASSES}')
+    need(d['tap_class'] is None or d['policy'] == 'w2_load_rule', 'drivers.tap_class is only meaningful with w2_load_rule')
+    need(d['post_build_step'] in (0, 1) and not isinstance(d['post_build_step'], bool),
+         'drivers.post_build_step must be 0 or 1 (one rebuild with the next class is the only permitted iteration)')
+    need(d['post_build_step'] == 0 or d['policy'] == 'w2_load_rule', 'drivers.post_build_step is only meaningful with w2_load_rule')
     if c['fabric'] == 'pc2':
         # 2 output bits/cycle over 7 cycles = 14-bit words; the per-row constant is 7 bits
         need(127 * c['n'] < 2 ** 13, 'pc2: n too large for its 14-bit output word (n <= 64)')

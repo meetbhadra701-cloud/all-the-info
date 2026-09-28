@@ -12,6 +12,7 @@ import re
 import subprocess
 from pathlib import Path
 
+from . import access
 from ._legacy import IMAGE, SCRIPTS
 
 SDC = """create_clock -name clk -period {period} [get_ports clk]
@@ -32,10 +33,12 @@ def config_mk(cfg) -> str:
         'SYNTH_NETLIST_FILES': '/work/netlist/netlist_base.v', 'VERILOG_FILES': '/work/netlist/netlist_base.v',
         'SDC_FILE': '/work/orfs/constraint.sdc',
         'CORE_ASPECT_RATIO': lay['core_aspect_ratio'], 'CORE_MARGIN': lay['core_margin'],
-        'ADDITIONAL_LEFS': '/work/cells/g2_cells.lef /work/cells/g2r3_cells.lef',
-        'ADDITIONAL_LIBS': '/work/cells/g2_cells.lib /work/cells/g2r3_cells.lib',
+        'ADDITIONAL_LEFS': ' '.join(f'/work/{p}' for p in access.orfs_lefs(cfg)),
+        'ADDITIONAL_LIBS': ' '.join(f'/work/{p}' for p in access.orfs_libs(cfg)),
         'PDN_TCL': '/work/cells/pdn_m1rails.tcl', 'MAX_ROUTING_LAYER': 'met3', 'MIN_CLK_ROUTING_LAYER': 'met2',
-        'POST_SYNTH_TCL': '/work/cells/dont_touch_r3.tcl',
+        # the historical R2 bases used the G2 hook (LTAP only); every other design the R3 hook (LTAP*)
+        'POST_SYNTH_TCL': '/work/cells/dont_touch.tcl' if (access.mode(cfg) == 'r2' and not access.w2(cfg))
+                          else '/work/cells/dont_touch_r3.tcl',
         'DESIGN_NICKNAME': cfg.nickname, 'CORE_UTILIZATION': lay['util'],
         'PWR_NETS_VOLTAGES': '', 'GND_NETS_VOLTAGES': '',
         'POST_PDN_TCL': '/work/layout/place_access.tcl',
@@ -111,6 +114,20 @@ def _freeze(cfg, root: Path) -> dict:
     return m
 
 
+KEEP = ('6_final.odb', '6_final.def', '6_final.sdc', '6_final.spef', '6_final.v', '1_synth.v', '1_2_yosys.v')
+
+
+def prune_base(cfg, root: Path) -> list[str]:
+    """After the freeze: delete the intermediate stage databases (regenerable; ~70% of the base's disk). The frozen
+    6_final.* files, the synthesized netlist, all logs and reports are kept."""
+    gone = []
+    for p in base_paths(cfg, root)['results'].iterdir():
+        if p.is_file() and p.name not in KEEP and p.suffix in ('.odb', '.gds'):
+            p.unlink()
+            gone.append(p.name)
+    return gone
+
+
 def gds_status(root: Path, rc: int) -> str:
     """The via-site and tap cells are abstract (no GDS), so KLayout's final GDS merge (after 6_final.odb/def and
     6_report are written) fails with exactly these errors; the historical R3 runs have the same rc 2. Any other
@@ -119,7 +136,8 @@ def gds_status(root: Path, rc: int) -> str:
         return 'ok'
     log = (root / 'physical' / 'orfs_base.log').read_text()
     errs = set(re.findall(r"\[ERROR\] LEF Cell '(\w+)' has no matching GDS", log))
-    only_gds = ('do-gds-merged] Error' in log and errs and errs <= {'LTAP2', 'LTAP', 'VSITE_BUF', 'VSITE_ZERO', 'VSITE_ONE'}
+    abstract = {'LTAP2', 'LTAP', 'VSITE_BUF', 'VSITE_ZERO', 'VSITE_ONE'}      # + the Week-2 taps LTAPB<k> / LTAPBW<k>
+    only_gds = ('do-gds-merged] Error' in log and errs and all(e in abstract or re.fullmatch(r'LTAPBW?\d+', e) for e in errs)
                 and log.count('] Error') == log.count('gds-merged] Error') + log.count('6_1_merged.gds] Error'))
     return 'expected-failure' if only_gds else 'unexpected-failure'
 

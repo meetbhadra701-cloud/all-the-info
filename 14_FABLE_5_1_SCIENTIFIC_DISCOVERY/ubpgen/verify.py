@@ -20,11 +20,12 @@ import numpy as np
 from . import arch, programs
 from ._legacy import LIB, dock, read_aag_seq, sim_bitplane, sim_seq
 
-LIBS = [LIB, '/work/cells/g2_cells.lib', '/work/cells/g2r3_cells.lib']
+CUSTOM_LIBS = ['cells/g2_cells.lib', 'cells/g2r3_cells.lib', 'cells/w2_cells.lib']
 
 
 def to_aag(root: Path, netlist_rel: str, aag_rel: str):
-    rl = ' '.join(f'read_liberty -ignore_miss_func {l};' for l in LIBS)
+    libs = [LIB] + [f'/work/{c}' for c in CUSTOM_LIBS if (root / c).exists()]
+    rl = ' '.join(f'read_liberty -ignore_miss_func {l};' for l in libs)
     p = dock(f"yosys -q -p '{rl} read_verilog {netlist_rel}; hierarchy -top top; flatten; synth -top top -noabc; "
              f"dffunmap; setundef -zero -init; aigmap; opt_clean; write_aiger -ascii -symbols {aag_rel}'", root)
     if p.returncode != 0:
@@ -53,10 +54,11 @@ def program_mutation(cfg, prog: dict) -> tuple[dict, str]:
     p = copy.deepcopy(prog)
     src = next(iter(p['nets']))
     site = p['nets'][src][0]
-    line, seg = src.rsplit('_s', 1)
+    r3 = cfg.raw['access']['mode'] == 'r3'
+    line, seg = src.rsplit('_s', 1) if r3 else (src, None)
     band_of = {L: b for b, ls in arch.band_lines(cfg).items() for L in ls}
     others = [L for L in arch.band_lines(cfg)[band_of[line]] if L != line]
-    new = f'{others[0]}_s{seg}'
+    new = f'{others[0]}_s{seg}' if r3 else others[0]
     p['nets'][src].remove(site)
     if not p['nets'][src]:
         del p['nets'][src]

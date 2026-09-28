@@ -1,0 +1,89 @@
+{
+ "_comment": "Week 2 decision table (21_WEEK2_TIMING_CLOSURE.md 1.5 / 1.7). role: B = the UBP point that decides (60%); competitor = the pre-registered decision set (Week-2 physical model); historical = unsized designs, re-timed by the same sign-off, reported but not decision competitors; B52 = the 52% sensitivity. Fallback designs (A at 70%, P2 at 60%) are added here only if a pre-registered point fails to route. counterpart: the unsized (historical-policy) build of the same design, for the incremental flow-sizing cost of the Week-2 policy (base_def given when the build is the historical G2 one, not a ubpgen run).",
+ "name": "suite_week2",
+ "tags": [
+  "w1",
+  "w2",
+  "w3",
+  "w4",
+  "w5"
+ ],
+ "kill_ratio": 1.5,
+ "designs": [
+  {
+   "key": "B60_hist",
+   "config": "golden_r3_ubp3_u60.json",
+   "label": "UBP3-R3 60% unsized (historical)",
+   "role": "historical"
+  },
+  {
+   "key": "B60",
+   "config": "w2_b60.json",
+   "label": "UBP3-R3 60% physically sized",
+   "role": "B",
+   "counterpart": {
+    "key": "B60_hist"
+   }
+  },
+  {
+   "key": "AR2",
+   "config": "w2_ar2.json",
+   "label": "A-R2 75% physically sized",
+   "role": "competitor",
+   "counterpart": {
+    "config": "golden_r2_g1_u75.json",
+    "base_def": "experiments/results/G2/orfs/results/sky130hd/g2s_g1s_u75/base/6_final.def"
+   }
+  },
+  {
+   "key": "AR3",
+   "config": "w2_ar3.json",
+   "label": "A-R3 75% physically sized",
+   "role": "competitor",
+   "optional": true,
+   "counterpart": {
+    "config": "r3_g1_u75.json"
+   }
+  },
+  {
+   "key": "P2R3_hist",
+   "config": "golden_r3_pc2_u67.json",
+   "label": "P2-R3 67% unsized (historical)",
+   "role": "historical"
+  },
+  {
+   "key": "P2R3",
+   "config": "w2_p2r3.json",
+   "label": "P2-R3 67% physically sized",
+   "role": "competitor",
+   "counterpart": {
+    "key": "P2R3_hist"
+   }
+  },
+  {
+   "key": "P2R2",
+   "config": "w2_p2r2.json",
+   "label": "P2-R2 67% physically sized",
+   "role": "competitor",
+   "counterpart": {
+    "config": "golden_r2_pc2_u67.json",
+    "base_def": "experiments/results/G2/orfs/results/sky130hd/g2s_pc2_u67/base/6_final.def"
+   }
+  },
+  {
+   "key": "B52_hist",
+   "config": "golden_r3_ubp3_u52.json",
+   "label": "UBP3-R3 52% unsized (historical)",
+   "role": "historical"
+  },
+  {
+   "key": "B52",
+   "config": "w2_b52.json",
+   "label": "UBP3-R3 52% physically sized",
+   "role": "B52",
+   "counterpart": {
+    "key": "B52_hist"
+   }
+  }
+ ]
+}
