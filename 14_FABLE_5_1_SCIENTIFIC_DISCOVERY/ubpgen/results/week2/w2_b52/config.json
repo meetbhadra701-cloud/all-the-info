@@ -1,0 +1,69 @@
+{
+ "access": {
+  "mode": "r3",
+  "taps_per_line": 4
+ },
+ "activation_bits": 8,
+ "clock_ns": 3.0,
+ "drivers": {
+  "policy": "w2_load_rule",
+  "post_build_step": 0,
+  "slew_target_ns": 0.3,
+  "tap_class": "buf_2"
+ },
+ "fabric": "ubp",
+ "flow": {
+  "drt_iters": 64,
+  "nickname": "ubpgen_w2_b52",
+  "no_dce": true,
+  "num_cores": 2,
+  "orfs_image": "openroad/orfs:latest",
+  "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad"
+ },
+ "g": 3,
+ "layout": {
+  "core_aspect_ratio": 1,
+  "core_margin": 2,
+  "util": 52
+ },
+ "m": 64,
+ "n": 64,
+ "name": "w2_b52",
+ "programs": [
+  {
+   "p0": 0.4,
+   "same_rows": false,
+   "seed": 1001,
+   "tag": "w1"
+  },
+  {
+   "p0": 0.4,
+   "same_rows": false,
+   "seed": 1002,
+   "tag": "w2"
+  },
+  {
+   "p0": 0.8,
+   "same_rows": false,
+   "seed": 1003,
+   "tag": "w3"
+  },
+  {
+   "p0": 0.1,
+   "same_rows": false,
+   "seed": 1004,
+   "tag": "w4"
+  },
+  {
+   "p0": 0.4,
+   "same_rows": true,
+   "seed": 1005,
+   "tag": "w5"
+  }
+ ],
+ "spine_driver": "as_synthesized",
+ "verify": {
+  "seed": 3,
+  "words": 12
+ }
+}

@@ -1,0 +1,105 @@
+{
+ "base_odb_sha256": "210c0e422129d523d156b89bf2ddc1567b9bf9b587a854cda48a162b14ee4a74",
+ "input_instances": 25473,
+ "final_components": 57697,
+ "input_area_um2": 358523.853,
+ "resized": {
+  "count": 362,
+  "delta_um2": 455.437,
+  "pairs": {
+   "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 361,
+   "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_4": 1
+  }
+ },
+ "removed": {
+  "count": 0,
+  "area_um2": 0,
+  "examples": []
+ },
+ "inserted": {
+  "ANTENNA": {
+   "count": 65,
+   "area_um2": 162.656,
+   "masters": {
+    "sky130_fd_sc_hd__diode_2": 65
+   },
+   "kind": "antenna diode"
+  },
+  "FILLER": {
+   "count": 23563,
+   "area_um2": 73867.094,
+   "masters": {
+    "sky130_fd_sc_hd__fill_1": 8989,
+    "sky130_fd_sc_hd__fill_2": 7624,
+    "sky130_fd_sc_hd__fill_4": 5200,
+    "sky130_fd_sc_hd__fill_8": 1750
+   },
+   "kind": "fill"
+  },
+  "TAP": {
+   "count": 6375,
+   "area_um2": 7976.4,
+   "masters": {
+    "sky130_fd_sc_hd__tapvpwrvgnd_1": 6375
+   },
+   "kind": "well tap"
+  },
+  "clkbuf": {
+   "count": 814,
+   "area_um2": 20369.536,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_16": 814
+   },
+   "kind": "clock tree (CTS)"
+  },
+  "clkload": {
+   "count": 686,
+   "area_um2": 7427.123,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_8": 212,
+    "sky130_fd_sc_hd__clkbuf_1": 202,
+    "sky130_fd_sc_hd__clkinv_2": 145,
+    "sky130_fd_sc_hd__bufinv_16": 67,
+    "sky130_fd_sc_hd__clkbuf_16": 29,
+    "sky130_fd_sc_hd__inv_6": 15
+   },
+   "kind": "clock tree (CTS)"
+  },
+  "hold": {
+   "count": 100,
+   "area_um2": 1000.96,
+   "masters": {
+    "sky130_fd_sc_hd__dlygate4sd3_1": 100
+   },
+   "kind": "hold repair"
+  },
+  "input": {
+   "count": 65,
+   "area_um2": 645.619,
+   "masters": {
+    "sky130_fd_sc_hd__clkdlybuf4s50_1": 64,
+    "sky130_fd_sc_hd__buf_2": 1
+   },
+   "kind": "port buffer"
+  },
+  "output": {
+   "count": 64,
+   "area_um2": 640.614,
+   "masters": {
+    "sky130_fd_sc_hd__clkdlybuf4s50_1": 64
+   },
+   "kind": "port buffer"
+  },
+  "place": {
+   "count": 492,
+   "area_um2": 4394.214,
+   "masters": {
+    "sky130_fd_sc_hd__buf_4": 436,
+    "sky130_fd_sc_hd__buf_12": 56
+   },
+   "kind": "resizer (driver sizing / repair)"
+  }
+ },
+ "sizing_area_um2": 4849.651,
+ "final_logic_area_um2": 393620.013
+}

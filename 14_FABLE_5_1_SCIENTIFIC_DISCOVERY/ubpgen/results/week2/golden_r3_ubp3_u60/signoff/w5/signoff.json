@@ -1,0 +1,398 @@
+{
+ "tag": "w5",
+ "merge": {
+  "base_nets": 12575,
+  "pgm_nets": 84,
+  "extra_vias": []
+ },
+ "extraction": {
+  "tool": "OpenRCX",
+  "rules": "/OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules",
+  "process_corner_index": 0,
+  "nets_with_wires": 12659,
+  "pgm_nets": 84,
+  "instances": 38252,
+  "spef_bytes": 13585658
+ },
+ "corners": {
+  "tt": {
+   "corner": "tt",
+   "setup_ws_ns": 0.9492773234143215,
+   "hold_ws_ns": 0.29422575487103586,
+   "prog_setup_ws_ns": 0.9492773234143215,
+   "setup_path": {
+    "startpoint": "ng20_11/_7_",
+    "endpoint": "row15/_152_",
+    "slack_ns": 0.9493,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_pp20_11_s0"
+    ],
+    "n_stages": 6,
+    "largest_stage": {
+     "pin": "ng20_11/_7_/Q",
+     "cell": "sky130_fd_sc_hd__dfxtp_1",
+     "delay_ns": 0.7393,
+     "net": "pp20_11",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ng20_11/_7_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ng20_11/_7_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.7393,
+      "net": "pp20_11"
+     },
+     {
+      "pin": "lt_pp20_11_s0/Z",
+      "cell": "LTAP2",
+      "delay_ns": 0.3395,
+      "net": "pgm_pp20_11_s0"
+     },
+     {
+      "pin": "vs_15_20/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.226,
+      "net": "lf_15_20"
+     },
+     {
+      "pin": "row15/_095_/X",
+      "cell": "sky130_fd_sc_hd__xor3_1",
+      "delay_ns": 0.5572,
+      "net": "row15/_022_"
+     },
+     {
+      "pin": "row15/_152_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0017,
+      "net": null
+     }
+    ]
+   },
+   "prog_path": {
+    "startpoint": "ng20_11/_7_",
+    "endpoint": "row15/_152_",
+    "slack_ns": 0.9493,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_pp20_11_s0"
+    ],
+    "n_stages": 6,
+    "largest_stage": {
+     "pin": "ng20_11/_7_/Q",
+     "cell": "sky130_fd_sc_hd__dfxtp_1",
+     "delay_ns": 0.7393,
+     "net": "pp20_11",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ng20_11/_7_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ng20_11/_7_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.7393,
+      "net": "pp20_11"
+     },
+     {
+      "pin": "lt_pp20_11_s0/Z",
+      "cell": "LTAP2",
+      "delay_ns": 0.3395,
+      "net": "pgm_pp20_11_s0"
+     },
+     {
+      "pin": "vs_15_20/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.226,
+      "net": "lf_15_20"
+     },
+     {
+      "pin": "row15/_095_/X",
+      "cell": "sky130_fd_sc_hd__xor3_1",
+      "delay_ns": 0.5572,
+      "net": "row15/_022_"
+     },
+     {
+      "pin": "row15/_152_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0017,
+      "net": null
+     }
+    ]
+   },
+   "hold_path": {
+    "startpoint": "x[2]",
+    "endpoint": "gen0/_122_",
+    "slack_ns": 0.2942
+   },
+   "transitions": {
+    "tap_input_max_ns": 1.309118,
+    "tap_input_pin": "lt_pn16_4_s3/A",
+    "site_input_max_ns": 0.168329,
+    "site_input_pin": "vs_16_5/A"
+   },
+   "spine_drivers": {
+    "sky130_fd_sc_hd__dfxtp_1": 2192
+   },
+   "T_ns": 2.0507226765856785
+  },
+  "ss": {
+   "corner": "ss",
+   "setup_ws_ns": -0.9742744389029667,
+   "hold_ws_ns": 0.6333190638585506,
+   "prog_setup_ws_ns": -0.9742744389029667,
+   "setup_path": {
+    "startpoint": "ng20_11/_7_",
+    "endpoint": "row15/_152_",
+    "slack_ns": -0.9743,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_pp20_11_s0"
+    ],
+    "n_stages": 6,
+    "largest_stage": {
+     "pin": "ng20_11/_7_/Q",
+     "cell": "sky130_fd_sc_hd__dfxtp_1",
+     "delay_ns": 1.3339,
+     "net": "pp20_11",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ng20_11/_7_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ng20_11/_7_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 1.3339,
+      "net": "pp20_11"
+     },
+     {
+      "pin": "lt_pp20_11_s0/Z",
+      "cell": "LTAP2",
+      "delay_ns": 0.6962,
+      "net": "pgm_pp20_11_s0"
+     },
+     {
+      "pin": "vs_15_20/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.4156,
+      "net": "lf_15_20"
+     },
+     {
+      "pin": "row15/_095_/X",
+      "cell": "sky130_fd_sc_hd__xor3_1",
+      "delay_ns": 1.1228,
+      "net": "row15/_022_"
+     },
+     {
+      "pin": "row15/_152_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0017,
+      "net": null
+     }
+    ]
+   },
+   "prog_path": {
+    "startpoint": "ng20_11/_7_",
+    "endpoint": "row15/_152_",
+    "slack_ns": -0.9743,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_pp20_11_s0"
+    ],
+    "n_stages": 6,
+    "largest_stage": {
+     "pin": "ng20_11/_7_/Q",
+     "cell": "sky130_fd_sc_hd__dfxtp_1",
+     "delay_ns": 1.3339,
+     "net": "pp20_11",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ng20_11/_7_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ng20_11/_7_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 1.3339,
+      "net": "pp20_11"
+     },
+     {
+      "pin": "lt_pp20_11_s0/Z",
+      "cell": "LTAP2",
+      "delay_ns": 0.6962,
+      "net": "pgm_pp20_11_s0"
+     },
+     {
+      "pin": "vs_15_20/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.4156,
+      "net": "lf_15_20"
+     },
+     {
+      "pin": "row15/_095_/X",
+      "cell": "sky130_fd_sc_hd__xor3_1",
+      "delay_ns": 1.1228,
+      "net": "row15/_022_"
+     },
+     {
+      "pin": "row15/_152_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0017,
+      "net": null
+     }
+    ]
+   },
+   "hold_path": {
+    "startpoint": "gen10/_097_",
+    "endpoint": "gen10/_096_",
+    "slack_ns": 0.6333
+   },
+   "transitions": {
+    "tap_input_max_ns": 2.06242,
+    "tap_input_pin": "lt_pn16_4_s3/A",
+    "site_input_max_ns": 0.268651,
+    "site_input_pin": "vs_16_5/A"
+   },
+   "spine_drivers": {
+    "sky130_fd_sc_hd__dfxtp_1": 2192
+   },
+   "T_ns": 3.9742744389029667
+  },
+  "ff": {
+   "corner": "ff",
+   "setup_ws_ns": 1.6397149193991822,
+   "hold_ws_ns": 0.15382695117693856,
+   "prog_setup_ws_ns": 1.7082646408539404,
+   "setup_path": {
+    "startpoint": "row21/_126_",
+    "endpoint": "y[21]",
+    "slack_ns": 1.6397,
+    "through_programmable_net": false,
+    "programmable_nets": [],
+    "n_stages": 4,
+    "largest_stage": {
+     "pin": "output79/X",
+     "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+     "delay_ns": 0.4838,
+     "net": "y[21]",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "row21/_126_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "row21/_126_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.1897,
+      "net": "net78"
+     },
+     {
+      "pin": "output79/X",
+      "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+      "delay_ns": 0.4838,
+      "net": "y[21]"
+     },
+     {
+      "pin": "y[21]",
+      "cell": "out",
+      "delay_ns": 0.0058,
+      "net": null
+     }
+    ]
+   },
+   "prog_path": {
+    "startpoint": "ng20_11/_7_",
+    "endpoint": "row15/_152_",
+    "slack_ns": 1.7083,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_pp20_11_s0"
+    ],
+    "n_stages": 6,
+    "largest_stage": {
+     "pin": "ng20_11/_7_/Q",
+     "cell": "sky130_fd_sc_hd__dfxtp_1",
+     "delay_ns": 0.5113,
+     "net": "pp20_11",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ng20_11/_7_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ng20_11/_7_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.5113,
+      "net": "pp20_11"
+     },
+     {
+      "pin": "lt_pp20_11_s0/Z",
+      "cell": "LTAP2",
+      "delay_ns": 0.1861,
+      "net": "pgm_pp20_11_s0"
+     },
+     {
+      "pin": "vs_15_20/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.1498,
+      "net": "lf_15_20"
+     },
+     {
+      "pin": "row15/_095_/X",
+      "cell": "sky130_fd_sc_hd__xor3_1",
+      "delay_ns": 0.3279,
+      "net": "row15/_022_"
+     },
+     {
+      "pin": "row15/_152_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0017,
+      "net": null
+     }
+    ]
+   },
+   "hold_path": {
+    "startpoint": "x[2]",
+    "endpoint": "gen0/_122_",
+    "slack_ns": 0.1538
+   },
+   "transitions": {
+    "tap_input_max_ns": 0.985309,
+    "tap_input_pin": "lt_pn16_4_s3/A",
+    "site_input_max_ns": 0.128746,
+    "site_input_pin": "vs_16_5/A"
+   },
+   "spine_drivers": {
+    "sky130_fd_sc_hd__dfxtp_1": 2192
+   },
+   "T_ns": 1.3602850806008178
+  }
+ }
+}

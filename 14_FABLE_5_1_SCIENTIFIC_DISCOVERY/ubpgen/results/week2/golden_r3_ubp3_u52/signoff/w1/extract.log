@@ -1,0 +1,28 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd.tlef, created 13 layers, 25 vias
+[INFO ODB-0227] LEF file: /OpenROAD-flow-scripts/flow/platforms/sky130hd/lef/sky130_fd_sc_hd_merged.lef, created 441 library cells
+[INFO ODB-0227] LEF file: /work/cells/g2_cells.lef, created 4 library cells
+[INFO ODB-0227] LEF file: /work/cells/g2r3_cells.lef, created 1 library cells
+[INFO ODB-0127] Reading DEF file: /work/programs/w1/signoff/merged.def
+[INFO ODB-0128] Design: top
+[INFO ODB-0130]     Created 130 pins.
+[INFO ODB-0131]     Created 44865 components and 207161 component-terminals.
+[INFO ODB-0132]     Created 2 special nets and 156410 connections.
+[INFO ODB-0133]     Created 13546 nets and 41800 connections.
+[INFO ODB-0134] Finished DEF file: /work/programs/w1/signoff/merged.def
+[INFO RCX-0431] Defined process_corner X with ext_model_index 0
+[INFO RCX-0029] Defined extraction corner X
+[INFO RCX-0435] Reading extraction model file /OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules ...
+[INFO RCX-0436] RC segment generation top (max_merge_res 50.0) ...
+[INFO RCX-0040] Final 50321 rc segments
+[INFO RCX-0439] Coupling Cap extraction top ...
+[INFO RCX-0440] Coupling threshhold is 0.1000 fF, coupling capacitance less than 0.1000 fF will be grounded.
+[INFO RCX-0442] 51% of 103051 wires extracted
+[INFO RCX-0442] 100% of 103051 wires extracted
+[INFO RCX-0045] Extract 13546 nets, 63863 rsegs, 63863 caps, 112682 ccs
+[INFO RCX-0443] 13546 nets finished
+SIGNOFF_EXTRACT nets_with_wires=13546 pgm_nets=962 insts=44865

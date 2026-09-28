@@ -1,0 +1,287 @@
+{
+ "time_utc": "2026-09-27T23:57:42+00:00",
+ "command": "generate",
+ "git": {
+  "commit": "bb6b8d45e6460f3e64c74b01978772d2570a1efb",
+  "branch": "claude/compassionate-edison-91b73q",
+  "generator_tree_dirty": true
+ },
+ "tools": {
+  "orfs_image": "openroad/orfs:latest",
+  "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+  "yosys": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "host": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39"
+ },
+ "config_sha256": "678664b6fdf432a0a7992f49bca8aab9c73532b56eeaa817820f63ee3df16523",
+ "config": {
+  "name": "golden_r3_ubp3_u60",
+  "fabric": "ubp",
+  "n": 64,
+  "m": 64,
+  "g": 3,
+  "activation_bits": 8,
+  "clock_ns": 3.0,
+  "access": {
+   "taps_per_line": 4
+  },
+  "layout": {
+   "util": 60,
+   "core_aspect_ratio": 1,
+   "core_margin": 2
+  },
+  "spine_driver": "as_synthesized",
+  "programs": [
+   {
+    "tag": "w1",
+    "seed": 1001,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w2",
+    "seed": 1002,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w3",
+    "seed": 1003,
+    "p0": 0.8,
+    "same_rows": false
+   },
+   {
+    "tag": "w4",
+    "seed": 1004,
+    "p0": 0.1,
+    "same_rows": false
+   },
+   {
+    "tag": "w5",
+    "seed": 1005,
+    "p0": 0.4,
+    "same_rows": true
+   },
+   {
+    "tag": "w14",
+    "seed": 14,
+    "p0": 0.4,
+    "same_rows": false
+   }
+  ],
+  "flow": {
+   "orfs_image": "openroad/orfs:latest",
+   "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+   "num_cores": 2,
+   "drt_iters": 64,
+   "no_dce": true,
+   "nickname": "g2r3_ubp3r3_u60"
+  },
+  "verify": {
+   "words": 12,
+   "seed": 3
+  }
+ },
+ "counts": {
+  "lines": 548,
+  "taps": 2192,
+  "sites": 1408,
+  "leaves_per_row": 22,
+  "bands": 22,
+  "const_sites": 0,
+  "segment_rows": 16,
+  "output_width": 14,
+  "cycles_per_word": 14
+ },
+ "modules": [
+  "SNEG_gl.v",
+  "SGEN1_gl.v",
+  "SGEN3_gl.v",
+  "STREE_L22_gl.v"
+ ],
+ "programs": [
+  {
+   "tag": "w1",
+   "n_prog_nets": 962,
+   "n_prog_pins": 2252,
+   "zeros": 118,
+   "ones": 0,
+   "W_sha256": "4fe6d8c650405aee2fac6217d674b1b951abc76002490ec7508c55e482a79d84"
+  },
+  {
+   "tag": "w2",
+   "n_prog_nets": 981,
+   "n_prog_pins": 2274,
+   "zeros": 115,
+   "ones": 0,
+   "W_sha256": "1842d03e77cb1374627b5d52dc0ff22c4eb4ab9057545b7d521f11e80cc4b0d3"
+  },
+  {
+   "tag": "w3",
+   "n_prog_nets": 468,
+   "n_prog_pins": 1142,
+   "zeros": 734,
+   "ones": 0,
+   "W_sha256": "49d0490231cdfa5c79197f737408a5e197d8073c9f07ef29633fe221b77c0535"
+  },
+  {
+   "tag": "w4",
+   "n_prog_nets": 858,
+   "n_prog_pins": 2259,
+   "zeros": 7,
+   "ones": 0,
+   "W_sha256": "45284689e8ac9592e5b38698b21fc2282294d2af9ff876a0db4b6a503d1f702f"
+  },
+  {
+   "tag": "w5",
+   "n_prog_nets": 84,
+   "n_prog_pins": 1428,
+   "zeros": 64,
+   "ones": 0,
+   "W_sha256": "2099b958b504a2dce1cbc9f2075955892e1a3931c719c2aa900782c7c85b2544"
+  },
+  {
+   "tag": "w14",
+   "n_prog_nets": 971,
+   "n_prog_pins": 2280,
+   "zeros": 99,
+   "ones": 0,
+   "W_sha256": "cde56d6558adbd116d5b7013b041c690a03901b08e22da581446472549129335"
+  }
+ ],
+ "module_facts": {
+  "SGEN1": {
+   "patterns": [
+    [
+     1
+    ]
+   ],
+   "latency": 0
+  },
+  "SGEN3": {
+   "patterns": [
+    [
+     0,
+     0,
+     1
+    ],
+    [
+     0,
+     1,
+     0
+    ],
+    [
+     1,
+     0,
+     0
+    ],
+    [
+     0,
+     1,
+     -1
+    ],
+    [
+     0,
+     1,
+     1
+    ],
+    [
+     1,
+     0,
+     -1
+    ],
+    [
+     1,
+     0,
+     1
+    ],
+    [
+     1,
+     -1,
+     0
+    ],
+    [
+     1,
+     1,
+     0
+    ],
+    [
+     1,
+     -1,
+     -1
+    ],
+    [
+     1,
+     -1,
+     1
+    ],
+    [
+     1,
+     1,
+     -1
+    ],
+    [
+     1,
+     1,
+     1
+    ]
+   ],
+   "latency": 2
+  },
+  "STREE_L22": {
+   "depth": 5
+  }
+ },
+ "files": {
+  "rtl/SGEN1.v": "9b9ec31db261af4df98b50943b4c8548a7350dee23ed45d24733219193fb0e93",
+  "rtl/SGEN1_gl.v": "95ec4584bc4a0d6c6f475947f89c171ed6b7e290ecdb502d724f0d06bf11fae8",
+  "rtl/SGEN1_gl_raw.v": "95ec4584bc4a0d6c6f475947f89c171ed6b7e290ecdb502d724f0d06bf11fae8",
+  "rtl/SGEN3.v": "0d95090507ac8a102018641c561e392ba57a5eeea8d395d1cf3ee65c0d2eb2ee",
+  "rtl/SGEN3_gl.v": "d76fe80bbb6e202bb1c6aa45e63a80a6f30d07ab7e224c39c2c2063a7a31a46c",
+  "rtl/SGEN3_gl_raw.v": "d76fe80bbb6e202bb1c6aa45e63a80a6f30d07ab7e224c39c2c2063a7a31a46c",
+  "rtl/SNEG.v": "faedca88eee6046f630162c0eabe72d490f63b155f8a99c6b06ce3fbb0d67f1a",
+  "rtl/SNEG_gl.v": "893ef6945c0094f805f649129a4a6db383ed8a11ea3a70cffcd5ba31eed36e76",
+  "rtl/SNEG_gl_raw.v": "893ef6945c0094f805f649129a4a6db383ed8a11ea3a70cffcd5ba31eed36e76",
+  "rtl/STREE_L22.v": "47454d76e61c6960f5e12aa1f63b1d815fcc98b9c5c147368ef8334209e6890e",
+  "rtl/STREE_L22_gl.v": "de73757379225027f255fb01db047f01b305a34d195c186241c141ead1dece11",
+  "rtl/STREE_L22_gl_raw.v": "de73757379225027f255fb01db047f01b305a34d195c186241c141ead1dece11",
+  "cells/dont_touch_r3.tcl": "40841bfd04efa0ff5b41928dc56d39718eccdb2b1e5faa7a62f6496653ea0e45",
+  "cells/g2_cells.lef": "89a5d9bb79fa26bc00261ea43202cdf78241d85850cae13e71ede83bc2369c82",
+  "cells/g2_cells.lib": "d225bb73bceb36173f6ff07c17c9f5aae771146219ba86a3c63850102f2146c8",
+  "cells/g2r3_cells.lef": "aa67486628dc0d412ea8518942091c927a9c11da3c8ac246f9b3b9deac272245",
+  "cells/g2r3_cells.lib": "2dc7553f001c1b81e959762d66229e9d07b102761b6bfb308d163ca37312dea8",
+  "cells/pdn_m1rails.tcl": "6330b0de839fec4b46f58fd64c8a0cdacec0a28459cbb5f7305749546a090a63",
+  "netlist/mapping.json": "e6fc81c4941e36e428d55578ab7cf695b1da33e55623922cddff9c7315fdd2de",
+  "netlist/netlist_base.v": "5fb995b8d3884fa920150dfc3aa895fec80d9c46a5e2629c7589557baac72067",
+  "netlist/netlist_logic.v": "c7494f5cbf6a08082a6e1716121135b97ac68372587bfbe59f23ea44a00564bc",
+  "netlist/top_base.v": "6220141eacca816b93fad36dde9db143d1868ba03411a09e04c8c1ebb51ba4e5",
+  "layout/place_access.tcl": "077141c3f9305b045359250ea8acce1335f9a1200af139dd58e0f4ac50014b45",
+  "orfs/config.mk": "c7f1493c89adf64a3ab4dea44aff5c94a721c6532f940efb7623c6650d3a1a89",
+  "orfs/constraint.sdc": "15adaee47c75afc873c640e4cfbc36ce359cb98eb1989896972f816f0645fb25",
+  "programs/w1/W.npy": "439f01337c2a5241443174630ce001886a1963932465a77f34e76187460feec4",
+  "programs/w1/prog.json": "0a0d854d291e77a23a3cfb807b2c1a480dd3ec7b842fe4142b2e8e2729ae0775",
+  "programs/w1/prog.tcl": "432d7ae564afd4e2899cea19fae069034f888a86ec9563a3fb91e6b17fc61ee6",
+  "programs/w1/weights.json": "2de0bb37d20afa08275968c606d866e5111fa77d62208a5b9d97f12e02eb104a",
+  "programs/w14/W.npy": "44726424398e069b42614ca1497175eb6c789c9953d261b2847b7508aa609bbe",
+  "programs/w14/prog.json": "9640cb70ff6195011621772aee8587d8b01bcc7e42f1c0ca49e9c816500ece65",
+  "programs/w14/prog.tcl": "df7c44cd6d62107a7e56f07cd9dce5a04a1be54eaaee7419c6517a7dc0d878e7",
+  "programs/w14/weights.json": "4d8095cdc8907e5479d58f23c716bdfe8265b5497322e17fcd52b905b192ea74",
+  "programs/w2/W.npy": "580552222af70f8e590be40b9b1fe89b842e31d2553a55ad7b7b45abd4ba0623",
+  "programs/w2/prog.json": "a27e7c083e56d79b41dd6cdb2a8f340c0a7f3c653e2ea343622246c25873cc95",
+  "programs/w2/prog.tcl": "352445af4403fabad4c37fe3d0402e67b9bd01f8e167b721a981712f129999fe",
+  "programs/w2/weights.json": "7a007956b12b433af966e04ac86c9b7f8816a36377c9e343719c5af948fd81a1",
+  "programs/w3/W.npy": "ac1d34002ccb98fcf5487ecc3eae4bc3e32a191cad27282a0d32d26240d06ca5",
+  "programs/w3/prog.json": "68cccc630eca34ed23d83366122d15ef169285413a708c0ffe96d94a3a5dd2f8",
+  "programs/w3/prog.tcl": "21c88008ee2a0221145eb9bac8f982fe231168b83f7f31fd26a418ec3d065c09",
+  "programs/w3/weights.json": "7544eec85c9b25e2553a13972c5c8c5ad68277a1dd6a5556f935b2932f9b877e",
+  "programs/w4/W.npy": "f227ca234e4938a8a1aaae1aaa0d7cde077660227848313c83aebeda29422caf",
+  "programs/w4/prog.json": "2164f79b07134075e77b40d5919fae73f414bbf72d5a95e549361389bbb6fce6",
+  "programs/w4/prog.tcl": "76ea8603ab0a108c735c987889727ccde3540982ffe7655b4371441aa974cda4",
+  "programs/w4/weights.json": "e87f8c00bb66b3ecd5f331bd63808a17580a0cd46f116b5813349b5b63fbdbc0",
+  "programs/w5/W.npy": "b38ec982869b033df30c5ce5afee2dd5fde0174847268c57a48b91237e28fddc",
+  "programs/w5/prog.json": "ec673bf80538d83fad7a21f61c87253ae022162e80cb2f31ebd3b034e9adb8dd",
+  "programs/w5/prog.tcl": "45dc60c19ad3dfe065a683cc0e534daf6844c4707b0575afbf78fdaf711a320a",
+  "programs/w5/weights.json": "8fab455e8e28bf3c084332f44d723a2e6b025f9b27f985e839baa4a89d211174"
+ }
+}

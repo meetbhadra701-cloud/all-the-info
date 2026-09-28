@@ -1,0 +1,156 @@
+{
+ "base_odb_sha256": "dcd3898e330f4bb65ef8f46ab465e159b166206832f9ab965d62de247b629010",
+ "input_instances": 30794,
+ "final_components": 74173,
+ "input_area_um2": 276465.152,
+ "resized": {
+  "count": 1720,
+  "delta_um2": 8957.341,
+  "pairs": {
+   "sky130_fd_sc_hd__xnor2_1 -> sky130_fd_sc_hd__xnor2_2": 394,
+   "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 308,
+   "sky130_fd_sc_hd__o22ai_1 -> sky130_fd_sc_hd__o22ai_2": 170,
+   "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 118,
+   "sky130_fd_sc_hd__a21oi_1 -> sky130_fd_sc_hd__a21oi_2": 108,
+   "sky130_fd_sc_hd__xor2_1 -> sky130_fd_sc_hd__xor2_2": 65,
+   "sky130_fd_sc_hd__or4b_1 -> sky130_fd_sc_hd__or4b_4": 64,
+   "sky130_fd_sc_hd__nor3_1 -> sky130_fd_sc_hd__nor3_2": 63,
+   "sky130_fd_sc_hd__xor3_1 -> sky130_fd_sc_hd__xor3_2": 61,
+   "sky130_fd_sc_hd__a41oi_1 -> sky130_fd_sc_hd__a41oi_2": 53,
+   "sky130_fd_sc_hd__o21ai_0 -> sky130_fd_sc_hd__o21ai_1": 47,
+   "sky130_fd_sc_hd__nor4_1 -> sky130_fd_sc_hd__nor4_4": 43
+  }
+ },
+ "removed": {
+  "count": 0,
+  "area_um2": 0,
+  "examples": []
+ },
+ "inserted": {
+  "ANTENNA": {
+   "count": 790,
+   "area_um2": 1976.896,
+   "masters": {
+    "sky130_fd_sc_hd__diode_2": 790
+   },
+   "kind": "antenna diode"
+  },
+  "FILLER": {
+   "count": 31303,
+   "area_um2": 111059.014,
+   "masters": {
+    "sky130_fd_sc_hd__fill_1": 11298,
+    "sky130_fd_sc_hd__fill_2": 9510,
+    "sky130_fd_sc_hd__fill_4": 6379,
+    "sky130_fd_sc_hd__fill_8": 4116
+   },
+   "kind": "fill"
+  },
+  "TAP": {
+   "count": 6149,
+   "area_um2": 7693.629,
+   "masters": {
+    "sky130_fd_sc_hd__tapvpwrvgnd_1": 6149
+   },
+   "kind": "well tap"
+  },
+  "clkbuf": {
+   "count": 478,
+   "area_um2": 11961.472,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_16": 478
+   },
+   "kind": "clock tree (CTS)"
+  },
+  "clkload": {
+   "count": 393,
+   "area_um2": 4681.99,
+   "masters": {
+    "sky130_fd_sc_hd__clkinv_2": 87,
+    "sky130_fd_sc_hd__clkbuf_8": 85,
+    "sky130_fd_sc_hd__clkbuf_1": 84,
+    "sky130_fd_sc_hd__bufinv_16": 67,
+    "sky130_fd_sc_hd__clkinvlp_4": 32,
+    "sky130_fd_sc_hd__inv_6": 12
+   },
+   "kind": "clock tree (CTS)"
+  },
+  "clone": {
+   "count": 36,
+   "area_um2": 938.4,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_16": 24,
+    "sky130_fd_sc_hd__bufbuf_16": 6,
+    "sky130_fd_sc_hd__buf_16": 5,
+    "sky130_fd_sc_hd__buf_2": 1
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "hold": {
+   "count": 130,
+   "area_um2": 1301.248,
+   "masters": {
+    "sky130_fd_sc_hd__dlygate4sd3_1": 130
+   },
+   "kind": "hold repair"
+  },
+  "input": {
+   "count": 65,
+   "area_um2": 650.624,
+   "masters": {
+    "sky130_fd_sc_hd__clkdlybuf4s50_1": 65
+   },
+   "kind": "port buffer"
+  },
+  "output": {
+   "count": 128,
+   "area_um2": 1281.229,
+   "masters": {
+    "sky130_fd_sc_hd__clkdlybuf4s50_1": 128
+   },
+   "kind": "port buffer"
+  },
+  "place": {
+   "count": 3481,
+   "area_um2": 29047.859,
+   "masters": {
+    "sky130_fd_sc_hd__buf_4": 3201,
+    "sky130_fd_sc_hd__buf_12": 177,
+    "sky130_fd_sc_hd__buf_6": 76,
+    "sky130_fd_sc_hd__buf_16": 17,
+    "sky130_fd_sc_hd__buf_8": 10
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "rebuffer": {
+   "count": 419,
+   "area_um2": 3450.81,
+   "masters": {
+    "sky130_fd_sc_hd__buf_4": 377,
+    "sky130_fd_sc_hd__buf_6": 24,
+    "sky130_fd_sc_hd__buf_12": 16,
+    "sky130_fd_sc_hd__buf_8": 2
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "split": {
+   "count": 1,
+   "area_um2": 20.019,
+   "masters": {
+    "sky130_fd_sc_hd__buf_12": 1
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "wire": {
+   "count": 6,
+   "area_um2": 48.797,
+   "masters": {
+    "sky130_fd_sc_hd__buf_4": 5,
+    "sky130_fd_sc_hd__buf_6": 1
+   },
+   "kind": "resizer (driver sizing / repair)"
+  }
+ },
+ "sizing_area_um2": 42463.226,
+ "final_logic_area_um2": 340781.837
+}

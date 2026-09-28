@@ -1,0 +1,802 @@
+{
+ "tag": "w5",
+ "merge": {
+  "base_nets": 34900,
+  "pgm_nets": 41,
+  "extra_vias": []
+ },
+ "extraction": {
+  "tool": "OpenRCX",
+  "rules": "/OpenROAD-flow-scripts/flow/platforms/sky130hd/rcx_patterns.rules",
+  "process_corner_index": 0,
+  "nets_with_wires": 34941,
+  "pgm_nets": 41,
+  "instances": 73955,
+  "spef_bytes": 31187276
+ },
+ "corners": {
+  "tt": {
+   "corner": "tt",
+   "setup_ws_ns": -1.6656103163370517,
+   "hold_ws_ns": 0.00873778827070737,
+   "prog_setup_ws_ns": -1.6656103163370517,
+   "setup_path": {
+    "startpoint": "ln_17/_1_",
+    "endpoint": "row61/_660_",
+    "slack_ns": -1.6656,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_ln17"
+    ],
+    "n_stages": 16,
+    "largest_stage": {
+     "pin": "row61/_318_/Y",
+     "cell": "sky130_fd_sc_hd__nor3_1",
+     "delay_ns": 1.2863,
+     "net": "row61/g16_6[3]",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ln_17/_1_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ln_17/_1_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.2976,
+      "net": "lp17"
+     },
+     {
+      "pin": "place6755/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.1836,
+      "net": "net6755"
+     },
+     {
+      "pin": "ln_17/_0_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.0581,
+      "net": "ln17"
+     },
+     {
+      "pin": "place6392/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.1906,
+      "net": "net6392"
+     },
+     {
+      "pin": "lt_ln17/Z",
+      "cell": "LTAPBW12",
+      "delay_ns": 0.3144,
+      "net": "pgm_ln17"
+     },
+     {
+      "pin": "vs_61_17/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.1927,
+      "net": "lf_61_17"
+     },
+     {
+      "pin": "row61/_303_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0917,
+      "net": "row61/_032_"
+     },
+     {
+      "pin": "row61/_305_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.3035,
+      "net": "row61/_034_"
+     },
+     {
+      "pin": "row61/_306_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.178,
+      "net": "row61/_035_"
+     },
+     {
+      "pin": "row61/_309_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.1176,
+      "net": "row61/_038_"
+     },
+     {
+      "pin": "row61/_314_/X",
+      "cell": "sky130_fd_sc_hd__maj3_1",
+      "delay_ns": 0.4033,
+      "net": "row61/_043_"
+     },
+     {
+      "pin": "row61/_317_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.1838,
+      "net": "row61/_046_"
+     },
+     {
+      "pin": "row61/_318_/Y",
+      "cell": "sky130_fd_sc_hd__nor3_1",
+      "delay_ns": 1.2863,
+      "net": "row61/g16_6[3]"
+     },
+     {
+      "pin": "row61/_320_/Y",
+      "cell": "sky130_fd_sc_hd__nor2_1",
+      "delay_ns": 0.6073,
+      "net": "row61/g16_6[2]"
+     },
+     {
+      "pin": "row61/_660_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_2",
+      "delay_ns": 0.0033,
+      "net": null
+     }
+    ]
+   },
+   "prog_path": {
+    "startpoint": "ln_17/_1_",
+    "endpoint": "row61/_660_",
+    "slack_ns": -1.6656,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_ln17"
+    ],
+    "n_stages": 16,
+    "largest_stage": {
+     "pin": "row61/_318_/Y",
+     "cell": "sky130_fd_sc_hd__nor3_1",
+     "delay_ns": 1.2863,
+     "net": "row61/g16_6[3]",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ln_17/_1_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ln_17/_1_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.2976,
+      "net": "lp17"
+     },
+     {
+      "pin": "place6755/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.1836,
+      "net": "net6755"
+     },
+     {
+      "pin": "ln_17/_0_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.0581,
+      "net": "ln17"
+     },
+     {
+      "pin": "place6392/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.1906,
+      "net": "net6392"
+     },
+     {
+      "pin": "lt_ln17/Z",
+      "cell": "LTAPBW12",
+      "delay_ns": 0.3144,
+      "net": "pgm_ln17"
+     },
+     {
+      "pin": "vs_61_17/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.1927,
+      "net": "lf_61_17"
+     },
+     {
+      "pin": "row61/_303_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0917,
+      "net": "row61/_032_"
+     },
+     {
+      "pin": "row61/_305_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.3035,
+      "net": "row61/_034_"
+     },
+     {
+      "pin": "row61/_306_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.178,
+      "net": "row61/_035_"
+     },
+     {
+      "pin": "row61/_309_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.1176,
+      "net": "row61/_038_"
+     },
+     {
+      "pin": "row61/_314_/X",
+      "cell": "sky130_fd_sc_hd__maj3_1",
+      "delay_ns": 0.4033,
+      "net": "row61/_043_"
+     },
+     {
+      "pin": "row61/_317_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.1838,
+      "net": "row61/_046_"
+     },
+     {
+      "pin": "row61/_318_/Y",
+      "cell": "sky130_fd_sc_hd__nor3_1",
+      "delay_ns": 1.2863,
+      "net": "row61/g16_6[3]"
+     },
+     {
+      "pin": "row61/_320_/Y",
+      "cell": "sky130_fd_sc_hd__nor2_1",
+      "delay_ns": 0.6073,
+      "net": "row61/g16_6[2]"
+     },
+     {
+      "pin": "row61/_660_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_2",
+      "delay_ns": 0.0033,
+      "net": null
+     }
+    ]
+   },
+   "hold_path": {
+    "startpoint": "x[37]",
+    "endpoint": "ln_37/_1_",
+    "slack_ns": 0.0087
+   },
+   "transitions": {
+    "tap_input_max_ns": 0.254399,
+    "tap_input_pin": "lt_lp27/A",
+    "site_input_max_ns": 0.282705,
+    "site_input_pin": "vs_63_28/A"
+   },
+   "spine_drivers": {
+    "sky130_fd_sc_hd__buf_4": 92,
+    "sky130_fd_sc_hd__clkinv_1": 1,
+    "sky130_fd_sc_hd__dfxtp_1": 35
+   },
+   "T_ns": 4.665610316337052
+  },
+  "ss": {
+   "corner": "ss",
+   "setup_ws_ns": -6.006900754584876,
+   "hold_ws_ns": 0.26152247034616494,
+   "prog_setup_ws_ns": -6.006900754584876,
+   "setup_path": {
+    "startpoint": "ln_17/_1_",
+    "endpoint": "row61/_660_",
+    "slack_ns": -6.0069,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_ln17"
+    ],
+    "n_stages": 16,
+    "largest_stage": {
+     "pin": "row61/_318_/Y",
+     "cell": "sky130_fd_sc_hd__nor3_1",
+     "delay_ns": 2.2356,
+     "net": "row61/g16_6[3]",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ln_17/_1_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ln_17/_1_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.6385,
+      "net": "lp17"
+     },
+     {
+      "pin": "place6755/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.3536,
+      "net": "net6755"
+     },
+     {
+      "pin": "ln_17/_0_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.1753,
+      "net": "ln17"
+     },
+     {
+      "pin": "place6392/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.344,
+      "net": "net6392"
+     },
+     {
+      "pin": "lt_ln17/Z",
+      "cell": "LTAPBW12",
+      "delay_ns": 0.4166,
+      "net": "pgm_ln17"
+     },
+     {
+      "pin": "vs_61_17/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.2917,
+      "net": "lf_61_17"
+     },
+     {
+      "pin": "row61/_303_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.2534,
+      "net": "row61/_032_"
+     },
+     {
+      "pin": "row61/_305_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.508,
+      "net": "row61/_034_"
+     },
+     {
+      "pin": "row61/_306_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.3806,
+      "net": "row61/_035_"
+     },
+     {
+      "pin": "row61/_309_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.2527,
+      "net": "row61/_038_"
+     },
+     {
+      "pin": "row61/_314_/X",
+      "cell": "sky130_fd_sc_hd__maj3_1",
+      "delay_ns": 0.8821,
+      "net": "row61/_043_"
+     },
+     {
+      "pin": "row61/_317_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.3604,
+      "net": "row61/_046_"
+     },
+     {
+      "pin": "row61/_318_/Y",
+      "cell": "sky130_fd_sc_hd__nor3_1",
+      "delay_ns": 2.2356,
+      "net": "row61/g16_6[3]"
+     },
+     {
+      "pin": "row61/_320_/Y",
+      "cell": "sky130_fd_sc_hd__nor2_1",
+      "delay_ns": 1.4025,
+      "net": "row61/g16_6[2]"
+     },
+     {
+      "pin": "row61/_660_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_2",
+      "delay_ns": 0.0033,
+      "net": null
+     }
+    ]
+   },
+   "prog_path": {
+    "startpoint": "ln_17/_1_",
+    "endpoint": "row61/_660_",
+    "slack_ns": -6.0069,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_ln17"
+    ],
+    "n_stages": 16,
+    "largest_stage": {
+     "pin": "row61/_318_/Y",
+     "cell": "sky130_fd_sc_hd__nor3_1",
+     "delay_ns": 2.2356,
+     "net": "row61/g16_6[3]",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ln_17/_1_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ln_17/_1_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.6385,
+      "net": "lp17"
+     },
+     {
+      "pin": "place6755/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.3536,
+      "net": "net6755"
+     },
+     {
+      "pin": "ln_17/_0_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.1753,
+      "net": "ln17"
+     },
+     {
+      "pin": "place6392/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.344,
+      "net": "net6392"
+     },
+     {
+      "pin": "lt_ln17/Z",
+      "cell": "LTAPBW12",
+      "delay_ns": 0.4166,
+      "net": "pgm_ln17"
+     },
+     {
+      "pin": "vs_61_17/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.2917,
+      "net": "lf_61_17"
+     },
+     {
+      "pin": "row61/_303_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.2534,
+      "net": "row61/_032_"
+     },
+     {
+      "pin": "row61/_305_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.508,
+      "net": "row61/_034_"
+     },
+     {
+      "pin": "row61/_306_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.3806,
+      "net": "row61/_035_"
+     },
+     {
+      "pin": "row61/_309_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.2527,
+      "net": "row61/_038_"
+     },
+     {
+      "pin": "row61/_314_/X",
+      "cell": "sky130_fd_sc_hd__maj3_1",
+      "delay_ns": 0.8821,
+      "net": "row61/_043_"
+     },
+     {
+      "pin": "row61/_317_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.3604,
+      "net": "row61/_046_"
+     },
+     {
+      "pin": "row61/_318_/Y",
+      "cell": "sky130_fd_sc_hd__nor3_1",
+      "delay_ns": 2.2356,
+      "net": "row61/g16_6[3]"
+     },
+     {
+      "pin": "row61/_320_/Y",
+      "cell": "sky130_fd_sc_hd__nor2_1",
+      "delay_ns": 1.4025,
+      "net": "row61/g16_6[2]"
+     },
+     {
+      "pin": "row61/_660_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_2",
+      "delay_ns": 0.0033,
+      "net": null
+     }
+    ]
+   },
+   "hold_path": {
+    "startpoint": "x[30]",
+    "endpoint": "ln_30/_1_",
+    "slack_ns": 0.2615
+   },
+   "transitions": {
+    "tap_input_max_ns": 0.400845,
+    "tap_input_pin": "lt_lp27/A",
+    "site_input_max_ns": 0.432567,
+    "site_input_pin": "vs_62_28/A"
+   },
+   "spine_drivers": {
+    "sky130_fd_sc_hd__buf_4": 92,
+    "sky130_fd_sc_hd__clkinv_1": 1,
+    "sky130_fd_sc_hd__dfxtp_1": 35
+   },
+   "T_ns": 9.006900754584876
+  },
+  "ff": {
+   "corner": "ff",
+   "setup_ws_ns": 0.1010485028984931,
+   "hold_ws_ns": -0.033905100949027656,
+   "prog_setup_ws_ns": 0.1010485028984931,
+   "setup_path": {
+    "startpoint": "ln_0/_1_",
+    "endpoint": "row61/_668_",
+    "slack_ns": 0.101,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_ln0"
+    ],
+    "n_stages": 18,
+    "largest_stage": {
+     "pin": "row61/_347_/Y",
+     "cell": "sky130_fd_sc_hd__nor3_2",
+     "delay_ns": 0.7831,
+     "net": "row61/g0_6[3]",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ln_0/_1_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ln_0/_1_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.1882,
+      "net": "lp0"
+     },
+     {
+      "pin": "place6763/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.1071,
+      "net": "net6763"
+     },
+     {
+      "pin": "ln_0/_0_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.0354,
+      "net": "ln0"
+     },
+     {
+      "pin": "place6401/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.0985,
+      "net": "net6401"
+     },
+     {
+      "pin": "lt_ln0/Z",
+      "cell": "LTAPBW12",
+      "delay_ns": 0.2047,
+      "net": "pgm_ln0"
+     },
+     {
+      "pin": "vs_61_0/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.121,
+      "net": "lf_61_0"
+     },
+     {
+      "pin": "row61/_332_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0599,
+      "net": "row61/_056_"
+     },
+     {
+      "pin": "row61/_334_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.2075,
+      "net": "row61/_058_"
+     },
+     {
+      "pin": "row61/_335_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0617,
+      "net": "row61/_059_"
+     },
+     {
+      "pin": "row61/_338_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.1703,
+      "net": "row61/_062_"
+     },
+     {
+      "pin": "row61/_339_/X",
+      "cell": "sky130_fd_sc_hd__xor2_1",
+      "delay_ns": 0.1141,
+      "net": "row61/_063_"
+     },
+     {
+      "pin": "row61/_340_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0708,
+      "net": "row61/_064_"
+     },
+     {
+      "pin": "row61/_341_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.0357,
+      "net": "row61/_065_"
+     },
+     {
+      "pin": "row61/_342_/Y",
+      "cell": "sky130_fd_sc_hd__nand2_1",
+      "delay_ns": 0.0583,
+      "net": "row61/_066_"
+     },
+     {
+      "pin": "row61/_347_/Y",
+      "cell": "sky130_fd_sc_hd__nor3_2",
+      "delay_ns": 0.7831,
+      "net": "row61/g0_6[3]"
+     },
+     {
+      "pin": "row61/_367_/Y",
+      "cell": "sky130_fd_sc_hd__nor2_1",
+      "delay_ns": 0.3981,
+      "net": "row61/g0_6[2]"
+     },
+     {
+      "pin": "row61/_668_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0107,
+      "net": null
+     }
+    ]
+   },
+   "prog_path": {
+    "startpoint": "ln_0/_1_",
+    "endpoint": "row61/_668_",
+    "slack_ns": 0.101,
+    "through_programmable_net": true,
+    "programmable_nets": [
+     "pgm_ln0"
+    ],
+    "n_stages": 18,
+    "largest_stage": {
+     "pin": "row61/_347_/Y",
+     "cell": "sky130_fd_sc_hd__nor3_2",
+     "delay_ns": 0.7831,
+     "net": "row61/g0_6[3]",
+     "kind": "cell"
+    },
+    "stages": [
+     {
+      "pin": "ln_0/_1_/CLK",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0,
+      "net": null
+     },
+     {
+      "pin": "ln_0/_1_/Q",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.1882,
+      "net": "lp0"
+     },
+     {
+      "pin": "place6763/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.1071,
+      "net": "net6763"
+     },
+     {
+      "pin": "ln_0/_0_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.0354,
+      "net": "ln0"
+     },
+     {
+      "pin": "place6401/X",
+      "cell": "sky130_fd_sc_hd__buf_4",
+      "delay_ns": 0.0985,
+      "net": "net6401"
+     },
+     {
+      "pin": "lt_ln0/Z",
+      "cell": "LTAPBW12",
+      "delay_ns": 0.2047,
+      "net": "pgm_ln0"
+     },
+     {
+      "pin": "vs_61_0/Z",
+      "cell": "VSITE_BUF",
+      "delay_ns": 0.121,
+      "net": "lf_61_0"
+     },
+     {
+      "pin": "row61/_332_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0599,
+      "net": "row61/_056_"
+     },
+     {
+      "pin": "row61/_334_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.2075,
+      "net": "row61/_058_"
+     },
+     {
+      "pin": "row61/_335_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0617,
+      "net": "row61/_059_"
+     },
+     {
+      "pin": "row61/_338_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.1703,
+      "net": "row61/_062_"
+     },
+     {
+      "pin": "row61/_339_/X",
+      "cell": "sky130_fd_sc_hd__xor2_1",
+      "delay_ns": 0.1141,
+      "net": "row61/_063_"
+     },
+     {
+      "pin": "row61/_340_/Y",
+      "cell": "sky130_fd_sc_hd__xnor2_1",
+      "delay_ns": 0.0708,
+      "net": "row61/_064_"
+     },
+     {
+      "pin": "row61/_341_/Y",
+      "cell": "sky130_fd_sc_hd__clkinv_1",
+      "delay_ns": 0.0357,
+      "net": "row61/_065_"
+     },
+     {
+      "pin": "row61/_342_/Y",
+      "cell": "sky130_fd_sc_hd__nand2_1",
+      "delay_ns": 0.0583,
+      "net": "row61/_066_"
+     },
+     {
+      "pin": "row61/_347_/Y",
+      "cell": "sky130_fd_sc_hd__nor3_2",
+      "delay_ns": 0.7831,
+      "net": "row61/g0_6[3]"
+     },
+     {
+      "pin": "row61/_367_/Y",
+      "cell": "sky130_fd_sc_hd__nor2_1",
+      "delay_ns": 0.3981,
+      "net": "row61/g0_6[2]"
+     },
+     {
+      "pin": "row61/_668_/D",
+      "cell": "sky130_fd_sc_hd__dfxtp_1",
+      "delay_ns": 0.0107,
+      "net": null
+     }
+    ]
+   },
+   "hold_path": {
+    "startpoint": "x[37]",
+    "endpoint": "ln_37/_1_",
+    "slack_ns": -0.0339
+   },
+   "transitions": {
+    "tap_input_max_ns": 0.191909,
+    "tap_input_pin": "lt_lp27/A",
+    "site_input_max_ns": 0.218455,
+    "site_input_pin": "vs_63_28/A"
+   },
+   "spine_drivers": {
+    "sky130_fd_sc_hd__buf_4": 92,
+    "sky130_fd_sc_hd__clkinv_1": 1,
+    "sky130_fd_sc_hd__dfxtp_1": 35
+   },
+   "T_ns": 2.898951497101507
+  }
+ }
+}

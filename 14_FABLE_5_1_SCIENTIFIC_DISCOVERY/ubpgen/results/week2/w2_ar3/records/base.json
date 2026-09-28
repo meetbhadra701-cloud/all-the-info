@@ -1,0 +1,137 @@
+{
+ "time_utc": "2026-09-28T09:29:17+00:00",
+ "command": "physical-base",
+ "git": {
+  "commit": "6e5406152afa3fa240583600bbc31728b93f772b",
+  "branch": "claude/compassionate-edison-91b73q",
+  "generator_tree_dirty": false
+ },
+ "tools": {
+  "orfs_image": "openroad/orfs:latest",
+  "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+  "yosys": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "host": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39"
+ },
+ "config_sha256": "d1de9bf6d6bfe9227632484e1c8bf7dfdc4a9f128d1821720214e753138c878c",
+ "config": {
+  "name": "w2_ar3",
+  "fabric": "g1",
+  "n": 64,
+  "m": 64,
+  "g": null,
+  "activation_bits": 8,
+  "clock_ns": 3.0,
+  "access": {
+   "taps_per_line": 4,
+   "mode": "r3"
+  },
+  "drivers": {
+   "policy": "w2_load_rule",
+   "slew_target_ns": 0.3,
+   "tap_class": "buf_2",
+   "post_build_step": 0
+  },
+  "layout": {
+   "util": 75,
+   "core_aspect_ratio": 1,
+   "core_margin": 2
+  },
+  "spine_driver": "as_synthesized",
+  "programs": [
+   {
+    "p0": 0.4,
+    "same_rows": false,
+    "seed": 1001,
+    "tag": "w1"
+   },
+   {
+    "p0": 0.4,
+    "same_rows": false,
+    "seed": 1002,
+    "tag": "w2"
+   },
+   {
+    "p0": 0.8,
+    "same_rows": false,
+    "seed": 1003,
+    "tag": "w3"
+   },
+   {
+    "p0": 0.1,
+    "same_rows": false,
+    "seed": 1004,
+    "tag": "w4"
+   },
+   {
+    "p0": 0.4,
+    "same_rows": true,
+    "seed": 1005,
+    "tag": "w5"
+   }
+  ],
+  "flow": {
+   "orfs_image": "openroad/orfs:latest",
+   "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+   "num_cores": 2,
+   "drt_iters": 64,
+   "no_dce": true,
+   "nickname": "ubpgen_w2_ar3"
+  },
+  "verify": {
+   "words": 12,
+   "seed": 3
+  }
+ },
+ "result": {
+  "odb_sha256": "210c0e422129d523d156b89bf2ddc1567b9bf9b587a854cda48a162b14ee4a74",
+  "drc_final": 0,
+  "setup_ws_ns": 0.772697,
+  "hold_ws_ns": 0.0972088,
+  "core_area_um2": 475464,
+  "cell_area_um2": 358979,
+  "instance_count": 57697,
+  "orfs_rc": 2,
+  "gds_merge": "expected-failure",
+  "tap_rule_verification": {
+   "class": "buf_2",
+   "tap_masters_in_def": [
+    "LTAPB2"
+   ],
+   "worst_tap": "lt_lp38_s1",
+   "L_rsmt_um": 168.26,
+   "C_wc_fF": 59.98,
+   "transition_ns": 0.2952,
+   "meets": true,
+   "taps_in_def": 512,
+   "taps_expected": 512,
+   "tap_status": {
+    "FIXED": 512
+   },
+   "masters_ok": true
+  },
+  "pruned_stage_files": [
+   "5_1_grt.odb",
+   "3_2_place_iop.odb",
+   "5_2_route.odb",
+   "2_3_floorplan_tapcell.odb",
+   "3_place.odb",
+   "2_floorplan.odb",
+   "4_cts.odb",
+   "2_4_floorplan_pdn.odb",
+   "1_synth.odb",
+   "3_5_place_dp.odb",
+   "3_4_place_resized.odb",
+   "5_route.odb",
+   "3_3_place_gp.odb",
+   "3_1_place_gp_skip_io.odb",
+   "2_1_floorplan.odb",
+   "4_1_cts.odb",
+   "6_1_fill.odb",
+   "2_2_floorplan_macro.odb",
+   "6_1_merged.gds",
+   "5_3_fillcell.odb"
+  ]
+ }
+}

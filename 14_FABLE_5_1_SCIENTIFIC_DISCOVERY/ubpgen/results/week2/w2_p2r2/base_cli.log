@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/user/all-the-info/14_FABLE_5_1_SCIENTIFIC_DISCOVERY/ubpgen/__main__.py", line 76, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/home/user/all-the-info/14_FABLE_5_1_SCIENTIFIC_DISCOVERY/ubpgen/__main__.py", line 53, in main
+    m = pipeline.build_base(cfg, root, prune=a.prune)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/all-the-info/14_FABLE_5_1_SCIENTIFIC_DISCOVERY/ubpgen/pipeline.py", line 87, in build_base
+    m = orfs.build_base(cfg, root)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/user/all-the-info/14_FABLE_5_1_SCIENTIFIC_DISCOVERY/ubpgen/orfs.py", line 100, in build_base
+    return _freeze(cfg, root)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/user/all-the-info/14_FABLE_5_1_SCIENTIFIC_DISCOVERY/ubpgen/orfs.py", line 109, in _freeze
+    raise RuntimeError(f'ORFS base flow failed (rc {rc}, gds {gds}); see {root / "physical" / "orfs_base.log"}')
+RuntimeError: ORFS base flow failed (rc 2, gds unexpected-failure); see /home/user/all-the-info/14_FABLE_5_1_SCIENTIFIC_DISCOVERY/ubpgen_runs/w2_p2r2/physical/orfs_base.log

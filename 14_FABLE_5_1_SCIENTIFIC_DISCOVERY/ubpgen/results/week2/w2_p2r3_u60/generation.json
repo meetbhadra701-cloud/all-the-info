@@ -1,0 +1,283 @@
+{
+ "time_utc": "2026-09-28T05:48:09+00:00",
+ "command": "generate",
+ "git": {
+  "commit": "e888e1e217ae3cd5f451ad1e13672c6bda38853c",
+  "branch": "claude/compassionate-edison-91b73q",
+  "generator_tree_dirty": false
+ },
+ "tools": {
+  "orfs_image": "openroad/orfs:latest",
+  "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+  "yosys": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "host": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39"
+ },
+ "config_sha256": "ce69d0eb3368b07a57c50a44191281c4ca8a8daaf3b2d52047c2ab66b33ad582",
+ "config": {
+  "name": "w2_p2r3_u60",
+  "fabric": "pc2",
+  "n": 64,
+  "m": 64,
+  "g": null,
+  "activation_bits": 8,
+  "clock_ns": 3.0,
+  "access": {
+   "taps_per_line": 4,
+   "mode": "r3"
+  },
+  "drivers": {
+   "policy": "w2_load_rule",
+   "slew_target_ns": 0.3,
+   "tap_class": "buf_2",
+   "post_build_step": 0
+  },
+  "layout": {
+   "util": 60,
+   "core_aspect_ratio": 1,
+   "core_margin": 2
+  },
+  "spine_driver": "as_synthesized",
+  "programs": [
+   {
+    "tag": "w1",
+    "seed": 1001,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w2",
+    "seed": 1002,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w3",
+    "seed": 1003,
+    "p0": 0.8,
+    "same_rows": false
+   },
+   {
+    "tag": "w4",
+    "seed": 1004,
+    "p0": 0.1,
+    "same_rows": false
+   },
+   {
+    "tag": "w5",
+    "seed": 1005,
+    "p0": 0.4,
+    "same_rows": true
+   }
+  ],
+  "flow": {
+   "orfs_image": "openroad/orfs:latest",
+   "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+   "num_cores": 2,
+   "drt_iters": 64,
+   "no_dce": true,
+   "nickname": "ubpgen_w2_p2r3_u60"
+  },
+  "verify": {
+   "words": 12,
+   "seed": 3
+  }
+ },
+ "counts": {
+  "lines": 128,
+  "taps": 512,
+  "sites": 4096,
+  "leaves_per_row": 64,
+  "bands": 64,
+  "const_sites": 448,
+  "segment_rows": 16,
+  "output_width": 14,
+  "cycles_per_word": 8
+ },
+ "modules": [
+  "CTRL_gl.v",
+  "PLINE_gl.v",
+  "PROW_pc2_L64_gl.v"
+ ],
+ "programs": [
+  {
+   "tag": "w1",
+   "n_prog_nets": 511,
+   "n_prog_pins": 2967,
+   "zeros": 1640,
+   "ones": 164,
+   "W_sha256": "4fe6d8c650405aee2fac6217d674b1b951abc76002490ec7508c55e482a79d84"
+  },
+  {
+   "tag": "w2",
+   "n_prog_nets": 509,
+   "n_prog_pins": 2933,
+   "zeros": 1672,
+   "ones": 164,
+   "W_sha256": "1842d03e77cb1374627b5d52dc0ff22c4eb4ab9057545b7d521f11e80cc4b0d3"
+  },
+  {
+   "tag": "w3",
+   "n_prog_nets": 415,
+   "n_prog_pins": 1250,
+   "zeros": 3261,
+   "ones": 132,
+   "W_sha256": "49d0490231cdfa5c79197f737408a5e197d8073c9f07ef29633fe221b77c0535"
+  },
+  {
+   "tag": "w4",
+   "n_prog_nets": 512,
+   "n_prog_pins": 4162,
+   "zeros": 446,
+   "ones": 204,
+   "W_sha256": "45284689e8ac9592e5b38698b21fc2282294d2af9ff876a0db4b6a503d1f702f"
+  },
+  {
+   "tag": "w5",
+   "n_prog_nets": 164,
+   "n_prog_pins": 2788,
+   "zeros": 1472,
+   "ones": 128,
+   "W_sha256": "2099b958b504a2dce1cbc9f2075955892e1a3931c719c2aa900782c7c85b2544"
+  }
+ ],
+ "driver_sizing": {
+  "policy": "w2_load_rule",
+  "slew_target_ns": 0.3,
+  "corner": "tt",
+  "candidates": [
+   "buf_1",
+   "buf_2",
+   "buf_4",
+   "buf_6",
+   "buf_8",
+   "buf_12",
+   "buf_16"
+  ],
+  "load_model": "C_wc = (m/K) * C_in(VSITE A) + c_met4(setRC) * L_RSMT(tap + all segment sites); no margin",
+  "C_in_site_pF": 0.002191,
+  "c_met4_pF_per_um": 0.000148128,
+  "logic_area_um2": 273902.6944,
+  "evaluations": [
+   {
+    "class": "buf_1",
+    "cell_area_um2": 275824.5,
+    "core_side_um": 678.02,
+    "worst_tap": "lt_lp40_s1",
+    "L_rsmt_um": 162.25,
+    "sinks": 16,
+    "C_wc_fF": 59.09,
+    "transition_ns": 0.6876,
+    "meets": false
+   },
+   {
+    "class": "buf_2",
+    "cell_area_um2": 276465.2,
+    "core_side_um": 678.8,
+    "worst_tap": "lt_lp47_s3",
+    "L_rsmt_um": 162.67,
+    "sinks": 16,
+    "C_wc_fF": 59.15,
+    "transition_ns": 0.2913,
+    "meets": true
+   }
+  ],
+  "rule_class": "buf_2",
+  "post_build_step": 0,
+  "class": "buf_2",
+  "tap_master": "LTAPB2",
+  "spine": "tap A-pin max_transition = S enforced by the ORFS flow repair_design (tt)",
+  "tap_cell": {
+   "master": "LTAPB2",
+   "timing": "sky130_fd_sc_hd__buf_2 (cloned per corner)",
+   "sites": 6,
+   "pad_sites": 2,
+   "buffer_sites": 4,
+   "area_um2": 7.5072,
+   "width_um": 2.76,
+   "pad": "single-track met4 pad in the first two sites (r3)",
+   "count": 512
+  },
+  "physical_constraints": {
+   "tap_input_max_transition_ns": 0.3,
+   "enforced_by": "ORFS repair_design (3_4 resize, 5_1 global route; tt)",
+   "tap_and_site_instances": "dont_touch (FIXED base; POST_SYNTH hook), FIRM-placed by the W-blind plan",
+   "utilization_pct": 60,
+   "clock_ns": 3.0,
+   "base_layers": "met1-met3",
+   "program_layers": "met4-met5"
+  },
+  "signoff_libraries": {
+   "source": "https://github.com/efabless/volare/releases/download/sky130-fa87f8f4bbcc7255b6f0c0fb506960f531ae2392/sky130_fd_sc_hd.tar.zst",
+   "tarball_sha256": "d4081b3c0fbfa2afe31dba789c03157ad137ea08b11910e2c8b3ec81b2a61bf6",
+   "tt": {
+    "file": "/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib",
+    "sha256": "ec0e1067a35c8bf20b11e58d1e8ac53326067e4dac84a125cc1b917a3518d0d9"
+   },
+   "ss": {
+    "file": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+    "sha256": "1fb9eea47d4ec6177995d7f46e9c66f15b255c38ed1554f7d2856fa870b9a08b"
+   },
+   "ff": {
+    "file": "sky130_fd_sc_hd__ff_n40C_1v95.lib",
+    "sha256": "4d3bff41cd4ea64e2cafa391e86cb763b7a5f59ebbc56d0e9a53794073d3f97b"
+   }
+  }
+ },
+ "module_facts": {},
+ "files": {
+  "rtl/CTRL.v": "1ae078e8bce751bcbcf2851c2714318d94fa546f92ec794ab4bce4819e40fc75",
+  "rtl/CTRL_gl.v": "60109657a43c31c70b2a918d90dd4e956b7b668b7ca8b2d8a36cfd04d04c6330",
+  "rtl/CTRL_gl_raw.v": "60109657a43c31c70b2a918d90dd4e956b7b668b7ca8b2d8a36cfd04d04c6330",
+  "rtl/PLINE.v": "5b0334753bdb8bae5acfbfa69d170d1bd9a68944bbd0305557defe3551de60c4",
+  "rtl/PLINE_gl.v": "e376462cb18513deecd43f0c07985583d5c4345ba2da16af10c54287c8f79a1c",
+  "rtl/PLINE_gl_raw.v": "e376462cb18513deecd43f0c07985583d5c4345ba2da16af10c54287c8f79a1c",
+  "rtl/PROW_pc2_L64.v": "d3fadf4faa24b6fee32ca01f5ffa5a267aebb42572767cbe9fa28bea565e5729",
+  "rtl/PROW_pc2_L64_gl.v": "d4a0a6664c2f0edd0b395029601b3eb112052f115bdc0e419dda13a8c943bfa4",
+  "rtl/PROW_pc2_L64_gl_raw.v": "d4a0a6664c2f0edd0b395029601b3eb112052f115bdc0e419dda13a8c943bfa4",
+  "cells/dont_touch.tcl": "054e93d8a229912d7a07dd48833df3f259c72a379d7f7062f40cab30f66a6938",
+  "cells/dont_touch_r3.tcl": "40841bfd04efa0ff5b41928dc56d39718eccdb2b1e5faa7a62f6496653ea0e45",
+  "cells/g2_cells.lef": "89a5d9bb79fa26bc00261ea43202cdf78241d85850cae13e71ede83bc2369c82",
+  "cells/g2_cells.lib": "d225bb73bceb36173f6ff07c17c9f5aae771146219ba86a3c63850102f2146c8",
+  "cells/g2_cells_ff.lib": "066055f61426958269216fa02c30c2567f93c442c7541151b343cccb09707972",
+  "cells/g2_cells_ss.lib": "84263e497610fef52d40176cfe9aac80ecdbb381d753e0c90a4cdf977fca19ea",
+  "cells/g2r3_cells.lef": "aa67486628dc0d412ea8518942091c927a9c11da3c8ac246f9b3b9deac272245",
+  "cells/g2r3_cells.lib": "2dc7553f001c1b81e959762d66229e9d07b102761b6bfb308d163ca37312dea8",
+  "cells/g2r3_cells_ff.lib": "0ed5b643687aa8df82432d657e0935a64ffd280b670cecf00a7888cb53807d68",
+  "cells/g2r3_cells_ss.lib": "4220cb2086900de7cf80f78a8e6e9ff7fe54d88fcaf1c742146f59a330ceba0a",
+  "cells/pdn_m1rails.tcl": "6330b0de839fec4b46f58fd64c8a0cdacec0a28459cbb5f7305749546a090a63",
+  "cells/w2_cells.lef": "8d4746338ba9054e033fec3a3bd211303522c50d431e5cedec16a45b8ea09b87",
+  "cells/w2_cells.lib": "76e6a99b36df6f1a379751e5bcdae5d8e2db5508fb986d7ac868e84ab2717f37",
+  "cells/w2_cells_ff.lib": "0145bed3d46ab21a46b2f0860d44b37f146b44b68d0fba3d38a3697dd02670fe",
+  "cells/w2_cells_ss.lib": "4ab31e33fb45fb4aaa2713d762fc63e3402af95a829a5a91270c61fd4245a1ef",
+  "netlist/mapping.json": "3d4f8316a0b83c3af660d250e6f0164a4c62e39df254cc26dcfbc4c3dfbbc760",
+  "netlist/netlist_base.v": "f2964dceb3d3ca960b096224e88b2572fb8f10fed69766b2be94cfc752bd3509",
+  "netlist/netlist_logic.v": "b99d6b62bbac4ed8b704f0b12a3be2bd7b0445a7511ad9e16c8975d96e3393e1",
+  "netlist/stat_logic.txt": "4e2dc05c40f77fc1b8f82efa5fb0c6c12669d057ca35445926aed5c518146223",
+  "netlist/top_base.v": "806bd8bdaa373c00c918aebe51913f7f94c1dbf5e73f0b6717b9709f3151a9f4",
+  "layout/place_access.tcl": "d53cfbf31ee70b79787c006b838502b666e60e4a25b02c5dffe063c33325abc7",
+  "orfs/config.mk": "0e66e8b17fee01459ace68aa92179389715e32339d0c59d080ca30d65962ba93",
+  "orfs/constraint.sdc": "15adaee47c75afc873c640e4cfbc36ce359cb98eb1989896972f816f0645fb25",
+  "programs/w1/W.npy": "439f01337c2a5241443174630ce001886a1963932465a77f34e76187460feec4",
+  "programs/w1/prog.json": "e987db29b7d10b7776540ec9888f2d535d62271a57cec7feaca5301857370f22",
+  "programs/w1/prog.tcl": "a2b7a9c2ae57e9d532d5fdf094ccb5a54bbf0e66e73ee7b8362f5f0d31c90476",
+  "programs/w1/weights.json": "2de0bb37d20afa08275968c606d866e5111fa77d62208a5b9d97f12e02eb104a",
+  "programs/w2/W.npy": "580552222af70f8e590be40b9b1fe89b842e31d2553a55ad7b7b45abd4ba0623",
+  "programs/w2/prog.json": "b4f3304def7ef5244ca6ae1812def313b47a176c53cfd3f37dd07fa89c668491",
+  "programs/w2/prog.tcl": "0be1ddfdfc174c8b2801c894015bd75216eff1ef58aa06be9fb0222b8ac4aa94",
+  "programs/w2/weights.json": "7a007956b12b433af966e04ac86c9b7f8816a36377c9e343719c5af948fd81a1",
+  "programs/w3/W.npy": "ac1d34002ccb98fcf5487ecc3eae4bc3e32a191cad27282a0d32d26240d06ca5",
+  "programs/w3/prog.json": "79d88274406590aaa3b254b1e580d2759406ffd683c6a17212aedee053d3ad0f",
+  "programs/w3/prog.tcl": "4f11fb239633d03c2991bc6c4e7a62692a7e54dc3405ece4483f2a8cd2264df6",
+  "programs/w3/weights.json": "7544eec85c9b25e2553a13972c5c8c5ad68277a1dd6a5556f935b2932f9b877e",
+  "programs/w4/W.npy": "f227ca234e4938a8a1aaae1aaa0d7cde077660227848313c83aebeda29422caf",
+  "programs/w4/prog.json": "e83ac0c7357346c6221bb77d8e2dbbc5643cf23a402830e7d91ae05435fa65d0",
+  "programs/w4/prog.tcl": "0c5740bdafd2976b6ab8d8ed418aab47f218259466f9716a8b506815d9ca86a4",
+  "programs/w4/weights.json": "e87f8c00bb66b3ecd5f331bd63808a17580a0cd46f116b5813349b5b63fbdbc0",
+  "programs/w5/W.npy": "b38ec982869b033df30c5ce5afee2dd5fde0174847268c57a48b91237e28fddc",
+  "programs/w5/prog.json": "099388359bb497928d11219b5e8d1d6f049a0f6fea8ad6eac1fce112893c8aef",
+  "programs/w5/prog.tcl": "f459e32e2ed02a5559ed34c25d6c02869e22de775b8ca569bdd323baaac0b81d",
+  "programs/w5/weights.json": "8fab455e8e28bf3c084332f44d723a2e6b025f9b27f985e839baa4a89d211174"
+ }
+}

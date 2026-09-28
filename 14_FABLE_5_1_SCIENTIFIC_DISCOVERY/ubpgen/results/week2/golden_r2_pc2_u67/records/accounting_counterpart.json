@@ -1,0 +1,162 @@
+{
+ "base_def": "experiments/results/G2/orfs/results/sky130hd/g2s_pc2_u67/base/6_final.def",
+ "input_instances": 30410,
+ "final_components": 63931,
+ "input_area_um2": 273902.694,
+ "resized": {
+  "count": 1380,
+  "delta_um2": 7294.496,
+  "pairs": {
+   "sky130_fd_sc_hd__xnor2_1 -> sky130_fd_sc_hd__xnor2_2": 316,
+   "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 186,
+   "sky130_fd_sc_hd__o22ai_1 -> sky130_fd_sc_hd__o22ai_2": 126,
+   "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 74,
+   "sky130_fd_sc_hd__xor2_1 -> sky130_fd_sc_hd__xor2_2": 69,
+   "sky130_fd_sc_hd__nor3_1 -> sky130_fd_sc_hd__nor3_2": 68,
+   "sky130_fd_sc_hd__a21oi_1 -> sky130_fd_sc_hd__a21oi_2": 67,
+   "sky130_fd_sc_hd__or4b_1 -> sky130_fd_sc_hd__or4b_4": 64,
+   "sky130_fd_sc_hd__xor3_1 -> sky130_fd_sc_hd__xor3_2": 63,
+   "sky130_fd_sc_hd__a41oi_1 -> sky130_fd_sc_hd__a41oi_2": 55,
+   "sky130_fd_sc_hd__o21ai_0 -> sky130_fd_sc_hd__o21ai_1": 43,
+   "sky130_fd_sc_hd__a21boi_0 -> sky130_fd_sc_hd__a21boi_1": 39
+  }
+ },
+ "removed": {
+  "count": 0,
+  "area_um2": 0,
+  "examples": []
+ },
+ "inserted": {
+  "ANTENNA": {
+   "count": 596,
+   "area_um2": 1491.43,
+   "masters": {
+    "sky130_fd_sc_hd__diode_2": 596
+   },
+   "kind": "antenna diode"
+  },
+  "FILLER": {
+   "count": 22819,
+   "area_um2": 68301.757,
+   "masters": {
+    "sky130_fd_sc_hd__fill_1": 9445,
+    "sky130_fd_sc_hd__fill_2": 7670,
+    "sky130_fd_sc_hd__fill_4": 3957,
+    "sky130_fd_sc_hd__fill_8": 1747
+   },
+   "kind": "fill"
+  },
+  "TAP": {
+   "count": 5428,
+   "area_um2": 6791.514,
+   "masters": {
+    "sky130_fd_sc_hd__tapvpwrvgnd_1": 5428
+   },
+   "kind": "well tap"
+  },
+  "clkbuf": {
+   "count": 464,
+   "area_um2": 11611.136,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_16": 464
+   },
+   "kind": "clock tree (CTS)"
+  },
+  "clkload": {
+   "count": 399,
+   "area_um2": 4735.792,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_8": 103,
+    "sky130_fd_sc_hd__clkinv_2": 92,
+    "sky130_fd_sc_hd__clkbuf_1": 65,
+    "sky130_fd_sc_hd__bufinv_16": 54,
+    "sky130_fd_sc_hd__clkinvlp_4": 37,
+    "sky130_fd_sc_hd__clkbuf_16": 16
+   },
+   "kind": "clock tree (CTS)"
+  },
+  "clone": {
+   "count": 17,
+   "area_um2": 467.949,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_16": 10,
+    "sky130_fd_sc_hd__bufbuf_16": 5,
+    "sky130_fd_sc_hd__buf_16": 2
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "hold": {
+   "count": 110,
+   "area_um2": 1101.056,
+   "masters": {
+    "sky130_fd_sc_hd__dlygate4sd3_1": 110
+   },
+   "kind": "hold repair"
+  },
+  "input": {
+   "count": 65,
+   "area_um2": 650.624,
+   "masters": {
+    "sky130_fd_sc_hd__clkdlybuf4s50_1": 65
+   },
+   "kind": "port buffer"
+  },
+  "output": {
+   "count": 128,
+   "area_um2": 1281.229,
+   "masters": {
+    "sky130_fd_sc_hd__clkdlybuf4s50_1": 128
+   },
+   "kind": "port buffer"
+  },
+  "place": {
+   "count": 3206,
+   "area_um2": 26570.483,
+   "masters": {
+    "sky130_fd_sc_hd__buf_4": 2960,
+    "sky130_fd_sc_hd__buf_12": 152,
+    "sky130_fd_sc_hd__buf_6": 64,
+    "sky130_fd_sc_hd__buf_8": 19,
+    "sky130_fd_sc_hd__buf_16": 10,
+    "sky130_fd_sc_hd__clkbuf_16": 1
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "rebuffer": {
+   "count": 279,
+   "area_um2": 2305.962,
+   "masters": {
+    "sky130_fd_sc_hd__buf_4": 247,
+    "sky130_fd_sc_hd__buf_6": 20,
+    "sky130_fd_sc_hd__buf_12": 7,
+    "sky130_fd_sc_hd__buf_8": 3,
+    "sky130_fd_sc_hd__buf_16": 1,
+    "sky130_fd_sc_hd__clkbuf_8": 1
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "split": {
+   "count": 2,
+   "area_um2": 10.01,
+   "masters": {
+    "sky130_fd_sc_hd__clkbuf_2": 1,
+    "sky130_fd_sc_hd__buf_2": 1
+   },
+   "kind": "resizer (driver sizing / repair)"
+  },
+  "wire": {
+   "count": 8,
+   "area_um2": 156.4,
+   "masters": {
+    "sky130_fd_sc_hd__buf_16": 3,
+    "sky130_fd_sc_hd__buf_8": 2,
+    "sky130_fd_sc_hd__buf_6": 1,
+    "sky130_fd_sc_hd__buf_4": 1,
+    "sky130_fd_sc_hd__clkbuf_16": 1
+   },
+   "kind": "resizer (driver sizing / repair)"
+  }
+ },
+ "sizing_area_um2": 36805.299,
+ "final_logic_area_um2": 331579.261
+}

@@ -1,0 +1,6991 @@
+{
+ "designs": {
+  "B60_hist": {
+   "key": "B60_hist",
+   "label": "UBP3-R3 60% unsized (historical)",
+   "role": "historical",
+   "config": "golden_r3_ubp3_u60",
+   "fabric": "ubp",
+   "access": "r3",
+   "K": 4,
+   "util": 60,
+   "cycles_per_word": 14,
+   "driver_policy": "historical",
+   "tap_master": "LTAP2",
+   "base": {
+    "odb_sha256": "70add1cde3c5d12580ca52796776ef2188837eea3995aa9d2c744f3977fef026",
+    "drc_final": 0,
+    "setup_ws_ns": 1.02241,
+    "hold_ws_ns": 0.292709,
+    "core_area_um2": 281558,
+    "cell_area_um2": 169952,
+    "instance_count": 38252
+   },
+   "tap_rule_verification": null,
+   "areas": {
+    "A_um2": 169952.0,
+    "input_um2": 169468.8,
+    "flow_sizing_um2": 1243.693,
+    "counterpart_flow_sizing_um2": null,
+    "sizing_increment_um2": null,
+    "A_incr_um2": null,
+    "A_phys_um2": 170712.5,
+    "conv_2site_um2": 169952.0,
+    "taps": 2192,
+    "tap_sites": 2,
+    "tap_area_um2": 5485.3
+   },
+   "accounting": {
+    "base_odb_sha256": "70add1cde3c5d12580ca52796776ef2188837eea3995aa9d2c744f3977fef026",
+    "input_instances": 13993,
+    "final_components": 38252,
+    "input_area_um2": 169468.784,
+    "resized": {
+     "count": 384,
+     "delta_um2": 482.963,
+     "pairs": {
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 382,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 1,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_4": 1
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 85,
+      "area_um2": 212.704,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 85
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 19345,
+      "area_um2": 88630.003,
+      "masters": {
+       "sky130_fd_sc_hd__fill_1": 5596,
+       "sky130_fd_sc_hd__fill_8": 4987,
+       "sky130_fd_sc_hd__fill_2": 4852,
+       "sky130_fd_sc_hd__fill_4": 3910
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 3743,
+      "area_um2": 4683.242,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 3743
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 451,
+      "area_um2": 11285.824,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 451
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 378,
+      "area_um2": 4046.381,
+      "masters": {
+       "sky130_fd_sc_hd__clkinv_2": 116,
+       "sky130_fd_sc_hd__clkbuf_8": 91,
+       "sky130_fd_sc_hd__clkbuf_1": 71,
+       "sky130_fd_sc_hd__bufinv_16": 42,
+       "sky130_fd_sc_hd__clkinvlp_4": 23,
+       "sky130_fd_sc_hd__inv_6": 11
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "hold": {
+      "count": 70,
+      "area_um2": 700.672,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 70
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 645.619,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64,
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 64,
+      "area_um2": 640.614,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 58,
+      "area_um2": 760.73,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 32,
+       "sky130_fd_sc_hd__buf_12": 26
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 1243.693,
+    "final_logic_area_um2": 188244.291
+   },
+   "counterpart_sizing": null,
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 18.09,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 7.78,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 57018.0,
+      "met5": 3340.0
+     },
+     "vias": 685,
+     "placement_sta_setup_ws_ns": 0.8398939321807575,
+     "placement_sta_prog_ws_ns": 0.8398939321807575,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.1124319809188137,
+       "setup_ws_ns": 0.8875680190811863,
+       "hold_ws_ns": 0.2871429760631372,
+       "prog_setup_ws_ns": 0.8875680190811863,
+       "critical": {
+        "start": "ng21_0/_7_",
+        "end": "row15/_152_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng21_0/_7_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 0.7488
+        }
+       },
+       "tap_input_max_transition_ns": 1.319303,
+       "site_input_max_transition_ns": 0.118448,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 4.125189719175523,
+       "setup_ws_ns": -1.1251897191755234,
+       "hold_ws_ns": 0.6220814974255973,
+       "prog_setup_ws_ns": -1.1251897191755234,
+       "critical": {
+        "start": "ng16_4/_8_",
+        "end": "row1/_156_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng16_4/_8_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 2.0594
+        }
+       },
+       "tap_input_max_transition_ns": 2.087882,
+       "site_input_max_transition_ns": 0.187938,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3660100566495998,
+       "setup_ws_ns": 1.6339899433504002,
+       "hold_ws_ns": 0.15027118438482034,
+       "prog_setup_ws_ns": 1.6701180438616348,
+       "critical": {
+        "start": "row21/_126_",
+        "end": "y[21]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output79/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.485
+        }
+       },
+       "tap_input_max_transition_ns": 0.997524,
+       "site_input_max_transition_ns": 0.089853,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 18.78,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 8.61,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 58847.0,
+      "met5": 4190.0
+     },
+     "vias": 789,
+     "placement_sta_setup_ws_ns": 0.9388838595469906,
+     "placement_sta_prog_ws_ns": 0.9978309289948584,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.156946817180369,
+       "setup_ws_ns": 0.8430531828196308,
+       "hold_ws_ns": 0.288307600015969,
+       "prog_setup_ws_ns": 0.8430531828196308,
+       "critical": {
+        "start": "ng16_4/_8_",
+        "end": "row41/_156_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng16_4/_8_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.1945,
+         "net": "pn16_4",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.320693,
+       "site_input_max_transition_ns": 0.109192,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 4.213474210004506,
+       "setup_ws_ns": -1.213474210004506,
+       "hold_ws_ns": 0.6241752670277378,
+       "prog_setup_ws_ns": -1.213474210004506,
+       "critical": {
+        "start": "ng16_4/_8_",
+        "end": "row41/_156_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng16_4/_8_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 2.0609,
+         "net": "pn16_4",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 2.090066,
+       "site_input_max_transition_ns": 0.174095,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3663832026081764,
+       "setup_ws_ns": 1.6336167973918236,
+       "hold_ws_ns": 0.1498164925450851,
+       "prog_setup_ws_ns": 1.6363039812006264,
+       "critical": {
+        "start": "row21/_126_",
+        "end": "y[21]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output79/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.4848,
+         "net": "y[21]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.99857,
+       "site_input_max_transition_ns": 0.082294,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 7,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 9.72,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 5.06,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 30419.0,
+      "met5": 1356.0
+     },
+     "vias": 253,
+     "placement_sta_setup_ws_ns": 0.9388838595469906,
+     "placement_sta_prog_ws_ns": 0.9706948578269703,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.04316561050166,
+       "setup_ws_ns": 0.95683438949834,
+       "hold_ws_ns": 0.2911080265732835,
+       "prog_setup_ws_ns": 0.95683438949834,
+       "critical": {
+        "start": "ng20_0/_7_",
+        "end": "row15/_152_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng20_0/_7_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 0.7883,
+         "net": "pp20_0",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.312535,
+       "site_input_max_transition_ns": 0.115835,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 3.996875471059866,
+       "setup_ws_ns": -0.996875471059866,
+       "hold_ws_ns": 0.6298637167390098,
+       "prog_setup_ws_ns": -0.996875471059866,
+       "critical": {
+        "start": "ng18_6/_8_",
+        "end": "row63/_154_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng18_6/_8_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.8771,
+         "net": "pn18_6",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 2.077198,
+       "site_input_max_transition_ns": 0.184643,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3637039013828485,
+       "setup_ws_ns": 1.6362960986171515,
+       "hold_ws_ns": 0.1515238490235049,
+       "prog_setup_ws_ns": 1.7124776041654854,
+       "critical": {
+        "start": "row21/_126_",
+        "end": "y[21]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output79/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.4838,
+         "net": "y[21]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.992397,
+       "site_input_max_transition_ns": 0.087375,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 18.08,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 6.6,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 57409.0,
+      "met5": 4148.0
+     },
+     "vias": 879,
+     "placement_sta_setup_ws_ns": 0.8246681115764432,
+     "placement_sta_prog_ws_ns": 0.8246681115764432,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.127673122600868,
+       "setup_ws_ns": 0.8723268773991322,
+       "hold_ws_ns": 0.28709684629646404,
+       "prog_setup_ws_ns": 0.8723268773991322,
+       "critical": {
+        "start": "ng21_0/_7_",
+        "end": "row15/_152_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng21_0/_7_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 0.7495,
+         "net": "pp21_0",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.319181,
+       "site_input_max_transition_ns": 0.132323,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 4.110812331006628,
+       "setup_ws_ns": -1.1108123310066276,
+       "hold_ws_ns": 0.6224140092214725,
+       "prog_setup_ws_ns": -1.1108123310066276,
+       "critical": {
+        "start": "ng21_0/_7_",
+        "end": "row15/_152_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng21_0/_7_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.3499,
+         "net": "pp21_0",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 2.08768,
+       "site_input_max_transition_ns": 0.209876,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3668577119289012,
+       "setup_ws_ns": 1.6331422880710988,
+       "hold_ws_ns": 0.14910872536688657,
+       "prog_setup_ws_ns": 1.6609615904883412,
+       "critical": {
+        "start": "row21/_126_",
+        "end": "y[21]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output79/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.4851,
+         "net": "y[21]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.997428,
+       "site_input_max_transition_ns": 0.100679,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 1,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 3.85,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.64,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 11649.0,
+      "met5": 0.0
+     },
+     "vias": 0,
+     "placement_sta_setup_ws_ns": 0.7883704800093483,
+     "placement_sta_prog_ws_ns": 0.7883704800093483,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.0507226765856785,
+       "setup_ws_ns": 0.9492773234143215,
+       "hold_ws_ns": 0.29422575487103586,
+       "prog_setup_ws_ns": 0.9492773234143215,
+       "critical": {
+        "start": "ng20_11/_7_",
+        "end": "row15/_152_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng20_11/_7_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 0.7393,
+         "net": "pp20_11",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.309118,
+       "site_input_max_transition_ns": 0.168329,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 3.9742744389029667,
+       "setup_ws_ns": -0.9742744389029667,
+       "hold_ws_ns": 0.6333190638585506,
+       "prog_setup_ws_ns": -0.9742744389029667,
+       "critical": {
+        "start": "ng20_11/_7_",
+        "end": "row15/_152_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng20_11/_7_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.3339,
+         "net": "pp20_11",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 2.06242,
+       "site_input_max_transition_ns": 0.268651,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3602850806008178,
+       "setup_ws_ns": 1.6397149193991822,
+       "hold_ws_ns": 0.15382695117693856,
+       "prog_setup_ws_ns": 1.7082646408539404,
+       "critical": {
+        "start": "row21/_126_",
+        "end": "y[21]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output79/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.4838,
+         "net": "y[21]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.985309,
+       "site_input_max_transition_ns": 0.128746,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 2.1124319809188137,
+      "w2": 2.156946817180369,
+      "w3": 2.04316561050166,
+      "w4": 2.127673122600868,
+      "w5": 2.0507226765856785
+     },
+     "ss": {
+      "w1": 4.125189719175523,
+      "w2": 4.213474210004506,
+      "w3": 3.996875471059866,
+      "w4": 4.110812331006628,
+      "w5": 3.9742744389029667
+     },
+     "ff": {
+      "w1": 1.3660100566495998,
+      "w2": 1.3663832026081764,
+      "w3": 1.3637039013828485,
+      "w4": 1.3668577119289012,
+      "w5": 1.3602850806008178
+     }
+    },
+    "worst_program": {
+     "tt": "w2",
+     "ss": "w2",
+     "ff": "w4"
+    },
+    "T_worst_ns": {
+     "tt": 2.156946817180369,
+     "ss": 4.213474210004506,
+     "ff": 1.3668577119289012
+    },
+    "hold_min_ns": {
+     "tt": 0.28709684629646404,
+     "ss": 0.6220814974255973,
+     "ff": 0.14910872536688657
+    },
+    "hold_ok": true,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 8376947.600492666,
+    "nominal_worst": 8553473.26104689,
+    "conservative": 16708728.608569337,
+    "conservative_A_incr": null,
+    "conservative_A_phys": 16783496.70842587,
+    "conservative_conv_2site": 16708728.608569337,
+    "ff_worst": 5420338.043347281
+   }
+  },
+  "B60": {
+   "key": "B60",
+   "label": "UBP3-R3 60% physically sized",
+   "role": "B",
+   "config": "w2_b60",
+   "fabric": "ubp",
+   "access": "r3",
+   "K": 4,
+   "util": 60,
+   "cycles_per_word": 14,
+   "driver_policy": "w2_load_rule (buf_2 taps, S = 0.3 ns)",
+   "tap_master": "LTAPB2",
+   "base": {
+    "odb_sha256": "ae09eb115819b0d05ad7d988862771e94c19e1e14c69f3c9fce4e240b35826f9",
+    "drc_final": 0,
+    "setup_ws_ns": 0.863538,
+    "hold_ws_ns": 0.214291,
+    "core_area_um2": 299526,
+    "cell_area_um2": 180922,
+    "instance_count": 39890
+   },
+   "tap_rule_verification": {
+    "class": "buf_2",
+    "tap_masters_in_def": [
+     "LTAPB2"
+    ],
+    "worst_tap": "lt_pp20_0_s0",
+    "L_rsmt_um": 145.34,
+    "C_wc_fF": 56.58,
+    "transition_ns": 0.2791,
+    "meets": true,
+    "taps_in_def": 2192,
+    "taps_expected": 2192,
+    "tap_status": {
+     "FIXED": 2192
+    },
+    "masters_ok": true
+   },
+   "areas": {
+    "A_um2": 180922.0,
+    "input_um2": 180439.3,
+    "flow_sizing_um2": 5317.6,
+    "counterpart_flow_sizing_um2": 1243.693,
+    "sizing_increment_um2": 4073.907,
+    "A_incr_um2": 184995.9,
+    "A_phys_um2": 185756.9,
+    "conv_2site_um2": 169951.5,
+    "taps": 2192,
+    "tap_sites": 6,
+    "tap_area_um2": 16455.8
+   },
+   "accounting": {
+    "base_odb_sha256": "ae09eb115819b0d05ad7d988862771e94c19e1e14c69f3c9fce4e240b35826f9",
+    "input_instances": 13993,
+    "final_components": 39890,
+    "input_area_um2": 180439.306,
+    "resized": {
+     "count": 384,
+     "delta_um2": 482.963,
+     "pairs": {
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 382,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 1,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_4": 1
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 67,
+      "area_um2": 167.661,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 67
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 20228,
+      "area_um2": 91052.326,
+      "masters": {
+       "sky130_fd_sc_hd__fill_1": 5816,
+       "sky130_fd_sc_hd__fill_2": 5266,
+       "sky130_fd_sc_hd__fill_8": 4960,
+       "sky130_fd_sc_hd__fill_4": 4186
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 3958,
+      "area_um2": 4952.25,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 3958
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 454,
+      "area_um2": 11360.896,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 454
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 385,
+      "area_um2": 4279.104,
+      "masters": {
+       "sky130_fd_sc_hd__clkinv_2": 100,
+       "sky130_fd_sc_hd__clkbuf_8": 95,
+       "sky130_fd_sc_hd__clkbuf_1": 86,
+       "sky130_fd_sc_hd__bufinv_16": 47,
+       "sky130_fd_sc_hd__clkinvlp_4": 27,
+       "sky130_fd_sc_hd__clkinv_8": 8
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "hold": {
+      "count": 67,
+      "area_um2": 670.643,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 67
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 645.619,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64,
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 64,
+      "area_um2": 640.614,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 609,
+      "area_um2": 4834.637,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 588,
+       "sky130_fd_sc_hd__buf_12": 21
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 5317.6,
+    "final_logic_area_um2": 203521.443
+   },
+   "counterpart_sizing": {
+    "design": "golden_r3_ubp3_u60",
+    "sizing_area_um2": 1243.693,
+    "resized": 384,
+    "resizer_buffers": {
+     "place": 58
+    },
+    "input_area_um2": 169468.784
+   },
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 17.32,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 8.08,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 58514.0,
+      "met5": 4234.0
+     },
+     "vias": 810,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.132254790978891,
+       "setup_ws_ns": 0.8677452090211091,
+       "hold_ws_ns": 0.20771429021237964,
+       "prog_setup_ws_ns": 1.1939098598645614,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.8187,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.302763,
+       "site_input_max_transition_ns": 0.166945,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ss": {
+       "T_ns": 4.177721031808687,
+       "setup_ws_ns": -1.1777210318086873,
+       "hold_ws_ns": 0.6053701984143345,
+       "prog_setup_ws_ns": -0.5214415566001662,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.4697,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.479237,
+       "site_input_max_transition_ns": 0.263078,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ff": {
+       "T_ns": 1.4031936461903456,
+       "setup_ws_ns": 1.5968063538096544,
+       "hold_ws_ns": 0.0957626755671015,
+       "prog_setup_ws_ns": 1.8549541902501687,
+       "critical": {
+        "start": "row34/_126_",
+        "end": "y[34]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output93/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5091,
+         "net": "y[34]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.228918,
+       "site_input_max_transition_ns": 0.127354,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 17.94,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 8.27,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 60463.0,
+      "met5": 4312.0
+     },
+     "vias": 819,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.13116099925503,
+       "setup_ws_ns": 0.8688390007449698,
+       "hold_ws_ns": 0.21041457465287294,
+       "prog_setup_ws_ns": 1.2497256562937764,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.8184,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.301298,
+       "site_input_max_transition_ns": 0.16646,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ss": {
+       "T_ns": 4.175418429255615,
+       "setup_ws_ns": -1.1754184292556147,
+       "hold_ws_ns": 0.6050956402603447,
+       "prog_setup_ws_ns": -0.4240963136226128,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.4692,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.476939,
+       "site_input_max_transition_ns": 0.265674,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ff": {
+       "T_ns": 1.4030419897251818,
+       "setup_ws_ns": 1.5969580102748182,
+       "hold_ws_ns": 0.09758599484044339,
+       "prog_setup_ws_ns": 1.8960533143541625,
+       "critical": {
+        "start": "row34/_126_",
+        "end": "y[34]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output93/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5089,
+         "net": "y[34]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.227811,
+       "site_input_max_transition_ns": 0.125501,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 6,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 9.33,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 4.91,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 31125.0,
+      "met5": 1917.0
+     },
+     "vias": 344,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.1335766225120096,
+       "setup_ws_ns": 0.8664233774879904,
+       "hold_ws_ns": 0.2160844281284824,
+       "prog_setup_ws_ns": 1.1986907022532023,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.8191,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.299166,
+       "site_input_max_transition_ns": 0.162893,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ss": {
+       "T_ns": 4.17877929639576,
+       "setup_ws_ns": -1.17877929639576,
+       "hold_ws_ns": 0.6142086839133754,
+       "prog_setup_ws_ns": -0.5182454465568753,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.4703,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.473594,
+       "site_input_max_transition_ns": 0.258542,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ff": {
+       "T_ns": 1.3975372819244853,
+       "setup_ws_ns": 1.6024627180755147,
+       "hold_ws_ns": 0.10223755175786664,
+       "prog_setup_ws_ns": 1.8592307693410248,
+       "critical": {
+        "start": "row34/_126_",
+        "end": "y[34]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output93/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5077,
+         "net": "y[34]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.2262,
+       "site_input_max_transition_ns": 0.123353,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 17.25,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 7.67,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 58964.0,
+      "met5": 4598.0
+     },
+     "vias": 902,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.133208250512439,
+       "setup_ws_ns": 0.866791749487561,
+       "hold_ws_ns": 0.20853763160744165,
+       "prog_setup_ws_ns": 1.1826810641935026,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.8196,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.302845,
+       "site_input_max_transition_ns": 0.212447,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ss": {
+       "T_ns": 4.179561337494306,
+       "setup_ws_ns": -1.179561337494306,
+       "hold_ws_ns": 0.6046010359028742,
+       "prog_setup_ws_ns": -0.543857403556558,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.4711,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.479366,
+       "site_input_max_transition_ns": 0.333942,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ff": {
+       "T_ns": 1.4023670851485122,
+       "setup_ws_ns": 1.5976329148514878,
+       "hold_ws_ns": 0.09653833288325586,
+       "prog_setup_ws_ns": 1.8467115614484442,
+       "critical": {
+        "start": "row34/_126_",
+        "end": "y[34]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output93/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5083,
+         "net": "y[34]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.22898,
+       "site_input_max_transition_ns": 0.162331,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 1,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 3.68,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.52,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 12022.0,
+      "met5": 36.0
+     },
+     "vias": 6,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.130889660747812,
+       "setup_ws_ns": 0.8691103392521882,
+       "hold_ws_ns": 0.21710533371077645,
+       "prog_setup_ws_ns": 0.979057057648447,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.8173,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.29807,
+       "site_input_max_transition_ns": 0.282732,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ss": {
+       "T_ns": 4.174477404219942,
+       "setup_ws_ns": -1.1744774042199424,
+       "hold_ws_ns": 0.6180480571771341,
+       "prog_setup_ws_ns": -0.9129026423693176,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row40/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.4674,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.471875,
+       "site_input_max_transition_ns": 0.441841,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      },
+      "ff": {
+       "T_ns": 1.3950471627025536,
+       "setup_ws_ns": 1.6049528372974464,
+       "hold_ws_ns": 0.103055453060108,
+       "prog_setup_ws_ns": 1.7183010569965518,
+       "critical": {
+        "start": "row34/_126_",
+        "end": "y[34]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output93/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5074,
+         "net": "y[34]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.225372,
+       "site_input_max_transition_ns": 0.216886,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 2069,
+        "sky130_fd_sc_hd__dfxtp_1": 123
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 2.132254790978891,
+      "w2": 2.13116099925503,
+      "w3": 2.1335766225120096,
+      "w4": 2.133208250512439,
+      "w5": 2.130889660747812
+     },
+     "ss": {
+      "w1": 4.177721031808687,
+      "w2": 4.175418429255615,
+      "w3": 4.17877929639576,
+      "w4": 4.179561337494306,
+      "w5": 4.174477404219942
+     },
+     "ff": {
+      "w1": 1.4031936461903456,
+      "w2": 1.4030419897251818,
+      "w3": 1.3975372819244853,
+      "w4": 1.4023670851485122,
+      "w5": 1.3950471627025536
+     }
+    },
+    "worst_program": {
+     "tt": "w3",
+     "ss": "w4",
+     "ff": "w1"
+    },
+    "T_worst_ns": {
+     "tt": 2.1335766225120096,
+     "ss": 4.179561337494306,
+     "ff": 1.4031936461903456
+    },
+    "hold_min_ns": {
+     "tt": 0.20771429021237964,
+     "ss": 0.6046010359028742,
+     "ff": 0.0957626755671015
+    },
+    "hold_ok": true,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 9001342.030181268,
+    "nominal_worst": 9006922.15962275,
+    "conservative": 17644073.913716715,
+    "conservative_A_incr": 18041373.262149133,
+    "conservative_A_phys": 18115588.339631904,
+    "conservative_conv_2site": 16574196.768480482,
+    "ff_worst": 5923600.68664116
+   }
+  },
+  "AR2": {
+   "key": "AR2",
+   "label": "A-R2 75% physically sized",
+   "role": "competitor",
+   "config": "w2_ar2",
+   "fabric": "g1",
+   "access": "r2",
+   "K": 1,
+   "util": 75,
+   "cycles_per_word": 14,
+   "driver_policy": "w2_load_rule (buf_12 taps, S = 0.3 ns)",
+   "tap_master": "LTAPBW12",
+   "base": {
+    "odb_sha256": "1d9398c922b2b68428d77790e1bfbf569da6bc2b22d5c0626bd2f651110bc603",
+    "drc_final": 0,
+    "setup_ws_ns": 0.829796,
+    "hold_ws_ns": 0.0825614,
+    "core_area_um2": 474830,
+    "cell_area_um2": 358018,
+    "instance_count": 57137
+   },
+   "tap_rule_verification": {
+    "class": "buf_12",
+    "tap_masters_in_def": [
+     "LTAPBW12"
+    ],
+    "worst_tap": "lt_ln36",
+    "L_rsmt_um": 684.94,
+    "C_wc_fF": 241.68,
+    "transition_ns": 0.2764,
+    "meets": true,
+    "taps_in_def": 128,
+    "taps_expected": 128,
+    "tap_status": {
+     "FIXED": 128
+    },
+    "masters_ok": true
+   },
+   "areas": {
+    "A_um2": 358018.0,
+    "input_um2": 357562.9,
+    "flow_sizing_um2": 3080.454,
+    "counterpart_flow_sizing_um2": 2662.554,
+    "sizing_increment_um2": 417.9000000000001,
+    "A_incr_um2": 358435.9,
+    "A_phys_um2": 360643.4,
+    "conv_2site_um2": 355455.5,
+    "taps": 128,
+    "tap_sites": 18,
+    "tap_area_um2": 2882.8
+   },
+   "accounting": {
+    "base_odb_sha256": "1d9398c922b2b68428d77790e1bfbf569da6bc2b22d5c0626bd2f651110bc603",
+    "input_instances": 25089,
+    "final_components": 57137,
+    "input_area_um2": 357562.931,
+    "resized": {
+     "count": 362,
+     "delta_um2": 455.437,
+     "pairs": {
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 361,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_4": 1
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 57,
+      "area_um2": 142.637,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 57
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 23735,
+      "area_um2": 76366.992,
+      "masters": {
+       "sky130_fd_sc_hd__fill_1": 8879,
+       "sky130_fd_sc_hd__fill_2": 7656,
+       "sky130_fd_sc_hd__fill_4": 5189,
+       "sky130_fd_sc_hd__fill_8": 2011
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 6247,
+      "area_um2": 7816.246,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 6247
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 815,
+      "area_um2": 20394.56,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 815
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 686,
+      "area_um2": 7319.52,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_8": 231,
+       "sky130_fd_sc_hd__clkbuf_1": 197,
+       "sky130_fd_sc_hd__clkinv_2": 140,
+       "sky130_fd_sc_hd__bufinv_16": 52,
+       "sky130_fd_sc_hd__clkbuf_16": 34,
+       "sky130_fd_sc_hd__inv_6": 24
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "hold": {
+      "count": 86,
+      "area_um2": 860.826,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 86
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 645.619,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64,
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 64,
+      "area_um2": 640.614,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 293,
+      "area_um2": 2625.018,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 259,
+       "sky130_fd_sc_hd__buf_12": 34
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 3080.454,
+    "final_logic_area_um2": 390647.162
+   },
+   "counterpart_sizing": {
+    "design": "golden_r2_g1_u75",
+    "base_def": "experiments/results/G2/orfs/results/sky130hd/g2s_g1s_u75/base/6_final.def",
+    "sizing_area_um2": 2662.554,
+    "resized": 362,
+    "resizer_buffers": {
+     "place": 219
+    },
+    "input_area_um2": 355961.395
+   },
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 18,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 17.78,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 2.32,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 87421.0,
+      "met5": 2453.0
+     },
+     "vias": 572,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.1829209289306846,
+       "setup_ws_ns": 0.8170790710693154,
+       "hold_ws_ns": 0.07428224702010766,
+       "prog_setup_ws_ns": 1.460994214497191,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.775,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.212492,
+       "site_input_max_transition_ns": 0.183198,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ss": {
+       "T_ns": 3.8880975954639325,
+       "setup_ws_ns": -0.8880975954639325,
+       "hold_ws_ns": 0.3457274466711624,
+       "prog_setup_ws_ns": -0.03175237850427948,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row59/_482_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place1957/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 0.9635,
+         "net": "net1957",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.334631,
+       "site_input_max_transition_ns": 0.283226,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ff": {
+       "T_ns": 1.5030743054892355,
+       "setup_ws_ns": 1.4969256945107645,
+       "hold_ws_ns": 0.006293465748541394,
+       "prog_setup_ws_ns": 2.0380486187576707,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5387,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.160243,
+       "site_input_max_transition_ns": 0.14099,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 18.03,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 2.15,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 88260.0,
+      "met5": 2290.0
+     },
+     "vias": 551,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.1840622381999992,
+       "setup_ws_ns": 0.8159377618000008,
+       "hold_ws_ns": 0.07328448958787703,
+       "prog_setup_ws_ns": 1.5032730615871515,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.7751,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.212484,
+       "site_input_max_transition_ns": 0.179535,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ss": {
+       "T_ns": 3.8882308222268875,
+       "setup_ws_ns": -0.8882308222268875,
+       "hold_ws_ns": 0.3406799287120066,
+       "prog_setup_ws_ns": 0.03759792477353585,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row59/_482_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place1957/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 0.9635,
+         "net": "net1957",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.334619,
+       "site_input_max_transition_ns": 0.278243,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ff": {
+       "T_ns": 1.5038803274051133,
+       "setup_ws_ns": 1.4961196725948867,
+       "hold_ws_ns": 0.005584477325015769,
+       "prog_setup_ws_ns": 2.0646617748809604,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5388,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.160238,
+       "site_input_max_transition_ns": 0.138166,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 9,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 14.25,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 1.55,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 66933.0,
+      "met5": 1759.0
+     },
+     "vias": 352,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.1775476715361037,
+       "setup_ws_ns": 0.8224523284638963,
+       "hold_ws_ns": 0.07513767386058134,
+       "prog_setup_ws_ns": 1.503700941540842,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.7703,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.212431,
+       "site_input_max_transition_ns": 0.138071,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ss": {
+       "T_ns": 3.8719047706051697,
+       "setup_ws_ns": -0.8719047706051697,
+       "hold_ws_ns": 0.3458251462973294,
+       "prog_setup_ws_ns": 0.05049383133837182,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row60/_482_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place1957/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 0.9635,
+         "net": "net1957",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.334534,
+       "site_input_max_transition_ns": 0.21529,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ff": {
+       "T_ns": 1.4990900481207632,
+       "setup_ws_ns": 1.5009099518792368,
+       "hold_ws_ns": 0.006915357175785175,
+       "prog_setup_ws_ns": 2.0655623877985363,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5352,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.160197,
+       "site_input_max_transition_ns": 0.105518,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 18.56,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 2.36,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 93486.0,
+      "met5": 2886.0
+     },
+     "vias": 634,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.181867771369525,
+       "setup_ws_ns": 0.8181322286304749,
+       "hold_ws_ns": 0.07389955314351937,
+       "prog_setup_ws_ns": 1.4590266772529503,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.7735,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.212462,
+       "site_input_max_transition_ns": 0.208749,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ss": {
+       "T_ns": 3.8868714651555365,
+       "setup_ws_ns": -0.8868714651555365,
+       "hold_ws_ns": 0.3429773132168634,
+       "prog_setup_ws_ns": -0.031315394721787015,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row59/_482_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place1957/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 0.9636,
+         "net": "net1957",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.334582,
+       "site_input_max_transition_ns": 0.322249,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ff": {
+       "T_ns": 1.5022401949308346,
+       "setup_ws_ns": 1.4977598050691654,
+       "hold_ws_ns": 0.00604571948059629,
+       "prog_setup_ws_ns": 2.035441148962036,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5376,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.16022,
+       "site_input_max_transition_ns": 0.161043,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 7,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 6.18,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.32,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 30357.0,
+      "met5": 115.0
+     },
+     "vias": 30,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.1709698221598046,
+       "setup_ws_ns": 0.8290301778401954,
+       "hold_ws_ns": 0.08146350261029056,
+       "prog_setup_ws_ns": 1.4245946644564356,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.7703,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.212372,
+       "site_input_max_transition_ns": 0.26631,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ss": {
+       "T_ns": 3.8857110600501983,
+       "setup_ws_ns": -0.8857110600501983,
+       "hold_ws_ns": 0.3555151728562578,
+       "prog_setup_ws_ns": -0.09940581691125772,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row58/_480_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place1957/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 0.9634,
+         "net": "net1957",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.334441,
+       "site_input_max_transition_ns": 0.409426,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      },
+      "ff": {
+       "T_ns": 1.4944578645951196,
+       "setup_ws_ns": 1.5055421354048804,
+       "hold_ws_ns": 0.01141092775824859,
+       "prog_setup_ws_ns": 2.0158388291946494,
+       "critical": {
+        "start": "row24/_378_",
+        "end": "y[24]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output82/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5352,
+         "net": "y[24]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.160153,
+       "site_input_max_transition_ns": 0.206477,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 83,
+        "sky130_fd_sc_hd__dfxtp_1": 45
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 2.1829209289306846,
+      "w2": 2.1840622381999992,
+      "w3": 2.1775476715361037,
+      "w4": 2.181867771369525,
+      "w5": 2.1709698221598046
+     },
+     "ss": {
+      "w1": 3.8880975954639325,
+      "w2": 3.8882308222268875,
+      "w3": 3.8719047706051697,
+      "w4": 3.8868714651555365,
+      "w5": 3.8857110600501983
+     },
+     "ff": {
+      "w1": 1.5030743054892355,
+      "w2": 1.5038803274051133,
+      "w3": 1.4990900481207632,
+      "w4": 1.5022401949308346,
+      "w5": 1.4944578645951196
+     }
+    },
+    "worst_program": {
+     "tt": "w2",
+     "ss": "w2",
+     "ff": "w2"
+    },
+    "T_worst_ns": {
+     "tt": 2.1840622381999992,
+     "ss": 3.8882308222268875,
+     "ff": 1.5038803274051133
+    },
+    "hold_min_ns": {
+     "tt": 0.07328448958787703,
+     "ss": 0.3406799287120066,
+     "ff": 0.005584477325015769
+    },
+    "hold_ok": true,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 14588466.389166242,
+    "nominal_worst": 14596093.762056561,
+    "conservative": 25985056.95355781,
+    "conservative_A_incr": 26015388.264555845,
+    "conservative_A_phys": 26175609.295970406,
+    "conservative_conv_2site": 25799069.912561297,
+    "ff_worst": 10050436.23839591
+   }
+  },
+  "AR3": {
+   "key": "AR3",
+   "label": "A-R3 75% physically sized",
+   "role": "competitor",
+   "config": "w2_ar3",
+   "fabric": "g1",
+   "access": "r3",
+   "K": 4,
+   "util": 75,
+   "cycles_per_word": 14,
+   "driver_policy": "w2_load_rule (buf_2 taps, S = 0.3 ns)",
+   "tap_master": "LTAPB2",
+   "base": {
+    "odb_sha256": "210c0e422129d523d156b89bf2ddc1567b9bf9b587a854cda48a162b14ee4a74",
+    "drc_final": 0,
+    "setup_ws_ns": 0.772697,
+    "hold_ws_ns": 0.0972088,
+    "core_area_um2": 475464,
+    "cell_area_um2": 358979,
+    "instance_count": 57697
+   },
+   "tap_rule_verification": {
+    "class": "buf_2",
+    "tap_masters_in_def": [
+     "LTAPB2"
+    ],
+    "worst_tap": "lt_lp38_s1",
+    "L_rsmt_um": 168.26,
+    "C_wc_fF": 59.98,
+    "transition_ns": 0.2952,
+    "meets": true,
+    "taps_in_def": 512,
+    "taps_expected": 512,
+    "tap_status": {
+     "FIXED": 512
+    },
+    "masters_ok": true
+   },
+   "areas": {
+    "A_um2": 358979.0,
+    "input_um2": 358523.9,
+    "flow_sizing_um2": 4849.651,
+    "counterpart_flow_sizing_um2": 2635.027,
+    "sizing_increment_um2": 2214.624,
+    "A_incr_um2": 361193.6,
+    "A_phys_um2": 363373.5,
+    "conv_2site_um2": 356416.5,
+    "taps": 512,
+    "tap_sites": 6,
+    "tap_area_um2": 3843.7
+   },
+   "accounting": {
+    "base_odb_sha256": "210c0e422129d523d156b89bf2ddc1567b9bf9b587a854cda48a162b14ee4a74",
+    "input_instances": 25473,
+    "final_components": 57697,
+    "input_area_um2": 358523.853,
+    "resized": {
+     "count": 362,
+     "delta_um2": 455.437,
+     "pairs": {
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 361,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_4": 1
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 65,
+      "area_um2": 162.656,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 65
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 23563,
+      "area_um2": 73867.094,
+      "masters": {
+       "sky130_fd_sc_hd__fill_1": 8989,
+       "sky130_fd_sc_hd__fill_2": 7624,
+       "sky130_fd_sc_hd__fill_4": 5200,
+       "sky130_fd_sc_hd__fill_8": 1750
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 6375,
+      "area_um2": 7976.4,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 6375
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 814,
+      "area_um2": 20369.536,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 814
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 686,
+      "area_um2": 7427.123,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_8": 212,
+       "sky130_fd_sc_hd__clkbuf_1": 202,
+       "sky130_fd_sc_hd__clkinv_2": 145,
+       "sky130_fd_sc_hd__bufinv_16": 67,
+       "sky130_fd_sc_hd__clkbuf_16": 29,
+       "sky130_fd_sc_hd__inv_6": 15
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "hold": {
+      "count": 100,
+      "area_um2": 1000.96,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 100
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 645.619,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64,
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 64,
+      "area_um2": 640.614,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 492,
+      "area_um2": 4394.214,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 436,
+       "sky130_fd_sc_hd__buf_12": 56
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 4849.651,
+    "final_logic_area_um2": 393620.013
+   },
+   "counterpart_sizing": {
+    "design": "r3_g1_u75",
+    "base_def": "ubpgen_runs/r3_g1_u75/physical/orfs/results/sky130hd/ubpgen_r3_g1_u75/base/6_final.def",
+    "sizing_area_um2": 2635.027,
+    "resized": 362,
+    "resizer_buffers": {
+     "place": 222
+    },
+    "input_area_um2": 355961.395
+   },
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 13.51,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.99,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 67027.0,
+      "met5": 515.0
+     },
+     "vias": 165,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.218562418690226,
+       "setup_ws_ns": 0.781437581309774,
+       "hold_ws_ns": 0.0928249699327921,
+       "prog_setup_ws_ns": 1.2897536372236118,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row4/_464_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9214,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.173928,
+       "site_input_max_transition_ns": 0.217242,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ss": {
+       "T_ns": 4.377996827756078,
+       "setup_ws_ns": -1.3779968277560783,
+       "hold_ws_ns": 0.34211411481521736,
+       "prog_setup_ws_ns": -0.3471600784621387,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row8/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6308,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.276342,
+       "site_input_max_transition_ns": 0.342084,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ff": {
+       "T_ns": 1.483946606064876,
+       "setup_ws_ns": 1.516053393935124,
+       "hold_ws_ns": 0.012186140985193106,
+       "prog_setup_ws_ns": 1.923842862794345,
+       "critical": {
+        "start": "row33/_378_",
+        "end": "y[33]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output92/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5069,
+         "net": "y[33]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.132097,
+       "site_input_max_transition_ns": 0.166061,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 9,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 13.42,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.98,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 66992.0,
+      "met5": 496.0
+     },
+     "vias": 176,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.2165260476184585,
+       "setup_ws_ns": 0.7834739523815415,
+       "hold_ws_ns": 0.09383904764348472,
+       "prog_setup_ws_ns": 1.3178531599322696,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row5/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9211,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.173905,
+       "site_input_max_transition_ns": 0.22547,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ss": {
+       "T_ns": 4.378488878600592,
+       "setup_ws_ns": -1.3784888786005922,
+       "hold_ws_ns": 0.34372948931604697,
+       "prog_setup_ws_ns": -0.30829561126211047,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row8/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6303,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.276305,
+       "site_input_max_transition_ns": 0.354636,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ff": {
+       "T_ns": 1.4838581212898134,
+       "setup_ws_ns": 1.5161418787101866,
+       "hold_ws_ns": 0.012909950886097477,
+       "prog_setup_ws_ns": 1.9454469146751308,
+       "critical": {
+        "start": "row33/_378_",
+        "end": "y[33]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output92/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.507,
+         "net": "y[33]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.13208,
+       "site_input_max_transition_ns": 0.1727,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 8,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 7.31,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.79,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 34933.0,
+      "met5": 73.0
+     },
+     "vias": 26,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.2170358620313664,
+       "setup_ws_ns": 0.7829641379686336,
+       "hold_ws_ns": 0.09585043869719811,
+       "prog_setup_ws_ns": 1.3934593479092428,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row4/_464_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9208,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.173846,
+       "site_input_max_transition_ns": 0.184171,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ss": {
+       "T_ns": 4.377172598182597,
+       "setup_ws_ns": -1.3771725981825966,
+       "hold_ws_ns": 0.347258333199818,
+       "prog_setup_ws_ns": -0.16620571585690413,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row8/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6298,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.276214,
+       "site_input_max_transition_ns": 0.291925,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ff": {
+       "T_ns": 1.481298724151145,
+       "setup_ws_ns": 1.518701275848855,
+       "hold_ws_ns": 0.014422574245998021,
+       "prog_setup_ws_ns": 1.9904446979523982,
+       "critical": {
+        "start": "row33/_378_",
+        "end": "y[33]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output92/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5069,
+         "net": "y[33]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.132036,
+       "site_input_max_transition_ns": 0.140362,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 15.44,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.99,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 78302.0,
+      "met5": 676.0
+     },
+     "vias": 221,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.218989188420892,
+       "setup_ws_ns": 0.7810108115791081,
+       "hold_ws_ns": 0.09220757490879805,
+       "prog_setup_ws_ns": 1.2901097967699116,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row8/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9217,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.1739,
+       "site_input_max_transition_ns": 0.244907,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ss": {
+       "T_ns": 4.38044997655129,
+       "setup_ws_ns": -1.38044997655129,
+       "hold_ws_ns": 0.34104197244033685,
+       "prog_setup_ws_ns": -0.36206682096917575,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row8/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6313,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.276297,
+       "site_input_max_transition_ns": 0.384789,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ff": {
+       "T_ns": 1.4850167500383122,
+       "setup_ws_ns": 1.5149832499616878,
+       "hold_ws_ns": 0.011626921647689414,
+       "prog_setup_ws_ns": 1.9300787634790595,
+       "critical": {
+        "start": "row33/_378_",
+        "end": "y[33]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output92/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.507,
+         "net": "y[33]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.132077,
+       "site_input_max_transition_ns": 0.187754,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 1,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 5.73,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.28,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 28918.0,
+      "met5": 0.0
+     },
+     "vias": 0,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.217653146033058,
+       "setup_ws_ns": 0.782346853966942,
+       "hold_ws_ns": 0.09588518867786888,
+       "prog_setup_ws_ns": 1.2461573994926312,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row8/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9207,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.173862,
+       "site_input_max_transition_ns": 0.287798,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ss": {
+       "T_ns": 4.377705505234417,
+       "setup_ws_ns": -1.3777055052344167,
+       "hold_ws_ns": 0.34780589519556315,
+       "prog_setup_ws_ns": -0.4417035626147481,
+       "critical": {
+        "start": "stt1_ff",
+        "end": "row8/_462_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt1_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6297,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.276239,
+       "site_input_max_transition_ns": 0.450539,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      },
+      "ff": {
+       "T_ns": 1.481359675395197,
+       "setup_ws_ns": 1.518640324604803,
+       "hold_ws_ns": 0.01443622998920091,
+       "prog_setup_ws_ns": 1.896202528328672,
+       "critical": {
+        "start": "row33/_378_",
+        "end": "y[33]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output92/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5068,
+         "net": "y[33]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.132049,
+       "site_input_max_transition_ns": 0.221147,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 512
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 2.218562418690226,
+      "w2": 2.2165260476184585,
+      "w3": 2.2170358620313664,
+      "w4": 2.218989188420892,
+      "w5": 2.217653146033058
+     },
+     "ss": {
+      "w1": 4.377996827756078,
+      "w2": 4.378488878600592,
+      "w3": 4.377172598182597,
+      "w4": 4.38044997655129,
+      "w5": 4.377705505234417
+     },
+     "ff": {
+      "w1": 1.483946606064876,
+      "w2": 1.4838581212898134,
+      "w3": 1.481298724151145,
+      "w4": 1.4850167500383122,
+      "w5": 1.481359675395197
+     }
+    },
+    "worst_program": {
+     "tt": "w4",
+     "ss": "w4",
+     "ff": "w4"
+    },
+    "T_worst_ns": {
+     "tt": 2.218989188420892,
+     "ss": 4.38044997655129,
+     "ff": 1.4850167500383122
+    },
+    "hold_min_ns": {
+     "tt": 0.09220757490879805,
+     "ss": 0.34104197244033685,
+     "ff": 0.011626921647689414
+    },
+    "hold_ok": true,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 14866456.61198131,
+    "nominal_worst": 14869316.370909344,
+    "conservative": 29353138.306471575,
+    "conservative_A_incr": 29534222.604142215,
+    "conservative_A_phys": 29712469.538348056,
+    "conservative_conv_2site": 29143606.7825932,
+    "ff_worst": 9951010.121024063
+   }
+  },
+  "P2R3_hist": {
+   "key": "P2R3_hist",
+   "label": "P2-R3 67% unsized (historical)",
+   "role": "historical",
+   "config": "golden_r3_pc2_u67",
+   "fabric": "pc2",
+   "access": "r3",
+   "K": 4,
+   "util": 67,
+   "cycles_per_word": 8,
+   "driver_policy": "historical",
+   "tap_master": "LTAP2",
+   "base": {
+    "odb_sha256": "afde9bb09f052e3e63cf5eb78ef3f57c9bac9873ff75d173598055471662105b",
+    "drc_final": 0,
+    "setup_ws_ns": -0.845813,
+    "hold_ws_ns": 0.0244096,
+    "core_area_um2": 406673,
+    "cell_area_um2": 274662,
+    "instance_count": 63626
+   },
+   "tap_rule_verification": null,
+   "areas": {
+    "A_um2": 274662.0,
+    "input_um2": 273902.7,
+    "flow_sizing_um2": 38360.541,
+    "counterpart_flow_sizing_um2": null,
+    "sizing_increment_um2": null,
+    "A_incr_um2": null,
+    "A_phys_um2": 312263.2,
+    "conv_2site_um2": 274662.0,
+    "taps": 512,
+    "tap_sites": 2,
+    "tap_area_um2": 1281.2
+   },
+   "accounting": {
+    "base_odb_sha256": "afde9bb09f052e3e63cf5eb78ef3f57c9bac9873ff75d173598055471662105b",
+    "input_instances": 30794,
+    "final_components": 63626,
+    "input_area_um2": 273902.694,
+    "resized": {
+     "count": 1542,
+     "delta_um2": 8269.181,
+     "pairs": {
+      "sky130_fd_sc_hd__xnor2_1 -> sky130_fd_sc_hd__xnor2_2": 348,
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 219,
+      "sky130_fd_sc_hd__o22ai_1 -> sky130_fd_sc_hd__o22ai_2": 165,
+      "sky130_fd_sc_hd__a21oi_1 -> sky130_fd_sc_hd__a21oi_2": 90,
+      "sky130_fd_sc_hd__xor2_1 -> sky130_fd_sc_hd__xor2_2": 75,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 74,
+      "sky130_fd_sc_hd__nor3_1 -> sky130_fd_sc_hd__nor3_2": 64,
+      "sky130_fd_sc_hd__or4b_1 -> sky130_fd_sc_hd__or4b_4": 64,
+      "sky130_fd_sc_hd__xor3_1 -> sky130_fd_sc_hd__xor3_2": 63,
+      "sky130_fd_sc_hd__a41oi_1 -> sky130_fd_sc_hd__a41oi_2": 58,
+      "sky130_fd_sc_hd__o21ai_0 -> sky130_fd_sc_hd__o21ai_1": 47,
+      "sky130_fd_sc_hd__nor4_1 -> sky130_fd_sc_hd__nor4_4": 39
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 510,
+      "area_um2": 1276.224,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 510
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 22142,
+      "area_um2": 66352.387,
+      "masters": {
+       "sky130_fd_sc_hd__fill_1": 9165,
+       "sky130_fd_sc_hd__fill_2": 7535,
+       "sky130_fd_sc_hd__fill_4": 3685,
+       "sky130_fd_sc_hd__fill_8": 1757
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 5428,
+      "area_um2": 6791.514,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 5428
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 466,
+      "area_um2": 11661.184,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 466
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 404,
+      "area_um2": 5104.896,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_8": 90,
+       "sky130_fd_sc_hd__clkinv_2": 85,
+       "sky130_fd_sc_hd__bufinv_16": 75,
+       "sky130_fd_sc_hd__clkbuf_1": 65,
+       "sky130_fd_sc_hd__clkinvlp_4": 46,
+       "sky130_fd_sc_hd__clkinv_4": 15
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clone": {
+      "count": 30,
+      "area_um2": 760.73,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 25,
+       "sky130_fd_sc_hd__buf_16": 3,
+       "sky130_fd_sc_hd__bufbuf_16": 1,
+       "sky130_fd_sc_hd__buf_12": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "hold": {
+      "count": 129,
+      "area_um2": 1291.238,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 129
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 650.624,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 65
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 128,
+      "area_um2": 1281.229,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 128
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 3211,
+      "area_um2": 26698.106,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 2971,
+       "sky130_fd_sc_hd__buf_12": 163,
+       "sky130_fd_sc_hd__buf_6": 50,
+       "sky130_fd_sc_hd__buf_8": 14,
+       "sky130_fd_sc_hd__buf_16": 13
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "rebuffer": {
+      "count": 305,
+      "area_um2": 2436.086,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 289,
+       "sky130_fd_sc_hd__buf_12": 9,
+       "sky130_fd_sc_hd__buf_6": 5,
+       "sky130_fd_sc_hd__buf_8": 2
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "wire": {
+      "count": 14,
+      "area_um2": 196.438,
+      "masters": {
+       "sky130_fd_sc_hd__buf_8": 8,
+       "sky130_fd_sc_hd__buf_6": 2,
+       "sky130_fd_sc_hd__clkbuf_16": 1,
+       "sky130_fd_sc_hd__buf_4": 1,
+       "sky130_fd_sc_hd__clkbuf_4": 1,
+       "sky130_fd_sc_hd__clkbuf_8": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 38360.541,
+    "final_logic_area_um2": 333528.63
+   },
+   "counterpart_sizing": null,
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 15.09,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 1.06,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 62326.0,
+      "met5": 393.0
+     },
+     "vias": 132,
+     "placement_sta_setup_ws_ns": -2.4533695075490414,
+     "placement_sta_prog_ws_ns": -2.4533695075490414,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 6.364874157085751,
+       "setup_ws_ns": -3.364874157085751,
+       "hold_ws_ns": 0.02459998871273683,
+       "prog_setup_ws_ns": -3.364874157085751,
+       "critical": {
+        "start": "ln_56/_1_",
+        "end": "row8/_638_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row8/_548_/Y",
+         "cell": "sky130_fd_sc_hd__xnor2_1",
+         "delay_ns": 1.4484,
+         "net": "row8/g56_6[0]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.964653,
+       "site_input_max_transition_ns": 0.14719,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ss": {
+       "T_ns": 11.893620062622176,
+       "setup_ws_ns": -8.893620062622176,
+       "hold_ws_ns": 0.22154922341144356,
+       "prog_setup_ws_ns": -8.893620062622176,
+       "critical": {
+        "start": "ln_56/_1_",
+        "end": "row8/_638_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row8/_548_/Y",
+         "cell": "sky130_fd_sc_hd__xnor2_1",
+         "delay_ns": 2.473,
+         "net": "row8/g56_6[0]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 3.092144,
+       "site_input_max_transition_ns": 0.234129,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ff": {
+       "T_ns": 4.14264508965789,
+       "setup_ws_ns": -1.14264508965789,
+       "hold_ws_ns": -0.023292090478577165,
+       "prog_setup_ws_ns": -1.14264508965789,
+       "critical": {
+        "start": "ln_56/_1_",
+        "end": "row5/_638_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ln_56/_1_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.0092,
+         "net": "lp56",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.478959,
+       "site_input_max_transition_ns": 0.111988,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 9,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 15.0,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 1.05,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 62213.0,
+      "met5": 450.0
+     },
+     "vias": 137,
+     "placement_sta_setup_ws_ns": -2.8018760644954455,
+     "placement_sta_prog_ws_ns": -2.8018760644954455,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 6.593854325245616,
+       "setup_ws_ns": -3.5938543252456157,
+       "hold_ws_ns": 0.024838908707636165,
+       "prog_setup_ws_ns": -3.5938543252456157,
+       "critical": {
+        "start": "ln_49/_1_",
+        "end": "row27/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row27/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 1.2665,
+         "net": "row27/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.964511,
+       "site_input_max_transition_ns": 0.146181,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ss": {
+       "T_ns": 12.438650749871158,
+       "setup_ws_ns": -9.438650749871158,
+       "hold_ws_ns": 0.2219376904477599,
+       "prog_setup_ws_ns": -9.438650749871158,
+       "critical": {
+        "start": "ln_49/_1_",
+        "end": "row27/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row27/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 2.1515,
+         "net": "row27/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 3.091918,
+       "site_input_max_transition_ns": 0.232626,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ff": {
+       "T_ns": 4.252507875193487,
+       "setup_ws_ns": -1.252507875193487,
+       "hold_ws_ns": -0.023133550630660693,
+       "prog_setup_ws_ns": -1.252507875193487,
+       "critical": {
+        "start": "ln_49/_1_",
+        "end": "row27/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row27/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.8841,
+         "net": "row27/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.478849,
+       "site_input_max_transition_ns": 0.110806,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 7,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 8.09,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.91,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 32461.0,
+      "met5": 98.0
+     },
+     "vias": 36,
+     "placement_sta_setup_ws_ns": -2.036024682183779,
+     "placement_sta_prog_ws_ns": -2.036024682183779,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 6.350336452712099,
+       "setup_ws_ns": -3.3503364527120993,
+       "hold_ws_ns": 0.02618694150413603,
+       "prog_setup_ws_ns": -3.3503364527120993,
+       "critical": {
+        "start": "ln_56/_1_",
+        "end": "row5/_638_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ln_56/_1_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.401,
+         "net": "lp56",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.957621,
+       "site_input_max_transition_ns": 0.118234,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ss": {
+       "T_ns": 11.753062274990953,
+       "setup_ws_ns": -8.753062274990953,
+       "hold_ws_ns": 0.2241193897134508,
+       "prog_setup_ws_ns": -8.753062274990953,
+       "critical": {
+        "start": "ln_56/_1_",
+        "end": "row5/_638_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ln_56/_1_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 2.3913,
+         "net": "lp56",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 3.081105,
+       "site_input_max_transition_ns": 0.191027,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ff": {
+       "T_ns": 4.154645712375668,
+       "setup_ws_ns": -1.1546457123756682,
+       "hold_ws_ns": -0.022243540342969936,
+       "prog_setup_ws_ns": -1.1546457123756682,
+       "critical": {
+        "start": "ln_56/_1_",
+        "end": "row5/_638_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ln_56/_1_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.0058,
+         "net": "lp56",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.473649,
+       "site_input_max_transition_ns": 0.089494,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 17.38,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 1.06,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 72921.0,
+      "met5": 665.0
+     },
+     "vias": 234,
+     "placement_sta_setup_ws_ns": -2.802686527303422,
+     "placement_sta_prog_ws_ns": -2.802686527303422,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 6.927351777122112,
+       "setup_ws_ns": -3.9273517771221123,
+       "hold_ws_ns": 0.02445699198716511,
+       "prog_setup_ws_ns": -3.9273517771221123,
+       "critical": {
+        "start": "ln_51/_1_",
+        "end": "row52/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row52/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 1.2735,
+         "net": "row52/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.965995,
+       "site_input_max_transition_ns": 0.160191,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ss": {
+       "T_ns": 13.096648850321799,
+       "setup_ws_ns": -10.096648850321799,
+       "hold_ws_ns": 0.22135238086917752,
+       "prog_setup_ws_ns": -10.096648850321799,
+       "critical": {
+        "start": "ln_51/_1_",
+        "end": "row52/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row52/_575_/Y",
+         "cell": "sky130_fd_sc_hd__o21ai_0",
+         "delay_ns": 2.3217,
+         "net": "row52/g48_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 3.094246,
+       "site_input_max_transition_ns": 0.258547,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ff": {
+       "T_ns": 4.440400687613419,
+       "setup_ws_ns": -1.440400687613419,
+       "hold_ws_ns": -0.02339023419395403,
+       "prog_setup_ws_ns": -1.440400687613419,
+       "critical": {
+        "start": "ln_51/_1_",
+        "end": "row52/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row52/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 0.8694,
+         "net": "row52/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.47996,
+       "site_input_max_transition_ns": 0.122562,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 3,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 6.55,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.3,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 26888.0,
+      "met5": 0.0
+     },
+     "vias": 0,
+     "placement_sta_setup_ws_ns": -2.5956579108310507,
+     "placement_sta_prog_ws_ns": -2.5956579108310507,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 6.013304716859011,
+       "setup_ws_ns": -3.013304716859011,
+       "hold_ws_ns": 0.027131075164277263,
+       "prog_setup_ws_ns": -3.013304716859011,
+       "critical": {
+        "start": "ln_0/_1_",
+        "end": "row61/_668_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row61/_347_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 1.145,
+         "net": "row61/g0_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.955361,
+       "site_input_max_transition_ns": 0.189619,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ss": {
+       "T_ns": 11.254141370400703,
+       "setup_ws_ns": -8.254141370400703,
+       "hold_ws_ns": 0.22565549429032217,
+       "prog_setup_ws_ns": -8.254141370400703,
+       "critical": {
+        "start": "ln_0/_1_",
+        "end": "row61/_668_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row61/_347_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 1.9204,
+         "net": "row61/g0_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 3.077563,
+       "site_input_max_transition_ns": 0.30955,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      },
+      "ff": {
+       "T_ns": 3.839614378023157,
+       "setup_ws_ns": -0.8396143780231569,
+       "hold_ws_ns": -0.021630364166469462,
+       "prog_setup_ws_ns": -0.8396143780231569,
+       "critical": {
+        "start": "ln_0/_1_",
+        "end": "row61/_668_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row61/_347_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.8344,
+         "net": "row61/g0_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.471939,
+       "site_input_max_transition_ns": 0.145387,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__clkinv_1": 256,
+        "sky130_fd_sc_hd__dfxtp_1": 256
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 6.364874157085751,
+      "w2": 6.593854325245616,
+      "w3": 6.350336452712099,
+      "w4": 6.927351777122112,
+      "w5": 6.013304716859011
+     },
+     "ss": {
+      "w1": 11.893620062622176,
+      "w2": 12.438650749871158,
+      "w3": 11.753062274990953,
+      "w4": 13.096648850321799,
+      "w5": 11.254141370400703
+     },
+     "ff": {
+      "w1": 4.14264508965789,
+      "w2": 4.252507875193487,
+      "w3": 4.154645712375668,
+      "w4": 4.440400687613419,
+      "w5": 3.839614378023157
+     }
+    },
+    "worst_program": {
+     "tt": "w4",
+     "ss": "w4",
+     "ff": "w4"
+    },
+    "T_worst_ns": {
+     "tt": 6.927351777122112,
+     "ss": 13.096648850321799,
+     "ff": 4.440400687613419
+    },
+    "hold_min_ns": {
+     "tt": 0.02445699198716511,
+     "ss": 0.22135238086917752,
+     "ff": -0.02339023419395403
+    },
+    "hold_ok": false,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 20873899.292340137,
+    "nominal_worst": 22718570.672333296,
+    "conservative": 42951065.868980125,
+    "conservative_A_incr": null,
+    "conservative_A_phys": 48831062.43913798,
+    "conservative_conv_2site": 42951065.868980125,
+    "ff_worst": 14562499.506403305
+   }
+  },
+  "P2R3": {
+   "key": "P2R3",
+   "label": "P2-R3 60% physically sized (fallback)",
+   "role": "competitor",
+   "config": "w2_p2r3_u60",
+   "fabric": "pc2",
+   "access": "r3",
+   "K": 4,
+   "util": 60,
+   "cycles_per_word": 8,
+   "driver_policy": "w2_load_rule (buf_2 taps, S = 0.3 ns)",
+   "tap_master": "LTAPB2",
+   "base": {
+    "odb_sha256": "dcd3898e330f4bb65ef8f46ab465e159b166206832f9ab965d62de247b629010",
+    "drc_final": 0,
+    "setup_ws_ns": -0.54306,
+    "hold_ws_ns": 0.344997,
+    "core_area_um2": 459534,
+    "cell_area_um2": 277225,
+    "instance_count": 74173
+   },
+   "tap_rule_verification": {
+    "class": "buf_2",
+    "tap_masters_in_def": [
+     "LTAPB2"
+    ],
+    "worst_tap": "lt_lp6_s2",
+    "L_rsmt_um": 166.06,
+    "C_wc_fF": 59.65,
+    "transition_ns": 0.2936,
+    "meets": true,
+    "taps_in_def": 512,
+    "taps_expected": 512,
+    "tap_status": {
+     "FIXED": 512
+    },
+    "masters_ok": true
+   },
+   "areas": {
+    "A_um2": 277225.0,
+    "input_um2": 276465.2,
+    "flow_sizing_um2": 42463.226,
+    "counterpart_flow_sizing_um2": 38360.541,
+    "sizing_increment_um2": 4102.685000000005,
+    "A_incr_um2": 281327.7,
+    "A_phys_um2": 318928.4,
+    "conv_2site_um2": 274662.5,
+    "taps": 512,
+    "tap_sites": 6,
+    "tap_area_um2": 3843.7
+   },
+   "accounting": {
+    "base_odb_sha256": "dcd3898e330f4bb65ef8f46ab465e159b166206832f9ab965d62de247b629010",
+    "input_instances": 30794,
+    "final_components": 74173,
+    "input_area_um2": 276465.152,
+    "resized": {
+     "count": 1720,
+     "delta_um2": 8957.341,
+     "pairs": {
+      "sky130_fd_sc_hd__xnor2_1 -> sky130_fd_sc_hd__xnor2_2": 394,
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 308,
+      "sky130_fd_sc_hd__o22ai_1 -> sky130_fd_sc_hd__o22ai_2": 170,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 118,
+      "sky130_fd_sc_hd__a21oi_1 -> sky130_fd_sc_hd__a21oi_2": 108,
+      "sky130_fd_sc_hd__xor2_1 -> sky130_fd_sc_hd__xor2_2": 65,
+      "sky130_fd_sc_hd__or4b_1 -> sky130_fd_sc_hd__or4b_4": 64,
+      "sky130_fd_sc_hd__nor3_1 -> sky130_fd_sc_hd__nor3_2": 63,
+      "sky130_fd_sc_hd__xor3_1 -> sky130_fd_sc_hd__xor3_2": 61,
+      "sky130_fd_sc_hd__a41oi_1 -> sky130_fd_sc_hd__a41oi_2": 53,
+      "sky130_fd_sc_hd__o21ai_0 -> sky130_fd_sc_hd__o21ai_1": 47,
+      "sky130_fd_sc_hd__nor4_1 -> sky130_fd_sc_hd__nor4_4": 43
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 790,
+      "area_um2": 1976.896,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 790
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 31303,
+      "area_um2": 111059.014,
+      "masters": {
+       "sky130_fd_sc_hd__fill_1": 11298,
+       "sky130_fd_sc_hd__fill_2": 9510,
+       "sky130_fd_sc_hd__fill_4": 6379,
+       "sky130_fd_sc_hd__fill_8": 4116
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 6149,
+      "area_um2": 7693.629,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 6149
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 478,
+      "area_um2": 11961.472,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 478
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 393,
+      "area_um2": 4681.99,
+      "masters": {
+       "sky130_fd_sc_hd__clkinv_2": 87,
+       "sky130_fd_sc_hd__clkbuf_8": 85,
+       "sky130_fd_sc_hd__clkbuf_1": 84,
+       "sky130_fd_sc_hd__bufinv_16": 67,
+       "sky130_fd_sc_hd__clkinvlp_4": 32,
+       "sky130_fd_sc_hd__inv_6": 12
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clone": {
+      "count": 36,
+      "area_um2": 938.4,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 24,
+       "sky130_fd_sc_hd__bufbuf_16": 6,
+       "sky130_fd_sc_hd__buf_16": 5,
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "hold": {
+      "count": 130,
+      "area_um2": 1301.248,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 130
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 650.624,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 65
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 128,
+      "area_um2": 1281.229,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 128
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 3481,
+      "area_um2": 29047.859,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 3201,
+       "sky130_fd_sc_hd__buf_12": 177,
+       "sky130_fd_sc_hd__buf_6": 76,
+       "sky130_fd_sc_hd__buf_16": 17,
+       "sky130_fd_sc_hd__buf_8": 10
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "rebuffer": {
+      "count": 419,
+      "area_um2": 3450.81,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 377,
+       "sky130_fd_sc_hd__buf_6": 24,
+       "sky130_fd_sc_hd__buf_12": 16,
+       "sky130_fd_sc_hd__buf_8": 2
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "split": {
+      "count": 1,
+      "area_um2": 20.019,
+      "masters": {
+       "sky130_fd_sc_hd__buf_12": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "wire": {
+      "count": 6,
+      "area_um2": 48.797,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 5,
+       "sky130_fd_sc_hd__buf_6": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 42463.226,
+    "final_logic_area_um2": 340781.837
+   },
+   "counterpart_sizing": {
+    "design": "golden_r3_pc2_u67",
+    "sizing_area_um2": 38360.541,
+    "resized": 1542,
+    "resizer_buffers": {
+     "clone": 30,
+     "place": 3211,
+     "rebuffer": 305,
+     "wire": 14
+    },
+    "input_area_um2": 273902.694
+   },
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 9,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 14.04,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 1.01,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 66118.0,
+      "met5": 431.0
+     },
+     "vias": 156,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 5.776186391884039,
+       "setup_ws_ns": -2.776186391884039,
+       "hold_ws_ns": 0.3450906227442374,
+       "prog_setup_ws_ns": -2.776186391884039,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row59/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row59/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 1.4069,
+         "net": "row59/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.272598,
+       "site_input_max_transition_ns": 0.226149,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ss": {
+       "T_ns": 11.188449918122842,
+       "setup_ws_ns": -8.188449918122842,
+       "hold_ws_ns": 0.6856923917553104,
+       "prog_setup_ws_ns": -8.188449918122842,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row59/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row59/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 2.48,
+         "net": "row59/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.51315,
+       "site_input_max_transition_ns": 0.356182,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ff": {
+       "T_ns": 3.641106279175574,
+       "setup_ws_ns": -0.641106279175574,
+       "hold_ws_ns": 0.21833546082206112,
+       "prog_setup_ws_ns": -0.641106279175574,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row59/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row59/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 0.9512,
+         "net": "row59/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.18419,
+       "site_input_max_transition_ns": 0.172917,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 9,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 13.95,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.99,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 65843.0,
+      "met5": 499.0
+     },
+     "vias": 166,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 6.0134099660017455,
+       "setup_ws_ns": -3.0134099660017455,
+       "hold_ws_ns": 0.3450426611095736,
+       "prog_setup_ws_ns": -3.0134099660017455,
+       "critical": {
+        "start": "ln_41/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_329_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 1.3111,
+         "net": "row33/g40_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.272602,
+       "site_input_max_transition_ns": 0.235813,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ss": {
+       "T_ns": 11.05792588209897,
+       "setup_ws_ns": -8.05792588209897,
+       "hold_ws_ns": 0.6855960243967729,
+       "prog_setup_ws_ns": -8.05792588209897,
+       "critical": {
+        "start": "ln_41/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_331_/Y",
+         "cell": "sky130_fd_sc_hd__nor2_1",
+         "delay_ns": 3.5419,
+         "net": "row33/g40_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.513157,
+       "site_input_max_transition_ns": 0.370825,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ff": {
+       "T_ns": 3.7837026583246143,
+       "setup_ws_ns": -0.7837026583246143,
+       "hold_ws_ns": 0.21832657903786412,
+       "prog_setup_ws_ns": -0.7837026583246143,
+       "critical": {
+        "start": "ln_41/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_329_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.9164,
+         "net": "row33/g40_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.184356,
+       "site_input_max_transition_ns": 0.180267,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 8,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 7.59,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.82,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 34503.0,
+      "met5": 115.0
+     },
+     "vias": 34,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 5.33419017448,
+       "setup_ws_ns": -2.3341901744799998,
+       "hold_ws_ns": 0.3449772689734232,
+       "prog_setup_ws_ns": -2.3341901744799998,
+       "critical": {
+        "start": "ln_43/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_331_/Y",
+         "cell": "sky130_fd_sc_hd__nor2_1",
+         "delay_ns": 1.9753,
+         "net": "row33/g40_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.272702,
+       "site_input_max_transition_ns": 0.188266,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ss": {
+       "T_ns": 10.088257536480569,
+       "setup_ws_ns": -7.088257536480569,
+       "hold_ws_ns": 0.6854673495482189,
+       "prog_setup_ws_ns": -7.088257536480569,
+       "critical": {
+        "start": "ln_43/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_331_/Y",
+         "cell": "sky130_fd_sc_hd__nor2_1",
+         "delay_ns": 3.3456,
+         "net": "row33/g40_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.513344,
+       "site_input_max_transition_ns": 0.298275,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ff": {
+       "T_ns": 3.3557287797661957,
+       "setup_ws_ns": -0.35572877976619566,
+       "hold_ws_ns": 0.21832491370332718,
+       "prog_setup_ws_ns": -0.35572877976619566,
+       "critical": {
+        "start": "ln_43/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_331_/Y",
+         "cell": "sky130_fd_sc_hd__nor2_1",
+         "delay_ns": 1.3627,
+         "net": "row33/g40_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.183724,
+       "site_input_max_transition_ns": 0.143294,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 16.12,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 2.1,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 77072.0,
+      "met5": 1539.0
+     },
+     "vias": 345,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 6.039917872982301,
+       "setup_ws_ns": -3.0399178729823007,
+       "hold_ws_ns": 0.34509439750252113,
+       "prog_setup_ws_ns": -3.0399178729823007,
+       "critical": {
+        "start": "ln_41/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_329_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 1.3159,
+         "net": "row33/g40_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.273999,
+       "site_input_max_transition_ns": 0.261793,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ss": {
+       "T_ns": 11.245438110066061,
+       "setup_ws_ns": -8.245438110066061,
+       "hold_ws_ns": 0.6856919476661005,
+       "prog_setup_ws_ns": -8.245438110066061,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row59/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row59/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 2.2672,
+         "net": "row59/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.515745,
+       "site_input_max_transition_ns": 0.410931,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ff": {
+       "T_ns": 3.801454236309951,
+       "setup_ws_ns": -0.8014542363099508,
+       "hold_ws_ns": 0.21833779229041284,
+       "prog_setup_ws_ns": -0.8014542363099508,
+       "critical": {
+        "start": "ln_41/_1_",
+        "end": "row33/_648_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row33/_329_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.9198,
+         "net": "row33/g40_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.184544,
+       "site_input_max_transition_ns": 0.200777,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 2,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 6.05,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.25,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 28693.0,
+      "met5": 0.0
+     },
+     "vias": 0,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 5.321070446953399,
+       "setup_ws_ns": -2.3210704469533994,
+       "hold_ws_ns": 0.3449757146611887,
+       "prog_setup_ws_ns": -2.2479371697414763,
+       "critical": {
+        "start": "ctl/_5_",
+        "end": "row55/_630_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place7605/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 0.9682,
+         "net": "net7605",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.271811,
+       "site_input_max_transition_ns": 0.30197,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ss": {
+       "T_ns": 10.367028764804218,
+       "setup_ws_ns": -7.367028764804218,
+       "hold_ws_ns": 0.6854659062582869,
+       "prog_setup_ws_ns": -6.897180604426012,
+       "critical": {
+        "start": "ctl/_5_",
+        "end": "row55/_630_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place7605/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 1.8978,
+         "net": "net7605",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.511684,
+       "site_input_max_transition_ns": 0.471922,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      },
+      "ff": {
+       "T_ns": 3.329995142323014,
+       "setup_ws_ns": -0.3299951423230141,
+       "hold_ws_ns": 0.21832480268102472,
+       "prog_setup_ws_ns": -0.3024873684864815,
+       "critical": {
+        "start": "ctl/_5_",
+        "end": "row55/_630_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "place7606/X",
+         "cell": "sky130_fd_sc_hd__buf_4",
+         "delay_ns": 0.6016,
+         "net": "net7606",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.18412,
+       "site_input_max_transition_ns": 0.232028,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 485,
+        "sky130_fd_sc_hd__clkinv_1": 27
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 5.776186391884039,
+      "w2": 6.0134099660017455,
+      "w3": 5.33419017448,
+      "w4": 6.039917872982301,
+      "w5": 5.321070446953399
+     },
+     "ss": {
+      "w1": 11.188449918122842,
+      "w2": 11.05792588209897,
+      "w3": 10.088257536480569,
+      "w4": 11.245438110066061,
+      "w5": 10.367028764804218
+     },
+     "ff": {
+      "w1": 3.641106279175574,
+      "w2": 3.7837026583246143,
+      "w3": 3.3557287797661957,
+      "w4": 3.801454236309951,
+      "w5": 3.329995142323014
+     }
+    },
+    "worst_program": {
+     "tt": "w4",
+     "ss": "w4",
+     "ff": "w4"
+    },
+    "T_worst_ns": {
+     "tt": 6.039917872982301,
+     "ss": 11.245438110066061,
+     "ff": 3.801454236309951
+    },
+    "hold_min_ns": {
+     "tt": 0.3449757146611887,
+     "ss": 0.6854659062582869,
+     "ff": 0.21832480268102472
+    },
+    "hold_ok": true,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 21350710.29986737,
+    "nominal_worst": 22325549.764500245,
+    "conservative": 41566887.734174185,
+    "conservative_A_incr": 42182043.186629765,
+    "conservative_A_phys": 47819861.11656524,
+    "conservative_conv_2site": 41182668.59874693,
+    "ff_worst": 14051442.008813683
+   }
+  },
+  "P2R2": {
+   "key": "P2R2",
+   "label": "P2-R2 60% physically sized (fallback)",
+   "role": "competitor",
+   "config": "w2_p2r2_u60",
+   "fabric": "pc2",
+   "access": "r2",
+   "K": 1,
+   "util": 60,
+   "cycles_per_word": 8,
+   "driver_policy": "w2_load_rule (buf_12 taps, S = 0.3 ns)",
+   "tap_master": "LTAPBW12",
+   "base": {
+    "odb_sha256": "7ae03d12cac5e0851b2fb735e1f4c9630c4b80e96ac36b0ad1679ade2f3f8596",
+    "drc_final": 0,
+    "setup_ws_ns": -0.390114,
+    "hold_ws_ns": 0.00855438,
+    "core_area_um2": 456758,
+    "cell_area_um2": 276264,
+    "instance_count": 73955
+   },
+   "tap_rule_verification": {
+    "class": "buf_12",
+    "tap_masters_in_def": [
+     "LTAPBW12"
+    ],
+    "worst_tap": "lt_ln21",
+    "L_rsmt_um": 671.34,
+    "C_wc_fF": 239.67,
+    "transition_ns": 0.2743,
+    "meets": true,
+    "taps_in_def": 128,
+    "taps_expected": 128,
+    "tap_status": {
+     "FIXED": 128
+    },
+    "masters_ok": true
+   },
+   "areas": {
+    "A_um2": 276264.0,
+    "input_um2": 275504.2,
+    "flow_sizing_um2": 40480.074,
+    "counterpart_flow_sizing_um2": 36805.299,
+    "sizing_increment_um2": 3674.7750000000015,
+    "A_incr_um2": 279938.8,
+    "A_phys_um2": 315984.3,
+    "conv_2site_um2": 273701.5,
+    "taps": 128,
+    "tap_sites": 18,
+    "tap_area_um2": 2882.8
+   },
+   "accounting": {
+    "base_odb_sha256": "7ae03d12cac5e0851b2fb735e1f4c9630c4b80e96ac36b0ad1679ade2f3f8596",
+    "input_instances": 30410,
+    "final_components": 73955,
+    "input_area_um2": 275504.23,
+    "resized": {
+     "count": 1786,
+     "delta_um2": 9256.378,
+     "pairs": {
+      "sky130_fd_sc_hd__xnor2_1 -> sky130_fd_sc_hd__xnor2_2": 340,
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 267,
+      "sky130_fd_sc_hd__o22ai_1 -> sky130_fd_sc_hd__o22ai_2": 175,
+      "sky130_fd_sc_hd__a21oi_1 -> sky130_fd_sc_hd__a21oi_2": 136,
+      "sky130_fd_sc_hd__nor3_1 -> sky130_fd_sc_hd__nor3_2": 118,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 95,
+      "sky130_fd_sc_hd__xor2_1 -> sky130_fd_sc_hd__xor2_2": 87,
+      "sky130_fd_sc_hd__xor3_1 -> sky130_fd_sc_hd__xor3_2": 83,
+      "sky130_fd_sc_hd__o21ai_0 -> sky130_fd_sc_hd__o21ai_1": 70,
+      "sky130_fd_sc_hd__or4b_1 -> sky130_fd_sc_hd__or4b_4": 64,
+      "sky130_fd_sc_hd__a41oi_1 -> sky130_fd_sc_hd__a41oi_2": 58,
+      "sky130_fd_sc_hd__nor4_1 -> sky130_fd_sc_hd__nor4_4": 48
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 1452,
+      "area_um2": 3633.485,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 1452
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 31011,
+      "area_um2": 109532.55,
+      "masters": {
+       "sky130_fd_sc_hd__fill_1": 11344,
+       "sky130_fd_sc_hd__fill_2": 9431,
+       "sky130_fd_sc_hd__fill_4": 6138,
+       "sky130_fd_sc_hd__fill_8": 4098
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 6125,
+      "area_um2": 7663.6,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 6125
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 478,
+      "area_um2": 11961.472,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 478
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 405,
+      "area_um2": 4839.642,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_8": 101,
+       "sky130_fd_sc_hd__clkinv_2": 94,
+       "sky130_fd_sc_hd__clkbuf_1": 70,
+       "sky130_fd_sc_hd__bufinv_16": 60,
+       "sky130_fd_sc_hd__clkinvlp_4": 36,
+       "sky130_fd_sc_hd__clkinv_4": 15
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clone": {
+      "count": 33,
+      "area_um2": 893.357,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 20,
+       "sky130_fd_sc_hd__bufbuf_16": 7,
+       "sky130_fd_sc_hd__buf_16": 6
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "hold": {
+      "count": 121,
+      "area_um2": 1211.162,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 121
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 650.624,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 65
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 128,
+      "area_um2": 1281.229,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 128
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 3296,
+      "area_um2": 26801.955,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 3089,
+       "sky130_fd_sc_hd__buf_12": 106,
+       "sky130_fd_sc_hd__buf_6": 67,
+       "sky130_fd_sc_hd__buf_16": 18,
+       "sky130_fd_sc_hd__buf_8": 16
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "rebuffer": {
+      "count": 428,
+      "area_um2": 3489.597,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 395,
+       "sky130_fd_sc_hd__buf_6": 15,
+       "sky130_fd_sc_hd__buf_12": 12,
+       "sky130_fd_sc_hd__buf_8": 4,
+       "sky130_fd_sc_hd__buf_16": 2
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "split": {
+      "count": 1,
+      "area_um2": 20.019,
+      "masters": {
+       "sky130_fd_sc_hd__buf_12": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "wire": {
+      "count": 2,
+      "area_um2": 18.768,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_4": 1,
+       "sky130_fd_sc_hd__buf_6": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 40480.074,
+    "final_logic_area_um2": 339561.917
+   },
+   "counterpart_sizing": {
+    "design": "golden_r2_pc2_u67",
+    "base_def": "experiments/results/G2/orfs/results/sky130hd/g2s_pc2_u67/base/6_final.def",
+    "sizing_area_um2": 36805.299,
+    "resized": 1380,
+    "resizer_buffers": {
+     "clone": 17,
+     "place": 3206,
+     "rebuffer": 279,
+     "split": 2,
+     "wire": 8
+    },
+    "input_area_um2": 273902.694
+   },
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 19.2,
+       "overflow": 30
+      },
+      "met5": {
+       "usage_pct": 10.19,
+       "overflow": 1
+      }
+     },
+     "wirelength_um": {
+      "met4": 87089.0,
+      "met5": 8230.0
+     },
+     "vias": 1064,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 4.933962767708408,
+       "setup_ws_ns": -1.9339627677084081,
+       "hold_ws_ns": 0.00246436204776046,
+       "prog_setup_ws_ns": -1.9339627677084081,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row31/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row31/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 1.3932,
+         "net": "row31/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.254441,
+       "site_input_max_transition_ns": 0.298144,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ss": {
+       "T_ns": 9.598378288202866,
+       "setup_ws_ns": -6.598378288202866,
+       "hold_ws_ns": 0.25053015217935126,
+       "prog_setup_ws_ns": -6.598378288202866,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row31/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row31/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 2.3248,
+         "net": "row31/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.400911,
+       "site_input_max_transition_ns": 0.460407,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ff": {
+       "T_ns": 3.0996915883177962,
+       "setup_ws_ns": -0.09969158831779623,
+       "hold_ws_ns": -0.03822003824538456,
+       "prog_setup_ws_ns": -0.09969158831779623,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row31/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row31/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 0.9498,
+         "net": "row31/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.191941,
+       "site_input_max_transition_ns": 0.227768,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 19.51,
+       "overflow": 33
+      },
+      "met5": {
+       "usage_pct": 10.53,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 88548.0,
+      "met5": 8120.0
+     },
+     "vias": 1074,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 5.446376878850742,
+       "setup_ws_ns": -2.4463768788507423,
+       "hold_ws_ns": 0.0024800161924076747,
+       "prog_setup_ws_ns": -2.4463768788507423,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row40/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row40/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 1.2951,
+         "net": "row40/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.254474,
+       "site_input_max_transition_ns": 0.333948,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ss": {
+       "T_ns": 10.430295045907087,
+       "setup_ws_ns": -7.430295045907087,
+       "hold_ws_ns": 0.2515792019153196,
+       "prog_setup_ws_ns": -7.430295045907087,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row40/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row40/_575_/Y",
+         "cell": "sky130_fd_sc_hd__o21ai_1",
+         "delay_ns": 2.3025,
+         "net": "row40/g48_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.400962,
+       "site_input_max_transition_ns": 0.515624,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ff": {
+       "T_ns": 3.447240022793949,
+       "setup_ws_ns": -0.4472400227939488,
+       "hold_ws_ns": -0.03816713611826117,
+       "prog_setup_ws_ns": -0.4472400227939488,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row40/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row40/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.9049,
+         "net": "row40/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.191965,
+       "site_input_max_transition_ns": 0.254941,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 15.06,
+       "overflow": 4
+      },
+      "met5": {
+       "usage_pct": 6.07,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 66577.0,
+      "met5": 4936.0
+     },
+     "vias": 613,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 4.636234037150075,
+       "setup_ws_ns": -1.636234037150075,
+       "hold_ws_ns": 0.0033918423625323157,
+       "prog_setup_ws_ns": -1.636234037150075,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row3/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row3/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.9572,
+         "net": "row3/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.254458,
+       "site_input_max_transition_ns": 0.244584,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ss": {
+       "T_ns": 8.8968856464503,
+       "setup_ws_ns": -5.8968856464503006,
+       "hold_ws_ns": 0.25437696393737497,
+       "prog_setup_ws_ns": -5.8968856464503006,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row3/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row3/_575_/Y",
+         "cell": "sky130_fd_sc_hd__o21ai_0",
+         "delay_ns": 1.841,
+         "net": "row3/g48_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.400937,
+       "site_input_max_transition_ns": 0.377005,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ff": {
+       "T_ns": 2.970983211028397,
+       "setup_ws_ns": 0.02901678897160309,
+       "hold_ws_ns": -0.03761557731962739,
+       "prog_setup_ws_ns": 0.02901678897160309,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row3/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row3/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.6676,
+         "net": "row3/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.191953,
+       "site_input_max_transition_ns": 0.186694,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 20.05,
+       "overflow": 31
+      },
+      "met5": {
+       "usage_pct": 10.89,
+       "overflow": 1
+      }
+     },
+     "wirelength_um": {
+      "met4": 93334.0,
+      "met5": 8650.0
+     },
+     "vias": 1139,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 5.455383008026502,
+       "setup_ws_ns": -2.4553830080265016,
+       "hold_ws_ns": 0.0023498980539216063,
+       "prog_setup_ws_ns": -2.4553830080265016,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row40/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row40/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 1.2937,
+         "net": "row40/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.254482,
+       "site_input_max_transition_ns": 0.34721,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ss": {
+       "T_ns": 10.439985516555225,
+       "setup_ws_ns": -7.439985516555225,
+       "hold_ws_ns": 0.25001811732039414,
+       "prog_setup_ws_ns": -7.439985516555225,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row40/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row40/_575_/Y",
+         "cell": "sky130_fd_sc_hd__o21ai_1",
+         "delay_ns": 2.3058,
+         "net": "row40/g48_6[2]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.400974,
+       "site_input_max_transition_ns": 0.535132,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ff": {
+       "T_ns": 3.453058923710614,
+       "setup_ws_ns": -0.4530589237106142,
+       "hold_ws_ns": -0.0382858189595936,
+       "prog_setup_ws_ns": -0.4530589237106142,
+       "critical": {
+        "start": "ln_48/_1_",
+        "end": "row40/_644_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row40/_573_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.9039,
+         "net": "row40/g48_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.191971,
+       "site_input_max_transition_ns": 0.265498,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 5,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 6.41,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.62,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 30107.0,
+      "met5": 73.0
+     },
+     "vias": 25,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 4.665610316337052,
+       "setup_ws_ns": -1.6656103163370517,
+       "hold_ws_ns": 0.00873778827070737,
+       "prog_setup_ws_ns": -1.6656103163370517,
+       "critical": {
+        "start": "ln_17/_1_",
+        "end": "row61/_660_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row61/_318_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 1.2863,
+         "net": "row61/g16_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.254399,
+       "site_input_max_transition_ns": 0.282705,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ss": {
+       "T_ns": 9.006900754584876,
+       "setup_ws_ns": -6.006900754584876,
+       "hold_ws_ns": 0.26152247034616494,
+       "prog_setup_ws_ns": -6.006900754584876,
+       "critical": {
+        "start": "ln_17/_1_",
+        "end": "row61/_660_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row61/_318_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_1",
+         "delay_ns": 2.2356,
+         "net": "row61/g16_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.400845,
+       "site_input_max_transition_ns": 0.432567,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      },
+      "ff": {
+       "T_ns": 2.898951497101507,
+       "setup_ws_ns": 0.1010485028984931,
+       "hold_ws_ns": -0.033905100949027656,
+       "prog_setup_ws_ns": 0.1010485028984931,
+       "critical": {
+        "start": "ln_0/_1_",
+        "end": "row61/_668_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "row61/_347_/Y",
+         "cell": "sky130_fd_sc_hd__nor3_2",
+         "delay_ns": 0.7831,
+         "net": "row61/g0_6[3]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.191909,
+       "site_input_max_transition_ns": 0.218455,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 92,
+        "sky130_fd_sc_hd__clkinv_1": 1,
+        "sky130_fd_sc_hd__dfxtp_1": 35
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 4.933962767708408,
+      "w2": 5.446376878850742,
+      "w3": 4.636234037150075,
+      "w4": 5.455383008026502,
+      "w5": 4.665610316337052
+     },
+     "ss": {
+      "w1": 9.598378288202866,
+      "w2": 10.430295045907087,
+      "w3": 8.8968856464503,
+      "w4": 10.439985516555225,
+      "w5": 9.006900754584876
+     },
+     "ff": {
+      "w1": 3.0996915883177962,
+      "w2": 3.447240022793949,
+      "w3": 2.970983211028397,
+      "w4": 3.453058923710614,
+      "w5": 2.898951497101507
+     }
+    },
+    "worst_program": {
+     "tt": "w4",
+     "ss": "w4",
+     "ff": "w4"
+    },
+    "T_worst_ns": {
+     "tt": 5.455383008026502,
+     "ss": 10.439985516555225,
+     "ff": 3.453058923710614
+    },
+    "hold_min_ns": {
+     "tt": 0.0023498980539216063,
+     "ss": 0.25001811732039414,
+     "ff": -0.0382858189595936
+    },
+    "hold_ok": false,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 18174350.534109276,
+    "nominal_worst": 20095012.41772578,
+    "conservative": 38455895.4499415,
+    "conservative_A_incr": 38967426.90029133,
+    "conservative_A_phys": 43984953.53945122,
+    "conservative_conv_2site": 38099195.94479253,
+    "ff_worst": 12719411.606666522
+   }
+  },
+  "B52_hist": {
+   "key": "B52_hist",
+   "label": "UBP3-R3 52% unsized (historical)",
+   "role": "historical",
+   "config": "golden_r3_ubp3_u52",
+   "fabric": "ubp",
+   "access": "r3",
+   "K": 4,
+   "util": 52,
+   "cycles_per_word": 14,
+   "driver_policy": "historical",
+   "tap_master": "LTAP2",
+   "base": {
+    "odb_sha256": "aefbdaff878af710148fcdd64f5b413e1435ca6a63cf06a028e5d04c6da352db",
+    "drc_final": 0,
+    "setup_ws_ns": 0.975686,
+    "hold_ws_ns": 0.268202,
+    "core_area_um2": 324261,
+    "cell_area_um2": 169952,
+    "instance_count": 44865
+   },
+   "tap_rule_verification": null,
+   "areas": {
+    "A_um2": 169952.0,
+    "input_um2": 169468.8,
+    "flow_sizing_um2": 1103.558,
+    "counterpart_flow_sizing_um2": null,
+    "sizing_increment_um2": null,
+    "A_incr_um2": null,
+    "A_phys_um2": 170572.3,
+    "conv_2site_um2": 169952.0,
+    "taps": 2192,
+    "tap_sites": 2,
+    "tap_area_um2": 5485.3
+   },
+   "accounting": {
+    "base_odb_sha256": "aefbdaff878af710148fcdd64f5b413e1435ca6a63cf06a028e5d04c6da352db",
+    "input_instances": 13993,
+    "final_components": 44865,
+    "input_area_um2": 169468.784,
+    "resized": {
+     "count": 384,
+     "delta_um2": 482.963,
+     "pairs": {
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 382,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 1,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_4": 1
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 34,
+      "area_um2": 85.082,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 34
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 25393,
+      "area_um2": 129603.05,
+      "masters": {
+       "sky130_fd_sc_hd__fill_8": 8230,
+       "sky130_fd_sc_hd__fill_1": 6461,
+       "sky130_fd_sc_hd__fill_2": 5763,
+       "sky130_fd_sc_hd__fill_4": 4939
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 4325,
+      "area_um2": 5411.44,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 4325
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 471,
+      "area_um2": 11786.304,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 471
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 403,
+      "area_um2": 4855.907,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_8": 122,
+       "sky130_fd_sc_hd__clkinv_2": 90,
+       "sky130_fd_sc_hd__clkbuf_1": 74,
+       "sky130_fd_sc_hd__bufinv_16": 56,
+       "sky130_fd_sc_hd__clkinvlp_4": 28,
+       "sky130_fd_sc_hd__clkbuf_16": 9
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "hold": {
+      "count": 66,
+      "area_um2": 660.634,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 66
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 645.619,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64,
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "port buffer"
+     },
+     "output": {
+      "count": 64,
+      "area_um2": 640.614,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 51,
+      "area_um2": 620.595,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 32,
+       "sky130_fd_sc_hd__buf_12": 19
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 1103.558,
+    "final_logic_area_um2": 189246.502
+   },
+   "counterpart_sizing": null,
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 16.5,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 7.49,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 60063.0,
+      "met5": 4236.0
+     },
+     "vias": 772,
+     "placement_sta_setup_ws_ns": 0.8880771673602794,
+     "placement_sta_prog_ws_ns": 1.0940741645981689,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.031911279701035,
+       "setup_ws_ns": 0.9680887202989652,
+       "hold_ws_ns": 0.2606383997516559,
+       "prog_setup_ws_ns": 1.0674179318215238,
+       "critical": {
+        "start": "row47/_126_",
+        "end": "y[47]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output107/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.535,
+         "net": "y[47]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.016048,
+       "site_input_max_transition_ns": 0.123733,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 3.964736290853807,
+       "setup_ws_ns": -0.9647362908538071,
+       "hold_ws_ns": 0.5812510472935628,
+       "prog_setup_ws_ns": -0.7938756318992546,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row9/_167_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.168,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.599406,
+       "site_input_max_transition_ns": 0.198162,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3966004757363066,
+       "setup_ws_ns": 1.6033995242636934,
+       "hold_ws_ns": 0.13094197948149144,
+       "prog_setup_ws_ns": 1.7806814911480728,
+       "critical": {
+        "start": "row29/_126_",
+        "end": "y[29]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output87/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5043,
+         "net": "y[29]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.769799,
+       "site_input_max_transition_ns": 0.093044,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 17.09,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 7.87,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 62396.0,
+      "met5": 4464.0
+     },
+     "vias": 823,
+     "placement_sta_setup_ws_ns": 0.8880771673602794,
+     "placement_sta_prog_ws_ns": 1.082341993807745,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.03585057303701,
+       "setup_ws_ns": 0.9641494269629902,
+       "hold_ws_ns": 0.25966628847129414,
+       "prog_setup_ws_ns": 1.0779961368001523,
+       "critical": {
+        "start": "row47/_126_",
+        "end": "y[47]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output107/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5353,
+         "net": "y[47]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.013561,
+       "site_input_max_transition_ns": 0.114054,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 3.964517354873351,
+       "setup_ws_ns": -0.964517354873351,
+       "hold_ws_ns": 0.5797210489433269,
+       "prog_setup_ws_ns": -0.7615472696897996,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row9/_167_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.17,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.595518,
+       "site_input_max_transition_ns": 0.1825,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3950003112909144,
+       "setup_ws_ns": 1.6049996887090856,
+       "hold_ws_ns": 0.13025791556486865,
+       "prog_setup_ws_ns": 1.792331394412372,
+       "critical": {
+        "start": "row29/_126_",
+        "end": "y[29]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output87/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5022,
+         "net": "y[29]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.767902,
+       "site_input_max_transition_ns": 0.085662,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 7,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 8.89,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 3.96,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 32097.0,
+      "met5": 1905.0
+     },
+     "vias": 361,
+     "placement_sta_setup_ws_ns": 0.8880771673602794,
+     "placement_sta_prog_ws_ns": 1.0707608133486701,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.028708508319596,
+       "setup_ws_ns": 0.9712914916804039,
+       "hold_ws_ns": 0.26486868254238516,
+       "prog_setup_ws_ns": 1.0479266343565996,
+       "critical": {
+        "start": "row47/_126_",
+        "end": "y[47]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output107/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5348,
+         "net": "y[47]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.012719,
+       "site_input_max_transition_ns": 0.123401,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 3.9614775642319273,
+       "setup_ws_ns": -0.9614775642319273,
+       "hold_ws_ns": 0.5885317788667521,
+       "prog_setup_ws_ns": -0.8227480918776564,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row9/_167_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.1678,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.594178,
+       "site_input_max_transition_ns": 0.197596,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3893509414301093,
+       "setup_ws_ns": 1.6106490585698907,
+       "hold_ws_ns": 0.13363637973995424,
+       "prog_setup_ws_ns": 1.7756088821485605,
+       "critical": {
+        "start": "row29/_126_",
+        "end": "y[29]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output87/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5007,
+         "net": "y[29]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.767276,
+       "site_input_max_transition_ns": 0.092783,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 14,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 16.49,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 7.39,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 60641.0,
+      "met5": 5174.0
+     },
+     "vias": 937,
+     "placement_sta_setup_ws_ns": 0.8880771673602794,
+     "placement_sta_prog_ws_ns": 1.0732739141872116,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.0321468690268603,
+       "setup_ws_ns": 0.9678531309731397,
+       "hold_ws_ns": 0.26046403922563854,
+       "prog_setup_ws_ns": 1.0509253467461122,
+       "critical": {
+        "start": "row47/_126_",
+        "end": "y[47]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output107/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5348,
+         "net": "y[47]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.012296,
+       "site_input_max_transition_ns": 0.127544,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 3.964547108850411,
+       "setup_ws_ns": -0.964547108850411,
+       "hold_ws_ns": 0.5810288916663353,
+       "prog_setup_ws_ns": -0.8038072429883414,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row9/_167_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.1677,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.593515,
+       "site_input_max_transition_ns": 0.202002,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3928298252777722,
+       "setup_ws_ns": 1.6071701747222278,
+       "hold_ws_ns": 0.13079837213325618,
+       "prog_setup_ws_ns": 1.7739218982626426,
+       "critical": {
+        "start": "row29/_126_",
+        "end": "y[29]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output87/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5015,
+         "net": "y[29]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.766955,
+       "site_input_max_transition_ns": 0.097123,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 1,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 3.54,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.47,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 12533.0,
+      "met5": 23.0
+     },
+     "vias": 4,
+     "placement_sta_setup_ws_ns": 0.8880771673602794,
+     "placement_sta_prog_ws_ns": 0.9960041680301401,
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.072156420254487,
+       "setup_ws_ns": 0.9278435797455131,
+       "hold_ws_ns": 0.26882240877768027,
+       "prog_setup_ws_ns": 0.9278435797455131,
+       "critical": {
+        "start": "ng12_5/_8_",
+        "end": "row2/_160_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng12_5/_8_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 0.9667,
+         "net": "pn12_5",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.008161,
+       "site_input_max_transition_ns": 0.168615,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ss": {
+       "T_ns": 4.042275155072048,
+       "setup_ws_ns": -1.0422751550720477,
+       "hold_ws_ns": 0.5950128167953039,
+       "prog_setup_ws_ns": -1.0422751550720477,
+       "critical": {
+        "start": "ng12_5/_8_",
+        "end": "row2/_160_",
+        "through_programmable_net": true,
+        "largest_stage": {
+         "pin": "ng12_5/_8_/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_1",
+         "delay_ns": 1.7025,
+         "net": "pn12_5",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 1.587032,
+       "site_input_max_transition_ns": 0.269056,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      },
+      "ff": {
+       "T_ns": 1.3857739138670695,
+       "setup_ws_ns": 1.6142260861329305,
+       "hold_ws_ns": 0.13629580797314134,
+       "prog_setup_ws_ns": 1.6849601713886386,
+       "critical": {
+        "start": "row30/_126_",
+        "end": "y[30]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output89/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.4802,
+         "net": "y[30]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.763813,
+       "site_input_max_transition_ns": 0.128949,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__dfxtp_1": 2192
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 2.031911279701035,
+      "w2": 2.03585057303701,
+      "w3": 2.028708508319596,
+      "w4": 2.0321468690268603,
+      "w5": 2.072156420254487
+     },
+     "ss": {
+      "w1": 3.964736290853807,
+      "w2": 3.964517354873351,
+      "w3": 3.9614775642319273,
+      "w4": 3.964547108850411,
+      "w5": 4.042275155072048
+     },
+     "ff": {
+      "w1": 1.3966004757363066,
+      "w2": 1.3950003112909144,
+      "w3": 1.3893509414301093,
+      "w4": 1.3928298252777722,
+      "w5": 1.3857739138670695
+     }
+    },
+    "worst_program": {
+     "tt": "w5",
+     "ss": "w5",
+     "ff": "w1"
+    },
+    "T_worst_ns": {
+     "tt": 2.072156420254487,
+     "ss": 4.042275155072048,
+     "ff": 1.3966004757363066
+    },
+    "hold_min_ns": {
+     "tt": 0.25966628847129414,
+     "ss": 0.5797210489433269,
+     "ff": 0.13025791556486865
+    },
+    "hold_ok": true,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 9297275.771747123,
+    "nominal_worst": 9481422.675175516,
+    "conservative": 18495958.577244744,
+    "conservative_A_incr": null,
+    "conservative_A_phys": 18563466.127055652,
+    "conservative_conv_2site": 18495958.577244744,
+    "ff_worst": 6390328.109101376
+   }
+  },
+  "B52": {
+   "key": "B52",
+   "label": "UBP3-R3 52% physically sized",
+   "role": "B52",
+   "config": "w2_b52",
+   "fabric": "ubp",
+   "access": "r3",
+   "K": 4,
+   "util": 52,
+   "cycles_per_word": 14,
+   "driver_policy": "w2_load_rule (buf_2 taps, S = 0.3 ns)",
+   "tap_master": "LTAPB2",
+   "base": {
+    "odb_sha256": "f7abaa77a7cce645d9f9b7b90162dd1ff2048ef53e06e983b8456344676d8f7b",
+    "drc_final": 0,
+    "setup_ws_ns": 0.798169,
+    "hold_ws_ns": 0.320635,
+    "core_area_um2": 345662,
+    "cell_area_um2": 180922,
+    "instance_count": 47008
+   },
+   "tap_rule_verification": {
+    "class": "buf_2",
+    "tap_masters_in_def": [
+     "LTAPB2"
+    ],
+    "worst_tap": "lt_pp1_0_s1",
+    "L_rsmt_um": 153.9,
+    "C_wc_fF": 57.85,
+    "transition_ns": 0.2851,
+    "meets": true,
+    "taps_in_def": 2192,
+    "taps_expected": 2192,
+    "tap_status": {
+     "FIXED": 2192
+    },
+    "masters_ok": true
+   },
+   "areas": {
+    "A_um2": 180922.0,
+    "input_um2": 180439.3,
+    "flow_sizing_um2": 6849.069,
+    "counterpart_flow_sizing_um2": 1103.558,
+    "sizing_increment_um2": 5745.511,
+    "A_incr_um2": 186667.5,
+    "A_phys_um2": 187288.4,
+    "conv_2site_um2": 169951.5,
+    "taps": 2192,
+    "tap_sites": 6,
+    "tap_area_um2": 16455.8
+   },
+   "accounting": {
+    "base_odb_sha256": "f7abaa77a7cce645d9f9b7b90162dd1ff2048ef53e06e983b8456344676d8f7b",
+    "input_instances": 13993,
+    "final_components": 47008,
+    "input_area_um2": 180439.306,
+    "resized": {
+     "count": 384,
+     "delta_um2": 482.963,
+     "pairs": {
+      "sky130_fd_sc_hd__maj3_1 -> sky130_fd_sc_hd__maj3_2": 382,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_2": 1,
+      "sky130_fd_sc_hd__dfxtp_1 -> sky130_fd_sc_hd__dfxtp_4": 1
+     }
+    },
+    "removed": {
+     "count": 0,
+     "area_um2": 0,
+     "examples": []
+    },
+    "inserted": {
+     "ANTENNA": {
+      "count": 52,
+      "area_um2": 130.125,
+      "masters": {
+       "sky130_fd_sc_hd__diode_2": 52
+      },
+      "kind": "antenna diode"
+     },
+     "FILLER": {
+      "count": 26511,
+      "area_um2": 134398.899,
+      "masters": {
+       "sky130_fd_sc_hd__fill_8": 8555,
+       "sky130_fd_sc_hd__fill_1": 6868,
+       "sky130_fd_sc_hd__fill_2": 6122,
+       "sky130_fd_sc_hd__fill_4": 4966
+      },
+      "kind": "fill"
+     },
+     "TAP": {
+      "count": 4578,
+      "area_um2": 5727.994,
+      "masters": {
+       "sky130_fd_sc_hd__tapvpwrvgnd_1": 4578
+      },
+      "kind": "well tap"
+     },
+     "clkbuf": {
+      "count": 471,
+      "area_um2": 11786.304,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_16": 471
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "clkload": {
+      "count": 391,
+      "area_um2": 4382.954,
+      "masters": {
+       "sky130_fd_sc_hd__clkbuf_8": 118,
+       "sky130_fd_sc_hd__clkbuf_1": 98,
+       "sky130_fd_sc_hd__clkinv_2": 83,
+       "sky130_fd_sc_hd__bufinv_16": 46,
+       "sky130_fd_sc_hd__clkinvlp_4": 18,
+       "sky130_fd_sc_hd__clkbuf_16": 10
+      },
+      "kind": "clock tree (CTS)"
+     },
+     "hold": {
+      "count": 66,
+      "area_um2": 660.634,
+      "masters": {
+       "sky130_fd_sc_hd__dlygate4sd3_1": 66
+      },
+      "kind": "hold repair"
+     },
+     "input": {
+      "count": 65,
+      "area_um2": 645.619,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64,
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "port buffer"
+     },
+     "load": {
+      "count": 1,
+      "area_um2": 5.005,
+      "masters": {
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "output": {
+      "count": 64,
+      "area_um2": 640.614,
+      "masters": {
+       "sky130_fd_sc_hd__clkdlybuf4s50_1": 64
+      },
+      "kind": "port buffer"
+     },
+     "place": {
+      "count": 815,
+      "area_um2": 6356.096,
+      "masters": {
+       "sky130_fd_sc_hd__buf_4": 796,
+       "sky130_fd_sc_hd__buf_12": 19
+      },
+      "kind": "resizer (driver sizing / repair)"
+     },
+     "wire": {
+      "count": 1,
+      "area_um2": 5.005,
+      "masters": {
+       "sky130_fd_sc_hd__buf_2": 1
+      },
+      "kind": "resizer (driver sizing / repair)"
+     }
+    },
+    "sizing_area_um2": 6849.069,
+    "final_logic_area_um2": 205534.624
+   },
+   "counterpart_sizing": {
+    "design": "golden_r3_ubp3_u52",
+    "sizing_area_um2": 1103.558,
+    "resized": 384,
+    "resizer_buffers": {
+     "place": 51
+    },
+    "input_area_um2": 169468.784
+   },
+   "programs": {
+    "w1": {
+     "tag": "w1",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 16,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 16.03,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 6.98,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 62615.0,
+      "met5": 4146.0
+     },
+     "vias": 817,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.2100161438912664,
+       "setup_ws_ns": 0.7899838561087336,
+       "hold_ws_ns": 0.32080027523306853,
+       "prog_setup_ws_ns": 1.2270620075582883,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9132,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.307258,
+       "site_input_max_transition_ns": 0.176981,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ss": {
+       "T_ns": 4.39774769536416,
+       "setup_ws_ns": -1.3977476953641599,
+       "hold_ws_ns": 0.6512809180847512,
+       "prog_setup_ws_ns": -0.4375166895442817,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6348,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.486318,
+       "site_input_max_transition_ns": 0.27885,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ff": {
+       "T_ns": 1.4492300431071499,
+       "setup_ws_ns": 1.5507699568928501,
+       "hold_ws_ns": 0.1680852679264433,
+       "prog_setup_ws_ns": 1.880884337168709,
+       "critical": {
+        "start": "row35/_126_",
+        "end": "y[35]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output94/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5517,
+         "net": "y[35]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.2323,
+       "site_input_max_transition_ns": 0.134819,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      }
+     },
+     "correct": true
+    },
+    "w2": {
+     "tag": "w2",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 15,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 16.62,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 7.64,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 64572.0,
+      "met5": 4769.0
+     },
+     "vias": 885,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.208740719680577,
+       "setup_ws_ns": 0.7912592803194229,
+       "hold_ws_ns": 0.32078895095821736,
+       "prog_setup_ws_ns": 1.2272094451759585,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9121,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.305095,
+       "site_input_max_transition_ns": 0.173657,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ss": {
+       "T_ns": 4.395045412522222,
+       "setup_ws_ns": -1.3950454125222223,
+       "hold_ws_ns": 0.6512945738279541,
+       "prog_setup_ws_ns": -0.4457691993309254,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6329,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.482923,
+       "site_input_max_transition_ns": 0.277264,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ff": {
+       "T_ns": 1.4511465100922578,
+       "setup_ws_ns": 1.5488534899077422,
+       "hold_ws_ns": 0.16784290624016762,
+       "prog_setup_ws_ns": 1.877954902695933,
+       "critical": {
+        "start": "row35/_126_",
+        "end": "y[35]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output94/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5533,
+         "net": "y[35]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.230665,
+       "site_input_max_transition_ns": 0.130859,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      }
+     },
+     "correct": true
+    },
+    "w3": {
+     "tag": "w3",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 7,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 8.69,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 4.28,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 33153.0,
+      "met5": 2484.0
+     },
+     "vias": 422,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.2057890807473086,
+       "setup_ws_ns": 0.7942109192526914,
+       "hold_ws_ns": 0.3207979437647168,
+       "prog_setup_ws_ns": 1.2809455718354457,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9122,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.305103,
+       "site_input_max_transition_ns": 0.172827,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ss": {
+       "T_ns": 4.3936496401356635,
+       "setup_ws_ns": -1.3936496401356635,
+       "hold_ws_ns": 0.6512752559473256,
+       "prog_setup_ws_ns": -0.3493494382666995,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.633,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.482937,
+       "site_input_max_transition_ns": 0.274357,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ff": {
+       "T_ns": 1.4446039658081418,
+       "setup_ws_ns": 1.5553960341918582,
+       "hold_ws_ns": 0.17044321509729343,
+       "prog_setup_ws_ns": 1.9174057896975683,
+       "critical": {
+        "start": "row35/_126_",
+        "end": "y[35]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output94/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.55,
+         "net": "y[35]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.230671,
+       "site_input_max_transition_ns": 0.130828,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      }
+     },
+     "correct": true
+    },
+    "w4": {
+     "tag": "w4",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 13,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 15.95,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 5.93,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 62950.0,
+      "met5": 4313.0
+     },
+     "vias": 878,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.2078298927111746,
+       "setup_ws_ns": 0.7921701072888254,
+       "hold_ws_ns": 0.31965008417955687,
+       "prog_setup_ws_ns": 1.18224452450022,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9123,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.30507,
+       "site_input_max_transition_ns": 0.205986,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ss": {
+       "T_ns": 4.393805959537531,
+       "setup_ws_ns": -1.3938059595375307,
+       "hold_ws_ns": 0.6512843597761275,
+       "prog_setup_ws_ns": -0.5400231373187125,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6332,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.482886,
+       "site_input_max_transition_ns": 0.323798,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ff": {
+       "T_ns": 1.4526896090741843,
+       "setup_ws_ns": 1.5473103909258157,
+       "hold_ws_ns": 0.16604517760754334,
+       "prog_setup_ws_ns": 1.852012543324122,
+       "critical": {
+        "start": "row35/_126_",
+        "end": "y[35]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output94/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5533,
+         "net": "y[35]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.230646,
+       "site_input_max_transition_ns": 0.157561,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      }
+     },
+     "correct": true
+    },
+    "w5": {
+     "tag": "w5",
+     "routed": true,
+     "signed_off": true,
+     "prepnr_checked": true,
+     "drt_final": 0,
+     "drt_iterations_run": 1,
+     "post_pnr_numpy": true,
+     "post_pnr_oracle_mutation_detected": true,
+     "invariance": true,
+     "grt": {
+      "met4": {
+       "usage_pct": 3.38,
+       "overflow": 0
+      },
+      "met5": {
+       "usage_pct": 0.63,
+       "overflow": 0
+      }
+     },
+     "wirelength_um": {
+      "met4": 12863.0,
+      "met5": 23.0
+     },
+     "vias": 4,
+     "placement_sta_setup_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "placement_sta_prog_ws_ns": "n/a (legacy STA reads no W2 tap Liberty)",
+     "prepnr_numpy": true,
+     "prepnr_oracle_mutation_detected": true,
+     "prepnr_program_mutation_detected": true,
+     "corners": {
+      "tt": {
+       "T_ns": 2.2065864429235944,
+       "setup_ws_ns": 0.7934135570764056,
+       "hold_ws_ns": 0.3207865084675632,
+       "prog_setup_ws_ns": 1.1049745562985436,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 0.9114,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.305063,
+       "site_input_max_transition_ns": 0.285469,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ss": {
+       "T_ns": 4.391120996174777,
+       "setup_ws_ns": -1.3911209961747772,
+       "hold_ws_ns": 0.651271037099832,
+       "prog_setup_ws_ns": -0.6689293563511001,
+       "critical": {
+        "start": "stt3_ff",
+        "end": "row47/_153_",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "stt3_ff/Q",
+         "cell": "sky130_fd_sc_hd__dfxtp_4",
+         "delay_ns": 1.6317,
+         "net": "st_tree",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.482873,
+       "site_input_max_transition_ns": 0.446213,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      },
+      "ff": {
+       "T_ns": 1.4426267696235868,
+       "setup_ws_ns": 1.5573732303764132,
+       "hold_ws_ns": 0.17141488228844537,
+       "prog_setup_ws_ns": 1.8036455662340245,
+       "critical": {
+        "start": "row35/_126_",
+        "end": "y[35]",
+        "through_programmable_net": false,
+        "largest_stage": {
+         "pin": "output94/X",
+         "cell": "sky130_fd_sc_hd__clkdlybuf4s50_1",
+         "delay_ns": 0.5493,
+         "net": "y[35]",
+         "kind": "cell"
+        }
+       },
+       "tap_input_max_transition_ns": 0.23064,
+       "site_input_max_transition_ns": 0.219002,
+       "spine_drivers": {
+        "sky130_fd_sc_hd__buf_4": 1972,
+        "sky130_fd_sc_hd__dfxtp_1": 218,
+        "sky130_fd_sc_hd__buf_2": 2
+       }
+      }
+     },
+     "correct": true
+    }
+   },
+   "complete": true,
+   "correct": true,
+   "drc": {
+    "base": 0,
+    "programs_max": 0
+   },
+   "timing": {
+    "T_ns": {
+     "tt": {
+      "w1": 2.2100161438912664,
+      "w2": 2.208740719680577,
+      "w3": 2.2057890807473086,
+      "w4": 2.2078298927111746,
+      "w5": 2.2065864429235944
+     },
+     "ss": {
+      "w1": 4.39774769536416,
+      "w2": 4.395045412522222,
+      "w3": 4.3936496401356635,
+      "w4": 4.393805959537531,
+      "w5": 4.391120996174777
+     },
+     "ff": {
+      "w1": 1.4492300431071499,
+      "w2": 1.4511465100922578,
+      "w3": 1.4446039658081418,
+      "w4": 1.4526896090741843,
+      "w5": 1.4426267696235868
+     }
+    },
+    "worst_program": {
+     "tt": "w1",
+     "ss": "w1",
+     "ff": "w4"
+    },
+    "T_worst_ns": {
+     "tt": 2.2100161438912664,
+     "ss": 4.39774769536416,
+     "ff": 1.4526896090741843
+    },
+    "hold_min_ns": {
+     "tt": 0.31965008417955687,
+     "ss": 0.651271037099832,
+     "ff": 0.16604517760754334
+    },
+    "hold_ok": true,
+    "worst_corner": "ss"
+   },
+   "AxT": {
+    "nominal_w1": 10764937.636521807,
+    "nominal_worst": 10764937.636521807,
+    "conservative": 21421327.537633546,
+    "conservative_A_incr": 22101599.905656632,
+    "conservative_A_phys": 22175115.024150334,
+    "conservative_conv_2site": 20122410.46977221,
+    "ff_worst": 7076017.562193989
+   }
+  }
+ },
+ "failed_points": [
+  {
+   "key": "P2R3_67",
+   "config": "w2_p2r3.json",
+   "label": "P2-R3 67% physically sized",
+   "role": "failed",
+   "failure": "base not routable: global routing congested (GRT-0116; met1/met2/met3 overflow 24/1/12) after the flow grew the cell utilization from 67% to 83% (sizing + P2 timing repair); pre-registered fallback: 60%"
+  },
+  {
+   "key": "P2R2_67",
+   "config": "w2_p2r2.json",
+   "label": "P2-R2 67% physically sized",
+   "role": "failed",
+   "failure": "base not routable: global routing congestion too high (GRT-0232, during antenna repair) after sizing; pre-registered fallback: 60%"
+  }
+ ],
+ "decision": {
+  "kill_ratio": 1.5,
+  "missing": [],
+  "conservative": {
+   "R": 1.4727356664129998,
+   "strongest": "AR2",
+   "all": {
+    "AR2": 1.4727356664129998,
+    "AR3": 1.6636258978518614,
+    "P2R3": 2.355855452513129,
+    "P2R2": 2.1795360662168517
+   }
+  },
+  "nominal_w1": {
+   "R": 1.620699040237721,
+   "strongest": "AR2",
+   "all": {
+    "AR2": 1.620699040237721,
+    "AR3": 1.6515822376412832,
+    "P2R3": 2.3719474527552653,
+    "P2R2": 2.0190712088454306
+   }
+  },
+  "nominal_worst": {
+   "R": 1.6205417903453838,
+   "strongest": "AR2",
+   "all": {
+    "AR2": 1.6205417903453838,
+    "AR3": 1.6508765266749168,
+    "P2R3": 2.4787101929873168,
+    "P2R2": 2.2310631824720297
+   }
+  },
+  "sens_A_incr": {
+   "R": 1.441984924680663,
+   "strongest": "AR2",
+   "all": {
+    "AR2": 1.441984924680663,
+    "AR3": 1.6370274133236367,
+    "P2R3": 2.3380727494357565,
+    "P2R2": 2.1598925056356513
+   }
+  },
+  "sens_A_phys": {
+   "R": 1.4449218432892628,
+   "strongest": "AR2",
+   "all": {
+    "AR2": 1.4449218432892628,
+    "AR3": 1.6401603404370466,
+    "P2R3": 2.639707870373086,
+    "P2R2": 2.428016839134299
+   }
+  },
+  "sens_conv_2site": {
+   "R": 1.5565804046458507,
+   "strongest": "AR2",
+   "all": {
+    "AR2": 1.5565804046458507,
+    "AR3": 1.7583721968364854,
+    "P2R3": 2.484745968327402,
+    "P2R2": 2.2987054200567125
+   }
+  },
+  "ff": {
+   "R": 1.6798921209300066,
+   "strongest": "AR3",
+   "all": {
+    "AR2": 1.6966768643034202,
+    "AR3": 1.6798921209300066,
+    "P2R3": 2.3721116179391264,
+    "P2R2": 2.1472432527991296
+   }
+  },
+  "B52_conservative": {
+   "R": 1.2130460592559722,
+   "strongest": "AR2",
+   "all": {
+    "AR2": 1.2130460592559722,
+    "AR3": 1.370276340479049,
+    "P2R3": 1.9404440579673876,
+    "P2R2": 1.7952153237179713
+   }
+  },
+  "B_valid": {
+   "correct": true,
+   "hold_ok": true,
+   "drc_zero": true
+  },
+  "verdict": "KILL"
+ }
+}

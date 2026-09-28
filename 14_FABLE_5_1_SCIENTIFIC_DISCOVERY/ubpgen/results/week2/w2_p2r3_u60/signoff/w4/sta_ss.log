@@ -1,0 +1,155 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+SIGNOFF_WS corner=ss setup=-8.245438110066061e-9 hold=6.856919476661005e-10
+SIGNOFF_SETUP_PATH_BEGIN
+Startpoint: ln_48/_1_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: row59/_644_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                              0.0000    0.0000   clock clk (rise edge)
+                              1.8253    1.8253   clock network delay (propagated)
+                    0.0921    0.0000    1.8253 ^ ln_48/_1_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.0029    0.0698    0.6341    2.4594 ^ ln_48/_1_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                 lp48 (net)
+     4    0.0748    0.3335    0.3998    2.8592 ^ place7509/X (sky130_fd_sc_hd__buf_4)
+                                                 net7509 (net)
+     3    0.0498    0.2311    0.4419    3.3011 ^ place7508/X (sky130_fd_sc_hd__buf_4)
+                                                 net7508 (net)
+     2    0.0307    0.4601    0.4681    3.7692 v ln_48/_0_/Y (sky130_fd_sc_hd__clkinv_1)
+                                                 ln48 (net)
+     3    0.0589    0.1550    0.5254    4.2946 v place7041/X (sky130_fd_sc_hd__buf_4)
+                                                 net7041 (net)
+     8    0.0444    0.2062    0.4335    4.7281 v lt_ln48_s3/Z (LTAPB2)
+                                                 pgm_ln48_s3 (net)
+     2    0.0099    0.1242    0.2859    5.0139 v vs_59_48/Z (VSITE_BUF)
+                                                 lf_59_48 (net)
+     1    0.0061    0.2912    0.3464    5.3604 ^ row59/_549_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_246_ (net)
+     2    0.0084    0.3651    0.3386    5.6989 ^ row59/_550_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_247_ (net)
+     1    0.0054    0.2699    0.3295    6.0284 ^ row59/_551_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_248_ (net)
+     2    0.0082    0.1719    0.2559    6.2843 v row59/_552_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_249_ (net)
+     2    0.0424    0.4568    1.1548    7.4391 v row59/_569_/X (sky130_fd_sc_hd__maj3_1)
+                                                 row59/_259_ (net)
+     3    0.0111    0.2478    0.4879    7.9270 v row59/_572_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_262_ (net)
+     2    0.0612    2.8938    2.2672   10.1942 ^ row59/_573_/Y (sky130_fd_sc_hd__nor3_1)
+                                                 row59/g48_6[3] (net)
+     1    0.0460    1.3994    2.0298   12.2240 v row59/_575_/Y (sky130_fd_sc_hd__o21ai_0)
+                                                 row59/g48_6[2] (net)
+                    1.3994    0.0035   12.2275 v row59/_644_/D (sky130_fd_sc_hd__dfxtp_1)
+                                       12.2275   data arrival time
+
+                              3.0000    3.0000   clock clk (rise edge)
+                              1.7978    4.7978   clock network delay (propagated)
+                              0.0000    4.7978   clock reconvergence pessimism
+                                        4.7978 ^ row59/_644_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                             -0.8157    3.9821   library setup time
+                                        3.9821   data required time
+-------------------------------------------------------------------------------------
+                                        3.9821   data required time
+                                      -12.2275   data arrival time
+-------------------------------------------------------------------------------------
+                                       -8.2454   slack (VIOLATED)
+
+
+SIGNOFF_SETUP_PATH_END
+SIGNOFF_HOLD_PATH_BEGIN
+Startpoint: ctl/_1_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: ctl/_2_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   1.7468    1.7468   clock network delay (propagated)
+   0.0000    1.7468 ^ ctl/_1_/CLK (sky130_fd_sc_hd__dfxtp_1)
+   0.6053    2.3521 v ctl/_1_/Q (sky130_fd_sc_hd__dfxtp_1)
+                      ctl/s2 (net)
+   0.0002    2.3523 v ctl/_2_/D (sky130_fd_sc_hd__dfxtp_4)
+             2.3523   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   1.7511    1.7511   clock network delay (propagated)
+   0.0000    1.7511   clock reconvergence pessimism
+             1.7511 ^ ctl/_2_/CLK (sky130_fd_sc_hd__dfxtp_4)
+  -0.0845    1.6666   library hold time
+             1.6666   data required time
+-------------------------------------------------------------
+             1.6666   data required time
+            -2.3523   data arrival time
+-------------------------------------------------------------
+             0.6857   slack (MET)
+
+
+SIGNOFF_HOLD_PATH_END
+SIGNOFF_PROG_WS setup=-8.245438110066061e-9
+SIGNOFF_PROG_PATH_BEGIN
+Startpoint: ln_48/_1_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: row59/_644_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                              0.0000    0.0000   clock clk (rise edge)
+                              1.8253    1.8253   clock network delay (propagated)
+                    0.0921    0.0000    1.8253 ^ ln_48/_1_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.0029    0.0698    0.6341    2.4594 ^ ln_48/_1_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                 lp48 (net)
+     4    0.0748    0.3335    0.3998    2.8592 ^ place7509/X (sky130_fd_sc_hd__buf_4)
+                                                 net7509 (net)
+     3    0.0498    0.2311    0.4419    3.3011 ^ place7508/X (sky130_fd_sc_hd__buf_4)
+                                                 net7508 (net)
+     2    0.0307    0.4601    0.4681    3.7692 v ln_48/_0_/Y (sky130_fd_sc_hd__clkinv_1)
+                                                 ln48 (net)
+     3    0.0589    0.1550    0.5254    4.2946 v place7041/X (sky130_fd_sc_hd__buf_4)
+                                                 net7041 (net)
+     8    0.0444    0.2062    0.4335    4.7281 v lt_ln48_s3/Z (LTAPB2)
+                                                 pgm_ln48_s3 (net)
+     2    0.0099    0.1242    0.2859    5.0139 v vs_59_48/Z (VSITE_BUF)
+                                                 lf_59_48 (net)
+     1    0.0061    0.2912    0.3464    5.3604 ^ row59/_549_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_246_ (net)
+     2    0.0084    0.3651    0.3386    5.6989 ^ row59/_550_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_247_ (net)
+     1    0.0054    0.2699    0.3295    6.0284 ^ row59/_551_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_248_ (net)
+     2    0.0082    0.1719    0.2559    6.2843 v row59/_552_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_249_ (net)
+     2    0.0424    0.4568    1.1548    7.4391 v row59/_569_/X (sky130_fd_sc_hd__maj3_1)
+                                                 row59/_259_ (net)
+     3    0.0111    0.2478    0.4879    7.9270 v row59/_572_/Y (sky130_fd_sc_hd__xnor2_1)
+                                                 row59/_262_ (net)
+     2    0.0612    2.8938    2.2672   10.1942 ^ row59/_573_/Y (sky130_fd_sc_hd__nor3_1)
+                                                 row59/g48_6[3] (net)
+     1    0.0460    1.3994    2.0298   12.2240 v row59/_575_/Y (sky130_fd_sc_hd__o21ai_0)
+                                                 row59/g48_6[2] (net)
+                    1.3994    0.0035   12.2275 v row59/_644_/D (sky130_fd_sc_hd__dfxtp_1)
+                                       12.2275   data arrival time
+
+                              3.0000    3.0000   clock clk (rise edge)
+                              1.7978    4.7978   clock network delay (propagated)
+                              0.0000    4.7978   clock reconvergence pessimism
+                                        4.7978 ^ row59/_644_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                             -0.8157    3.9821   library setup time
+                                        3.9821   data required time
+-------------------------------------------------------------------------------------
+                                        3.9821   data required time
+                                      -12.2275   data arrival time
+-------------------------------------------------------------------------------------
+                                       -8.2454   slack (VIOLATED)
+
+
+SIGNOFF_PROG_PATH_END
+SIGNOFF_SLEW tap_input_max=0.515745 tap_input_pin=lt_ln63_s0/A site_input_max=0.410931 site_input_pin=vs_0_29/A
+SIGNOFF_SPINE_DRIVERS sky130_fd_sc_hd__buf_4 485 sky130_fd_sc_hd__clkinv_1 27

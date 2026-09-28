@@ -1,0 +1,116 @@
+OpenROAD unknown 
+Features included (+) or not (-): -GPU +GUI -Python
+This program is licensed under the BSD-3 license. See the LICENSE file for details.
+Components of this program may be licensed under more restrictive licenses which must be honored.
+[INFO ORD-0030] Using 1 thread(s).
+SIGNOFF_WS corner=ff setup=1.6049528372974464e-9 hold=1.0305545306010799e-10
+SIGNOFF_SETUP_PATH_BEGIN
+Startpoint: row34/_126_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: y[34] (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                              0.0000    0.0000   clock clk (rise edge)
+                              0.6907    0.6907   clock network delay (propagated)
+                    0.0458    0.0000    0.6907 ^ row34/_126_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.0030    0.0308    0.1896    0.8802 ^ row34/_126_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                 net92 (net)
+     1    0.0425    0.3087    0.5074    1.3876 ^ output93/X (sky130_fd_sc_hd__clkdlybuf4s50_1)
+                                                 y[34] (net)
+                    0.3091    0.0074    1.3950 ^ y[34] (out)
+                                        1.3950   data arrival time
+
+                              3.0000    3.0000   clock clk (rise edge)
+                              0.0000    3.0000   clock network delay (propagated)
+                              0.0000    3.0000   clock reconvergence pessimism
+                              0.0000    3.0000   output external delay
+                                        3.0000   data required time
+-------------------------------------------------------------------------------------
+                                        3.0000   data required time
+                                       -1.3950   data arrival time
+-------------------------------------------------------------------------------------
+                                        1.6050   slack (MET)
+
+
+SIGNOFF_SETUP_PATH_END
+SIGNOFF_HOLD_PATH_BEGIN
+Startpoint: start (input port clocked by clk)
+Endpoint: gen1/_111_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+    Delay      Time   Description
+-------------------------------------------------------------
+   0.0000    0.0000   clock clk (rise edge)
+   0.0000    0.0000   clock network delay (propagated)
+   0.0000    0.0000 v input external delay
+   0.0000    0.0000 v start (in)
+                      start (net)
+   0.3516    0.3516 v hold3149/X (sky130_fd_sc_hd__dlygate4sd3_1)
+                      net3148 (net)
+   0.1840    0.5356 v input2/X (sky130_fd_sc_hd__buf_2)
+                      net1 (net)
+   0.1597    0.6953 ^ gen1/_069_/Y (sky130_fd_sc_hd__nor2_1)
+                      gen1/_034_ (net)
+   0.0432    0.7385 v gen1/_071_/Y (sky130_fd_sc_hd__xnor2_1)
+                      gen1/_004_ (net)
+   0.0001    0.7386 v gen1/_111_/D (sky130_fd_sc_hd__dfxtp_1)
+             0.7386   data arrival time
+
+   0.0000    0.0000   clock clk (rise edge)
+   0.6714    0.6714   clock network delay (propagated)
+   0.0000    0.6714   clock reconvergence pessimism
+             0.6714 ^ gen1/_111_/CLK (sky130_fd_sc_hd__dfxtp_1)
+  -0.0359    0.6355   library hold time
+             0.6355   data required time
+-------------------------------------------------------------
+             0.6355   data required time
+            -0.7386   data arrival time
+-------------------------------------------------------------
+             0.1031   slack (MET)
+
+
+SIGNOFF_HOLD_PATH_END
+SIGNOFF_PROG_WS setup=1.7183010569965518e-9
+SIGNOFF_PROG_PATH_BEGIN
+Startpoint: ng9_3/_7_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: row36/_164_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout       Cap      Slew     Delay      Time   Description
+-------------------------------------------------------------------------------------
+                              0.0000    0.0000   clock clk (rise edge)
+                              0.6823    0.6823   clock network delay (propagated)
+                    0.0463    0.0000    0.6823 ^ ng9_3/_7_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     1    0.0052    0.0451    0.2008    0.8830 ^ ng9_3/_7_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                                 pp9_3 (net)
+     4    0.0802    0.1683    0.1694    1.0525 ^ place2594/X (sky130_fd_sc_hd__buf_4)
+                                                 net2593 (net)
+    16    0.0570    0.2089    0.2236    1.2761 ^ lt_pp9_3_s2/Z (LTAPB2)
+                                                 pgm_pp9_3_s2 (net)
+     2    0.0328    0.2863    0.2340    1.5100 ^ vs_36_9/Z (VSITE_BUF)
+                                                 lf_36_9 (net)
+     1    0.0235    0.1307    0.3470    1.8570 v row36/_113_/X (sky130_fd_sc_hd__xor3_1)
+                                                 row36/_036_ (net)
+                    0.1308    0.0023    1.8593 v row36/_164_/D (sky130_fd_sc_hd__dfxtp_1)
+                                        1.8593   data arrival time
+
+                              3.0000    3.0000   clock clk (rise edge)
+                              0.6812    3.6812   clock network delay (propagated)
+                              0.0000    3.6812   clock reconvergence pessimism
+                                        3.6812 ^ row36/_164_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                             -0.1037    3.5776   library setup time
+                                        3.5776   data required time
+-------------------------------------------------------------------------------------
+                                        3.5776   data required time
+                                       -1.8593   data arrival time
+-------------------------------------------------------------------------------------
+                                        1.7183   slack (MET)
+
+
+SIGNOFF_PROG_PATH_END
+SIGNOFF_SLEW tap_input_max=0.225372 tap_input_pin=lt_pn16_10_s3/A site_input_max=0.216886 site_input_pin=vs_27_14/A
+SIGNOFF_SPINE_DRIVERS sky130_fd_sc_hd__buf_4 2069 sky130_fd_sc_hd__dfxtp_1 123

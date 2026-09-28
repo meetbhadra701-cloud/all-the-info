@@ -1,0 +1,366 @@
+{
+ "name": "golden_r3_ubp3_u52",
+ "fabric": "ubp",
+ "util": 52,
+ "K": 4,
+ "base": {
+  "odb_sha256": "aefbdaff878af710148fcdd64f5b413e1435ca6a63cf06a028e5d04c6da352db",
+  "drc_final": 0,
+  "setup_ws_ns": 0.975686,
+  "hold_ws_ns": 0.268202,
+  "core_area_um2": 324261,
+  "cell_area_um2": 169952,
+  "instance_count": 44865,
+  "orfs_rc": 2,
+  "gds_merge": "expected-failure"
+ },
+ "programs": {
+  "w1": {
+   "tag": "w1",
+   "drt_final": 0,
+   "drt_iterations_run": 14,
+   "drt_trajectory": [
+    1134,
+    654,
+    550,
+    320,
+    184,
+    95,
+    45,
+    36,
+    34,
+    34,
+    14,
+    9,
+    8,
+    8,
+    0
+   ],
+   "grt": {
+    "met4": {
+     "usage_pct": 16.5,
+     "overflow": 0
+    },
+    "met5": {
+     "usage_pct": 7.49,
+     "overflow": 0
+    }
+   },
+   "wirelength_um": {
+    "met4": 60063.0,
+    "met5": 4236.0
+   },
+   "vias": 772,
+   "setup_ws_ns": 0.8880771673602794,
+   "hold_ws_ns": 0.1922891845751451,
+   "prog_setup_ws_ns": 1.0940741645981689,
+   "post_pnr": {
+    "tag": "w1",
+    "netlist": "post-PnR (OpenROAD write_verilog)",
+    "matches_numpy": true,
+    "latency": 8,
+    "oracle_mutation_detected": true,
+    "pass": true
+   },
+   "invariance": {
+    "odb_unchanged": true,
+    "n_instances": 14027,
+    "placement_identical": true,
+    "moved_or_changed_status": [],
+    "n_master_swaps": 118,
+    "masters_ok": true,
+    "routed_layers": [
+     "met4",
+     "met5"
+    ],
+    "via_masters": [
+     "M4M5_PR"
+    ],
+    "routed_non_pgm_nets": [],
+    "layers_ok": true,
+    "specialnets_identical": true,
+    "all_invariants_hold": true,
+    "program_nets_match": true,
+    "foreign_pins": [],
+    "program_connectivity_ok": true
+   },
+   "pass": true
+  },
+  "w2": {
+   "tag": "w2",
+   "drt_final": 0,
+   "drt_iterations_run": 13,
+   "drt_trajectory": [
+    1143,
+    730,
+    607,
+    293,
+    166,
+    104,
+    68,
+    33,
+    25,
+    24,
+    6,
+    2,
+    2,
+    0
+   ],
+   "grt": {
+    "met4": {
+     "usage_pct": 17.09,
+     "overflow": 0
+    },
+    "met5": {
+     "usage_pct": 7.87,
+     "overflow": 0
+    }
+   },
+   "wirelength_um": {
+    "met4": 62396.0,
+    "met5": 4464.0
+   },
+   "vias": 823,
+   "setup_ws_ns": 0.8880771673602794,
+   "hold_ws_ns": 0.1922891845751451,
+   "prog_setup_ws_ns": 1.082341993807745,
+   "post_pnr": {
+    "tag": "w2",
+    "netlist": "post-PnR (OpenROAD write_verilog)",
+    "matches_numpy": true,
+    "latency": 8,
+    "oracle_mutation_detected": true,
+    "pass": true
+   },
+   "invariance": {
+    "odb_unchanged": true,
+    "n_instances": 14027,
+    "placement_identical": true,
+    "moved_or_changed_status": [],
+    "n_master_swaps": 115,
+    "masters_ok": true,
+    "routed_layers": [
+     "met4",
+     "met5"
+    ],
+    "via_masters": [
+     "M4M5_PR"
+    ],
+    "routed_non_pgm_nets": [],
+    "layers_ok": true,
+    "specialnets_identical": true,
+    "all_invariants_hold": true,
+    "program_nets_match": true,
+    "foreign_pins": [],
+    "program_connectivity_ok": true
+   },
+   "pass": true
+  },
+  "w3": {
+   "tag": "w3",
+   "drt_final": 0,
+   "drt_iterations_run": 7,
+   "drt_trajectory": [
+    400,
+    209,
+    160,
+    41,
+    13,
+    5,
+    5,
+    0
+   ],
+   "grt": {
+    "met4": {
+     "usage_pct": 8.89,
+     "overflow": 0
+    },
+    "met5": {
+     "usage_pct": 3.96,
+     "overflow": 0
+    }
+   },
+   "wirelength_um": {
+    "met4": 32097.0,
+    "met5": 1905.0
+   },
+   "vias": 361,
+   "setup_ws_ns": 0.8880771673602794,
+   "hold_ws_ns": 0.1922891845751451,
+   "prog_setup_ws_ns": 1.0707608133486701,
+   "post_pnr": {
+    "tag": "w3",
+    "netlist": "post-PnR (OpenROAD write_verilog)",
+    "matches_numpy": true,
+    "latency": 8,
+    "oracle_mutation_detected": true,
+    "pass": true
+   },
+   "invariance": {
+    "odb_unchanged": true,
+    "n_instances": 14027,
+    "placement_identical": true,
+    "moved_or_changed_status": [],
+    "n_master_swaps": 734,
+    "masters_ok": true,
+    "routed_layers": [
+     "met4",
+     "met5"
+    ],
+    "via_masters": [
+     "M4M5_PR"
+    ],
+    "routed_non_pgm_nets": [],
+    "layers_ok": true,
+    "specialnets_identical": true,
+    "all_invariants_hold": true,
+    "program_nets_match": true,
+    "foreign_pins": [],
+    "program_connectivity_ok": true
+   },
+   "pass": true
+  },
+  "w4": {
+   "tag": "w4",
+   "drt_final": 0,
+   "drt_iterations_run": 14,
+   "drt_trajectory": [
+    1361,
+    956,
+    796,
+    432,
+    208,
+    129,
+    88,
+    40,
+    28,
+    27,
+    9,
+    6,
+    5,
+    5,
+    0
+   ],
+   "grt": {
+    "met4": {
+     "usage_pct": 16.49,
+     "overflow": 0
+    },
+    "met5": {
+     "usage_pct": 7.39,
+     "overflow": 0
+    }
+   },
+   "wirelength_um": {
+    "met4": 60641.0,
+    "met5": 5174.0
+   },
+   "vias": 937,
+   "setup_ws_ns": 0.8880771673602794,
+   "hold_ws_ns": 0.1922891845751451,
+   "prog_setup_ws_ns": 1.0732739141872116,
+   "post_pnr": {
+    "tag": "w4",
+    "netlist": "post-PnR (OpenROAD write_verilog)",
+    "matches_numpy": true,
+    "latency": 8,
+    "oracle_mutation_detected": true,
+    "pass": true
+   },
+   "invariance": {
+    "odb_unchanged": true,
+    "n_instances": 14027,
+    "placement_identical": true,
+    "moved_or_changed_status": [],
+    "n_master_swaps": 7,
+    "masters_ok": true,
+    "routed_layers": [
+     "met4",
+     "met5"
+    ],
+    "via_masters": [
+     "M4M5_PR"
+    ],
+    "routed_non_pgm_nets": [],
+    "layers_ok": true,
+    "specialnets_identical": true,
+    "all_invariants_hold": true,
+    "program_nets_match": true,
+    "foreign_pins": [],
+    "program_connectivity_ok": true
+   },
+   "pass": true
+  },
+  "w5": {
+   "tag": "w5",
+   "drt_final": 0,
+   "drt_iterations_run": 1,
+   "drt_trajectory": [
+    122,
+    0
+   ],
+   "grt": {
+    "met4": {
+     "usage_pct": 3.54,
+     "overflow": 0
+    },
+    "met5": {
+     "usage_pct": 0.47,
+     "overflow": 0
+    }
+   },
+   "wirelength_um": {
+    "met4": 12533.0,
+    "met5": 23.0
+   },
+   "vias": 4,
+   "setup_ws_ns": 0.8880771673602794,
+   "hold_ws_ns": 0.1922891845751451,
+   "prog_setup_ws_ns": 0.9960041680301401,
+   "post_pnr": {
+    "tag": "w5",
+    "netlist": "post-PnR (OpenROAD write_verilog)",
+    "matches_numpy": true,
+    "latency": 8,
+    "oracle_mutation_detected": true,
+    "pass": true
+   },
+   "invariance": {
+    "odb_unchanged": true,
+    "n_instances": 14027,
+    "placement_identical": true,
+    "moved_or_changed_status": [],
+    "n_master_swaps": 64,
+    "masters_ok": true,
+    "routed_layers": [
+     "met4",
+     "met5"
+    ],
+    "via_masters": [
+     "M4M5_PR"
+    ],
+    "routed_non_pgm_nets": [],
+    "layers_ok": true,
+    "specialnets_identical": true,
+    "all_invariants_hold": true,
+    "program_nets_match": true,
+    "foreign_pins": [],
+    "program_connectivity_ok": true
+   },
+   "pass": true
+  }
+ },
+ "T_established_ns": 2.024314,
+ "T_robust_ns": 2.024314,
+ "AxT_established": 9262513.424984617,
+ "AxT_robust": 9262513.424984617,
+ "programs_required": [
+  "w1",
+  "w2",
+  "w3",
+  "w4",
+  "w5"
+ ],
+ "programs_missing": [],
+ "all_programs_pass": true
+}

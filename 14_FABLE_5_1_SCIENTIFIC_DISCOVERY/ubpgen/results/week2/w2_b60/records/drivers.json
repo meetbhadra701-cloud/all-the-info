@@ -1,0 +1,102 @@
+{
+ "selection": {
+  "policy": "w2_load_rule",
+  "slew_target_ns": 0.3,
+  "corner": "tt",
+  "candidates": [
+   "buf_1",
+   "buf_2",
+   "buf_4",
+   "buf_6",
+   "buf_8",
+   "buf_12",
+   "buf_16"
+  ],
+  "load_model": "C_wc = (m/K) * C_in(VSITE A) + c_met4(setRC) * L_RSMT(tap + all segment sites); no margin",
+  "C_in_site_pF": 0.002191,
+  "c_met4_pF_per_um": 0.000148128,
+  "logic_area_um2": 169468.784,
+  "evaluations": [
+   {
+    "class": "buf_1",
+    "cell_area_um2": 177696.7,
+    "core_side_um": 544.21,
+    "worst_tap": "lt_pp14_0_s1",
+    "L_rsmt_um": 141.77,
+    "sinks": 16,
+    "C_wc_fF": 56.06,
+    "transition_ns": 0.6531,
+    "meets": false
+   },
+   {
+    "class": "buf_2",
+    "cell_area_um2": 180439.3,
+    "core_side_um": 548.39,
+    "worst_tap": "lt_pp12_0_s1",
+    "L_rsmt_um": 143.08,
+    "sinks": 16,
+    "C_wc_fF": 56.25,
+    "transition_ns": 0.2775,
+    "meets": true
+   }
+  ],
+  "rule_class": "buf_2",
+  "post_build_step": 0,
+  "class": "buf_2",
+  "tap_master": "LTAPB2",
+  "spine": "tap A-pin max_transition = S enforced by the ORFS flow repair_design (tt)",
+  "tap_cell": {
+   "master": "LTAPB2",
+   "timing": "sky130_fd_sc_hd__buf_2 (cloned per corner)",
+   "sites": 6,
+   "pad_sites": 2,
+   "buffer_sites": 4,
+   "area_um2": 7.5072,
+   "width_um": 2.76,
+   "pad": "single-track met4 pad in the first two sites (r3)",
+   "count": 2192
+  },
+  "physical_constraints": {
+   "tap_input_max_transition_ns": 0.3,
+   "enforced_by": "ORFS repair_design (3_4 resize, 5_1 global route; tt)",
+   "tap_and_site_instances": "dont_touch (FIXED base; POST_SYNTH hook), FIRM-placed by the W-blind plan",
+   "utilization_pct": 60,
+   "clock_ns": 3.0,
+   "base_layers": "met1-met3",
+   "program_layers": "met4-met5"
+  },
+  "signoff_libraries": {
+   "source": "https://github.com/efabless/volare/releases/download/sky130-fa87f8f4bbcc7255b6f0c0fb506960f531ae2392/sky130_fd_sc_hd.tar.zst",
+   "tarball_sha256": "d4081b3c0fbfa2afe31dba789c03157ad137ea08b11910e2c8b3ec81b2a61bf6",
+   "tt": {
+    "file": "/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib",
+    "sha256": "ec0e1067a35c8bf20b11e58d1e8ac53326067e4dac84a125cc1b917a3518d0d9"
+   },
+   "ss": {
+    "file": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+    "sha256": "1fb9eea47d4ec6177995d7f46e9c66f15b255c38ed1554f7d2856fa870b9a08b"
+   },
+   "ff": {
+    "file": "sky130_fd_sc_hd__ff_n40C_1v95.lib",
+    "sha256": "4d3bff41cd4ea64e2cafa391e86cb763b7a5f59ebbc56d0e9a53794073d3f97b"
+   }
+  }
+ },
+ "verification": {
+  "class": "buf_2",
+  "tap_masters_in_def": [
+   "LTAPB2"
+  ],
+  "worst_tap": "lt_pp20_0_s0",
+  "L_rsmt_um": 145.34,
+  "C_wc_fF": 56.58,
+  "transition_ns": 0.2791,
+  "meets": true,
+  "taps_in_def": 2192,
+  "taps_expected": 2192,
+  "tap_status": {
+   "FIXED": 2192
+  },
+  "masters_ok": true
+ }
+}

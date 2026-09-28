@@ -1,0 +1,283 @@
+{
+ "time_utc": "2026-09-28T08:31:49+00:00",
+ "command": "generate",
+ "git": {
+  "commit": "6e5406152afa3fa240583600bbc31728b93f772b",
+  "branch": "claude/compassionate-edison-91b73q",
+  "generator_tree_dirty": false
+ },
+ "tools": {
+  "orfs_image": "openroad/orfs:latest",
+  "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+  "yosys": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "host": "Linux-6.18.44-fc-v42-x86_64-with-glibc2.39"
+ },
+ "config_sha256": "d1de9bf6d6bfe9227632484e1c8bf7dfdc4a9f128d1821720214e753138c878c",
+ "config": {
+  "name": "w2_ar3",
+  "fabric": "g1",
+  "n": 64,
+  "m": 64,
+  "g": null,
+  "activation_bits": 8,
+  "clock_ns": 3.0,
+  "access": {
+   "taps_per_line": 4,
+   "mode": "r3"
+  },
+  "drivers": {
+   "policy": "w2_load_rule",
+   "slew_target_ns": 0.3,
+   "tap_class": "buf_2",
+   "post_build_step": 0
+  },
+  "layout": {
+   "util": 75,
+   "core_aspect_ratio": 1,
+   "core_margin": 2
+  },
+  "spine_driver": "as_synthesized",
+  "programs": [
+   {
+    "tag": "w1",
+    "seed": 1001,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w2",
+    "seed": 1002,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w3",
+    "seed": 1003,
+    "p0": 0.8,
+    "same_rows": false
+   },
+   {
+    "tag": "w4",
+    "seed": 1004,
+    "p0": 0.1,
+    "same_rows": false
+   },
+   {
+    "tag": "w5",
+    "seed": 1005,
+    "p0": 0.4,
+    "same_rows": true
+   }
+  ],
+  "flow": {
+   "orfs_image": "openroad/orfs:latest",
+   "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+   "num_cores": 2,
+   "drt_iters": 64,
+   "no_dce": true,
+   "nickname": "ubpgen_w2_ar3"
+  },
+  "verify": {
+   "words": 12,
+   "seed": 3
+  }
+ },
+ "counts": {
+  "lines": 128,
+  "taps": 512,
+  "sites": 4096,
+  "leaves_per_row": 64,
+  "bands": 64,
+  "const_sites": 0,
+  "segment_rows": 16,
+  "output_width": 14,
+  "cycles_per_word": 14
+ },
+ "modules": [
+  "SNEG_gl.v",
+  "STREE_L64_gl.v"
+ ],
+ "programs": [
+  {
+   "tag": "w1",
+   "n_prog_nets": 511,
+   "n_prog_pins": 2967,
+   "zeros": 1640,
+   "ones": 0,
+   "W_sha256": "4fe6d8c650405aee2fac6217d674b1b951abc76002490ec7508c55e482a79d84"
+  },
+  {
+   "tag": "w2",
+   "n_prog_nets": 509,
+   "n_prog_pins": 2933,
+   "zeros": 1672,
+   "ones": 0,
+   "W_sha256": "1842d03e77cb1374627b5d52dc0ff22c4eb4ab9057545b7d521f11e80cc4b0d3"
+  },
+  {
+   "tag": "w3",
+   "n_prog_nets": 415,
+   "n_prog_pins": 1250,
+   "zeros": 3261,
+   "ones": 0,
+   "W_sha256": "49d0490231cdfa5c79197f737408a5e197d8073c9f07ef29633fe221b77c0535"
+  },
+  {
+   "tag": "w4",
+   "n_prog_nets": 512,
+   "n_prog_pins": 4162,
+   "zeros": 446,
+   "ones": 0,
+   "W_sha256": "45284689e8ac9592e5b38698b21fc2282294d2af9ff876a0db4b6a503d1f702f"
+  },
+  {
+   "tag": "w5",
+   "n_prog_nets": 164,
+   "n_prog_pins": 2788,
+   "zeros": 1472,
+   "ones": 0,
+   "W_sha256": "2099b958b504a2dce1cbc9f2075955892e1a3931c719c2aa900782c7c85b2544"
+  }
+ ],
+ "driver_sizing": {
+  "policy": "w2_load_rule",
+  "slew_target_ns": 0.3,
+  "corner": "tt",
+  "candidates": [
+   "buf_1",
+   "buf_2",
+   "buf_4",
+   "buf_6",
+   "buf_8",
+   "buf_12",
+   "buf_16"
+  ],
+  "load_model": "C_wc = (m/K) * C_in(VSITE A) + c_met4(setRC) * L_RSMT(tap + all segment sites); no margin",
+  "C_in_site_pF": 0.002191,
+  "c_met4_pF_per_um": 0.000148128,
+  "logic_area_um2": 355961.3952,
+  "evaluations": [
+   {
+    "class": "buf_1",
+    "cell_area_um2": 357883.2,
+    "core_side_um": 690.78,
+    "worst_tap": "lt_lp43_s0",
+    "L_rsmt_um": 165.29,
+    "sinks": 16,
+    "C_wc_fF": 59.54,
+    "transition_ns": 0.6927,
+    "meets": false
+   },
+   {
+    "class": "buf_2",
+    "cell_area_um2": 358523.9,
+    "core_side_um": 691.4,
+    "worst_tap": "lt_lp33_s3",
+    "L_rsmt_um": 165.67,
+    "sinks": 16,
+    "C_wc_fF": 59.6,
+    "transition_ns": 0.2934,
+    "meets": true
+   }
+  ],
+  "rule_class": "buf_2",
+  "post_build_step": 0,
+  "class": "buf_2",
+  "tap_master": "LTAPB2",
+  "spine": "tap A-pin max_transition = S enforced by the ORFS flow repair_design (tt)",
+  "tap_cell": {
+   "master": "LTAPB2",
+   "timing": "sky130_fd_sc_hd__buf_2 (cloned per corner)",
+   "sites": 6,
+   "pad_sites": 2,
+   "buffer_sites": 4,
+   "area_um2": 7.5072,
+   "width_um": 2.76,
+   "pad": "single-track met4 pad in the first two sites (r3)",
+   "count": 512
+  },
+  "physical_constraints": {
+   "tap_input_max_transition_ns": 0.3,
+   "enforced_by": "ORFS repair_design (3_4 resize, 5_1 global route; tt)",
+   "tap_and_site_instances": "dont_touch (FIXED base; POST_SYNTH hook), FIRM-placed by the W-blind plan",
+   "utilization_pct": 75,
+   "clock_ns": 3.0,
+   "base_layers": "met1-met3",
+   "program_layers": "met4-met5"
+  },
+  "signoff_libraries": {
+   "source": "https://github.com/efabless/volare/releases/download/sky130-fa87f8f4bbcc7255b6f0c0fb506960f531ae2392/sky130_fd_sc_hd.tar.zst",
+   "tarball_sha256": "d4081b3c0fbfa2afe31dba789c03157ad137ea08b11910e2c8b3ec81b2a61bf6",
+   "tt": {
+    "file": "/OpenROAD-flow-scripts/flow/platforms/sky130hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib",
+    "sha256": "ec0e1067a35c8bf20b11e58d1e8ac53326067e4dac84a125cc1b917a3518d0d9"
+   },
+   "ss": {
+    "file": "sky130_fd_sc_hd__ss_100C_1v60.lib",
+    "sha256": "1fb9eea47d4ec6177995d7f46e9c66f15b255c38ed1554f7d2856fa870b9a08b"
+   },
+   "ff": {
+    "file": "sky130_fd_sc_hd__ff_n40C_1v95.lib",
+    "sha256": "4d3bff41cd4ea64e2cafa391e86cb763b7a5f59ebbc56d0e9a53794073d3f97b"
+   }
+  }
+ },
+ "module_facts": {
+  "STREE_L64": {
+   "depth": 6
+  }
+ },
+ "files": {
+  "rtl/SNEG.v": "faedca88eee6046f630162c0eabe72d490f63b155f8a99c6b06ce3fbb0d67f1a",
+  "rtl/SNEG_gl.v": "893ef6945c0094f805f649129a4a6db383ed8a11ea3a70cffcd5ba31eed36e76",
+  "rtl/SNEG_gl_raw.v": "893ef6945c0094f805f649129a4a6db383ed8a11ea3a70cffcd5ba31eed36e76",
+  "rtl/STREE_L64.v": "d352cfaacebd4fec65b62030537cf504dfa146ee73f03cd3a8b1389ddd7317e2",
+  "rtl/STREE_L64_gl.v": "1efd44b29851e7e48305f862421c603a862ef47c25ca4779fa3ceb4288a42c63",
+  "rtl/STREE_L64_gl_raw.v": "1efd44b29851e7e48305f862421c603a862ef47c25ca4779fa3ceb4288a42c63",
+  "cells/dont_touch.tcl": "054e93d8a229912d7a07dd48833df3f259c72a379d7f7062f40cab30f66a6938",
+  "cells/dont_touch_r3.tcl": "40841bfd04efa0ff5b41928dc56d39718eccdb2b1e5faa7a62f6496653ea0e45",
+  "cells/g2_cells.lef": "89a5d9bb79fa26bc00261ea43202cdf78241d85850cae13e71ede83bc2369c82",
+  "cells/g2_cells.lib": "d225bb73bceb36173f6ff07c17c9f5aae771146219ba86a3c63850102f2146c8",
+  "cells/g2_cells_ff.lib": "066055f61426958269216fa02c30c2567f93c442c7541151b343cccb09707972",
+  "cells/g2_cells_ss.lib": "84263e497610fef52d40176cfe9aac80ecdbb381d753e0c90a4cdf977fca19ea",
+  "cells/g2r3_cells.lef": "aa67486628dc0d412ea8518942091c927a9c11da3c8ac246f9b3b9deac272245",
+  "cells/g2r3_cells.lib": "2dc7553f001c1b81e959762d66229e9d07b102761b6bfb308d163ca37312dea8",
+  "cells/g2r3_cells_ff.lib": "0ed5b643687aa8df82432d657e0935a64ffd280b670cecf00a7888cb53807d68",
+  "cells/g2r3_cells_ss.lib": "4220cb2086900de7cf80f78a8e6e9ff7fe54d88fcaf1c742146f59a330ceba0a",
+  "cells/pdn_m1rails.tcl": "6330b0de839fec4b46f58fd64c8a0cdacec0a28459cbb5f7305749546a090a63",
+  "cells/w2_cells.lef": "8d4746338ba9054e033fec3a3bd211303522c50d431e5cedec16a45b8ea09b87",
+  "cells/w2_cells.lib": "76e6a99b36df6f1a379751e5bcdae5d8e2db5508fb986d7ac868e84ab2717f37",
+  "cells/w2_cells_ff.lib": "0145bed3d46ab21a46b2f0860d44b37f146b44b68d0fba3d38a3697dd02670fe",
+  "cells/w2_cells_ss.lib": "4ab31e33fb45fb4aaa2713d762fc63e3402af95a829a5a91270c61fd4245a1ef",
+  "netlist/mapping.json": "3d4f8316a0b83c3af660d250e6f0164a4c62e39df254cc26dcfbc4c3dfbbc760",
+  "netlist/netlist_base.v": "f44739d90048ba9d09fe7a2912cd49baa4ade8efa202f7d04b74c9d95c099e67",
+  "netlist/netlist_logic.v": "6e11e6536a20e9f578a155c30d28b921f705db90574abf95d92f848f3037d150",
+  "netlist/stat_logic.txt": "fdb2584f1e448eab5a3bb1da9167b158097565817aad088de4307696a1a2f2a5",
+  "netlist/top_base.v": "29e4757838d771f290a3851c53d253aa827dbf6dacf366bae79db83a9167f09b",
+  "layout/place_access.tcl": "b3ea9d9295975720e021ad71778a780dae9e4c8fd90fd703d5bf9ff5a1662a45",
+  "orfs/config.mk": "c822dadd75bcac6206d4992f9efa3ec9b4028a9e5da5e1f7345d765bcf978c28",
+  "orfs/constraint.sdc": "15adaee47c75afc873c640e4cfbc36ce359cb98eb1989896972f816f0645fb25",
+  "programs/w1/W.npy": "439f01337c2a5241443174630ce001886a1963932465a77f34e76187460feec4",
+  "programs/w1/prog.json": "c45faa4d6cfd0543bb99b3a065430f60533130fce09c7e4f1e20f65dbe57ba0e",
+  "programs/w1/prog.tcl": "76842e6f441381219957d124efdf763ff42c88cfcc7bb0c57ec599877dbd9c10",
+  "programs/w1/weights.json": "2de0bb37d20afa08275968c606d866e5111fa77d62208a5b9d97f12e02eb104a",
+  "programs/w2/W.npy": "580552222af70f8e590be40b9b1fe89b842e31d2553a55ad7b7b45abd4ba0623",
+  "programs/w2/prog.json": "70de12991743ee669f5c91d04861285245c774cb2b63e6015a92ff2dfca5f67a",
+  "programs/w2/prog.tcl": "432f5a6b5d19b7969fffa2a512e8909d3d18fc32e79af7068c0ecb6d94b1c355",
+  "programs/w2/weights.json": "7a007956b12b433af966e04ac86c9b7f8816a36377c9e343719c5af948fd81a1",
+  "programs/w3/W.npy": "ac1d34002ccb98fcf5487ecc3eae4bc3e32a191cad27282a0d32d26240d06ca5",
+  "programs/w3/prog.json": "0f6196b1323af53979813191fd6d0c36a262e5e08cab166d98ca6dfa92bd75eb",
+  "programs/w3/prog.tcl": "fc7416557dad4ac64d9c3b77a6df20195b637cf059bfb428a58665b36098c7b1",
+  "programs/w3/weights.json": "7544eec85c9b25e2553a13972c5c8c5ad68277a1dd6a5556f935b2932f9b877e",
+  "programs/w4/W.npy": "f227ca234e4938a8a1aaae1aaa0d7cde077660227848313c83aebeda29422caf",
+  "programs/w4/prog.json": "fc7f10fb063e09c69a1ef52b1aa94e843646c9fa84df121d5f875b4d74ba6611",
+  "programs/w4/prog.tcl": "f818d80ec691d9aa35556a50d2c75181a90b6ff1d3190177b1a0dc04ef94d7ed",
+  "programs/w4/weights.json": "e87f8c00bb66b3ecd5f331bd63808a17580a0cd46f116b5813349b5b63fbdbc0",
+  "programs/w5/W.npy": "b38ec982869b033df30c5ce5afee2dd5fde0174847268c57a48b91237e28fddc",
+  "programs/w5/prog.json": "3db8b40c7b6fc467f4f4be043a1e9d8238a9a135aac4d53d8195d1ca1523601f",
+  "programs/w5/prog.tcl": "1fb810bfbe13a96f55a40d579222d530fdd6e7ab0669df7d21f750f5e6c69a99",
+  "programs/w5/weights.json": "8fab455e8e28bf3c084332f44d723a2e6b025f9b27f985e839baa4a89d211174"
+ }
+}

@@ -1,0 +1,201 @@
+{
+ "time_utc": "2026-09-27T23:57:54+00:00",
+ "command": "generate",
+ "git": {
+  "commit": "bb6b8d45e6460f3e64c74b01978772d2570a1efb",
+  "branch": "claude/compassionate-edison-91b73q",
+  "generator_tree_dirty": true
+ },
+ "tools": {
+  "orfs_image": "openroad/orfs:latest",
+  "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+  "yosys": "Yosys 0.68 (git sha1 38e001a6f, Release, GNU /usr/local/bin/wrapped-cc/g++ 11.4.0)",
+  "python": "3.11.15",
+  "numpy": "2.4.6",
+  "host": "Linux-6.18.44-fc-v37-x86_64-with-glibc2.39"
+ },
+ "config_sha256": "f129d7f8fdd8bc8e2eb21f6e1b207ce0d4e74c123b0c83964f23d46cc36bbd9a",
+ "config": {
+  "name": "golden_r3_pc2_u67",
+  "fabric": "pc2",
+  "n": 64,
+  "m": 64,
+  "g": null,
+  "activation_bits": 8,
+  "clock_ns": 3.0,
+  "access": {
+   "taps_per_line": 4
+  },
+  "layout": {
+   "util": 67,
+   "core_aspect_ratio": 1,
+   "core_margin": 2
+  },
+  "spine_driver": "as_synthesized",
+  "programs": [
+   {
+    "tag": "w1",
+    "seed": 1001,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w2",
+    "seed": 1002,
+    "p0": 0.4,
+    "same_rows": false
+   },
+   {
+    "tag": "w3",
+    "seed": 1003,
+    "p0": 0.8,
+    "same_rows": false
+   },
+   {
+    "tag": "w4",
+    "seed": 1004,
+    "p0": 0.1,
+    "same_rows": false
+   },
+   {
+    "tag": "w5",
+    "seed": 1005,
+    "p0": 0.4,
+    "same_rows": true
+   },
+   {
+    "tag": "w14",
+    "seed": 14,
+    "p0": 0.4,
+    "same_rows": false
+   }
+  ],
+  "flow": {
+   "orfs_image": "openroad/orfs:latest",
+   "orfs_image_id": "sha256:69df744e2b5ce26a14950713fd2d74b96ec8c9bd8351d2719f9bb200388239ad",
+   "num_cores": 2,
+   "drt_iters": 64,
+   "no_dce": true,
+   "nickname": "g2r3_pc2r3_u67"
+  },
+  "verify": {
+   "words": 12,
+   "seed": 3
+  }
+ },
+ "counts": {
+  "lines": 128,
+  "taps": 512,
+  "sites": 4096,
+  "leaves_per_row": 64,
+  "bands": 64,
+  "const_sites": 448,
+  "segment_rows": 16,
+  "output_width": 14,
+  "cycles_per_word": 8
+ },
+ "modules": [
+  "CTRL_gl.v",
+  "PLINE_gl.v",
+  "PROW_pc2_L64_gl.v"
+ ],
+ "programs": [
+  {
+   "tag": "w1",
+   "n_prog_nets": 511,
+   "n_prog_pins": 2967,
+   "zeros": 1640,
+   "ones": 164,
+   "W_sha256": "4fe6d8c650405aee2fac6217d674b1b951abc76002490ec7508c55e482a79d84"
+  },
+  {
+   "tag": "w2",
+   "n_prog_nets": 509,
+   "n_prog_pins": 2933,
+   "zeros": 1672,
+   "ones": 164,
+   "W_sha256": "1842d03e77cb1374627b5d52dc0ff22c4eb4ab9057545b7d521f11e80cc4b0d3"
+  },
+  {
+   "tag": "w3",
+   "n_prog_nets": 415,
+   "n_prog_pins": 1250,
+   "zeros": 3261,
+   "ones": 132,
+   "W_sha256": "49d0490231cdfa5c79197f737408a5e197d8073c9f07ef29633fe221b77c0535"
+  },
+  {
+   "tag": "w4",
+   "n_prog_nets": 512,
+   "n_prog_pins": 4162,
+   "zeros": 446,
+   "ones": 204,
+   "W_sha256": "45284689e8ac9592e5b38698b21fc2282294d2af9ff876a0db4b6a503d1f702f"
+  },
+  {
+   "tag": "w5",
+   "n_prog_nets": 164,
+   "n_prog_pins": 2788,
+   "zeros": 1472,
+   "ones": 128,
+   "W_sha256": "2099b958b504a2dce1cbc9f2075955892e1a3931c719c2aa900782c7c85b2544"
+  },
+  {
+   "tag": "w14",
+   "n_prog_nets": 508,
+   "n_prog_pins": 2990,
+   "zeros": 1614,
+   "ones": 158,
+   "W_sha256": "cde56d6558adbd116d5b7013b041c690a03901b08e22da581446472549129335"
+  }
+ ],
+ "module_facts": {},
+ "files": {
+  "rtl/CTRL.v": "1ae078e8bce751bcbcf2851c2714318d94fa546f92ec794ab4bce4819e40fc75",
+  "rtl/CTRL_gl.v": "60109657a43c31c70b2a918d90dd4e956b7b668b7ca8b2d8a36cfd04d04c6330",
+  "rtl/CTRL_gl_raw.v": "60109657a43c31c70b2a918d90dd4e956b7b668b7ca8b2d8a36cfd04d04c6330",
+  "rtl/PLINE.v": "5b0334753bdb8bae5acfbfa69d170d1bd9a68944bbd0305557defe3551de60c4",
+  "rtl/PLINE_gl.v": "e376462cb18513deecd43f0c07985583d5c4345ba2da16af10c54287c8f79a1c",
+  "rtl/PLINE_gl_raw.v": "e376462cb18513deecd43f0c07985583d5c4345ba2da16af10c54287c8f79a1c",
+  "rtl/PROW_pc2_L64.v": "d3fadf4faa24b6fee32ca01f5ffa5a267aebb42572767cbe9fa28bea565e5729",
+  "rtl/PROW_pc2_L64_gl.v": "d4a0a6664c2f0edd0b395029601b3eb112052f115bdc0e419dda13a8c943bfa4",
+  "rtl/PROW_pc2_L64_gl_raw.v": "d4a0a6664c2f0edd0b395029601b3eb112052f115bdc0e419dda13a8c943bfa4",
+  "cells/dont_touch_r3.tcl": "40841bfd04efa0ff5b41928dc56d39718eccdb2b1e5faa7a62f6496653ea0e45",
+  "cells/g2_cells.lef": "89a5d9bb79fa26bc00261ea43202cdf78241d85850cae13e71ede83bc2369c82",
+  "cells/g2_cells.lib": "d225bb73bceb36173f6ff07c17c9f5aae771146219ba86a3c63850102f2146c8",
+  "cells/g2r3_cells.lef": "aa67486628dc0d412ea8518942091c927a9c11da3c8ac246f9b3b9deac272245",
+  "cells/g2r3_cells.lib": "2dc7553f001c1b81e959762d66229e9d07b102761b6bfb308d163ca37312dea8",
+  "cells/pdn_m1rails.tcl": "6330b0de839fec4b46f58fd64c8a0cdacec0a28459cbb5f7305749546a090a63",
+  "netlist/mapping.json": "3d4f8316a0b83c3af660d250e6f0164a4c62e39df254cc26dcfbc4c3dfbbc760",
+  "netlist/netlist_base.v": "0724cd64e4342010beaea5cc86c43e8883f674741ad0288400781468eae27d2b",
+  "netlist/netlist_logic.v": "b99d6b62bbac4ed8b704f0b12a3be2bd7b0445a7511ad9e16c8975d96e3393e1",
+  "netlist/top_base.v": "806bd8bdaa373c00c918aebe51913f7f94c1dbf5e73f0b6717b9709f3151a9f4",
+  "layout/place_access.tcl": "883f5a8e9c1ea9ffdb5fd90ed77d7f3781a9e606b9d0c4fd5afeeecc405f30b3",
+  "orfs/config.mk": "e5f4dfc92545b120b02711417cde5677cd69407e1cb36744bcc75e022d8c0201",
+  "orfs/constraint.sdc": "15adaee47c75afc873c640e4cfbc36ce359cb98eb1989896972f816f0645fb25",
+  "programs/w1/W.npy": "439f01337c2a5241443174630ce001886a1963932465a77f34e76187460feec4",
+  "programs/w1/prog.json": "e987db29b7d10b7776540ec9888f2d535d62271a57cec7feaca5301857370f22",
+  "programs/w1/prog.tcl": "a2b7a9c2ae57e9d532d5fdf094ccb5a54bbf0e66e73ee7b8362f5f0d31c90476",
+  "programs/w1/weights.json": "2de0bb37d20afa08275968c606d866e5111fa77d62208a5b9d97f12e02eb104a",
+  "programs/w14/W.npy": "44726424398e069b42614ca1497175eb6c789c9953d261b2847b7508aa609bbe",
+  "programs/w14/prog.json": "d964815b0c44bbf7cd895e8a6737e03b2252870908ed1ff4203a56e34f9c795f",
+  "programs/w14/prog.tcl": "340f25a1e0add0ed9f662c96cc16aa85dfa3af16e519c2196db78d763af236a7",
+  "programs/w14/weights.json": "4d8095cdc8907e5479d58f23c716bdfe8265b5497322e17fcd52b905b192ea74",
+  "programs/w2/W.npy": "580552222af70f8e590be40b9b1fe89b842e31d2553a55ad7b7b45abd4ba0623",
+  "programs/w2/prog.json": "b4f3304def7ef5244ca6ae1812def313b47a176c53cfd3f37dd07fa89c668491",
+  "programs/w2/prog.tcl": "0be1ddfdfc174c8b2801c894015bd75216eff1ef58aa06be9fb0222b8ac4aa94",
+  "programs/w2/weights.json": "7a007956b12b433af966e04ac86c9b7f8816a36377c9e343719c5af948fd81a1",
+  "programs/w3/W.npy": "ac1d34002ccb98fcf5487ecc3eae4bc3e32a191cad27282a0d32d26240d06ca5",
+  "programs/w3/prog.json": "79d88274406590aaa3b254b1e580d2759406ffd683c6a17212aedee053d3ad0f",
+  "programs/w3/prog.tcl": "4f11fb239633d03c2991bc6c4e7a62692a7e54dc3405ece4483f2a8cd2264df6",
+  "programs/w3/weights.json": "7544eec85c9b25e2553a13972c5c8c5ad68277a1dd6a5556f935b2932f9b877e",
+  "programs/w4/W.npy": "f227ca234e4938a8a1aaae1aaa0d7cde077660227848313c83aebeda29422caf",
+  "programs/w4/prog.json": "e83ac0c7357346c6221bb77d8e2dbbc5643cf23a402830e7d91ae05435fa65d0",
+  "programs/w4/prog.tcl": "0c5740bdafd2976b6ab8d8ed418aab47f218259466f9716a8b506815d9ca86a4",
+  "programs/w4/weights.json": "e87f8c00bb66b3ecd5f331bd63808a17580a0cd46f116b5813349b5b63fbdbc0",
+  "programs/w5/W.npy": "b38ec982869b033df30c5ce5afee2dd5fde0174847268c57a48b91237e28fddc",
+  "programs/w5/prog.json": "099388359bb497928d11219b5e8d1d6f049a0f6fea8ad6eac1fce112893c8aef",
+  "programs/w5/prog.tcl": "f459e32e2ed02a5559ed34c25d6c02869e22de775b8ca569bdd323baaac0b81d",
+  "programs/w5/weights.json": "8fab455e8e28bf3c084332f44d723a2e6b025f9b27f985e839baa4a89d211174"
+ }
+}
