@@ -1,0 +1,236 @@
+{
+ "formats": {
+  "NVFP4 (E2M1, 16, UE4M3)": {
+   "4096": {
+    "lsb_exp": -20,
+    "width_bits": 56,
+    "max_contribution": 115605504.0,
+    "block_sum_max_units": 2304,
+    "block_sum_bits": 13,
+    "scale_exponent_span": 28,
+    "contributions": 256
+   },
+   "16384": {
+    "lsb_exp": -20,
+    "width_bits": 58,
+    "max_contribution": 115605504.0,
+    "block_sum_max_units": 2304,
+    "block_sum_bits": 13,
+    "scale_exponent_span": 28,
+    "contributions": 1024
+   },
+   "65536": {
+    "lsb_exp": -20,
+    "width_bits": 60,
+    "max_contribution": 115605504.0,
+    "block_sum_max_units": 2304,
+    "block_sum_bits": 13,
+    "scale_exponent_span": 28,
+    "contributions": 4096
+   }
+  },
+  "NVFP4-UE5M3 (E2M1, 16, UE5M3)": {
+   "4096": {
+    "lsb_exp": -36,
+    "width_bits": 88,
+    "max_contribution": 7576322310144.0,
+    "block_sum_max_units": 2304,
+    "block_sum_bits": 13,
+    "scale_exponent_span": 60,
+    "contributions": 256
+   },
+   "16384": {
+    "lsb_exp": -36,
+    "width_bits": 90,
+    "max_contribution": 7576322310144.0,
+    "block_sum_max_units": 2304,
+    "block_sum_bits": 13,
+    "scale_exponent_span": 60,
+    "contributions": 1024
+   },
+   "65536": {
+    "lsb_exp": -36,
+    "width_bits": 92,
+    "max_contribution": 7576322310144.0,
+    "block_sum_max_units": 2304,
+    "block_sum_bits": 13,
+    "scale_exponent_span": 60,
+    "contributions": 4096
+   }
+  },
+  "MXFP4 (E2M1, 32, E8M0)": {
+   "4096": {
+    "lsb_exp": -256,
+    "width_bits": 529,
+    "max_contribution": 3.3348121700347064e+79,
+    "block_sum_max_units": 4608,
+    "block_sum_bits": 14,
+    "scale_exponent_span": 508,
+    "contributions": 128
+   },
+   "16384": {
+    "lsb_exp": -256,
+    "width_bits": 531,
+    "max_contribution": 3.3348121700347064e+79,
+    "block_sum_max_units": 4608,
+    "block_sum_bits": 14,
+    "scale_exponent_span": 508,
+    "contributions": 512
+   },
+   "65536": {
+    "lsb_exp": -256,
+    "width_bits": 533,
+    "max_contribution": 3.3348121700347064e+79,
+    "block_sum_max_units": 4608,
+    "block_sum_bits": 14,
+    "scale_exponent_span": 508,
+    "contributions": 2048
+   }
+  },
+  "MXFP8 (E4M3, 32, E8M0)": {
+   "4096": {
+    "lsb_exp": -272,
+    "width_bits": 557,
+    "max_contribution": 1.8591948382629048e+83,
+    "block_sum_max_units": 1683627180032,
+    "block_sum_bits": 42,
+    "scale_exponent_span": 508,
+    "contributions": 128
+   },
+   "16384": {
+    "lsb_exp": -272,
+    "width_bits": 559,
+    "max_contribution": 1.8591948382629048e+83,
+    "block_sum_max_units": 1683627180032,
+    "block_sum_bits": 42,
+    "scale_exponent_span": 508,
+    "contributions": 512
+   },
+   "65536": {
+    "lsb_exp": -272,
+    "width_bits": 561,
+    "max_contribution": 1.8591948382629048e+83,
+    "block_sum_max_units": 1683627180032,
+    "block_sum_bits": 42,
+    "scale_exponent_span": 508,
+    "contributions": 2048
+   }
+  },
+  "FP8-E4M3 per-tensor": {
+   "4096": {
+    "lsb_exp": -18,
+    "width_bits": 49,
+    "max_contribution": 200704.0,
+    "product_exponent_span": 28,
+    "contributions": 4096
+   },
+   "16384": {
+    "lsb_exp": -18,
+    "width_bits": 51,
+    "max_contribution": 200704.0,
+    "product_exponent_span": 28,
+    "contributions": 16384
+   },
+   "65536": {
+    "lsb_exp": -18,
+    "width_bits": 53,
+    "max_contribution": 200704.0,
+    "product_exponent_span": 28,
+    "contributions": 65536
+   }
+  },
+  "FP8-E5M2 per-tensor": {
+   "4096": {
+    "lsb_exp": -32,
+    "width_bits": 77,
+    "max_contribution": 3288334336.0,
+    "product_exponent_span": 58,
+    "contributions": 4096
+   },
+   "16384": {
+    "lsb_exp": -32,
+    "width_bits": 79,
+    "max_contribution": 3288334336.0,
+    "product_exponent_span": 58,
+    "contributions": 16384
+   },
+   "65536": {
+    "lsb_exp": -32,
+    "width_bits": 81,
+    "max_contribution": 3288334336.0,
+    "product_exponent_span": 58,
+    "contributions": 65536
+   }
+  },
+  "FP16": {
+   "4096": {
+    "lsb_exp": -48,
+    "width_bits": 93,
+    "max_contribution": 4290774016.0,
+    "product_exponent_span": 58,
+    "contributions": 4096
+   },
+   "16384": {
+    "lsb_exp": -48,
+    "width_bits": 95,
+    "max_contribution": 4290774016.0,
+    "product_exponent_span": 58,
+    "contributions": 16384
+   },
+   "65536": {
+    "lsb_exp": -48,
+    "width_bits": 97,
+    "max_contribution": 4290774016.0,
+    "product_exponent_span": 58,
+    "contributions": 65536
+   }
+  },
+  "BF16": {
+   "4096": {
+    "lsb_exp": -266,
+    "width_bits": 535,
+    "max_contribution": 1.1488923038721444e+77,
+    "product_exponent_span": 506,
+    "contributions": 4096
+   },
+   "16384": {
+    "lsb_exp": -266,
+    "width_bits": 537,
+    "max_contribution": 1.1488923038721444e+77,
+    "product_exponent_span": 506,
+    "contributions": 16384
+   },
+   "65536": {
+    "lsb_exp": -266,
+    "width_bits": 539,
+    "max_contribution": 1.1488923038721444e+77,
+    "product_exponent_span": 506,
+    "contributions": 65536
+   }
+  }
+ },
+ "nvfp4_encoding": {
+  "q_half_units": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   8,
+   12
+  ],
+  "S_int_max": 2304,
+  "S_int_bits_signed": 13,
+  "P_max": 518400,
+  "P_bits_signed": 20,
+  "shift_range": [
+   0,
+   28
+  ],
+  "X_bits_signed": 48,
+  "max_contribution_lsb_units": 121221156962304,
+  "W_K65536": 60,
+  "W_K16384": 58,
+  "W_K4096": 56
+ }
+}

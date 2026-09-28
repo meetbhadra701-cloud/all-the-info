@@ -15,6 +15,8 @@ UBP was the universal block-pattern fabric for weight-independent inference sili
 | `SUPPORTING_ARTIFACTS/research_harness/` | The extracted, tested research harness (config → verify → mutation control → baseline → physical flow → extraction → multi-corner timing → decision) |
 | `SUPPORTING_ARTIFACTS/NEXT_THESIS_RESEARCH_RULES.md` | Twelve rules for the next thesis |
 
+**Next thesis (Phase B of the transition run): `15_NEXT_RESEARCH_THESIS/`.** Start at its `00_START_HERE.md`, which holds the decision and the evidence.
+
 Sections 1–11 below predate the Fable waves and are kept as written. For Waves 13–14, the folder documents above are authoritative.
 
 ## Evidence status

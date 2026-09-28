@@ -1,0 +1,76 @@
+{
+ "pe_fp32_rne1": {
+  "top": "pe_fp32_rne1",
+  "netlist": "xacc_pe.v",
+  "match": {
+   "cycles_checked": 4101,
+   "streams": 1024,
+   "mismatches": 0,
+   "first": []
+  },
+  "golden": {
+   "numpy_vs_integer_rne_mismatches": 0
+  },
+  "directed_lanes": [
+   "alternate",
+   "max_neg",
+   "max_pos",
+   "maxscale_random",
+   "random",
+   "spread",
+   "subnormal_scales"
+  ],
+  "matches_golden": true,
+  "mutants_detected": {
+   "reference:rne_golden_as_rz": true
+  },
+  "design_mutant_detected": true,
+  "mismatches": 607075
+ },
+ "pe_fp32_rz1": {
+  "top": "pe_fp32_rz1",
+  "netlist": "xacc_pe.v",
+  "match": {
+   "cycles_checked": 4101,
+   "streams": 1024,
+   "mismatches": 0,
+   "first": []
+  },
+  "golden": {
+   "numpy_vs_integer_rne_mismatches": 0
+  },
+  "directed_lanes": [
+   "alternate",
+   "max_neg",
+   "max_pos",
+   "maxscale_random",
+   "random",
+   "spread",
+   "subnormal_scales"
+  ],
+  "matches_golden": true,
+  "mutants_detected": {}
+ },
+ "pe_fp32_rne_i2": {
+  "top": "pe_fp32_rne_i2",
+  "netlist": "xacc_pe.v",
+  "match": {
+   "cycles_checked": 4100,
+   "streams": 1024,
+   "mismatches": 0,
+   "first": []
+  },
+  "golden": {},
+  "directed_lanes": [
+   "alternate",
+   "max_neg",
+   "max_pos",
+   "maxscale_random",
+   "random",
+   "spread",
+   "subnormal_scales"
+  ],
+  "matches_golden": true,
+  "mutants_detected": {}
+ }
+}

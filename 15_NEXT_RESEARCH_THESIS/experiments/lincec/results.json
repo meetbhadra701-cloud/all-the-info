@@ -1,0 +1,38 @@
+[
+ {
+  "D": 64,
+  "cmd": "cec -T 60 flat64.aig lfsr64.aig",
+  "seconds": 70.38,
+  "verdict": "HARD TIMEOUT (70 s)"
+ },
+ {
+  "D": 64,
+  "cmd": "&r flat64.aig; &cec -T 60 lfsr64.aig",
+  "seconds": 70.39,
+  "verdict": "HARD TIMEOUT (70 s)"
+ },
+ {
+  "D": 256,
+  "cmd": "cec -T 60 flat256.aig lfsr256.aig",
+  "seconds": 70.46,
+  "verdict": "HARD TIMEOUT (70 s)"
+ },
+ {
+  "D": 256,
+  "cmd": "&r flat256.aig; &cec -T 60 lfsr256.aig",
+  "seconds": 70.54,
+  "verdict": "HARD TIMEOUT (70 s)"
+ },
+ {
+  "D": 1024,
+  "cmd": "cec -T 60 flat1024.aig lfsr1024.aig",
+  "seconds": 70.48,
+  "verdict": "HARD TIMEOUT (70 s)"
+ },
+ {
+  "D": 1024,
+  "cmd": "&r flat1024.aig; &cec -T 60 lfsr1024.aig",
+  "seconds": 70.43,
+  "verdict": "HARD TIMEOUT (70 s)"
+ }
+]

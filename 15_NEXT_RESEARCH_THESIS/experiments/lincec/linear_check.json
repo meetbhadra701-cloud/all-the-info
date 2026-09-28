@@ -1,0 +1,23 @@
+[
+ {
+  "D": 64,
+  "inputs": 96,
+  "random_sim_4096_vectors_equal": true,
+  "gf2_matrices_equal_from_n_plus_1_simulations": true,
+  "seconds_both_checks": 0.046
+ },
+ {
+  "D": 256,
+  "inputs": 288,
+  "random_sim_4096_vectors_equal": true,
+  "gf2_matrices_equal_from_n_plus_1_simulations": true,
+  "seconds_both_checks": 0.022
+ },
+ {
+  "D": 1024,
+  "inputs": 1056,
+  "random_sim_4096_vectors_equal": true,
+  "gf2_matrices_equal_from_n_plus_1_simulations": true,
+  "seconds_both_checks": 0.231
+ }
+]

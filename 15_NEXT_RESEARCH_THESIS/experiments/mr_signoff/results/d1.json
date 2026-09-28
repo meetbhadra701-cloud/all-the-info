@@ -1,0 +1,90 @@
+{
+ "design": "d1",
+ "def": "/home/user/all-the-info/14_FABLE_5_1_SCIENTIFIC_DISCOVERY/ubpgen_runs/w2_b60/physical/orfs/results/sky130hd/ubpgen_w2_b60/base/6_final.def",
+ "runs": {
+  "T0a": {
+   "tag": "T0a",
+   "extract": {
+    "tool": "OpenRCX",
+    "nets_with_wires": 13126,
+    "prefixed_nets": 0,
+    "instances": 39890
+   },
+   "setup_ws_ns": 0.8696710018796239,
+   "hold_ws_ns": 0.21885143697275566,
+   "setup_endpoint": "row40/_153_",
+   "spef": "/home/user/all-the-info/15_NEXT_RESEARCH_THESIS/experiments/mr_signoff/runs/d1_T0a/out.spef"
+  },
+  "T0b": {
+   "tag": "T0b",
+   "extract": {
+    "tool": "OpenRCX",
+    "nets_with_wires": 13126,
+    "prefixed_nets": 0,
+    "instances": 39890
+   },
+   "setup_ws_ns": 0.8696710018796239,
+   "hold_ws_ns": 0.21885143697275566,
+   "setup_endpoint": "row40/_153_",
+   "spef": "/home/user/all-the-info/15_NEXT_RESEARCH_THESIS/experiments/mr_signoff/runs/d1_T0b/out.spef"
+  },
+  "MR1": {
+   "tag": "MR1",
+   "extract": {
+    "tool": "OpenRCX",
+    "nets_with_wires": 13126,
+    "prefixed_nets": 0,
+    "instances": 39890
+   },
+   "setup_ws_ns": 0.8696710018796239,
+   "hold_ws_ns": 0.21885143697275566,
+   "setup_endpoint": "row40/_153_",
+   "spef": "/home/user/all-the-info/15_NEXT_RESEARCH_THESIS/experiments/mr_signoff/runs/d1_MR1/out.spef"
+  },
+  "MR2": {
+   "tag": "MR2",
+   "extract": {
+    "tool": "OpenRCX",
+    "nets_with_wires": 13126,
+    "prefixed_nets": 0,
+    "instances": 39890
+   },
+   "setup_ws_ns": 0.8696710018796239,
+   "hold_ws_ns": 0.21885143697275566,
+   "setup_endpoint": "mru35348",
+   "spef": "/home/user/all-the-info/15_NEXT_RESEARCH_THESIS/experiments/mr_signoff/runs/d1_MR2/out.spef"
+  }
+ },
+ "comparisons": {
+  "T0b": {
+   "nets": 13126,
+   "nets_missing_or_extra": 0,
+   "missing_examples": [],
+   "nets_differing": 0,
+   "max_rel_diff": 0.0,
+   "worst": [],
+   "setup_ws_delta_ns": 0.0,
+   "hold_ws_delta_ns": 0.0
+  },
+  "MR1": {
+   "nets": 13126,
+   "nets_missing_or_extra": 0,
+   "missing_examples": [],
+   "nets_differing": 0,
+   "max_rel_diff": 0.0,
+   "worst": [],
+   "setup_ws_delta_ns": 0.0,
+   "hold_ws_delta_ns": 0.0
+  },
+  "MR2": {
+   "nets": 13126,
+   "nets_missing_or_extra": 0,
+   "missing_examples": [],
+   "nets_differing": 0,
+   "max_rel_diff": 0.0,
+   "worst": [],
+   "setup_ws_delta_ns": 0.0,
+   "hold_ws_delta_ns": 0.0
+  }
+ }
+}

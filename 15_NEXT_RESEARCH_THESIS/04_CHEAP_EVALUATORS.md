@@ -166,3 +166,119 @@ UBP lessons applied (`14_FABLE_5_1_SCIENTIFIC_DISCOVERY/24_LESSONS_FOR_NEXT_THES
 - **B9:** prior-art prosecution of the surviving mechanism(s), in `05_PRIOR_ART_PROSECUTION.md`.
 - **B10:** primary and reserve, in 06 / 07.
 - If XACC-E2 kills XACC, no rescue: the answer may be **NO NEW THESIS READY**.
+
+---
+
+# Part 2 — Results (appended after the evaluators ran; Part 1 above is unchanged)
+
+The pre-registration is commit `967661a`, pushed before any evaluator ran. Every number below comes from `experiments/*/results/`.
+
+## XACC-E1a — width bound: prediction confirmed (DERIVED, enumerated)
+
+`experiments/xacc/formats.py` → `results/e1a_widths.{md,json}`. Every element product and every scale pair was enumerated for the block formats. The closed form used for FP16/BF16 is checked against full enumeration for E2M1, E4M3 and E5M2.
+
+| Format | W(K=4096) | W(16384) | W(65536) | Exponent span |
+|---|---|---|---|---|
+| **NVFP4 (E2M1, 16, UE4M3)** | 56 | 58 | **60** (predicted 60) | 28 |
+| NVFP4 with UE5M3 scales | 88 | 90 | 92 | 60 |
+| MXFP4 (E2M1, 32, E8M0) | 529 | 531 | 533 | 508 |
+| MXFP8 (E4M3, 32, E8M0) | 557 | 559 | 561 | 508 |
+| FP8-E4M3, per-tensor scale | 49 | 51 | 53 | 28 |
+| FP8-E5M2, per-tensor scale | 77 | 79 | 81 | 58 |
+| FP16 | 93 | 95 | 97 | 58 |
+| BF16 | 535 | 537 | 539 | 506 |
+
+The NVFP4 hardware encoding was checked exhaustively:
+- |S| ≤ 2,304 (13-bit signed);
+- |P| ≤ 518,400 (20-bit signed);
+- shift s ∈ [0, 28];
+- the shifted contribution fits 48-bit signed.
+
+## XACC-E1b — order sensitivity: **the problem-premise kill condition is met**
+
+`experiments/xacc/order_invariance.py` → `results/e1b_order_invariance.{md,json}`. The table covers 64×64 outputs, 8 reduction orders and the NVFP4 recipe, with FP32 IEEE (RNE) accumulation of block contributions.
+
+| Data | K | FP32: outputs order-sensitive | FP32 max ULP spread | FP32 rel. error vs exact (median) | Exact: order-sensitive | Exact = independent element-level integer GEMM |
+|---|---|---|---|---|---|---|
+| Gaussian | 4096 | 0.0% | 0 | 2.1e-8 | 0.0% | yes |
+| Student-t, ν=3 | 4096 | 0.0% | 0 | 2.1e-8 | 0.0% | yes |
+| 1% outlier channels ×20 | 4096 | 0.0% | 0 | 2.1e-8 | 0.0% | yes |
+| Gaussian | 16384 | 0.0% | 0 | 2.1e-8 | 0.0% | yes |
+| Student-t, ν=3 | 16384 | 0.0% | 0 | 2.0e-8 | 0.0% | yes |
+| 1% outlier channels ×20 | 16384 | **0.1%** | 1 | 2.1e-8 | 0.0% | yes |
+
+**Decision (pre-registered).** FP32-accumulated outputs are order-invariant for at least 99.9% of outputs in every setting, more than the 99% the kill rule names. **XACC's importance claim is KILLED for NVFP4 on the pre-registered data regimes.**
+
+The FP32 relative error equals the final rounding alone. IEEE FP32 accumulation of NVFP4 block contributions is effectively *exact* on these data, so there is nothing for an exact accumulator to fix.
+
+The mechanism check passed: the exact path is 100% order-invariant, and its sums equal an independent element-level integer GEMM (no blocks, no shifts).
+
+**Deviation D1 (mutation control).** The pre-registered control was "an accumulator wrapping at W − 12 bits must fail on the heavy-tailed K = 16384 setting". It was **not triggered there**: realistic sums reached only 40 bits there, below the 46-bit wrap. It was triggered on the Gaussian settings, where sums reached 48 bits, above the 44/46-bit wraps.
+
+The control therefore demonstrated that the check can fail, but not on the setting named. The design error: the wrap width was set relative to the worst-case window W, not to realistic sum magnitudes. It changes no decision: the kill rests on the FP32 path, not the exact path.
+
+## Post hoc (not pre-registered, not decisive): why the premise failed, and where it would hold
+
+`experiments/xacc/posthoc_dynamic_range.py` → `results/posthoc_dynamic_range.json`. Gaussian data with a fraction of K-channels scaled by an outlier factor; FP32 accumulation over the same 8 orders.
+
+| Outliers (factor, fraction) | K | Within-row shift span (median / max) | FP32 outputs order-sensitive | Max ULP spread | Sequential partial sums inexact |
+|---|---|---|---|---|---|
+| none | 16384 | 4 / 5 | 0.0% | 0 | 0.0% |
+| ×20, 1% | 16384 | 7 / 9 | 0.05% | 1 | 0.01% |
+| ×100, 0.1% | 16384 | 9 / 11 | 1.0% | 2 | 0.1% |
+| **×1000, 0.1%** | 16384 | 12 / 14 | **97.5%** | 7,168 | 43% |
+| ×10000, 0.05% | 16384 | 15 / 17 | 100% | 14,592 | 79% |
+| none | 65536 | 4 / 5 | 0.07% | 1 | 0.01% |
+| ×20, 1% | 65536 | 8 / 9 | 11.4% | 24 | 2.2% |
+| ×100, 0.1% | 65536 | 9 / 11 | 27.5% | 1,024 | 5.8% |
+| ×1000, 0.1% | 65536 | 13 / 14 | 100% | 9,344 | 79% |
+
+**Diagnosis.**
+- A block contribution has at most about 20 significant bits (|P| < 2^19). FP32 partial sums stay exact while the contribution span plus the sum's growth fits the 24-bit significand.
+- The span is set by the within-row spread of block-scale exponents. Benign data keep it at about 4–9 binades, so FP32 is exact and hence order-free.
+- There is a **sharp phase transition** at a span of about 11–13 binades (outliers of about 100–1000×). Beyond it FP32 accumulation is order-sensitive in essentially every output.
+- Longer K moves the transition earlier.
+
+**Consequence.** XACC's premise is *regime-dependent*.
+- It is **false** for benign NVFP4 data (the pre-registered regimes).
+- It is plausibly **true** for LLM activations with "massive activations" of 1000×+ in a few hidden dimensions, but *not* if an outlier-flattening rotation (a random Hadamard transform, as in NVFP4 training and inference recipes) is applied first.
+
+The pre-registered test did not include that regime, so this does **not** reverse the kill. Reviving XACC requires a new, separately pre-registered study whose regime is justified from measured real-model activation statistics (08). This is recorded as the strongest near-miss, not as a result.
+
+## XACC-E3 (XABFT, merged as C2) — **not run** (deviation D2)
+
+XABFT's value was premised on FP32 ABFT needing tolerances because FP32 accumulation is inexact. E1b shows FP32 accumulation of NVFP4 is effectively exact in the pre-registered regimes.
+- Tolerance-free checking is then already available for FP32-accumulated NVFP4 outputs whenever no rounding occurred.
+- E3's pre-registered yardstick (the missed-fault error vs "the FP32 accumulation error of that output", which is ≈ 0 here) degenerates. Every miss would count as "material" by construction.
+
+Running E3 would therefore be ritual, not evidence. XABFT inherits XACC's premise failure and is **KILLED with it**. This is logged as a deviation from the plan to run three evaluators.
+
+## MR-SIGNOFF — **KILLED** (every relation exactly invariant on both designs)
+
+`experiments/mr_signoff/mr_signoff.py` → `results/d1.json`, `results/d2.json`. OpenRCX extraction plus OpenSTA at tt, through the harness templates.
+
+| Design | Nets | MR0 (rerun) | MR1 (permuted COMPONENTS/NETS) | MR2 (all nets and instances renamed) | Setup / hold WS (all variants) |
+|---|---|---|---|---|---|
+| D1: UBP W2 B60 base (39,890 components) | 13,126 | 0 nets differ | 0 nets differ | 0 nets differ | 0.8697 / 0.2189 ns, identical |
+| D2: ORFS gcd | 506 | 0 | 0 | 0 | −1.4761 / 0.5327 ns, identical |
+
+Per net, total C, coupling C and total R agreed exactly; the maximum relative difference was 0.0.
+- MR3 (mirror) was optional and **not done**. Mirroring a routed DEF leaves the tech-LEF via definitions unmirrored, so any difference would be confounded, not a clean test.
+
+**Decision (pre-registered): KILL.** The oracle-free relations found nothing: the open extraction plus timing stack is exactly invariant to order and naming. That is a positive fact about the tools, not a thesis.
+
+## LIN-CEC screen (evidence for the proximity kill)
+
+`experiments/lincec/crc_screen.py` → `results.json`; `linear_check.json`.
+
+| CRC-32, data bits | Inputs | ABC `cec` | ABC `&cec` | Random simulation (4,096 vectors) | GF(2) matrices from n+1 simulations |
+|---|---|---|---|---|---|
+| 64 | 96 | > 70 s (hard timeout) | > 70 s | equal | **equal, 0.05 s** |
+| 256 | 288 | > 70 s | > 70 s | equal | **equal, 0.02 s** |
+| 1024 | 1,056 | > 70 s | > 70 s | equal | **equal, 0.23 s** |
+
+The open tool's gap on XOR-dominated miters is **real and categorical**: at least 300–3,000× on circuits as common as CRC-32.
+- ABC's classic `cec` also ignored its own `-T 60` limit; the first run hung more than 400 s until the container was killed.
+- The closing technique (GF(2) linear algebra for XOR-dense regions, BDDs, Gauss–Jordan SAT) is published (01 §1.1).
+
+**Classification: ENGINEERING** (a known principle to be integrated into an open tool). LIN-CEC stays killed as a research thesis.
