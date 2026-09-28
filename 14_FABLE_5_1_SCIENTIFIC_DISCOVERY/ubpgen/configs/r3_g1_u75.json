@@ -1,0 +1,46 @@
+{
+ "_comment": "Baseline A (per-input serial fabric) with the same R3 segmented access, 75% (A's demonstrated utilization). Logic identical to results/G2/g1s; R3 access never built historically.",
+ "name": "r3_g1_u75",
+ "fabric": "g1",
+ "n": 64,
+ "m": 64,
+ "access": {
+  "taps_per_line": 4
+ },
+ "layout": {
+  "util": 75
+ },
+ "programs": [
+  {
+   "tag": "w1",
+   "seed": 1001,
+   "p0": 0.4
+  },
+  {
+   "tag": "w2",
+   "seed": 1002,
+   "p0": 0.4
+  },
+  {
+   "tag": "w3",
+   "seed": 1003,
+   "p0": 0.8
+  },
+  {
+   "tag": "w4",
+   "seed": 1004,
+   "p0": 0.1
+  },
+  {
+   "tag": "w5",
+   "seed": 1005,
+   "p0": 0.4,
+   "same_rows": true
+  },
+  {
+   "tag": "w14",
+   "seed": 14,
+   "p0": 0.4
+  }
+ ]
+}

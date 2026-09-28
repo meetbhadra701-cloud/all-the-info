@@ -1,0 +1,6 @@
+{
+ "_comment": "Smoke test: UBP g=3, 9 inputs x 8 rows, K=4. Pre-PnR only.",
+ "name": "smoke_ubp3_n9", "fabric": "ubp", "n": 9, "m": 8, "g": 3,
+ "access": {"taps_per_line": 4},
+ "programs": [{"tag": "a", "seed": 11, "p0": 0.4}, {"tag": "b", "seed": 12, "p0": 0.1}, {"tag": "c", "seed": 13, "p0": 0.4, "same_rows": true}]
+}

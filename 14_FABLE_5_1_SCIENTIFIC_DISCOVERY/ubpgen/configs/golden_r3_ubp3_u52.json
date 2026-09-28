@@ -1,0 +1,50 @@
+{
+ "_comment": "GOLDEN: the validated R3 52% decisive design. Historical: results/G2/ubp3r3 (config_u52r.mk), ODB sha256 aefbdaff...",
+ "name": "golden_r3_ubp3_u52",
+ "fabric": "ubp",
+ "n": 64,
+ "m": 64,
+ "g": 3,
+ "access": {
+  "taps_per_line": 4
+ },
+ "layout": {
+  "util": 52
+ },
+ "programs": [
+  {
+   "tag": "w1",
+   "seed": 1001,
+   "p0": 0.4
+  },
+  {
+   "tag": "w2",
+   "seed": 1002,
+   "p0": 0.4
+  },
+  {
+   "tag": "w3",
+   "seed": 1003,
+   "p0": 0.8
+  },
+  {
+   "tag": "w4",
+   "seed": 1004,
+   "p0": 0.1
+  },
+  {
+   "tag": "w5",
+   "seed": 1005,
+   "p0": 0.4,
+   "same_rows": true
+  },
+  {
+   "tag": "w14",
+   "seed": 14,
+   "p0": 0.4
+  }
+ ],
+ "flow": {
+  "nickname": "g2r3_ubp3r3_u52"
+ }
+}
