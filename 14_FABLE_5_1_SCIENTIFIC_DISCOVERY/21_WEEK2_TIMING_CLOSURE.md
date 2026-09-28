@@ -247,6 +247,14 @@ Tap area against the historical accounting:
   - The built-base check now also requires the full tap count, the configured master and FIRM status on every tap.
 - **Action.** The four partial run directories (B60, A-R2, P2-R3, P2-R2; none past global placement) were deleted, and every design is rebuilt from scratch. The rule, the classes, the flow settings and everything else are unchanged.
 
+**Third issue, in the new built-base check (not in the design):**
+- The rebuilt B60 base completed at commit `d671f5d` with 0 DRC. The tap rule was met on its built geometry: worst tap `lt_pp20_0_s0`, 145.3 µm, 56.6 fF, 0.279 ns ≤ 0.30 ns, all 2,192 taps `LTAPB2`.
+- It was nevertheless reported as failing, because the new check required FIRM status. ORFS writes every placed-and-fixed cell as FIXED in `6_final.def`, taps and via sites alike, exactly as in the historical bases.
+- The check now accepts FIRM or FIXED (commit `dc081b6`).
+- **No rebuild.** The frozen base was re-checked, and its ODB sha256 is identical (`ae09eb11…`). Its `records/base.json` carries the re-check commit; the build itself is `d671f5d` (see `physical/orfs_base.log`).
+- The A-R2 base, built at the same commit, went the same way: 0 DRC; tap rule met (worst tap `lt_ln36`, 684.9 µm, 241.7 fF, 0.276 ns); 128 `LTAPBW12` FIXED. It was re-checked with an identical sha256 (`1d9398c9…`).
+- Every later design was built after `dc081b6`.
+
 ## 3. Results
 
 ## 4. Decision

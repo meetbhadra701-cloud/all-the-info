@@ -67,7 +67,7 @@ def accounting_record(cfg, root: Path) -> dict:
     return rec
 
 
-def program_row(t: str, phys: dict, ver: dict, so: dict) -> dict:
+def program_row(t: str, phys: dict, ver: dict, so: dict, w2: bool = False) -> dict:
     p, v, s = phys.get(t), ver.get(t), so.get(t)
     row = {'tag': t, 'routed': p is not None, 'signed_off': s is not None, 'prepnr_checked': v is not None}
     if p:
@@ -77,6 +77,8 @@ def program_row(t: str, phys: dict, ver: dict, so: dict) -> dict:
                     'invariance': p['invariance']['all_invariants_hold'], 'grt': p.get('grt'),
                     'wirelength_um': p.get('wirelength_um'), 'vias': p.get('vias'),
                     'placement_sta_setup_ws_ns': p.get('setup_ws_ns'), 'placement_sta_prog_ws_ns': p.get('prog_setup_ws_ns')})
+        if w2:   # the validated routing script's placement STA reads no W2 tap Liberty: not applicable (MODELED, incomplete)
+            row['placement_sta_setup_ws_ns'] = row['placement_sta_prog_ws_ns'] = 'n/a (legacy STA reads no W2 tap Liberty)'
     if v:
         row.update({'prepnr_numpy': v['matches_numpy'], 'prepnr_oracle_mutation_detected': v.get('oracle_mutation_detected'),
                     'prepnr_program_mutation_detected': v.get('program_mutation_detected')})
@@ -143,7 +145,7 @@ def design(entry: dict, suite: dict, suite_dir: Path, tags: list[str]) -> dict |
     acct = accounting_record(cfg, root)
     cps = counterpart_sizing(entry, suite, suite_dir)
     phys, ver, so = _latest(root, 'physical.jsonl'), _latest(root, 'verify.jsonl'), _latest(root, 'signoff.jsonl')
-    progs = {t: program_row(t, phys, ver, so) for t in tags}
+    progs = {t: program_row(t, phys, ver, so, access.w2(cfg)) for t in tags}
     cyc = arch.cycles_per_word(cfg)
     n_taps = arch.counts(cfg)['taps'] if access.mode(cfg) == 'r3' else len(arch.lines(cfg))
     ts = tap_sites(cfg)
