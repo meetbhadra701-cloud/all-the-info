@@ -70,3 +70,14 @@
 ## Older waves
 
 Wave 3–6 experiments are indexed in `../04_EARLIER_RESEARCH_WAVES/CODEX_TRANSCRIPT_DERIVED_RESEARCH_HISTORY.md`. They are explicitly marked transcript-derived or inconclusive when the original artifacts were not recovered.
+
+## October 2026 supplementary evidence and negative-result reports
+
+These are *archived decision/report copies*, not checked-in reproductions of all local `m1/` or Windows/WSL raw logs. The [October research supplement](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/README.md) distinguishes direct project-reported measurements from this archive operation.
+
+- **CLAM M1:** [gate](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CLAM_M1_GATE_DECISION.md), [baseline metrics](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CLAM_M1_BASELINE_RESULTS.md), [correctness](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CLAM_M1_CORRECTNESS_REPORT.md), [capacity](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CLAM_M1_CAPACITY_AND_REUSE.md), [hardware necessity](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CLAM_M1_HARDWARE_NECESSITY.md). 42 comparisons matched A/B/C correctness, but contextual M1 failed its pre-registered 2× total-work threshold; hardware benefit unmeasured.
+- **CausalTrace M0→Stage 0:** [M0](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CAUSALTRACE_M0_FINAL_DISCOVERY_DECISION.md), [M1 decision](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CAUSALTRACE_M1_DECISION.md), [results](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/CAUSALTRACE_M1_RESULTS.md). 48 frozen RTL-derived traces; 0 incremental correct reconstructions over strong B buffer.
+- **PCAS:** [M0 gate](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/PCAS_M0_GATE_REPORT.md). Literature, source and soundness audit, **not an executed M1 experiment**.
+- **Decision-Sufficient Silicon:** [Gate 2](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/DECISION_SUFFICIENT_RESEARCH_GATE_2.md). Reproduced toy correctness/query-cost tests inside prior project; physical energy and external labels absent.
+- **Silicon Opportunity:** [decision](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/SILICON_OPPORTUNITY_DECISION.md). 126 final native runs plus explicit missing PMU, failed large-case verification, timeouts, discrepancy ledger. **INSUFFICIENT EVIDENCE** for new hardware; not a proven architecture speedup.
+- **Cross-project failure forensics and protocol:** [forensics](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/RESEARCH_FAILURE_FORENSICS.md), [discovery V2](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/DISCOVERY_METHODOLOGY_V2.md). Preserve evidence grades and final/unknown status separately.

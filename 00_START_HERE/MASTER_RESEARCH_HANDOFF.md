@@ -117,3 +117,19 @@ The most important direct sources are:
 - `05_KILLED_CANDIDATES/CODEX_TRANSCRIPT_DERIVED_CANDIDATE_REVIEWS.md`
 
 The transcript-derived files state which conclusions lack their original primary artifact. The package manifest gives source paths, destinations, sizes, hashes, categories, and inclusion reasons.
+
+---
+
+## October 13, 2026 update — new primary negative results and process reset
+
+**Read [the October 2026 negative-results supplement](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/README.md) before generating another architecture idea.** Sections above describe the *earlier* archive and may have stale statements about which lead is active.
+
+- **PCAS:** independent M0 concluded NO-GO for the research claim; the certificate lacks complete netlist/spec binding, existing proof-producing verification poses serious prior art, and a read-only post-`arith_tree` `$fa` reader is an untested but potent simpler baseline. No Yosys fork/implementation is authorized by that result.
+- **CLAM:** finite-scope correctness passed, but the executed 42-run M1 pilot missed a mandatory 2× computation-reduction target (A/B 0.984335×); S=4 matched ordinary propagation event/evaluation and node counts on all 14 instances. Hardware necessity was *not measured* and the architecture is NO-GO.
+- **CausalTrace:** after M0 admitted a 48-trace software falsifier, the context/closure policy produced 48/48 valid reconstructions but *zero* extra coverage over the pinned-descriptor/history conventional hybrid. The tested architecture is NO-GO.
+- **Decision-Sufficient Silicon:** exact early exit on a toy affine model was not shown to save real sensor energy or outperform conventional software and hardware. ASIC NO-GO.
+- **Silicon Opportunity:** 126 executed baseline runs identified software hotspots but also stronger software alternatives; physical counters and key large-input equivalence were missing. Decision: **INSUFFICIENT EVIDENCE**, not blanket impossibility of specialized hardware.
+- **Wave 10** had mapped-area and OpenROAD resynthesis performance hypotheses rejected by stronger/fairer incumbents; **Wave 11 H1.6** remains unresolved pending direct raw-results verification.
+- **Upstream outcome correction:** Yosys [PR #6231](https://github.com/YosysHQ/yosys/pull/6231) was merged on 7 October 2026. This is successful engineering, not a failed PR or evidence for novel architecture.
+
+**Non-negotiable new precondition:** independently prove an important unsolved *problem* before proposing a new mechanism. Use [the V2 discovery gates](../14_OCTOBER_2026_RESEARCH_NEGATIVE_RESULTS/sources/DISCOVERY_METHODOLOGY_V2.md); match exact problem semantics against strong baselines and search older/mathematically equivalent methods before implementation. No mechanical novelty credit, no chip/RTL expenditure from a clever proposal alone.
